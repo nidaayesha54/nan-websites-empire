@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de guiones UGC gratis — KitUGC</title>
+<meta name="description" content="Genera guiones UGC en español en segundos: elige el tipo de producto y el estilo de gancho. Plantilla completa con hook, problema, solución y CTA.">
+<link rel="canonical" href="https://kitugc.github.io/tools/generador-guiones.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎬 Kit<span>UGC</span></a>
+<nav class="nav"><a href="../index.html">Inicio</a><a href="calculadora-tarifas.html">Tarifas</a><a href="plantillas-marcas.html">Plantillas</a><a href="generador-guiones.html">Guiones</a></nav>
+</div></header>
+
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Inicio</a> › Generador de guiones</p>
+<section class="content">
+<h1>Generador de guiones UGC</h1>
+<p>Elige el producto y el gancho, y obtén un guion completo en español listo para grabar.</p>
+
+<div class="toolbox">
+<div class="field">
+<label for="prod">Tipo de producto</label>
+<select id="prod">
+<option value="belleza">Belleza / skincare</option>
+<option value="fitness">Fitness / suplementos</option>
+<option value="app">App / producto digital</option>
+<option value="moda">Moda / accesorios</option>
+<option value="hogar">Hogar / cocina</option>
+</select>
+</div>
+<div class="field">
+<label for="hook">Estilo de gancho (primeros 3 segundos)</label>
+<select id="hook">
+<option value="pregunta">Pregunta directa</option>
+<option value="antes">Antes / después</option>
+<option value="secreto">Secreto revelado</option>
+<option value="error">Error común</option>
+<option value="prueba">Prueba en vivo</option>
+</select>
+</div>
+<button class="btn" onclick="generar()">Generar guion</button>
+<div class="template" id="out" style="display:none">
+<button class="copy-btn" onclick="copiar(this)">Copiar</button>
+<h3>Tu guion UGC</h3>
+<div class="body" id="guion"></div>
+</div>
+</div>
+
+<div class="note-box"><strong>💡 Tip de grabación:</strong> graba el gancho 3 veces y elige la mejor toma. Los primeros 3 segundos deciden si el video funciona.</div>
+</section>
+</div>
+
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer class="site-footer"><div class="wrap">
+<p>🎬 <strong>KitUGC</strong> — Herramientas gratis para creadores UGC</p>
+<p style="font-size:.85rem;margin-top:10px">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+
+<script>
+var hooks={
+pregunta:{belleza:"¿Tu piel se ve cansada aunque duermas 8 horas?",fitness:"¿Entrenas todos los días y no ves resultados?",app:"¿Pierdes horas cada semana en [tarea]?",moda:"¿Tu clóset está lleno pero sientes que no tienes nada que ponerte?",hogar:"¿Tu cocina es un caos cada mañana?"},
+antes:{belleza:"Miren mi piel hace 30 días… y miren ahora.",fitness:"Así se veía mi cuerpo hace 2 meses. Así se ve hoy.",app:"Antes tardaba 3 horas en esto. Ahora, 10 minutos.",moda:"Este era mi look de diario… hasta que probé esto.",hogar:"Mi cocina era un desastre. Miren este cambio."},
+secreto:{belleza:"El secreto que las influencers de skincare no quieren que sepas.",fitness:"El truco que los entrenadores cobran $200 por enseñarte.",app:"Casi nadie conoce esta función y ahorra horas.",moda:"El truco de estilo que usan las celebridades.",hogar:"Este gadget de $20 cambió mi cocina por completo."},
+error:{belleza:"Estás usando tu sérum MAL (y por eso no funciona).",fitness:"El error #1 que arruina tu progreso en el gym.",app:"Deja de hacer [tarea] manualmente: hay una forma mejor.",moda:"Este error de estilo te hace ver desarreglada.",hogar:"Si organizas así tu cocina, estás perdiendo espacio."},
+prueba:{belleza:"Probé este sérum por 7 días: estos son mis resultados reales.",fitness:"Tomé esto 30 días seguidos. Miren qué pasó.",app:"Usé esta app una semana: esto fue lo que cambió.",moda:"Me puse esto 5 días seguidos: veredicto honesto.",hogar:"Probé este organizador una semana: ¿vale la pena?"}
+};
+var ctas={belleza:"El enlace está en mi bio — ¡tu piel te lo va a agradecer!",fitness:"Link en bio con mi código de descuento.",app:"Descárgala gratis con el link de mi perfil.",moda:"Lo encuentras en el link de mi bio.",hogar:"Link en mi bio — ¡corre que se agota!"};
+function generar(){
+  var p=document.getElementById('prod').value;
+  var h=document.getElementById('hook').value;
+  var nombres={belleza:"el producto de skincare",fitness:"el suplemento",app:"la app",moda:"la prenda",hogar:"el producto"};
+  var g="🎬 GUION UGC — 30 segundos\n\n"
+  +"[0-3s] GANCHO (míralo a cámara, energía alta):\n"+hooks[h][p]+"\n\n"
+  +"[3-10s] PROBLEMA (muestra tu frustración real):\n\"Yo también sufría con esto… probé de todo y nada funcionaba. Hasta que encontré "+nombres[p]+".\"\n\n"
+  +"[10-22s] SOLUCIÓN + DEMO (muestra el producto en uso):\n\"Miren qué fácil: [describe 2-3 pasos de uso]. Lo que más me gusta es [beneficio #1] y [beneficio #2].\"\n\n"
+  +"[22-27s] PRUEBA (resultado visible):\n\"Después de [X días], este fue mi resultado: [muestra el antes/después o el cambio concreto].\"\n\n"
+  +"[27-30s] CTA (sonríe, señala abajo):\n\""+ctas[p]+"\"\n\n"
+  +"📋 CHECKLIST DE GRABACIÓN:\n- Luz natural frente a ti\n- Fondo limpio y ordenado\n- Graba el gancho 3 veces\n- Subtítulos grandes y legibles\n- Música en tendencia, volumen bajo";
+  document.getElementById('guion').textContent=g;
+  document.getElementById('out').style.display='block';
+}
+function copiar(btn){
+  var txt=btn.parentElement.querySelector('.body').innerText;
+  function ok(){btn.textContent='¡Copiado!';setTimeout(function(){btn.textContent='Copiar';},1800);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(function(){fallback();});}
+  else{fallback();}
+  function fallback(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+}
+generar();
+</script>
+</body>
+</html>

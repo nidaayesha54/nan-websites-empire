@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Food Portion Calculator — How Much to Feed (Free)</title>
+<meta name="description" content="Free cat food calculator: get exact daily calories & cups per day using the vet-standard RER formula. Just enter weight, age, and activity.">
+<link rel="canonical" href="https://nan-cattools.surge.sh/tools/cat-food-portion.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Cat Food Portion Calculator","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🐱 CatToolsHub</a>
+<div class="navlinks">
+<a href="cat-age-calculator.html">Age Calculator</a>
+<a href="cat-cost-calculator.html">Cost Calculator</a>
+<a href="cat-food-portion.html">Food Portion</a>
+<a href="litter-calculator.html">Litter Calculator</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Cat Food Portion Calculator</div>
+<h1>🍽️ Cat Food Portion Calculator: Daily Calories & Cups</h1>
+<p class="intro">Uses the veterinary-standard RER formula (70 × kg⁰·⁷⁵). Results update live.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="f-weight">Weight (lbs)</label>
+<input id="f-weight" type="number" min="1" max="40" step="0.5" value="10">
+<label for="f-stage">Life stage / condition</label>
+<select id="f-stage">
+<option value="2.5">Kitten under 4 months (×2.5)</option>
+<option value="2.0">Kitten 4–6 months (×2.0)</option>
+<option value="1.5">Kitten 6–12 months (×1.5)</option>
+<option value="1.2" selected>Neutered adult (×1.2)</option>
+<option value="1.4">Intact adult (×1.4)</option>
+<option value="1.1">Senior 11+ years (×1.1)</option>
+<option value="1.6">Pregnant (×1.6–2.0)</option>
+<option value="2.0">Nursing mother (×2.0–4.0+)</option>
+</select>
+<label for="f-activity">Activity level</label>
+<select id="f-activity">
+<option value="0.9">Couch potato — sleeps most of the day (×0.9)</option>
+<option value="1.0" selected>Average indoor cat (×1.0)</option>
+<option value="1.1">Active / playful (×1.1)</option>
+<option value="0.8">Weight-loss plan (×0.8)</option>
+</select>
+<label for="f-kcal">Your food's calories (kcal per cup, from the bag)</label>
+<input id="f-kcal" type="number" min="100" max="700" step="5" value="400">
+<label for="f-meals">Meals per day: <span id="f-meals-lbl">2</span></label>
+<input id="f-meals" type="range" min="1" max="4" value="2" step="1">
+</div>
+
+<div class="result" id="food-result"><p>Enter your cat's weight above.</p></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>The RER formula, explained</h2>
+<p>Vets calculate resting energy requirement as <b>RER = 70 × (weight in kg)⁰·⁷⁵</b>, then multiply by a factor for life stage and activity. A neutered 10-lb indoor adult needs roughly <b>220–250 kcal/day</b> — far less than most owners guess, which is why free-feeding so often leads to overweight cats.</p>
+<div class="callout"><b>⚠️ Keep it safe:</b> This tool gives estimates for healthy cats. Adjust food gradually if your cat gains or loses weight, and ask your vet before any diet plan for an overweight or sick cat.</div>
+
+<h2>More cat tools</h2>
+<div class="related">
+<a href="cat-age-calculator.html">🐱 Cat Age Calculator<span>Cat years to human years</span></a>
+<a href="cat-cost-calculator.html">💵 Cat Cost Calculator<span>Yearly + lifetime budget planner</span></a>
+<a href="litter-calculator.html">🧹 Litter Calculator<span>Litter boxes, usage & cost</span></a>
+<a href="../blog/cat-care-mistakes.html">📖 12 Cat Care Mistakes<span>Overfeeding is #3…</span></a>
+</div>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script>
+(function(){
+  var w=document.getElementById('f-weight'), s=document.getElementById('f-stage'),
+      a=document.getElementById('f-activity'), k=document.getElementById('f-kcal'),
+      m=document.getElementById('f-meals'), out=document.getElementById('food-result');
+  function calc(){
+    var lbs=Math.max(1,+w.value||10);
+    document.getElementById('f-meals-lbl').textContent=m.value;
+    var kg=lbs/2.20462;
+    var rer=70*Math.pow(kg,0.75);
+    var der=rer*(+s.value)*(+a.value);
+    var kcal=Math.round(der);
+    var kcalCup=Math.max(100,+k.value||400);
+    var cups=der/kcalCup;
+    var meals=+m.value;
+    var wet3oz=kcal/80; // ~80 kcal per 3oz can
+    var verdict = lbs>16 ? 'Your cat is likely overweight — ask your vet about a weight-loss plan.' :
+                  lbs>13 ? 'At this weight, watch the waistline — weigh food instead of eyeballing it.' :
+                  lbs<5 ? 'A very small cat — double-check the life stage and vet guidance.' :
+                  'A healthy weight range for most cats. 🎉';
+    out.innerHTML='<p>Daily calories (DER): <span class="big">'+kcal+'</span> kcal/day</p>'+
+      '<p>Dry food: <b>'+(cups).toFixed(2)+'</b> cups/day → <b>'+(cups/meals).toFixed(2)+'</b> cup per meal ('+meals+' meals)</p>'+
+      '<p>Wet food only: <b>'+wet3oz.toFixed(1)+'</b> × 3-oz cans/day</p>'+
+      '<p class="cat-fact">RER = 70 × '+kg.toFixed(1)+'kg⁰·⁷⁵ = <b>'+Math.round(rer)+'</b> kcal. Stage factor <b>'+s.value+'</b> × activity <b>'+a.value+'</b> → DER <b>'+kcal+'</b> kcal/day.</p>'+
+      '<p class="cat-fact">'+verdict+'</p>';
+  }
+  [w,s,a,k,m].forEach(function(el){ el.addEventListener('input',calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Photo Shot List Generator — Must-Have Shots (Free)</title>
+  <meta name="description" content="Free wedding photo shot list generator. Pick your photography style and get a printable must-have shot checklist to hand your photographer.">
+  <link rel="canonical" href="https://nan-wedday.surge.sh/tools/photo-shot-list.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Wedding Photo Shot List Generator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">💒 Wedding<span>Day</span>Plan</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="day-timeline-builder.html">Timeline Builder</a>
+        <a href="photo-shot-list.html">Photo Shot List</a>
+        <a href="../guides/wedding-day-timeline-template.html">Guides</a>
+        <a href="../blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> › Photo Shot List</p>
+  </div>
+
+  <section class="section" style="padding-top:10px">
+    <div class="wrap">
+      <h1 style="text-align:left;font-size:1.9rem;color:var(--dark);margin-bottom:10px">📸 Wedding Photo Shot List Generator</h1>
+      <p class="sub" style="text-align:left;margin:0 0 24px;max-width:none">The problem: couples assume the photographer "just knows" what to capture — then miss the shot of grandma crying happy tears. Pick your style, check your must-haves, print it, hand it over.</p>
+
+      <div class="panel" style="margin-bottom:24px">
+        <h2>Choose your photography style</h2>
+        <div class="field">
+          <select id="styleSel" style="max-width:420px">
+            <option value="classic">💒 Classic — timeless, posed, every traditional shot</option>
+            <option value="candid">🎭 Candid / Documentary — real moments, minimal posing</option>
+            <option value="romantic">🌅 Romantic — dreamy couple portraits, golden light</option>
+            <option value="party">🪩 Party — reception energy, dancing, details of the fun</option>
+          </select>
+        </div>
+        <div class="toolbar">
+          <button class="btn" id="genBtn">Generate My Shot List ✨</button>
+          <button class="btn secondary" id="printBtn" style="display:none">🖨️ Print Shot List</button>
+          <button class="btn secondary" id="checkAll" style="display:none">Check All</button>
+        </div>
+      </div>
+
+      <div id="empty" class="panel" style="color:var(--muted);font-family:Arial,sans-serif">
+        👆 Pick a style and click <strong>Generate My Shot List</strong> — your printable checklist appears here.
+      </div>
+      <div class="panel" id="listPanel" style="display:none">
+        <h2 id="listTitle">Your Shot List</h2>
+        <div id="shotList"></div>
+        <div class="result-note"><strong>💡 Tip:</strong> Check the shots that matter most to YOU, print this page, and give it to your photographer 2 weeks before the wedding. Star your top 10 "cannot miss" shots.</div>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+      <div class="ad-slot">AD-SLOT · in-content</div>
+
+      <div class="article" style="margin-top:32px">
+        <h2>Why a shot list matters</h2>
+        <p>Professional photographers are artists, not mind-readers. A shot list doesn't micromanage them — it tells them which <em>people and moments</em> matter most to you. The #1 regret couples report after weddings? "We never got a photo with [grandmother / college friends / late father's brother]." A 10-minute checklist prevents a lifetime of regret.</p>
+        <p>Pair this with your <a href="day-timeline-builder.html">day-of timeline</a> so family portraits happen in one efficient 20-minute block instead of eating your entire cocktail hour.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div><strong style="color:#f5e6ca">💒 WeddingDayPlan</strong><br>Free wedding day-of planning tools.<br>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a></div>
+      <div><a href="../index.html">Home</a><br><a href="day-timeline-builder.html">Timeline Builder</a><br><a href="../blog/">Blog</a></div>
+    </div>
+    <div class="wrap"><p class="fine">© 2026 WeddingDayPlan · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+  </footer>
+
+  <script>
+    var SHOTS = {
+      classic: [
+        ['Getting Ready', ['Dress hanging / flat-lay (dress, shoes, rings, invitations)', 'Bride with bridesmaids getting ready', 'Groom with groomsmen getting ready', 'Mom helping bride into dress', 'Bride\'s bouquet close-up', 'Groom\'s boutonnière / details']],
+        ['Ceremony', ['Venue exterior & ceremony setup (empty)', 'Groom waiting at altar', 'Bridal party walking down the aisle', 'Bride walking down the aisle', 'Groom\'s reaction as bride approaches', 'Ring exchange close-up', 'The kiss 💋', 'Recessional — walking back up the aisle married']],
+        ['Formals', ['Couple portrait — classic posed', 'Bride alone — full length', 'Groom alone — full length', 'Couple with bride\'s parents', 'Couple with groom\'s parents', 'Couple with both families', 'Full bridal party group shot', 'Bridesmaids group', 'Groomsmen group']],
+        ['Reception', ['Reception room setup (empty, before guests)', 'Table settings & centerpiece details', 'Wedding cake', 'Grand entrance', 'First dance', 'Parent dances', 'Cake cutting', 'Bouquet toss', 'Sparkler send-off / exit']]
+      ],
+      candid: [
+        ['Real Moments', ['Bride laughing with bridesmaids (unposed)', 'Groom\'s nervous laugh before ceremony', 'Dad seeing bride for the first time', 'Flower girl / ring bearer being kids', 'Guests\' reactions during vows', 'Grandma wiping a tear', 'Couple whispering during ceremony', 'Hugs right after recessional']],
+        ['In-Between', ['Couple walking hand-in-hand (not looking at camera)', 'Wind in veil / dress movement', 'Laughing during portraits', 'Stolen kiss when you think no one\'s looking', 'Wedding party being goofy', 'Kids dancing', 'Friends\' toasts — genuine reactions', 'Dance floor candids — pure joy']],
+        ['Details in Context', ['Rings on bouquet', 'Hands with rings holding champagne', 'Table details with guests mingling behind', 'Cake with couple laughing in background', 'Shoes kicked off under the dance floor', 'Send-off from photographer\'s artistic angle']]
+      ],
+      romantic: [
+        ['Golden Hour', ['Couple silhouetted at sunset', 'Forehead kiss in golden light', 'Walking through field / venue grounds', 'Veil floating in breeze', 'Close-up: hands intertwined', 'Dip kiss — dramatic and romantic']],
+        ['Intimate Portraits', ['First look — the raw reaction', 'Quiet moment alone before reception', 'Forehead-to-forehead, eyes closed', 'Laughing together — genuine', 'Slow dance portrait (just you two)', 'Night shot with sparklers / string lights']],
+        ['Details', ['Bouquet against dress', 'Rings macro shot', 'Invitation suite flat-lay', 'Perfume bottle / jewelry', 'Table setting in candlelight']]
+      ],
+      party: [
+        ['Energy', ['Grand entrance — hype moment', 'First dance — then everyone joins', 'Dance floor packed', 'Bouquet toss action shot', 'Garter toss reactions', ' conga line / group dance', 'Friends lifting the couple', 'Late-night dance-off']],
+        ['Fun Details', ['Signature cocktail close-up', 'Dessert table / donut wall', 'Photo booth shenanigans', 'Neon sign / backdrop', 'Confetti moment', 'Sparkler send-off', 'After-party vibes']],
+        ['People', ['College friends group shot', 'Work friends being wild', 'Kids with glow sticks', 'Grandparents on the dance floor', 'Couple with every table (reception tour)']]
+      ]
+    };
+
+    document.getElementById('genBtn').addEventListener('click', function () {
+      var style = document.getElementById('styleSel').value;
+      var groups = SHOTS[style];
+      var names = { classic: 'Classic', candid: 'Candid / Documentary', romantic: 'Romantic', party: 'Party' };
+      var html = '';
+      groups.forEach(function (g) {
+        html += '<div class="shot-group"><h3>' + g[0] + '</h3>';
+        g[1].forEach(function (shot) {
+          html += '<label class="shot"><input type="checkbox"> <span>' + shot + '</span></label>';
+        });
+        html += '</div>';
+      });
+      document.getElementById('shotList').innerHTML = html;
+      document.getElementById('listTitle').innerHTML = '📋 Your ' + names[style] + ' Shot List';
+      document.getElementById('empty').style.display = 'none';
+      document.getElementById('listPanel').style.display = 'block';
+      document.getElementById('printBtn').style.display = 'inline-block';
+      document.getElementById('checkAll').style.display = 'inline-block';
+    });
+
+    document.getElementById('checkAll').addEventListener('click', function () {
+      var boxes = document.querySelectorAll('#shotList input[type="checkbox"]');
+      var all = Array.prototype.every.call(boxes, function (b) { return b.checked; });
+      boxes.forEach(function (b) { b.checked = !all; });
+    });
+
+    document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Readability Scorer — Flesch-Kincaid + Spoken Duration</title>
+<meta name="description" content="Free readability scorer for voice scripts: Flesch Reading Ease, Flesch-Kincaid grade, and estimated spoken duration. Make scripts that sound natural.">
+<link rel="canonical" href="https://nan-ttshub.surge.sh/tools/readability-scorer.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🔊 TextToSpeechHub</a>
+<div class="navlinks">
+<a href="tts-studio.html">TTS Studio</a>
+<a href="voice-style-guide.html">Voice Styles</a>
+<a href="ssml-helper.html">SSML Builder</a>
+<a href="readability-scorer.html">Readability</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<h1 style="margin:24px 0 6px">📊 Readability Scorer</h1>
+<p style="color:var(--muted);max-width:700px">Spoken scripts that score well on Flesch readability <em>sound</em> better — short sentences and plain words are easier for voices to read naturally. Paste your script for a score and an estimated spoken duration at 150 words per minute.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="readText">Your script</label>
+<textarea id="readText" placeholder="Paste your voiceover script here…"></textarea>
+<div style="margin-top:14px"><button class="btn-sm" id="readScore">📈 Score my script</button></div>
+<div class="result" id="readOut"><p class="status">Paste your script above to score it.</p></div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section prose">
+<h2>What the scores mean for voiceovers</h2>
+<ul>
+<li><b>Reading Ease 70–100:</b> conversational and clear — ideal for YouTube, ads, and podcasts.</li>
+<li><b>Reading Ease 50–69:</b> fine for documentaries and explainers, but simplify long sentences.</li>
+<li><b>Reading Ease below 50:</b> too dense to sound natural — rewrite before recording.</li>
+<li><b>Grade level 6–8:</b> the sweet spot for spoken content; most viral narrations sit here.</li>
+</ul>
+<p>Once your script scores 70+, refine the delivery with the <a href="voice-style-guide.html">voice style guide</a> and precise <a href="ssml-helper.html">SSML pauses</a>.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script src="../js/readability.js"></script>
+</body>
+</html>

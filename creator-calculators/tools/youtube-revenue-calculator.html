@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Revenue Calculator — Estimate AdSense Earnings by Niche (2026)</title>
+  <meta name="description" content="Free YouTube revenue calculator: enter monthly views and your niche to estimate AdSense earnings with realistic RPM ranges for finance, tech, lifestyle, gaming and more.">
+  <link rel="canonical" href="https://creatorcalculators.github.io/tools/youtube-revenue-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🧮 Creator<span>Calculators</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="freelance-rate-calculator.html">Rate Calc</a>
+        <a href="youtube-revenue-calculator.html">YouTube Calc</a>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="calc-page">
+    <div class="wrap">
+      <h1>YouTube Revenue Calculator</h1>
+      <p class="lede">See what your views are really worth. Pick your niche — advertisers pay wildly different rates — and get a realistic monthly and yearly AdSense estimate.</p>
+
+      <div class="calc-grid">
+        <div class="panel">
+          <h2>Your Channel</h2>
+          <div class="field">
+            <label for="views">Monthly views</label>
+            <input type="number" id="views" value="100000" min="0" step="1000">
+            <span class="hint">Total views across all videos in a typical month.</span>
+          </div>
+          <div class="field">
+            <label for="niche">Channel niche</label>
+            <select id="niche">
+              <option value="18.5,12,25">💰 Finance &amp; Business (RPM $12–$25)</option>
+              <option value="11.5,8,15">💻 Tech &amp; Software (RPM $8–$15)</option>
+              <option value="9,6,12">🎓 Education (RPM $6–$12)</option>
+              <option value="7.5,5,10">💪 Health &amp; Fitness (RPM $5–$10)</option>
+              <option value="5,3,7">🌿 Lifestyle &amp; Vlogs (RPM $3–$7)</option>
+              <option value="3.5,2,5">🎮 Gaming (RPM $2–$5)</option>
+              <option value="3,2,4">😂 Entertainment &amp; Comedy (RPM $2–$4)</option>
+            </select>
+            <span class="hint">RPM = revenue per 1,000 views (your cut after YouTube&rsquo;s 45%).</span>
+          </div>
+          <div class="field">
+            <label for="geo">Audience geography</label>
+            <select id="geo">
+              <option value="1">🌍 Mixed / Global (baseline)</option>
+              <option value="1.35">🇺🇸🇬🇧 Mostly USA / UK / CA / AU (+35%)</option>
+              <option value="0.6">🌏 Mostly developing regions (−40%)</option>
+            </select>
+            <span class="hint">Premium-country viewers command much higher ad rates.</span>
+          </div>
+          <button class="btn" onclick="calculate()">Estimate My Earnings</button>
+        </div>
+
+        <div class="result" id="result" style="display:none;">
+          <h2>Estimated Earnings</h2>
+          <div class="big"><span id="r-range">$0 – $0</span><small>per month (AdSense estimate)</small></div>
+          <table>
+            <tr><td>Yearly estimate</td><td id="r-year">$0</td></tr>
+            <tr><td>Per 1,000 views (your RPM)</td><td id="r-rpm">$0</td></tr>
+            <tr><td>Per 1M views</td><td id="r-million">$0</td></tr>
+          </table>
+          <div class="note">💡 Estimates only — actual RPM depends on seasonality (Q4 pays ~30–50% more), video length, and audience retention. Top creators also earn from sponsors, affiliates, and memberships.</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>How YouTube revenue is calculated</h2>
+        <div class="formula">Monthly revenue = (Monthly views ÷ 1,000) × RPM × Geography factor<br>Yearly revenue = Monthly revenue × 12</div>
+        <p><strong>RPM</strong> (revenue per mille) is what <em>you</em> earn per 1,000 views after YouTube takes its 45% cut. It&rsquo;s driven by your niche and where your viewers live — a finance channel with a US audience can earn 8–10× more per view than an entertainment channel with a global audience.</p>
+        <h2>Why niche matters more than views</h2>
+        <ul>
+          <li><strong>Finance ($12–$25 RPM):</strong> banks and brokers pay premium CPMs to reach investors.</li>
+          <li><strong>Tech ($8–$15 RPM):</strong> SaaS companies bid aggressively for buyer audiences.</li>
+          <li><strong>Entertainment ($2–$4 RPM):</strong> huge views, but advertisers pay little for casual viewers.</li>
+        </ul>
+        <p>100K monthly views in finance ≈ <strong>$1,200–$2,500/mo</strong>. The same views in entertainment ≈ <strong>$200–$400/mo</strong>.</p>
+        <h2>Related calculators</h2>
+        <p>
+          <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a> ·
+          <a href="ad-budget-calculator.html">Ad Budget Calculator</a> ·
+          <a href="video-cost-calculator.html">Video Cost Calculator</a>
+        </p>
+      </div>
+    </div>
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>🧮 Creator Calculators</h4><p style="font-size:.92rem;">Free, accurate calculators for freelancers and creators.</p></div>
+      <div><h4>Calculators</h4>
+        <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a>
+        <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a>
+        <a href="ad-budget-calculator.html">Ad Budget Calculator</a>
+        <a href="video-cost-calculator.html">Video Cost Calculator</a>
+      </div>
+      <div><h4>Resources</h4>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Freelance Rate Guide</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="wrap bottom">© 2026 Creator Calculators · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Estimates for planning purposes only.</div>
+  </footer>
+
+  <script src="../js/youtube-revenue.js"></script>
+</body>
+</html>

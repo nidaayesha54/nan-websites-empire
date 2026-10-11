@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator — Exact Age in Years, Months & Days | LifeCalc</title>
+  <meta name="description" content="Free age calculator: enter your date of birth to get your exact age in years, months, and days, total days lived, and a countdown to your next birthday.">
+  <meta name="keywords" content="age calculator, how old am i, exact age calculator, birthday countdown">
+  <link rel="canonical" href="https://lifecalc.surge.sh/tools/age-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Age Calculator",
+   "url":"https://lifecalc.surge.sh/tools/age-calculator.html",
+   "applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🧮 Life<span>Calc</span></a>
+    <nav class="nav"><a href="../index.html">Home</a><a href="bmi.html">BMI</a><a href="sleep-calculator.html">Sleep</a><a href="tip-calculator.html">Tip</a></nav>
+  </div>
+</header>
+<section class="tool-hero"><div class="wrap">
+  <h1>Age Calculator</h1>
+  <p>How old are you, exactly? Enter your date of birth for your precise age — plus a countdown to your next birthday.</p>
+</div></section>
+<div class="wrap"><p class="crumb"><a href="../index.html">Home</a> → Age Calculator</p></div>
+
+<div class="wrap">
+  <div class="calc">
+    <div class="field">
+      <label for="dob">Your date of birth</label>
+      <input type="date" id="dob" max="">
+    </div>
+    <button class="btn" onclick="calcAge()">Calculate My Age</button>
+    <div class="result" id="res">
+      <div class="big" id="ageBig">—</div>
+      <div class="detail" id="ageDetail"></div>
+      <div style="margin-top:12px"><span class="badge blue" id="bdayBadge"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot wrap">Advertisement</div>
+
+<div class="content">
+  <h2>How the age calculator works</h2>
+  <p>Your exact age is the time elapsed between your date of birth and today, broken into years, months, and days. It accounts for leap years automatically — a "year" here means a full trip around the sun from your birthday, not a fixed 365 days.</p>
+  <h2>Fun facts about your age</h2>
+  <ul>
+    <li><strong>Total days lived</strong> is simply the number of calendar days between the two dates.</li>
+    <li><strong>Next birthday countdown</strong> tells you how many days until you turn one year older.</li>
+    <li>Born on <strong>February 29</strong>? In non-leap years we count your birthday as March 1 for the countdown.</li>
+  </ul>
+  <p>Want to understand age math in depth? Read our <a href="../guides/age-calculator-guide.html">complete age calculator guide</a>.</p>
+</div>
+
+<footer><div class="wrap">
+  <div><a href="../index.html">Home</a><a href="bmi.html">BMI Calculator</a><a href="sleep-calculator.html">Sleep Calculator</a></div>
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free forever.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/age.js"></script>
+</body>
+</html>

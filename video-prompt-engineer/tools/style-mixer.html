@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Style Mixer 2026 — Fuse 2–3 Styles Into One Prompt</title>
+<meta name="description" content="Free AI video style mixer: pick 2–3 visual styles (cyberpunk, Ghibli, noir, claymation…) and fuse them into one unique hybrid prompt for Sora, Runway, Luma & Pika.">
+<meta name="keywords" content="AI video style mixer, mix art styles AI video, hybrid style prompt, cyberpunk Ghibli prompt, AI video prompt ideas 2026">
+<link rel="canonical" href="https://nan-promptengineer.surge.sh/tools/style-mixer.html">
+<meta property="og:title" content="AI Video Style Mixer — Fuse Styles Into One Prompt">
+<meta property="og:description" content="Pick 2–3 styles, add your subject → get a unique hybrid AI video prompt. Free, no signup.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html"><b>Video</b>PromptEngineer</a>
+<nav class="nav-links">
+<a href="prompt-builder.html">Prompt Builder</a>
+<a href="prompt-grader.html">Prompt Grader</a>
+<a href="style-mixer.html">Style Mixer</a>
+<a href="../guides/video-prompt-engineering-101.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<section><div class="wrap tool-shell">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Style Mixer</p>
+<h1>AI Video Style Mixer</h1>
+<p class="section-sub">Click 2–3 styles to fuse them — <span class="counter" id="sm-count">0 / 3 selected</span>. Cyberpunk × Ghibli? Noir × claymation? The hybrids are where originality lives.</p>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="style-grid" id="sm-grid"></div>
+
+<div class="form-grid">
+<div><label for="sm-subject">Subject <span class="hint">— what appears in the scene</span></label>
+<input type="text" id="sm-subject" placeholder="e.g. a night market"></div>
+<div><label for="sm-action">Action <span class="hint">— optional motion</span></label>
+<input type="text" id="sm-action" placeholder="e.g. glowing as lanterns rise into the sky"></div>
+</div>
+
+<div class="copy-row">
+<button class="btn" id="sm-mix">Mix My Styles</button>
+<button class="btn ghost" id="sm-clear">Clear</button>
+</div>
+
+<div class="output" id="sm-output" style="display:none">
+<h3>Your hybrid prompt</h3>
+<p class="result" id="sm-result"></p>
+<div class="copy-row">
+<button class="btn small" id="sm-copy">📋 Copy Prompt</button>
+<span class="char-count" id="sm-count2"></span>
+</div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="prose">
+<h2>Why mix styles?</h2>
+<p>Single-style prompts produce generic output — the model has rendered "cinematic photorealistic" a million times. <strong>Style hybrids</strong> force the model into territory with fewer reference frames, which reads as originality: "film noir × claymation" gives you something no one else is posting.</p>
+<p>Rules of thumb:</p>
+<ul>
+<li><strong>2 styles</strong> = coherent and controllable. <strong>3 styles</strong> = experimental, expect surprises.</li>
+<li>Mix one <em>lighting-driven</em> style (noir, cyberpunk) with one <em>texture-driven</em> style (claymation, oil painting) for the best balance.</li>
+<li>Keep the subject simple — complex subjects + 3 styles = visual mush.</li>
+</ul>
+<p>Want a full six-block prompt instead? Use the <a href="prompt-builder.html">Prompt Builder</a>. Want to check a hybrid's strength? Run it through the <a href="prompt-grader.html">Prompt Grader</a>.</p>
+</div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/style-mixer.js"></script>
+</body>
+</html>

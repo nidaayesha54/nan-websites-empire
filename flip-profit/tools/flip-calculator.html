@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix and Flip Calculator — Estimate House Flipping Profit &amp; ROI (Free)</title>
+  <meta name="description" content="Free fix-and-flip calculator: enter purchase price, rehab, ARV, holding & selling costs to get profit, ROI, 70% rule check and max offer price.">
+  <link rel="canonical" href="https://flipprofit.github.io/tools/flip-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Fix and Flip Profit Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Estimate fix-and-flip profit, ROI and the 70% rule from purchase price, rehab costs, ARV, holding and selling costs."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🏠 Flip<span>Profit</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="flip-calculator.html">Flip Calculator</a>
+        <a href="rental-roi.html">Rental ROI</a>
+        <a href="../guides/house-flipping-guide-2026.html">Flipping Guide</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> › Fix-and-Flip Calculator</p>
+  </div>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="wrap">
+      <span class="kicker">Interactive tool</span>
+      <h1 style="font-size:2rem; font-weight:800; margin-bottom:8px;">Fix-and-Flip Profit Calculator</h1>
+      <p class="sub">Enter your deal numbers. The calculator updates instantly — profit, ROI, the 70% rule check, and your maximum allowable offer.</p>
+
+      <div class="tool-grid">
+        <div class="form-card" id="flip-form">
+          <div class="field">
+            <label for="in-purchase">Purchase price <span class="hint">What you (would) pay for the property</span></label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="in-purchase" value="150000" min="0" step="1000"></div>
+          </div>
+          <div class="field">
+            <label for="in-rehab">Rehab / renovation cost <span class="hint">Contractor bids + 10–15% contingency</span></label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="in-rehab" value="40000" min="0" step="1000"></div>
+          </div>
+          <div class="field">
+            <label for="in-arv">After-repair value (ARV) <span class="hint">What fixed-up comps sell for</span></label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="in-arv" value="260000" min="0" step="1000"></div>
+          </div>
+          <div class="field">
+            <label for="in-months">Holding period (months) <span class="hint">Renovation + listing + closing time</span></label>
+            <input type="number" id="in-months" value="6" min="0" step="1">
+          </div>
+          <div class="field">
+            <label for="in-holding">Monthly holding cost <span class="hint">Loan interest, taxes, insurance, utilities per month</span></label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="in-holding" value="1200" min="0" step="50"></div>
+          </div>
+          <div class="field">
+            <label for="in-sell">Selling costs (%) <span class="hint">Agent commission + closing costs on sale (typical: 8–10%)</span></label>
+            <input type="number" id="in-sell" value="9" min="0" max="30" step="0.5">
+          </div>
+          <div class="alert"><strong>💡 The 70% rule:</strong> pros pay at most <strong>ARV × 70% − rehab</strong>. This calculator checks it on every deal.</div>
+        </div>
+
+        <div>
+          <div class="result-card" id="flip-results" style="display:none;">
+            <h3>📊 Your deal analysis</h3>
+            <div class="result-row"><span class="k">Estimated profit</span><span class="v" id="r-profit">$0</span></div>
+            <div class="result-row"><span class="k">ROI on cash invested</span><span class="v" id="r-roi">0%</span></div>
+            <div class="result-row"><span class="k">Total project cost</span><span class="v" id="r-costs">$0</span></div>
+            <div class="result-row"><span class="k">↳ Purchase</span><span class="v" id="r-purchase">$0</span></div>
+            <div class="result-row"><span class="k">↳ Rehab</span><span class="v" id="r-rehab">$0</span></div>
+            <div class="result-row"><span class="k">↳ Holding costs</span><span class="v" id="r-holding">$0</span></div>
+            <div class="result-row"><span class="k">↳ Selling costs</span><span class="v" id="r-selling">$0</span></div>
+            <div class="result-row"><span class="k">70% rule</span><span class="v" id="r-70rule">—</span></div>
+            <div class="result-row"><span class="k">Max offer (15% margin)</span><span class="v v-warn" id="r-mao">$0</span></div>
+          </div>
+          <div class="verdict" id="flip-verdict" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div class="faq">
+        <h2 style="margin-bottom:16px;">Flip calculator FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-q">How do you calculate profit on a house flip?</button>
+          <div class="faq-a">Profit = ARV − (purchase price + rehab + holding costs + selling costs). Holding costs include loan interest, taxes, insurance and utilities for every month you own the property. Selling costs are typically 8–10% of ARV (agent commissions plus closing costs).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What is the maximum allowable offer (MAO)?</button>
+          <div class="faq-a">MAO = ARV − rehab − holding costs − selling costs − target profit. Our calculator uses a 15% of ARV target profit margin, the minimum most experienced investors accept for the risk involved.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Should I include financing costs in the flip calculator?</button>
+          <div class="faq-a">Yes — put your total monthly loan payment, taxes, insurance and utilities into the monthly holding cost field. Hard-money loans at 10–12% interest are the biggest holding cost for most flippers.</div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>New to flipping? Start with the playbook.</h2>
+        <p>Learn how pros find deals, estimate ARV, and avoid the mistakes that wipe out beginners.</p>
+        <a class="btn btn-gold" href="../guides/house-flipping-guide-2026.html">📘 Read the 2026 Flipping Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <a class="brand" href="../index.html" style="font-size:1.2rem;">🏠 Flip<span>Profit</span></a>
+        <p style="margin-top:10px; max-width:320px;">Free calculators and guides for real estate investors. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</p>
+      </div>
+      <div>
+        <strong style="color:#fff;">Tools</strong><br>
+        <a href="flip-calculator.html">Flip Calculator</a><br>
+        <a href="rental-roi.html">Rental ROI</a>
+      </div>
+      <div>
+        <strong style="color:#fff;">Guides</strong><br>
+        <a href="../guides/house-flipping-guide-2026.html">Flipping Guide 2026</a><br>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+      <p class="fine">Estimates only — not financial advice. Always verify numbers with your own due diligence before investing. © 2026 FlipProfit.</p>
+    </div>
+  </footer>
+
+  <script src="../js/flip.js"></script>
+</body>
+</html>

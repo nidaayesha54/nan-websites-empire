@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Text to Speech Online — Read Text Aloud | TextToolsPro</title>
+<meta name="description" content="Free text to speech: paste text and listen with natural browser voices. Adjust speed, pitch and voice. No signup, nothing uploaded.">
+<link rel="canonical" href="https://texttoolspro.github.io/tools/text-to-speech.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Text to Speech","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="../index.html">📝 Text<span>ToolsPro</span></a>
+<nav class="nav">
+<a href="../index.html">Home</a>
+<a href="word-counter.html">Word Counter</a>
+<a href="case-converter.html">Case Converter</a>
+<a href="text-to-speech.html">Text to Speech</a>
+</nav>
+</div>
+</header>
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Text to Speech</p>
+<section class="section">
+<h1>Text to Speech</h1>
+<p>Paste any text and listen — uses your browser's built-in voices. Great for proofreading or accessibility.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot">Advertisement</div>
+<div class="tool-box">
+<label for="tts-input">Text to read aloud</label>
+<textarea id="tts-input" placeholder="Paste or type text here, then press Play..."></textarea>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px">
+<div><label for="tts-voice">Voice</label><select id="tts-voice"></select></div>
+<div><label for="tts-rate">Speed: <span id="tts-rate-val">1x</span></label><input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1"></div>
+<div><label for="tts-pitch">Pitch: <span id="tts-pitch-val">1</span></label><input type="range" id="tts-pitch" min="0.5" max="2" step="0.1" value="1"></div>
+</div>
+<div class="btn-row">
+<button onclick="ttsSpeak()">▶ Play</button>
+<button class="btn-sm secondary" onclick="ttsStop()">⏹ Stop</button>
+</div>
+</div>
+<p>Also try: <a href="word-counter.html">Word Counter</a> · <a href="lorem-generator.html">Lorem Ipsum Generator</a></p>
+</section>
+</div>
+<footer>
+<div class="wrap">
+<p>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a> · Free tools, no signup.</p>
+<p><a href="../index.html">Home</a> · <a href="word-counter.html">Word Counter</a> · <a href="case-converter.html">Case Converter</a></p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/tts.js"></script>
+</body>
+</html>

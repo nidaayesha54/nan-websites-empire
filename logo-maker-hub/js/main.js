@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.nav-toggle'),n=document.querySelector('.site-nav');if(t&&n){t.addEventListener('click',function(){n.classList.toggle('open');});}var y=document.getElementById('year');if(y){y.textContent=new Date().getFullYear();}});

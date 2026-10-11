@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funeral Cost Calculator 2026 — Free, By State | FuneralCostGuide</title>
+  <meta name="description" content="Free 2026 funeral cost calculator. Select funeral type and your state for an honest estimate with itemized breakdown. No signup, no sales calls.">
+  <link rel="canonical" href="https://nan-funeralcosts.surge.sh/tools/funeral-cost-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What does the average funeral cost include?","acceptedAnswer":{"@type":"Answer","text":"A traditional funeral typically includes a basic services fee, embalming, viewing facilities, casket, cemetery plot, grave opening/closing, vault, headstone, transportation, and miscellaneous fees."}},
+    {"@type":"Question","name":"Why do funeral costs vary by state?","acceptedAnswer":{"@type":"Answer","text":"Local cost of living, real estate prices for cemeteries, and regional competition all affect funeral prices. The same funeral can cost thousands more in one state than another."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Funeral<span>Cost</span>Guide</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="funeral-cost-calculator.html">Cost Calculator</a>
+      <a href="cremation-vs-burial.html">Burial vs Cremation</a>
+      <a href="quote-checker.html">Quote Checker</a>
+      <a href="../guides/ftc-funeral-rule.html">Your Rights</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Funeral Cost Calculator</p>
+  <h1>Funeral Cost Calculator (2026)</h1>
+  <p>Choose the type of funeral and your state. We'll show you an honest estimate — and exactly where the money goes — so nothing catches you by surprise.</p>
+
+  <div class="calc">
+    <div class="field">
+      <label>1. Type of funeral</label>
+      <div class="radio-group">
+        <label class="radio-card"><input type="radio" name="fc-type" value="burial" checked><span><span class="rc-title">Traditional burial</span><br><span class="rc-desc">Funeral with viewing, casket, and burial — typically $15,250–$17,200</span></span></label>
+        <label class="radio-card"><input type="radio" name="fc-type" value="cremation"><span><span class="rc-title">Cremation with service</span><br><span class="rc-desc">Viewing and memorial service, then cremation — typically $8,500–$10,300</span></span></label>
+        <label class="radio-card"><input type="radio" name="fc-type" value="direct"><span><span class="rc-title">Direct cremation</span><br><span class="rc-desc">No viewing or service; simplest and most affordable — typically $2,550–$3,300</span></span></label>
+      </div>
+      <select id="fc-type" style="display:none"><option value="burial">burial</option><option value="cremation">cremation</option><option value="direct">direct</option></select>
+    </div>
+    <div class="field">
+      <label for="fc-state">2. Your state</label>
+      <select id="fc-state"></select>
+    </div>
+  </div>
+
+  <div class="result" id="fc-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout gentle">
+    <strong class="label">Please know</strong>
+    These are estimates to help you plan — not quotes. Every funeral home prices differently, which is exactly why it helps to <a href="quote-checker.html">check any quote you receive</a> and to <a href="../guides/ftc-funeral-rule.html">know your rights</a> before signing.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">What does the average funeral cost include? <span>+</span></div><div class="faq-a">A traditional funeral typically includes a basic services fee, embalming, viewing facilities, casket, cemetery plot, grave opening/closing, vault, headstone, transportation, and miscellaneous fees like death certificates.</div></div>
+  <div class="faq-item"><div class="faq-q">Why do funeral costs vary by state? <span>+</span></div><div class="faq-a">Local cost of living, cemetery real estate prices, and regional competition all play a role. Two funeral homes in the same state have been found $7,355 apart for the same service.</div></div>
+  <div class="faq-item"><div class="faq-q">Is embalming required by law? <span>+</span></div><div class="faq-a">Usually not. No federal law requires embalming, and most states don't require it either — especially for cremation or prompt burial. Ask; don't assume.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div>All prices are estimates for guidance only, not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+// wire radio cards to hidden select
+document.querySelectorAll('input[name="fc-type"]').forEach(function(r){
+  r.addEventListener("change", function(){
+    document.getElementById("fc-type").value = r.value;
+    document.getElementById("fc-type").dispatchEvent(new Event("change"));
+    document.querySelectorAll(".radio-card").forEach(function(c){c.classList.remove("selected");});
+    r.closest(".radio-card").classList.add("selected");
+  });
+});
+document.querySelector(".radio-card").classList.add("selected");
+</script>
+</body>
+</html>

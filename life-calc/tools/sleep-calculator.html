@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Cycle Calculator — Wake Up Refreshed | LifeCalc</title>
+  <meta name="description" content="Free sleep cycle calculator: enter when you need to wake up and get the best bedtimes based on 90-minute sleep cycles. Wake up refreshed, not groggy.">
+  <meta name="keywords" content="sleep calculator, sleep cycle calculator, best time to sleep, when should i go to bed">
+  <link rel="canonical" href="https://lifecalc.surge.sh/tools/sleep-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Sleep Cycle Calculator",
+   "url":"https://lifecalc.surge.sh/tools/sleep-calculator.html",
+   "applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🧮 Life<span>Calc</span></a>
+    <nav class="nav"><a href="../index.html">Home</a><a href="age-calculator.html">Age</a><a href="bmi.html">BMI</a><a href="tip-calculator.html">Tip</a></nav>
+  </div>
+</header>
+<section class="tool-hero"><div class="wrap">
+  <h1>Sleep Cycle Calculator</h1>
+  <p>Waking up mid-cycle is why you feel groggy. Enter your wake-up time — we'll count back in 90-minute sleep cycles to find your ideal bedtimes.</p>
+</div></section>
+<div class="wrap"><p class="crumb"><a href="../index.html">Home</a> → Sleep Calculator</p></div>
+
+<div class="wrap">
+  <div class="calc">
+    <div class="field">
+      <label for="wake">I need to wake up at</label>
+      <input type="time" id="wake" value="07:00">
+    </div>
+    <button class="btn" onclick="calcSleep()">Find My Bedtimes</button>
+    <div class="result" id="res">
+      <div style="color:#6b7280">Go to bed at one of these times</div>
+      <div id="bedtimes" style="margin-top:10px"></div>
+      <div class="detail" id="sleepDetail"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot wrap">Advertisement</div>
+
+<div class="content">
+  <h2>How sleep cycles work</h2>
+  <p>Your brain cycles through light sleep, deep sleep, and REM roughly every <strong>90 minutes</strong>. Waking at the end of a cycle feels natural; waking mid-cycle — especially during deep sleep — causes grogginess.</p>
+  <h2>How to use this calculator</h2>
+  <ul>
+    <li>Pick your must-wake time (work, school, alarm).</li>
+    <li>Choose a bedtime from the list — each is a whole number of 90-minute cycles.</li>
+    <li>We add ~15 minutes for the average time it takes to fall asleep.</li>
+    <li><strong>5–6 full cycles (7.5–9 hours)</strong> is the sweet spot for most adults.</li>
+  </ul>
+  <div class="callout"><strong>Tip:</strong> Consistency beats perfection. Going to bed at the same time every night matters more than the exact minute.</div>
+</div>
+
+<footer><div class="wrap">
+  <div><a href="../index.html">Home</a><a href="age-calculator.html">Age Calculator</a><a href="bmi.html">BMI Calculator</a></div>
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free forever · Not medical advice.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/sleep.js"></script>
+</body>
+</html>

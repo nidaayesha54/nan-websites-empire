@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Maker Comparison Tool — Compare Runway, Pika, Luma, Sora, Hailuo, Kling</title>
+<meta name="description" content="Free AI video maker comparison tool: filter Runway, Pika, Luma, Sora, Hailuo and Kling by price, free tier, resolution and features. Get a ranked list.">
+<link rel="canonical" href="https://nan-aivideomaker.surge.sh/tools/tool-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html">🎬 AI<span>Video</span>MakerHub</a>
+<nav class="nav-links"><a href="tool-comparator.html">Compare Tools</a><a href="cost-calculator.html">Cost Calculator</a><a href="use-case-finder.html">Tool Quiz</a><a href="../guides/best-ai-video-generators-2026.html">Guides</a><a href="../blog/">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<nav class="breadcrumb"><a href="../index.html">Home</a> › AI Video Maker Comparator</nav>
+<section class="block" style="padding-top:10px">
+<h1 style="margin-bottom:10px">AI Video Maker Comparison Tool</h1>
+<p style="color:var(--muted);max-width:760px">Filter the six leading AI video generators by what matters to you. Tools are scored (0–10) on quality, value, ease of use and features, then ranked. Data last reviewed October 2026.</p>
+
+<div class="card" style="margin:26px 0">
+<h3 style="margin-bottom:6px">Your filters</h3>
+<label>Max monthly budget: <strong id="budgetLabel">$30</strong></label>
+<input type="range" id="budget" min="0" max="100" step="5" value="30">
+<div class="chips" id="mustHave">
+<span class="chip" data-f="freeTier">Free tier</span>
+<span class="chip" data-f="commercial">Commercial use</span>
+<span class="chip" data-f="api">API access</span>
+<span class="chip" data-f="editing">Built-in editing</span>
+<span class="chip" data-f="longClips">Long clips (60s+)</span>
+</div>
+<label>Sort by</label>
+<select id="sortBy" style="max-width:300px">
+<option value="score">Best overall score</option>
+<option value="price">Lowest price</option>
+<option value="quality">Video quality</option>
+<option value="value">Best value</option>
+</select>
+</div>
+
+<div id="results"></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="callout" style="margin-top:34px">
+<strong>💡 How scoring works:</strong> each tool is rated 0–10 on quality, value, ease of use and features. The overall score is weighted 35/25/20/20. Prices are starting paid-plan prices (USD, Oct 2026); always verify current pricing on the vendor's site.
+</div>
+
+<section class="block">
+<h2>Compare head-to-head</h2>
+<table style="margin-top:16px">
+<thead><tr><th>Tool</th><th>From</th><th>Free tier</th><th>Max resolution</th><th>Max clip</th><th>Best for</th></tr></thead>
+<tbody id="specTable"></tbody>
+</table>
+</section>
+</section>
+</div>
+<footer>
+<div class="wrap"><div class="fbottom">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></span>
+<span>© 2026 AIVideoMakerHub</span></div></div>
+</footer>
+<script src="../js/comparator.js"></script>
+</body>
+</html>

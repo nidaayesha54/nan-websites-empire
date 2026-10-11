@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landlord Coverage Calculator: How Much Do You Need? (2026)</title>
+<meta name="description" content="Free landlord insurance coverage calculator: enter dwelling value, rental income & liability needs to get recommended dwelling, loss-of-rent coverage. USA 2026.">
+<link rel="canonical" href="https://nan-landlordins.surge.sh/tools/coverage-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Landlord Coverage Needs Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🏠 Landlord<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="quote-estimator.html">Cost Estimator</a><a href="rent-vs-risk.html">Worth It?</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Coverage Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Landlord Coverage Needs Calculator</h1>
+<p>Most landlords are either <strong>over-insured</strong> (paying for coverage they don't need) or <strong>dangerously under-insured</strong> (one fire away from bankruptcy). Enter your numbers to get a balanced recommended package.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Dwelling rebuild cost ($) <span style="font-weight:400;color:var(--muted)">— not market value</span></label><input type="number" id="rebuild" value="250000" min="0"></div>
+<div class="field"><label>Monthly rental income ($)</label><input type="number" id="rent" value="1800" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Months of rent-loss protection</label><select id="months"><option value="6">6 months</option><option value="12" selected>12 months</option><option value="18">18 months</option><option value="24">24 months</option></select></div>
+<div class="field"><label>Liability limit you want</label><select id="liab"><option value="300000">$300,000</option><option value="500000" selected>$500,000</option><option value="1000000">$1,000,000</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Your personal property at the rental ($) <span style="font-weight:400;color:var(--muted)">— appliances, furnishings</span></label><input type="number" id="prop" value="15000" min="0"></div>
+<div class="field"><label>Other structures value ($) <span style="font-weight:400;color:var(--muted)">— garage, shed, fence</span></label><input type="number" id="other" value="15000" min="0"></div>
+</div>
+<button class="btn" onclick="calc()">Calculate My Coverage</button>
+<div class="result" id="res">
+<h3>Recommended coverage package</h3>
+<table class="cmp">
+<tr><th>Coverage</th><th>Recommended</th><th>Notes</th></tr>
+<tr><td>Dwelling</td><td id="r-dwell"></td><td>100% of rebuild cost (80% is the usual minimum for replacement-cost claims)</td></tr>
+<tr><td>Loss of rental income</td><td id="r-lor"></td><td>Your rent × selected months of downtime</td></tr>
+<tr><td>Liability</td><td id="r-liab"></td><td>Most landlords carry $500K–$1M; consider an umbrella policy above that</td></tr>
+<tr><td>Landlord personal property</td><td id="r-prop"></td><td>Covers YOUR appliances/furnishings — not tenants' belongings</td></tr>
+<tr><td>Other structures</td><td id="r-other"></td><td>Detached garage, shed, fencing</td></tr>
+</table>
+<p style="margin-top:14px;color:var(--muted)" id="verdict"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimates only — not financial advice.</strong> This is a planning starting point, not a policy recommendation. Rebuild costs vary by market; get a professional replacement-cost estimate and talk to a licensed agent before buying.</div>
+</div>
+</div></section>
+
+<section class="section"><div class="container"><div class="faq" style="max-width:760px;margin:0 auto">
+<h2 style="text-align:center">Coverage FAQ</h2>
+<div class="faq-item"><div class="faq-q">Should I insure for market value or rebuild cost?</div><div class="faq-a"><strong>Rebuild cost</strong> — what it costs to rebuild the same house at today's construction prices. Market value includes land, which can't burn down. Insuring for market value often means overpaying premiums.</div></div>
+<div class="faq-item"><div class="faq-q">How much loss-of-rent coverage do I need?</div><div class="faq-a">A year of rental income is the common benchmark — repairs after a serious fire often take 6–12 months. Multiply your monthly rent by 12, or use the <a href="quote-estimator.html">cost estimator</a> to see what the extra coverage adds.</div></div>
+<div class="faq-item"><div class="faq-q">Is $300K liability enough for a landlord?</div><div class="faq-a">It meets most lender requirements, but slip-and-fall lawsuits can exceed $300K. Many landlords carry $500K or add a personal umbrella policy for $1M+ protection. See <a href="../guides/what-does-landlord-insurance-cover.html">what landlord insurance covers</a>.</div></div>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> LandlordInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var rebuild=num('rebuild'), rent=num('rent'),
+      months=parseInt(val('months')), liab=parseInt(val('liab')),
+      prop=num('prop'), other=num('other');
+  var lor = rent*months;
+  document.getElementById('r-dwell').textContent = money(rebuild);
+  document.getElementById('r-lor').textContent = money(lor);
+  document.getElementById('r-liab').textContent = money(liab);
+  document.getElementById('r-prop').textContent = money(prop);
+  document.getElementById('r-other').textContent = money(other);
+  var total = rebuild+lor+liab+prop+other;
+  var annualRent = rent*12;
+  var msg = 'Total recommended package: ' + money(total) +
+    '. Your annual rental income is ' + money(annualRent) + '.';
+  if(annualRent>0 && rebuild>0 && (rebuild/annualRent)<5){
+    msg += ' Heads-up: a low rebuild-cost-to-rent ratio can make higher deductibles attractive — see the ' +
+      '<a href="quote-estimator.html">cost estimator</a>.';
+  }
+  document.getElementById('verdict').innerHTML = msg;
+  show('res');
+}
+</script>
+</body>
+</html>

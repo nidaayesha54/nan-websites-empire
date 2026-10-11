@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bankroll Calculator: Kelly Criterion & Flat Betting Planner | SoccerBettingGuide</title>
+<meta name="description" content="Free bankroll calculator: size soccer bets with the Kelly criterion and plan flat-betting stakes. Learn disciplined bankroll management — educational only.">
+<link rel="canonical" href="https://nan-soccerbetting.surge.sh/tools/bankroll-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="rg-banner">⚠️ <strong>21+ only.</strong> Gambling involves risk — only bet what you can afford to lose. Need help? Call <strong>1-800-GAMBLER</strong>. Educational content only.</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="../index.html">⚽ Soccer<span>BettingGuide</span></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="odds-converter.html">Odds Converter</a>
+      <a href="bankroll-calculator.html" class="active">Bankroll Calculator</a>
+      <a href="parlay-calculator.html">Parlay Calculator</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Bankroll Calculator</div>
+  <article class="article">
+    <h1>Bankroll Calculator: Kelly Criterion & Flat Betting</h1>
+    <p class="meta">Free tool · Educational · No signup</p>
+    <p>Bankroll management matters more than picking winners. Use the <strong>Kelly criterion</strong> to see what stake the math suggests for your estimated edge, then build a <strong>flat-betting plan</strong> that keeps every stake identical. See also: <a href="../guides/soccer-betting-strategies-beginners.html">beginner strategies</a>.</p>
+
+    <h2>Kelly Criterion Stake Sizer</h2>
+    <div class="tool-form">
+      <div class="form-grid">
+        <label class="field">Your bankroll (USD)
+          <input type="number" id="kelly-bankroll" value="500" min="1" step="1">
+        </label>
+        <label class="field">Odds format
+          <select id="kelly-format">
+            <option value="american">American</option>
+            <option value="decimal">Decimal</option>
+            <option value="fractional">Fractional</option>
+          </select>
+        </label>
+        <label class="field">Odds
+          <input type="text" id="kelly-odds" value="-110" placeholder="-110">
+        </label>
+        <label class="field">Your estimated win probability (%)
+          <input type="number" id="kelly-prob" value="55" min="1" max="99" step="0.5">
+        </label>
+      </div>
+      <button class="btn" id="kelly-btn" type="button">Calculate Kelly Stake</button>
+      <div class="result-box" id="kelly-result" aria-live="polite"></div>
+    </div>
+
+    <h2>Flat-Betting Planner</h2>
+    <div class="tool-form">
+      <div class="form-grid">
+        <label class="field">Your bankroll (USD)
+          <input type="number" id="flat-bankroll" value="500" min="1" step="1">
+        </label>
+        <label class="field">Unit size (% of bankroll)
+          <input type="number" id="flat-unit" value="1" min="0.1" max="10" step="0.1">
+        </label>
+        <label class="field">Planned bets per week
+          <input type="number" id="flat-bets" value="5" min="0" step="1">
+        </label>
+      </div>
+      <button class="btn" id="flat-btn" type="button">Build Plan</button>
+      <div class="result-box" id="flat-result" aria-live="polite"></div>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong>Responsible gambling:</strong> 21+ only. The Kelly criterion is a math formula, not a winning system — it is only as good as your win-probability estimate, which is always uncertain. Never increase stakes to chase losses. Only bet what you can afford to lose. <strong>1-800-GAMBLER</strong>.
+    </div>
+  </article>
+</div>
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="rg-note">21+ only. Gambling involves risk — only bet what you can afford to lose. If you or someone you know has a gambling problem, call or text <strong>1-800-GAMBLER</strong>. This site is educational only and does not guarantee any wins.</p>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p>© <span id="year">2026</span> SoccerBettingGuide. Educational content only.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/bankroll-calculator.js"></script>
+</body>
+</html>

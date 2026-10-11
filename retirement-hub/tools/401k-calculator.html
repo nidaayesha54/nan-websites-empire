@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>401(k) Calculator: Project Your Balance | RetirementHub</title>
+<meta name="description" content="Free 401(k) calculator with employer match: project your balance year by year and see contributions vs investment growth."/>
+<link rel="canonical" href="https://nan-retirementhub.surge.sh/tools/401k-calculator.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Retirement<span>Hub</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>401(k) Calculator: Project Your Future Balance</h1><p class="lede">Plug in your balance, salary, contribution rate and employer match to see your 401(k) grow year by year.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="k401Form" class="tool-form">
+<div class="field-row">
+<div class="field"><label for="kBalance">Current 401(k) balance ($)</label><input type="number" id="kBalance" min="0" step="1000" value="50000" required></div>
+<div class="field"><label for="kSalary">Annual salary ($)</label><input type="number" id="kSalary" min="1" step="1000" value="90000" required></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="kContrib">Your contribution (% of salary)</label><input type="number" id="kContrib" min="0" max="100" step="0.5" value="10" required></div>
+<div class="field"><label for="kReturn">Expected annual return (%)</label><input type="number" id="kReturn" min="0" max="15" step="0.1" value="7" required></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="kMatch">Employer match (% of salary)</label><input type="number" id="kMatch" min="0" max="100" step="0.5" value="50" required><div class="hint">e.g. 50 = employer adds 50&cent; per $1 you contribute</div></div>
+<div class="field"><label for="kMatchCap">Match applies up to (% of salary)</label><input type="number" id="kMatchCap" min="0" max="100" step="0.5" value="6" required></div>
+</div>
+<div class="field"><label for="kYears">Years until retirement</label><input type="number" id="kYears" min="1" max="50" value="30" required></div>
+<button type="submit" class="btn btn-primary">Project my 401(k)</button>
+</form></div><div class="tool-results" id="k401Results" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the math works</h2>
+<p>Each year, your balance grows by the expected return, then your contributions land: <strong>Balance<sub>next</sub> = Balance &times; (1 + r) + your contribution + employer match</strong>. Your contribution is salary &times; your %, and the employer match is salary &times; min(your %, cap %) &times; match %. The chart splits every dollar of growth from every dollar contributed so you can see compounding do the heavy lifting.</p>
+<h2>Tips</h2>
+<ul><li>Always contribute enough to get the <strong>full employer match</strong> — it is an instant 50&ndash;100% return.</li>
+<li>In 2026, the 401(k) elective deferral limit is $24,500 ($31,000 if 50+). This projector ignores IRS caps — check yours.</li>
+<li>Fees matter: a 1% higher expense ratio can cost six figures over a career. Prefer low-cost index funds.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="social-security.html">Social Security Timing Analyzer</a></li><li><a href="../guides/how-much-to-retire.html">How Much Do You Need to Retire Comfortably in 2026?</a></li><li><a href="../guides/401k-vs-ira.html">401(k) vs IRA: Which Is Better in 2026?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/401k-calculator.js"></script></body>
+</html>

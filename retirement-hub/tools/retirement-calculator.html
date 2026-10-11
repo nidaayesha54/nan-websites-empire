@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Retirement Calculator: How Much Do You Need? | RetirementHub</title>
+<meta name="description" content="Free retirement calculator: enter your age, retirement spending, inflation and expected returns to find your nest egg and monthly savings target."/>
+<link rel="canonical" href="https://nan-retirementhub.surge.sh/tools/retirement-calculator.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Retirement<span>Hub</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Retirement Calculator: How Much Do You Need to Retire?</h1><p class="lede">Answer the biggest retirement question — your number — with inflation-adjusted math and a clear monthly savings target.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="retForm" class="tool-form">
+<div class="field-row">
+<div class="field"><label for="curAge">Current age</label><input type="number" id="curAge" min="18" max="90" value="35" required></div>
+<div class="field"><label for="retAge">Retirement age</label><input type="number" id="retAge" min="19" max="94" value="65" required></div>
+</div>
+<div class="field"><label for="expenses">Annual expenses in retirement (today's dollars, $)</label><input type="number" id="expenses" min="1" step="1000" value="60000" required><div class="hint">What you expect to spend per year, in today's purchasing power.</div></div>
+<div class="field-row">
+<div class="field"><label for="inflation">Inflation (% per year)</label><input type="number" id="inflation" min="0" max="15" step="0.1" value="3" required></div>
+<div class="field"><label for="retReturn">Expected investment return (% per year)</label><input type="number" id="retReturn" min="0" max="15" step="0.1" value="7" required></div>
+</div>
+<button type="submit" class="btn btn-primary">Calculate my number</button>
+</form></div><div class="tool-results" id="retResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the math works</h2>
+<p>First, your annual spending is grown by inflation to your retirement year: <strong>E &times; (1 + i)<sup>n</sup></strong>. Then we compute the lump sum needed at retirement to fund that spending through age 95 — the present value of an annuity: <strong>Nest egg = E<sub>ret</sub> &times; [1 &minus; (1+r)<sup>&minus;m</sup>] / r</strong>, where <em>m</em> is years in retirement. Finally, the monthly savings figure is the payment that grows to the nest egg at your expected return.</p>
+<div class="formula">Nest egg = E&middot;(1+i)<sup>n</sup> &middot; [1 &minus; (1+r)<sup>&minus;m</sup>] / r &nbsp;&middot;&nbsp; Monthly = Nest egg &middot; (r/12) / ((1+r/12)<sup>12n</sup> &minus; 1)</div>
+<h2>Tips</h2>
+<ul><li>Social Security will cover part of your spending — subtract your expected benefit from expenses for a lower target.</li>
+<li>Healthcare is the wildcard: Fidelity estimates a 65-year-old couple needs roughly $330,000 for medical costs in retirement.</li>
+<li>Re-run the numbers yearly; small changes in return assumptions swing the target a lot.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="401k-calculator.html">401(k) Projector</a></li><li><a href="social-security.html">Social Security Timing Analyzer</a></li><li><a href="../guides/how-much-to-retire.html">How Much Do You Need to Retire Comfortably in 2026?</a></li><li><a href="../guides/401k-vs-ira.html">401(k) vs IRA: Which Is Better in 2026?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/retirement-calculator.js"></script></body>
+</html>

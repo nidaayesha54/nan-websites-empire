@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amortization Schedule Calculator (2026) — Principal vs Interest by Year</title>
+<meta name="description" content="Free amortization schedule calculator: see year-by-year principal vs interest, total interest, and how extra payments shorten your loan.">
+<link rel="canonical" href="https://nan-mortgagehub.surge.sh/tools/amortization.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../index.html">🏠 Mortgage<span>Hub</span></a>
+<nav class="main"><a href="mortgage-calculator.html">Payment</a><a href="affordability.html">Affordability</a><a href="refinance.html">Refinance</a><a href="amortization.html">Amortization</a></nav>
+</div></header>
+<div class="wrap">
+  <section><h1 style="color:var(--navy);margin-top:24px">Amortization Schedule Calculator</h1>
+  <p style="color:var(--muted)">Watch your balance fall year by year — and see how extra payments crush total interest.</p></section>
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+  <form class="calc" id="amcalc">
+    <div class="field"><label for="loan">Loan amount ($)</label><input id="loan" type="number" value="400000" min="0"></div>
+    <div class="field"><label for="rate">Interest rate (APR %)</label><input id="rate" type="number" step="0.01" value="6.5" min="0"></div>
+    <div class="field"><label for="term">Loan term (years)</label><select id="term"><option value="30" selected>30</option><option value="20">20</option><option value="15">15</option><option value="10">10</option></select></div>
+    <div class="field"><label for="extra">Extra monthly payment ($)</label><input id="extra" type="number" value="0" min="0"><small>Optional — applied straight to principal.</small></div>
+    <button class="calcbtn" type="submit">Generate Schedule</button>
+  </form>
+  <div class="result" id="out">
+    <table>
+      <tr><th>Detail</th><th>Value</th></tr>
+      <tr><td>Base monthly payment (P&amp;I)</td><td id="r-basepay">$0</td></tr>
+      <tr><td>Total of all payments</td><td id="r-totalpay">$0</td></tr>
+      <tr><td>Total interest paid</td><td id="r-interest">$0</td></tr>
+      <tr><td>Time to pay off</td><td id="r-months">—</td></tr>
+      <tr id="extra-row" style="display:none"><td>Interest saved by extra payments</td><td id="r-saved">$0</td></tr>
+    </table>
+    <h3 style="margin-top:18px;color:var(--navy)">Year-by-year breakdown</h3>
+    <div class="scrollbox" id="sched"></div>
+  </div>
+  <div class="disclaimer">Estimate only. Actual schedules may differ slightly due to lender rounding. Not financial advice.</div>
+  <p>Also try: <a href="mortgage-calculator.html">payment calculator</a> · <a href="refinance.html">refinance analyzer</a> · <a href="../index.html">all tools</a></p>
+</div>
+<footer class="site"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p><small>© <span id="yr"></span> MortgageHub. Estimates only.</small></p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/amortization.js"></script>
+</body>
+</html>

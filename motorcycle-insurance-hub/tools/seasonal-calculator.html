@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seasonal vs Year-Round Motorcycle Insurance Calculator</title>
+<meta name="description" content="Compare a seasonal lay-up motorcycle insurance policy vs year-round coverage. See exactly how much you'd save during winter storage months.">
+<link rel="canonical" href="https://nan-motorcycleins.surge.sh/tools/seasonal-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">🏍️ Motorcycle<span class="accent">Insurance</span>Hub</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="quote-estimator.html">Quote Estimator</a>
+      <a href="coverage-advisor.html">Coverage Quiz</a>
+      <a href="seasonal-calculator.html" class="active">Seasonal Calc</a>
+      <a href="../guides/motorcycle-insurance-cost-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    <article class="article">
+      <h1>Seasonal vs Year-Round Motorcycle Insurance Calculator</h1>
+      <p class="meta">Compare winter lay-up policies with full-year coverage · See your savings instantly</p>
+      <p>A <strong>seasonal (lay-up) policy</strong> drops liability and collision during the months you don't ride and keeps comprehensive (theft, fire, falling objects) active. Enter your numbers to compare.</p>
+
+      <form class="tool" id="seasonForm" onsubmit="return calcSeasonal(event)">
+        <div class="field">
+          <label for="annual">Your current annual premium ($)</label>
+          <input type="number" id="annual" min="100" max="10000" step="10" value="800" required>
+        </div>
+        <div class="field">
+          <label for="months">Riding months per year: <span id="monthsLabel" style="color:#ff8c3a">7</span></label>
+          <input type="range" id="months" min="3" max="11" value="7" step="1" style="width:100%" oninput="document.getElementById('monthsLabel').textContent=this.value">
+        </div>
+        <div class="field">
+          <label for="compFrac">Storage-month cost (% of a full month)</label>
+          <select id="compFrac">
+            <option value="0.10">10% — comprehensive-only quote (cheap)</option>
+            <option value="0.15" selected>15% — typical comprehensive share</option>
+            <option value="0.20">20% — higher-risk area</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Compare Policies</button>
+      </form>
+
+      <div class="result" id="result">
+        <h2>Your comparison</h2>
+        <table style="width:100%;border-collapse:collapse;margin:14px 0">
+          <tr style="border-bottom:1px solid #2b2b31">
+            <td style="padding:10px">Year-round policy</td>
+            <td style="padding:10px;text-align:right" id="yrOut">$0</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2b2b31">
+            <td style="padding:10px">Seasonal lay-up policy</td>
+            <td style="padding:10px;text-align:right" id="seOut">$0</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;font-weight:800;color:#ffc400">You save</td>
+            <td style="padding:10px;text-align:right;font-weight:900;color:#ffc400;font-size:1.4rem" id="svOut">$0</td>
+          </tr>
+        </table>
+        <p id="verdictOut" class="callout"></p>
+        <ul class="breakdown" id="notesOut"></ul>
+        <p class="disclaimer">Estimates only, not financial advice. Not all insurers offer lay-up policies; some states and lenders require continuous liability coverage. Confirm terms with your insurer before switching.</p>
+      </div>
+
+      <h2>How seasonal motorcycle insurance works</h2>
+      <p>With a lay-up policy, your insurer suspends the expensive parts of your coverage (liability, collision) during declared storage months, while <strong>comprehensive stays on</strong> — so theft, fire, vandalism and storm damage are still covered. When riding season returns, full coverage is reactivated, usually with a phone call.</p>
+      <h2>Watch out for these catches</h2>
+      <ul>
+        <li><strong>Lender rules:</strong> if you have a loan, your lender probably requires year-round full coverage — a lay-up policy may violate your loan terms.</li>
+        <li><strong>State requirements:</strong> some states penalize registered vehicles without continuous liability. You may need to surrender plates or file a storage affidavit.</li>
+        <li><strong>Coverage gaps:</strong> never fully cancel — a coverage lapse can raise your future rates more than the lay-up saves.</li>
+      </ul>
+
+      <div class="related">
+        <h2 class="section-title">Keep exploring</h2>
+        <div class="grid">
+          <a class="card" href="quote-estimator.html"><span class="tag">Tool</span><h3>Quote estimator</h3><p>Get your baseline annual premium first.</p></a>
+          <a class="card" href="coverage-advisor.html"><span class="tag">Quiz</span><h3>Coverage quiz</h3><p>Make sure the coverage you keep is the right coverage.</p></a>
+          <a class="card" href="../guides/cheapest-motorcycle-insurance.html"><span class="tag">Guide</span><h3>Cheap motorcycle insurance</h3><p>More ways to shrink your premium.</p></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="fine">Estimates only, not financial advice. Ride safe.</div>
+</footer>
+
+<script>
+function calcSeasonal(e){
+  e.preventDefault();
+  var annual = parseFloat(document.getElementById("annual").value);
+  var riding = parseInt(document.getElementById("months").value, 10);
+  var frac = parseFloat(document.getElementById("compFrac").value);
+  if(!(annual > 0)) return false;
+
+  var stored = 12 - riding;
+  var monthlyFull = annual / 12;
+  var seasonal = riding * monthlyFull + stored * monthlyFull * frac;
+  seasonal = Math.round(seasonal);
+  var savings = Math.round(annual - seasonal);
+  var pct = Math.round(savings / annual * 100);
+
+  document.getElementById("yrOut").textContent = "$" + annual.toLocaleString();
+  document.getElementById("seOut").textContent = "$" + seasonal.toLocaleString();
+  document.getElementById("svOut").textContent = "$" + savings.toLocaleString() + " / yr (" + pct + "%)";
+
+  var verdict;
+  if(savings >= 150){
+    verdict = "✅ A seasonal policy looks like a clear win for you — roughly $" + savings.toLocaleString() + " back per year. Ask your insurer for a lay-up quote before winter.";
+  } else if(savings >= 50){
+    verdict = "🟡 Modest savings (~$" + savings.toLocaleString() + "/yr). Worth it if switching is easy and your lender/state allow it.";
+  } else {
+    verdict = "🔴 Savings are small (~$" + savings.toLocaleString() + "/yr). With short storage periods, year-round coverage is simpler and keeps you flexible for unseasonably warm days.";
+  }
+  document.getElementById("verdictOut").textContent = verdict;
+
+  var notes = document.getElementById("notesOut");
+  notes.innerHTML = "";
+  [
+    "Riding months (" + riding + "): full coverage = $" + Math.round(riding * monthlyFull).toLocaleString(),
+    "Storage months (" + stored + "): comprehensive-only = $" + Math.round(stored * monthlyFull * frac).toLocaleString(),
+    "Keep comprehensive active while stored — winter theft and garage fires are real.",
+    "Set a calendar reminder to reactivate full coverage before your first spring ride."
+  ].forEach(function(t){
+    var li = document.createElement("li");
+    li.textContent = "• " + t;
+    notes.appendChild(li);
+  });
+
+  var res = document.getElementById("result");
+  res.classList.add("show");
+  res.scrollIntoView({behavior:"smooth"});
+  return false;
+}
+</script>
+</body>
+</html>

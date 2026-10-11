@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Formation Builder — Drag &amp; Drop Tactics Board | FootballTacticsHub</title>
+<meta name="description" content="Free football formation builder: drag 11 players on an interactive tactics board, use 4-4-2, 4-3-3, 3-5-2 & 5-3-2 presets, export your lineup as PNG or shareable text.">
+<meta name="keywords" content="formation builder, football lineup maker, soccer formation creator, tactics board, 4-4-2 lineup, 4-3-3 lineup">
+<link rel="canonical" href="https://nan-footballtactics.surge.sh/tools/formation-builder.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-ball">⚽</span> FootballTacticsHub</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="formation-builder.html">Formation Builder</a>
+      <a href="formation-quiz.html">Formation Quiz</a>
+      <a href="tactics-glossary.html">Glossary</a>
+      <a href="../guides/formations-explained-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="formation-builder.html">Tools</a> › Formation Builder</div>
+    <h1 style="font-size:2rem;margin:0 0 8px">Football Formation Builder</h1>
+    <p class="lead">Drag players anywhere on the pitch. Start from a preset, rename your players, then export your lineup as an image or text.</p>
+
+    <div class="tool-wrap">
+      <div class="toolbar">
+        <label for="preset"><strong>Preset:</strong></label>
+        <select id="preset">
+          <option value="4-4-2">4-4-2</option>
+          <option value="4-3-3" selected>4-3-3</option>
+          <option value="4-2-3-1">4-2-3-1</option>
+          <option value="3-5-2">3-5-2</option>
+          <option value="5-3-2">5-3-2</option>
+        </select>
+        <input type="text" id="team-name" placeholder="Team name" maxlength="40" aria-label="Team name">
+        <input type="text" id="player-name" placeholder="Selected player name" maxlength="24" aria-label="Selected player name">
+        <button id="btn-png" type="button">⬇ Export PNG</button>
+        <button id="btn-text" type="button" class="secondary">📋 Copy as Text</button>
+        <button id="btn-reset" type="button" class="secondary">↺ Reset</button>
+      </div>
+
+      <div id="builder-stage">
+        <canvas id="pitch" width="720" height="1000" aria-label="Interactive football pitch. Drag player tokens to position them."></canvas>
+      </div>
+      <p class="hint">👆 Drag a player token to move it. Click a token to select it, then rename it in the "Selected player name" box. Works on touch screens too.</p>
+
+      <div class="output-box">
+        <label for="text-output"><strong>Shareable lineup text</strong></label>
+        <textarea id="text-output" readonly placeholder="Press “Copy as Text” to generate your lineup here…"></textarea>
+      </div>
+    </div>
+
+    <h2 style="margin-top:40px">How to use the formation builder</h2>
+    <ol>
+      <li>Pick a <strong>preset formation</strong> or drag players freely to design your own.</li>
+      <li>Give your team a name and rename players (e.g. "Rashford", "Bellingham").</li>
+      <li><strong>Export PNG</strong> to save a tactics-board image, or <strong>Copy as Text</strong> for WhatsApp / group chats.</li>
+    </ol>
+    <p>Not sure which formation fits? <a href="formation-quiz.html">Take the formation quiz →</a> or read our <a href="../guides/formations-explained-2026.html">formations explained guide</a>.</p>
+  </div>
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span>
+      <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+      <span>© <span id="year">2026</span> FootballTacticsHub</span>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/formation-builder.js"></script>
+</body>
+</html>

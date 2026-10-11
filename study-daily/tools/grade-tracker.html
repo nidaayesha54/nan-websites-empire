@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Grade Tracker — Project Your Final Grade | Study Daily</title>
+  <meta name="description" content="Free grade tracker: enter assignments, weights and scores to project your final grade and see exactly what you need on the final exam. No signup.">
+  <link rel="canonical" href="https://studydailyreports.github.io/tools/grade-tracker.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📚 Study<span>Daily</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../reports/daily-study-report.html">Daily Report</a>
+      <a href="study-timer.html">Study Timer</a>
+      <a href="grade-tracker.html">Grade Tracker</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html">Tools</a> › Grade Tracker</p>
+  <div class="tool-box">
+    <h1>📊 Grade Tracker</h1>
+    <p class="lede">Enter each assignment's weight and your score (leave score blank for work not yet graded). Your projected grade and "what you need on the final" update live.</p>
+
+    <table class="gt-table">
+      <thead><tr><th>Assignment</th><th>Weight %</th><th>Your score</th><th>Out of</th><th></th></tr></thead>
+      <tbody id="gt-body"></tbody>
+    </table>
+    <div class="timer-controls" style="justify-content:flex-start">
+      <button class="btn" id="gt-add">+ Add assignment</button>
+      <button class="btn-outline" id="gt-example" style="color:var(--navy-900);border-color:var(--navy-600)">Load example</button>
+      <button class="btn-outline" id="gt-clear" style="color:var(--navy-900);border-color:var(--navy-600)">Clear</button>
+    </div>
+
+    <div class="result" id="gt-result">
+      <h3 id="gt-result-title">Your Grade Projection</h3>
+      <div id="gt-result-body"></div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>How grade projection works</h2>
+    <p>Your current grade is the <strong>weighted average</strong> of everything graded so far: each score counts in proportion to its weight. The "what you need" section solves backwards from your target — if you want a 90% and 30% of the grade is still ungraded, it tells you exactly what average you need on that remaining work.</p>
+    <h3>Tips</h3>
+    <ul>
+      <li>Weights should add up to <strong>100%</strong> — check your syllabus.</li>
+      <li>Dropped lowest scores? Just leave that assignment out of the table.</li>
+      <li>Use the projection to decide <strong>where to spend your study hours</strong> — a heavy final deserves the most prep. See our <a href="../guides/exam-prep-guide.html">exam prep guide</a>.</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><h4>Study Daily</h4><a href="../index.html">Home</a><a href="../reports/daily-study-report.html">Daily Report</a><a href="../blog/index.html">Blog</a></div>
+    <div><h4>Tools</h4><a href="study-timer.html">Study Timer</a><a href="grade-tracker.html">Grade Tracker</a></div>
+    <div><h4>Guides</h4><a href="../guides/study-techniques-2026.html">Study Techniques</a><a href="../guides/top-online-courses-2026.html">Online Courses</a><a href="../guides/exam-prep-guide.html">Exam Prep</a></div>
+  </div>
+  <div class="wrap bottom">© 2026 Study Daily Reports. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>. Free forever.</div>
+</footer>
+<script src="../js/grade-tracker.js"></script>
+</body>
+</html>

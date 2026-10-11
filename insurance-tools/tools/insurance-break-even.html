@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Insurance Worth It? Expected-Value Break-Even Analyzer 2026</title>
+<meta name="description" content="Honest math: compare insurance premiums paid vs the probability-weighted payout. Expected-value analyzer for any insurance type. Free 2026.">
+<link rel="canonical" href="https://nan-insurancetools.surge.sh/tools/insurance-break-even.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Insurance Break-Even Analyzer","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Insurance<span>ToolsHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="life-insurance-calculator.html">Life</a><a href="auto-insurance-estimator.html">Auto</a><a href="health-insurance-comparator.html">Health</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Break-Even Analyzer</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Is This Insurance Worth It? (Expected-Value Analyzer)</h1>
+<p>Insurance is a bet against disaster. This tool does the cold math: <strong>expected payout</strong> (probability × benefit) vs. <strong>total premiums</strong> over the policy period.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field"><label>Insurance type</label><select id="type">
+<option>Life insurance (term)</option><option>Auto insurance</option>
+<option>Health insurance</option><option>Home insurance</option>
+<option>Pet insurance</option><option>Extended warranty</option>
+</select></div>
+<div class="field-row">
+<div class="field"><label>Monthly premium ($)</label><input type="number" id="prem" value="50" min="0"></div>
+<div class="field"><label>Policy period (years)</label><input type="number" id="yrs" value="10" min="1" max="50"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Chance of a claim during the period (%)</label><input type="number" id="prob" value="5" min="0" max="100" step="0.1"></div>
+<div class="field"><label>Average payout if claimed ($)</label><input type="number" id="pay" value="100000" min="0"></div>
+</div>
+<button class="btn" onclick="calc()">Run the Math</button>
+<div class="result" id="res">
+<h3>The honest math</h3>
+<div class="big" id="verdict"></div>
+<table class="cmp">
+<tr><th></th><th>Amount</th></tr>
+<tr><td>Total premiums paid</td><td id="tprem"></td></tr>
+<tr><td>Expected payout (probability × benefit)</td><td id="exp"></td></tr>
+<tr><td>Net expected value</td><td id="net"></td></tr>
+</table>
+<p id="note" style="color:var(--muted);font-size:.92rem"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Educational tool — not financial advice.</strong> Expected value ignores the real point of insurance: protecting against ruin. A negative expected value is NORMAL (insurers must profit) — insurance is worth it when a loss would devastate you financially.</div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> InsuranceToolsHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var prem=num('prem'), yrs=num('yrs'), prob=num('prob')/100, pay=num('pay');
+  var total = prem*12*yrs, exp = prob*pay, net = exp-total;
+  document.getElementById('tprem').textContent=money(total);
+  document.getElementById('exp').textContent=money(exp);
+  var nEl=document.getElementById('net'); nEl.textContent=(net<0?'−':'')+money(Math.abs(net));
+  document.getElementById('verdict').textContent = net>=0 ? '✅ Mathematically worth it' : '⚠️ Negative expected value (normal!)';
+  document.getElementById('note').textContent = net>=0
+    ? 'On pure math, this policy pays for itself on average. Still check the fine print and exclusions.'
+    : 'Almost all insurance has negative expected value — that is how insurers stay in business. Buy it anyway if the covered disaster would wreck your finances (that is what insurance is FOR). Skip it if you could comfortably self-insure the loss.';
+  show('res');
+}
+</script>
+</body>
+</html>

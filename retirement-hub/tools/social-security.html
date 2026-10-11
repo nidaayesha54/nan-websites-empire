@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Social Security Timing Analyzer | RetirementHub</title>
+<meta name="description" content="Should you claim Social Security at 62, 67, or 70? Compare monthly benefits and lifetime totals with our free timing analyzer."/>
+<link rel="canonical" href="https://nan-retirementhub.surge.sh/tools/social-security.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Retirement<span>Hub</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Social Security Timing Analyzer: 62 vs 67 vs 70</h1><p class="lede">Your claiming age permanently changes your benefit. Slide through ages 62–70 to compare monthly checks and lifetime totals.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="ssForm" class="tool-form">
+<div class="field"><label for="fraBenefit">Estimated monthly benefit at full retirement age (67) ($)</label><input type="number" id="fraBenefit" min="1" step="10" value="2000" required><div class="hint">Find your estimate at ssa.gov — this is your PIA-based FRA amount.</div></div>
+<div class="field"><label for="lifeExp">Life expectancy (age)</label><input type="number" id="lifeExp" min="63" max="110" value="85" required></div>
+<div class="field"><label for="claimAge">Claiming age: <span class="range-val" id="claimAgeVal">67</span></label><input type="range" id="claimAge" min="62" max="70" step="1" value="67"></div>
+<button type="submit" class="btn btn-primary">Compare claiming ages</button>
+</form></div><div class="tool-results" id="ssResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the math works</h2>
+<p>Claiming before your full retirement age of 67 shrinks your check: <strong>5/9 of 1% per month for the first 36 months early, then 5/12 of 1% per month</strong>. That is why age 62 pays ~70%. Each year you delay past 67 adds <strong>8% delayed retirement credits</strong> until 70 (~124%). Lifetime totals multiply the monthly benefit by the years from claiming age to life expectancy.</p>
+<h2>Tips</h2>
+<ul><li>If you are married, coordinate: often the higher earner delays to 70 to maximize the survivor benefit.</li>
+<li>Claiming early while still working can trigger the earnings test, temporarily reducing benefits.</li>
+<li>Break-even between 62 and 70 is typically around age 78&ndash;80 — live longer and waiting wins.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="401k-calculator.html">401(k) Projector</a></li><li><a href="../guides/how-much-to-retire.html">How Much Do You Need to Retire Comfortably in 2026?</a></li><li><a href="../guides/401k-vs-ira.html">401(k) vs IRA: Which Is Better in 2026?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/social-security.js"></script></body>
+</html>

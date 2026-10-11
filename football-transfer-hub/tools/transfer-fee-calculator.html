@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transfer Fee Calculator — Estimate Football Transfer Fees | FootballTransferHub</title>
+<meta name="description" content="Free football transfer fee calculator: enter player age, contract years left, market value and league premium to estimate a realistic transfer fee range.">
+<link rel="canonical" href="https://nan-footballtransfers.surge.sh/tools/transfer-fee-calculator.html">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="/index.html">⚽ <span>Football</span>TransferHub</a>
+<nav><a href="/index.html">Home</a><a href="/tools/rumor-tracker.html">Rumor Tracker</a><a href="/tools/wage-calculator.html">Wage Calculator</a><a href="/guides/how-football-transfers-work.html">Guides</a></nav>
+</div></header>
+<main><section><div class="container">
+<h1>Transfer Fee Calculator</h1>
+<p style="color:var(--muted);max-width:640px">Estimate a realistic football transfer fee range from four key factors. This is an educational estimate — actual fees depend on negotiation, release clauses and market demand. Learn more in our <a href="/guides/how-football-transfers-work.html">guide to how transfers work</a>.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<form class="tool" id="feeForm" style="margin-top:1.2rem">
+<label for="age">Player age</label>
+<input type="number" id="age" min="15" max="45" value="25" required>
+<label for="contract">Contract years left</label>
+<input type="number" id="contract" min="0" max="8" step="0.5" value="2" required>
+<label for="marketValue">Current market value (€ millions)</label>
+<input type="number" id="marketValue" min="0" step="0.1" value="50" required>
+<label for="league">League premium</label>
+<select id="league">
+<option value="1.0">Standard league (1.0x)</option>
+<option value="1.15">Big-5 league buying (1.15x)</option>
+<option value="1.35">Premier League premium (1.35x)</option>
+<option value="0.9">Selling from smaller league (0.9x)</option>
+</select>
+<br><br><button class="btn" type="submit">Calculate Fee</button>
+</form>
+<div class="result" id="result" style="display:none;max-width:640px">
+<div style="color:var(--muted)">Estimated transfer fee range</div>
+<div class="big" id="range"></div>
+<div id="breakdown" style="margin-top:.6rem;color:var(--muted);font-size:.95rem"></div>
+</div>
+<div class="ad-slot">Advertisement</div>
+<p style="max-width:640px;color:var(--muted)">Compare estimates with real history in our <a href="/guides/biggest-transfer-fees-ever.html">biggest transfer fees ever</a> ranking.</p>
+</div></section></main>
+<footer class="site"><div class="container">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div>| <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+<script src="/js/main.js"></script>
+<script src="/js/fee-calculator.js"></script>
+</body>
+</html>

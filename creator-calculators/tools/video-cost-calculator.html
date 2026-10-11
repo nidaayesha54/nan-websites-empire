@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Cost Calculator — UGC, AI &amp; Spokesperson Pricing (2026)</title>
+  <meta name="description" content="Free video cost calculator: estimate realistic 2026 prices for UGC, AI-generated, and spokesperson videos by type, length, and quantity. Plan your video ad budget.">
+  <link rel="canonical" href="https://creatorcalculators.github.io/tools/video-cost-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🧮 Creator<span>Calculators</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="freelance-rate-calculator.html">Rate Calc</a>
+        <a href="youtube-revenue-calculator.html">YouTube Calc</a>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="calc-page">
+    <div class="wrap">
+      <h1>Video Cost Calculator</h1>
+      <p class="lede">Budgeting video ads? Pick the video type, length, and quantity to see realistic 2026 market price ranges — from UGC creators to full spokesperson production.</p>
+
+      <div class="calc-grid">
+        <div class="panel">
+          <h2>Your Video Project</h2>
+          <div class="field">
+            <label for="vtype">Video type</label>
+            <select id="vtype">
+              <option value="ugc">🎥 UGC creator video (authentic, phone-shot style)</option>
+              <option value="ai">🤖 AI-generated video (scripted, AI visuals/voice)</option>
+              <option value="spokesperson">🎙️ Spokesperson video (pro presenter + studio)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="length">Video length</label>
+            <select id="length">
+              <option value="15">15 seconds</option>
+              <option value="30" selected>30 seconds</option>
+              <option value="60">60 seconds</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qty">Quantity (videos)</label>
+            <input type="number" id="qty" value="4" min="1" max="100" step="1">
+            <span class="hint">Bulk orders usually earn 10–25% volume discounts.</span>
+          </div>
+          <div class="field">
+            <label for="usage">Usage rights</label>
+            <select id="usage">
+              <option value="1">Organic only (your own channels)</option>
+              <option value="1.3">Paid ads — 3 months (+30%)</option>
+              <option value="1.6">Paid ads — 12 months (+60%)</option>
+            </select>
+            <span class="hint">Paid-ad usage rights raise creator fees.</span>
+          </div>
+          <button class="btn" onclick="calculate()">Estimate Video Cost</button>
+        </div>
+
+        <div class="result" id="result" style="display:none;">
+          <h2>Estimated Cost</h2>
+          <div class="big"><span id="r-range">$0 – $0</span><small>total for <span id="r-qty">4</span> videos</small></div>
+          <table>
+            <tr><td>Per video</td><td id="r-per">$0</td></tr>
+            <tr><td>Market tier</td><td id="r-tier">—</td></tr>
+          </table>
+          <div class="note">💡 Prices reflect 2026 freelancer/agency market ranges. Premium creators with proven ROAS charge 2–3× these rates. Always confirm usage rights in writing.</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>How video pricing works in 2026</h2>
+        <div class="formula">Total = Base rate (type × length) × Usage multiplier × Quantity<br>Bulk discount: 10% off at 4+ videos, 20% off at 10+, 25% off at 20+</div>
+        <h3>Base rates per video (organic usage)</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:.94rem;">
+          <tr><th style="text-align:left;padding:8px;border:1px solid var(--border);background:var(--blue-100);">Type</th><th style="padding:8px;border:1px solid var(--border);background:var(--blue-100);">15s</th><th style="padding:8px;border:1px solid var(--border);background:var(--blue-100);">30s</th><th style="padding:8px;border:1px solid var(--border);background:var(--blue-100);">60s</th></tr>
+          <tr><td style="padding:8px;border:1px solid var(--border);">🎥 UGC creator</td><td style="padding:8px;border:1px solid var(--border);">$100–$150</td><td style="padding:8px;border:1px solid var(--border);">$150–$250</td><td style="padding:8px;border:1px solid var(--border);">$250–$400</td></tr>
+          <tr><td style="padding:8px;border:1px solid var(--border);">🤖 AI-generated</td><td style="padding:8px;border:1px solid var(--border);">$150–$200</td><td style="padding:8px;border:1px solid var(--border);">$200–$300</td><td style="padding:8px;border:1px solid var(--border);">$300–$500</td></tr>
+          <tr><td style="padding:8px;border:1px solid var(--border);">🎙️ Spokesperson</td><td style="padding:8px;border:1px solid var(--border);">$300–$500</td><td style="padding:8px;border:1px solid var(--border);">$500–$900</td><td style="padding:8px;border:1px solid var(--border);">$900–$1,500</td></tr>
+        </table>
+        <h2>Related calculators</h2>
+        <p>
+          <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a> ·
+          <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a> ·
+          <a href="ad-budget-calculator.html">Ad Budget Calculator</a>
+        </p>
+      </div>
+    </div>
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>🧮 Creator Calculators</h4><p style="font-size:.92rem;">Free, accurate calculators for freelancers and creators.</p></div>
+      <div><h4>Calculators</h4>
+        <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a>
+        <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a>
+        <a href="ad-budget-calculator.html">Ad Budget Calculator</a>
+        <a href="video-cost-calculator.html">Video Cost Calculator</a>
+      </div>
+      <div><h4>Resources</h4>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Freelance Rate Guide</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="wrap bottom">© 2026 Creator Calculators · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Estimates for planning purposes only.</div>
+  </footer>
+
+  <script src="../js/video-cost.js"></script>
+</body>
+</html>

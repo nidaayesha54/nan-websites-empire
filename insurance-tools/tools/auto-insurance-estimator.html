@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Insurance Cost Estimator by State 2026 — Free Auto Premium Calculator</title>
+<meta name="description" content="Estimate your car insurance premium by state, age, vehicle type and driving record. Free USA auto insurance cost estimator 2026.">
+<link rel="canonical" href="https://nan-insurancetools.surge.sh/tools/auto-insurance-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Auto Insurance Premium Estimator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Insurance<span>ToolsHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="life-insurance-calculator.html">Life</a><a href="health-insurance-comparator.html">Health</a><a href="home-insurance-calculator.html">Home</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Auto Insurance Estimator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Auto Insurance Premium Estimator</h1>
+<p>See roughly what you'd pay for full-coverage car insurance based on the biggest rating factors. Based on 2026 national averages (~$2,300/yr full coverage).</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Your state</label><select id="state">
+<option value="1.55">Michigan (most expensive)</option><option value="1.45">Florida</option>
+<option value="1.35">Louisiana</option><option value="1.30">New York</option>
+<option value="1.25">Nevada</option><option value="1.20">California</option>
+<option value="1.15">Texas</option><option value="1.10">Georgia</option>
+<option value="1.05">Illinois</option><option value="1.0" selected>National average state</option>
+<option value="0.95">Ohio</option><option value="0.90">Virginia</option>
+<option value="0.85">Iowa</option><option value="0.80">Maine</option>
+<option value="0.70">Vermont (cheapest)</option>
+</select></div>
+<div class="field"><label>Your age</label><select id="age">
+<option value="2.6">16–19 (teen)</option><option value="1.9">20–24</option>
+<option value="1.25">25–29</option><option value="1.0" selected>30–49</option>
+<option value="0.95">50–64</option><option value="1.15">65+</option>
+</select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Vehicle type</label><select id="veh">
+<option value="0.9">Economy sedan</option><option value="1.0" selected>Midsize sedan / crossover</option>
+<option value="1.1">Pickup truck / SUV</option><option value="1.25">Luxury vehicle</option>
+<option value="1.45">Sports car</option>
+</select></div>
+<div class="field"><label>Driving record (last 3 years)</label><select id="rec">
+<option value="1.0" selected>Clean record</option><option value="1.25">1 speeding ticket</option>
+<option value="1.45">1 at-fault accident</option><option value="1.8">DUI / multiple violations</option>
+</select></div>
+</div>
+<div class="field"><label>Coverage level</label><select id="cov">
+<option value="0.55">Liability only</option><option value="1.0" selected>Full coverage ($500 deductibles)</option>
+<option value="1.12">Full coverage ($250 deductibles)</option>
+</select></div>
+<button class="btn" onclick="calc()">Estimate My Premium</button>
+<div class="result" id="res">
+<h3>Your estimated premium</h3>
+<div class="big" id="prem"></div>
+<p id="detail" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimate only — not a quote or financial advice.</strong> Real premiums vary by insurer, ZIP code, credit tier, mileage and more. Use this for planning; get real quotes before buying.</div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> InsuranceToolsHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+var BASE = 2300; // 2026 national avg full coverage
+function calc(){
+  var m = parseFloat(val('state'))*parseFloat(val('age'))*parseFloat(val('veh'))*
+          parseFloat(val('rec'))*parseFloat(val('cov'));
+  var yearly = BASE*m, monthly = yearly/12;
+  document.getElementById('prem').textContent = money(monthly)+'/mo  ('+money(yearly)+'/yr)';
+  document.getElementById('detail').textContent =
+    'Based on a '+money(BASE)+'/yr national average, adjusted for your state, age, vehicle, record and coverage. '+
+    'The single biggest lever is usually your driving record and shopping 3+ quotes.';
+  show('res');
+}
+</script>
+</body>
+</html>

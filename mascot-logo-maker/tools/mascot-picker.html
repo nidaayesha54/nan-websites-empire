@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Mascot Logo Maker — Character Style Picker (SVG Download)</title>
+<meta name="description" content="Pick a mascot character style (animal, robot, human, monster), choose an expression and brand colors, preview your mascot logo live, then download it as SVG or PNG — free.">
+<link rel="canonical" href="https://nan-mascotlogo.surge.sh/tools/mascot-picker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="logo" href="../index.html"><span class="m">Mascot</span><span class="l">Logo</span>Maker</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="links">
+      <a href="../index.html">Home</a>
+      <a href="mascot-picker.html">Mascot Picker</a>
+      <a href="mascot-quiz.html">Mascot Quiz</a>
+      <a href="mascot-name-generator.html">Name Generator</a>
+      <a href="../guides/mascot-logo-design-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Mascot Style Picker</div>
+  <h1>Mascot Logo Maker — Character Style Picker</h1>
+  <p style="color:var(--muted);max-width:720px">Pick a character type, an expression and your brand colors. Your mascot logo updates live — then download it free as SVG or PNG.</p>
+
+  <div class="tool-wrap">
+    <div class="panel">
+      <h2>1. Character type</h2>
+      <div class="opt-row" id="typeRow">
+        <button class="opt sel" data-type="animal">🦊 Animal</button>
+        <button class="opt" data-type="robot">🤖 Robot</button>
+        <button class="opt" data-type="human">🧑 Human</button>
+        <button class="opt" data-type="monster">👾 Monster</button>
+      </div>
+      <h2>2. Expression</h2>
+      <div class="opt-row" id="exprRow">
+        <button class="opt sel" data-expr="happy">😊 Happy</button>
+        <button class="opt" data-expr="excited">🤩 Excited</button>
+        <button class="opt" data-expr="cool">😎 Cool</button>
+        <button class="opt" data-expr="fierce">😈 Fierce</button>
+      </div>
+      <h2>3. Brand colors</h2>
+      <div class="opt-row" id="colorRow"></div>
+      <h2>4. Brand name</h2>
+      <div class="field">
+        <input type="text" id="brandName" maxlength="18" placeholder="Your brand name" value="MASCOT CO">
+      </div>
+      <button class="btn" id="dlSvg">⬇ Download SVG</button>
+      <button class="btn alt" id="dlPng" style="margin-top:10px">⬇ Download PNG</button>
+    </div>
+    <div class="preview-box">
+      <h2>Live Preview</h2>
+      <div id="preview" style="margin:12px auto;max-width:480px"></div>
+      <p style="color:var(--muted);font-size:.9rem">Your logo downloads with a transparent-friendly white badge background, ready for web and print.</p>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <section class="block prose">
+    <h2>How to use the mascot logo maker</h2>
+    <ol>
+      <li><strong>Choose a character type</strong> that matches your brand personality — animals feel friendly, robots feel techy, humans feel personal, monsters feel bold.</li>
+      <li><strong>Pick an expression</strong> — happy is the safest all-rounder; fierce works for sports and gaming brands.</li>
+      <li><strong>Set your brand colors</strong> from the curated duos, then type your brand name.</li>
+      <li><strong>Download</strong> your mascot logo as SVG (infinitely scalable) or PNG.</li>
+    </ol>
+    <p>Not sure a mascot is right for you? Take the <a href="mascot-quiz.html">mascot quiz</a>, or read our <a href="../guides/how-to-design-brand-mascot.html">step-by-step mascot design guide</a>.</p>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <div class="cols">
+      <div><a class="logo" href="../index.html" style="color:#fff"><span class="m">Mascot</span><span class="l">Logo</span>Maker</a></div>
+      <div>
+        <a href="mascot-picker.html">Mascot Picker</a> ·
+        <a href="mascot-quiz.html">Quiz</a> ·
+        <a href="mascot-name-generator.html">Name Generator</a> ·
+        <a href="../guides/mascot-logo-design-2026.html">Guides</a> ·
+        <a href="../blog/index.html">Blog</a>
+      </div>
+    </div>
+    <div class="copyright">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  var state = { type: 'animal', expr: 'happy', primary: '#ff5d8f', secondary: '#7c5cff' };
+
+  var PALETTES = [
+    ['#ff5d8f', '#7c5cff', 'Candy'],
+    ['#ff8c42', '#2dd4bf', 'Sunset'],
+    ['#4caf50', '#ffc93c', 'Fresh'],
+    ['#2196f3', '#ff5d8f', 'Bold'],
+    ['#7c5cff', '#ffc93c', 'Royal'],
+    ['#00bcd4', '#1a2b4a', 'Aqua'],
+    ['#e53935', '#fff3e0', 'Classic'],
+    ['#8d6e63', '#ffc93c', 'Earthy']
+  ];
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ---- character shapes (head area) ----
+  function headShapes(t, p, s) {
+    if (t === 'animal') {
+      return '<ellipse cx="300" cy="330" rx="118" ry="108" fill="' + p + '"/>' +
+        '<ellipse cx="212" cy="248" rx="42" ry="52" fill="' + p + '" transform="rotate(-24 212 248)"/>' +
+        '<ellipse cx="388" cy="248" rx="42" ry="52" fill="' + p + '" transform="rotate(24 388 248)"/>' +
+        '<ellipse cx="212" cy="252" rx="20" ry="28" fill="' + s + '" transform="rotate(-24 212 252)"/>' +
+        '<ellipse cx="388" cy="252" rx="20" ry="28" fill="' + s + '" transform="rotate(24 388 252)"/>' +
+        '<ellipse cx="300" cy="372" rx="52" ry="40" fill="#ffffff" opacity="0.85"/>';
+    }
+    if (t === 'robot') {
+      return '<line x1="300" y1="196" x2="300" y2="232" stroke="' + s + '" stroke-width="14" stroke-linecap="round"/>' +
+        '<circle cx="300" cy="186" r="18" fill="' + s + '"/>' +
+        '<rect x="196" y="232" width="208" height="196" rx="52" fill="' + p + '"/>' +
+        '<rect x="176" y="292" width="28" height="76" rx="14" fill="' + s + '"/>' +
+        '<rect x="396" y="292" width="28" height="76" rx="14" fill="' + s + '"/>' +
+        '<rect x="222" y="286" width="156" height="96" rx="30" fill="#1a2340"/>';
+    }
+    if (t === 'human') {
+      return '<path d="M196 300 q-6 -120 104 -122 q110 2 104 122 q2 -52 -34 -78 q-70 34 -140 0 q-36 26 -34 78z" fill="' + s + '"/>' +
+        '<ellipse cx="300" cy="336" rx="104" ry="98" fill="' + p + '"/>' +
+        '<ellipse cx="212" cy="352" rx="12" ry="18" fill="' + p + '"/>' +
+        '<ellipse cx="388" cy="352" rx="12" ry="18" fill="' + p + '"/>';
+    }
+    // monster
+    return '<path d="M300 208 q40 -34 66 -8 q44 -18 62 18 q44 6 38 52 q30 34 4 66 q14 44 -30 52 q-8 40 -56 30 q-30 30 -68 12 q-44 12 -62 -24 q-46 -2 -44 -48 q-34 -32 -10 -64 q-18 -42 26 -56 q14 -34 74 -30z" fill="' + p + '"/>' +
+      '<path d="M232 218 l-16 -52 44 30z" fill="' + s + '"/>' +
+      '<path d="M368 218 l16 -52 -44 30z" fill="' + s + '"/>';
+  }
+
+  // ---- faces ----
+  function face(t, e, p, s) {
+    var out = '';
+    var ec = (t === 'robot') ? '#9fe8ff' : '#2b1b3d';
+    if (e === 'happy') {
+      if (t === 'robot') {
+        out += '<rect x="248" y="322" width="44" height="14" rx="7" fill="' + ec + '"/><rect x="308" y="322" width="44" height="14" rx="7" fill="' + ec + '"/>';
+      } else {
+        out += '<path d="M244 322 q22 -20 44 0" stroke="' + ec + '" stroke-width="12" fill="none" stroke-linecap="round"/>' +
+          '<path d="M312 322 q22 -20 44 0" stroke="' + ec + '" stroke-width="12" fill="none" stroke-linecap="round"/>';
+      }
+      out += '<path d="M262 386 q38 30 76 0 q-8 34 -38 34 q-30 0 -38 -34z" fill="#7a2b3f"/>' +
+        '<ellipse cx="300" cy="408" rx="16" ry="10" fill="#ff8fa3"/>';
+    } else if (e === 'excited') {
+      out += '<circle cx="266" cy="318" r="24" fill="#ffffff"/>' +
+        '<circle cx="334" cy="318" r="24" fill="#ffffff"/>' +
+        '<circle cx="266" cy="318" r="12" fill="' + ec + '"/><circle cx="334" cy="318" r="12" fill="' + ec + '"/>' +
+        '<circle cx="270" cy="313" r="4" fill="#ffffff"/><circle cx="338" cy="313" r="4" fill="#ffffff"/>' +
+        '<ellipse cx="300" cy="392" rx="44" ry="32" fill="#7a2b3f"/>' +
+        '<ellipse cx="300" cy="404" rx="24" ry="16" fill="#ff8fa3"/>';
+      if (t === 'animal') {
+        out += '<ellipse cx="300" cy="360" rx="14" ry="10" fill="' + ec + '"/>';
+      }
+    } else if (e === 'cool') {
+      out += '<rect x="228" y="296" width="70" height="52" rx="18" fill="#1a2340"/>' +
+        '<rect x="306" y="296" width="70" height="52" rx="18" fill="#1a2340"/>' +
+        '<rect x="292" y="312" width="20" height="10" fill="#1a2340"/>' +
+        '<path d="M242 308 l30 -6" stroke="#9fe8ff" stroke-width="8" stroke-linecap="round"/>' +
+        '<path d="M320 308 l30 -6" stroke="#9fe8ff" stroke-width="8" stroke-linecap="round"/>' +
+        '<path d="M268 392 q34 18 62 -6" stroke="' + ec + '" stroke-width="12" fill="none" stroke-linecap="round"/>';
+    } else { // fierce
+      out += '<path d="M232 292 l66 16" stroke="' + ec + '" stroke-width="14" stroke-linecap="round"/>' +
+        '<path d="M368 292 l-66 16" stroke="' + ec + '" stroke-width="14" stroke-linecap="round"/>' +
+        '<path d="M250 330 l34 10" stroke="' + ec + '" stroke-width="12" stroke-linecap="round"/>' +
+        '<path d="M350 330 l-34 10" stroke="' + ec + '" stroke-width="12" stroke-linecap="round"/>' +
+        '<path d="M258 384 h84" stroke="' + ec + '" stroke-width="12" stroke-linecap="round"/>' +
+        '<path d="M268 384 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+    }
+    if (t === 'animal' && e !== 'excited') {
+      out += '<ellipse cx="300" cy="358" rx="15" ry="11" fill="' + ec + '"/>';
+    }
+    if (t === 'human') {
+      out += '<circle cx="252" cy="366" r="12" fill="#ff8fa3" opacity="0.6"/><circle cx="348" cy="366" r="12" fill="#ff8fa3" opacity="0.6"/>';
+    }
+    return out;
+  }
+
+  function buildSVG(name) {
+    var p = state.primary, s = state.secondary;
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">' +
+      '<defs><radialGradient id="bg" cx="50%" cy="38%" r="75%">' +
+      '<stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f6ecff"/></radialGradient></defs>' +
+      '<circle cx="300" cy="300" r="290" fill="url(#bg)"/>' +
+      '<circle cx="300" cy="300" r="290" fill="none" stroke="' + s + '" stroke-width="18"/>' +
+      '<circle cx="300" cy="300" r="262" fill="none" stroke="' + p + '" stroke-width="6" stroke-dasharray="22 14"/>' +
+      headShapes(state.type, p, s) +
+      face(state.type, state.expr, p, s) +
+      '<text x="300" y="528" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800" fill="#2b1b3d" letter-spacing="2">' + esc(name.toUpperCase()) + '</text>' +
+      '</svg>';
+  }
+
+  function render() {
+    var name = document.getElementById('brandName').value.trim() || 'MASCOT CO';
+    document.getElementById('preview').innerHTML = buildSVG(name);
+  }
+
+  function downloadSVG() {
+    var name = document.getElementById('brandName').value.trim() || 'mascot';
+    var blob = new Blob([buildSVG(name)], { type: 'image/svg+xml' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-mascot-logo.svg';
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  function downloadPNG() {
+    var name = document.getElementById('brandName').value.trim() || 'mascot';
+    var svg = buildSVG(name);
+    var blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = 1200; c.height = 1200;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0, 1200, 1200);
+      URL.revokeObjectURL(url);
+      var a = document.createElement('a');
+      a.href = c.toDataURL('image/png');
+      a.download = name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-mascot-logo.png';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    img.onerror = function () { alert('PNG export failed in this browser — try the SVG download instead.'); };
+    img.src = url;
+  }
+
+  // ---- UI wiring ----
+  function wireRow(id, key) {
+    var row = document.getElementById(id);
+    row.addEventListener('click', function (ev) {
+      var btn = ev.target.closest('.opt');
+      if (!btn) return;
+      row.querySelectorAll('.opt').forEach(function (b) { b.classList.remove('sel'); });
+      btn.classList.add('sel');
+      state[key] = btn.dataset[key === 'type' ? 'type' : 'expr'];
+      render();
+    });
+  }
+  wireRow('typeRow', 'type');
+  wireRow('exprRow', 'expr');
+
+  var colorRow = document.getElementById('colorRow');
+  PALETTES.forEach(function (pal, i) {
+    var d = document.createElement('button');
+    d.className = 'swatch' + (i === 0 ? ' sel' : '');
+    d.title = pal[2];
+    d.setAttribute('aria-label', pal[2] + ' palette');
+    d.style.background = 'linear-gradient(135deg,' + pal[0] + ' 50%,' + pal[1] + ' 50%)';
+    d.addEventListener('click', function () {
+      colorRow.querySelectorAll('.swatch').forEach(function (s) { s.classList.remove('sel'); });
+      d.classList.add('sel');
+      state.primary = pal[0]; state.secondary = pal[1];
+      render();
+    });
+    colorRow.appendChild(d);
+  });
+
+  document.getElementById('brandName').addEventListener('input', render);
+  document.getElementById('dlSvg').addEventListener('click', downloadSVG);
+  document.getElementById('dlPng').addEventListener('click', downloadPNG);
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de tarifas UGC gratis — KitUGC</title>
+<meta name="description" content="Calcula cuánto cobrar por tus videos UGC en 2026. Tarifas según experiencia, tipo de video y derechos de uso. Resultados en USD y MXN.">
+<link rel="canonical" href="https://kitugc.github.io/tools/calculadora-tarifas.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎬 Kit<span>UGC</span></a>
+<nav class="nav"><a href="../index.html">Inicio</a><a href="calculadora-tarifas.html">Tarifas</a><a href="plantillas-marcas.html">Plantillas</a><a href="generador-guiones.html">Guiones</a></nav>
+</div></header>
+
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Inicio</a> › Calculadora de tarifas</p>
+<section class="content">
+<h1>Calculadora de tarifas UGC</h1>
+<p>Descubre cuánto deberías cobrar por tus videos. Basado en tarifas reales del mercado 2026 para Latinoamérica.</p>
+
+<div class="toolbox">
+<div class="field">
+<label for="exp">Tu nivel de experiencia</label>
+<select id="exp">
+<option value="150">Principiante (0–10 videos entregados)</option>
+<option value="300" selected>Intermedio (10–50 videos)</option>
+<option value="500">Avanzado (50+ videos, portafolio sólido)</option>
+</select>
+</div>
+<div class="field">
+<label for="tipo">Tipo de video</label>
+<select id="tipo">
+<option value="1">Video corto 15s (TikTok / Reels)</option>
+<option value="1.3" selected>Video estándar 30–60s</option>
+<option value="1.8">Video largo 2–3 min (testimonio / unboxing)</option>
+</select>
+</div>
+<div class="field">
+<label for="uso">Derechos de uso</label>
+<select id="uso">
+<option value="1">Solo orgánico (redes de la marca)</option>
+<option value="1.6" selected>Anuncios pagados 3 meses</option>
+<option value="2.2">Anuncios pagados 12 meses</option>
+</select>
+</div>
+<div class="field">
+<label for="niche">Nicho del producto</label>
+<select id="niche">
+<option value="1">General / estilo de vida</option>
+<option value="1.2">Belleza / moda</option>
+<option value="1.4">Salud / fitness / suplementos</option>
+<option value="1.5">Finanzas / apps / SaaS</option>
+</select>
+</div>
+<button class="btn" onclick="calcular()">Calcular mi tarifa</button>
+<div class="result" id="res" style="display:none">
+<div class="big" id="precio"></div>
+<div class="note" id="detalle"></div>
+</div>
+</div>
+
+<h2 class="sec">Cómo usar tu tarifa</h2>
+<ul>
+<li><strong>Nunca cobres por debajo</strong> de tu tarifa base: regalar trabajo devalúa el mercado.</li>
+<li>Para <strong>paquetes de 4+ videos</strong> puedes ofrecer 10–15% de descuento.</li>
+<li>Los <strong>derechos de anuncios pagados</strong> siempre se cobran aparte: es donde las marcas más ganan con tu contenido.</li>
+<li>Revisa tu tarifa cada <strong>3 meses</strong> a medida que crece tu portafolio.</li>
+</ul>
+
+<div class="note-box"><strong>💡 Dato:</strong> los creadores LATAM con buen portafolio cobran en USD aunque vivan en México, Colombia o Argentina: amplía tu mercado a marcas de EE.UU. y España.</div>
+
+<p>¿Listo para contactar marcas? Usa nuestras <a href="plantillas-marcas.html">plantillas de contacto</a> o aprende <a href="../guides/cuanto-cobrar-ugc.html">cómo fijar precios UGC</a> en nuestra guía completa.</p>
+</section>
+</div>
+
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer class="site-footer"><div class="wrap">
+<p>🎬 <strong>KitUGC</strong> — Herramientas gratis para creadores UGC</p>
+<p style="font-size:.85rem;margin-top:10px">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+
+<script>
+function calcular(){
+  var base=parseFloat(document.getElementById('exp').value);
+  var tipo=parseFloat(document.getElementById('tipo').value);
+  var uso=parseFloat(document.getElementById('uso').value);
+  var niche=parseFloat(document.getElementById('niche').value);
+  var precio=Math.round(base*tipo*uso*niche);
+  var mxn=Math.round(precio*17);
+  document.getElementById('precio').textContent='$'+precio+' USD';
+  document.getElementById('detalle').textContent='Aprox. $'+mxn.toLocaleString('es-MX')+' MXN · Rango sugerido: $'+Math.round(precio*0.9)+'–$'+Math.round(precio*1.25)+' USD por video';
+  document.getElementById('res').style.display='block';
+}
+calcular();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPT & ICD-10 Code Lookup — Free Search Tool</title>
+<meta name="description" content="Search 100+ common CPT, ICD-10, and HCPCS codes by number or keyword. Free medical coding lookup tool for coders and students.">
+<link rel="canonical" href="https://nan-medicalcoding.surge.sh/tools/code-lookup.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container">
+    <a class="logo" href="../index.html">Medical<span>Coding</span>Hub</a>
+    <nav class="main">
+      <a href="code-lookup.html">Code Lookup</a>
+      <a href="rvu-calculator.html">RVU Calculator</a>
+      <a href="modifier-checker.html">Modifiers</a>
+      <a href="../guides/how-to-become-medical-coder-2026.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <section class="section">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → Code Lookup</div>
+    <h1 style="font-size:1.9rem;color:var(--navy);margin-bottom:10px">CPT / ICD-10 Code Lookup</h1>
+    <p class="sub">Search common procedure and diagnosis codes. Type a code number or a keyword like "knee", "diabetes", or "99213".</p>
+
+    <div class="form-card">
+      <div class="form-row">
+        <div>
+          <label for="q">Search codes</label>
+          <input type="text" id="q" placeholder="e.g. 99213, knee, diabetes, x-ray…" autocomplete="off">
+        </div>
+        <div>
+          <label for="typeFilter">Code type</label>
+          <select id="typeFilter">
+            <option value="ALL">All types</option>
+            <option value="CPT">CPT (procedures)</option>
+            <option value="ICD-10">ICD-10 (diagnoses)</option>
+            <option value="HCPCS">HCPCS (supplies/services)</option>
+          </select>
+        </div>
+      </div>
+      <div id="results" class="search-results"></div>
+    </div>
+
+    <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+    <div class="prose" style="margin-top:24px">
+      <h2>How to use this lookup</h2>
+      <ul>
+        <li><strong>CPT codes</strong> (5 digits) describe procedures and services — e.g. <strong>99213</strong> is an established-patient office visit.</li>
+        <li><strong>ICD-10 codes</strong> (letter + digits) describe diagnoses — e.g. <strong>I10</strong> is essential hypertension.</li>
+        <li><strong>HCPCS codes</strong> (letter + 4 digits) cover supplies, drugs, and Medicare services — e.g. <strong>G0438</strong> is a Medicare annual wellness visit.</li>
+      </ul>
+      <h2>Quick reference: most-searched codes</h2>
+      <table>
+        <tr><th>Code</th><th>Type</th><th>Meaning</th></tr>
+        <tr><td><strong>99213</strong></td><td>CPT</td><td>Established patient office visit, low complexity</td></tr>
+        <tr><td><strong>99214</strong></td><td>CPT</td><td>Established patient office visit, moderate complexity</td></tr>
+        <tr><td><strong>I10</strong></td><td>ICD-10</td><td>Essential hypertension</td></tr>
+        <tr><td><strong>E11.9</strong></td><td>ICD-10</td><td>Type 2 diabetes without complications</td></tr>
+        <tr><td><strong>93000</strong></td><td>CPT</td><td>ECG with interpretation</td></tr>
+        <tr><td><strong>Z00.00</strong></td><td>ICD-10</td><td>General adult exam, no abnormal findings</td></tr>
+      </table>
+    </div>
+
+    <div class="disclaimer"><strong>Educational use only.</strong> This is a learning sample of commonly used codes. CPT codes are copyrighted by the AMA and updated annually — always verify against official AMA CPT and CMS ICD-10 sources before billing.</div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    <div>© <span id="year"></span> Medical Coding Hub — Educational content only.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/code-lookup.js"></script>
+</body>
+</html>

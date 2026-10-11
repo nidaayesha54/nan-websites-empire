@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Tone Analyzer for Voice Scripts | VoiceScriptWriter</title>
+<meta name="description" content="Paste your voice script and get instant formality, warmth & energy scores with actionable improvement tips. Free, no sign-up.">
+<link rel="canonical" href="https://nan-voicescripts.surge.sh/tools/tone-analyzer.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html"><span class="mark">🎙️</span> VoiceScriptWriter</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="script-generator.html">Script Generator</a>
+      <a href="tone-analyzer.html" class="active">Tone Analyzer</a>
+      <a href="hook-writer.html">Hook Writer</a>
+      <a href="cta-builder.html">CTA Builder</a>
+      <a href="../guides/how-to-write-voice-scripts-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Free Voice Script Tone Analyzer</h1>
+    <p>Paste any script and get instant scores for formality, warmth and energy — plus specific fixes for filler words, long sentences and weak CTAs.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Tone Analyzer</p>
+
+  <div class="tool-box">
+    <div class="field">
+      <label for="scriptText">Your script <span class="hint">— paste 2 sentences or 2 pages, it all works</span></label>
+      <textarea id="scriptText" style="min-height:180px" placeholder="Paste your voice-over script here…"></textarea>
+    </div>
+    <p id="warnMsg" style="color:var(--bad);font-weight:600;margin-bottom:12px"></p>
+    <div class="actions" style="margin-top:0">
+      <button class="btn btn-brand" id="analyzeBtn" type="button">📊 Analyze Tone</button>
+      <button class="btn btn-outline" id="sampleBtn" type="button">Load sample script</button>
+    </div>
+
+    <div class="result hidden" id="result">
+      <h2>Tone Report</h2>
+      <p style="font-size:1.05rem;margin-bottom:6px">Overall tone: <strong id="toneLabel">—</strong></p>
+      <div class="meter-row">
+        <div class="label"><span>Formality</span><span id="mFormalVal">0/100</span></div>
+        <div class="meter"><div class="fill" id="mFormalFill" style="width:0%"></div></div>
+      </div>
+      <div class="meter-row">
+        <div class="label"><span>Warmth</span><span id="mWarmVal">0/100</span></div>
+        <div class="meter"><div class="fill" id="mWarmFill" style="width:0%"></div></div>
+      </div>
+      <div class="meter-row">
+        <div class="label"><span>Energy</span><span id="mEnergyVal">0/100</span></div>
+        <div class="meter"><div class="fill" id="mEnergyFill" style="width:0%"></div></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong id="statWords">0</strong>words</div>
+        <div class="stat"><strong id="statSent">0</strong>sentences</div>
+        <div class="stat"><strong id="statAvg">0</strong>avg words/sentence</div>
+        <div class="stat"><strong id="statTime">0:00 min</strong>speaking time</div>
+      </div>
+      <h2 style="margin-top:20px">Improvement Suggestions</h2>
+      <div id="tips"></div>
+      <div class="actions">
+        <a class="btn btn-outline" href="script-generator.html">← Rewrite with the generator</a>
+        <a class="btn btn-outline" href="cta-builder.html">Strengthen the CTA →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <section class="section">
+    <h2>What the Tone Analyzer Measures</h2>
+    <div class="cards">
+      <div class="card"><h3>📏 Formality (0–100)</h3><p>High scores mean stiff, corporate language ("utilize", "furthermore"). Voice scripts usually perform best between 20–50.</p></div>
+      <div class="card"><h3>💛 Warmth (0–100)</h3><p>Tracks human, welcoming language ("welcome", "thanks", "together"). Warmth builds trust in the first seconds.</p></div>
+      <div class="card"><h3>⚡ Energy (0–100)</h3><p>Measures punch and urgency ("now", "amazing", "limited"). Ads want 50+; IVR and announcements want calm.</p></div>
+    </div>
+    <p style="margin-top:18px">It also flags filler words, weakeners ("very", "really"), over-long sentences and missing calls to action. For the full writing method, see <a href="../guides/how-to-write-voice-scripts-2026.html">How to Write Voice Scripts in 2026</a>.</p>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <h4>🎙️ VoiceScriptWriter</h4>
+        <p>Free AI voice script tools for creators, marketers and businesses across the USA.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="script-generator.html">Script Generator</a></li>
+          <li><a href="tone-analyzer.html">Tone Analyzer</a></li>
+          <li><a href="hook-writer.html">Hook Writer</a></li>
+          <li><a href="cta-builder.html">CTA Builder</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../guides/how-to-write-voice-scripts-2026.html">How to Write Voice Scripts (2026)</a></li>
+          <li><a href="../guides/voice-script-examples.html">Voice Script Examples</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span id="year">2026</span></span>
+      <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+<script src="../js/tone-analyzer.js"></script>
+</body>
+</html>

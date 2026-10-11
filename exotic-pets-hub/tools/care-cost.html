@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exotic Pet Yearly Cost Calculator — True Cost by Species</title>
+<meta name="description" content="Calculate the real annual cost of 13 exotic pets: purchase, habitat setup, food, supplies and vet care — with low, typical and high estimates.">
+<link rel="canonical" href="https://nan-exoticpets.surge.sh/tools/care-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/care-cost.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="../index.html">🦎 Exotic<span>Pets</span>Hub</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="pet-selector.html">Pet Quiz</a>
+      <a href="care-cost.html">Cost Calculator</a>
+      <a href="legality-checker.html">Legality Checker</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Cost Calculator</p>
+  <div class="prose">
+    <h1>Exotic Pet Yearly Cost Calculator</h1>
+    <p class="meta">13 species · setup + recurring costs · USD estimates for the USA</p>
+    <p>The purchase price is the <em>cheapest</em> part of owning an exotic pet. Choose a species, adjust the options, and see the honest first-year and yearly costs — habitat, food, supplies, and vet care. For the full story, read our <a href="../guides/exotic-pet-costs.html">complete cost guide</a>.</p>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-box">
+    <fieldset>
+      <legend>Choose your species</legend>
+      <select id="species" aria-label="Choose a species">
+        <option value="">— Select a species —</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Your situation</legend>
+      <label><input type="checkbox" id="first-pet"> First-time owner (adds a starter kit buffer: books, extra supplies, first vet check)</label>
+      <label>Vet care level:
+        <select id="vet-level" style="margin-top:6px">
+          <option value="basic">Basic — one annual exotic vet checkup</option>
+          <option value="full" selected>Full — annual checkup + emergency fund</option>
+          <option value="minimal">Minimal — vet only if something goes wrong (not recommended)</option>
+        </select>
+      </label>
+      <label>Food quality:
+        <select id="food-level" style="margin-top:6px">
+          <option value="standard" selected>Standard — balanced commercial diet</option>
+          <option value="premium">Premium — organic/variety diet (+25%)</option>
+          <option value="budget">Budget — basic diet (-15%)</option>
+        </select>
+      </label>
+    </fieldset>
+    <button type="button" id="calc-btn" class="btn btn-gold" style="width:100%">Calculate My Costs 💰</button>
+    <div id="cost-result" class="result-card" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="prose" style="margin-top:36px">
+    <h2>What these estimates include</h2>
+    <ul>
+      <li><strong>One-time:</strong> the animal, enclosure, heating/lighting/filtration, and basic accessories.</li>
+      <li><strong>Yearly:</strong> food, substrate/bedding, electricity for heat lamps, replacements, and vet care.</li>
+      <li>Ranges reflect USA prices in 2026; your city may be higher or lower. Exotic vet visits are the #1 surprise cost — <a href="../blog/exotic-pet-mistakes.html">see the mistakes new owners make</a>.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Footer navigation">
+      <a href="../index.html">Home</a>
+      <a href="pet-selector.html">Pet Quiz</a>
+      <a href="care-cost.html">Cost Calculator</a>
+      <a href="legality-checker.html">Legality Checker</a>
+      <a href="../guides/best-exotic-pets-beginners.html">Beginner Pets</a>
+      <a href="../guides/exotic-pet-costs.html">Pet Costs</a>
+      <a href="../guides/exotic-pet-laws-usa.html">Pet Laws</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+    <p class="credit">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Payoff Timeline Calculator — Debt-Free Date | DebtPayoff</title>
+<meta name="description" content="Free debt payoff timeline calculator: enter balance, APR, and payment to see months to debt-free, total interest, payoff date, and extra-payment impact.">
+<link rel="canonical" href="https://nan-debtpayoff.surge.sh/tools/payoff-timeline.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Debt Payoff Timeline Calculator","url":"https://nan-debtpayoff.surge.sh/tools/payoff-timeline.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Debt<span>Payoff</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="avalanche-vs-snowball.html">Avalanche vs Snowball</a>
+      <a href="payoff-timeline.html">Payoff Timeline</a>
+      <a href="debt-consolidation.html">Consolidation</a>
+      <a href="../guides/get-out-of-debt-fast.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Payoff Timeline</p>
+<h1>Debt Payoff Timeline Calculator</h1>
+<p class="lede">One debt, one monthly payment: see exactly how many months until you're free, how much interest you'll pay, and your debt-free date. Drag the slider to feel what extra payments do.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice.</div>
+
+<section class="tool">
+  <label for="balance">Current balance ($)</label>
+  <input type="number" id="balance" value="8000" min="0" step="100">
+  <label for="apr">APR (%)</label>
+  <input type="number" id="apr" value="21.99" min="0" max="100" step="0.1">
+  <label for="payment">Monthly payment ($)</label>
+  <input type="number" id="payment" value="250" min="0" step="10">
+  <label for="extra">Extra payment: <span id="extraVal">$0.00</span>/month</label>
+  <input type="range" id="extra" min="0" max="1000" step="25" value="0">
+  <br><button class="btn-calc" id="calcBtn">Calculate Timeline</button>
+  <p id="err" class="warn-text"></p>
+</section>
+
+<section class="results" id="results" aria-live="polite"></section>
+
+<section>
+  <h2>Why Minimum Payments Are a Trap</h2>
+  <p>On a $8,000 balance at 22% APR, a $200 minimum-ish payment means roughly <strong>$147 of it is interest in month one</strong> — only $53 touches the principal. That's why balances barely move. Every extra dollar goes 100% to principal, which is why the slider above changes the timeline so dramatically.</p>
+  <p>Fighting multiple debts? <a href="avalanche-vs-snowball.html">Simulate avalanche vs snowball</a> to find your best attack order, or read <a href="../guides/get-out-of-debt-fast.html">how to get out of debt fast</a>.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Avalanche vs Snowball</h3><p>Find the best payoff order across all your debts.</p><a href="avalanche-vs-snowball.html">Open →</a></div>
+    <div class="card"><h3>Consolidation Comparison</h3><p>Would one lower-rate loan beat this timeline?</p><a href="debt-consolidation.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="avalanche-vs-snowball.html">Avalanche vs Snowball</a><a href="debt-consolidation.html">Consolidation</a><a href="../guides/get-out-of-debt-fast.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> DebtPayoff. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/payoff-timeline.js"></script>
+</body>
+</html>

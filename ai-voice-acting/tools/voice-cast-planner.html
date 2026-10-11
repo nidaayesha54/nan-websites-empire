@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Cast Planner — Assign Archetypes &amp; Track Lines</title>
+<meta name="description" content="Free voice cast planner: list your game or animation characters, assign voice archetypes, and track lines per character.">
+<link rel="canonical" href="https://nan-aivoiceacting.surge.sh/tools/voice-cast-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><nav>
+<a class="logo" href="../index.html">AI<span>VoiceActing</span></a>
+<div class="links"><a href="../index.html">Home</a><a href="character-voice-picker.html">Voice Picker</a><a href="../guides/best-ai-voice-acting-tools-2026.html">Guides</a><a href="../blog/index.html">Blog</a></div>
+</nav></div></header>
+<div class="wrap">
+<h1>Voice Cast Planner</h1>
+<p class="meta">Build your cast list: add each character, pick a voice archetype, log their line count. Your plan saves in this browser automatically.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<span class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></span>
+
+<div class="tool-box">
+<label for="cname">Character name</label>
+<input id="cname" type="text" placeholder="e.g. Captain Nova">
+<label for="ctype">Voice archetype</label>
+<select id="ctype"></select>
+<label for="clines">Lines in script</label>
+<input id="clines" type="number" min="0" value="0">
+<button id="add">Add Character</button>
+<button id="clear" style="background:#6e7681;margin-left:8px">Clear All</button>
+<table id="tbl" style="display:none">
+<thead><tr><th>Character</th><th>Archetype</th><th>Lines</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+<tfoot><tr><td><strong>Total</strong></td><td id="tChars"></td><td id="tLines"></td><td></td></tr></tfoot>
+</table>
+<div id="empty" class="result">No characters yet — add your first one above.</div>
+</div>
+
+<p><a href="character-voice-picker.html">Need help picking an archetype? Take the quiz →</a></p>
+</div>
+<footer><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+<script src="../js/archetypes.js"></script>
+<script src="../js/cast-planner.js"></script>
+</body>
+</html>

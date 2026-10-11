@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Denial Tracker & Analyzer — Free RCM Tool | RevenueCycleHub</title>
+<meta name="description" content="Free claim denial tracker for medical practices. Log denials, find your top denial reasons, and prioritize appeals by dollar value.">
+<link rel="canonical" href="https://nan-revenuecycle.surge.sh/tools/denial-tracker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a href="../index.html" class="logo">💰 Revenue<span>Cycle</span>Hub</a>
+    <nav class="links">
+      <a href="denial-tracker.html">Denial Tracker</a>
+      <a href="ar-calculator.html">AR Calculator</a>
+      <a href="eligibility-checklist.html">Eligibility Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <h1 style="text-align:center;margin:34px 0 10px;color:#fff">Claim Denial Tracker &amp; Analyzer</h1>
+  <p style="text-align:center;color:var(--muted);max-width:720px;margin:0 auto 20px">Log every denied claim. The analyzer shows your top denial reasons, total dollars at risk, and which claims to appeal first. Data stays in your browser — nothing is uploaded.</p>
+
+  <div class="toolbox">
+    <h2 style="margin-bottom:16px;color:#fff">Log a Denial</h2>
+    <div class="form-grid">
+      <div class="field"><label for="d-claim">Claim ID</label><input id="d-claim" placeholder="e.g. CLM-10452"></div>
+      <div class="field"><label for="d-payer">Payer</label><input id="d-payer" placeholder="e.g. Aetna, Medicare"></div>
+      <div class="field"><label for="d-reason">Denial Reason</label>
+        <select id="d-reason">
+          <option>Eligibility / coverage issue</option>
+          <option>Prior authorization missing</option>
+          <option>Coding error (CPT/ICD)</option>
+          <option>Timely filing expired</option>
+          <option>Duplicate claim</option>
+          <option>Medical necessity</option>
+          <option>Incorrect patient info</option>
+          <option>Referral missing</option>
+          <option>Non-covered service</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="d-amount">Billed Amount ($)</label><input id="d-amount" type="number" min="0" step="0.01" placeholder="1250.00"></div>
+      <div class="field"><label for="d-date">Denial Date</label><input id="d-date" type="date"></div>
+    </div>
+    <button class="btn" onclick="addDenial()">＋ Log Denial</button>
+    <button class="btn btn-ghost" onclick="clearAll()" style="margin-left:10px">Clear All</button>
+  </div>
+
+  <div class="toolbox">
+    <h2 style="margin-bottom:16px;color:#fff">Logged Denials</h2>
+    <div style="overflow-x:auto">
+    <table class="data">
+      <tr><th>Claim</th><th>Payer</th><th>Reason</th><th>Amount</th><th>Date</th><th>Status</th><th>Actions</th></tr>
+      <tbody id="d-rows"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="result" id="d-analysis"></div>
+
+  <div class="disclaimer">⚠️ General information only — not legal, financial, or compliance advice. Denial data is stored only in your browser's local storage.</div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p>© <span id="year">2026</span> RevenueCycleHub</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/denial-tracker.js"></script>
+</body>
+</html>

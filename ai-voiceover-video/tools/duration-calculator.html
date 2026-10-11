@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voiceover Duration Calculator — Script to Audio Length Estimator</title>
+<meta name="description" content="Free voiceover duration calculator: paste your script, set the voice speed (wpm), and get an exact audio length estimate including natural pauses. Plan YouTube videos, Shorts and TikToks precisely.">
+<link rel="canonical" href="https://nan-aivoiceover.surge.sh/tools/duration-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="../index.html">AI<span>Voiceover</span>Video</a>
+<nav class="navlinks"><a href="../index.html">Home</a><a href="script-optimizer.html">Script Optimizer</a><a href="voice-finder.html">Voice Finder</a></nav></div></header>
+<div class="wrap prose">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Duration Calculator</div>
+<h1>Voiceover Duration Calculator</h1>
+<p>Know your audio length <em>before</em> you generate it. Paste your script, dial in the voice speed, and get speech time plus natural sentence and paragraph pauses.</p>
+<div class="toolbox">
+<label for="in">Your script</label>
+<textarea id="in" placeholder="Paste your voiceover script here…"></textarea>
+<label for="wpm">Voice speed: <b id="wpmVal">150 wpm</b></label>
+<input type="range" id="wpm" min="100" max="200" value="150" step="5" style="padding:0">
+<label for="psent">Pause per sentence (seconds)</label>
+<input type="number" id="psent" value="0.4" step="0.1" min="0" max="3">
+<label for="ppara">Pause per paragraph break (seconds)</label>
+<input type="number" id="ppara" value="1.0" step="0.1" min="0" max="5">
+<button class="run" id="go">Calculate Duration</button>
+<div id="results" style="display:none;margin-top:16px"></div>
+</div>
+<h2>Words-per-minute cheat sheet</h2>
+<table class="table">
+<tr><th>Style</th><th>Typical WPM</th><th>Feels like</th></tr>
+<tr><td>Slow narration / audiobook</td><td>130–140</td><td>Calm, thoughtful</td></tr>
+<tr><td>Natural YouTube narration</td><td>150</td><td>Conversational default</td></tr>
+<tr><td>Energetic / explainer</td><td>160–175</td><td>Upbeat, engaging</td></tr>
+<tr><td>Fast / Shorts pacing</td><td>180–200</td><td>Hype, high energy</td></tr>
+</table>
+<p>Rule of thumb: 150 words ≈ 1 minute. A 1,200-word script = ~8 minutes of YouTube video. Clean your script first with the <a href="script-optimizer.html">script optimizer</a> so the count matches what the AI reads.</p>
+</div>
+<footer>
+Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</footer>
+<script src="../js/duration-calculator.js"></script>
+</body>
+</html>

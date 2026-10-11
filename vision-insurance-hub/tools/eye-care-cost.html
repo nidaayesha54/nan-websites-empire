@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eye Care Yearly Cost Estimator | VisionInsuranceHub</title>
+<meta name="description" content="Estimate your yearly eye exam, glasses, and contacts costs in the USA — with and without vision insurance. Free calculator, no sign-up.">
+<link rel="canonical" href="https://nan-visionins.surge.sh/tools/eye-care-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="../index.html">Vision<span>Insurance</span>Hub</a>
+<nav class="main-nav">
+<a href="../index.html">Home</a>
+<a href="eye-care-cost.html">Eye Care Cost</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="lasik-calculator.html">LASIK Calculator</a>
+<a href="../guides/vision-insurance-cost-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Tools &rsaquo; Eye Care Cost Estimator</div>
+</div>
+
+<section class="section" style="padding-top:10px">
+<div class="container">
+<div class="tool-box">
+<h1>Eye Care Yearly Cost Estimator</h1>
+<p style="color:var(--muted)">Enter your typical eye-care spending to see what you pay per year — with and without vision insurance.</p>
+
+<h3 style="color:var(--blue-dark)">Your Eye Care (without insurance)</h3>
+<div class="form-group">
+<label for="examCost">Comprehensive eye exam cost ($)</label>
+<input type="number" id="examCost" value="175" min="0">
+</div>
+<div class="form-group">
+<label for="examFreq">Eye exams per year</label>
+<input type="number" id="examFreq" value="1" min="0" step="0.5">
+</div>
+<div class="form-group">
+<label for="glassesCost">Glasses cost per pair ($)</label>
+<input type="number" id="glassesCost" value="250" min="0">
+</div>
+<div class="form-group">
+<label for="glassesFreq">Glasses pairs bought per year</label>
+<input type="number" id="glassesFreq" value="0.5" min="0" step="0.25">
+</div>
+<div class="form-group">
+<label for="contactsCost">Contacts yearly cost ($)</label>
+<input type="number" id="contactsCost" value="300" min="0">
+</div>
+
+<h3 style="color:var(--blue-dark);margin-top:26px">Vision Insurance Plan</h3>
+<div class="checkbox-row">
+<input type="checkbox" id="hasPlan" checked>
+<label for="hasPlan" style="font-weight:600">Compare against a vision insurance plan</label>
+</div>
+<div class="form-group">
+<label for="premium">Monthly premium ($)</label>
+<input type="number" id="premium" value="15" min="0">
+</div>
+<div class="form-group">
+<label for="copay">Eye exam copay ($)</label>
+<input type="number" id="copay" value="10" min="0">
+</div>
+<div class="form-group">
+<label for="glassesAllow">Yearly glasses allowance ($)</label>
+<input type="number" id="glassesAllow" value="150" min="0">
+</div>
+<div class="form-group">
+<label for="contactsAllow">Yearly contacts allowance ($)</label>
+<input type="number" id="contactsAllow" value="150" min="0">
+</div>
+
+<button class="btn" onclick="calculate()">Calculate Yearly Cost</button>
+
+<div class="result" id="result">
+<h2>Your Yearly Estimate</h2>
+<div class="result-row"><span>Cost <strong>without</strong> insurance</span><span class="val" id="noIns"></span></div>
+<div class="result-row"><span>Cost <strong>with</strong> insurance</span><span class="val" id="withIns"></span></div>
+<div class="result-row"><span>Insurance yearly premium paid</span><span class="val" id="premPaid"></span></div>
+<div class="verdict" id="verdict"></div>
+</div>
+<p style="font-size:.82rem;color:var(--muted);margin-top:22px">Estimates only, not financial or medical advice.</p>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div style="max-width:760px;margin:34px auto 0">
+<p>Related tools: <a href="plan-comparator.html">Vision Plan Comparator</a> · <a href="lasik-calculator.html">LASIK Break-Even Calculator</a></p>
+<p>Related guides: <a href="../guides/is-vision-insurance-worth-it.html">Is Vision Insurance Worth It?</a> · <a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a></p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-col">
+<h4>Tools</h4>
+<ul>
+<li><a href="eye-care-cost.html">Eye Care Cost Estimator</a></li>
+<li><a href="plan-comparator.html">Plan Comparator</a></li>
+<li><a href="lasik-calculator.html">LASIK Calculator</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Guides</h4>
+<ul>
+<li><a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a></li>
+<li><a href="../guides/is-vision-insurance-worth-it.html">Is Vision Insurance Worth It?</a></li>
+<li><a href="../guides/lasik-vs-glasses-cost.html">LASIK vs Glasses Cost</a></li>
+<li><a href="../blog/eye-care-saving-tips.html">Eye-Care Saving Tips</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="../blog/index.html">Blog</a></li>
+<li><a href="../index.html">Home</a></li>
+</ul>
+</div>
+<div class="footer-note">
+Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+<br><br>Estimates only, not financial or medical advice.
+</div>
+</div>
+</footer>
+
+<script>
+function money(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+function calculate(){
+  var eC=+document.getElementById("examCost").value||0,
+      eF=+document.getElementById("examFreq").value||0,
+      gC=+document.getElementById("glassesCost").value||0,
+      gF=+document.getElementById("glassesFreq").value||0,
+      cC=+document.getElementById("contactsCost").value||0,
+      hasP=document.getElementById("hasPlan").checked,
+      prem=+document.getElementById("premium").value||0,
+      copay=+document.getElementById("copay").value||0,
+      gA=+document.getElementById("glassesAllow").value||0,
+      cA=+document.getElementById("contactsAllow").value||0;
+
+  var examSpend=eC*eF, glassesSpend=gC*gF;
+  var noIns=examSpend+glassesSpend+cC;
+
+  var withIns=0;
+  if(hasP){
+    var examWith=Math.min(copay*eF, examSpend); // copay per exam
+    var glassesWith=Math.max(0,glassesSpend-gA);
+    var contactsWith=Math.max(0,cC-cA);
+    withIns=prem*12+examWith+glassesWith+contactsWith;
+    document.getElementById("premPaid").textContent=money(prem*12);
+  } else {
+    withIns=null;
+  }
+
+  document.getElementById("noIns").textContent=money(noIns);
+  var verdictEl=document.getElementById("verdict");
+  if(hasP){
+    document.getElementById("withIns").textContent=money(withIns);
+    var diff=noIns-withIns;
+    if(diff>0){
+      verdictEl.innerHTML="<strong>Verdict:</strong> The plan <strong>saves you "+money(diff)+"/year</strong>. Vision insurance pays for itself with your usage.";
+    } else if(diff===0){
+      verdictEl.innerHTML="<strong>Verdict:</strong> The plan breaks even — you pay about the same either way, but gain exam discounts.";
+    } else {
+      verdictEl.innerHTML="<strong>Verdict:</strong> Paying out of pocket is <strong>"+money(-diff)+"/year cheaper</strong> for your usage. Insurance may not be worth it for you.";
+    }
+  } else {
+    document.getElementById("withIns").textContent="—";
+    document.getElementById("premPaid").textContent="—";
+    verdictEl.innerHTML="<strong>Tip:</strong> Tick the insurance box above to see how a plan changes your numbers.";
+  }
+  document.getElementById("result").classList.add("show");
+  document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>

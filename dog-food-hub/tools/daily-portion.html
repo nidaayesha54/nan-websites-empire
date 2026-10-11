@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Dog Food Portion Calculator — Cups & Grams</title>
+<meta name="description" content="Calculate how much dog food to feed daily using the RER formula. Enter weight & life stage to get cups and grams per day.">
+<link rel="canonical" href="https://nan-dogfood.surge.sh/tools/daily-portion.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Dog<span>Food</span>Hub</a>
+    <div class="nav-links">
+      <a href="daily-portion.html">Portion Calculator</a>
+      <a href="food-cost.html">Cost Calculator</a>
+      <a href="treat-calculator.html">Treat Calculator</a>
+      <a href="../guides/how-much-to-feed-dog-2026.html">Feeding Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Daily Dog Food Portion Calculator</h1>
+  <p style="text-align:center;color:var(--muted)">Uses the standard RER formula (70 × weight<sup>0.75</sup>) multiplied by a life-stage factor, then converts to cups or grams.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="weight">Dog's weight</label>
+    <div class="unit-row">
+      <input type="number" id="weight" min="1" step="any" placeholder="e.g. 45">
+      <select id="weightUnit" aria-label="Weight unit">
+        <option value="lb">lbs</option>
+        <option value="kg">kg</option>
+      </select>
+    </div>
+
+    <label for="lifeStage">Life stage / status</label>
+    <select id="lifeStage">
+      <option value="1.6">Neutered adult</option>
+      <option value="1.8">Intact adult</option>
+      <option value="2.0">Active / working dog</option>
+      <option value="3.0">Puppy (under 4 months)</option>
+      <option value="2.0">Puppy (4–12 months)</option>
+      <option value="1.4">Less active / prone to weight gain</option>
+      <option value="1.2">Senior / weight-loss plan</option>
+    </select>
+
+    <label for="activity">Activity level</label>
+    <select id="activity">
+      <option value="1.0">Average</option>
+      <option value="1.15">Highly active (+15%)</option>
+      <option value="0.9">Low activity (−10%)</option>
+    </select>
+
+    <label for="kcalCup">Food calories per cup (kcal) — check the bag label</label>
+    <input type="number" id="kcalCup" min="100" step="any" value="350" placeholder="e.g. 350">
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="calcPortion()">Calculate Portions</button>
+    </div>
+    <p id="portionError" style="color:#b04e1f;font-weight:600"></p>
+
+    <div class="result" id="portionResult" role="status">
+      <div class="big" id="portionBig"></div>
+      <p id="portionDetail"></p>
+      <p id="portionMeals"></p>
+    </div>
+  </div>
+
+  <div class="container disclaimer"><strong>Note:</strong> Feeding guidelines are estimates — consult your vet for your dog's specific needs.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="food-cost.html">Monthly Food Cost Calculator</a> · <a href="treat-calculator.html">Treat Calorie Budget</a> · <a href="../guides/how-much-to-feed-dog-2026.html">Full Feeding Guide</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="daily-portion.html">Portion Calculator</a> · <a href="food-cost.html">Cost Calculator</a> · <a href="treat-calculator.html">Treat Calculator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+function calcPortion() {
+  var w = DFH.validNumber(DFH.$('weight'), DFH.$('portionError'));
+  if (isNaN(w)) return;
+  var kg = DFH.toKg(w, DFH.$('weightUnit').value);
+  var stageFactor = parseFloat(DFH.$('lifeStage').value);
+  var actFactor = parseFloat(DFH.$('activity').value);
+  var kcalPerCup = parseFloat(DFH.$('kcalCup').value) || 350;
+
+  var rer = 70 * Math.pow(kg, 0.75);
+  var der = rer * stageFactor * actFactor; // daily kcal
+
+  var cups = der / kcalPerCup;
+  var grams = cups * 100; // ~100 g per cup of average kibble
+  var perMeal = cups / 2;
+
+  DFH.$('portionBig').textContent = DFH.fmt(cups, 2) + ' cups/day (' + DFH.fmt(grams, 0) + ' g)';
+  DFH.$('portionDetail').textContent = '≈ ' + DFH.fmt(der, 0) + ' kcal per day for a ' + DFH.fmt(kg, 1) + ' kg dog.';
+  DFH.$('portionMeals').textContent = 'Split into 2 meals: about ' + DFH.fmt(perMeal, 2) + ' cups per meal. Adjust ±10% based on body condition.';
+  DFH.$('portionResult').classList.add('show');
+}
+</script>
+</body>
+</html>

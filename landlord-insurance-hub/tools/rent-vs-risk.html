@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Landlord Insurance Worth It? Rent vs. Risk Analyzer (2026)</title>
+<meta name="description" content="Landlord insurance cost-benefit analyzer: compare years of premiums vs probability-weighted claim costs. Honest math on whether it's worth it. Free 2026 tool.">
+<link rel="canonical" href="https://nan-landlordins.surge.sh/tools/rent-vs-risk.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Landlord Insurance Rent vs. Risk Analyzer","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🏠 Landlord<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="coverage-calculator.html">Coverage</a><a href="quote-estimator.html">Cost Estimator</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Rent vs. Risk Analyzer</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Rent vs. Risk: Is Landlord Insurance Worth It?</h1>
+<p>Insurance is a bet: you pay a <strong>certain</strong> premium to avoid an <strong>uncertain</strong> loss. This analyzer weighs <strong>10 years of premiums</strong> (with 3%/yr inflation) against <strong>probability-weighted claim costs</strong> for a typical rental property. No sales pitch — just math.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Annual premium ($)</label><input type="number" id="prem" value="1500" min="0"></div>
+<div class="field"><label>Deductible ($)</label><input type="number" id="ded" value="1000" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Annual rental income ($)</label><input type="number" id="income" value="21600" min="0"></div>
+<div class="field"><label>Horizon (years)</label><select id="yrs"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div>
+</div>
+<div class="field"><label>Risk profile</label><select id="risk">
+<option value="0.6">Lower than average — newer property, great tenants, low-crime area</option>
+<option value="1.0" selected>Typical — average rental property</option>
+<option value="1.8">Higher than average — older property, high-turnover tenants</option>
+</select></div>
+<button class="btn" onclick="calc()">Run the Analysis</button>
+<div class="result" id="res">
+<h3>10-year comparison</h3>
+<div class="big" id="verdict-top"></div>
+<p id="verdict-sub" style="color:var(--muted)"></p>
+<table class="cmp">
+<tr><th></th><th>With insurance</th><th>Self-insured (no policy)</th></tr>
+<tr><td>Total premiums paid</td><td id="c-prem"></td><td>—</td></tr>
+<tr><td>Expected claim costs</td><td id="c-claims"></td><td id="c-uninsured"></td></tr>
+<tr><td>Expected deductibles paid</td><td id="c-ded"></td><td>—</td></tr>
+<tr><td><strong>Expected total cost</strong></td><td id="c-ins-total"></td><td id="c-uni-total"></td></tr>
+</table>
+<p style="color:var(--muted);font-size:.9rem" id="scenarios"></p>
+<p style="color:var(--muted);font-size:.9rem" id="tail-risk"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimates only — not financial advice.</strong> Claim probabilities are industry ballparks, not predictions. Real risks vary by property, tenants and location. One lawsuit can dwarf any expected-value calculation — see <a href="../blog/landlord-insurance-claims.html">how claims work</a>.</div>
+</div>
+</div></section>
+
+<section class="section"><div class="container"><div class="faq" style="max-width:760px;margin:0 auto">
+<h2 style="text-align:center">Worth-It FAQ</h2>
+<div class="faq-item"><div class="faq-q">Can landlords self-insure instead?</div><div class="faq-a">Some experienced landlords with many units self-insure minor damage, but even they carry <strong>liability</strong> coverage — one tenant injury lawsuit can exceed $100K. Self-insuring the building works only if you can absorb a total loss without going bankrupt.</div></div>
+<div class="faq-item"><div class="faq-q">What if my property is paid off with no mortgage?</div><div class="faq-a">No lender means no requirement — but the risk is the same. A paid-off property is a <strong>larger asset at risk</strong>. Most paid-off landlords keep at least a high-deductible policy.</div></div>
+<div class="faq-item"><div class="faq-q">Does landlord insurance cover my tenant's belongings?</div><div class="faq-a">No — it covers <strong>your</strong> property (building, appliances you own). Tenants need their own renters insurance, which many landlords now require in the lease.</div></div>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> LandlordInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+// Annual claim probabilities × average net cost, industry ballparks
+var PERILS=[
+  {name:'Water/plumbing damage', p:0.08, cost:8000},
+  {name:'Theft / vandalism', p:0.03, cost:6000},
+  {name:'Fire / smoke damage', p:0.015, cost:90000},
+  {name:'Tenant injury lawsuit', p:0.008, cost:120000}
+];
+function calc(){
+  var prem=num('prem'), ded=num('ded'), income=num('income'),
+      yrs=parseInt(val('yrs')), risk=parseFloat(val('risk'));
+  // premiums with 3% annual inflation
+  var premiums=0; for(var i=0;i<yrs;i++){ premiums+=prem*Math.pow(1.03,i); }
+  // expected claims per year (probability-weighted), scaled by risk profile
+  var expClaimYear=0, expDedYear=0, claimProbYear=0;
+  PERILS.forEach(function(x){
+    var p=Math.min(1, x.p*risk);
+    expClaimYear+=p*Math.max(0, x.cost-ded);   // insurer pays above deductible
+    expDedYear+=p*Math.min(ded, x.cost);        // you pay the deductible
+    claimProbYear+=p;                           // approx probability of ≥1 claim event
+  });
+  var expClaims=expClaimYear*yrs, expDed=expDedYear*yrs;
+  var insuredTotal=premiums+expClaims+expDed;
+  // self-insured: full loss costs, probability-weighted
+  var uniYear=0; PERILS.forEach(function(x){ uniYear+=Math.min(1,x.p*risk)*x.cost; });
+  var uniTotal=uniYear*yrs;
+  var diff=uniTotal-insuredTotal; // positive = insurance saves money on expected value
+  var v=document.getElementById('res');
+  v.classList.remove('verdict-bad');
+  if(diff>=0){
+    document.getElementById('verdict-top').textContent='Likely worth it: ~'+money(diff)+' expected savings';
+    document.getElementById('verdict-sub').textContent='On probability-weighted math, insurance saves money over '+yrs+' years — and that is BEFORE accounting for catastrophic losses no average can capture.';
+  } else {
+    document.getElementById('verdict-top').textContent='Likely NOT worth it: ~'+money(-diff)+' expected cost';
+    document.getElementById('verdict-sub').textContent='On pure expected value, premiums exceed likely claims. Insurance can still make sense for catastrophic protection (see below).';
+    v.classList.add('verdict-bad');
+  }
+  document.getElementById('c-prem').textContent=money(premiums);
+  document.getElementById('c-claims').textContent=money(expClaims);
+  document.getElementById('c-ded').textContent=money(expDed);
+  document.getElementById('c-ins-total').textContent=money(insuredTotal);
+  document.getElementById('c-uninsured').textContent=money(uniTotal);
+  document.getElementById('c-uni-total').textContent=money(uniTotal);
+  document.getElementById('scenarios').textContent='Scenario mix (annual): water damage '+Math.round(Math.min(100,0.08*risk*1000)/10)+'% × $8K · vandalism '+Math.round(Math.min(100,0.03*risk*1000)/10)+'% × $6K · fire '+Math.round(Math.min(100,0.015*risk*1000)/10)+'% × $90K · tenant injury lawsuit '+Math.round(Math.min(100,0.008*risk*1000)/10)+'% × $120K.';
+  document.getElementById('tail-risk').textContent='Tail risk: one $120,000 lawsuit equals '+Math.round(120000/Math.max(1,income))+' year(s) of your rental income. Expected-value math cannot insure against ruin — that is the real reason landlords buy liability coverage.';
+  show('res');
+}
+</script>
+</body>
+</html>

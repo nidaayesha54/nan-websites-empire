@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Vaccination Tracker — Dog & Cat Schedules | PetHealthHub</title>
+<meta name="description" content="Free pet vaccination tracker: build a dog or cat vaccine schedule by birthdate, see due and overdue shots, and save records privately in your browser.">
+<link rel="canonical" href="https://nan-pethealth.surge.sh/tools/vaccination-tracker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">🐾 Pet<span>Health</span>Hub</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="vaccination-tracker.html" class="active">Vaccination</a>
+      <a href="weight-tracker.html">Weight</a>
+      <a href="medication-reminder.html">Medication</a>
+      <a href="../guides/puppy-vaccination-schedule-2026.html">Puppy Schedule</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer"><strong>Wellness information only</strong> — not a substitute for professional veterinary advice. See your vet for diagnosis or treatment.</div>
+
+<section class="section">
+  <div class="container">
+    <div class="tool-wrap">
+      <h1>Pet Vaccination Tracker</h1>
+      <p class="lede">Add your pet, enter their birthdate, and get a personalized vaccine schedule with due-date reminders. Data is stored only on your device. <strong>This tool does not give medical advice</strong> — confirm every vaccine with your veterinarian.</p>
+
+      <div class="form-row">
+        <div class="field"><label for="petName">Pet name</label><input id="petName" type="text" placeholder="e.g. Bella"></div>
+        <div class="field"><label for="petSpecies">Species</label>
+          <select id="petSpecies"><option value="dog">Dog</option><option value="cat">Cat</option></select>
+        </div>
+        <div class="field"><label for="petBirth">Birthdate (approx. OK)</label><input id="petBirth" type="date"></div>
+      </div>
+      <button class="btn btn-green" id="addPetBtn">Add / Update Pet</button>
+
+      <div class="form-row" style="margin-top:20px">
+        <div class="field"><label for="petSelect">My pets</label><select id="petSelect"></select></div>
+        <div class="field" style="justify-content:flex-end;flex:0"><button class="btn btn-green" id="removePetBtn" style="background:#dc2626">Remove</button></div>
+      </div>
+
+      <div id="reminders"></div>
+
+      <h2 style="color:var(--g800);font-size:1.3rem;margin-top:10px">Vaccination schedule</h2>
+      <div style="overflow-x:auto"><table class="data" id="scheduleTable">
+        <thead><tr><th>Vaccine</th><th>Type</th><th>Due at</th><th>Due date</th><th>Status</th><th>Given?</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p style="color:var(--muted);font-size:.9rem">Schedules follow widely used US veterinary guidelines (AAHA for dogs, AAFP for cats). Local laws and your vet's judgment always take precedence — especially for rabies.</p>
+      <p style="margin-top:14px"><a href="../guides/puppy-vaccination-schedule-2026.html">Read: Puppy Vaccination Schedule 2026 →</a> · <a href="../guides/signs-healthy-dog.html">Signs of a Healthy Dog →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a>
+    <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+  </div>
+</footer>
+<script src="../js/vaccination.js"></script>
+</body>
+</html>

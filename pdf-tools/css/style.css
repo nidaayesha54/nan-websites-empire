@@ -1,0 +1,104 @@
+/* PDF Tools Hub — clean utility theme (blue/white) */
+:root{
+  --blue:#1d6fe0; --blue-dark:#1558b5; --blue-light:#e8f1fd;
+  --ink:#1a2433; --muted:#5b6b80; --bg:#ffffff; --soft:#f6f9fe;
+  --border:#dde6f2; --green:#1f9d55; --red:#d64545; --radius:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header */
+.site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{font-size:1.35rem;font-weight:800;color:var(--ink)}
+.brand span{color:var(--blue)}
+.nav a{margin-left:18px;color:var(--muted);font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--blue)}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--blue-light),#fff);padding:64px 0 56px;text-align:center}
+.hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:14px}
+.hero p.sub{color:var(--muted);font-size:1.12rem;max-width:640px;margin:0 auto 24px}
+.privacy-badge{display:inline-flex;align-items:center;gap:8px;background:#e6f6ec;color:#14703c;font-weight:700;font-size:.9rem;padding:9px 18px;border-radius:999px;margin-bottom:20px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:700;padding:13px 26px;border-radius:var(--radius);border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--blue-dark);text-decoration:none;color:#fff}
+.btn.secondary{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn.secondary:hover{background:var(--blue-light)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+
+/* tool cards */
+.section{padding:52px 0}
+.section h2{text-align:center;font-size:1.7rem;margin-bottom:8px}
+.section p.lead{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:26px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(29,111,224,.12)}
+.card .icon{font-size:2rem;margin-bottom:10px}
+.card h3{margin-bottom:8px;font-size:1.15rem}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.card a.more{font-weight:700}
+
+/* tool workspace */
+.toolbox{background:var(--soft);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin:28px 0}
+.dropzone{border:2px dashed var(--blue);border-radius:var(--radius);background:#fff;padding:44px 20px;text-align:center;cursor:pointer;transition:background .15s}
+.dropzone:hover,.dropzone.drag{background:var(--blue-light)}
+.dropzone p{color:var(--muted);margin-top:8px;font-size:.95rem}
+.file-list{list-style:none;margin:20px 0}
+.file-list li{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+.file-list button{background:none;border:none;color:var(--red);cursor:pointer;font-weight:700}
+.options{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0}
+.options label{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 16px;font-size:.92rem;cursor:pointer;display:flex;gap:8px;align-items:center}
+.text-input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:8px;font-size:1rem;margin:10px 0}
+.result-box{background:#e6f6ec;border:1px solid #bfe6cd;border-radius:var(--radius);padding:18px;margin-top:18px;display:none}
+.result-box.show{display:block}
+.progress{height:10px;background:#e3eaf5;border-radius:99px;overflow:hidden;margin:14px 0;display:none}
+.progress.show{display:block}
+.progress div{height:100%;width:0;background:var(--blue);transition:width .2s}
+.hint{font-size:.88rem;color:var(--muted);margin-top:10px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.step{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.step .n{background:var(--blue);color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;background:#fff}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:16px 18px;font-size:1rem;font-weight:700;color:var(--ink);cursor:pointer}
+.faq-a{padding:0 18px 16px;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+
+/* article */
+.article{max-width:780px;margin:0 auto;padding:40px 20px}
+.article h1{font-size:2rem;margin-bottom:10px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.article h2{margin:30px 0 12px;font-size:1.4rem}
+.article h3{margin:22px 0 8px;font-size:1.15rem}
+.article p{margin-bottom:14px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{margin-bottom:6px}
+.article table{width:100%;border-collapse:collapse;margin:16px 0}
+.article th,.article td{border:1px solid var(--border);padding:10px 12px;text-align:left;font-size:.95rem}
+.article th{background:var(--soft)}
+
+/* ad slots */
+.ad-slot{background:#f2f5fa;border:1px dashed #b9c8de;border-radius:8px;color:#93a5bd;text-align:center;font-size:.8rem;padding:22px;margin:28px auto;max-width:728px}
+
+/* footer */
+footer{background:#0f1c30;color:#c9d6ea;padding:36px 0;margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer a{color:#9db8dd}
+footer p{font-size:.88rem}
+
+/* responsive */
+@media(max-width:640px){
+  .hero h1{font-size:1.75rem}
+  .toolbox{padding:20px}
+  .nav a{margin-left:10px;font-size:.85rem}
+}

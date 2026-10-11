@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short-Term vs Long-Term Disability Insurance | Free Comparator</title>
+<meta name="description" content="Compare short-term vs long-term disability insurance side by side: waiting periods, benefit periods, costs — plus a personalized recommendation for you.">
+<link rel="canonical" href="https://nan-disabilityins.surge.sh/tools/short-vs-long.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Disability<span>InsuranceHub</span></a>
+<nav class="nav"><a href="coverage-calculator.html">Coverage</a><a href="short-vs-long.html">Short vs Long</a><a href="elimination-quiz.html">Quiz</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Short-Term vs Long-Term Comparator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Short-Term vs Long-Term Disability Insurance</h1>
+<p class="sub">How they differ — and which one fits your situation. Answer a few questions for a personalized recommendation.</p>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>Side-by-Side Comparison</h2>
+<table class="cmp">
+<tr><th>Feature</th><th>Short-Term (STD)</th><th>Long-Term (LTD)</th></tr>
+<tr><td>Elimination period</td><td>0–14 days</td><td>30–180 days (90 most common)</td></tr>
+<tr><td>Benefit period</td><td>Weeks to 1–2 years</td><td>2, 5, 10 years, or to age 65–67</td></tr>
+<tr><td>% of income replaced</td><td>~60–70%</td><td>~50–60% (tax-free if you pay premiums)</td></tr>
+<tr><td>Typical cost</td><td>$25–$75/mo</td><td>1–3% of annual income</td></tr>
+<tr><td>Best for</td><td>Maternity, surgeries, short recoveries</td><td>Cancer, back injuries, chronic illness, mental health</td></tr>
+</table>
+
+<h2 style="margin-top:30px">Get Your Recommendation</h2>
+<div class="field-row">
+<div class="field"><label for="age">Your age</label><input type="number" id="age" placeholder="e.g. 35" min="18" max="80"></div>
+<div class="field"><label for="income">Monthly gross income ($)</label><input type="number" id="income" placeholder="e.g. 6000" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="savings">Emergency fund (months of expenses)</label><select id="savings"><option value="0">Less than 1 month</option><option value="1">1–3 months</option><option value="2">3–6 months</option><option value="3">6+ months</option></select></div>
+<div class="field"><label for="job">Job type</label><select id="job"><option value="desk">Mostly desk / office</option><option value="physical">Physical labor / trades / healthcare</option></select></div>
+</div>
+<div class="field"><label for="employer">Employer coverage you already have</label><select id="employer"><option value="none">None</option><option value="std">Short-term only</option><option value="ltd">Long-term only</option><option value="both">Both STD and LTD</option></select></div>
+
+<button class="btn" onclick="recommend()">Get My Recommendation</button>
+
+<div class="result" id="result">
+<h3>Your Recommendation</h3>
+<p id="verdict" style="font-weight:700"></p>
+<ul id="reasons"></ul>
+<p style="font-size:.92rem;color:#5a6c7d">Estimated cost range: <strong id="costRange"></strong>. Most people need LTD first — it protects against the biggest financial risk: a long illness. STD is a useful add-on when savings are thin.</p>
+</div>
+
+<div class="disclaimer">Estimates only, not financial advice. Costs vary by age, occupation, health, and state.</div>
+
+<h2 style="margin-top:30px">Learn more</h2>
+<ul>
+<li>Read the full <a href="../guides/short-vs-long-term-disability.html">short-term vs long-term disability insurance guide</a>.</li>
+<li>Calculate <a href="coverage-calculator.html">how much coverage you need</a>.</li>
+<li>Pick your waiting period with the <a href="elimination-quiz.html">elimination period quiz</a>.</li>
+</ul>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> DisabilityInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../blog/index.html">Blog</a> · <a href="../guides/short-vs-long-term-disability.html">Guides</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function recommend(){
+  var age=parseFloat(document.getElementById('age').value)||0;
+  var income=parseFloat(document.getElementById('income').value)||0;
+  var savings=parseInt(document.getElementById('savings').value,10);
+  var job=document.getElementById('job').value;
+  var employer=document.getElementById('employer').value;
+  if(age<=0||income<=0){alert('Please enter your age and monthly income.');return;}
+  var reasons=[];
+  var needSTD=false,needLTD=false;
+  if(employer==='none'||employer==='ltd')needSTD=true;
+  if(employer==='none'||employer==='std')needLTD=true;
+  if(savings<=1){needSTD=true;reasons.push('Your emergency fund is thin — STD fills the gap before LTD kicks in.');}
+  else{reasons.push('Your savings can bridge a 90-day wait, so a longer LTD elimination period could lower your premium.');}
+  if(job==='physical'){needLTD=true;reasons.push('Physical jobs carry higher injury risk — LTD is especially important for you.');}
+  if(age>=45){needLTD=true;reasons.push('Disability odds rise with age, making LTD protection more valuable.');}
+  if(!needSTD&&!needLTD){needLTD=true;reasons.push('You already have both — review benefit amounts; group LTD often caps below what high earners need.');}
+  var verdict;
+  if(needSTD&&needLTD)verdict='Prioritize LONG-TERM coverage first, add SHORT-TERM as a supplement.';
+  else if(needLTD)verdict='LONG-TERM disability insurance is your priority.';
+  else verdict='SHORT-TERM disability insurance fills your biggest gap.';
+  document.getElementById('verdict').textContent=verdict;
+  var ul=document.getElementById('reasons');ul.innerHTML='';
+  reasons.forEach(function(r){var li=document.createElement('li');li.textContent=r;ul.appendChild(li);});
+  var monthlyLtd=Math.round(income*12*0.02/12);
+  document.getElementById('costRange').textContent='$25–75/mo for STD; roughly $'+monthlyLtd+'/mo for individual LTD at ~2% of income';
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

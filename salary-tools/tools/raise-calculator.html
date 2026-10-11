@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raise Calculator — New Salary & Real Raise After Inflation</title>
+<meta name="description" content="Free raise calculator: enter your salary and raise percent to see your new salary, monthly and annual difference, and your real raise after inflation.">
+<link rel="canonical" href="https://nan-salarytools.surge.sh/tools/raise-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Raise Calculator","url":"https://nan-salarytools.surge.sh/tools/raise-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Salary<span>Tools</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="salary-to-hourly.html">Salary ↔ Hourly</a>
+      <a href="paycheck-estimator.html">Paycheck Estimator</a>
+      <a href="raise-calculator.html">Raise Calculator</a>
+      <a href="../guides/negotiate-raise-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Raise Calculator</p>
+<h1>Raise Calculator</h1>
+<p class="lede">Got a raise offer? See your new salary, the monthly and per-paycheck difference — and the number that matters most: your <strong>real raise after inflation</strong>.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice.</div>
+
+<section class="tool">
+  <label for="salary">Current annual salary ($)</label>
+  <input type="number" id="salary" value="70000" min="0" step="1000">
+  <label for="raisePct">Raise (%)</label>
+  <input type="number" id="raisePct" value="5" min="0" max="100" step="0.5">
+  <label for="inflation">Annual inflation rate (%)</label>
+  <input type="number" id="inflation" value="3" min="0" max="50" step="0.1">
+  <br><button class="btn-calc" id="calcBtn">Calculate Raise Impact</button>
+  <p id="err" class="warn-text"></p>
+</section>
+
+<section class="results" id="results" aria-live="polite"></section>
+
+<section>
+  <h2>Nominal Raise vs Real Raise</h2>
+  <p>A 4% raise with 3% inflation is really about a <strong>1% raise</strong> in purchasing power — the formula is (1 + raise) ÷ (1 + inflation) − 1. A 2% raise with 3% inflation is a <strong>pay cut in disguise</strong>. That's why the "real raise" line above matters more than the headline number.</p>
+  <p>Think your raise should be bigger? Read <a href="../guides/negotiate-raise-2026.html">How to Negotiate a Raise in 2026</a> for scripts and timing that work.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Paycheck Estimator</h3><p>See what the new salary means per paycheck after taxes.</p><a href="paycheck-estimator.html">Open →</a></div>
+    <div class="card"><h3>Salary ↔ Hourly</h3><p>Convert your new salary to an hourly rate.</p><a href="salary-to-hourly.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="salary-to-hourly.html">Salary ↔ Hourly</a><a href="paycheck-estimator.html">Paycheck Estimator</a><a href="../guides/negotiate-raise-2026.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> SalaryTools. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/raise-calculator.js"></script>
+</body>
+</html>

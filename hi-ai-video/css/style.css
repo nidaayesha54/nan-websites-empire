@@ -1,0 +1,47 @@
+/* AI Video Hindi — modern tech aesthetic, vibrant */
+:root{
+  --bg:#0b1020; --bg2:#121a36; --card:#182144; --line:#263058;
+  --brand:#7c5cff; --brand2:#00e0b0; --accent:#ff5c9d;
+  --text:#eef1ff; --muted:#a8b3d8; --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,'Nirmala UI',sans-serif;background:linear-gradient(160deg,var(--bg),var(--bg2));color:var(--text);line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.brand{font-size:1.35rem;font-weight:800;text-decoration:none;color:var(--text)}
+.brand span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.95rem}
+.nav a:hover{color:var(--brand2)}
+.hero{text-align:center;padding:64px 18px 48px}
+.hero h1{font-size:2.2rem;margin:0 0 12px;line-height:1.35}
+.hero h1 .grad{background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:680px;margin:0 auto 26px;font-size:1.08rem}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;text-decoration:none;padding:13px 30px;border-radius:50px;font-weight:700}
+.btn:hover{opacity:.92}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;padding:20px 0 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--text);transition:transform .15s}
+.card:hover{transform:translateY(-4px);border-color:var(--brand)}
+.card .icon{font-size:2rem}
+.card h3{margin:10px 0 6px;font-size:1.12rem}
+.card p{color:var(--muted);font-size:.95rem;margin:0}
+.section{padding:30px 0}
+.section h2{font-size:1.5rem;margin-bottom:14px}
+.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:10px 0;overflow:hidden}
+.faq button{width:100%;background:none;border:0;color:var(--text);text-align:right;padding:16px 18px;font-size:1rem;cursor:pointer;font-weight:600}
+.faq .ans{display:none;padding:0 18px 16px;color:var(--muted)}
+.faq.open .ans{display:block}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.9rem}
+table.cmp{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;margin:18px 0}
+table.cmp th,table.cmp td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:right;font-size:.92rem}
+table.cmp th{background:#1d2749;color:var(--brand2)}
+.filters{margin:18px 0;display:flex;gap:10px;flex-wrap:wrap}
+.filters button{background:var(--card);border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:30px;cursor:pointer}
+.filters button.active{background:linear-gradient(90deg,var(--brand),var(--accent));border:0}
+article.prose{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin:20px 0}
+article.prose h1{font-size:1.7rem;line-height:1.4;margin-top:0}
+article.prose h2{font-size:1.3rem;margin-top:28px;color:var(--brand2)}
+article.prose h3{font-size:1.1rem}
+article.prose p,article.prose li{color:#d7ddf5}
+.ad-slot{background:#1a2347;border:1px dashed var(--line);border-radius:var(--radius);padding:18px;text-align:center;color:var(--muted);margin:20px 0;font-size:.85rem}
+@media(max-width:640px){.hero h1{font-size:1.6rem}.nav a{margin-left:10px;font-size:.85rem}}

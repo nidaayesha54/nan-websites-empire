@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator — Check Your Body Mass Index Free | LifeCalc</title>
+  <meta name="description" content="Free BMI calculator: enter height and weight to get your Body Mass Index instantly with health category (underweight, normal, overweight, obese).">
+  <meta name="keywords" content="bmi calculator, body mass index calculator, check bmi, bmi chart">
+  <link rel="canonical" href="https://lifecalc.surge.sh/tools/bmi.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator",
+   "url":"https://lifecalc.surge.sh/tools/bmi.html",
+   "applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🧮 Life<span>Calc</span></a>
+    <nav class="nav"><a href="../index.html">Home</a><a href="age-calculator.html">Age</a><a href="sleep-calculator.html">Sleep</a><a href="tip-calculator.html">Tip</a></nav>
+  </div>
+</header>
+<section class="tool-hero"><div class="wrap">
+  <h1>BMI Calculator</h1>
+  <p>Enter your height and weight to get your Body Mass Index — and see which health category you're in.</p>
+</div></section>
+<div class="wrap"><p class="crumb"><a href="../index.html">Home</a> → BMI Calculator</p></div>
+
+<div class="wrap">
+  <div class="calc">
+    <div class="row2">
+      <div class="field">
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" placeholder="e.g. 170" min="50" max="250" step="0.1">
+      </div>
+      <div class="field">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="e.g. 65" min="10" max="400" step="0.1">
+      </div>
+    </div>
+    <button class="btn" onclick="calcBMI()">Calculate BMI</button>
+    <div class="result" id="res">
+      <div style="color:#6b7280">Your BMI</div>
+      <div class="big" id="bmiBig">—</div>
+      <div><span class="badge" id="bmiBadge"></span></div>
+      <div class="detail" id="bmiDetail"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot wrap">Advertisement</div>
+
+<div class="content">
+  <h2>BMI categories</h2>
+  <table class="res">
+    <tr><th>BMI</th><th>Category</th></tr>
+    <tr><td>Below 18.5</td><td>Underweight</td></tr>
+    <tr><td>18.5 – 24.9</td><td>Normal / healthy weight</td></tr>
+    <tr><td>25 – 29.9</td><td>Overweight</td></tr>
+    <tr><td>30 and above</td><td>Obese</td></tr>
+  </table>
+  <h2>What is BMI?</h2>
+  <p>Body Mass Index is weight in kilograms divided by height in meters squared. It's a quick screening tool — not a diagnosis. Athletes with lots of muscle, for example, can show a high BMI while being very fit.</p>
+  <div class="callout"><strong>Note:</strong> This calculator is for general information only and is not medical advice. Talk to a healthcare professional about your health.</div>
+  <p>Learn more in our <a href="../guides/bmi-calculator-guide.html">BMI calculator guide</a>.</p>
+</div>
+
+<footer><div class="wrap">
+  <div><a href="../index.html">Home</a><a href="age-calculator.html">Age Calculator</a><a href="sleep-calculator.html">Sleep Calculator</a></div>
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free forever · Not medical advice.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/bmi.js"></script>
+</body>
+</html>

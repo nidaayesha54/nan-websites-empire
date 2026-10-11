@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Means Clustering Visualizer — Watch It Group Data Live (Free)</title>
+<meta name="description" content="Interactive k-means clustering: click to add points, choose k, and watch Lloyd's algorithm assign clusters iteration by iteration. Free, no signup.">
+<link rel="canonical" href="https://mlplayground.surge.sh/tools/kmeans.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"K-Means Clustering Visualizer","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="../index.html">ML<span>Playground</span></a>
+<div class="links"><a href="linear-regression.html">Regression</a><a href="decision-tree.html">Decision Trees</a><a href="train-test.html">Overfitting</a></div>
+</nav></header>
+<div class="tool-wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> › K-Means Clustering</div>
+<h1>🎯 K-Means Clustering Visualizer</h1>
+<p class="lede"><b>Click anywhere</b> to add points. Pick <b>k</b>, hit <b>Run</b>, and watch the algorithm group them — white-ringed dots are the moving centroids.</p>
+<canvas id="kmCanvas" class="demo"></canvas>
+<div class="controls">
+<label>Clusters (k): <b id="kLabel">3</b></label>
+<input type="range" id="kVal" min="2" max="5" value="3">
+<button class="btn" id="btnRun">▶ Run K-Means</button>
+<button class="btn ghost" id="btnStep">Step once</button>
+<button class="btn ghost" id="btnSeed">🎲 Sample data</button>
+<button class="btn ghost" id="btnClearKm">Clear</button>
+</div>
+<div class="stats">
+<div class="stat"><div class="num" id="kmPoints">0</div><div class="lbl">Points</div></div>
+<div class="stat"><div class="num" id="kmIter">0</div><div class="lbl">Iterations</div></div>
+<div class="stat"><div class="num" id="kmInertia">—</div><div class="lbl">Inertia (SSE)</div></div>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="explain">
+<h3>What's happening here? (Lloyd's algorithm)</h3>
+<ul>
+<li><b>Step 1 — Assign:</b> every point joins the nearest centroid's cluster (that's why colors change).</li>
+<li><b>Step 2 — Update:</b> each centroid moves to the average position of its cluster.</li>
+<li><b>Repeat</b> until no point switches clusters — that's convergence.</li>
+</ul>
+<p style="margin-top:.7rem"><b>Try this:</b> set k=2 on the 3-blob sample data and watch the algorithm forced to merge two natural groups — a great intuition for why <b>choosing k</b> is the hardest part of k-means. <b>Inertia</b> (sum of squared distances to centroids) always drops — the algorithm never gets worse, but it can get stuck in a merely-good grouping. That's why pros run it several times.</p>
+</div>
+</div>
+<footer><p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></footer>
+<script src="../js/kmeans.js"></script>
+</body>
+</html>

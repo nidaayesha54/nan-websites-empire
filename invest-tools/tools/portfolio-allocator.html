@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Allocator: Stocks vs Bonds by Age | InvestTools</title>
+<meta name="description" content="Get an age-based stocks/bonds allocation matched to your risk tolerance, with a pie chart. Based on the 110-minus-age rule.">
+<link rel="canonical" href="https://nan-investtools.surge.sh/tools/portfolio-allocator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Portfolio Allocator: Stocks vs Bonds by Age","url":"https://nan-investtools.surge.sh/tools/portfolio-allocator.html","description":"Age-based stock/bond allocation suggestion with pie chart, adjusted for risk tolerance."}
+</script>
+</head>
+<body>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../index.html">Invest<span>Tools</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="compound-interest.html">Compound Interest</a></li>
+        <li><a href="cagr-calculator.html">CAGR</a></li>
+        <li><a href="portfolio-allocator.html">Portfolio Allocator</a></li>
+        <li><a href="../guides/how-to-start-investing-2026.html">Guides</a></li>
+        <li><a href="../blog/rule-of-72-explained.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <h1>Portfolio Allocator</h1>
+  <p>Answer two questions — your age and risk tolerance — and get a suggested stocks/bonds split with a visual pie chart.</p>
+</section>
+
+<div class="container">
+  <div class="tool-wrap">
+    <div class="form-card">
+      <h2>About you</h2>
+      <label for="age">Your age</label>
+      <input type="number" id="age" value="30" min="18" max="100">
+      <label for="risk">Risk tolerance</label>
+      <select id="risk">
+        <option value="conservative">Conservative — I dislike volatility</option>
+        <option value="moderate" selected>Moderate — I accept normal ups and downs</option>
+        <option value="aggressive">Aggressive — I want maximum long-term growth</option>
+      </select>
+      <button class="calc" id="calcBtn">Allocate My Portfolio</button>
+    </div>
+    <div class="result-card">
+      <h2>Your allocation</h2>
+      <div id="results"><p class="note">Enter your age and click Allocate My Portfolio.</p></div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> Educational purposes only — not financial advice. This uses the "110 minus age" rule of thumb as a starting point; it is not personalized investment advice. Consider your goals, timeline, and debts before investing.
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">Related tools &amp; guides</h2>
+    <div class="cards">
+      <div class="card"><h3><a href="compound-interest.html">Compound Interest Calculator</a></h3><p>See what your allocation could grow into.</p></div>
+      <div class="card"><h3><a href="../guides/how-to-start-investing-2026.html">Start Investing 2026</a></h3><p>Open an account and put your allocation to work.</p></div>
+      <div class="card"><h3><a href="../guides/index-funds-vs-stocks.html">Index Funds vs Stocks</a></h3><p>How to actually buy your stock allocation.</p></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>InvestTools</h4><p style="font-size:.93rem">Free investment calculators and plain-English guides for US investors.</p></div>
+      <div><h4>Calculators</h4><ul>
+        <li><a href="compound-interest.html">Compound Interest</a></li>
+        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
+        <li><a href="portfolio-allocator.html">Portfolio Allocator</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="../guides/how-to-start-investing-2026.html">Start Investing 2026</a></li>
+        <li><a href="../guides/compound-interest-explained.html">Compound Interest</a></li>
+        <li><a href="../guides/index-funds-vs-stocks.html">Index Funds vs Stocks</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>
+      &copy; <span class="year">2026</span> InvestTools. Educational purposes only — not financial advice.
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/portfolio-allocator.js"></script>
+</body>
+</html>

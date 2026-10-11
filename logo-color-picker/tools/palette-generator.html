@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Brand Color Palette Generator — Complementary, Analogous, Triadic | LogoColorPicker</title>
+<meta name="description" content="Generate harmonious brand color palettes free: complementary, analogous, triadic, split-complementary & tetradic. Click to copy hex codes and preview on a mock logo.">
+<link rel="canonical" href="https://nan-logocolors.surge.sh/tools/palette-generator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../index.html">LogoColorPicker</a>
+<nav class="main">
+<a href="palette-generator.html">Palette Generator</a>
+<a href="brand-color-quiz.html">Color Quiz</a>
+<a href="contrast-checker.html">Contrast Checker</a>
+<a href="../guides/best-logo-colors-2026.html">Guides</a>
+<a href="../blog/logo-color-trends.html">Blog</a>
+</nav>
+</div></header>
+<div class="wrap">
+<article class="prose">
+<h1>Brand Color Palette Generator</h1>
+<p>Pick a base color and harmony type — get a balanced logo-ready palette instantly. Click any swatch to copy its hex code.</p>
+<div class="tool-box">
+<div class="btn-row">
+<label style="display:flex;align-items:center;gap:10px;font-weight:600">Base color: <input type="color" id="baseColor" value="#6c4cf1"></label>
+<label style="display:flex;align-items:center;gap:10px;font-weight:600">Harmony:
+<select id="harmonyType">
+<option value="complementary">Complementary</option>
+<option value="analogous" selected>Analogous</option>
+<option value="triadic">Triadic</option>
+<option value="split">Split-Complementary</option>
+<option value="tetradic">Tetradic</option>
+</select></label>
+</div>
+<div class="btn-row">
+<button class="btn primary2" id="genBtn">Generate Palette</button>
+<button class="btn ghost" id="randomBtn">🎲 Random Color</button>
+<button class="btn ghost" id="copyAllBtn">Copy All Hex</button>
+</div>
+<div id="paletteOut"></div>
+<div id="logoMock"></div>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<h2>How palette harmony works</h2>
+<p>Complementary pairs opposite hues for maximum pop (great for bold brands). Analogous neighbors feel calm and cohesive. Triadic triples give playful balance — pick one dominant color and use the others as accents.</p>
+<p>Not sure where to start? Take the <a href="brand-color-quiz.html">brand color quiz</a>, then verify readability with the <a href="contrast-checker.html">contrast checker</a>, or read our <a href="../guides/how-to-choose-brand-colors.html">guide to choosing brand colors</a>.</p>
+</article>
+</div>
+<footer class="site"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+<script src="../js/color-utils.js"></script>
+<script src="../js/palette.js"></script>
+</body>
+</html>

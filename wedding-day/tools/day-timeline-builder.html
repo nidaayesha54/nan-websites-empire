@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Day Timeline Builder — Minute-by-Minute Schedule (Free)</title>
+  <meta name="description" content="Free interactive wedding day timeline builder. Enter your ceremony time and get a complete minute-by-minute wedding day schedule — printable for vendors.">
+  <link rel="canonical" href="https://nan-wedday.surge.sh/tools/day-timeline-builder.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Wedding Day Timeline Builder",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">💒 Wedding<span>Day</span>Plan</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="day-timeline-builder.html">Timeline Builder</a>
+        <a href="photo-shot-list.html">Photo Shot List</a>
+        <a href="../guides/wedding-day-timeline-template.html">Guides</a>
+        <a href="../blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> › Timeline Builder</p>
+  </div>
+
+  <section class="section" style="padding-top:10px">
+    <div class="wrap">
+      <h1 style="text-align:left;font-size:1.9rem;color:var(--dark);margin-bottom:10px">⏱️ Wedding Day Timeline Builder</h1>
+      <p class="sub" style="text-align:left;margin:0 0 24px;max-width:none">Answer 6 quick questions. Get your complete minute-by-minute wedding day schedule — printable for every vendor.</p>
+
+      <div class="tool-grid">
+        <div class="panel">
+          <h2>Your Details</h2>
+          <div class="field">
+            <label for="ceremony">Ceremony start time</label>
+            <input type="time" id="ceremony" value="16:00">
+          </div>
+          <div class="field">
+            <label for="ceremonyLen">Ceremony length</label>
+            <select id="ceremonyLen">
+              <option value="20">20 minutes (short &amp; sweet)</option>
+              <option value="30" selected>30 minutes (standard)</option>
+              <option value="45">45 minutes (traditional/religious)</option>
+              <option value="60">60 minutes (full mass / long)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="partySize">Bridal party size (each side)</label>
+            <select id="partySize">
+              <option value="2">Just us / 1–2 each</option>
+              <option value="4" selected>3–5 each</option>
+              <option value="7">6–8 each</option>
+              <option value="10">9+ each (big party)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="photos">Couple portraits session</label>
+            <select id="photos">
+              <option value="20">20 min (quick)</option>
+              <option value="30" selected>30 min (standard)</option>
+              <option value="45">45 min (extended)</option>
+              <option value="0">Skip (doing first look instead)</option>
+            </select>
+          </div>
+          <div class="checkrow">
+            <input type="checkbox" id="firstLook" checked>
+            <label for="firstLook">We're doing a first look</label>
+          </div>
+          <div class="checkrow">
+            <input type="checkbox" id="cocktail" checked>
+            <label for="cocktail">Cocktail hour before reception</label>
+          </div>
+          <div class="field">
+            <label for="receptionLen">Reception length</label>
+            <select id="receptionLen">
+              <option value="3">3 hours (short)</option>
+              <option value="4" selected>4 hours (standard)</option>
+              <option value="5">5 hours (big celebration)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sunset">Sunset time (for golden-hour photos)</label>
+            <input type="time" id="sunset" value="19:15">
+          </div>
+          <button class="btn" id="buildBtn" style="width:100%">Build My Timeline ✨</button>
+          <div class="toolbar">
+            <button class="btn secondary" id="printBtn" style="display:none">🖨️ Print Timeline</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Your Wedding Day Schedule</h2>
+          <div id="empty" style="color:var(--muted);font-family:Arial,sans-serif">
+            👈 Fill in your details and click <strong>Build My Timeline</strong> — your minute-by-minute schedule appears here.
+          </div>
+          <ul class="timeline" id="timeline" style="display:none"></ul>
+          <div class="result-note" id="note" style="display:none"></div>
+        </div>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+      <div class="ad-slot">AD-SLOT · in-content</div>
+
+      <div class="article" style="margin-top:32px">
+        <h2>How this timeline works</h2>
+        <p>The builder works backwards and forwards from your ceremony time. Morning prep is scheduled so hair and makeup finish with a 30-minute buffer before you need to leave. Portraits are placed in the golden window around sunset when light is most flattering. Speeches are timed between dinner courses so guests stay engaged. Every event includes a small buffer — because weddings <em>always</em> run a few minutes behind, and that's okay when the plan expects it.</p>
+        <p><strong>Pro tip:</strong> print this timeline and give a copy to your photographer, coordinator, DJ, and maid of honor. When everyone works from the same schedule, you stop being the person everyone asks questions.</p>
+        <p>Want ready-made examples? See our <a href="../guides/wedding-day-timeline-template.html">sample wedding day timeline templates</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div><strong style="color:#f5e6ca">💒 WeddingDayPlan</strong><br>Free wedding day-of planning tools.<br>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a></div>
+      <div><a href="../index.html">Home</a><br><a href="photo-shot-list.html">Photo Shot List</a><br><a href="../blog/">Blog</a></div>
+    </div>
+    <div class="wrap"><p class="fine">© 2026 WeddingDayPlan · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+  </footer>
+
+  <script>
+    function toMin(t) { var p = t.split(':'); return (+p[0]) * 60 + (+p[1]); }
+    function toTime(m) {
+      m = ((m % 1440) + 1440) % 1440;
+      var h = Math.floor(m / 60), mm = m % 60, ap = h >= 12 ? 'PM' : 'AM', h12 = h % 12;
+      if (h12 === 0) h12 = 12;
+      return h12 + ':' + String(mm).padStart(2, '0') + ' ' + ap;
+    }
+    function add(timeline, start, end, what, detail, tag) {
+      timeline.push({ s: start, e: end, what: what, detail: detail || '', tag: tag || '' });
+    }
+
+    document.getElementById('buildBtn').addEventListener('click', function () {
+      var cer = toMin(document.getElementById('ceremony').value || '16:00');
+      var cerLen = +document.getElementById('ceremonyLen').value;
+      var party = +document.getElementById('partySize').value;
+      var photoMin = +document.getElementById('photos').value;
+      var firstLook = document.getElementById('firstLook').checked;
+      var cocktail = document.getElementById('cocktail').checked;
+      var recHrs = +document.getElementById('receptionLen').value;
+      var sunset = toMin(document.getElementById('sunset').value || '19:15');
+
+      var tl = [];
+      var prepPer = party >= 7 ? 60 : 45;              // hair/makeup buffer per group
+      var prepStart = cer - 150 - prepPer;             // start prep well ahead
+      if (prepStart < 360) prepStart = 360;            // not before 6am
+
+      add(tl, prepStart, prepStart + prepPer, 'Hair & makeup begins', 'Bride + bridal party. Play music, sip champagne, relax.', 'MORNING');
+      add(tl, prepStart + prepPer, cer - 75, 'Getting ready: details & flat-lay photos', 'Photographer captures dress, rings, invitations, shoes.', 'MORNING');
+      add(tl, cer - 75, cer - 60, 'Get dressed', 'Bride gets into dress with mom/MOH. 15-min buffer built in.', 'MORNING');
+
+      var t = cer - 60;
+      if (firstLook) {
+        add(tl, t, t + 20, 'First look', 'Private moment before the ceremony — the best photos of the day.', 'PHOTOS');
+        t += 20;
+        add(tl, t, t + 25, 'Wedding party portraits', 'Full bridal party photos done early = cocktail hour is yours.', 'PHOTOS');
+        t += 25;
+        add(tl, t, cer - 15, 'Touch-ups & hideaway', 'Freshen up, touch up makeup, breathe. Guests begin seating.', 'BREATHER');
+      } else {
+        add(tl, t, cer - 15, 'Pre-ceremony photos (details & family)', 'No couple photos yet — those come after the ceremony.', 'PHOTOS');
+      }
+
+      add(tl, cer - 15, cer, 'Guests seated · wedding party lines up', 'Music starts, final checks. Deep breath — this is it!', 'CEREMONY');
+      add(tl, cer, cer + cerLen, 'Ceremony 💒', 'The moment you\'ve been waiting for. Soak it in.', 'CEREMONY');
+      var afterCer = cer + cerLen;
+
+      add(tl, afterCer, afterCer + 15, 'Recessional & congratulations', 'Walk out married! Receiving line or mingling.', 'CELEBRATE');
+      t = afterCer + 15;
+      add(tl, t, t + 20, 'Family formal portraits', 'Knock these out fast with a shot list (see our photo tool).', 'PHOTOS');
+      t += 20;
+
+      if (!firstLook && photoMin > 0) {
+        add(tl, t, t + photoMin, 'Couple portraits', 'Golden light window — the romantic shots.', 'PHOTOS');
+        t += photoMin;
+      } else if (firstLook) {
+        var gh = Math.min(Math.max(sunset - 25, t), t + 45);
+        add(tl, gh, gh + 15, 'Golden-hour sneak-away 📸', 'Slip out for 15 min of dreamy sunset photos.', 'PHOTOS');
+      }
+
+      if (cocktail) {
+        add(tl, afterCer + 15, afterCer + 75, 'Cocktail hour 🥂', 'Guests enjoy drinks & appetizers while you finish photos.', 'GUESTS');
+      }
+      var recStart = afterCer + (cocktail ? 75 : 30);
+      add(tl, recStart, recStart + 15, 'Grand entrance & first dance', 'Make an entrance! Then your first dance as a married couple.', 'RECEPTION');
+      t = recStart + 15;
+      add(tl, t, t + 10, 'Welcome speech', 'Keep it short and sweet — thank your guests.', 'RECEPTION');
+      t += 10;
+      add(tl, t, t + 60, 'Dinner service 🍽️', 'Toasts from parents/MOH/best man between courses.', 'RECEPTION');
+      t += 60;
+      add(tl, t, t + 15, 'Cake cutting', 'Smash or no smash — decide now, commit forever.', 'RECEPTION');
+      t += 15;
+      add(tl, t, t + 20, 'Parent dances', 'Father-daughter, mother-son — tissues ready.', 'RECEPTION');
+      t += 20;
+      var danceEnd = recStart + recHrs * 60 - 15;
+      if (danceEnd > t + 30) {
+        add(tl, t, danceEnd, 'Open dancing 🪩', 'Party time! Bouquet & garter toss somewhere in here.', 'RECEPTION');
+        t = danceEnd;
+      }
+      add(tl, t, t + 15, 'Last dance & sparkler send-off ✨', 'End the night on a high — then go be married!', 'FINALE');
+
+      // render
+      var ul = document.getElementById('timeline');
+      ul.innerHTML = '';
+      tl.forEach(function (ev) {
+        var li = document.createElement('li');
+        li.innerHTML = '<span class="t">' + toTime(ev.s) + '</span>' +
+          '<span class="what"><strong>' + ev.what + '</strong>' +
+          (ev.detail ? '<small>' + ev.detail + '</small>' : '') +
+          (ev.tag ? '<br><span class="tag">' + ev.tag + '</span>' : '') + '</span>';
+        ul.appendChild(li);
+      });
+      document.getElementById('empty').style.display = 'none';
+      ul.style.display = 'block';
+      var note = document.getElementById('note');
+      note.style.display = 'block';
+      note.innerHTML = '<strong>📋 ' + tl.length + ' scheduled events</strong> · Ceremony at ' + toTime(cer) +
+        ' · Reception ends around ' + toTime(t + 15) +
+        '.<br>Print this page and share with your photographer, coordinator, DJ, and wedding party so everyone works from the same plan.';
+      document.getElementById('printBtn').style.display = 'inline-block';
+      ul.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+  </script>
+</body>
+</html>

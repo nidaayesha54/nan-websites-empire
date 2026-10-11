@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NP Programs Compared: MSN vs DNP & Specialty Tracks | NPToolsHub</title>
+<meta name="description" content="Compare NP programs: MSN vs DNP vs post-grad certificate — cost, duration, clinical hours, pros and cons. Explore FNP, PMHNP, ACNP and more specialty tracks.">
+<link rel="canonical" href="https://nan-nptools.surge.sh/tools/np-programs.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../"><span class="plus">+</span> NPToolsHub</a>
+<button class="menu-btn" aria-label="Menu" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+<nav class="main">
+<a href="np-salary.html">Salary Calculator</a>
+<a href="np-programs.html">Program Comparison</a>
+<a href="np-roi.html">ROI Calculator</a>
+<a href="../guides/how-to-become-np-2026.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<main class="wrap">
+<p class="breadcrumb"><a href="../">Home</a> › Tools › NP Program Comparison</p>
+<h1>MSN vs DNP vs Certificate: Compare NP Programs</h1>
+<p>All three pathways qualify you for NP licensure. The differences are cost, time, and career flexibility. Toggle below to compare, then explore specialty tracks.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="tool-box">
+<h2 style="margin-top:0">Degree pathways</h2>
+<div class="tabs" id="degTabs">
+<button class="active" data-deg="msn">MSN (Master's)</button>
+<button data-deg="dnp">DNP (Doctorate)</button>
+<button data-deg="cert">Post-Grad Certificate</button>
+</div>
+<div id="degPane"></div>
+</div>
+
+<div class="tool-box">
+<h2 style="margin-top:0">Specialty tracks</h2>
+<p>Pick a track to see what it involves, typical pay, and demand.</p>
+<div class="tabs" id="specTabs"></div>
+<div id="specPane"></div>
+</div>
+
+<h2>Bottom line</h2>
+<p>For most new NPs, the MSN remains the best value — it qualifies you for the same license at a fraction of the cost. The DNP makes sense if you want academic, leadership, or policy roles. Already an NP adding a second specialty? The certificate is the fastest route. Crunch your own numbers with the <a href="np-roi.html">NP school ROI calculator</a>.</p>
+
+<h2>Related</h2>
+<p><a href="../guides/how-to-become-np-2026.html">How to Become a Nurse Practitioner in 2026</a> · <a href="../guides/fnp-vs-acnp.html">FNP vs ACNP</a> · <a href="../guides/np-salary-by-specialty.html">NP Salary by Specialty</a></p>
+</main>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div class="foot-links"><a href="../">Home</a><a href="np-salary.html">NP Salary Calculator</a><a href="np-roi.html">NP ROI Calculator</a><a href="../guides/how-to-become-np-2026.html">How to Become an NP</a><a href="../blog/">Blog</a></div>
+<small>Program data are national averages; tuition varies widely by school. © 2026 NPToolsHub.</small>
+</div></footer>
+
+<script>
+(function(){
+  var degrees = {
+    msn: {name:"MSN (Master of Science in Nursing)", dur:"2–3 years", cost:"$40,000 – $80,000",
+      hours:"500+ supervised clinical hours", best:"Fastest, most affordable path to NP licensure.",
+      pros:["Lowest tuition and debt","Enters the workforce fastest","Same NP license as DNP grads","Wide choice of online programs"],
+      cons:["Less training in research and leadership","Some academic jobs prefer DNP","Fewer QI/EBP project opportunities"]},
+    dnp: {name:"DNP (Doctor of Nursing Practice)", dur:"3–4 years (MSN included)", cost:"$80,000 – $200,000+",
+      hours:"1,000+ clinical hours + scholarly project", best:"Leadership, academia, policy, and highest-tier clinical roles.",
+      pros:["Terminal clinical degree — strongest credential","Prepares for executive and faculty roles","Deeper training in evidence-based practice","May command slightly higher pay in some settings"],
+      cons:["Significantly more expensive","1–2 extra years out of full-time earning","Not required for NP licensure"]},
+    cert: {name:"Post-Graduate NP Certificate", dur:"1–2 years", cost:"$15,000 – $40,000",
+      hours:"500+ clinical hours in the new specialty", best:"Certified NPs (or MSN nurses) adding a second specialty.",
+      pros:["Fastest route to a new specialty","Cheapest option","Great for high-demand switches like PMHNP"],
+      cons:["Requires a graduate nursing degree first","Limited financial aid options","Narrower scope than a full degree"]}
+  };
+  var tracks = [
+    {id:"fnp", name:"FNP — Family", desc:"Primary care across the lifespan, from pediatrics to geriatrics. The most common and flexible NP specialty.", pay:"~$128,000", demand:"Very high — largest job market of any track."},
+    {id:"agacnp", name:"AGACNP — Adult-Gerontology Acute Care", desc:"High-acuity adult and older-adult care in hospitals, ICUs, ERs, and specialty clinics.", pay:"~$134,000", demand:"High, especially in hospital systems."},
+    {id:"pmhnp", name:"PMHNP — Psychiatric-Mental Health", desc:"Mental health assessment, therapy, and prescribing across ages. Fastest-growing NP demand area.", pay:"~$145,000", demand:"Extremely high — nationwide shortage."},
+    {id:"pnp", name:"PNP — Pediatric", desc:"Primary or acute care for infants, children, and adolescents.", pay:"~$124,000", demand:"Steady, concentrated in children's hospitals."},
+    {id:"nnp", name:"NNP — Neonatal", desc:"Intensive care for newborns, especially premature and critically ill infants.", pay:"~$141,000", demand:"Niche but strong in NICU settings."},
+    {id:"whnp", name:"WHNP — Women's Health", desc:"OB/GYN-focused care: prenatal, reproductive health, menopause, and well-woman care.", pay:"~$126,000", demand:"Strong in clinics and health systems."},
+    {id:"agpcnp", name:"AGPCNP — Adult-Gerontology Primary Care", desc:"Primary care focused on adults and older adults, including chronic disease management.", pay:"~$126,000", demand:"Growing with the aging U.S. population."}
+  ];
+  var degPane = document.getElementById('degPane');
+  function renderDeg(key){
+    var d = degrees[key];
+    degPane.innerHTML =
+      '<h3>' + d.name + '</h3>' +
+      '<table class="cmp"><tr><th style="width:32%">Factor</th><th>Details</th></tr>' +
+      '<tr><td><strong>Duration</strong></td><td>' + d.dur + '</td></tr>' +
+      '<tr><td><strong>Typical total tuition</strong></td><td>' + d.cost + '</td></tr>' +
+      '<tr><td><strong>Clinical requirement</strong></td><td>' + d.hours + '</td></tr>' +
+      '<tr><td><strong>Best for</strong></td><td>' + d.best + '</td></tr></table>' +
+      '<h3>Pros</h3><ul>' + d.pros.map(function(p){return '<li>'+p+'</li>';}).join('') + '</ul>' +
+      '<h3>Cons</h3><ul>' + d.cons.map(function(c){return '<li>'+c+'</li>';}).join('') + '</ul>';
+  }
+  document.getElementById('degTabs').addEventListener('click', function(e){
+    if (e.target.tagName !== 'BUTTON') return;
+    Array.prototype.forEach.call(this.querySelectorAll('button'), function(b){ b.classList.remove('active'); });
+    e.target.classList.add('active');
+    renderDeg(e.target.getAttribute('data-deg'));
+  });
+  renderDeg('msn');
+
+  var specTabs = document.getElementById('specTabs');
+  var specPane = document.getElementById('specPane');
+  tracks.forEach(function(t, i){
+    var b = document.createElement('button');
+    b.textContent = t.name;
+    b.setAttribute('data-i', i);
+    if (i === 0) b.classList.add('active');
+    specTabs.appendChild(b);
+  });
+  function renderSpec(i){
+    var t = tracks[i];
+    specPane.innerHTML = '<h3>' + t.name + '</h3><p>' + t.desc + '</p>' +
+      '<table class="cmp"><tr><th>Typical salary</th><th>Job demand</th></tr>' +
+      '<tr><td><strong>' + t.pay + '</strong></td><td>' + t.demand + '</td></tr></table>';
+  }
+  specTabs.addEventListener('click', function(e){
+    if (e.target.tagName !== 'BUTTON') return;
+    Array.prototype.forEach.call(this.querySelectorAll('button'), function(b){ b.classList.remove('active'); });
+    e.target.classList.add('active');
+    renderSpec(parseInt(e.target.getAttribute('data-i'), 10));
+  });
+  renderSpec(0);
+})();
+</script>
+</body>
+</html>

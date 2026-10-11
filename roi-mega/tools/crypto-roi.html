@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto ROI Calculator — Free Cryptocurrency Profit Calculator</title>
+<meta name="description" content="Calculate your true crypto profit: buy/sell price, amount and exchange fees → profit, loss and ROI. Free, instant, no signup.">
+<link rel="canonical" href="https://nan-roimega.surge.sh/tools/crypto-roi.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do you calculate crypto profit?","acceptedAnswer":{"@type":"Answer","text":"Crypto profit = (Sell price × Amount − Sell fee) − (Buy price × Amount + Buy fee). Always include exchange fees on both sides — they add up on frequent trades."}},
+{"@type":"Question","name":"Do exchange fees matter in crypto ROI?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fees of 0.1–1% per trade apply twice (buy and sell). On leveraged or frequent trades they can erase a large part of the apparent gain."}}
+]}
+</script>
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="logo" href="../index.html">ROI<span>Calc</span>Hub</a>
+<nav class="nav-links"><a href="../index.html">All Calculators</a><a href="general-roi.html">General ROI</a><a href="stock-roi.html">Stocks</a><a href="business-roi.html">Business ROI</a></nav>
+</div></header>
+<div class="container"><p class="breadcrumb"><a href="../index.html">Home</a> → Crypto ROI Calculator</p></div>
+<div class="page-hero"><div class="container">
+<h1>Crypto ROI Calculator</h1>
+<p>Your true crypto profit — with exchange fees on both sides. Enter the trade below.</p>
+</div></div>
+
+<section><div class="container"><div class="calc-wrap">
+<div class="card"><h2>Trade Details</h2>
+<div class="field"><label for="buy">Buy price per coin ($)</label><input type="number" id="buy" placeholder="30000" step="0.01"></div>
+<div class="field"><label for="sell">Sell price per coin ($)</label><input type="number" id="sell" placeholder="45000" step="0.01"></div>
+<div class="field"><label for="amount">Amount of coins</label><input type="number" id="amount" placeholder="0.5" step="0.0001"></div>
+<div class="field"><label for="buyfee">Buy fee ($)</label><input type="number" id="buyfee" placeholder="15" step="0.01"></div>
+<div class="field"><label for="sellfee">Sell fee ($)</label><input type="number" id="sellfee" placeholder="22.50" step="0.01"></div>
+<button class="btn" id="calc-btn">Calculate Crypto ROI</button>
+</div>
+<div class="card"><h2>Results</h2><div id="results"><p style="color:var(--muted)">Enter your numbers and click Calculate.</p></div></div>
+</div></div></section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section><div class="container"><div class="prose">
+<h2>Don't Forget the Fees</h2>
+<div class="formula">Profit = (Sell × Amount − Sell Fee) − (Buy × Amount + Buy Fee)</div>
+<p>Exchanges charge on <strong>both</strong> sides of every trade. A 1% fee each way on a trade that gained 5% eats 40% of your profit. This calculator subtracts both fees so you see what actually lands in your wallet. Also try our <a href="stock-roi.html">Stock ROI Calculator</a>.</p>
+</div>
+<h2 class="section-title" style="margin-top:36px">FAQ</h2>
+<div class="faq" style="margin-top:20px">
+<div class="faq-item"><button class="faq-q">How do you calculate crypto profit? <span>+</span></button><div class="faq-a">Crypto profit = (Sell price × Amount − Sell fee) − (Buy price × Amount + Buy fee). Always include exchange fees on both sides — they add up on frequent trades.</div></div>
+<div class="faq-item"><button class="faq-q">Do exchange fees matter in crypto ROI? <span>+</span></button><div class="faq-a">Yes. Fees of 0.1–1% per trade apply twice (buy and sell). On leveraged or frequent trades they can erase a large part of the apparent gain.</div></div>
+</div>
+</div></section>
+
+<footer class="site"><div class="container">
+<div class="foot-grid">
+<div><h4>ROI<span style="color:var(--gold)">Calc</span>Hub</h4><p><a href="../index.html">All 8 ROI calculators</a></p></div>
+<div><h4>Calculators</h4><p><a href="general-roi.html">General ROI</a><br><a href="ad-roi.html">Ad ROAS</a><br><a href="stock-roi.html">Stock ROI</a><br><a href="flip-roi.html">House Flip ROI</a></p></div>
+<div><h4>More</h4><p><a href="rental-roi.html">Rental ROI</a><br><a href="crypto-roi.html">Crypto ROI</a><br><a href="business-roi.html">Business ROI</a><br><a href="marketing-roi.html">Marketing ROI</a></p></div>
+</div>
+<p class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Estimates only, not financial advice.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/calc-crypto.js"></script>
+</body>
+</html>

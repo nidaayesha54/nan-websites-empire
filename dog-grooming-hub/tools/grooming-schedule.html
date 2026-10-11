@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Grooming Schedule Generator — Bath, Brush & Nail Planner</title>
+<meta name="description" content="Free dog grooming schedule generator: pick coat type, size & lifestyle to get bath, brush, nail & haircut frequencies plus a dated 45-day task list.">
+<link rel="canonical" href="https://nan-doggrooming.surge.sh/tools/grooming-schedule.html">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗓️</text></svg>">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="logo" href="../index.html">🐾 Dog<span>Grooming</span>Hub</a>
+<button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="grooming-schedule.html">Schedule</a></li>
+<li><a href="grooming-cost.html">Cost Compare</a></li>
+<li><a href="nail-trim-guide.html">Nail Guide</a></li>
+<li><a href="../guides/how-often-groom-dog.html">Guides</a></li>
+<li><a href="../blog/index.html">Blog</a></li>
+</ul>
+</div></nav>
+
+<div class="wrap"><p class="breadcrumb"><a href="../index.html">Home</a> → Tools → Grooming Schedule Generator</p></div>
+
+<header class="hero"><div class="wrap">
+<h1>Dog Grooming Schedule Generator 🗓️</h1>
+<p>Choose your dog's coat type, size, and lifestyle — we'll build a personalized grooming calendar with bath, brush, nail, and haircut dates.</p>
+</div></header>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section"><div class="wrap">
+<div class="tool-box">
+<div class="field"><label for="coat">Coat type</label>
+<select id="coat">
+<option value="short">Short / Smooth — Labrador, Beagle, Boxer</option>
+<option value="medium" selected>Medium / Double — Golden Retriever, Husky, GSD</option>
+<option value="long">Long / Silky — Shih Tzu, Maltese, Yorkie</option>
+<option value="curly">Curly / Wavy — Poodle, Doodles, Water Dog</option>
+<option value="wire">Wire / Harsh — Terriers, Schnauzer</option>
+<option value="hairless">Hairless — Chinese Crested, Xolo</option>
+</select></div>
+<div class="field"><label for="size">Breed size</label>
+<select id="size">
+<option value="small">Small (under 20 lbs)</option>
+<option value="medium" selected>Medium (20–50 lbs)</option>
+<option value="large">Large (50–100 lbs)</option>
+<option value="xl">X-Large (100+ lbs)</option>
+</select></div>
+<div class="field"><label for="activity">Lifestyle / activity</label>
+<select id="activity">
+<option value="couch">Couch potato (mostly indoors)</option>
+<option value="average" selected>Average (daily walks)</option>
+<option value="active">Very active (hikes, dog parks, swims)</option>
+</select><div class="hint">Active dogs get dirty faster and may need more frequent baths.</div></div>
+<div class="field"><label for="lastBath">Last bath date (optional)</label>
+<input type="date" id="lastBath"><div class="hint">We'll anchor your next bath from this date. Leave blank to start from today.</div></div>
+<button class="btn" onclick="generateSchedule()">Generate My Schedule →</button>
+<div class="result" id="result" style="display:none"></div>
+</div>
+
+<div class="disclaimer" style="max-width:820px;margin:24px auto">Schedules are guidelines based on coat type — adjust for your dog's skin, allergies, and your vet's advice. Learn why in our <a href="../guides/how-often-groom-dog.html">how-often-to-groom guide</a>.</div>
+
+<div class="related" style="max-width:820px;margin:24px auto">
+<h3>Related tools &amp; guides</h3>
+<ul>
+<li><a href="grooming-cost.html">DIY vs Groomer Cost Calculator</a></li>
+<li><a href="nail-trim-guide.html">Interactive Nail Trimming Guide</a></li>
+<li><a href="../guides/how-often-groom-dog.html">How Often Should You Groom Your Dog?</a></li>
+<li><a href="../guides/dog-shedding-solutions.html">How to Control Dog Shedding</a></li>
+<li><a href="../blog/grooming-mistakes.html">10 Dog Grooming Mistakes Owners Make</a></li>
+</ul>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p class="foot-note">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year"></span> DogGroomingHub. For general information only — always consult your veterinarian.</p>
+</div></footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('show');});
+document.getElementById('year').textContent=new Date().getFullYear();
+
+var COATS={
+ short:{name:"Short / Smooth",bath:42,bathLabel:"Every 6 weeks",brush:7,brushLabel:"Weekly",nails:24,nailsLabel:"Every 3–4 weeks",cut:0,cutLabel:"Not needed"},
+ medium:{name:"Medium / Double",bath:35,bathLabel:"Every 5 weeks",brush:2,brushLabel:"3–4× per week",nails:24,nailsLabel:"Every 3–4 weeks",cut:49,cutLabel:"Sanitary trim every 7 weeks"},
+ long:{name:"Long / Silky",bath:21,bathLabel:"Every 3 weeks",brush:1,brushLabel:"Daily",nails:17,nailsLabel:"Every 2–3 weeks",cut:49,cutLabel:"Full haircut every 7 weeks"},
+ curly:{name:"Curly / Wavy",bath:24,bathLabel:"Every 3–4 weeks",brush:1.5,brushLabel:"Every 1–2 days",nails:17,nailsLabel:"Every 2–3 weeks",cut:49,cutLabel:"Full haircut every 7 weeks"},
+ wire:{name:"Wire / Harsh",bath:49,bathLabel:"Every 7 weeks",brush:3,brushLabel:"2–3× per week",nails:24,nailsLabel:"Every 3–4 weeks",cut:70,cutLabel:"Hand-strip or trim every 10 weeks"},
+ hairless:{name:"Hairless",bath:7,bathLabel:"Weekly",brush:0,brushLabel:"Not needed",nails:17,nailsLabel:"Every 2–3 weeks",cut:0,cutLabel:"Not needed"}
+};
+
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function fmt(d){return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
+
+function generateSchedule(){
+ var coat=COATS[document.getElementById('coat').value];
+ var size=document.getElementById('size').value;
+ var act=document.getElementById('activity').value;
+ var lastBathVal=document.getElementById('lastBath').value;
+ var today=new Date(); today.setHours(0,0,0,0);
+
+ var bathDays=coat.bath, nailDays=coat.nails, brushDays=coat.brush, cutDays=coat.cut;
+ if(act==='active') bathDays=Math.max(7,bathDays-7);
+ if(act==='couch') bathDays=bathDays+7;
+ if(size==='small') nailDays=Math.max(14,nailDays-4);
+ if(size==='large'||size==='xl') nailDays=nailDays+4;
+ var teethDays=(coat.bath===7&&coat.cut===0)||document.getElementById('coat').value==='long'||document.getElementById('coat').value==='curly' ? 1 : 2.5;
+
+ var anchor=today;
+ if(lastBathVal){var lb=new Date(lastBathVal+'T12:00:00'); if(!isNaN(lb)&&lb<=today) anchor=lb;}
+
+ var tasks=[];
+ function pushTask(name,intervalDays,anchorDate,blurb){
+   if(intervalDays<=0) return;
+   var dates=[],d=new Date(anchorDate);
+   while(d<today){d=addDays(d,intervalDays);}
+   while(d<=addDays(today,45)){dates.push(new Date(d));d=addDays(d,intervalDays);}
+   tasks.push({name:name,emoji:emoji,dates:dates,blurb:blurb});
+ }
+ pushTask('Bath 🛁',Math.round(bathDays),anchor,'Use lukewarm water and a dog-specific shampoo.');
+ pushTask('Brush 🪮',brushDays>=2?Math.round(brushDays):0,today,'Brush before bathing to prevent matting.');
+ pushTask('Nail trim ✂️',Math.round(nailDays),today,'Trim slivers; keep styptic powder handy.');
+ pushTask('Haircut ✂️',cutDays,today,'Book the groomer a week ahead.');
+ pushTask('Ear check 👂',7,today,'Look for redness or odor; clean gently if needed.');
+ pushTask('Teeth brushing 🦷',Math.round(teethDays),today,'Use dog toothpaste — never human toothpaste.');
+
+ var rows=tasks.map(function(t){
+   return '<tr><td><strong>'+t.name+'</strong><br><small style="color:#5b6b77">'+t.blurb+'</small></td>'+
+   '<td>'+t.dates.map(function(d){return fmt(d);}).join('<br>')+'</td></tr>';
+ }).join('');
+
+ var html='<h3>Your '+coat.name+' Coat Schedule</h3>'+
+ '<p>Breed size: <strong>'+size.charAt(0).toUpperCase()+size.slice(1)+'</strong> · Lifestyle: <strong>'+act.charAt(0).toUpperCase()+act.slice(1)+'</strong></p>'+
+ '<table class="sched"><tr><th>Task</th><th>Upcoming dates (next 45 days)</th></tr>'+rows+'</table>'+
+ '<p><small>🪮 Brushing is a <strong>daily or near-daily habit</strong> for most coats — add it to your routine rather than the calendar.</small></p>'+
+ '<button class="btn ghost" onclick="window.print()">🖨️ Print My Schedule</button>';
+
+ document.getElementById('result').innerHTML=html;
+ document.getElementById('result').style.display='block';
+ document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>

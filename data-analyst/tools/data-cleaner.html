@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Data Cleaner — Trim, Dedupe & Fix Messy Data Online</title>
+<meta name="description" content="Clean messy text data in seconds: trim spaces, remove duplicates, fix casing, drop empty lines. Export clean CSV. Free, no signup.">
+<link rel="canonical" href="https://datatools.surge.sh/tools/data-cleaner.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Data Cleaner","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">📊 Data<span>Analyst</span>Tools</a>
+    <nav class="links">
+      <a href="csv-analyzer.html">CSV Analyzer</a>
+      <a href="chart-maker.html">Chart Maker</a>
+      <a href="stats-calculator.html">Stats Calc</a>
+      <a href="data-cleaner.html">Data Cleaner</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="badge">FREE · NO SIGNUP · CSV EXPORT</div>
+  <h1>Data Cleaner</h1>
+  <p>Paste messy text data (one value per line), choose cleaning rules, and download a tidy CSV file.</p>
+
+  <div class="panel">
+    <label for="raw">Messy data — one value per line</label>
+    <textarea id="raw" placeholder="  alice smith&#10;BOB JONES&#10;alice smith&#10;&#10;  carol white  ">  alice smith
+BOB JONES
+alice smith
+
+  carol white  </textarea>
+    <div class="checks">
+      <label><input type="checkbox" id="opt-trim" checked> Trim leading/trailing spaces</label>
+      <label><input type="checkbox" id="opt-empty" checked> Remove empty lines</label>
+      <label><input type="checkbox" id="opt-dedupe" checked> Remove duplicate lines</label>
+      <label><input type="checkbox" id="opt-casededupe" checked> Treat duplicates case-insensitively</label>
+      <label for="opt-case">Fix casing:</label>
+      <select id="opt-case" style="max-width:280px;">
+        <option value="none">Keep original</option>
+        <option value="title">Title Case (Alice Smith)</option>
+        <option value="lower">lowercase</option>
+        <option value="upper">UPPERCASE</option>
+        <option value="sentence">Sentence case</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;">
+      <button class="btn" id="clean">Clean Data</button>
+      <button class="btn btn-outline" id="dl" disabled>Download Cleaned CSV</button>
+    </div>
+  </div>
+
+  <div id="out" style="display:none;" class="panel">
+    <h2>Cleaned Result</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="v" id="c-in">0</div><div class="l">Input lines</div></div>
+      <div class="stat"><div class="v" id="c-out">0</div><div class="l">Clean lines</div></div>
+      <div class="stat"><div class="v" id="c-removed">0</div><div class="l">Removed</div></div>
+    </div>
+    <label for="result">Preview</label>
+    <textarea id="result" readonly></textarea>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <section class="section">
+    <h2>Why clean your data first?</h2>
+    <p>Dirty data is the #1 cause of wrong analysis. Extra spaces break lookups, duplicates inflate counts, and inconsistent casing splits one category into many. Clean first — analyze second.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="container">
+    <div>📊 DataAnalystTools — free tools for data people.</div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © <span id="year"></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/data-cleaner.js"></script>
+</body>
+</html>

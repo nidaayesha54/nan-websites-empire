@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does Your Brand Need a Mascot? — Free 2-Minute Quiz</title>
+<meta name="description" content="Take this free 6-question quiz to find out whether your brand needs a mascot logo — and which character style (animal, robot, human, monster) fits you best.">
+<link rel="canonical" href="https://nan-mascotlogo.surge.sh/tools/mascot-quiz.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="logo" href="../index.html"><span class="m">Mascot</span><span class="l">Logo</span>Maker</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="links">
+      <a href="../index.html">Home</a>
+      <a href="mascot-picker.html">Mascot Picker</a>
+      <a href="mascot-quiz.html">Mascot Quiz</a>
+      <a href="mascot-name-generator.html">Name Generator</a>
+      <a href="../guides/mascot-logo-design-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Mascot Quiz</div>
+  <h1>Does Your Brand Need a Mascot? Take the Quiz</h1>
+  <p style="color:var(--muted);max-width:720px">Answer 6 quick questions about your audience, tone and goals. You'll get a personalized verdict — plus the character style that fits your brand best.</p>
+
+  <div class="tool-wrap" style="grid-template-columns:1fr">
+    <div class="panel" id="quizBox">
+      <div id="qArea"></div>
+      <div id="progress" style="color:var(--muted);font-size:.9rem;margin-top:10px"></div>
+    </div>
+    <div class="preview-box" id="resultBox" style="display:none">
+      <h2>Your Result</h2>
+      <div id="resultText" style="text-align:left"></div>
+      <div style="margin-top:16px">
+        <a class="btn" href="mascot-picker.html">🎨 Build It in the Mascot Picker</a>
+        <a class="btn alt" href="mascot-name-generator.html" style="margin-left:8px">✨ Name It</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <div class="cols">
+      <div><a class="logo" href="../index.html" style="color:#fff"><span class="m">Mascot</span><span class="l">Logo</span>Maker</a></div>
+      <div>
+        <a href="mascot-picker.html">Mascot Picker</a> ·
+        <a href="mascot-quiz.html">Quiz</a> ·
+        <a href="mascot-name-generator.html">Name Generator</a> ·
+        <a href="../guides/mascot-logo-design-2026.html">Guides</a> ·
+        <a href="../blog/index.html">Blog</a>
+      </div>
+    </div>
+    <div class="copyright">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  // scores: animal, robot, human, monster, none
+  var QUESTIONS = [
+    { q: '1. Who is your main audience?', opts: [
+      ['Families & kids', { animal: 3, monster: 1 }],
+      ['Tech-savvy adults', { robot: 3, human: 1 }],
+      ['Gamers & fandoms', { monster: 3, robot: 1 }],
+      ['Corporate clients', { none: 3, human: 1 }]
+    ]},
+    { q: '2. How would you describe your brand personality?', opts: [
+      ['Friendly & warm', { animal: 3, human: 1 }],
+      ['Innovative & futuristic', { robot: 3, monster: 1 }],
+      ['Bold & edgy', { monster: 3, animal: 1 }],
+      ['Serious & trustworthy', { none: 3, human: 1 }]
+    ]},
+    { q: '3. Where will the logo appear most?', opts: [
+      ['Social media & packaging', { animal: 2, monster: 2 }],
+      ['App icons & websites', { robot: 3, human: 1 }],
+      ['Merch & stickers', { monster: 2, animal: 2 }],
+      ['Legal docs & formal reports', { none: 3 }]
+    ]},
+    { q: '4. Do you want customers to feel an emotional connection?', opts: [
+      ['Yes — like a friend', { animal: 3, human: 2 }],
+      ['Yes — like a hero', { monster: 2, human: 2 }],
+      ['A little is fine', { robot: 2, animal: 1 }],
+      ['No — keep it professional', { none: 3 }]
+    ]},
+    { q: '5. How crowded is your market?', opts: [
+      ['Very crowded — I need to stand out', { monster: 2, animal: 2, robot: 1 }],
+      ['Moderately competitive', { human: 2, robot: 2 }],
+      ['Niche / little competition', { none: 2, animal: 1 }]
+    ]},
+    { q: '6. Would a character make your content easier (videos, posts, ads)?', opts: [
+      ['Absolutely — instant content star', { animal: 2, monster: 2 }],
+      ['Yes — for explainers & onboarding', { robot: 3, human: 1 }],
+      ['Maybe — a spokesperson feel', { human: 3 }],
+      ['Not really', { none: 3 }]
+    ]}
+  ];
+
+  var VERDICTS = {
+    animal: { emoji: '🦊', title: 'YES — go for an Animal mascot', text: 'Your brand thrives on warmth and emotional connection. An animal mascot makes you instantly approachable and memorable — perfect for social content, packaging and merch.' },
+    robot: { emoji: '🤖', title: 'YES — go for a Robot mascot', text: 'Your brand is modern and tech-forward. A robot mascot signals innovation and works brilliantly in apps, onboarding flows and explainer content.' },
+    human: { emoji: '🧑', title: 'YES — go for a Human mascot', text: 'Your brand needs a personal, relatable face. A human character mascot builds trust and feels like a friendly spokesperson for your business.' },
+    monster: { emoji: '👾', title: 'YES — go for a Monster mascot', text: 'Your brand is bold and needs to stand out in a crowd. A monster mascot is unforgettable — ideal for gaming, snacks, energy and youth brands.' },
+    none: { emoji: '📊', title: 'Probably NOT — skip the mascot for now', text: 'Your brand leans serious and professional. A mascot could undermine trust. Focus on a clean wordmark or abstract mark instead — and revisit the idea if your tone ever loosens up.' }
+  };
+
+  var idx = 0;
+  var scores = { animal: 0, robot: 0, human: 0, monster: 0, none: 0 };
+  var qArea = document.getElementById('qArea');
+  var progress = document.getElementById('progress');
+
+  function showQuestion() {
+    var q = QUESTIONS[idx];
+    progress.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
+    var html = '<div class="quiz-q"><p>' + q.q + '</p><div class="opt-row">';
+    q.opts.forEach(function (o, i) {
+      html += '<button class="opt" data-i="' + i + '">' + o[0] + '</button>';
+    });
+    qArea.innerHTML = html + '</div></div>';
+  }
+
+  function showResult() {
+    var best = 'none', bestScore = -1;
+    Object.keys(scores).forEach(function (k) {
+      if (scores[k] > bestScore) { bestScore = scores[k]; best = k; }
+    });
+    var v = VERDICTS[best];
+    document.getElementById('quizBox').style.display = 'none';
+    var rb = document.getElementById('resultBox');
+    rb.style.display = 'block';
+    document.getElementById('resultText').innerHTML =
+      '<div style="font-size:3rem">' + v.emoji + '</div><h3>' + v.title + '</h3><p>' + v.text + '</p>' +
+      (best !== 'none'
+        ? '<p>Next step: <a href="mascot-picker.html">design your ' + best + ' mascot logo free</a> or <a href="mascot-name-generator.html">generate a name for it</a>.</p>'
+        : '<p>Still curious? Read <a href="../guides/best-mascot-logos.html">what makes mascot logos work</a> — it may change your mind.</p>');
+    rb.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  qArea.addEventListener('click', function (ev) {
+    var btn = ev.target.closest('.opt');
+    if (!btn) return;
+    var pts = QUESTIONS[idx].opts[parseInt(btn.dataset.i, 10)][1];
+    Object.keys(pts).forEach(function (k) { scores[k] += pts[k]; });
+    idx++;
+    if (idx < QUESTIONS.length) { showQuestion(); } else { showResult(); }
+  });
+
+  showQuestion();
+})();
+</script>
+</body>
+</html>

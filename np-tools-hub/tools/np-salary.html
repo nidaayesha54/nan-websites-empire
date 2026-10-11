@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NP Salary Calculator by State & Specialty 2026 | NPToolsHub</title>
+<meta name="description" content="Estimate nurse practitioner salary by U.S. state, specialty, and experience. Interactive 2026 NP salary calculator based on BLS wage data.">
+<link rel="canonical" href="https://nan-nptools.surge.sh/tools/np-salary.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../"><span class="plus">+</span> NPToolsHub</a>
+<button class="menu-btn" aria-label="Menu" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+<nav class="main">
+<a href="np-salary.html">Salary Calculator</a>
+<a href="np-programs.html">Program Comparison</a>
+<a href="np-roi.html">ROI Calculator</a>
+<a href="../guides/how-to-become-np-2026.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<main class="wrap">
+<p class="breadcrumb"><a href="../">Home</a> › Tools › NP Salary Calculator</p>
+<h1>NP Salary Calculator — State, Specialty & Experience</h1>
+<p>Pick your state, NP specialty, and years of experience to get an estimated salary range for 2026. Estimates are built from U.S. Bureau of Labor Statistics wage data for nurse practitioners (OES 29-1171), adjusted upward for inflation and specialty differentials.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="tool-box">
+<div class="form-grid">
+<div class="field"><label for="state">State</label><select id="state"></select></div>
+<div class="field"><label for="spec">NP Specialty</label>
+<select id="spec">
+<option value="1.00">Family Nurse Practitioner (FNP)</option>
+<option value="1.05">Adult-Gerontology Acute Care (AGACNP)</option>
+<option value="1.13">Psychiatric-Mental Health (PMHNP)</option>
+<option value="1.10">Neonatal (NNP)</option>
+<option value="0.97">Pediatric Primary Care (PNP)</option>
+<option value="0.98">Women's Health (WHNP)</option>
+<option value="0.98">Adult-Gerontology Primary Care (AGPCNP)</option>
+<option value="1.08">Emergency / Trauma NP</option>
+</select></div>
+<div class="field"><label for="exp">Years of NP Experience</label>
+<select id="exp">
+<option value="0.92">0–2 years (entry)</option>
+<option value="1.00" selected>3–5 years</option>
+<option value="1.07">6–10 years</option>
+<option value="1.13">10+ years</option>
+</select></div>
+</div>
+<p style="margin-top:1rem"><button class="btn teal" id="calc">Calculate Salary</button></p>
+<div class="result" id="result"></div>
+</div>
+
+<h2>How the estimate works</h2>
+<p>Each state has a base mean wage for NPs; specialty and experience multipliers adjust it, and we show a ±8% range to reflect employer and setting differences (hospitals typically pay more than outpatient clinics, and overtime or call pay can add substantially).</p>
+
+<h2>Highest-paying states for NPs</h2>
+<p>California leads by a wide margin — <a href="../guides/np-salary-by-specialty.html">see the full state and specialty rankings in our 2026 salary guide</a>. Also considering school costs? Run the <a href="np-roi.html">NP school ROI calculator</a>.</p>
+
+<h2>FAQ</h2>
+<details class="faq-item"><summary>How accurate is this NP salary calculator?</summary><p class="answer">It is an estimate based on BLS occupational wage data and published specialty salary surveys. Real offers vary by employer, setting, and negotiation — use it for planning, not as a quote.</p></details>
+<details class="faq-item"><summary>Do acute care NPs make more than family NPs?</summary><p class="answer">Generally yes — acute care and emergency NPs earn about 5–8% more than FNPs on average. Read <a href="../guides/fnp-vs-acnp.html">FNP vs ACNP</a> for the full comparison.</p></details>
+</main>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div class="foot-links"><a href="../">Home</a><a href="np-programs.html">NP Program Comparison</a><a href="np-roi.html">NP ROI Calculator</a><a href="../guides/how-to-become-np-2026.html">How to Become an NP</a><a href="../blog/">Blog</a></div>
+<small>Estimates for planning only. Data: BLS OES 29-1171, adjusted for 2026. © 2026 NPToolsHub.</small>
+</div></footer>
+
+<script>
+(function(){
+  var states = {
+    "Alabama":117000,"Alaska":141000,"Arizona":133000,"Arkansas":120000,
+    "California":162000,"Colorado":134000,"Connecticut":139000,"Delaware":138000,
+    "District of Columbia":137000,"Florida":122000,"Georgia":128000,"Hawaii":143000,
+    "Idaho":131000,"Illinois":133000,"Indiana":125000,"Iowa":124000,
+    "Kansas":128000,"Kentucky":123000,"Louisiana":122000,"Maine":133000,
+    "Maryland":137000,"Massachusetts":139000,"Michigan":131000,"Minnesota":139000,
+    "Mississippi":116000,"Missouri":126000,"Montana":130000,"Nebraska":130000,
+    "Nevada":137000,"New Hampshire":137000,"New Jersey":143000,"New Mexico":133000,
+    "New York":145000,"North Carolina":128000,"North Dakota":132000,"Ohio":128000,
+    "Oklahoma":125000,"Oregon":141000,"Pennsylvania":130000,"Rhode Island":137000,
+    "South Carolina":122000,"South Dakota":126000,"Tennessee":125000,"Texas":129000,
+    "Utah":132000,"Vermont":133000,"Virginia":131000,"Washington":146000,
+    "West Virginia":118000,"Wisconsin":133000,"Wyoming":134000
+  };
+  var stateSel = document.getElementById('state');
+  Object.keys(states).sort().forEach(function(s){
+    var o = document.createElement('option');
+    o.value = states[s]; o.textContent = s;
+    if (s === 'Texas') o.selected = true;
+    stateSel.appendChild(o);
+  });
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+  document.getElementById('calc').addEventListener('click', function(){
+    var base = parseFloat(stateSel.value);
+    var spec = parseFloat(document.getElementById('spec').value);
+    var exp = parseFloat(document.getElementById('exp').value);
+    var est = base * spec * exp;
+    var stateName = stateSel.options[stateSel.selectedIndex].text;
+    var specName = document.getElementById('spec').options[document.getElementById('spec').selectedIndex].text;
+    var expName = document.getElementById('exp').options[document.getElementById('exp').selectedIndex].text;
+    var hourly = est / 2080;
+    var box = document.getElementById('result');
+    box.innerHTML =
+      '<div class="big">' + fmt(est * 0.92) + ' – ' + fmt(est * 1.08) + ' / year</div>' +
+      '<div class="row"><span>Estimated midpoint</span><span>' + fmt(est) + '</span></div>' +
+      '<div class="row"><span>Approx. hourly rate</span><span>' + fmt(hourly) + '/hr</span></div>' +
+      '<div class="row"><span>State</span><span>' + stateName + '</span></div>' +
+      '<div class="row"><span>Specialty</span><span>' + specName + '</span></div>' +
+      '<div class="row"><span>Experience</span><span>' + expName + '</span></div>' +
+      '<p style="margin-top:.8rem;font-size:.88rem;color:var(--muted)">Estimate only, based on BLS NP wage data adjusted for 2026. Actual offers vary by employer, setting, and negotiation.</p>';
+    box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>

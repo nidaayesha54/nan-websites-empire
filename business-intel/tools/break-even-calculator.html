@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break-Even Calculator — Find Your Break-Even Point (Free)</title>
+  <meta name="description" content="Free break-even calculator: enter fixed costs, price and variable cost to find exactly how many units you must sell to break even — in units and revenue.">
+  <link rel="canonical" href="https://businessinteldaily.github.io/tools/break-even-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📊 Business<span>Intel</span>Daily</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../guides/how-to-start-online-business-2026.html">Guides</a>
+      <a href="business-idea-validator.html" class="active">Tools</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-shell">
+  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html">Tools</a> / Break-Even Calculator</div>
+  <h1>Break-Even Calculator</h1>
+  <p class="sub">Fixed costs, price, variable cost — find exactly how many units you must sell before you start profiting.</p>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <form id="be-form">
+    <div class="field">
+      <label>Total fixed costs per month ($)</label>
+      <input type="number" id="fixed" min="0" step="0.01" value="3000" required>
+      <div class="hint">Rent, salaries, subscriptions, insurance — costs that don't change with sales</div>
+    </div>
+    <div class="two-col">
+      <div class="field">
+        <label>Price per unit ($)</label>
+        <input type="number" id="price" min="0.01" step="0.01" value="50" required>
+      </div>
+      <div class="field">
+        <label>Variable cost per unit ($)</label>
+        <input type="number" id="variable" min="0" step="0.01" value="20" required>
+        <div class="hint">Materials, shipping, per-sale fees</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Expected units sold per month (optional)</label>
+      <input type="number" id="expected" min="0" step="1" value="150">
+      <div class="hint">To see your projected profit above break-even</div>
+    </div>
+    <button type="submit" class="btn btn-gold">Calculate Break-Even</button>
+  </form>
+
+  <div class="result" id="result">
+    <h3>Your Break-Even Point</h3>
+    <table class="data">
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>Contribution margin per unit</td><td id="r-margin">–</td></tr>
+      <tr><td><strong>Break-even units / month</strong></td><td id="r-units" style="font-size:1.3rem;font-weight:800;color:#0e7c5b">–</td></tr>
+      <tr><td><strong>Break-even revenue / month</strong></td><td id="r-revenue" style="font-size:1.3rem;font-weight:800;color:#0e7c5b">–</td></tr>
+      <tr><td>Contribution margin ratio</td><td id="r-ratio">–</td></tr>
+      <tr><td>Projected monthly profit</td><td id="r-profit">–</td></tr>
+    </table>
+    <div class="verdict" id="r-verdict"></div>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <h2 style="margin-top:28px;font-size:1.3rem">How break-even works</h2>
+  <p><strong>Break-even units</strong> = Fixed Costs ÷ (Price − Variable Cost). The (Price − Variable Cost) part is your <strong>contribution margin</strong> — what each sale contributes toward covering fixed costs. <strong>Break-even revenue</strong> = Break-even units × Price.</p>
+  <p><strong>Levers:</strong> raise price, cut variable costs, or reduce fixed costs — each lowers your break-even point. If your realistic sales are far below break-even, the business model needs rework before you launch.</p>
+
+  <p style="margin-top:20px"><strong>Related:</strong> <a href="roi-calculator.html">ROI Calculator →</a> · <a href="../guides/how-to-start-online-business-2026.html">Start a Business Guide →</a></p>
+</div>
+
+<script>
+document.getElementById('be-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var fixed = parseFloat(document.getElementById('fixed').value);
+  var price = parseFloat(document.getElementById('price').value);
+  var variable = parseFloat(document.getElementById('variable').value);
+  var expected = parseFloat(document.getElementById('expected').value) || 0;
+  if (!(fixed >= 0) || !(price > 0) || !(variable >= 0)) return;
+  var margin = price - variable;
+  function money(n){ return '$' + n.toLocaleString('en-US',{maximumFractionDigits:2}); }
+  if (margin <= 0){
+    document.getElementById('r-margin').textContent = money(margin);
+    document.getElementById('r-units').textContent = 'Impossible';
+    document.getElementById('r-revenue').textContent = 'Impossible';
+    document.getElementById('r-ratio').textContent = '–';
+    document.getElementById('r-profit').textContent = '–';
+    document.getElementById('r-verdict').textContent = '🔴 Price must be higher than variable cost — every sale currently loses money.';
+  } else {
+    var units = fixed / margin;
+    var revenue = units * price;
+    var ratio = (margin / price) * 100;
+    var profit = (expected * margin) - fixed;
+    document.getElementById('r-margin').textContent = money(margin) + ' per unit';
+    document.getElementById('r-units').textContent = Math.ceil(units).toLocaleString() + ' units/mo';
+    document.getElementById('r-revenue').textContent = money(revenue) + '/mo';
+    document.getElementById('r-ratio').textContent = ratio.toFixed(1) + '%';
+    document.getElementById('r-profit').textContent = money(profit) + '/mo' + (profit < 0 ? ' (below break-even)' : '');
+    var v;
+    if (expected >= units * 1.5) v = '🟢 Comfortable margin — expected sales are 50%+ above break-even.';
+    else if (expected >= units) v = '🟡 Profitable, but tight — small sales dips erase profit. Build a buffer.';
+    else v = '🔴 Expected sales are BELOW break-even. Raise price, cut costs, or rethink the model.';
+    document.getElementById('r-verdict').textContent = v;
+  }
+  document.getElementById('result').classList.add('show');
+});
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Business Intel Daily</h4><p>Daily business intelligence for entrepreneurs in premium markets.</p></div>
+      <div><h4>Guides</h4><p><a href="../guides/how-to-start-online-business-2026.html">Start an online business</a><br><a href="../guides/small-business-marketing-strategies.html">Marketing strategies</a><br><a href="../guides/passive-income-ideas-2026.html">Passive income ideas</a></p></div>
+      <div><h4>Tools</h4><p><a href="business-idea-validator.html">Idea validator</a><br><a href="roi-calculator.html">ROI calculator</a><br><a href="break-even-calculator.html">Break-even calculator</a></p></div>
+    </div>
+    <div class="fine">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 Business Intel Daily. Educational content only — not financial advice.</div>
+  </div>
+</footer>
+</body>
+</html>

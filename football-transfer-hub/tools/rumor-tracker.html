@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transfer Rumor Tracker — Add &amp; Score Football Rumors | FootballTransferHub</title>
+<meta name="description" content="Track football transfer rumors with our free rumor tracker: add rumors, assign a source tier, and get a reliability score. Demo tool — user-generated content, not real news.">
+<link rel="canonical" href="https://nan-footballtransfers.surge.sh/tools/rumor-tracker.html">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="/index.html">⚽ <span>Football</span>TransferHub</a>
+<nav><a href="/index.html">Home</a><a href="/tools/transfer-fee-calculator.html">Fee Calculator</a><a href="/tools/wage-calculator.html">Wage Calculator</a><a href="/guides/how-football-transfers-work.html">Guides</a></nav>
+</div></header>
+<main><section><div class="container">
+<h1>Transfer Rumor Tracker</h1>
+<div class="notice"><strong>⚠️ Demo tool — not real news.</strong> Rumors listed here are added by visitors for fun. Nothing is verified transfer news. Read our guide on <a href="/blog/how-to-spot-reliable-rumor.html">how to spot a reliable transfer rumor</a> and always confirm with official club announcements.</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<form class="tool" id="rumorForm">
+<label for="player">Player name</label>
+<input type="text" id="player" maxlength="60" placeholder="e.g. Alex Striker" required>
+<label for="fromClub">From club</label>
+<input type="text" id="fromClub" maxlength="60" placeholder="e.g. FC Example" required>
+<label for="toClub">To club (rumored)</label>
+<input type="text" id="toClub" maxlength="60" placeholder="e.g. United FC" required>
+<label for="tier">Source tier (1 = most reliable … 5 = least reliable)</label>
+<select id="tier">
+<option value="1">Tier 1 — Top-tier journalists / official sources</option>
+<option value="2">Tier 2 — Reputable national media</option>
+<option value="3">Tier 3 — Decent outlets, some hit rate</option>
+<option value="4">Tier 4 — Aggregators / clickbait risk</option>
+<option value="5">Tier 5 — Random accounts / gossip</option>
+</select>
+<br><br><button class="btn" type="submit">Add Rumor</button>
+</form>
+<h2 style="margin-top:2rem">Tracked <span class="hl">Rumors</span></h2>
+<table id="rumorTable">
+<thead><tr><th>Player</th><th>From → To</th><th>Source Tier</th><th>Reliability</th><th></th></tr></thead>
+<tbody id="rumorBody"><tr><td colspan="5" style="color:var(--muted)">No rumors yet — add the first one above!</td></tr></tbody>
+</table>
+<div class="ad-slot">Advertisement</div>
+</div></section></main>
+<footer class="site"><div class="container">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div>| <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+<script src="/js/main.js"></script>
+<script src="/js/rumor-tracker.js"></script>
+</body>
+</html>

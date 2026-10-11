@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True College Cost Calculator — Net Price After Aid 2026</title>
+  <meta name="description" content="Free college cost estimator: sticker price minus grants and scholarships, with inflation, for public and private schools. See your 4-year total.">
+  <link rel="canonical" href="https://nan-collegetools.surge.sh/tools/college-cost.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the difference between sticker price and net price?","acceptedAnswer":{"@type":"Answer","text":"Sticker price is the published cost of attendance before aid. Net price is what you actually pay after grants and scholarships — often tens of thousands less, especially at private colleges with large endowments."}},
+    {"@type":"Question","name":"How much does a public university cost per year?","acceptedAnswer":{"@type":"Answer","text":"For 2025-26, the average total cost of attendance at a public four-year in-state university is about $25,700 per year; out-of-state averages about $46,000. Private nonprofit averages about $64,500."}},
+    {"@type":"Question","name":"Do college costs rise every year?","acceptedAnswer":{"@type":"Answer","text":"Yes — college costs have historically risen about 3% per year above general inflation. This calculator applies 3% annual inflation to your net cost across the years you enter."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">College<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="529-projector.html">529 Projector</a>
+      <a href="college-cost.html">College Cost</a>
+      <a href="student-loan-payoff.html">Loan Payoff</a>
+      <a href="../guides/how-much-does-college-really-cost.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › True College Cost Estimator</p>
+  <h1>True College Cost Estimator</h1>
+  <p>The brochure price isn't what families pay. Pick a school type (or enter your own sticker price), subtract grants and scholarships, and see the real multi-year total with inflation.</p>
+
+  <div class="calc">
+    <div class="field"><label for="cc-preset">School type preset</label>
+      <select id="cc-preset">
+        <option value="publicIn" selected>Public university — in-state</option>
+        <option value="publicOut">Public university — out-of-state</option>
+        <option value="private">Private nonprofit college</option>
+      </select>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="cc-sticker">Sticker price — cost of attendance ($/year)</label><input type="number" id="cc-sticker" value="25700"></div>
+      <div class="field"><label for="cc-aid">Grants & scholarships ($/year)</label><input type="number" id="cc-aid" value="8000"></div>
+    </div>
+    <div class="field"><label for="cc-years">Years to estimate (1–6)</label><input type="number" id="cc-years" value="4" min="1" max="6"></div>
+    <button class="btn btn-blue" id="cc-calc">Estimate true cost</button>
+  </div>
+
+  <div class="result" id="cc-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout warn">
+    <strong class="label">Don't rule out private colleges</strong>
+    Private schools publish scary sticker prices but often discount 50%+ through institutional grants. A $64,500 sticker can net out below a public university — always compare <em>net</em> prices. Learn more in <a href="../guides/how-much-does-college-really-cost.html">how much college really costs</a>.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the difference between sticker price and net price? <span>+</span></div><div class="faq-a">Sticker price is the published cost before aid. Net price is what you actually pay after grants and scholarships — often tens of thousands less, especially at private colleges with generous aid.</div></div>
+  <div class="faq-item"><div class="faq-q">How much does a public university cost per year? <span>+</span></div><div class="faq-a">For 2025–26, average total cost of attendance is about $25,700/year in-state at a public four-year university, about $46,000 out-of-state, and about $64,500 at a private nonprofit — before aid.</div></div>
+  <div class="faq-item"><div class="faq-q">Do college costs rise every year? <span>+</span></div><div class="faq-a">Historically about 3% per year. This calculator applies 3% annual inflation across the years you estimate, so a 4-year total reflects rising costs, not today's price times four.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

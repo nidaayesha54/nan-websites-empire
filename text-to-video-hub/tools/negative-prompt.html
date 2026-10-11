@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negative Prompt Generator for AI Video — Fix Artifacts & Deformities | TextToVideoHub</title>
+<meta name="description" content="Free negative prompt generator for text-to-video AI: select common artifacts (extra limbs, flickering, watermarks, morphing faces) and get a copy-ready negative prompt for Sora, Runway, Kling, and Veo.">
+<link rel="canonical" href="https://nan-texttovideo.surge.sh/tools/negative-prompt.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/negative-prompt.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🎬</span> TextToVideoHub</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="prompt-generator.html">Prompt Generator</a>
+      <a href="prompt-improver.html">Prompt Improver</a>
+      <a href="negative-prompt.html">Negative Prompts</a>
+      <a href="../guides/how-to-write-ai-video-prompts.html">Guides</a>
+      <a href="../blog/text-to-video-prompt-formulas.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container tool-wrap">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / Tools / Negative Prompt Generator</div>
+      <h1>Negative Prompt Generator</h1>
+      <p class="lead">Check the artifacts you want to avoid and get a ready-to-paste negative prompt for your text-to-video tool.</p>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <div class="btn-row" style="margin-bottom:20px">
+        <button class="btn btn-ghost" type="button" data-preset="all">Select all</button>
+        <button class="btn btn-ghost" type="button" data-preset="anatomy">Anatomy issues</button>
+        <button class="btn btn-ghost" type="button" data-preset="motion">Motion glitches</button>
+        <button class="btn btn-ghost" type="button" data-preset="quality">Low quality</button>
+        <button class="btn btn-ghost" type="button" data-preset="text">Watermarks & text</button>
+      </div>
+
+      <form id="neg-form">
+        <div class="field">
+          <label>Anatomy artifacts</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" value="deformed faces"><span>deformed faces<small>Warped or melted facial features</small></span></label>
+            <label class="check"><input type="checkbox" value="extra limbs"><span>extra limbs<small>Extra arms, legs, or fingers</small></span></label>
+            <label class="check"><input type="checkbox" value="missing fingers"><span>missing fingers<small>Hands are a classic failure point</small></span></label>
+            <label class="check"><input type="checkbox" value="morphed bodies"><span>morphed bodies<small>Limbs or torsos shifting shape</small></span></label>
+            <label class="check"><input type="checkbox" value="unnatural proportions"><span>unnatural proportions<small>Wrong body or object scaling</small></span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Motion artifacts</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" value="flickering"><span>flickering<small>Rapid light/texture shimmer</small></span></label>
+            <label class="check"><input type="checkbox" value="jerky motion"><span>jerky motion<small>Unnatural stuttering movement</small></span></label>
+            <label class="check"><input type="checkbox" value="melting objects"><span>melting objects<small>Props that deform mid-shot</small></span></label>
+            <label class="check"><input type="checkbox" value="warped background"><span>warped background<small>Walls and scenery that bend</small></span></label>
+            <label class="check"><input type="checkbox" value="frame tearing"><span>frame tearing<small>Split or glitched frames</small></span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Quality artifacts</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" value="blurry"><span>blurry<small>Out-of-focus output</small></span></label>
+            <label class="check"><input type="checkbox" value="low resolution"><span>low resolution<small>Soft, detail-poor frames</small></span></label>
+            <label class="check"><input type="checkbox" value="pixelated"><span>pixelated<small>Visible blocky artifacts</small></span></label>
+            <label class="check"><input type="checkbox" value="noisy"><span>noisy<small>Grainy or speckled video</small></span></label>
+            <label class="check"><input type="checkbox" value="overexposed"><span>overexposed<small>Blown-out highlights</small></span></label>
+            <label class="check"><input type="checkbox" value="underexposed"><span>underexposed<small>Crushed dark areas</small></span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Watermarks & text</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" value="watermark"><span>watermark<small>Generator logos burned in</small></span></label>
+            <label class="check"><input type="checkbox" value="logo"><span>logo<small>Random brand marks</small></span></label>
+            <label class="check"><input type="checkbox" value="text artifacts"><span>text artifacts<small>Gibberish signs and labels</small></span></label>
+            <label class="check"><input type="checkbox" value="subtitles"><span>subtitles<small>Unwanted caption bars</small></span></label>
+            <label class="check"><input type="checkbox" value="captions"><span>captions<small>Auto-caption style overlays</small></span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Style issues</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" value="oversaturated"><span>oversaturated<small>Garish, overcooked colors</small></span></label>
+            <label class="check"><input type="checkbox" value="flat lighting"><span>flat lighting<small>No depth or contrast</small></span></label>
+            <label class="check"><input type="checkbox" value="static image look"><span>static image look<small>Barely any real motion</small></span></label>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Generate Negative Prompt</button>
+          <button type="button" class="btn btn-ghost" id="clear-btn">Clear all</button>
+        </div>
+      </form>
+
+      <div class="result-box" id="result-box" style="display:none">
+        <h3>Your negative prompt</h3>
+        <div class="result-text" id="result-text"></div>
+        <div class="btn-row">
+          <button class="btn btn-copy" id="copy-neg" type="button">📋 Copy Negative Prompt</button>
+          <span class="copied-note" id="copied-note"></span>
+        </div>
+        <small>Note: Sora and some tools don't have a dedicated negative-prompt field — paste these as "avoid" phrases inside your main prompt instead.</small>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <h2>What is a negative prompt?</h2>
+      <p>A negative prompt tells the video model what <strong>not</strong> to generate. Tools like Runway, Kling, and Luma accept a separate negative prompt; where a tool doesn't, the same terms usually work appended as "avoid ..." clauses. For the full prompting workflow, start with our <a href="prompt-generator.html">prompt generator</a> or learn the method in <a href="../guides/how-to-write-ai-video-prompts.html">How to Write AI Video Prompts</a>.</p>
+      <p>If you're checking whether a video was AI-generated, paste it into <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a>, which flags these exact artifact patterns.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="prompt-generator.html">Prompt Generator</a>
+      <a href="prompt-improver.html">Prompt Improver</a>
+      <a href="negative-prompt.html">Negative Prompts</a>
+      <a href="../guides/text-to-video-prompts-that-work-2026.html">Guides</a>
+      <a href="../blog/text-to-video-prompt-formulas.html">Blog</a>
+    </div>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+
+</body>
+</html>

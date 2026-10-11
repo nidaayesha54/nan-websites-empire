@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>529 Plan Growth Calculator — Project College Savings</title>
+  <meta name="description" content="Free 529 projector: see your college savings growth with monthly contributions, plus a taxable-account comparison showing the tax advantage.">
+  <link rel="canonical" href="https://nan-collegetools.surge.sh/tools/529-projector.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How does a 529 plan grow?","acceptedAnswer":{"@type":"Answer","text":"Contributions are invested in mutual funds or portfolios you choose. Growth is tax-deferred, and withdrawals for qualified education expenses are federal income-tax-free."}},
+    {"@type":"Question","name":"What happens to unused 529 money?","acceptedAnswer":{"@type":"Answer","text":"You can change the beneficiary to another family member, save it for graduate school, or — up to lifetime limits — roll it into a Roth IRA for the beneficiary. Non-qualified withdrawals face income tax plus a 10% penalty on earnings."}},
+    {"@type":"Question","name":"How much does tax drag cost in a taxable account?","acceptedAnswer":{"@type":"Answer","text":"Taxes on dividends and realized gains typically reduce annual returns by around 1% per year, and you owe capital gains tax on the growth at withdrawal — costs a 529 avoids for education use."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">College<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="529-projector.html">529 Projector</a>
+      <a href="college-cost.html">College Cost</a>
+      <a href="student-loan-payoff.html">Loan Payoff</a>
+      <a href="../guides/529-plan-explained-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › 529 Plan Growth Projector</p>
+  <h1>529 Plan Growth Projector</h1>
+  <p>Enter your current balance, monthly contribution, and years until college. See the projected value — and what the same savings would be worth in a taxable account after taxes.</p>
+
+  <div class="calc">
+    <div class="field-row">
+      <div class="field"><label for="p529-bal">Current 529 balance ($)</label><input type="number" id="p529-bal" value="5000"></div>
+      <div class="field"><label for="p529-pmt">Monthly contribution ($)</label><input type="number" id="p529-pmt" value="300"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="p529-years">Years until college</label><input type="number" id="p529-years" value="10"></div>
+      <div class="field"><label for="p529-ret">Expected annual return (%)</label><input type="number" id="p529-ret" value="7" step="0.5"></div>
+    </div>
+    <button class="btn btn-blue" id="p529-calc">Project growth</button>
+  </div>
+
+  <div class="result" id="p529-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout tip">
+    <strong class="label">Starting early matters most</strong>
+    $300/month for 18 years at 7% grows to about $130,000 — but start 10 years late and the same $300/month reaches only ~$52,000. Read <a href="../guides/529-plan-explained-2026.html">how 529 plans work</a> before you open one.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">How does a 529 plan grow? <span>+</span></div><div class="faq-a">Your contributions are invested in portfolios you choose. Growth is tax-deferred, and withdrawals for qualified education expenses — tuition, room, board, books — are federal income-tax-free.</div></div>
+  <div class="faq-item"><div class="faq-q">What happens to unused 529 money? <span>+</span></div><div class="faq-a">You can change the beneficiary to another family member, hold it for graduate school, or roll up to lifetime limits into a Roth IRA for the beneficiary. Non-qualified withdrawals face income tax plus a 10% penalty on earnings.</div></div>
+  <div class="faq-item"><div class="faq-q">How much does tax drag cost in a taxable account? <span>+</span></div><div class="faq-a">Taxes on dividends and realized gains typically shave about 1% per year off returns, plus capital gains tax at withdrawal. Over 10–18 years that compounds into tens of thousands — the 529's core advantage.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Property ROI Calculator — Cap Rate & Cash Flow</title>
+  <meta name="description" content="Free rental property analyzer: monthly cash flow, cap rate, cash-on-cash return, and 1% rule check. Enter price, rent, and expenses.">
+  <link rel="canonical" href="https://nan-realestatetools.surge.sh/tools/rental-roi.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How do you calculate rental property ROI?","acceptedAnswer":{"@type":"Answer","text":"Divide annual net operating income by the purchase price for cap rate, and annual cash flow by your cash invested for cash-on-cash return. This calculator does both automatically."}},
+    {"@type":"Question","name":"What expenses should I include for a rental?","acceptedAnswer":{"@type":"Answer","text":"Property tax, insurance, maintenance (often 1% of value per year), vacancy (5-8%), and property management (8-10% of rent). Many new investors underestimate maintenance and vacancy."}},
+    {"@type":"Question","name":"What is a good cash-on-cash return?","acceptedAnswer":{"@type":"Answer","text":"Many investors target 8-12% cash-on-cash return. It measures what your actual invested dollars earn each year, after the mortgage payment."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">RealEstate<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="rental-roi.html">Rental ROI</a>
+      <a href="flip-calculator.html">Flip Calculator</a>
+      <a href="rent-vs-buy.html">Rent vs Buy</a>
+      <a href="../guides/rental-property-roi-explained.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Rental Property ROI Analyzer</p>
+  <h1>Rental Property ROI Analyzer</h1>
+  <p>Enter the deal numbers below. The analyzer computes monthly cash flow, cap rate, cash-on-cash return, and checks the 1% rule — instantly.</p>
+
+  <div class="calc">
+    <h2 style="margin-top:0">The deal</h2>
+    <div class="field-row">
+      <div class="field"><label for="rr-price">Purchase price ($)</label><input type="number" id="rr-price" value="250000"></div>
+      <div class="field"><label for="rr-down">Down payment ($)</label><input type="number" id="rr-down" value="50000"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="rr-rate">Mortgage rate (%)</label><input type="number" id="rr-rate" value="7" step="0.125"></div>
+      <div class="field"><label for="rr-term">Loan term (years)</label><input type="number" id="rr-term" value="30"></div>
+    </div>
+    <div class="field"><label for="rr-rent">Monthly rent ($)</label><input type="number" id="rr-rent" value="2200"></div>
+    <h2>Monthly expenses</h2>
+    <div class="field-row">
+      <div class="field"><label for="rr-tax">Property tax ($/year)</label><input type="number" id="rr-tax" value="3000"></div>
+      <div class="field"><label for="rr-ins">Insurance ($/year)</label><input type="number" id="rr-ins" value="1200"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="rr-maint">Maintenance (% of price / year)</label><input type="number" id="rr-maint" value="1" step="0.25"></div>
+      <div class="field"><label for="rr-vac">Vacancy rate (%)</label><input type="number" id="rr-vac" value="5" step="0.5"></div>
+    </div>
+    <div class="field"><label for="rr-mgmt">Property management (% of rent)</label><input type="number" id="rr-mgmt" value="8" step="0.5"></div>
+    <button class="btn btn-amber" id="rr-calc">Analyze this deal</button>
+  </div>
+
+  <div class="result" id="rr-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout warn">
+    <strong class="label">Screening tip</strong>
+    Run every deal through <a href="../guides/how-to-analyze-a-rental-deal-2026.html">the 15-minute analysis walkthrough</a> before you fall in love with a listing. The numbers decide — not the photos.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">How do you calculate rental property ROI? <span>+</span></div><div class="faq-a">Divide annual net operating income by the purchase price for the cap rate, and annual cash flow (after the mortgage) by your cash invested for cash-on-cash return. This calculator does both automatically.</div></div>
+  <div class="faq-item"><div class="faq-q">What expenses should I include for a rental? <span>+</span></div><div class="faq-a">Property tax, insurance, maintenance (often budgeted at 1% of the property value per year), vacancy (5–8% of rent), and property management (8–10% of rent). New investors most often underestimate maintenance and vacancy.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a good cash-on-cash return? <span>+</span></div><div class="faq-a">Many investors target 8–12% cash-on-cash. It measures what your actual invested dollars earn each year after the mortgage payment — unlike cap rate, it reflects your financing.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

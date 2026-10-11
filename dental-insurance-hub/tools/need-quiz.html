@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Need Dental Insurance? Free 60-Second Quiz 2026</title>
+<meta name="description" content="Not sure if dental insurance is worth it for you? Answer 6 quick questions about age, dental history and risk factors for a clear recommendation.">
+<link rel="canonical" href="https://nan-dentalins.surge.sh/tools/need-quiz.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<div class="logo">🦷 Dental<span>Insurance</span>Hub</div>
+<nav class="main">
+<a href="../index.html">Home</a>
+<a href="dental-cost-estimator.html">Cost Estimator</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="need-quiz.html">Do I Need It?</a>
+<a href="../guides/dental-insurance-cost-2026.html">Costs 2026</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div></header>
+
+<div class="wrap"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Quiz</div></div>
+
+<section class="section"><div class="wrap">
+<h1>Do I Need Dental Insurance?</h1>
+<p class="sub">Answer 6 quick questions — get an honest recommendation in under a minute.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<div id="quiz">
+<div class="q" data-q="1">
+<p><strong>1. How old are you?</strong></p>
+<label><input type="radio" name="q1" value="0"> Under 30</label><br>
+<label><input type="radio" name="q1" value="2"> 30–50</label><br>
+<label><input type="radio" name="q1" value="4"> Over 50</label>
+</div>
+<div class="q" data-q="2">
+<p><strong>2. When was your last dental checkup?</strong></p>
+<label><input type="radio" name="q2" value="0"> Within the last year</label><br>
+<label><input type="radio" name="q2" value="2"> 1–3 years ago</label><br>
+<label><input type="radio" name="q2" value="4"> 3+ years ago / never</label>
+</div>
+<div class="q" data-q="3">
+<p><strong>3. Have you needed major dental work (crowns, root canals, extractions) in the last 3 years?</strong></p>
+<label><input type="radio" name="q3" value="0"> No</label><br>
+<label><input type="radio" name="q3" value="4"> Yes</label>
+</div>
+<div class="q" data-q="4">
+<p><strong>4. Do any of these apply: smoke, diabetes, gum disease, or grind your teeth?</strong></p>
+<label><input type="radio" name="q4" value="0"> None</label><br>
+<label><input type="radio" name="q4" value="3"> One of them</label><br>
+<label><input type="radio" name="q4" value="5"> Two or more</label>
+</div>
+<div class="q" data-q="5">
+<p><strong>5. Does your employer offer dental benefits?</strong></p>
+<label><input type="radio" name="q5" value="0"> Yes, subsidized</label><br>
+<label><input type="radio" name="q5" value="2"> Yes, but I pay full cost</label><br>
+<label><input type="radio" name="q5" value="3"> No</label>
+</div>
+<div class="q" data-q="6">
+<p><strong>6. If a surprise $1,200 dental bill arrived tomorrow, could you pay it comfortably?</strong></p>
+<label><input type="radio" name="q6" value="0"> Yes, easily</label><br>
+<label><input type="radio" name="q6" value="3"> It would hurt</label>
+</div>
+<button class="calc" onclick="grade()">Get My Recommendation</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+
+<div class="disclaimer">Estimates only, not financial advice. This quiz gives a general recommendation — your dentist and plan documents have the final word.</div>
+
+<p style="margin-top:24px">Next step: <a href="plan-comparator.html">compare plan costs</a> or read <a href="../guides/is-dental-insurance-worth-it.html">Is Dental Insurance Worth It?</a></p>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div><span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+
+<script>
+function grade(){
+  var total = 0, answered = 0;
+  for (var i = 1; i <= 6; i++){
+    var sel = document.querySelector('input[name="q' + i + '"]:checked');
+    if (sel){ total += parseInt(sel.value, 10); answered++; }
+  }
+  var el = document.getElementById('result');
+  el.style.display = 'block';
+  if (answered < 6){
+    el.innerHTML = '<p>Please answer all 6 questions to get your recommendation.</p>';
+    return;
+  }
+  var verdict, detail;
+  if (total <= 5){
+    verdict = '🟢 Probably optional for you';
+    detail = 'You\'re low-risk right now: younger, recent checkups, no major work history. A basic plan mainly for cheap cleanings may not pay off — but keep up preventive visits. If your employer subsidizes a plan, it\'s usually still worth taking.';
+  } else if (total <= 12){
+    verdict = '🟡 Dental insurance likely worth it';
+    detail = 'You have moderate risk factors. A mid-tier plan ($30–$50/month) with a $1,500+ annual maximum will typically pay for itself through preventive care plus one basic or major procedure. Compare your options with the Plan Comparator.';
+  } else {
+    verdict = '🔴 Get dental insurance — high priority';
+    detail = 'Your risk profile suggests meaningful dental costs ahead. Prioritize a plan with a high annual maximum ($2,000+), low waiting periods for major work, and in-network dentists. Even at $50–$60/month, one crown or root canal makes it worthwhile.';
+  }
+  el.innerHTML = '<h3>Your result: ' + verdict + '</h3><p>' + detail + '</p>' +
+    '<p><a href="plan-comparator.html">Compare plans →</a> &nbsp;|&nbsp; <a href="../guides/is-dental-insurance-worth-it.html">Read the full worth-it analysis →</a></p>';
+}
+</script>
+</body>
+</html>

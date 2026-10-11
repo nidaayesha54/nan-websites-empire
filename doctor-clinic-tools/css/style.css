@@ -1,0 +1,110 @@
+/* DoctorClinicHub — clean medical theme */
+:root{
+  --bg:#f7fafc; --card:#ffffff; --ink:#1a2b3c; --muted:#5b7186;
+  --teal:#0e7c86; --teal-dark:#0a5f66; --green:#16a34a; --red:#dc2626;
+  --amber:#d97706; --line:#e2e8f0; --radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-size:1.35rem;font-weight:800;color:var(--teal-dark)}
+.logo span{color:var(--teal)}
+.main-nav{display:flex;gap:22px}
+.main-nav a{color:var(--ink);font-weight:600}
+.main-nav a:hover{color:var(--teal)}
+
+/* Disclaimer banner */
+.disclaimer{background:#fff7ed;border-bottom:1px solid #fed7aa;color:#9a3412;font-size:.85rem}
+.disclaimer .container{padding:8px 20px}
+.disclaimer strong{color:#7c2d12}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0e7c86 0%,#0a5f66 100%);color:#fff;padding:56px 0;text-align:center}
+.hero h1{font-size:2.4rem;margin-bottom:12px;line-height:1.25}
+.hero p{font-size:1.1rem;opacity:.92;max-width:720px;margin:0 auto 26px}
+.btn{display:inline-block;background:#fff;color:var(--teal-dark);padding:12px 26px;border-radius:8px;font-weight:700;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{text-decoration:none;background:#e6f7f9}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-dark)}
+
+/* Tool cards */
+.section{padding:48px 0}
+.section h2{font-size:1.8rem;margin-bottom:8px;text-align:center}
+.section .sub{text-align:center;color:var(--muted);margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(14,124,134,.12)}
+.card .icon{font-size:2rem;margin-bottom:10px}
+.card h3{margin-bottom:8px;font-size:1.15rem}
+.card h3 a{color:var(--ink)}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+
+/* Ad slot */
+.ad-slot{text-align:center;margin:34px 0;min-height:60px}
+
+/* Tool page layout */
+.tool-wrap{max-width:760px;margin:0 auto;padding:40px 20px}
+.tool-wrap h1{font-size:2rem;margin-bottom:6px}
+.tool-wrap .lede{color:var(--muted);margin-bottom:24px}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:22px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;margin-bottom:6px}
+.form-group input,.form-group select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-size:1rem}
+.form-group input:focus,.form-group select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.result-card{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:var(--radius);padding:24px;display:none}
+.result-card.show{display:block}
+.result-card h3{margin-bottom:12px;color:#065f46}
+.big-num{font-size:2rem;font-weight:800;color:var(--teal-dark)}
+.stat-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line)}
+.stat-row:last-child{border-bottom:none}
+.note{font-size:.88rem;color:var(--muted);margin-top:14px}
+.warn-box{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:14px;margin:18px 0;color:#991b1b;font-size:.95rem}
+.info-box{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px;margin:18px 0;color:#1e40af;font-size:.95rem}
+
+/* Quiz */
+.quiz-option{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;cursor:pointer;font-size:1rem;font-weight:600;color:var(--ink)}
+.quiz-option:hover{border-color:var(--teal);background:#f0fdfa}
+
+/* Article */
+.article{max-width:780px;margin:0 auto;padding:40px 20px;background:#fff}
+.article h1{font-size:2.1rem;margin-bottom:10px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.article h2{font-size:1.45rem;margin:30px 0 12px;color:var(--teal-dark)}
+.article h3{font-size:1.15rem;margin:22px 0 8px}
+.article p{margin-bottom:14px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{margin-bottom:8px}
+.article table{width:100%;border-collapse:collapse;margin:18px 0}
+.article th,.article td{border:1px solid var(--line);padding:10px;text-align:left;font-size:.95rem}
+.article th{background:#f0fdfa}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:#fff}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px;font-size:1rem;font-weight:700;cursor:pointer;color:var(--ink)}
+.faq-a{display:none;padding:0 16px 16px;color:var(--muted)}
+.faq-item.open .faq-a{display:block}
+
+/* Footer */
+.site-footer{background:#0f2b33;color:#cbd5e1;padding:44px 0 26px;margin-top:40px}
+.site-footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;margin-bottom:26px}
+.site-footer h4{color:#fff;margin-bottom:12px;font-size:1rem}
+.site-footer a{color:#93c5fd}
+.site-footer p,.site-footer li{font-size:.9rem}
+.site-footer ul{list-style:none}
+.site-footer li{margin-bottom:8px}
+.footer-bottom{border-top:1px solid #1e3a44;padding-top:18px;font-size:.85rem;color:#94a3b8;text-align:center}
+.footer-bottom a{color:#93c5fd}
+.network-links{margin-top:10px}
+
+@media(max-width:640px){
+  .hero h1{font-size:1.7rem}
+  .main-nav{display:none}
+  .tool-wrap{padding:26px 14px}
+}

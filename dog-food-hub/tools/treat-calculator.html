@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treat Calorie Budget Calculator — The 10% Rule</title>
+<meta name="description" content="How many treats can your dog have? Apply the 10% treat rule with our free calculator — enter weight & treat calories for a safe daily budget.">
+<link rel="canonical" href="https://nan-dogfood.surge.sh/tools/treat-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Dog<span>Food</span>Hub</a>
+    <div class="nav-links">
+      <a href="daily-portion.html">Portion Calculator</a>
+      <a href="food-cost.html">Cost Calculator</a>
+      <a href="treat-calculator.html">Treat Calculator</a>
+      <a href="../guides/how-much-to-feed-dog-2026.html">Feeding Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Treat Calorie Budget Calculator</h1>
+  <p style="text-align:center;color:var(--muted)">Treats should be no more than <strong>10% of daily calories</strong>. Find your dog's safe treat budget in seconds.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="tWeight">Dog's weight</label>
+    <div class="unit-row">
+      <input type="number" id="tWeight" min="1" step="any" placeholder="e.g. 45">
+      <select id="tWeightUnit" aria-label="Weight unit">
+        <option value="lb">lbs</option>
+        <option value="kg">kg</option>
+      </select>
+    </div>
+
+    <label for="tStage">Life stage</label>
+    <select id="tStage">
+      <option value="1.6">Neutered adult</option>
+      <option value="1.8">Intact adult</option>
+      <option value="2.0">Active dog</option>
+      <option value="3.0">Puppy</option>
+      <option value="1.2">Senior / weight loss</option>
+    </select>
+
+    <label for="treatKcal">Calories per treat (kcal) — check the treat label</label>
+    <input type="number" id="treatKcal" min="1" step="any" value="25" placeholder="e.g. 25">
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="calcTreats()">Calculate Treat Budget</button>
+    </div>
+    <p id="treatError" style="color:#b04e1f;font-weight:600"></p>
+
+    <div class="result" id="treatResult" role="status">
+      <div class="big" id="treatBig"></div>
+      <p id="treatDetail"></p>
+      <p id="treatTip"></p>
+    </div>
+  </div>
+
+  <div class="note"><strong>Training tip:</strong> Use tiny training treats (3–5 kcal each) so you can reward often without blowing the budget. Subtract treat calories from meals on heavy-training days.</div>
+
+  <div class="container disclaimer"><strong>Note:</strong> Feeding guidelines are estimates — consult your vet for your dog's specific needs.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="daily-portion.html">Daily Portion Calculator</a> · <a href="food-cost.html">Monthly Food Cost</a> · <a href="../guides/foods-dogs-cannot-eat.html">Foods Dogs Cannot Eat</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="daily-portion.html">Portion Calculator</a> · <a href="food-cost.html">Cost Calculator</a> · <a href="treat-calculator.html">Treat Calculator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+function calcTreats() {
+  var w = DFH.validNumber(DFH.$('tWeight'), DFH.$('treatError'));
+  if (isNaN(w)) return;
+  var kg = DFH.toKg(w, DFH.$('tWeightUnit').value);
+  var stageFactor = parseFloat(DFH.$('tStage').value);
+  var treatKcal = parseFloat(DFH.$('treatKcal').value);
+
+  if (isNaN(treatKcal) || treatKcal <= 0) {
+    DFH.$('treatError').textContent = 'Please enter a valid calorie count per treat.';
+    return;
+  }
+  DFH.$('treatError').textContent = '';
+
+  var der = 70 * Math.pow(kg, 0.75) * stageFactor; // daily kcal
+  var treatBudget = der * 0.10;                    // 10% rule
+  var treatCount = Math.floor(treatBudget / treatKcal);
+
+  DFH.$('treatBig').textContent = DFH.fmt(treatBudget, 0) + ' treat calories / day';
+  DFH.$('treatDetail').textContent = '≈ ' + treatCount + ' treats at ' + DFH.fmt(treatKcal, 0) +
+    ' kcal each (from a ~' + DFH.fmt(der, 0) + ' kcal daily total).';
+  DFH.$('treatTip').textContent = 'Keep treats ≤10% of daily calories so meals stay nutritionally complete.';
+  DFH.$('treatResult').classList.add('show');
+}
+</script>
+</body>
+</html>

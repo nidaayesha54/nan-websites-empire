@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Dubbing Planner — Word Counts & Timing Per Language</title>
+<meta name="description" content="Plan AI video dubbing: enter your script, pick target languages, and get per-language word targets, duration estimates, and lip-sync timing notes.">
+<link rel="canonical" href="https://nan-multivoice.surge.sh/tools/dubbing-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Video Dubbing Planner","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🌍 MultilingualVoiceHub</a>
+<div class="navlinks">
+<a href="../tools/language-voice-tester.html">Voice Tester</a>
+<a href="../tools/dubbing-planner.html">Dubbing Planner</a>
+<a href="../tools/translation-glossary.html">Glossary Builder</a>
+<a href="../tools/voice-tool-finder.html">Tool Finder Quiz</a>
+<a href="../guides/best-multilingual-ai-voice-tools-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → 🎬 Video Dubbing Planner</div>
+<h1>🎬 Video Dubbing Planner</h1>
+<p style="color:var(--muted)">Translations change your timing: Spanish runs ~20% longer than English, Japanese shorter. Enter your script once and get word targets and timing notes for every language you dub into.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+
+<label for="dp-script">Your English source script (paste to auto-count words)</label>
+<textarea id="dp-script" placeholder="Paste your video script here…"></textarea>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px">
+<div><label for="dp-words">Or enter word count manually</label><input id="dp-words" type="number" min="10" value="1500" style="margin-top:0"></div>
+<div><label for="dp-duration">Target video duration (minutes)</label><input id="dp-duration" type="number" min="1" value="10" style="margin-top:0"></div>
+<div><label for="dp-pace">Delivery pace</label><select id="dp-pace" style="margin-top:0"><option value="130">Slow / documentary (130 wpm)</option><option value="150" selected>Conversational (150 wpm)</option><option value="170">Fast / energetic (170 wpm)</option></select></div>
+</div>
+<label>Target languages</label>
+<div class="checkbox-grid" id="dp-langs"></div>
+<div style="margin-top:14px"><button class="btn-sm" id="dp-go">Calculate dubbing plan →</button></div>
+<div id="dp-result" class="result" style="display:none"></div>
+<div class="warn" style="margin-top:14px">Dubbing timing is an estimate: word-expansion factors are averages. Always do a test voiceover pass on one scene before generating a full 30-minute dub. And remember platform disclosure rules — see our <a href="../guides/how-to-dub-videos-with-ai.html">dubbing guide</a>.</div>
+
+</div>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free multilingual AI voice tools for creators</p>
+</footer>
+<script src="../js/dubbing-planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly School Lunch Planner with Allergy Toggle | LunchPlan</title>
+<meta name="description" content="Plan 5 days of school lunches in minutes. 30+ kid-approved meal ideas, one-tap nut-free allergy filter, and an automatic grocery list. Free, no signup.">
+<link rel="canonical" href="https://lunchplan.surge.sh/tools/weekly-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"LunchPlan Weekly Planner","applicationCategory":"LifestyleApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Interactive 5-day school lunch planner with nut-free allergy toggle and auto grocery list."}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🍱 Lunch<span>Plan</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="weekly-planner.html">Planner</a><a href="grocery-list.html">Grocery List</a><a href="../guides/healthy-lunch-ideas.html">Ideas</a></nav>
+</div></header>
+
+<div class="wrap">
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>Advertisement</div>
+<h1 style="margin-top:10px">Weekly School Lunch Planner</h1>
+<p style="color:var(--muted)">Tap a day, pick a lunch. Your grocery list builds itself. <strong id="planCount">0 of 5 days planned</strong></p>
+
+<div class="toggle-row">
+<div class="switch" id="nutFreeToggle" role="switch" aria-checked="false" tabindex="0" aria-label="Nut-free school toggle"></div>
+<div><strong>🥜 Nut-free school?</strong><br><span style="color:var(--muted);font-size:.9rem">Turn on to hide every meal containing nuts.</span></div>
+</div>
+
+<div class="toolbar">
+<button class="btn green" id="surpriseMe">🎲 Surprise Me — Random Week</button>
+<a class="btn" id="goGrocery" href="grocery-list.html" style="display:none">🛒 See My Grocery List</a>
+<button class="btn ghost" id="clearWeek">Clear Week</button>
+</div>
+
+<div class="week-grid" id="weekGrid"></div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>Advertisement</div>
+
+<h2 style="margin:30px 0 14px">Planner FAQ</h2>
+<div class="faq">
+<div class="faq-item"><button class="faq-q">Are the meal ideas healthy? <span>+</span></button><div class="faq-a">Every idea balances protein, grains, and produce, with prep times from 5 to 20 minutes. Pair any main with fruit and a veggie side for a complete lunch.</div></div>
+<div class="faq-item"><button class="faq-q">What counts as nut-free? <span>+</span></button><div class="faq-a">Meals marked "Nut-free" contain no peanuts, tree nuts, or nut butters. Always double-check packaged ingredients (like granola) for your child's specific allergy.</div></div>
+<div class="faq-item"><button class="faq-q">Can I print my week? <span>+</span></button><div class="faq-a">Yes — use your browser's print function on this page, or print the grocery list page for shopping day.</div></div>
+</div>
+</div>
+
+<div class="modal" id="pickerModal"><div class="modal-box">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+<h3 id="pickerTitle" style="margin:0">Pick a lunch</h3>
+<button class="btn ghost" id="pickerClose" style="padding:6px 14px">✕</button>
+</div>
+<input id="mealSearch" placeholder="Search meals (try 'pasta' or 'bento')…" style="width:100%;padding:12px;border:2px solid var(--line);border-radius:10px;margin-bottom:14px;font-size:1rem">
+<div id="mealList"></div>
+</div></div>
+
+<footer><div class="wrap">
+<div><a class="brand" href="../index.html" style="color:#fff">🍱 Lunch<span style="color:var(--orange)">Plan</span></a><br><small>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></small></div>
+<div><a href="../index.html">Home</a> &nbsp;·&nbsp; <a href="grocery-list.html">Grocery List</a> &nbsp;·&nbsp; <a href="../guides/lunch-allergy-guide.html">Allergy Guide</a></div>
+</div></footer>
+<script src="../js/meals.js"></script>
+<script src="../js/planner.js"></script>
+</body>
+</html>

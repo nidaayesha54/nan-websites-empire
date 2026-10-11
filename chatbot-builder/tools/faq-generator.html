@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free FAQ Generator — Turn Any Text Into Q&amp;A Pairs</title>
+<meta name="description" content="Paste any text and automatically extract question-and-answer pairs. Edit, copy, or export your FAQs as JSON — free, no signup.">
+<link rel="canonical" href="https://nan-chatbotbuilder.surge.sh/tools/faq-generator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FAQ Generator","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Extract Q&A pairs from pasted text automatically."}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html">Chatbot<span>Builder</span></a>
+<nav class="nav-links">
+<a href="rule-bot.html">Bot Builder</a>
+<a href="faq-generator.html">FAQ Generator</a>
+<a href="chat-demo.html">Live Demos</a>
+<a href="../guides/build-chatbot-free-2026.html">Guides</a>
+</nav>
+</div></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → FAQ Generator</div>
+<h1>Free FAQ Generator</h1>
+<p>Paste any text — a help page, a policy document, an email — and this tool pulls out the questions and their answers automatically. Edit anything, then export.</p>
+
+<div class="adslot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<label for="sourcetext">Paste your text</label>
+<textarea id="sourcetext" rows="8" placeholder="Paste text containing questions and answers..."></textarea>
+<div style="margin-top:12px">
+<button class="btn btn-primary" id="genfaq" type="button">Generate FAQs</button>
+<button class="btn" id="sample" type="button" style="background:#e8f1ff;color:#0f4fc0;margin-left:8px">Load Sample Text</button>
+</div>
+
+<h2>Extracted FAQs</h2>
+<div id="faq-results"><p>Your generated FAQs will appear here.</p></div>
+<div id="exportbar" style="display:none;margin-top:14px">
+<button class="btn btn-primary" id="exportjson" type="button">Download JSON</button>
+<button class="btn" id="copyall" type="button" style="background:#e8f1ff;color:#0f4fc0;margin-left:8px">Copy All</button>
+</div>
+
+<div class="adslot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>How It Works</h2>
+<ul>
+<li><strong>Question detection:</strong> finds sentences ending in "?" plus statements starting with What, How, Why, Can, Is, and similar question words.</li>
+<li><strong>Answer pairing:</strong> the 1–2 sentences after each question become its answer.</li>
+<li><strong>Fully editable:</strong> every question and answer can be fixed up before export.</li>
+<li><strong>Bot-ready:</strong> use the exported pairs as rules in the <a href="rule-bot.html">chatbot builder</a>.</li>
+</ul>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © <span id="year">2026</span> ChatbotBuilder</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/faq-generator.js"></script>
+</body>
+</html>

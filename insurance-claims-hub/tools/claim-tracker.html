@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Insurance Claim Tracker — Log, Timeline & Follow-up Reminders</title>
+<meta name="description" content="Track your insurance claims for free: log claim details, see a visual timeline, and get follow-up reminders. Data stays in your browser.">
+<link rel="canonical" href="https://nan-insuranceclaims.surge.sh/tools/claim-tracker.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Insurance Claim Tracker","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">Insurance Claims Hub <small>· free tools</small></a>
+<nav><a href="../index.html">Home</a><a href="appeal-letter.html">Appeal Letter</a><a href="claim-tracker.html">Claim Tracker</a><a href="eob-explainer.html">EOB Decoder</a><a href="../guides/appeal-denial-2026.html">Guides</a></nav>
+</div></header>
+
+<div class="container">
+<h1>Insurance Claim Status Tracker</h1>
+<p>Log each claim once and keep a clean timeline. Your data is stored only in <strong>your browser</strong> (localStorage) — nothing is uploaded anywhere.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<h2>Add a claim</h2>
+<label for="cClaim">Claim number</label><input type="text" id="cClaim" placeholder="CLM-789012">
+<label for="cIns">Insurer</label><input type="text" id="cIns" placeholder="Acme Health">
+<label for="cProv">Provider</label><input type="text" id="cProv" placeholder="City Medical Center">
+<label for="cDos">Date of service</label><input type="date" id="cDos">
+<label for="cAmt">Billed amount ($)</label><input type="number" id="cAmt" placeholder="2450">
+<label for="cFiled">Date filed</label><input type="date" id="cFiled">
+<label for="cStatus">Status</label>
+<select id="cStatus"><option>Filed — awaiting decision</option><option>Under review</option><option>Approved</option><option>Denied — appeal pending</option><option>Paid</option></select>
+<label for="cNotes">Notes</label><textarea id="cNotes" placeholder="e.g. Called 10/12, spoke to Maria, said decision by 10/25" style="min-height:70px"></textarea>
+<button class="btn" onclick="addClaim()">Add Claim</button>
+<button class="btn alt" onclick="clearAll()" style="margin-left:8px">Delete All</button>
+</div>
+
+<div class="toolbox">
+<h2>My claims (<span id="cCount">0</span>)</h2>
+<div id="claimList"><p>No claims logged yet. Add your first claim above.</p></div>
+</div>
+
+<div class="toolbox">
+<h2>Follow-up reminders</h2>
+<p>If a claim has been sitting in "Filed" or "Under review" for <strong>more than 30 days</strong>, it's time to call. Flagged claims appear below.</p>
+<div id="reminders"><p>Nothing needs follow-up right now.</p></div>
+</div>
+
+<div class="disclaimer"><strong>Privacy note:</strong> Everything you enter is saved in your own browser's localStorage. Clearing your browser data will erase these records — export important details separately.</div>
+</div>
+
+<footer class="site"><div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/tracker.js"></script>
+</body>
+</html>

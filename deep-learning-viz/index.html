@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepLearnViz — Interactive Neural Network Visualizer (Free)</title>
+<meta name="description" content="See deep learning happen live. Interactive neural network playground, activation function graphs, and CNN convolution demos — all free, no signup, in your browser.">
+<link rel="canonical" href="https://nan-deeplearnviz.surge.sh/">
+<meta property="og:title" content="DeepLearnViz — Interactive Neural Network Visualizer">
+<meta property="og:description" content="Watch neural networks learn. Train a network in your browser, explore activation functions, and see convolutions step by step.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"DeepLearnViz",
+ "url":"https://nan-deeplearnviz.surge.sh/",
+ "description":"Interactive deep learning visualizers: neural network playground, activation functions, CNN explainer."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a neural network visualizer?","acceptedAnswer":{"@type":"Answer","text":"A neural network visualizer draws the network's layers and neurons and shows how data flows through them. DeepLearnViz goes further: you can train a real network on sample data in your browser and watch the decision boundary form as it learns."}},
+{"@type":"Question","name":"Do I need to install anything or sign up?","acceptedAnswer":{"@type":"Answer","text":"No. Every tool on DeepLearnViz runs 100% in your browser with plain JavaScript. No signup, no uploads, no installation."}},
+{"@type":"Question","name":"What is the difference between machine learning and deep learning?","acceptedAnswer":{"@type":"Answer","text":"Machine learning is the broader field of algorithms that learn patterns from data. Deep learning is a subfield that uses multi-layer neural networks, which excel at images, language, and other complex data."}},
+{"@type":"Question","name":"Which activation function should I use?","acceptedAnswer":{"@type":"Answer","text":"ReLU (or its variants) is the default for hidden layers in most modern networks because it trains fast and avoids vanishing gradients. Sigmoid/tanh are still used for outputs and in recurrent networks. Try them all in our activation visualizer."}},
+{"@type":"Question","name":"How does a CNN convolution work?","acceptedAnswer":{"@type":"Answer","text":"A small filter (kernel) slides across the image, computing a weighted sum at each position. This highlights features like edges. Our CNN explainer animates every step of that sliding window."}},
+{"@type":"Question","name":"Is DeepLearnViz really free?","acceptedAnswer":{"@type":"Answer","text":"Yes — every visualizer, guide, and article is free forever, with no account required."}}
+]}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="n1">Deep</span><span class="n2">Learn</span>Viz</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tools/neural-net.html">Neural Net Playground</a>
+      <a href="tools/activation.html">Activation Functions</a>
+      <a href="tools/cnn-explainer.html">CNN Explainer</a>
+      <a href="guides/neural-networks-explained-simply.html">Guides</a>
+      <a href="blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <span class="eyebrow">100% free · no signup · runs in your browser</span>
+  <h1>Watch <span class="grad">Deep Learning</span> Happen Live</h1>
+  <p class="lead">DeepLearnViz turns the black box of AI into glass. Train a real neural network in your browser, play with activation functions, and watch convolutions slide across an image — pixel by pixel.</p>
+  <div>
+    <a class="btn btn-primary" href="tools/neural-net.html">🧠 Open Neural Net Playground</a>
+    <a class="btn btn-ghost" href="guides/neural-networks-explained-simply.html">📖 Learn the basics</a>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section wrap">
+  <h2>Interactive visualizers</h2>
+  <p class="sub">Real math, running live in your browser. No servers, no waiting, no accounts.</p>
+  <div class="grid3">
+    <div class="card">
+      <div class="tag">Most popular</div>
+      <div class="icon">🧠</div>
+      <h3><a href="tools/neural-net.html">Neural Network Playground</a></h3>
+      <p>Build a network layer by layer, train it on real datasets (circle, XOR, blobs), and watch the decision boundary form as loss drops. Includes a forward-pass animation.</p>
+      <a class="btn btn-sm btn-ghost" href="tools/neural-net.html">Launch tool →</a>
+    </div>
+    <div class="card">
+      <div class="icon">📈</div>
+      <h3><a href="tools/activation.html">Activation Function Lab</a></h3>
+      <p>Sigmoid, tanh, ReLU, Leaky ReLU, Swish — graphed live with derivatives. Drag the input slider and see exactly how each function squashes numbers. Softmax demo included.</p>
+      <a class="btn btn-sm btn-ghost" href="tools/activation.html">Launch tool →</a>
+    </div>
+    <div class="card">
+      <div class="icon">🖼️</div>
+      <h3><a href="tools/cnn-explainer.html">CNN Convolution Explainer</a></h3>
+      <p>Upload any image and apply real convolution filters (edge detect, blur, sharpen, emboss). Then step through a sliding-window animation that shows every multiplication.</p>
+      <a class="btn btn-sm btn-ghost" href="tools/cnn-explainer.html">Launch tool →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2>Learn deep learning, visually</h2>
+  <p class="sub">Plain-language guides with zero assumed math background.</p>
+  <div class="grid3">
+    <div class="card">
+      <div class="icon">📘</div>
+      <h3><a href="guides/neural-networks-explained-simply.html">Neural Networks, Explained Simply</a></h3>
+      <p>Neurons, weights, layers, and backpropagation — explained with analogies a 12-year-old could follow.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚖️</div>
+      <h3><a href="guides/deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a></h3>
+      <p>What's the difference, when to use each, and why deep learning exploded after 2012.</p>
+    </div>
+    <div class="card">
+      <div class="icon">✏️</div>
+      <h3><a href="blog/what-is-deep-learning-beginners.html">What Is Deep Learning? (2026 Beginner Guide)</a></h3>
+      <p>Our starter article: where deep learning is used, how it learns, and how to start learning it yourself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section wrap">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q">What is a neural network visualizer?</button><div class="faq-a">A neural network visualizer draws the network's layers and neurons and shows how data flows through them. DeepLearnViz goes further: you can train a real network on sample data in your browser and watch the decision boundary form as it learns.</div></div>
+    <div class="faq-item"><button class="faq-q">Do I need to install anything or sign up?</button><div class="faq-a">No. Every tool on DeepLearnViz runs 100% in your browser with plain JavaScript. No signup, no uploads, no installation.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between machine learning and deep learning?</button><div class="faq-a">Machine learning is the broader field of algorithms that learn patterns from data. Deep learning is a subfield that uses multi-layer neural networks, which excel at images, language, and other complex data.</div></div>
+    <div class="faq-item"><button class="faq-q">Which activation function should I use?</button><div class="faq-a">ReLU (or its variants) is the default for hidden layers in most modern networks because it trains fast and avoids vanishing gradients. Sigmoid/tanh are still used for outputs and in recurrent networks. Try them all in our <a href="tools/activation.html">activation visualizer</a>.</div></div>
+    <div class="faq-item"><button class="faq-q">How does a CNN convolution work?</button><div class="faq-a">A small filter (kernel) slides across the image, computing a weighted sum at each position. This highlights features like edges. Our <a href="tools/cnn-explainer.html">CNN explainer</a> animates every step of that sliding window.</div></div>
+    <div class="faq-item"><button class="faq-q">Is DeepLearnViz really free?</button><div class="faq-a">Yes — every visualizer, guide, and article is free forever, with no account required.</div></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Tools</h4>
+        <a href="tools/neural-net.html">Neural Net Playground</a>
+        <a href="tools/activation.html">Activation Functions</a>
+        <a href="tools/cnn-explainer.html">CNN Explainer</a>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <a href="guides/neural-networks-explained-simply.html">Neural Networks Explained Simply</a>
+        <a href="guides/deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+      <div>
+        <h4>About</h4>
+        <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+      </div>
+    </div>
+    <div class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span data-year>2026</span> DeepLearnViz</div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

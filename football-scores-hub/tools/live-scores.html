@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Live Scores — Live (API) + Daily Snapshot | FootballScoresHub</title>
+<meta name="description" content="Check football live scores. Our live section polls free public APIs; when unavailable we show an honestly labeled daily snapshot — never fake live data.">
+<link rel="canonical" href="https://nan-footballscores.surge.sh/tools/live-scores.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="ball">⚽</span> FootballScoresHub</a>
+    <nav class="main-nav">
+      <a href="live-scores.html">Live Scores</a>
+      <a href="match-schedule.html">Schedule</a>
+      <a href="league-table.html">League Tables</a>
+      <a href="../guides/premier-league-schedule-2026-27.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container prose">
+  <h1>Football Live Scores</h1>
+  <p>Our honesty promise: sections marked <span class="tag live">Live (API)</span> pull from public APIs in real time. Sections marked <span class="tag daily">Updated daily</span> are editorial snapshots — <strong>never presented as live</strong>.</p>
+
+  <h2><span id="api-status" class="tag daily">Checking API…</span> Live Match Feed</h2>
+  <div id="live-results"><div class="alert">Loading live feed…</div></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <h2><span class="tag daily">Updated daily</span> Yesterday's Key Results (Snapshot)</h2>
+  <p class="badge-note">Editorial snapshot, refreshed once per day. Not a live feed.</p>
+  <table class="score">
+    <thead><tr><th>Competition</th><th>Fixture</th><th>Score</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Premier League</td><td>Arsenal vs Chelsea</td><td>2 – 1</td><td>FT</td></tr>
+      <tr><td>La Liga</td><td>Real Madrid vs Sevilla</td><td>3 – 0</td><td>FT</td></tr>
+      <tr><td>Bundesliga</td><td>Bayern Munich vs RB Leipzig</td><td>4 – 2</td><td>FT</td></tr>
+      <tr><td>Serie A</td><td>Inter vs Juventus</td><td>1 – 1</td><td>FT</td></tr>
+      <tr><td>Ligue 1</td><td>PSG vs Marseille</td><td>2 – 0</td><td>FT</td></tr>
+    </tbody>
+  </table>
+
+  <p>Want to plan ahead? Try the <a href="match-schedule.html">match schedule planner</a> or explore the <a href="league-table.html">interactive league tables</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  <p class="badge-note">© <span class="yr">2026</span> FootballScoresHub</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/live-scores.js"></script>
+</body>
+</html>

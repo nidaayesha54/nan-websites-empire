@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Text-to-Video Prompt Generator — Build Better AI Video Prompts | TextToVideoHub</title>
+<meta name="description" content="Free text-to-video prompt generator: pick a subject, style, camera move, mood, and lighting — get an optimized AI video prompt with a negative prompt, ready to copy into Sora, Runway, Kling, or Veo.">
+<link rel="canonical" href="https://nan-texttovideo.surge.sh/tools/prompt-generator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/prompt-generator.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🎬</span> TextToVideoHub</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="prompt-generator.html">Prompt Generator</a>
+      <a href="prompt-improver.html">Prompt Improver</a>
+      <a href="negative-prompt.html">Negative Prompts</a>
+      <a href="../guides/how-to-write-ai-video-prompts.html">Guides</a>
+      <a href="../blog/text-to-video-prompt-formulas.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container tool-wrap">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / Tools / Prompt Generator</div>
+      <h1>Text-to-Video Prompt Generator</h1>
+      <p class="lead">Describe your scene, pick a style, camera move, mood, and lighting — get a polished, copy-ready prompt for Sora, Runway, Kling, Veo, Luma, or Pika.</p>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <form id="prompt-form">
+        <div class="field">
+          <label for="subject">Subject (required)</label>
+          <input type="text" id="subject" placeholder="e.g. a baby dragon, a futuristic city, a surfer at sunset">
+        </div>
+        <div class="field">
+          <label for="action">Action / what happens (optional)</label>
+          <input type="text" id="action" placeholder="e.g. soaring over snowy mountains, dancing in the rain">
+        </div>
+        <div class="field">
+          <label for="style">Visual style</label>
+          <select id="style">
+            <option value="cinematic">Cinematic</option>
+            <option value="photoreal">Photorealistic</option>
+            <option value="anime">Anime</option>
+            <option value="cartoon">3D Cartoon</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="vintage">Vintage film</option>
+            <option value="documentary">Documentary</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="camera">Camera movement</label>
+          <select id="camera">
+            <option value="wide shot">Wide shot</option>
+            <option value="close up">Close-up</option>
+            <option value="aerial drone">Aerial / drone</option>
+            <option value="tracking shot">Tracking shot</option>
+            <option value="low angle">Low angle</option>
+            <option value="overhead">Overhead</option>
+            <option value="slow push-in">Slow push-in</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mood">Mood</label>
+          <select id="mood">
+            <option value="joyful">Joyful</option>
+            <option value="epic">Epic</option>
+            <option value="calm">Calm / peaceful</option>
+            <option value="mysterious">Mysterious</option>
+            <option value="romantic">Romantic</option>
+            <option value="tense">Tense / dramatic</option>
+            <option value="whimsical">Whimsical</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="lighting">Lighting</label>
+          <select id="lighting">
+            <option value="warm golden-hour">Golden hour</option>
+            <option value="soft natural daylight">Soft daylight</option>
+            <option value="dramatic neon">Neon</option>
+            <option value="moody moonlight">Moonlight</option>
+            <option value="bright studio">Studio</option>
+            <option value="low-key cinematic">Low-key / dark</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="aspect">Aspect ratio</label>
+          <select id="aspect">
+            <option value="16:9">16:9 (YouTube / landscape)</option>
+            <option value="9:16">9:16 (TikTok / Reels / Shorts)</option>
+            <option value="1:1">1:1 (square)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="duration">Target duration (seconds)</label>
+          <select id="duration">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Prompt</button>
+      </form>
+
+      <div class="result-box" id="result-box" style="display:none">
+        <h3>Your optimized prompt</h3>
+        <div class="result-text" id="result-text"></div>
+        <div class="btn-row">
+          <button class="btn btn-copy" id="copy-prompt" type="button">📋 Copy Prompt</button>
+          <button class="btn btn-copy" id="copy-negative" type="button">📋 Copy Negative Prompt</button>
+          <span class="copied-note" id="copied-note"></span>
+          <span class="copied-note" id="copied-neg"></span>
+        </div>
+        <small>Tip: most tools accept a negative prompt too — <a href="negative-prompt.html">build one here →</a></small>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <h2>How to use this generator</h2>
+      <p>Good text-to-video prompts have five parts: <strong>subject</strong> (who/what), <strong>action</strong> (what happens), <strong>style</strong> (the look), <strong>camera</strong> (how it's shot), and <strong>mood + lighting</strong> (the feeling). This tool assembles all five into one prompt. For a deeper breakdown, read our guide <a href="../guides/how-to-write-ai-video-prompts.html">How to Write AI Video Prompts</a>.</p>
+      <p>Want to sanity-check your results? If a generated clip looks suspicious or you're verifying someone else's "real" footage, our partner tool <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> analyzes videos for AI-generation artifacts.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="prompt-generator.html">Prompt Generator</a>
+      <a href="prompt-improver.html">Prompt Improver</a>
+      <a href="negative-prompt.html">Negative Prompts</a>
+      <a href="../guides/text-to-video-prompts-that-work-2026.html">Guides</a>
+      <a href="../blog/text-to-video-prompt-formulas.html">Blog</a>
+    </div>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive League Tables + Points Simulator | FootballScoresHub</title>
+<meta name="description" content="Sortable league tables for the Premier League, La Liga, Bundesliga, Serie A and Ligue 1 — plus a points simulator to test hypothetical results. Updated daily.">
+<link rel="canonical" href="https://nan-footballscores.surge.sh/tools/league-table.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="ball">⚽</span> FootballScoresHub</a>
+    <nav class="main-nav">
+      <a href="live-scores.html">Live Scores</a>
+      <a href="match-schedule.html">Schedule</a>
+      <a href="league-table.html">League Tables</a>
+      <a href="../guides/premier-league-schedule-2026-27.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container prose">
+  <h1>Interactive League Tables</h1>
+  <p><span class="tag daily">Updated daily</span> <span id="updated-label" class="badge-note"></span> Click any column header to sort. This is an editorial snapshot, not a live standings feed.</p>
+
+  <label for="league-select"><strong>Choose a league:</strong></label>
+  <select id="league-select">
+    <option value="premier-league">Premier League</option>
+    <option value="la-liga">La Liga</option>
+    <option value="bundesliga">Bundesliga</option>
+    <option value="serie-a">Serie A</option>
+    <option value="ligue-1">Ligue 1</option>
+  </select>
+
+  <div id="table-wrap"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <h2>🔮 Points Simulator</h2>
+  <p>Enter a hypothetical result and see how the table would change. <strong>Simulated results are clearly marked and never presented as real.</strong></p>
+  <p id="sim-note" class="badge-note" style="font-weight:700"></p>
+  <div>
+    <select id="sim-home" aria-label="Home team"></select>
+    <input id="sim-hg" type="number" min="0" max="15" value="2" style="width:70px" aria-label="Home goals"> –
+    <input id="sim-ag" type="number" min="0" max="15" value="1" style="width:70px" aria-label="Away goals">
+    <select id="sim-away" aria-label="Away team"></select>
+    <button id="sim-add" class="btn">Apply result</button>
+    <button id="sim-reset" class="btn ghost" style="color:var(--pitch-dark);border-color:var(--pitch-dark)">Reset</button>
+  </div>
+  <h3>Applied hypothetical results</h3>
+  <ul id="sim-list"></ul>
+
+  <p>New to tables? Read <a href="../guides/how-to-read-football-league-tables.html">how to read football league tables</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  <p class="badge-note">© <span class="yr">2026</span> FootballScoresHub</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/league-table.js"></script>
+</body>
+</html>

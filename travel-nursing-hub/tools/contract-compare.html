@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Contract Comparator — Compare 2 Nurse Offers</title>
+<meta name="description" content="Compare two travel nurse contracts side by side: weekly pay, tax-free stipends, effective hourly rate and total contract value. Free, no sign-up.">
+<link rel="canonical" href="https://nan-travelnurse.surge.sh/tools/contract-compare.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/contract-compare.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">Travel<span class="pulse">Nursing</span>Hub</a>
+    <nav class="main-nav">
+      <a href="pay-analyzer.html">Pay Analyzer</a>
+      <a href="contract-compare.html">Contract Compare</a>
+      <a href="take-home.html">Take-Home Pay</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <h1>Travel Contract Comparator</h1>
+  <p>Two recruiters. Two offers. One clear winner — compare the full contract value, not just the weekly number.</p>
+</section>
+
+<div class="ad-slot-note"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<main class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Contract Comparator</p>
+
+  <div class="compare-grid">
+    <div class="tool-box" style="margin-top:0">
+      <h2 style="font-size:1.2rem;margin-bottom:1rem">Contract A</h2>
+      <div class="field"><label for="a-hourly">Hourly rate ($)</label><input type="number" id="a-hourly" min="0" step="0.01" placeholder="45.00"></div>
+      <div class="field"><label for="a-hours">Hours per week</label><input type="number" id="a-hours" min="0" step="0.5" placeholder="36"></div>
+      <div class="field"><label for="a-housing">Housing stipend / week ($)</label><input type="number" id="a-housing" min="0" step="0.01" placeholder="1100"></div>
+      <div class="field"><label for="a-mie">M&amp;IE stipend / week ($)</label><input type="number" id="a-mie" min="0" step="0.01" placeholder="400"></div>
+      <div class="field"><label for="a-weeks">Contract length (weeks)</label><input type="number" id="a-weeks" min="0" step="1" placeholder="13"></div>
+      <div class="field"><label for="a-travel">Travel / sign-on bonus ($ total)</label><input type="number" id="a-travel" min="0" step="0.01" placeholder="500"></div>
+      <div class="field"><label for="a-bonus">Completion bonus ($ total)</label><input type="number" id="a-bonus" min="0" step="0.01" placeholder="1000"></div>
+    </div>
+    <div class="tool-box" style="margin-top:0">
+      <h2 style="font-size:1.2rem;margin-bottom:1rem">Contract B</h2>
+      <div class="field"><label for="b-hourly">Hourly rate ($)</label><input type="number" id="b-hourly" min="0" step="0.01" placeholder="50.00"></div>
+      <div class="field"><label for="b-hours">Hours per week</label><input type="number" id="b-hours" min="0" step="0.5" placeholder="36"></div>
+      <div class="field"><label for="b-housing">Housing stipend / week ($)</label><input type="number" id="b-housing" min="0" step="0.01" placeholder="900"></div>
+      <div class="field"><label for="b-mie">M&amp;IE stipend / week ($)</label><input type="number" id="b-mie" min="0" step="0.01" placeholder="350"></div>
+      <div class="field"><label for="b-weeks">Contract length (weeks)</label><input type="number" id="b-weeks" min="0" step="1" placeholder="13"></div>
+      <div class="field"><label for="b-travel">Travel / sign-on bonus ($ total)</label><input type="number" id="b-travel" min="0" step="0.01" placeholder="750"></div>
+      <div class="field"><label for="b-bonus">Completion bonus ($ total)</label><input type="number" id="b-bonus" min="0" step="0.01" placeholder="0"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:1.4rem 0">
+    <button class="btn" id="cc-compare" type="button">Compare Contracts</button>
+  </div>
+
+  <div class="result" id="cc-result" style="max-width:900px;margin:0 auto">
+    <h2>Comparison Results</h2>
+    <div class="compare-grid">
+      <div>
+        <h3>Contract A</h3>
+        <table>
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr><td>True weekly pay</td><td id="a-r-weekly">—</td></tr>
+          <tr><td>Tax-free per week</td><td id="a-r-taxfree">—</td></tr>
+          <tr><td>Effective hourly</td><td id="a-r-effective">—</td></tr>
+          <tr class="total"><td>Total contract value</td><td id="a-r-total">—</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Contract B</h3>
+        <table>
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr><td>True weekly pay</td><td id="b-r-weekly">—</td></tr>
+          <tr><td>Tax-free per week</td><td id="b-r-taxfree">—</td></tr>
+          <tr><td>Effective hourly</td><td id="b-r-effective">—</td></tr>
+          <tr class="total"><td>Total contract value</td><td id="b-r-total">—</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="verdict" id="cc-verdict"></p>
+    <p id="cc-note" style="font-size:.95rem"></p>
+    <p style="margin-top:.8rem">Next: check your <a href="take-home.html">estimated take-home pay</a> for the winner, or read our <a href="../guides/travel-nurse-pay-2026.html">pay guide</a> for negotiation tactics.</p>
+  </div>
+
+  <div class="disclaimer">Estimates only — consult a tax professional for stipend rules.</div>
+
+  <div class="prose">
+    <h2>Why compare total contract value?</h2>
+    <p>Recruiters sell the weekly rate, but bonuses, contract length and stipend splits change the math. A $2,600/week offer with no bonuses can lose to a $2,500/week offer with a $2,000 sign-on bonus. Always compare the <strong>entire contract</strong> — weekly pay × weeks + all bonuses — before you choose.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <nav class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="pay-analyzer.html">Pay Analyzer</a>
+      <a href="take-home.html">Take-Home Pay</a>
+      <a href="../guides/how-to-become-travel-nurse-2026.html">Become a Travel Nurse</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+    <p style="font-size:.8rem;color:#8fa9bb">Estimates only — consult a tax professional for stipend rules.</p>
+  </div>
+</footer>
+
+</body>
+</html>

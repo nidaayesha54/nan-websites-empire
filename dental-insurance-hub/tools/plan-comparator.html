@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Plan Comparator – True Yearly Cost Calculator 2026</title>
+<meta name="description" content="Compare dental plans side by side: enter premium, annual max, deductible and waiting periods to find the true yearly cost of each plan.">
+<link rel="canonical" href="https://nan-dentalins.surge.sh/tools/plan-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<div class="logo">🦷 Dental<span>Insurance</span>Hub</div>
+<nav class="main">
+<a href="../index.html">Home</a>
+<a href="dental-cost-estimator.html">Cost Estimator</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="need-quiz.html">Do I Need It?</a>
+<a href="../guides/dental-insurance-cost-2026.html">Costs 2026</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div></header>
+
+<div class="wrap"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Plan Comparator</div></div>
+
+<section class="section"><div class="wrap">
+<h1>Dental Plan Comparator</h1>
+<p class="sub">A cheap premium isn't always the cheapest plan. Enter the details of up to 3 plans plus your expected dental needs, and see which costs least overall.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<h3 style="margin-top:0">Your expected dental needs this year</h3>
+<label><input type="checkbox" id="needBasic" checked> 2 cleanings + exams (preventive)</label>
+<label><input type="checkbox" id="needFilling"> 1 filling (~$200 in-network)</label>
+<label><input type="checkbox" id="needCrown"> 1 crown (~$1,100 in-network)</label>
+<label><input type="checkbox" id="needRoot"> 1 root canal (~$1,000 in-network)</label>
+
+<h3 style="margin-top:28px">Plan A</h3>
+<label>Monthly premium ($) <input type="number" id="aPrem" value="30" min="0"></label>
+<label>Annual maximum ($) <input type="number" id="aMax" value="1500" min="0"></label>
+<label>Annual deductible ($) <input type="number" id="aDed" value="50" min="0"></label>
+<label>Major-procedure waiting period (months) <input type="number" id="aWait" value="12" min="0" max="24"></label>
+
+<h3 style="margin-top:28px">Plan B</h3>
+<label>Monthly premium ($) <input type="number" id="bPrem" value="45" min="0"></label>
+<label>Annual maximum ($) <input type="number" id="bMax" value="2000" min="0"></label>
+<label>Annual deductible ($) <input type="number" id="bDed" value="50" min="0"></label>
+<label>Major-procedure waiting period (months) <input type="number" id="bWait" value="6" min="0" max="24"></label>
+
+<h3 style="margin-top:28px">Plan C (optional)</h3>
+<label>Monthly premium ($) <input type="number" id="cPrem" value="0" min="0"></label>
+<label>Annual maximum ($) <input type="number" id="cMax" value="0" min="0"></label>
+<label>Annual deductible ($) <input type="number" id="cDed" value="0" min="0"></label>
+<label>Major-procedure waiting period (months) <input type="number" id="cWait" value="0" min="0" max="24"></label>
+
+<button class="calc" onclick="compare()">Compare Plans</button>
+<div class="result" id="result" style="display:none"></div>
+</div>
+
+<div class="disclaimer">Estimates only, not financial advice. Simplified model: preventive covered 100%, basic covered 80%, major covered 50%. Waiting periods may block major coverage in year one.</div>
+
+<p style="margin-top:24px">Wondering if you even need a plan? Take the <a href="need-quiz.html">quiz</a>, or learn about <a href="../guides/dental-waiting-periods.html">waiting periods</a>.</p>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div><span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+
+<script>
+function num(id){ var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; }
+
+function trueCost(prem, max, ded, wait){
+  var premiumYear = prem * 12;
+  var needs = [];
+  if (document.getElementById('needBasic').checked) needs.push({cost:340, type:'prev'});   // 2 cleanings
+  if (document.getElementById('needFilling').checked) needs.push({cost:200, type:'basic'});
+  if (document.getElementById('needCrown').checked) needs.push({cost:1100, type:'major'});
+  if (document.getElementById('needRoot').checked) needs.push({cost:1000, type:'major'});
+
+  var dedRem = ded, maxRem = max, oop = 0;
+  needs.forEach(function(n){
+    if (n.type === 'prev') return; // covered 100%
+    var coveredPct = (n.type === 'basic') ? 0.80 : 0.50;
+    if (n.type === 'major' && wait > 0) coveredPct = 0; // waiting period blocks major
+    var patientDed = Math.min(dedRem, n.cost);
+    dedRem -= patientDed;
+    var rest = n.cost - patientDed;
+    var insurer = Math.min(rest * coveredPct, maxRem);
+    maxRem -= insurer;
+    oop += patientDed + (rest - insurer);
+  });
+  return {total: premiumYear + oop, oop: oop, premium: premiumYear};
+}
+
+function compare(){
+  var plans = [
+    {label:'Plan A', p:num('aPrem'), m:num('aMax'), d:num('aDed'), w:num('aWait')},
+    {label:'Plan B', p:num('bPrem'), m:num('bMax'), d:num('bDed'), w:num('bWait')},
+    {label:'Plan C', p:num('cPrem'), m:num('cMax'), d:num('cDed'), w:num('cWait')}
+  ].filter(function(x){ return x.p > 0; });
+
+  if (plans.length === 0){
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('result').innerHTML = '<p>Enter at least one plan with a premium above $0.</p>';
+    return;
+  }
+  var rows = plans.map(function(x){
+    var c = trueCost(x.p, x.m, x.d, x.w);
+    return {label:x.label, total:c.total, premium:c.premium, oop:c.oop};
+  });
+  rows.sort(function(a,b){ return a.total - b.total; });
+
+  var html = '<h3>True yearly cost (lowest first)</h3><table><tr><th>Plan</th><th>Premiums/yr</th><th>Out-of-pocket</th><th>Total cost</th></tr>';
+  rows.forEach(function(r, i){
+    html += '<tr' + (i===0 ? ' style="background:#dff5f0;font-weight:700"' : '') + '><td>' + r.label + (i===0 ? ' 🏆' : '') + '</td><td>$' + Math.round(r.premium).toLocaleString() + '</td><td>$' + Math.round(r.oop).toLocaleString() + '</td><td>$' + Math.round(r.total).toLocaleString() + '</td></tr>';
+  });
+  html += '</table><p style="font-size:.9rem;color:#5b6f80">Winner assumes your selected needs. Change needs or plan details to re-run.</p>';
+  var el = document.getElementById('result');
+  el.style.display = 'block';
+  el.innerHTML = html;
+}
+</script>
+</body>
+</html>

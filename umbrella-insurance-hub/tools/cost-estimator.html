@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umbrella Insurance Cost Estimator — 2026 Annual Premium Tool</title>
+<meta name="description" content="Free umbrella insurance cost estimator: estimate your annual premium by coverage amount ($1M–$10M), state, and risk factors. USA 2026.">
+<link rel="canonical" href="https://nan-umbrellains.surge.sh/tools/cost-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">☂️ Umbrella<span>InsuranceHub</span></a>
+<nav class="nav"><a href="coverage-calculator.html">Coverage Calculator</a><a href="asset-quiz.html">Risk Quiz</a><a href="cost-estimator.html">Cost Estimator</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Cost Estimator</div></div>
+
+<section class="section" style="padding-top:8px"><div class="container">
+<div class="tool-wrap">
+<h1>Umbrella Insurance Cost Estimator</h1>
+<p style="color:#5b6b7c">The famous deal in insurance: the first $1M of umbrella coverage usually costs <strong>$150–$350/year</strong>, and each extra million only ~$75–$100. See your estimate below.</p>
+
+<div class="field"><label for="coverage">Coverage amount (millions)</label>
+<select id="coverage">
+<option value="1" selected>$1 million</option>
+<option value="2">$2 million</option>
+<option value="3">$3 million</option>
+<option value="4">$4 million</option>
+<option value="5">$5 million</option>
+<option value="6">$6 million</option>
+<option value="7">$7 million</option>
+<option value="8">$8 million</option>
+<option value="9">$9 million</option>
+<option value="10">$10 million</option>
+</select></div>
+
+<div class="field"><label for="state">State</label>
+<select id="state">
+<option value="1.0">Other / average state</option>
+<option value="1.25">California</option>
+<option value="1.2">Florida</option>
+<option value="1.2">New York</option>
+<option value="1.15">Texas</option>
+<option value="1.1">Illinois</option>
+<option value="0.95">Ohio</option>
+<option value="0.95">Pennsylvania</option>
+<option value="0.9">North Carolina</option>
+<option value="0.9">Wisconsin</option>
+</select>
+<div style="font-size:.85rem;color:#5b6b7c;margin-top:4px">Litigation-friendly states (CA, FL, NY) tend to price higher.</div></div>
+
+<div class="field"><label>Risk factors</label>
+<div class="checks">
+<label><input type="checkbox" class="risk" data-f="1.25"> Teen driver in household (+25%)</label>
+<label><input type="checkbox" class="risk" data-f="1.1"> Pool, trampoline, or dog (+10%)</label>
+<label><input type="checkbox" class="risk" data-f="1.15"> Rental property (+15%)</label>
+<label><input type="checkbox" class="risk" data-f="1.1"> Boat / watercraft (+10%)</label>
+<label><input type="checkbox" class="risk" data-f="0.95"> Already carry max underlying auto limits 250/500 (−5% bundling hint)</label>
+</div></div>
+
+<button class="btn" onclick="est()">Estimate My Premium</button>
+<div id="result" class="result"></div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> Real premiums vary by insurer, ZIP code, driving record, and underlying limits. Use this to compare scenarios, then get real quotes.</div>
+<p>Related: <a href="coverage-calculator.html">How much coverage do I need?</a> · <a href="../guides/umbrella-insurance-cost-2026.html">2026 cost guide</a> · <a href="../blog/umbrella-insurance-examples.html">Real claim examples</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> UmbrellaInsuranceHub. Estimates only, not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../guides/what-is-umbrella-insurance.html">Guides</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function est(){
+  var m=parseInt(val('coverage'),10), stateMult=parseFloat(val('state'));
+  // Base: first $1M ~$200 midpoint; each additional ~$90
+  var base=200 + (m-1)*90;
+  var mult=stateMult, labels=[];
+  document.querySelectorAll('.risk:checked').forEach(function(c){
+    mult*=parseFloat(c.getAttribute('data-f'));
+    labels.push(c.parentElement.textContent.trim());
+  });
+  var annual=base*mult, monthly=annual/12;
+  var r=document.getElementById('result');
+  var html='<h3>Estimated annual premium</h3>';
+  html+='<div class="big">'+money(annual)+'/yr</div>';
+  html+='<p>That\'s about <strong>'+money(monthly)+'/month</strong> — roughly <strong>'+money(annual/(m*1000000)*1000000)+'</strong> per $1M of coverage per year.</p>';
+  html+='<table class="cmp"><tr><th>Coverage</th><th>Est. annual premium</th></tr>';
+  for(var i=1;i<=m;i++){
+    var a=(200+(i-1)*90)*mult;
+    html+='<tr'+(i===m?' class="winner"':'')+'><td>$'+i+'M</td><td>'+money(a)+'/yr</td></tr>';
+  }
+  html+='</table>';
+  if(labels.length){ html+='<p style="font-size:.92rem;margin-top:10px">Adjustments applied: '+labels.join('; ')+'.</p>'; }
+  html+='<p style="font-size:.92rem">Bundling with your existing auto/home insurer usually unlocks the best umbrella rates. <a href="../guides/umbrella-insurance-cost-2026.html">How to pay less →</a></p>';
+  r.innerHTML=html; show('result');
+}
+</script>
+</body>
+</html>

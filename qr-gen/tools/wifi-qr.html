@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free WiFi QR Code Generator — Share WiFi Without the Password | QRGen</title>
+  <meta name="description" content="Generate a free WiFi QR code — guests scan and join instantly, no password typing. No signup, 100% private, works for WPA/WPA2/WEP.">
+  <link rel="canonical" href="https://qrgen.surge.sh/tools/wifi-qr.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"QRGen WiFi QR Generator",
+   "url":"https://qrgen.surge.sh/tools/wifi-qr.html",
+   "applicationCategory":"UtilitiesApplication","operatingSystem":"Any",
+   "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">QR<span>Gen</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="qr-generator.html">QR Generator</a>
+      <a href="wifi-qr.html" class="active">WiFi QR</a>
+      <a href="../guides/qr-code-uses.html">Uses Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:36px;">
+    <div class="wrap">
+      <h1 style="text-align:center;font-size:2rem;margin-bottom:8px;">WiFi QR Code Generator</h1>
+      <p class="lead">Guests scan one code and join your WiFi — no more spelling out passwords. Your network details never leave your browser.</p>
+
+      <div class="tool-layout" id="qrForm" data-qr-type="wifi" style="margin-top:28px;">
+        <div class="panel">
+          <h2>Your WiFi details</h2>
+          <div class="field"><label for="wifiSsid">Network name (SSID)</label>
+            <input type="text" id="wifiSsid" placeholder="e.g. HomeWiFi_5G" autocomplete="off"></div>
+          <div class="field-row">
+            <div class="field"><label for="wifiPass">Password</label>
+              <input type="text" id="wifiPass" placeholder="WiFi password" autocomplete="off"></div>
+            <div class="field"><label for="wifiSec">Security type</label>
+              <select id="wifiSec"><option value="WPA">WPA / WPA2 (most common)</option><option value="WEP">WEP (older routers)</option><option value="nopass">None — open network</option></select></div>
+          </div>
+          <div class="field"><label class="check"><input type="checkbox" id="wifiHidden"> Hidden network (SSID not broadcast)</label></div>
+          <div class="error" id="qrError"></div>
+
+          <h2 style="margin-top:24px;">Customize</h2>
+          <div class="field-row">
+            <div class="field"><label for="qrFg">QR color</label><input type="color" id="qrFg" value="#0b1220"></div>
+            <div class="field"><label for="qrBg">Background</label><input type="color" id="qrBg" value="#ffffff"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="qrSize">Download size</label>
+              <select id="qrSize"><option value="512">512px (web)</option><option value="1024" selected>1024px (standard)</option><option value="2048">2048px (print)</option></select></div>
+            <div class="field"><label for="qrEcl">Error correction</label>
+              <select id="qrEcl"><option value="M" selected>M — standard</option><option value="L">L — denser codes</option></select></div>
+          </div>
+          <div class="field"><label for="qrMargin">Quiet zone</label>
+            <select id="qrMargin"><option value="4" selected>Standard (4 modules)</option><option value="2">Small (2 modules)</option><option value="0">None</option></select></div>
+          <p class="hint">🔒 Private: your SSID and password are encoded locally. Nothing is sent anywhere — verify in your browser's network tab.</p>
+        </div>
+
+        <div class="panel preview">
+          <h2>Scan to join</h2>
+          <div class="qr-frame"><canvas id="qrCanvas" width="300" height="300"></canvas></div>
+          <div class="dl-row">
+            <button class="btn small" id="btnPng" type="button">⬇ PNG</button>
+            <button class="btn ghost small" id="btnSvg" type="button">⬇ SVG</button>
+          </div>
+          <p class="hint">Print it and stick it on the fridge, Airbnb welcome book, café counter or office wall.</p>
+        </div>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+      <div class="ad-slot">Advertisement</div>
+
+      <div class="article" style="margin-top:8px;">
+        <h2>How WiFi QR codes work</h2>
+        <p>Your phone's camera reads a specially formatted string (starting with <code>WIFI:T:…</code>) that contains the network name, password and security type. iPhones (iOS 11+) and most Android phones connect automatically after one tap — no Settings app, no typing.</p>
+        <h3>Where to use it</h3>
+        <ul>
+          <li><strong>Home:</strong> frame it in the hallway for visitors.</li>
+          <li><strong>Airbnb / rentals:</strong> add it to the welcome book — fewer "what's the WiFi?" messages.</li>
+          <li><strong>Cafés &amp; shops:</strong> table tents with your WiFi QR keep customers happy (and logged in longer).</li>
+          <li><strong>Offices:</strong> meeting rooms and reception areas.</li>
+        </ul>
+        <p>Need other code types? Try the full <a href="qr-generator.html">QR code generator</a> for links, business cards, menus and more.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span data-year></span> QRGen — free QR codes, generated privately in your browser.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="qr-generator.html">Generator</a>
+      <a href="../guides/qr-code-uses.html">Uses Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</footer>
+<script src="../js/qrcode.js"></script>
+<script src="../js/generator.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

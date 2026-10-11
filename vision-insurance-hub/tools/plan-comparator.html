@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Vision Insurance Plans | VisionInsuranceHub</title>
+<meta name="description" content="Compare two vision insurance plans side by side — premiums, copays, and allowances — to find each plan's true yearly cost. Free tool.">
+<link rel="canonical" href="https://nan-visionins.surge.sh/tools/plan-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="../index.html">Vision<span>Insurance</span>Hub</a>
+<nav class="main-nav">
+<a href="../index.html">Home</a>
+<a href="eye-care-cost.html">Eye Care Cost</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="lasik-calculator.html">LASIK Calculator</a>
+<a href="../guides/vision-insurance-cost-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Tools &rsaquo; Vision Plan Comparator</div>
+</div>
+
+<section class="section" style="padding-top:10px">
+<div class="container">
+<div class="tool-box">
+<h1>Vision Plan Comparator</h1>
+<p style="color:var(--muted)">Enter two plans and your usage to reveal each plan's <strong>true yearly cost</strong> — not just the premium.</p>
+
+<h3 style="color:var(--blue-dark)">Your Usage</h3>
+<div class="form-group">
+<label for="exams">Eye exams per year</label>
+<input type="number" id="exams" value="1" min="0" step="0.5">
+</div>
+<div class="form-group">
+<label for="glassesSpend">Yearly glasses spending ($)</label>
+<input type="number" id="glassesSpend" value="250" min="0">
+</div>
+<div class="form-group">
+<label for="contactsSpend">Yearly contacts spending ($)</label>
+<input type="number" id="contactsSpend" value="300" min="0">
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+<div>
+<h3 style="color:var(--blue)">Plan A</h3>
+<div class="form-group"><label for="aName">Plan name</label><input type="text" id="aName" value="Basic Plan" style="width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px"></div>
+<div class="form-group"><label for="aPrem">Monthly premium ($)</label><input type="number" id="aPrem" value="13" min="0"></div>
+<div class="form-group"><label for="aCopay">Exam copay ($)</label><input type="number" id="aCopay" value="10" min="0"></div>
+<div class="form-group"><label for="aGlass">Glasses allowance ($/yr)</label><input type="number" id="aGlass" value="130" min="0"></div>
+<div class="form-group"><label for="aCont">Contacts allowance ($/yr)</label><input type="number" id="aCont" value="130" min="0"></div>
+</div>
+<div>
+<h3 style="color:var(--green-dark)">Plan B</h3>
+<div class="form-group"><label for="bName">Plan name</label><input type="text" id="bName" value="Premium Plan" style="width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px"></div>
+<div class="form-group"><label for="bPrem">Monthly premium ($)</label><input type="number" id="bPrem" value="20" min="0"></div>
+<div class="form-group"><label for="bCopay">Exam copay ($)</label><input type="number" id="bCopay" value="0" min="0"></div>
+<div class="form-group"><label for="bGlass">Glasses allowance ($/yr)</label><input type="number" id="bGlass" value="200" min="0"></div>
+<div class="form-group"><label for="bCont">Contacts allowance ($/yr)</label><input type="number" id="bCont" value="200" min="0"></div>
+</div>
+</div>
+
+<button class="btn" onclick="compare()">Compare Plans</button>
+
+<div class="result" id="result">
+<h2>Comparison Result</h2>
+<div class="result-row"><span id="aTitle"></span><span class="val" id="aTotal"></span></div>
+<div class="result-row"><span id="bTitle"></span><span class="val" id="bTotal"></span></div>
+<div class="result-row"><span>Paying fully out of pocket</span><span class="val" id="noPlan"></span></div>
+<div class="verdict" id="verdict"></div>
+</div>
+<p style="font-size:.82rem;color:var(--muted);margin-top:22px">Estimates only, not financial or medical advice.</p>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div style="max-width:760px;margin:34px auto 0">
+<p>Related tools: <a href="eye-care-cost.html">Eye Care Cost Estimator</a> · <a href="lasik-calculator.html">LASIK Break-Even Calculator</a></p>
+<p>Related guides: <a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a> · <a href="../guides/is-vision-insurance-worth-it.html">Is Vision Insurance Worth It?</a></p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-col">
+<h4>Tools</h4>
+<ul>
+<li><a href="eye-care-cost.html">Eye Care Cost Estimator</a></li>
+<li><a href="plan-comparator.html">Plan Comparator</a></li>
+<li><a href="lasik-calculator.html">LASIK Calculator</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Guides</h4>
+<ul>
+<li><a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a></li>
+<li><a href="../guides/is-vision-insurance-worth-it.html">Is Vision Insurance Worth It?</a></li>
+<li><a href="../guides/lasik-vs-glasses-cost.html">LASIK vs Glasses Cost</a></li>
+<li><a href="../blog/eye-care-saving-tips.html">Eye-Care Saving Tips</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="../blog/index.html">Blog</a></li>
+<li><a href="../index.html">Home</a></li>
+</ul>
+</div>
+<div class="footer-note">
+Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+<br><br>Estimates only, not financial or medical advice.
+</div>
+</div>
+</footer>
+
+<script>
+function money(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+function planTotal(p,copay,glassAllow,contAllow,exams,gSpend,cSpend){
+  return p*12 + copay*exams + Math.max(0,gSpend-glassAllow) + Math.max(0,cSpend-contAllow);
+}
+function compare(){
+  var exams=+document.getElementById("exams").value||0,
+      gSpend=+document.getElementById("glassesSpend").value||0,
+      cSpend=+document.getElementById("contactsSpend").value||0,
+      aName=document.getElementById("aName").value||"Plan A",
+      bName=document.getElementById("bName").value||"Plan B";
+
+  var a=planTotal(+document.getElementById("aPrem").value||0,
+                  +document.getElementById("aCopay").value||0,
+                  +document.getElementById("aGlass").value||0,
+                  +document.getElementById("aCont").value||0,exams,gSpend,cSpend);
+  var b=planTotal(+document.getElementById("bPrem").value||0,
+                  +document.getElementById("bCopay").value||0,
+                  +document.getElementById("bGlass").value||0,
+                  +document.getElementById("bCont").value||0,exams,gSpend,cSpend);
+  var out=gSpend+cSpend+175*exams; // exam $175 default if no plan
+
+  document.getElementById("aTitle").textContent=aName+" true yearly cost";
+  document.getElementById("bTitle").textContent=bName+" true yearly cost";
+  document.getElementById("aTotal").textContent=money(a);
+  document.getElementById("bTotal").textContent=money(b);
+  document.getElementById("noPlan").textContent=money(out);
+
+  var v=document.getElementById("verdict"),best;
+  if(a<b){ best=aName; var s=Math.min(b-a, out-a); }
+  else if(b<a){ best=bName; var s=Math.min(a-b, out-b); }
+  else { best=null; }
+  if(best===null){
+    v.innerHTML="<strong>Result:</strong> Both plans cost the same per year. Pick the one with the better provider network.";
+  } else if((best===aName?a:b)>=out){
+    v.innerHTML="<strong>Result:</strong> For your usage, <strong>paying out of pocket ("+money(out)+"/yr)</strong> beats both plans. Neither plan is worth it for you.";
+  } else {
+    v.innerHTML="<strong>Result:</strong> <strong>"+best+"</strong> wins at "+money(Math.min(a,b))+"/yr — saving "+money(Math.abs(a-b))+" vs the other plan and "+money(Math.abs(Math.min(a,b)-out))+" vs no insurance.";
+  }
+  document.getElementById("result").classList.add("show");
+  document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>

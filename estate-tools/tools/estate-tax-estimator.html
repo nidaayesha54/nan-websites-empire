@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Estate Tax Calculator 2026 — Estimate What You'd Owe</title>
+  <meta name="description" content="Free 2026 federal estate tax estimator: gross estate, debts, and deductions vs the ~$13.6M exemption. See estimated tax at the 40% rate.">
+  <link rel="canonical" href="https://nan-estatetools.surge.sh/tools/estate-tax-estimator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the federal estate tax exemption for 2026?","acceptedAnswer":{"@type":"Answer","text":"An estimated $13.6 million per individual, or about $27.2 million for married couples using portability. The IRS adjusts the figure annually for inflation, so verify current numbers."}},
+    {"@type":"Question","name":"What is the federal estate tax rate?","acceptedAnswer":{"@type":"Answer","text":"A flat 40% on the taxable estate above the exemption amount. Only the amount over the exemption is taxed, not the entire estate."}},
+    {"@type":"Question","name":"Do states have their own estate taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. About a dozen states plus DC impose estate taxes, often with exemptions as low as $1-2 million — far below the federal threshold. Some states also have inheritance taxes."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Estate<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="estate-tax-estimator.html">Estate Tax</a>
+      <a href="will-checklist.html">Will Checklist</a>
+      <a href="beneficiary-planner.html">Beneficiaries</a>
+      <a href="../guides/federal-estate-tax-explained.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Federal Estate Tax Estimator</p>
+  <h1>Federal Estate Tax Estimator (2026)</h1>
+  <p>Enter the estate's value, debts, and deductions. The estimator compares the taxable estate against the 2026 federal exemption (estimate) and applies the 40% rate to any excess.</p>
+
+  <div class="calc">
+    <div class="field"><label>Filing status</label>
+      <div class="radio-group">
+        <label class="radio-card"><input type="radio" name="et-status" value="single" checked><span>Single (~$13.6M exemption)</span></label>
+        <label class="radio-card"><input type="radio" name="et-status" value="married"><span>Married, with portability (~$27.2M)</span></label>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="et-gross">Gross estate value ($)</label><input type="number" id="et-gross" value="15000000"></div>
+      <div class="field"><label for="et-debts">Debts, mortgages & expenses ($)</label><input type="number" id="et-debts" value="500000"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="et-marital">Marital deduction ($)</label><input type="number" id="et-marital" value="0"></div>
+      <div class="field"><label for="et-charitable">Charitable deduction ($)</label><input type="number" id="et-charitable" value="0"></div>
+    </div>
+    <button class="btn btn-gold" id="et-calc">Estimate estate tax</button>
+  </div>
+
+  <div class="result" id="et-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout note">
+    <strong class="label">Important</strong>
+    The 2026 exemption figure (~$13.6M single) is an <strong>estimate</strong> — the IRS indexes it for inflation each year. This covers <strong>federal</strong> tax only; your state may tax estates starting at $1–2M. Read <a href="../guides/federal-estate-tax-explained.html">how the federal estate tax works</a> for the full picture.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the federal estate tax exemption for 2026? <span>+</span></div><div class="faq-a">An estimated $13.6 million per individual — about $27.2 million for married couples using portability. The IRS adjusts it annually for inflation, so confirm the current figure before making decisions.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the federal estate tax rate? <span>+</span></div><div class="faq-a">A flat 40% — but only on the amount <em>above</em> the exemption, not the whole estate. An $18M taxable estate for a single filer faces 40% on roughly $4.4M.</div></div>
+  <div class="faq-item"><div class="faq-q">Do states have their own estate taxes? <span>+</span></div><div class="faq-a">Yes — about a dozen states plus DC levy estate taxes, often with exemptions of just $1–2 million. Several states also impose inheritance taxes on beneficiaries. Federal exemption means nothing at the state level.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Video Shot List Generator — Free AI Shot Planner</title>
+<meta name="description" content="Free product video shot list generator: paste your script and get a scene-by-scene shot plan with camera moves, framing, durations, and AI generation prompts.">
+<meta name="keywords" content="shot list generator, product video shot list, video shot planner, AI video prompts">
+<meta property="og:title" content="Product Video Shot List Generator">
+<meta property="og:description" content="Turn any script into a full shot list with AI generation prompts.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nan-aiproductvideo.surge.sh/tools/shot-list-generator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">📦</span> AIProductVideo</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="demo-script-builder.html">Script Builder</a>
+      <a href="ad-script-templates.html">Ad Templates</a>
+      <a href="shot-list-generator.html">Shot List</a>
+      <a href="../guides/how-to-make-ai-product-videos-2026.html">Guides</a>
+      <a href="../blog/ai-product-video-scripts-that-sell.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:36px">
+    <div class="container">
+      <span class="kicker">Free tool</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.6rem)">Product Video Shot List Generator</h1>
+      <p class="section-sub">Paste your script (or describe your product) — get a shot-by-shot plan with framing, camera movement, duration, and a ready-to-paste AI video generation prompt for every shot.</p>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <div class="grid grid-2" style="align-items:start">
+        <form id="shotForm" class="card" onsubmit="return false">
+          <div class="field">
+            <label for="sproduct">Product name</label>
+            <input type="text" id="sproduct" placeholder="e.g. GlowSip Smart Water Bottle">
+          </div>
+          <div class="field">
+            <label for="sscript">Your script or product description *</label>
+            <textarea id="sscript" style="min-height:140px" placeholder="Paste your script here — section markers like HOOK / PROBLEM / SOLUTION / CTA help, but plain text works too.&#10;&#10;Example:&#10;HOOK: Rant about staying hydrated&#10;DEMO: Show the glowing reminder ring&#10;CTA: Tap Shop Now"></textarea>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="sstyle">Video style</label>
+              <select id="sstyle">
+                <option value="ugc">UGC / creator-style</option>
+                <option value="cinematic">Cinematic product film</option>
+                <option value="avatar">AI avatar presenter</option>
+                <option value="mixed">Mixed (UGC + product b-roll)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sratio">Aspect ratio</label>
+              <select id="sratio">
+                <option value="9:16">9:16 (TikTok / Reels / Shorts)</option>
+                <option value="16:9">16:9 (YouTube / landing page)</option>
+                <option value="1:1">1:1 (feed ads)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="stotal">Target total duration (seconds)</label>
+            <input type="text" id="stotal" inputmode="numeric" value="60">
+          </div>
+          <button class="btn btn-primary" id="shotBtn" type="submit" style="width:100%">Generate Shot List 🎬</button>
+        </form>
+
+        <div>
+          <div class="card" style="background:var(--bg2)">
+            <h3>What you get</h3>
+            <ul style="padding-left:20px;color:var(--muted)">
+              <li>📋 Shot-by-shot breakdown (framing, move, duration)</li>
+              <li>🤖 AI video prompt for every shot (paste into Runway / Kling / Veo)</li>
+              <li>⏱️ Durations that sum to your target length</li>
+              <li>🎙️ Suggested B-roll and text overlays</li>
+              <li>📥 Copy or download the full shot list</li>
+            </ul>
+          </div>
+          <div class="ad-slot">AD-SLOT · sidebar (300×250)</div>
+        </div>
+      </div>
+
+      <div id="shotResult" class="output" style="display:none">
+        <h3 id="shotTitle">Your shot list</h3>
+        <div class="table-wrap">
+          <table id="shotTable">
+            <thead><tr><th>#</th><th>Shot</th><th>Framing</th><th>Camera</th><th>Dur.</th><th>AI prompt</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="result-toolbar">
+          <button class="btn btn-small btn-primary" id="copyShots">Copy shot list</button>
+          <button class="btn btn-small btn-ghost" id="dlShots">Download .txt</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:32px">
+        <h3>No script yet?</h3>
+        <p>Start with the <a href="demo-script-builder.html">demo script builder</a> or grab a template from the <a href="ad-script-templates.html">ad script library</a>, then come back here to plan the shots.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">© <span id="year">2026</span> AIProductVideo. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/shot-list-generator.js"></script>
+</body>
+</html>

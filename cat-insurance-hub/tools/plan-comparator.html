@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Cat Insurance Plans | CatInsuranceHub</title>
+<meta name="description" content="Compare cat insurance plans side by side: enter premium, deductible & reimbursement to reveal each plan's true yearly cost.">
+<link rel="canonical" href="https://nan-catinsurance.surge.sh/tools/plan-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="../index.html">🐱 CatInsuranceHub</a>
+    <nav><ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="quote-estimator.html">Quote Estimator</a></li>
+      <li><a href="plan-comparator.html">Compare Plans</a></li>
+      <li><a href="worth-it-quiz.html">Worth-It Quiz</a></li>
+      <li><a href="../guides/cat-insurance-cost-2026.html">Cost Guide</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="tool-wrap" style="max-width:900px">
+      <p class="breadcrumb"><a href="../index.html">Home</a> › Plan Comparator</p>
+      <h1>Cat Insurance Plan Comparator</h1>
+      <p class="intro">Premiums don't tell the whole story. Enter each plan's details and we'll compute the <strong>true yearly cost</strong> — what you pay in premiums plus what you pay out of pocket for a typical claim year.</p>
+
+      <div class="field">
+        <label for="claims">Estimated yearly vet bills (claims you'd file)</label>
+        <select id="claims">
+          <option value="500">~$500 (healthy year)</option>
+          <option value="1500" selected>~$1,500 (typical year)</option>
+          <option value="3000">~$3,000 (one moderate emergency)</option>
+          <option value="6000">~$6,000 (serious emergency)</option>
+        </select>
+      </div>
+
+      <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div class="card">
+          <h3>Plan A</h3>
+          <div class="field"><label for="aName">Plan name</label><input type="text" id="aName" value="Basic Paws" style="width:100%;padding:10px;border:2px solid var(--border);border-radius:8px"></div>
+          <div class="field"><label for="aPrem">Monthly premium ($)</label><input type="number" id="aPrem" value="18" min="0"></div>
+          <div class="field"><label for="aDed">Annual deductible ($)</label><input type="number" id="aDed" value="500" min="0"></div>
+          <div class="field"><label for="aReim">Reimbursement (%)</label><input type="number" id="aReim" value="70" min="0" max="100"></div>
+        </div>
+        <div class="card">
+          <h3>Plan B</h3>
+          <div class="field"><label for="bName">Plan name</label><input type="text" id="bName" value="Premium Whiskers" style="width:100%;padding:10px;border:2px solid var(--border);border-radius:8px"></div>
+          <div class="field"><label for="bPrem">Monthly premium ($)</label><input type="number" id="bPrem" value="32" min="0"></div>
+          <div class="field"><label for="bDed">Annual deductible ($)</label><input type="number" id="bDed" value="250" min="0"></div>
+          <div class="field"><label for="bReim">Reimbursement (%)</label><input type="number" id="bReim" value="90" min="0" max="100"></div>
+        </div>
+        <div class="card">
+          <h3>Plan C</h3>
+          <div class="field"><label for="cName">Plan name</label><input type="text" id="cName" value="Mid Tier Tabby" style="width:100%;padding:10px;border:2px solid var(--border);border-radius:8px"></div>
+          <div class="field"><label for="cPrem">Monthly premium ($)</label><input type="number" id="cPrem" value="24" min="0"></div>
+          <div class="field"><label for="cDed">Annual deductible ($)</label><input type="number" id="cDed" value="250" min="0"></div>
+          <div class="field"><label for="cReim">Reimbursement (%)</label><input type="number" id="cReim" value="80" min="0" max="100"></div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="cmpBtn">Compare Plans</button>
+
+      <div class="result" id="result">
+        <h3>True yearly cost (at <span id="claimLabel"></span> in claims)</h3>
+        <div id="bars"></div>
+        <table id="cmpTable"></table>
+        <p id="winner" style="margin-top:14px;font-weight:700;color:var(--ink)"></p>
+        <p style="margin-top:10px;font-size:.92rem">Learn what these numbers mean in our <a href="../guides/best-cat-insurance-guide.html">how-to-choose guide</a>.</p>
+      </div>
+
+      <div class="disclaimer">Estimates only, not financial advice. Assumes claims are eligible and the annual limit is not exceeded.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>🐱 CatInsuranceHub</h4><p>Free cat insurance tools &amp; honest guides for USA pet parents.</p></div>
+      <div><h4>Tools</h4><ul>
+        <li><a href="quote-estimator.html">Quote Estimator</a></li>
+        <li><a href="plan-comparator.html">Plan Comparator</a></li>
+        <li><a href="worth-it-quiz.html">Worth-It Quiz</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="../guides/cat-insurance-cost-2026.html">Cat Insurance Cost 2026</a></li>
+        <li><a href="../guides/best-cat-insurance-guide.html">How to Choose</a></li>
+        <li><a href="../guides/cat-insurance-vs-savings.html">Insurance vs Savings</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+      <p>Estimates only, not financial advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function getPlan(p){
+    return {
+      name: document.getElementById(p+'Name').value || ('Plan '+p.toUpperCase()),
+      prem: parseFloat(document.getElementById(p+'Prem').value)||0,
+      ded: parseFloat(document.getElementById(p+'Ded').value)||0,
+      reim: parseFloat(document.getElementById(p+'Reim').value)||0
+    };
+  }
+  function trueCost(plan, claims){
+    var yearlyPrem = plan.prem*12;
+    var eligible = Math.max(0, claims - plan.ded);
+    var payout = eligible * (plan.reim/100);
+    var outOfPocket = claims - payout;
+    return { yearlyPrem: yearlyPrem, payout: payout, total: yearlyPrem + outOfPocket };
+  }
+  document.getElementById('cmpBtn').addEventListener('click',function(){
+    var claims = parseFloat(document.getElementById('claims').value)||0;
+    var plans = ['a','b','c'].map(getPlan).map(function(pl){
+      var c = trueCost(pl, claims);
+      pl.yearlyPrem=c.yearlyPrem; pl.payout=c.payout; pl.total=c.total;
+      return pl;
+    });
+    plans.sort(function(x,y){ return x.total - y.total; });
+    var maxTotal = Math.max.apply(null, plans.map(function(p){return p.total;}));
+    document.getElementById('claimLabel').textContent = '$'+claims.toLocaleString();
+    var barsHtml='';
+    plans.forEach(function(p){
+      var pct = maxTotal>0 ? Math.round(p.total/maxTotal*100) : 0;
+      barsHtml += '<p style="margin:0;font-weight:700">'+p.name+' — $'+Math.round(p.total).toLocaleString()+'/yr</p>'
+        + '<div class="bar"><span style="width:'+pct+'%"></span></div>';
+    });
+    document.getElementById('bars').innerHTML = barsHtml;
+    var t='<tr><th>Plan</th><th>Premiums/yr</th><th>Payout</th><th>Total cost</th></tr>';
+    plans.forEach(function(p){
+      t += '<tr><td>'+p.name+'</td><td>$'+Math.round(p.yearlyPrem).toLocaleString()
+        + '</td><td>$'+Math.round(p.payout).toLocaleString()
+        + '</td><td><strong>$'+Math.round(p.total).toLocaleString()+'</strong></td></tr>';
+    });
+    document.getElementById('cmpTable').innerHTML = t;
+    document.getElementById('winner').textContent = '🏆 Cheapest overall: ' + plans[0].name + ' at $' + Math.round(plans[0].total).toLocaleString() + '/year.';
+    document.getElementById('result').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

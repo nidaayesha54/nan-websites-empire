@@ -1,0 +1,119 @@
+/* NursingSchoolsHub — academic blue theme */
+:root{
+  --blue-900:#0a2a5c;
+  --blue-700:#133e86;
+  --blue-500:#1e5aa8;
+  --blue-200:#bcd6f5;
+  --blue-100:#dbe9fb;
+  --blue-50:#eef4fc;
+  --gold:#f5a623;
+  --ink:#1c2430;
+  --muted:#5b6c83;
+  --bg:#f7fafd;
+  --card:#ffffff;
+  --line:#e0e9f4;
+  --green:#1f7a4d;
+  --red:#b23a3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px}
+img{max-width:100%;height:auto}
+a{color:var(--blue-500)}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{background:var(--blue-900);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:10px}
+.brand .logo-mark{background:var(--gold);color:var(--blue-900);width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap}
+.main-nav a{color:#dbe9fb;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:.95rem}
+.main-nav a:hover,.main-nav a.active{background:rgba(255,255,255,.14);color:#fff}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--blue-900),var(--blue-500));color:#fff;padding:64px 0;text-align:center}
+.hero h1{font-size:2.4rem;line-height:1.25;margin-bottom:14px}
+.hero p.lead{font-size:1.15rem;max-width:720px;margin:0 auto 26px;color:#e3eefb}
+.btn{display:inline-block;background:var(--gold);color:var(--blue-900);font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:#ffbd45}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff;margin-left:10px}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.hero-cta{display:flex;gap:0;justify-content:center;flex-wrap:wrap}
+
+/* Sections */
+.section{padding:56px 0}
+.section h2{font-size:1.8rem;color:var(--blue-900);margin-bottom:8px;text-align:center}
+.section .sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:0 2px 6px rgba(10,42,92,.06);display:flex;flex-direction:column}
+.card .icon{font-size:2rem;margin-bottom:10px}
+.card h3{color:var(--blue-900);margin-bottom:8px;font-size:1.2rem}
+.card p{color:var(--muted);flex-grow:1;margin-bottom:16px}
+.card .btn{align-self:flex-start;padding:10px 20px;font-size:.95rem}
+
+/* Article pages */
+.article-wrap{max-width:800px;margin:0 auto;padding:40px 20px}
+.article-wrap h1{color:var(--blue-900);font-size:2rem;line-height:1.35;margin-bottom:10px}
+.article-wrap .meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.article-wrap h2{color:var(--blue-700);font-size:1.45rem;margin:30px 0 12px}
+.article-wrap h3{color:var(--blue-900);font-size:1.15rem;margin:22px 0 10px}
+.article-wrap p,.article-wrap li{margin-bottom:14px}
+.article-wrap ul,.article-wrap ol{padding-left:24px}
+.breadcrumb{font-size:.9rem;color:var(--muted);margin-bottom:18px}
+.breadcrumb a{color:var(--blue-500)}
+.callout{background:var(--blue-50);border-left:4px solid var(--blue-500);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0}
+.callout strong{color:var(--blue-900)}
+
+/* Tools */
+.tool-form{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:30px;max-width:720px;margin:0 auto 30px}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;color:var(--blue-900);margin-bottom:6px}
+.field select,.field input{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font-size:1rem;background:#fff}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:8px}
+.result-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.result-card .badge{display:inline-block;background:var(--green);color:#fff;font-size:.8rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.result-card h3{color:var(--blue-900);margin-bottom:8px}
+.result-card ul{padding-left:20px;color:var(--muted);font-size:.95rem}
+.verdict{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;max-width:720px;margin:0 auto}
+.verdict.good{border-left:6px solid var(--green)}
+.verdict.warn{border-left:6px solid var(--gold)}
+.verdict.bad{border-left:6px solid var(--red)}
+.big-number{font-size:2.6rem;font-weight:800;color:var(--blue-900)}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0}
+.stat{background:var(--blue-50);border-radius:8px;padding:14px;text-align:center}
+.stat .val{font-size:1.4rem;font-weight:800;color:var(--blue-900)}
+.stat .lbl{font-size:.85rem;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:800px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:12px;padding:16px 20px}
+.faq summary{font-weight:700;color:var(--blue-900);cursor:pointer}
+.faq p{margin-top:10px;color:var(--muted)}
+
+/* Related links */
+.related{background:var(--blue-50);border-radius:12px;padding:26px;margin-top:44px}
+.related h2{font-size:1.3rem;text-align:left;margin-bottom:12px}
+.related ul{padding-left:20px}
+
+/* Footer */
+.site-footer{background:var(--blue-900);color:#c9dcf2;padding:36px 0;margin-top:60px;font-size:.92rem}
+.site-footer .container{display:flex;flex-direction:column;gap:12px}
+.site-footer a{color:#fff}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{color:#c9dcf2;text-decoration:none}
+.footer-links a:hover{color:#fff}
+
+/* Ad slot placeholder */
+.ad-slot{display:block;text-align:center}
+
+/* Responsive */
+@media(max-width:640px){
+  .hero h1{font-size:1.8rem}
+  .hero{padding:44px 0}
+  .field-row{grid-template-columns:1fr}
+  .main-nav a{padding:6px 8px;font-size:.88rem}
+  .site-header .container{flex-direction:column;gap:8px}
+  .btn-outline{margin-left:0;margin-top:10px}
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Song Structure Planner — Bars, Sections & Duration | AISingingVoice</title>
+<meta name="description" content="Free song structure planner: pick a proven template, set bars per section and BPM, and get an instant song duration estimate. No signup.">
+<link rel="canonical" href="https://nan-aisinging.surge.sh/tools/song-structure-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav wrap">
+<a class="logo" href="../index.html">🎤 AISingingVoice</a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<div class="navlinks">
+<a class="active" href="song-structure-planner.html">Structure Planner</a>
+<a href="lyric-writer.html">Lyric Writer</a>
+<a href="vocal-tool-comparator.html">Tool Comparator</a>
+<a href="demo-song-builder.html">Demo Song Builder</a>
+<a href="../guides/best-ai-singing-voice-tools-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div>
+</nav></header>
+
+<main class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Song Structure Planner</p>
+<section class="hero" style="padding:36px 0 10px">
+<h1>Song Structure Planner</h1>
+<p class="lead">Start from a proven structure, dial in bars and tempo, and see your song's runtime instantly — before you write a single lyric.</p>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="block">
+<div class="panel">
+<div class="row3">
+<div><label class="lbl" for="tplSelect">Structure template</label>
+<select id="tplSelect">
+<option value="pop">Verse–Chorus (Pop)</option>
+<option value="ababcb">ABABCB (Classic Rock)</option>
+<option value="hiphop">Hip-Hop</option>
+<option value="edm">EDM</option>
+<option value="ballad">Ballad</option>
+<option value="country">Country</option>
+</select></div>
+<div><label class="lbl" for="bpm">Tempo (BPM)</label><input type="number" id="bpm" value="120" min="40" max="220"></div>
+<div><label class="lbl" for="timesig">Time signature</label>
+<select id="timesig"><option value="4/4">4/4</option><option value="3/4">3/4</option><option value="6/8">6/8</option></select></div>
+</div>
+</div>
+
+<div class="panel">
+<h3>Sections</h3>
+<div class="tblwrap"><table class="data">
+<thead><tr><th>Section</th><th>Bars</th><th>Duration</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+<p><button class="btn small" id="addSec">+ Add section</button>
+<button class="btn ghost small" id="resetBtn">Reset to template</button></p>
+</div>
+
+<div class="panel result">
+<h3>Your song map</h3>
+<div class="kv"><span>Total bars</span><b id="totalBars">–</b></div>
+<div class="kv"><span>Estimated duration</span><span class="stat" id="totalTime">–</span></div>
+<div class="kv"><span>Streaming check</span><b id="sweetspot">–</b></div>
+<h4 style="margin-top:16px">Copy-ready map <button class="btn ghost small copybtn" data-copy="#summary">Copy</button>
+<button class="btn ghost small copybtn" data-download="song-map.txt" data-download-src="#summary">Download .txt</button></h4>
+<pre class="lyrics" id="summary"></pre>
+</div>
+
+<div class="callout"><p><b>Tip:</b> Demos pitch best at 2:00–3:30 with the chorus arriving before the one-minute mark. Once your map is set, draft the words in our <a href="lyric-writer.html">Lyric Writer</a> or jump straight to a full outline in the <a href="demo-song-builder.html">Demo Song Builder</a>.</p></div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</main>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free AI singing voice tools for songwriters</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/song-structure-planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free UGC Script Generator — Video Script Templates for Creators</title>
+<meta name="description" content="Generate a complete UGC video script in seconds: pick your product type and hook style, get a fill-in-the-blank script with hook, problem, solution and CTA.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html" style="text-decoration:none">🎬 <span>UGC</span> Toolkit</a>
+    <nav class="nav">
+      <a href="rate-calculator.html">Rate Calculator</a>
+      <a href="script-generator.html">Script Generator</a>
+      <a href="outreach-templates.html">Outreach Templates</a>
+      <a href="portfolio-tips.html">Portfolio Tips</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <h1>📝 UGC Script Generator</h1>
+  <p>Pick a product type and hook style — get a complete, fill-in-the-blank video script built on the hooks that convert in 2026.</p>
+</section>
+
+<div class="wrap">
+  <div class="tool-panel">
+    <div class="field">
+      <label>1. Product type</label>
+      <div class="radio-row" id="productRow">
+        <div class="radio-pill active" data-val="skincare">Skincare / Beauty</div>
+        <div class="radio-pill" data-val="food">Food / Beverage</div>
+        <div class="radio-pill" data-val="fitness">Fitness / Wellness</div>
+        <div class="radio-pill" data-val="tech">Tech / App</div>
+        <div class="radio-pill" data-val="fashion">Fashion</div>
+        <div class="radio-pill" data-val="home">Home / Lifestyle</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>2. Hook style (first 3 seconds)</label>
+      <div class="radio-row" id="hookRow">
+        <div class="radio-pill active" data-val="problem">Problem callout</div>
+        <div class="radio-pill" data-val="result">Bold result claim</div>
+        <div class="radio-pill" data-val="question">Curiosity question</div>
+        <div class="radio-pill" data-val="mistake">Common mistake</div>
+        <div class="radio-pill" data-val="story">Relatable story</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>3. Video length</label>
+      <div class="radio-row" id="lenRow">
+        <div class="radio-pill active" data-val="15">15 sec</div>
+        <div class="radio-pill" data-val="30">30 sec</div>
+        <div class="radio-pill" data-val="60">60 sec</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>4. Your product name (optional)</label>
+      <input type="text" id="productName" placeholder="e.g. GlowUp Vitamin C Serum">
+    </div>
+    <button class="btn" id="genBtn" style="width:100%">Generate My Script →</button>
+
+    <div class="script-output" id="scriptOutput"></div>
+    <button class="btn btn-outline copy-btn" id="copyBtn" style="display:none">📋 Copy Script</button>
+  </div>
+
+  <div class="prose" style="padding-top:0">
+    <h2>Why this script structure works</h2>
+    <p>Every high-converting UGC video follows the same skeleton: <strong>Hook → Problem → Solution → Proof → CTA</strong>. The hook decides everything — viewers decide in the first 3 seconds whether to keep watching. Pair this generator with fair pricing from our <a href="rate-calculator.html">rate calculator</a>.</p>
+  </div>
+</div>
+
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>🎬 UGC Toolkit</h4><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a></div>
+    <div><h4>Free Tools</h4><a href="rate-calculator.html">UGC Rate Calculator</a><a href="script-generator.html">Script Generator</a><a href="outreach-templates.html">Outreach Templates</a><a href="portfolio-tips.html">Portfolio Tips</a></div>
+    <div><h4>Learn</h4><a href="../blog/ugc-rate-calculator-guide.html">UGC Rates Guide 2026</a><a href="../blog/how-to-become-ugc-creator-no-followers.html">Become a UGC Creator</a></div>
+  </div>
+  <div class="footer-bottom">Built by <strong>NAN Marketing Agency</strong> · Free tools for creators · © 2026</div>
+</footer>
+
+<script>
+(function(){
+  var hooks = {
+    skincare: {
+      problem: 'POV: you\'ve tried 10 serums and your dark spots are STILL there 😤',
+      result: 'This $20 serum faded my dark spots in 3 weeks — here\'s proof',
+      question: 'Why is NOBODY talking about this ingredient for dark spots?',
+      mistake: 'Stop layering vitamin C wrong — you\'re wasting your money',
+      story: 'I was embarrassed to leave the house without makeup until I found this'
+    },
+    food: {
+      problem: 'POV: 6pm, you\'re starving, and takeout is $30 AGAIN 🙄',
+      result: 'This 5-minute meal tastes better than restaurant food — no joke',
+      question: 'What if I told you dinner could cost less than your coffee?',
+      mistake: 'You\'re meal-prepping wrong — that\'s why you quit by Wednesday',
+      story: 'I used to burn everything I cooked. Then my friend showed me this'
+    },
+    fitness: {
+      problem: 'POV: you\'ve been "starting Monday" for 6 months straight 😅',
+      result: 'I did this 10-minute routine for 30 days — the results shocked me',
+      question: 'Why do short workouts actually work better than long ones?',
+      mistake: 'Stop doing crunches — trainers say this works 3x better',
+      story: 'I hated the gym. Then I found a routine I actually stick to'
+    },
+    tech: {
+      problem: 'POV: you\'re paying for 5 apps that all do the same thing 💸',
+      result: 'This one app replaced 4 subscriptions on my phone',
+      question: 'Why are you still doing this manually in 2026?',
+      mistake: 'You\'re using this app wrong — here\'s the feature nobody knows',
+      story: 'I wasted 2 hours a day on this task until I found a better way'
+    },
+    fashion: {
+      problem: 'POV: your closet is full but you have "nothing to wear" 🙃',
+      result: 'This $35 find looks designer — the quality is unreal',
+      question: 'How is this not sold out yet??',
+      mistake: 'Stop buying fast fashion — this lasts 10x longer for the same price',
+      story: 'I never thought I\'d find my perfect fit online. Then this arrived'
+    },
+    home: {
+      problem: 'POV: your kitchen counters are a disaster zone every single day 😩',
+      result: 'This $15 gadget cut my cleaning time in half — instantly',
+      question: 'Why doesn\'t everyone know about this home hack?',
+      mistake: 'You\'re organizing your home wrong — pros do it like THIS',
+      story: 'My tiny apartment felt chaotic until I tried this one change'
+    }
+  };
+  var bRoll = {
+    skincare: ['Close-up: apply the product, texture shot', 'Before/after split screen (same lighting!)', 'Morning routine montage with product hero shot'],
+    food: ['Overhead: ingredients laid out beautifully', 'Sizzle / pour / close-up taste test', 'Final plated dish + happy first bite'],
+    fitness: ['Full-body: demonstrate the move, form close-up', 'Timer overlay: "Day 1 vs Day 30"', 'Sweaty high-five / real talk to camera'],
+    tech: ['Screen recording: the "aha" feature in action', 'Phone in hand, real-world use case', 'Before/after workflow comparison'],
+    fashion: ['Mirror try-on, twirl / movement shot', 'Detail close-ups: fabric, stitching, fit', '3 ways to style it — quick changes'],
+    home: ['Messy "before" wide shot', 'Product in action, satisfying transformation', 'Clean "after" reveal + lifestyle shot']
+  };
+  var ctas = {
+    '15': 'Tap the link — your future self will thank you. 🔗',
+    '30': 'Link\'s in the comments — grab yours before it sells out again. 🔗',
+    '60': 'I linked it below with my discount code. Try it for 30 days and thank me later. 🔗'
+  };
+
+  function pillVal(rowId){
+    var el = document.querySelector('#'+rowId+' .radio-pill.active');
+    return el ? el.getAttribute('data-val') : null;
+  }
+  ['productRow','hookRow','lenRow'].forEach(function(id){
+    document.getElementById(id).addEventListener('click', function(e){
+      var pill = e.target.closest('.radio-pill');
+      if(!pill) return;
+      document.querySelectorAll('#'+id+' .radio-pill').forEach(function(p){ p.classList.remove('active'); });
+      pill.classList.add('active');
+    });
+  });
+
+  document.getElementById('genBtn').addEventListener('click', function(){
+    var product = pillVal('productRow') || 'skincare';
+    var hook = pillVal('hookRow') || 'problem';
+    var len = pillVal('lenRow') || '30';
+    var name = document.getElementById('productName').value.trim() || '[PRODUCT NAME]';
+
+    var hookLine = hooks[product][hook];
+    var shots = bRoll[product];
+
+    var script =
+'🎬 UGC SCRIPT — ' + name + ' (' + len + 's)\n' +
+'━━━━━━━━━━━━━━━━━━━━\n\n' +
+'⏱️ 0:00–0:03 · HOOK (say it to camera, high energy)\n' +
+'"' + hookLine + '"\n' +
+'📸 B-roll: ' + shots[0] + '\n\n' +
+'⏱️ 0:03–0:' + (len === '15' ? '08' : '12') + ' · PROBLEM (relate!)\n' +
+'"Honestly, I was so frustrated because [describe the pain in YOUR words — 1 sentence]. I felt like I\'d tried everything."\n' +
+'📸 B-roll: ' + shots[1] + '\n\n' +
+'⏱️ 0:' + (len === '15' ? '08' : '12') + '–0:' + (len === '15' ? '12' : '22') + ' · SOLUTION (show the product)\n' +
+'"Then I found ' + name + '. [1 key feature] + [1 key benefit]. Watch — [demo it on camera]."\n' +
+'📸 B-roll: ' + shots[2] + '\n\n' +
+'⏱️ 0:' + (len === '15' ? '12' : '22') + '–0:' + len + ' · PROOF + CTA\n' +
+'"' + (len === '15' ? 'It actually works.' : 'I\'ve been using it for [X weeks] and [specific result]. No filter, no editing — this is real.') + ' ' + ctas[len] + '"\n\n' +
+'━━━━━━━━━━━━━━━━━━━━\n' +
+'✅ FILMING CHECKLIST:\n' +
+'• Natural light (face a window), phone on tripod\n' +
+'• Say the hook 3 ways — pick the best take\n' +
+'• Captions ON (85% watch muted)\n' +
+'• End with product in hand + smile\n\n' +
+'Made with 🎬 UGC Toolkit — ugc-toolkit';
+
+    var out = document.getElementById('scriptOutput');
+    out.textContent = script;
+    out.classList.add('show');
+    document.getElementById('copyBtn').style.display = 'inline-block';
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var text = document.getElementById('scriptOutput').textContent;
+    function done(){ 
+      var b = document.getElementById('copyBtn');
+      b.textContent = '✅ Copied!';
+      setTimeout(function(){ b.textContent = '📋 Copy Script'; }, 2000);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch(e){}
+      document.body.removeChild(ta); done();
+    }
+  });
+})();
+</script>
+</body>
+</html>

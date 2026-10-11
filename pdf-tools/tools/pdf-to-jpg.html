@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF to JPG Converter Online Free — No Signup | PDF Tools Hub</title>
+<meta name="description" content="Convert PDF pages to JPG or PNG images online for free. No signup, no watermark. Your files never leave your browser.">
+<link rel="canonical" href="https://pdftoolshub.github.io/tools/pdf-to-jpg.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📄 PDF<span>ToolsHub</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="merge-pdf.html">Merge</a>
+      <a href="split-pdf.html">Split</a>
+      <a href="compress-pdf.html">Compress</a>
+      <a href="jpg-to-pdf.html">JPG→PDF</a>
+      <a href="pdf-to-jpg.html">PDF→JPG</a>
+      <a href="rotate-pdf.html">Rotate</a>
+      <a href="protect-pdf.html">Protect</a>
+      <a href="watermark-pdf.html">Watermark</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="article" style="padding-bottom:0">
+    <h1>PDF to JPG Converter — Free, No Signup</h1>
+    <p class="meta">Turn every PDF page into a high-quality JPG or PNG image. Download pages individually or all at once as a ZIP.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="dropzone" id="dz">
+      <div style="font-size:2.2rem">🖼️</div>
+      <strong>Drop a PDF file here</strong> or click to select
+      <p>Select one PDF file. Each page will be rendered as an image you can download.</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden>
+    </div>
+    <div id="fileInfo" style="text-align:center;margin:10px 0"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
+      <label>Image format:
+        <select id="formatSel">
+          <option value="jpeg">JPG</option>
+          <option value="png">PNG</option>
+        </select>
+      </label>
+      <label>Quality:
+        <select id="scaleSel">
+          <option value="1.5">Standard</option>
+          <option value="2" selected>High</option>
+          <option value="3">Ultra (large files)</option>
+        </select>
+      </label>
+    </div>
+    <div class="progress" id="prog"><div id="progBar"></div></div>
+    <div style="text-align:center;margin-top:10px">
+      <button class="btn" id="goBtn" disabled>Convert to Images</button>
+      <button class="btn secondary" id="zipBtn" disabled style="margin-left:8px">Download All (ZIP)</button>
+    </div>
+    <div id="previewGrid" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px"></div>
+    <div class="result-box" id="resultBox"></div>
+    <p class="hint">🔒 Privacy: rendering happens entirely in your browser's memory. Nothing is sent to any server.</p>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>How to convert PDF to JPG</h2>
+    <ol>
+      <li>Click the box above or drag in a PDF file.</li>
+      <li>Choose JPG or PNG and your quality level.</li>
+      <li>Click <strong>Convert to Images</strong> — download pages one by one or grab them all as a ZIP.</li>
+    </ol>
+    <h2>Common questions</h2>
+    <h3>What quality are the images?</h3>
+    <p>Pages are rendered at 2× zoom by default (roughly 144 DPI), which is sharp for screens and documents. Choose Ultra for print-level detail.</p>
+    <h3>Can I convert password-protected PDFs?</h3>
+    <p>Only if you know the password — this tool does not remove protection. Use our <a href="protect-pdf.html">protect/unlock guidance</a> first if it's your own file.</p>
+    <h3>Is there a page limit?</h3>
+    <p>No hard limit, but very long PDFs (hundreds of pages) render faster on a desktop browser.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>📄 PDF Tools Hub</strong><p>Free, private, no-signup PDF tools.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="merge-pdf.html">Merge PDF</a><br><a href="split-pdf.html">Split PDF</a><br><a href="compress-pdf.html">Compress PDF</a><br><a href="jpg-to-pdf.html">JPG to PDF</a><br><a href="pdf-to-jpg.html">PDF to JPG</a></p></div>
+  </div>
+</footer>
+<script src="../js/pdf-to-jpg.js"></script>
+</body>
+</html>

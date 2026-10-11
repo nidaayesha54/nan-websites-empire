@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Insurance Calculator 2026 — Replacement Cost & Coverage Estimator</title>
+<meta name="description" content="Estimate your home's replacement cost and recommended dwelling, personal property and liability coverage. Free homeowners insurance calculator USA 2026.">
+<link rel="canonical" href="https://nan-insurancetools.surge.sh/tools/home-insurance-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Home Insurance Coverage Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Insurance<span>ToolsHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="life-insurance-calculator.html">Life</a><a href="auto-insurance-estimator.html">Auto</a><a href="health-insurance-comparator.html">Health</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Home Insurance Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Home Insurance Coverage Calculator</h1>
+<p>Estimate your home's <strong>replacement cost</strong> (what it costs to rebuild — not market value) and the coverage limits you likely need.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Living area (sq ft)</label><input type="number" id="sqft" value="2000" min="100"></div>
+<div class="field"><label>Construction type</label><select id="ct">
+<option value="150">Basic / tract home ($150/sqft)</option>
+<option value="185" selected>Standard ($185/sqft)</option>
+<option value="250">Custom / high-end ($250/sqft)</option>
+</select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Region cost factor</label><select id="reg">
+<option value="0.9">Low-cost area (Midwest/South)</option>
+<option value="1.0" selected>Average</option>
+<option value="1.2">High-cost (Northeast/West)</option>
+<option value="1.45">Very high (CA coastal, NYC, Hawaii)</option>
+</select></div>
+<div class="field"><label>Personal property value ($)</label><input type="number" id="pp" value="80000" min="0"></div>
+</div>
+<button class="btn" onclick="calc()">Calculate Coverage Needs</button>
+<div class="result" id="res">
+<h3>Recommended coverage</h3>
+<table class="cmp">
+<tr><th>Coverage</th><th>Recommended limit</th><th>Notes</th></tr>
+<tr><td>Dwelling (Coverage A)</td><td id="dwell"></td><td>Full replacement cost</td></tr>
+<tr><td>Other structures (B)</td><td id="os"></td><td>~10% of dwelling</td></tr>
+<tr><td>Personal property (C)</td><td id="ppc"></td><td>Your estimate or 50–70% of dwelling</td></tr>
+<tr><td>Loss of use (D)</td><td id="lou"></td><td>~20% of dwelling</td></tr>
+<tr><td>Liability (E)</td><td><strong>$300,000</strong></td><td>Minimum recommended</td></tr>
+</table>
+<p id="prem" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimate only — not financial advice.</strong> Replacement costs vary widely by local labor/materials. Insure to 100% of replacement cost to avoid coinsurance penalties. Get a professional appraisal for accuracy.</div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> InsuranceToolsHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var sqft=num('sqft'), rate=parseFloat(val('ct')), reg=parseFloat(val('reg'));
+  var pp=num('pp');
+  var repl = sqft*rate*reg;
+  document.getElementById('dwell').innerHTML='<strong>'+money(repl)+'</strong>';
+  document.getElementById('os').textContent=money(repl*0.10);
+  document.getElementById('ppc').textContent=money(Math.max(pp, repl*0.5));
+  document.getElementById('lou').textContent=money(repl*0.20);
+  document.getElementById('prem').textContent='Very rough premium guess: '+money(repl*0.0035)+'/yr (about 0.35% of dwelling value — the US average). Real quotes vary hugely by state, claims history and insurer.';
+  show('res');
+}
+</script>
+</body>
+</html>

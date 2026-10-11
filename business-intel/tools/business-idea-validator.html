@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Idea Validator — Score Your Startup Idea (Free)</title>
+  <meta name="description" content="Free business idea validator: score your startup idea across 10 criteria — market demand, competition, monetization, and more. Get an honest verdict in 2 minutes.">
+  <link rel="canonical" href="https://businessinteldaily.github.io/tools/business-idea-validator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📊 Business<span>Intel</span>Daily</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../guides/how-to-start-online-business-2026.html">Guides</a>
+      <a href="business-idea-validator.html" class="active">Tools</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-shell">
+  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html">Tools</a> / Idea Validator</div>
+  <h1>Business Idea Validator</h1>
+  <p class="sub">Answer 10 questions honestly. Get a scored verdict on whether your idea is worth pursuing — and what to fix first.</p>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <form id="validator-form">
+    <div class="field">
+      <label>Your business idea (one sentence)</label>
+      <input type="text" id="idea" placeholder="e.g. AI video ads for dental clinics" required>
+    </div>
+
+    <div class="field">
+      <label>1. Problem pain — how painful/expensive is the problem you solve?</label>
+      <select id="q1">
+        <option value="0">Nice-to-have / mild annoyance</option>
+        <option value="1">Real frustration, people complain about it</option>
+        <option value="2">Costs people significant time or money</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>2. Buyer budget — do your target customers have money to spend?</label>
+      <select id="q2">
+        <option value="0">Consumers with tight budgets / students</option>
+        <option value="1">Working professionals / small businesses</option>
+        <option value="2">Businesses with real budgets / enterprises</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>3. Reachability — can you find 100 ideal customers easily?</label>
+      <select id="q3">
+        <option value="0">They're scattered everywhere, hard to target</option>
+        <option value="1">They gather in a few known communities/platforms</option>
+        <option value="2">There's a clear list/directory of them I can contact</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>4. Competition — what's the competitive landscape?</label>
+      <select id="q4">
+        <option value="0">Dominated by huge funded players</option>
+        <option value="1">Some competitors, but they're weak/outdated</option>
+        <option value="2">Few or no direct competitors doing it well</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>5. Your edge — why will YOU win?</label>
+      <select id="q5">
+        <option value="0">No real advantage — anyone could copy me</option>
+        <option value="1">I have relevant skills/audience/access</option>
+        <option value="2">Unique expertise, network, or proprietary asset</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>6. Monetization clarity — how exactly does money come in?</label>
+      <select id="q6">
+        <option value="0">Vague — "ads" or "sponsorships someday"</option>
+        <option value="1">Clear model but untested pricing</option>
+        <option value="2">Clear model with validated price points</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>7. Willingness to pay — evidence people pay for this?</label>
+      <select id="q7">
+        <option value="0">No evidence — just my assumption</option>
+        <option value="1">Competitors charge, or people pay for adjacent solutions</option>
+        <option value="2">Someone already paid me or signed a letter of intent</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>8. Speed to revenue — how fast can money come in?</label>
+      <select id="q8">
+        <option value="0">6+ months of building before any revenue</option>
+        <option value="1">2–6 months to first dollar</option>
+        <option value="2">Can get paid within 30 days (service/pre-sale)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>9. Scalability — can this grow beyond trading hours for dollars?</label>
+      <select id="q9">
+        <option value="0">Pure 1:1 time-for-money, hard to scale</option>
+        <option value="1">Service now, can productize later</option>
+        <option value="2">Product/digital model with real leverage</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>10. Your commitment — will you work on this for 12 months?</label>
+      <select id="q10">
+        <option value="0">Excited now, but I'd quit if it's slow</option>
+        <option value="1">Committed for 6 months to test properly</option>
+        <option value="2">All-in for 12+ months regardless of early results</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-gold">Validate My Idea</button>
+  </form>
+
+  <div class="result" id="result">
+    <h3>Your Validation Score</h3>
+    <div class="big-num" id="score-num">0/20</div>
+    <div class="score-bar"><div class="score-fill" id="score-fill" style="width:0%"></div></div>
+    <div class="verdict" id="verdict"></div>
+    <div id="weakest" style="margin-top:14px"></div>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <p style="margin-top:20px"><strong>Related:</strong> <a href="../guides/how-to-start-online-business-2026.html">How to Start an Online Business →</a> · <a href="roi-calculator.html">ROI Calculator →</a></p>
+</div>
+
+<script>
+document.getElementById('validator-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var labels = {
+    q1:'Problem pain', q2:'Buyer budget', q3:'Reachability', q4:'Competition',
+    q5:'Your edge', q6:'Monetization clarity', q7:'Willingness to pay',
+    q8:'Speed to revenue', q9:'Scalability', q10:'Your commitment'
+  };
+  var total = 0, scores = [];
+  for (var i = 1; i <= 10; i++){
+    var v = parseInt(document.getElementById('q'+i).value, 10);
+    total += v;
+    scores.push({label: labels['q'+i], value: v});
+  }
+  document.getElementById('score-num').textContent = total + '/20';
+  document.getElementById('score-fill').style.width = (total/20*100) + '%';
+  var verdict;
+  if (total >= 16) verdict = '🟢 STRONG — Go build it. This idea has real legs. Validate with 10 customer conversations this week.';
+  else if (total >= 11) verdict = '🟡 PROMISING — Fix the weak spots below before investing serious time or money.';
+  else if (total >= 6) verdict = '🟠 RISKY — Major gaps. Consider pivoting the niche, the buyer, or the model.';
+  else verdict = '🔴 WEAK — Step back. Rework the fundamentals (problem, buyer, edge) before proceeding.';
+  document.getElementById('verdict').textContent = verdict;
+  var weak = scores.filter(function(s){ return s.value === 0; });
+  var html = '';
+  if (weak.length){
+    html = '<strong>Fix these first:</strong>';
+    weak.forEach(function(w){
+      html += '<div class="check-row"><span class="dot bad"></span><div><strong>'+w.label+'</strong> — scored 0. This is your biggest risk; address it before anything else.</div></div>';
+    });
+  } else {
+    html = '<div class="check-row"><span class="dot good"></span><div>No zero-scores — solid across the board. Next step: talk to 10 real customers.</div></div>';
+  }
+  document.getElementById('weakest').innerHTML = html;
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+});
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Business Intel Daily</h4><p>Daily business intelligence for entrepreneurs in premium markets.</p></div>
+      <div><h4>Guides</h4><p><a href="../guides/how-to-start-online-business-2026.html">Start an online business</a><br><a href="../guides/small-business-marketing-strategies.html">Marketing strategies</a><br><a href="../guides/passive-income-ideas-2026.html">Passive income ideas</a></p></div>
+      <div><h4>Tools</h4><p><a href="business-idea-validator.html">Idea validator</a><br><a href="roi-calculator.html">ROI calculator</a><br><a href="break-even-calculator.html">Break-even calculator</a></p></div>
+    </div>
+    <div class="fine">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 Business Intel Daily. Educational content only — not financial advice.</div>
+  </div>
+</footer>
+</body>
+</html>

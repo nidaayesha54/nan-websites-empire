@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Scripts for AI Voices: 7 Rules That Work</title>
+<meta name="description" content="The script is 80% of TTS quality. 7 concrete rules for writing voiceover copy that AI voices read naturally — with examples and a checklist.">
+<link rel="canonical" href="https://nan-ttshub.surge.sh/blog/writing-scripts-for-ai-voices.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🔊 TextToSpeechHub</a>
+<div class="navlinks">
+<a href="../tools/tts-studio.html">TTS Studio</a>
+<a href="../tools/voice-style-guide.html">Voice Styles</a>
+<a href="../tools/ssml-helper.html">SSML Builder</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap prose">
+<h1>Writing Scripts for AI Voices: 7 Rules That Work</h1>
+<p><em>Oct 12, 2026 · 5 min read</em></p>
+<p>Creators obsess over which TTS engine to use, then feed it a script written for silent reading. The script is 80% of the result. These seven rules fix that.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>1. One idea per sentence</h2>
+<p>Written prose loves compound-complex sentences. AI voices don't. Split them: <em>"Because the market shifted, companies that adapted quickly survived"</em> becomes <em>"The market shifted. The companies that adapted quickly? They survived."</em> Same meaning, twice the impact.</p>
+
+<h2>2. Write numbers the way they're spoken</h2>
+<p>TTS engines guess at digits — badly. Write "twenty twenty-six" instead of "2026", "half past three" instead of "3:30" when the exact format doesn't matter, or wrap exact figures in <span class="tag">&lt;say-as&gt;</span> tags via our <a href="../tools/ssml-helper.html">SSML helper</a>.</p>
+
+<h2>3. Use contractions everywhere</h2>
+<p>"You will love this" sounds like a textbook. "You'll love this" sounds like a person. Go through your draft and contract every "do not", "cannot", and "it is" — unless you're deliberately aiming for formal.</p>
+
+<h2>4. Plant signposts for listeners</h2>
+<p>Readers can scan back; listeners can't. Use explicit structure: "First…", "Here's why that matters…", "The bottom line is…". These phrases also give TTS engines natural intonation cues.</p>
+
+<h2>5. Read it aloud yourself first</h2>
+<p>If you stumble reading your own script, the AI will too. Read every draft out loud once — anywhere you pause, add a comma or an SSML break; anywhere you stress a word, add emphasis.</p>
+
+<h2>6. Front-load the hook</h2>
+<p>Spoken intros have about 5 seconds before listeners decide. Put the payoff first: <em>"This one setting doubles your voiceover quality"</em> beats <em>"In today's video, we're going to discuss various settings…"</em></p>
+
+<h2>7. End sentences on strong words</h2>
+<p>English intonation falls at the end of statements. Ending on a filler word ("…you know?") or preposition leaves the voice hanging awkwardly. Rewrite so the final word carries weight.</p>
+
+<h2>The workflow</h2>
+<ol>
+<li>Draft with these rules in mind</li>
+<li>Score it with our <a href="../tools/readability-scorer.html">readability scorer</a> (aim for 70+)</li>
+<li>Pick the tone with the <a href="../tools/voice-style-guide.html">voice style guide</a></li>
+<li>Test in the <a href="../tools/tts-studio.html">TTS Studio</a></li>
+<li>Render final audio in your production TTS tool</li>
+</ol>
+<p>More technique in the full guide: <a href="../guides/how-to-make-text-to-speech-sound-natural.html">how to make TTS sound natural</a>.</p>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+</body>
+</html>

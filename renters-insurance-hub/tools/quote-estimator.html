@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renters Insurance Quote Estimator by State (2026)</title>
+<meta name="description" content="Estimate your 2026 renters insurance premium by state, coverage amount, and deductible. Free instant estimate with common discounts included.">
+<link rel="canonical" href="https://nan-rentersins.surge.sh/tools/quote-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Renters Insurance Quote Estimator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Estimates monthly and annual renters insurance premiums by US state, coverage amount, deductible, and discounts."}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🏠 Renters<span>InsuranceHub</span></a>
+<nav class="nav"><a href="belongings-calculator.html">Inventory</a><a href="coverage-quiz.html">Quiz</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<div class="container"><nav class="breadcrumb"><a href="../index.html">Home</a> › Cost Estimator</nav></div>
+
+<section class="section" style="padding-top:10px"><div class="container">
+<div class="tool-wrap">
+<h1>Renters Insurance Cost Estimator</h1>
+<p>Get an instant 2026 estimate based on national averages. Pick your state, coverage, and deductible — then toggle discounts you likely qualify for.</p>
+<form id="calc-form">
+<div class="field-row">
+<div class="field"><label for="state">State</label><select id="state"></select></div>
+<div class="field"><label for="coverage">Personal property coverage</label>
+<select id="coverage">
+<option value="10000">$10,000</option><option value="20000">$20,000</option>
+<option value="30000" selected>$30,000</option><option value="40000">$40,000</option>
+<option value="50000">$50,000</option><option value="75000">$75,000</option>
+<option value="100000">$100,000</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="deductible">Deductible</label>
+<select id="deductible"><option value="250">$250</option><option value="500" selected>$500</option><option value="1000">$1,000</option><option value="2500">$2,500</option></select></div>
+<div class="field"><label for="liability">Liability coverage</label>
+<select id="liability"><option value="100000" selected>$100,000</option><option value="300000">$300,000</option><option value="500000">$500,000</option></select></div>
+</div>
+<div class="field"><label for="valuables">Valuables needing a scheduled floater ($)</label>
+<input type="number" id="valuables" min="0" step="100" value="0" placeholder="e.g. 2000 for an engagement ring"></div>
+<div class="field"><label>Discounts you qualify for</label>
+<label style="font-weight:400"><input type="checkbox" id="d-bundle"> Bundle with auto insurance (−10%)</label><br>
+<label style="font-weight:400"><input type="checkbox" id="d-safety"> Deadbolt + smoke/CO alarms (−5%)</label><br>
+<label style="font-weight:400"><input type="checkbox" id="d-claims"> Claims-free 3+ years (−5%)</label></div>
+<button class="btn" type="submit">Estimate My Cost</button>
+</form>
+<div class="result" id="result">
+<h3>Your estimated premium</h3>
+<div class="big"><span id="r-monthly">$0</span><span style="font-size:1rem;font-weight:400"> / month</span></div>
+<p><strong id="r-annual">$0</strong> per year</p>
+<p id="r-compare"></p>
+<p class="note" id="r-detail"></p>
+</div>
+<div class="disclaimer">Estimates only, not financial advice. Modeled on 2026 national averages (~$180/year base); actual insurer quotes vary by company, credit, claims history, and building type.</div>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<p class="note">Learn more: <a href="../guides/renters-insurance-cost-2026.html">what drives renters insurance costs in 2026</a> · <a href="belongings-calculator.html">value your belongings</a>.</p>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> RentersInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a> · <a href="../guides/what-does-renters-insurance-cover.html">Coverage Guide</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/estimator.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Voiceover Script Optimizer — Make Your Script TTS-Perfect (Free)</title>
+<meta name="description" content="Free AI voiceover script optimizer: paste your script and get a TTS-friendly version with numbers expanded, abbreviations spoken out, and pacing marks added. Works with ElevenLabs, Murf, Play.ht and any text-to-speech tool.">
+<link rel="canonical" href="https://nan-aivoiceover.surge.sh/tools/script-optimizer.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="../index.html">AI<span>Voiceover</span>Video</a>
+<nav class="navlinks"><a href="../index.html">Home</a><a href="voice-finder.html">Voice Finder</a><a href="duration-calculator.html">Duration Calculator</a></nav></div></header>
+<div class="wrap prose">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Script Optimizer</div>
+<h1>AI Voiceover Script Optimizer</h1>
+<p>Paste any script below. The optimizer rewrites it the way AI voices <em>want</em> to read it: numbers become words ("$5.99" → "five dollars and ninety-nine cents"), abbreviations are expanded, URLs and emojis are removed, and pacing line-breaks are added. Works with ElevenLabs, Murf, Play.ht, Speechify — every TTS engine.</p>
+
+<div class="toolbox">
+<label for="in">Your script</label>
+<textarea id="in" placeholder="Paste your voiceover script here… e.g. Dr. Smith earned $5,000 in 2024 — a 300% increase! Visit https://example.com at 3:30 PM."></textarea>
+<label><input type="checkbox" id="opPace" checked style="width:auto"> Add pacing marks (sentence line-breaks + heading pauses)</label><br>
+<label><input type="checkbox" id="opClean" checked style="width:auto"> Clean formatting (trim lines, remove junk)</label><br>
+<button class="run" id="go">Optimize Script</button>
+<button class="run" id="copy" style="background:#223052;color:#fff">Copy result</button>
+<div class="out" id="out" style="display:none"></div>
+<div class="stat" id="stats" style="margin-top:14px"></div>
+</div>
+
+<div class="adslot"><div class="lbl">ADVERTISEMENT</div><!-- AD-SLOT -->
+<script>atOptions = {'key' : '99bbb8d1f41996e5ce9f8c14b86321a2','format' : 'iframe','height' : 250,'width' : 300,'params' : {}};</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>What the optimizer fixes</h2>
+<ul>
+<li><b>Numbers → words:</b> "2024" becomes "twenty twenty-four" in year context or "two thousand twenty-four" — TTS engines guess wrong half the time.</li>
+<li><b>Money &amp; percentages:</b> "$5.99" → "five dollars and ninety-nine cents", "300%" → "three hundred percent".</li>
+<li><b>Times:</b> "3:30 PM" → "three thirty P M" — no more "three colon thirty".</li>
+<li><b>Abbreviations:</b> Dr., Mr., e.g., i.e., etc., St., Ave. all expanded.</li>
+<li><b>Links &amp; emojis stripped:</b> URLs read aloud ruin narration; emojis are skipped anyway.</li>
+<li><b>Pacing:</b> long paragraphs split into sentence lines; ALL-CAPS headings converted to title case with pause marks.</li>
+</ul>
+<p>Next step: check your audio length with the <a href="duration-calculator.html">duration calculator</a>, then pick the right engine with the <a href="voice-finder.html">voice finder quiz</a>.</p>
+</div>
+<footer>
+Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</footer>
+<script src="../js/optimizer.js"></script>
+</body>
+</html>

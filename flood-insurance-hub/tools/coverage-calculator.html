@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flood Coverage Calculator — Building & Contents Needs (NFIP Limits)</title>
+<meta name="description" content="How much flood coverage do you need? Calculate recommended building and contents coverage, compare against NFIP limits, and see if you need private excess coverage.">
+<link rel="canonical" href="https://nan-floodins.surge.sh/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Flood Coverage Calculator — Building & Contents Needs (NFIP Limits)",
+  "description": "Calculate recommended building and contents flood coverage and compare against NFIP limits.",
+  "url": "https://nan-floodins.surge.sh/"
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><span class="wave">🌊</span> FloodInsuranceHub</a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰ Menu</button>
+    <div class="nav-links" id="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="quote-estimator.html">Quote Estimator</a>
+      <a href="risk-checker.html">Risk Checker</a>
+      <a href="coverage-calculator.html">Coverage Calculator</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html" style="color:#bae6fd">Home</a> › Coverage Calculator</p>
+    <h1>Flood Coverage Needs Calculator</h1>
+    <p>Find the right building and contents coverage for your home — and see whether NFIP limits are enough or you need private excess coverage.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container tool-wrap">
+    <div class="tool-card">
+      <form id="covForm" onsubmit="return false;">
+        <div class="field">
+          <label for="rebuild">Home rebuilding cost ($)</label>
+          <input type="number" id="rebuild" min="50000" max="5000000" value="350000" step="5000">
+          <small>Cost to rebuild the structure, not land value or market price.</small>
+        </div>
+        <div class="field">
+          <label for="mortgage">Outstanding mortgage balance ($) <small style="font-weight:400">(0 if none)</small></label>
+          <input type="number" id="mortgage" min="0" max="5000000" value="200000" step="5000">
+        </div>
+        <div class="field">
+          <label for="contents">Estimated value of belongings ($)</label>
+          <input type="number" id="contents" min="0" max="1000000" value="75000" step="5000">
+          <small>Furniture, electronics, clothing, appliances. Rule of thumb: 20–30% of home value.</small>
+        </div>
+        <div class="field">
+          <label for="highvalue">High-value items in lower levels? (art, instruments, home office)</label>
+          <select id="highvalue">
+            <option value="no" selected>No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="basementFin">Finished basement?</label>
+          <select id="basementFin">
+            <option value="no" selected>No basement / unfinished</option>
+            <option value="yes">Yes, finished basement</option>
+          </select>
+          <small>NFIP covers very little in basements — finished basements are a major coverage gap.</small>
+        </div>
+        <button class="btn" type="submit" onclick="calcCoverage()">Calculate My Coverage Needs</button>
+      </form>
+    </div>
+
+    <div class="result" id="result" role="status" aria-live="polite"></div>
+
+    <h2 style="margin:30px 0 12px;color:var(--blue-900)">NFIP Coverage Limits at a Glance</h2>
+    <table class="compare-table">
+      <tr><th></th><th>Building</th><th>Contents</th></tr>
+      <tr><td><strong>Residential (1–4 units)</strong></td><td>$250,000 max</td><td>$100,000 max</td></tr>
+      <tr><td><strong>Basement coverage</strong></td><td colspan="2">Very limited — structural elements only; no finished walls, floors, or personal property in basements (with narrow exceptions)</td></tr>
+      <tr><td><strong>Deductibles</strong></td><td colspan="2">$1,000 – $10,000 (separate deductibles for building and contents)</td></tr>
+    </table>
+
+    <div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> Coverage needs depend on your property, lender requirements, and risk tolerance. Confirm limits with a licensed flood insurance agent.</div>
+
+    <p style="color:var(--muted)">Related: <a href="quote-estimator.html">estimate your premium</a> · <a href="../guides/nfip-vs-private-flood.html">NFIP vs private flood insurance</a> · <a href="../guides/flood-insurance-cost-2026.html">2026 cost guide</a></p>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>🌊 FloodInsuranceHub</h4>
+        <p>Free flood insurance tools and guides for US homeowners.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="quote-estimator.html">Quote Estimator</a></li>
+          <li><a href="risk-checker.html">Risk Checker</a></li>
+          <li><a href="coverage-calculator.html">Coverage Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides &amp; Blog</h4>
+        <ul>
+          <li><a href="../guides/flood-insurance-cost-2026.html">Flood Insurance Cost 2026</a></li>
+          <li><a href="../guides/nfip-vs-private-flood.html">NFIP vs Private</a></li>
+          <li><a href="../guides/do-i-need-flood-insurance.html">Do I Need It?</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+      <br>Estimates only, not financial advice.
+    </div>
+  </div>
+</footer>
+
+<script>
+function calcCoverage() {
+  var rebuild = Math.max(50000, parseFloat(document.getElementById('rebuild').value) || 350000);
+  var mortgage = Math.max(0, parseFloat(document.getElementById('mortgage').value) || 0);
+  var contents = Math.max(0, parseFloat(document.getElementById('contents').value) || 0);
+  var highValue = document.getElementById('highvalue').value === 'yes';
+  var finBasement = document.getElementById('basementFin').value === 'yes';
+
+  var NFIP_BLDG = 250000, NFIP_CONT = 100000;
+
+  // Recommended building coverage: full rebuilding cost, but at least mortgage balance
+  var recBldg = Math.max(rebuild, mortgage);
+  // Recommended contents: stated belongings value (+20% buffer for high-value items)
+  var recCont = Math.round(contents * (highValue ? 1.2 : 1.0));
+
+  var bldgGap = Math.max(0, recBldg - NFIP_BLDG);
+  var contGap = Math.max(0, recCont - NFIP_CONT);
+  var needsExcess = bldgGap > 0 || contGap > 0;
+
+  function money(v) { return '$' + Math.round(v).toLocaleString(); }
+  function bar(pct, color) {
+    var c = Math.min(100, pct);
+    return '<div class="bar-wrap"><div class="bar" style="width:' + c + '%;background:' + color + '"></div></div>';
+  }
+
+  var html = '<h3>Your recommended coverage</h3>' +
+    '<table class="compare-table">' +
+    '<tr><th>Type</th><th>Recommended</th><th>NFIP max</th><th>Gap</th></tr>' +
+    '<tr><td><strong>Building</strong></td><td>' + money(recBldg) + '</td><td>' + money(NFIP_BLDG) + '</td><td>' +
+      (bldgGap > 0 ? '<strong style="color:var(--red)">' + money(bldgGap) + ' short</strong>' : '<span style="color:var(--green)">Covered</span>') + '</td></tr>' +
+    '<tr><td><strong>Contents</strong></td><td>' + money(recCont) + '</td><td>' + money(NFIP_CONT) + '</td><td>' +
+      (contGap > 0 ? '<strong style="color:var(--red)">' + money(contGap) + ' short</strong>' : '<span style="color:var(--green)">Covered</span>') + '</td></tr>' +
+    '</table>' +
+    '<p><strong>Building coverage vs NFIP limit</strong></p>' + bar((recBldg / NFIP_BLDG) * 100, 'linear-gradient(90deg,#0ea5e9,#0369a1)') +
+    '<p><strong>Contents coverage vs NFIP limit</strong></p>' + bar((recCont / NFIP_CONT) * 100, 'linear-gradient(90deg,#38bdf8,#0284c7)');
+
+  if (needsExcess) {
+    html += '<div class="alert warn"><strong>NFIP alone won\'t fully cover you.</strong> You have a ' + money(bldgGap + contGap) +
+      ' coverage gap above NFIP limits. Options: (1) a <strong>private excess flood policy</strong> stacked on top of NFIP, or (2) a <strong>full private flood policy</strong> with higher limits. ' +
+      '<a href="../guides/nfip-vs-private-flood.html">Compare NFIP vs private →</a></div>';
+  } else {
+    html += '<div class="alert good"><strong>Good news:</strong> NFIP limits cover your needs. A standard NFIP policy (or equivalent private policy) should be sufficient — just make sure deductibles match your emergency fund.</div>';
+  }
+
+  if (finBasement) {
+    html += '<div class="alert danger"><strong>⚠️ Finished basement gap:</strong> NFIP barely covers basements — no finished walls, floors, or personal property below grade. A private policy with basement coverage (or moving valuables upstairs) is strongly advised.</div>';
+  }
+  if (mortgage > 0 && mortgage > NFIP_BLDG) {
+    html += '<div class="alert info"><strong>Lender note:</strong> Your mortgage (' + money(mortgage) + ') exceeds the NFIP building max. Most lenders accept NFIP + excess coverage to satisfy the requirement.</div>';
+  }
+
+  html += '<p style="font-size:.9rem;color:var(--muted)">Recommended building coverage = full rebuilding cost (' + money(rebuild) + ')' +
+    (mortgage > rebuild ? ', raised to cover your mortgage (' + money(mortgage) + ')' : '') + '. Contents = your belongings estimate' +
+    (highValue ? ' + 20% buffer for high-value items' : '') + '.</p>';
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.innerHTML = html;
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>

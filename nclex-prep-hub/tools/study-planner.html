@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCLEX Study Planner — Free Day-by-Day Schedule Builder</title>
+<meta name="description" content="Free NCLEX study schedule planner: enter weeks until your exam and hours per day to get a day-by-day topic plan with phases and progress tracking.">
+<link rel="canonical" href="https://nan-nclexprep.surge.sh/">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🩺 NCLEX<span>PrepHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="study-planner.html">Planner</a><a href="practice-quiz.html">Quiz</a><a href="readiness.html">Readiness</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<h1>NCLEX Study Planner — Build Your Day-by-Day Schedule</h1>
+<p>Tell us your exam date window and daily study hours. We generate a structured plan across three phases — foundation review, question practice, and mastery.</p>
+</div></section>
+
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+
+<section class="block"><div class="wrap">
+<div class="calc">
+<form id="planner-form">
+<label for="weeks">Weeks until your exam</label>
+<input type="number" id="weeks" min="1" max="16" value="6" required>
+<label for="hours">Study hours per day</label>
+<input type="number" id="hours" min="0.5" max="12" step="0.5" value="3" required>
+<label for="examtype">Exam type</label>
+<select id="examtype"><option value="RN">NCLEX-RN</option><option value="PN">NCLEX-PN</option></select>
+<button type="submit" class="btn" style="margin-top:20px">Generate My Study Plan</button>
+</form>
+<div id="plan-output" style="margin-top:20px"></div>
+</div>
+
+<h2 class="sec">How the planner works</h2>
+<p>Your schedule is split into three phases: <strong>Foundation Review</strong> (about 45% of your time) covers every NCLEX content category — from pharmacology to maternity. <strong>Question Practice</strong> (about 35%) shifts you into timed question blocks with rationale review. <strong>Mastery &amp; Review</strong> (the final 20%) targets weak areas with full-length practice exams. Pair this plan with our <a href="practice-quiz.html">practice quiz</a> and check your progress with the <a href="readiness.html">readiness assessment</a>. For a written walkthrough, see our <a href="../guides/nclex-study-plan.html">4-week NCLEX study plan guide</a>.</p>
+</div></section>
+
+<footer><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p><a href="../index.html">Home</a> · <a href="practice-quiz.html">Practice Quiz</a> · <a href="readiness.html">Readiness Check</a> · <a href="../guides/how-to-pass-nclex-2026.html">How to Pass the NCLEX</a></p>
+</div></footer>
+<script src="../js/study-planner.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

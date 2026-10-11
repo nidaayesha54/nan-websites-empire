@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footballer Wage Calculator — Weekly to Annual &amp; After-Tax | FootballTransferHub</title>
+<meta name="description" content="Free footballer wage calculator: convert weekly wages to annual pay and estimate take-home after tax in England, Spain, Italy, Germany and France.">
+<link rel="canonical" href="https://nan-footballtransfers.surge.sh/tools/wage-calculator.html">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="/index.html">⚽ <span>Football</span>TransferHub</a>
+<nav><a href="/index.html">Home</a><a href="/tools/transfer-fee-calculator.html">Fee Calculator</a><a href="/tools/rumor-tracker.html">Rumor Tracker</a><a href="/guides/how-football-transfers-work.html">Guides</a></nav>
+</div></header>
+<main><section><div class="container">
+<h1>Footballer Wage Calculator</h1>
+<p style="color:var(--muted);max-width:640px">Enter a weekly wage to see the annual figure plus a rough after-tax take-home estimate. Tax rates are simplified flat estimates for high earners — not financial advice. Pair with the <a href="/tools/transfer-fee-calculator.html">transfer fee calculator</a> for the full deal picture.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<form class="tool" id="wageForm" style="margin-top:1.2rem">
+<label for="weekly">Weekly wage (gross, in local currency)</label>
+<input type="number" id="weekly" min="0" step="100" value="100000" required>
+<label for="country">Country (for tax estimate)</label>
+<select id="country">
+<option value="0.45">England — ~45% top rate</option>
+<option value="0.47">Spain — ~47% top rate</option>
+<option value="0.43">Italy — ~43% top rate</option>
+<option value="0.45">Germany — ~45% top rate</option>
+<option value="0.45">France — ~45% top rate</option>
+</select>
+<br><br><button class="btn" type="submit">Calculate</button>
+</form>
+<div class="result" id="result" style="display:none;max-width:640px">
+<div style="color:var(--muted)">Annual gross</div>
+<div class="big" id="annual"></div>
+<div id="aftertax" style="margin-top:.6rem"></div>
+<div style="margin-top:.6rem;color:var(--muted);font-size:.9rem">Monthly gross: <strong id="monthly"></strong></div>
+</div>
+<div class="ad-slot">Advertisement</div>
+</div></section></main>
+<footer class="site"><div class="container">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div>| <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+<script src="/js/main.js"></script>
+<script src="/js/wage-calculator.js"></script>
+</body>
+</html>

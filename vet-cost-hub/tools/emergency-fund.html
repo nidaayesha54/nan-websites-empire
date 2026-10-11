@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Emergency Fund Calculator — How Much Should You Save in 2026?</title>
+<meta name="description" content="Free pet emergency fund calculator: enter breed risk, age & savings timeline to get your recommended vet emergency fund target and monthly savings goal.">
+<link rel="canonical" href="https://nan-vetcost.surge.sh/tools/emergency-fund.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pet Emergency Fund Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🐾 Vet<span>CostHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="visit-cost.html">Visit Cost</a><a href="insurance-vs-savings.html">Insurance vs Savings</a><a href="../guides/how-to-save-on-vet-bills.html">Guides</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Pet Emergency Fund Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Pet Emergency Fund Calculator</h1>
+<p>A single ER visit averages $1,500+, and emergency surgery can run $2,000–$7,000. Tell us about your pet and we'll set a realistic savings target based on breed risk and age.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Pet type</label><select id="pet">
+<option value="dog">Dog</option>
+<option value="cat">Cat</option>
+</select></div>
+<div class="field"><label>Age group</label><select id="age">
+<option value="1.1">Young (under 2) — curious & accident-prone</option>
+<option value="1" selected>Adult (2–7) — typical risk</option>
+<option value="1.4">Senior (8+) — chronic conditions rise</option>
+</select></div>
+</div>
+<div class="field"><label>Breed risk level</label><select id="risk">
+<optgroup label="Lower risk">
+<option value="0.8">Mixed breed / rescue (dog)</option>
+<option value="0.8">Domestic shorthair (cat)</option>
+</optgroup>
+<optgroup label="Average risk">
+<option value="1" selected>Most purebreds — Labrador, Beagle, Siamese…</option>
+</optgroup>
+<optgroup label="Higher risk — breathing, joint or cancer-prone">
+<option value="1.35">French Bulldog, English Bulldog, Pug (brachycephalic)</option>
+<option value="1.35">Great Dane, German Shepherd (GDV / joints)</option>
+<option value="1.35">Dachshund (spinal/IVDD risk)</option>
+<option value="1.35">Golden Retriever, Boxer (cancer risk)</option>
+<option value="1.35">Persian, Maine Coon (breed-linked conditions)</option>
+</optgroup>
+</select></div>
+<div class="field"><label>Build the fund over (months)</label><input type="number" id="months" value="12" min="1" max="36"></div>
+<button class="btn btn-teal" onclick="calc()">Calculate My Fund Target</button>
+<div class="result" id="res">
+<h3>Your recommended emergency fund</h3>
+<div class="big" id="target"></div>
+<p id="monthly" style="font-weight:700;color:var(--teal-dark)"></p>
+<p id="explain" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Cost estimates only — not veterinary advice. Always consult your veterinarian.</strong> This sets a savings target, not a medical recommendation. Fund size should also reflect your income, savings, and access to credit.</div>
+<div class="related"><h3>Keep planning</h3>
+<ul>
+<li><a href="insurance-vs-savings.html">Pet Insurance vs Self-Insuring</a> — compare with an insurance alternative</li>
+<li><a href="visit-cost.html">Vet Visit Cost Estimator</a> — see what procedures actually cost</li>
+<li><a href="../guides/how-much-does-vet-cost-2026.html">How Much Does a Vet Visit Cost in 2026?</a></li>
+<li><a href="../blog/vet-payment-options.html">Vet Payment Options: CareCredit, Plans & Financing</a></li>
+</ul></div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> VetCostHub. Cost estimates only — not veterinary advice. Always consult your veterinarian.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var risk=num('risk'), age=num('age'), months=Math.max(1,num('months'));
+  var base=3000; // national starting target
+  var target=round100(base*risk*age);
+  var lo=round100(target*0.8), hi=round100(target*1.2);
+  var per=Math.round(target/months);
+  document.getElementById('target').textContent=money(lo)+' – '+money(hi);
+  document.getElementById('monthly').textContent='Save about '+money(per)+'/month for '+months+' months to reach the midpoint ('+money(target)+').';
+  var why='Base '+money(base)+' × breed-risk '+risk.toFixed(2)+' × age factor '+age.toFixed(1)+'. High-risk breeds and seniors are statistically more likely to face $3,000+ bills.';
+  document.getElementById('explain').textContent=why;
+  show('res');
+}
+calc();
+</script>
+</body>
+</html>

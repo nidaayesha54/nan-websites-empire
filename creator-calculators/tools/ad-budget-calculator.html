@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Budget Calculator — Plan Meta &amp; Google Ads Spend (2026)</title>
+  <meta name="description" content="Free ad budget calculator: enter your product price and conversion rate to get a data-backed daily budget for Meta and Google ads, plus your max profitable cost per sale.">
+  <link rel="canonical" href="https://creatorcalculators.github.io/tools/ad-budget-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🧮 Creator<span>Calculators</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="freelance-rate-calculator.html">Rate Calc</a>
+        <a href="youtube-revenue-calculator.html">YouTube Calc</a>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="calc-page">
+    <div class="wrap">
+      <h1>Ad Budget Calculator</h1>
+      <p class="lede">Don&rsquo;t burn money guessing. Enter your numbers and get a profitable daily budget for Meta or Google ads — plus the maximum you can afford to pay per sale.</p>
+
+      <div class="calc-grid">
+        <div class="panel">
+          <h2>Your Funnel</h2>
+          <div class="field">
+            <label for="goal">Campaign goal</label>
+            <select id="goal" onchange="toggleGoal()">
+              <option value="sales">🛒 Product sales</option>
+              <option value="leads">📩 Lead generation</option>
+            </select>
+          </div>
+          <div class="field" id="price-field">
+            <label for="price">Product price ($)</label>
+            <input type="number" id="price" value="49" min="1" step="1">
+          </div>
+          <div class="field" id="deal-field" style="display:none;">
+            <label for="deal">Average deal value ($)</label>
+            <input type="number" id="deal" value="500" min="1" step="10">
+            <span class="hint">What one closed customer is worth.</span>
+          </div>
+          <div class="field" id="conv-field">
+            <label for="conv">Website conversion rate (%)</label>
+            <input type="number" id="conv" value="2" min="0.1" max="50" step="0.1">
+            <span class="hint">Visitors → buyers. Average is 1–3%.</span>
+          </div>
+          <div class="field" id="close-field" style="display:none;">
+            <label for="close">Lead → customer close rate (%)</label>
+            <input type="number" id="close" value="10" min="0.1" max="100" step="1">
+            <span class="hint">What % of leads become paying customers.</span>
+          </div>
+          <div class="field">
+            <label for="target">Target sales per month</label>
+            <input type="number" id="target" value="100" min="1" step="1">
+          </div>
+          <button class="btn" onclick="calculate()">Calculate My Budget</button>
+        </div>
+
+        <div class="result" id="result" style="display:none;">
+          <h2>Your Ad Budget</h2>
+          <div class="big"><span id="r-daily">$0</span><small>recommended daily budget (scale phase)</small></div>
+          <table>
+            <tr><td>Max profitable <span id="r-cpa-label">cost per sale</span></td><td id="r-cpa">$0</td></tr>
+            <tr><td>Monthly ad spend at target</td><td id="r-monthly">$0</td></tr>
+            <tr><td>Expected monthly revenue</td><td id="r-rev">$0</td></tr>
+            <tr><td>14-day test budget (total)</td><td id="r-test">$0</td></tr>
+          </table>
+          <div class="note">💡 Rule of thumb: keep ad cost ≤ 30% of revenue for a healthy margin. Start with the 14-day test budget to gather data, then scale winners to the daily budget. Meta needs ~50 conversions/week to optimize — the test budget covers that.</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>How the ad budget formula works</h2>
+        <div class="formula">Max CPA = Product price × 0.30 (keep 30% margin)<br>Daily budget = (Target sales × Max CPA) ÷ 30<br>14-day test = Max( $20/day × 14, Max CPA × 50 conversions )</div>
+        <p>Example: $49 product, 100 sales/month target → max CPA $14.70 → monthly spend $1,470 → <strong>$49/day</strong>. A 14-day test at ~$50/day buys ~50 conversions — enough for Meta&rsquo;s algorithm to optimize.</p>
+        <h2>For lead generation</h2>
+        <div class="formula">Value per lead = Deal value × Close rate<br>Max CPL = Value per lead × 0.30</div>
+        <p>Example: $500 deals, 10% close rate → each lead worth $50 → max CPL $15.</p>
+        <h2>Related calculators</h2>
+        <p>
+          <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a> ·
+          <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a> ·
+          <a href="video-cost-calculator.html">Video Cost Calculator</a>
+        </p>
+      </div>
+    </div>
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>🧮 Creator Calculators</h4><p style="font-size:.92rem;">Free, accurate calculators for freelancers and creators.</p></div>
+      <div><h4>Calculators</h4>
+        <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a>
+        <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a>
+        <a href="ad-budget-calculator.html">Ad Budget Calculator</a>
+        <a href="video-cost-calculator.html">Video Cost Calculator</a>
+      </div>
+      <div><h4>Resources</h4>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Freelance Rate Guide</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="wrap bottom">© 2026 Creator Calculators · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Estimates for planning purposes only.</div>
+  </footer>
+
+  <script src="../js/ad-budget.js"></script>
+</body>
+</html>

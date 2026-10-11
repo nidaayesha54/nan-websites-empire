@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Eligibility Verification Checklist Generator | RevenueCycleHub</title>
+<meta name="description" content="Free eligibility verification checklist generator for medical front desks. Pick the patient type and get a printable checklist that prevents denials.">
+<link rel="canonical" href="https://nan-revenuecycle.surge.sh/tools/eligibility-checklist.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a href="../index.html" class="logo">💰 Revenue<span>Cycle</span>Hub</a>
+    <nav class="links">
+      <a href="denial-tracker.html">Denial Tracker</a>
+      <a href="ar-calculator.html">AR Calculator</a>
+      <a href="eligibility-checklist.html">Eligibility Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <h1 style="text-align:center;margin:34px 0 10px;color:#fff">Eligibility Verification Checklist Generator</h1>
+  <p style="text-align:center;color:var(--muted);max-width:720px;margin:0 auto 20px">Most denials start at the front desk. Pick the patient type to generate a step-by-step eligibility checklist — check items off, copy it, or print it.</p>
+
+  <div class="toolbox">
+    <div class="form-grid">
+      <div class="field"><label for="el-type">Patient Type</label>
+        <select id="el-type" onchange="genChecklist()">
+          <option value="new">New patient — commercial insurance</option>
+          <option value="returning">Returning patient — re-verification</option>
+          <option value="medicare">Medicare patient</option>
+          <option value="selfpay">Self-pay patient</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" onclick="copyChecklist()">📋 Copy Checklist</button>
+    <button class="btn btn-ghost" onclick="printChecklist()" style="margin-left:10px">🖨️ Print</button>
+  </div>
+
+  <div class="result" id="el-box">
+    <h3>Checklist <span id="el-progress" style="color:var(--muted);font-size:.9rem"></span></h3>
+    <ul class="checklist" id="el-list"></ul>
+  </div>
+
+  <div class="disclaimer">⚠️ General information only — not compliance advice. Always follow your practice's policies and payer requirements.</div>
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p>© <span id="year">2026</span> RevenueCycleHub</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/eligibility-checklist.js"></script>
+</body>
+</html>

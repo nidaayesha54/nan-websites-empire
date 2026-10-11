@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Litter Calculator — Litter Boxes, Usage &amp; Cost (Free)</title>
+<meta name="description" content="Free litter calculator: how many litter boxes you need, monthly litter usage in pounds, and monthly/yearly litter cost by litter type.">
+<link rel="canonical" href="https://nan-cattools.surge.sh/tools/litter-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Cat Litter Cost Calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🐱 CatToolsHub</a>
+<div class="navlinks">
+<a href="cat-age-calculator.html">Age Calculator</a>
+<a href="cat-cost-calculator.html">Cost Calculator</a>
+<a href="cat-food-portion.html">Food Portion</a>
+<a href="litter-calculator.html">Litter Calculator</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Litter Calculator</div>
+<h1>🧹 Litter Calculator: Boxes, Usage & Cost</h1>
+<p class="intro">Plan the litter aisle once — boxes needed, monthly pounds, and real yearly spend. Results update live.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="l-cats">Number of cats: <span id="l-cats-lbl">2</span></label>
+<input id="l-cats" type="range" min="1" max="8" value="2" step="1">
+<label for="l-type">Litter type</label>
+<select id="l-type">
+<option value="0.60|22|3">Clumping clay — ~$0.60/lb, ~22 lbs/cat/month</option>
+<option value="0.55|20|3">Non-clumping clay — ~$0.55/lb, ~20 lbs/cat/month</option>
+<option value="1.40|8|4">Crystal / silica — ~$1.40/lb, ~8 lbs/cat/month</option>
+<option value="1.10|16|4">Natural (corn/wheat/walnut) — ~$1.10/lb, ~16 lbs/cat/month</option>
+<option value="1.60|14|4">Pellets (paper/pine) — ~$1.60/lb, ~14 lbs/cat/month</option>
+</select>
+<label for="l-scoop">Scooping frequency</label>
+<select id="l-scoop">
+<option value="1">Daily (recommended)</option>
+<option value="0.85">Every 2–3 days (uses ~15% less litter)</option>
+<option value="0.7">Weekly only — not recommended (uses ~30% less)</option>
+</select>
+</div>
+
+<div class="result" id="litter-result"><p>Adjust the settings above.</p></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>The litter box rule every cat owner should know</h2>
+<p><b>One box per cat, plus one extra.</b> So one cat gets two boxes, two cats get three, and so on. Under-boxed homes are the #1 cause of litter-box avoidance — most "cat peed outside the box" problems are really "not enough clean boxes" problems.</p>
+<ul>
+<li><b>Scoop daily.</b> Cats are fastidious; a dirty box is a rejected box.</li>
+<li><b>Full change weekly</b> for clay litter; crystals and pellets last longer between full dumps.</li>
+<li><b>3–4 inches deep</b> is the sweet spot for clumping clay.</li>
+</ul>
+<p>New to cats? <a href="../guides/first-time-cat-owner-guide.html">Our first-time owner guide</a> covers setup week in detail.</p>
+
+<h2>More cat tools</h2>
+<div class="related">
+<a href="cat-age-calculator.html">🐱 Cat Age Calculator<span>Cat years to human years</span></a>
+<a href="cat-cost-calculator.html">💵 Cat Cost Calculator<span>Yearly + lifetime budget planner</span></a>
+<a href="cat-food-portion.html">🍽️ Food Portion Calculator<span>Daily calories by RER formula</span></a>
+<a href="../guides/how-much-does-a-cat-cost-2026.html">📖 Cat Cost Guide 2026<span>Full USA breakdown</span></a>
+</div>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script>
+(function(){
+  var cats=document.getElementById('l-cats'), type=document.getElementById('l-type'),
+      scoop=document.getElementById('l-scoop'), out=document.getElementById('litter-result');
+  function money(n){ return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0}); }
+  function calc(){
+    var c=+cats.value;
+    document.getElementById('l-cats-lbl').textContent=c;
+    var parts=type.value.split('|');
+    var price=+parts[0], lbsPerCat=+parts[1], weeksDump=+parts[2];
+    var monthlyLbs=lbsPerCat*c*(+scoop.value);
+    var boxes=c+1;
+    var monthly=monthlyLbs*price, yearly=monthly*12;
+    var boxNote = c>=3 ? 'With '+c+' cats, consider spreading boxes across two floors or rooms.' : 'Place boxes in different rooms, not side by side — cats see neighbors as one box.';
+    out.innerHTML='<p>Litter boxes needed: <span class="big">'+boxes+'</span> ('+c+' cats + 1)</p>'+
+      '<p>Monthly litter: <b>'+monthlyLbs.toFixed(1)+'</b> lbs ('+lbsPerCat+' lbs/cat, scoop factor '+scoop.value+')</p>'+
+      '<p>Monthly cost: <b>'+money(monthly)+'</b> → Yearly: <b>'+money(yearly)+'</b></p>'+
+      '<p class="cat-fact">'+boxNote+'</p>';
+  }
+  [cats,type,scoop].forEach(function(el){ el.addEventListener('input',calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

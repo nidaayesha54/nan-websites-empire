@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Product Demo Script Builder — Free Video Script Generator</title>
+<meta name="description" content="Free AI product demo script builder: enter your product, features, and audience to get a structured Problem / Agitate / Solution / CTA video script with timing and voiceover text.">
+<meta name="keywords" content="product demo script builder, ai product video script, demo video script template, product video script generator">
+<meta property="og:title" content="AI Product Demo Script Builder">
+<meta property="og:description" content="Generate a structured product demo video script in seconds.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nan-aiproductvideo.surge.sh/tools/demo-script-builder.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">📦</span> AIProductVideo</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="demo-script-builder.html">Script Builder</a>
+      <a href="ad-script-templates.html">Ad Templates</a>
+      <a href="shot-list-generator.html">Shot List</a>
+      <a href="../guides/how-to-make-ai-product-videos-2026.html">Guides</a>
+      <a href="../blog/ai-product-video-scripts-that-sell.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:36px">
+    <div class="container">
+      <span class="kicker">Free tool</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.6rem)">AI Product Demo Script Builder</h1>
+      <p class="section-sub">Fill in your product details — get a conversion-focused video script (Problem → Agitate → Solution → CTA) with section timing, visual directions, and a voiceover-ready transcript.</p>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+      <div class="grid grid-2" style="align-items:start">
+        <form id="scriptForm" class="card" onsubmit="return false">
+          <div class="form-grid">
+            <div class="field">
+              <label for="pname">Product name *</label>
+              <input type="text" id="pname" placeholder="e.g. GlowSip Smart Water Bottle">
+            </div>
+            <div class="field">
+              <label for="pcat">Product category</label>
+              <input type="text" id="pcat" placeholder="e.g. fitness, skincare, SaaS…">
+            </div>
+          </div>
+          <div class="field">
+            <label for="audience">Target audience *</label>
+            <input type="text" id="audience" placeholder="e.g. busy moms who want more energy">
+          </div>
+          <div class="field">
+            <label for="features">Top features (one per line) *</label>
+            <textarea id="features" placeholder="Keeps drinks cold for 24 hours&#10;Glows to remind you to hydrate&#10;Tracks water intake in the app"></textarea>
+            <small>List up to 5 — each becomes a demo beat in the script.</small>
+          </div>
+          <div class="field">
+            <label for="benefit">Main benefit / transformation *</label>
+            <input type="text" id="benefit" placeholder="e.g. never feel dehydrated or sluggish again">
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="length">Video length</label>
+              <select id="length">
+                <option value="30">30 seconds (paid social)</option>
+                <option value="60" selected>60 seconds (reels / shorts)</option>
+                <option value="90">90 seconds (landing page)</option>
+                <option value="120">2 minutes (full demo)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone">
+                <option value="friendly">Friendly & warm</option>
+                <option value="bold">Bold & energetic</option>
+                <option value="calm">Calm & trustworthy</option>
+                <option value="funny">Funny & playful</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="offer">Offer / price (optional)</label>
+            <input type="text" id="offer" placeholder="e.g. 30% off this week only">
+          </div>
+          <div class="field">
+            <label for="cta">Call to action *</label>
+            <input type="text" id="cta" placeholder="e.g. Tap Shop Now — free shipping today">
+          </div>
+          <button class="btn btn-primary" id="genBtn" type="submit" style="width:100%">Generate My Script ✍️</button>
+        </form>
+
+        <div>
+          <div class="card" style="background:var(--bg2)">
+            <h3>What you get</h3>
+            <ul style="padding-left:20px;color:var(--muted)">
+              <li>🎯 Hook + Problem + Agitate + Solution + CTA structure</li>
+              <li>⏱️ Section-by-section timing for your chosen length</li>
+              <li>🎙️ Voiceover-ready transcript (paste into any AI voice tool)</li>
+              <li>🎬 Visual direction for every section</li>
+              <li>📥 Copy or download your script</li>
+            </ul>
+          </div>
+          <div class="ad-slot">AD-SLOT · sidebar (300×250)</div>
+        </div>
+      </div>
+
+      <div id="result" class="output" style="display:none">
+        <h3 id="resultTitle">Your demo script</h3>
+        <div id="scriptSections"></div>
+        <h3 style="margin-top:28px">🎙️ Voiceover transcript</h3>
+        <pre class="script-text" id="voText"></pre>
+        <div class="result-toolbar">
+          <button class="btn btn-small btn-primary" id="copyScript">Copy full script</button>
+          <button class="btn btn-small btn-ghost" id="dlScript">Download .txt</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:32px">
+        <h3>Want more script formats?</h3>
+        <p>Browse <a href="ad-script-templates.html">15+ video ad script templates</a> (UGC, unboxing, testimonial…) or turn any script into a <a href="shot-list-generator.html">shot list</a> for AI generation.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">© <span id="year">2026</span> AIProductVideo. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/demo-script-builder.js"></script>
+</body>
+</html>

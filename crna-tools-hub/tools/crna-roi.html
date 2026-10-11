@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRNA School ROI Calculator — Is It Worth It? 2026</title>
+<meta name="description" content="Is CRNA school worth the cost? Compare tuition + lost RN wages against a $200K+ CRNA salary. Break-even year & lifetime earnings gain.">
+<link rel="canonical" href="https://nan-crnatools.surge.sh/">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html">CRNA<span>Tools</span>Hub</a>
+    <nav class="links">
+      <a href="crna-salary.html">Salary Calculator</a>
+      <a href="crna-requirements.html">Path Checklist</a>
+      <a href="crna-roi.html">ROI Calculator</a>
+      <a href="../guides/crna-salary-2026.html">Salary Guide</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Tools › ROI Calculator</div>
+  <div class="prose">
+    <h1>CRNA School ROI Calculator</h1>
+    <p>CRNA school costs $150,000–$250,000 and you can't work for 3 years. But CRNA salaries start around $200,000+. Enter your numbers to see your true investment, break-even year, and lifetime earnings gain versus staying an RN.</p>
+
+    <div class="toolbox">
+      <div class="fld">
+        <label for="school-cost">Total school cost (tuition + fees + living expenses) <span class="hint">USD</span></label>
+        <input type="number" id="school-cost" value="180000" min="0" step="5000">
+      </div>
+      <div class="fld">
+        <label for="rn-salary">Current annual RN salary <span class="hint">USD — wages you give up during school</span></label>
+        <input type="number" id="rn-salary" value="85000" min="0" step="1000">
+      </div>
+      <div class="fld">
+        <label for="school-years">Years in school (no working)</label>
+        <input type="number" id="school-years" value="3" min="1" max="5" step="0.5">
+      </div>
+      <div class="fld">
+        <label for="crna-start">Expected starting CRNA salary <span class="hint">USD</span></label>
+        <input type="number" id="crna-start" value="214000" min="0" step="1000">
+      </div>
+      <div class="fld">
+        <label for="growth">Annual salary growth <span class="hint">% — applies to both paths</span></label>
+        <input type="number" id="growth" value="2" min="0" max="10" step="0.5">
+      </div>
+      <div class="fld">
+        <label for="horizon">Career years after graduation to compare</label>
+        <input type="number" id="horizon" value="25" min="5" max="40" step="1">
+      </div>
+      <button class="btn" id="roi-btn">Calculate My ROI</button>
+
+      <div class="result" id="result">
+        <div class="resgrid">
+          <div class="resbox"><div class="lbl">Total investment</div><div class="val" id="res-invest">$0</div><div class="hint" id="res-invest-note"></div></div>
+          <div class="resbox"><div class="lbl">Break-even</div><div class="val" id="res-breakeven">—</div><div class="hint">after graduation</div></div>
+          <div class="resbox"><div class="lbl">Lifetime gain vs RN</div><div class="val" id="res-gain">$0</div><div class="hint" id="res-gain-note"></div></div>
+        </div>
+        <div id="res-table"></div>
+        <p class="hint" id="res-note" style="margin-top:14px"></p>
+      </div>
+    </div>
+
+    <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+    <h2>Context for your numbers</h2>
+    <p>The typical story: ~$435,000 invested ($180K school + $255K lost wages over 3 years), repaid in roughly 2–3 years of CRNA practice, then $100K+ extra per year for decades. Dive into <a href="../guides/crna-salary-2026.html">real CRNA salary data by state</a> or compare the <a href="../guides/crna-vs-anesthesiologist.html">CRNA vs anesthesiologist</a> trade-off.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fnav">
+      <a href="../index.html">Home</a>
+      <a href="crna-salary.html">Salary Calculator</a>
+      <a href="crna-requirements.html">Path Checklist</a>
+      <a href="crna-roi.html">ROI Calculator</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <div class="credit">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="js/roi.js"></script>
+</body>
+</html>

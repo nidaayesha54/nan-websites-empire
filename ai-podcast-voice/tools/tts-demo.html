@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Free Podcast TTS Demo: Hear Your Script Read Aloud | AIPodcastVoice</title>
+<meta name="description" content="Free text-to-speech demo for podcasters: paste your script, pick a voice, adjust rate and pitch, and hear your intro read aloud in your browser."/>
+<link rel="canonical" href="https://nan-aipodcastvoice.surge.sh/tools/tts-demo.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">AI<span>Podcast</span>Voice</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Tools</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Free Podcast TTS Demo: Preview Your Script Out Loud</h1><p class="lede">Paste your intro or ad read, pick a voice, tune the rate and pitch — and hear how it sounds before you record. Runs entirely in your browser.</p><div class="tool-grid"><div>
+<form id="ttsForm" class="tool-form" onsubmit="return false;">
+<div class="field"><label for="demoText">Your script</label><textarea id="demoText" maxlength="3000" placeholder="Paste your podcast intro, ad read, or episode opening here...">Welcome to the show. Today we're diving into the world of AI podcast voices.</textarea><div class="hint">Browsers typically handle up to a few paragraphs smoothly.</div></div>
+<div class="field"><label for="voiceSelect">Voice</label><select id="voiceSelect"><option>Loading voices…</option></select><div class="hint">Voices come from your device/browser — Chrome and Edge offer the most.</div></div>
+<div class="field"><label for="rate">Rate (speed): <span class="range-val" id="rateVal">1.00&times;</span></label><input type="range" id="rate" min="0.5" max="1.5" step="0.05" value="1"><div class="hint">Podcast sweet spot: 0.95–1.05 for narration.</div></div>
+<div class="field"><label for="pitch">Pitch: <span class="range-val" id="pitchVal">1.00&times;</span></label><input type="range" id="pitch" min="0.5" max="2" step="0.05" value="1"></div>
+<div class="field-row">
+<div class="field"><button type="button" class="btn btn-primary" id="speakBtn" style="width:100%">&#9654; Play</button></div>
+<div class="field"><button type="button" class="btn btn-small" id="sampleBtn" style="width:100%;margin-top:4px">Load sample intro</button></div>
+</div>
+<div class="field-row">
+<div class="field"><button type="button" class="btn btn-small" id="pauseBtn" style="width:100%">Pause</button></div>
+<div class="field"><button type="button" class="btn btn-small" id="resumeBtn" style="width:100%">Resume</button></div>
+<div class="field"><button type="button" class="btn btn-small" id="stopBtn" style="width:100%">Stop</button></div>
+</div>
+<div class="stat-row"><span class="k">Word count</span><span class="v" id="wordCount">—</span></div>
+<div class="stat-row"><span class="k">Est. duration</span><span class="v" id="estDur">—</span></div>
+<div class="stat-row"><span class="k">Status</span><span class="v" id="ttsStatus">Ready.</span></div>
+</form></div><div class="tool-results" id="ttsResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the demo works</h2>
+<p>This demo uses the <strong>Web Speech API</strong> built into your browser — no audio ever leaves your device. Pick any installed voice, tune the rate and pitch, and press play to hear your script read aloud. It's perfect for checking pacing, awkward phrasing, and whether your hook lands.</p>
+<h2>Preview vs. production</h2>
+<ul><li><strong>Preview (this tool):</strong> free, instant, private — great for rehearsal and script QA.</li><li><strong>Production:</strong> dedicated AI voice services (ElevenLabs, PlayHT, Murf) offer studio-quality models, voice cloning, and commercial licenses for published episodes.</li></ul>
+<h2>Tips</h2>
+<ul class="tips"><li>Read your intro at 1.0&times; first — if it drags there, it will drag at any speed.</li><li>Test the same script with 2–3 voices; the "best" voice is the one you stop noticing.</li><li>Mark breath points in your script with line breaks — most TTS engines pause slightly at paragraphs.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="episode-planner.html">Episode Planner</a></li><li><a href="podcast-script-writer.html">Script Writer</a></li><li><a href="voice-picker.html">AI Voice Picker</a></li><li><a href="../guides/best-ai-voices-for-podcasts-2026.html">Best AI Voices for Podcasts in 2026</a></li><li><a href="../guides/how-to-start-ai-podcast.html">How to Start an AI Podcast in 2026</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Tools</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All tools are free and run in your browser. Educational content only — not professional advice.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/tts-demo.js"></script></body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Comparison Tool — Head-to-Head Value Score | FantasyFootballHub</title>
+<meta name="description" content="Free fantasy football player comparison tool: enter two players' goals, assists and price for a side-by-side breakdown with a value score to find the better bargain.">
+<link rel="canonical" href="https://nan-fantasyfootball.surge.sh/tools/player-compare.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="brand" href="/">⚽ Fantasy<span>Football</span>Hub</a>
+<nav><a href="/">Home</a><a href="team-planner.html">Team Planner</a><a href="player-compare.html">Compare</a><a href="fixture-tracker.html">Fixtures</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<div class="container">
+<div class="breadcrumb"><a href="/">Home</a> › <a href="team-planner.html">Tools</a> › Player Compare</div>
+<div class="demo-note">⚠️ <strong>Sample data:</strong> pre-loaded players are demo placeholders. Type real current-season stats into the fields for accurate comparisons.</div>
+
+<section style="padding-top:1rem">
+<h1>Player Comparison Tool</h1>
+<p>Enter two players' stats and get a side-by-side comparison with a <strong>value score</strong> (points per million × attacking returns).</p>
+
+<div class="panel">
+<div class="row2">
+<div>
+<h2 style="font-size:1.2rem">Player A</h2>
+<label for="a-name">Name</label><input id="a-name" placeholder="e.g. Dario Costa">
+<label for="a-goals">Goals</label><input id="a-goals" type="number" min="0" value="24">
+<label for="a-assists">Assists</label><input id="a-assists" type="number" min="0" value="6">
+<label for="a-price">Price (£m)</label><input id="a-price" type="number" min="0" step="0.1" value="12.5">
+<label for="a-mins">Minutes played</label><input id="a-mins" type="number" min="1" value="3000">
+</div>
+<div>
+<h2 style="font-size:1.2rem">Player B</h2>
+<label for="b-name">Name</label><input id="b-name" placeholder="e.g. Ibrahim Diallo">
+<label for="b-goals">Goals</label><input id="b-goals" type="number" min="0" value="19">
+<label for="b-assists">Assists</label><input id="b-assists" type="number" min="0" value="8">
+<label for="b-price">Price (£m)</label><input id="b-price" type="number" min="0" step="0.1" value="10.5">
+<label for="b-mins">Minutes played</label><input id="b-mins" type="number" min="1" value="2900">
+</div>
+</div>
+<button class="ta" id="compare">Compare Players</button>
+</div>
+
+<div id="result"></div>
+
+<div class="panel">
+<h2>Quick compare: sample players</h2>
+<p>Or pick two sample players to auto-fill:</p>
+<div class="row2">
+<div><label for="qa">Player A</label><select id="qa"></select></div>
+<div><label for="qb">Player B</label><select id="qb"></select></div>
+</div>
+<button class="ta" id="quick">Load & Compare</button>
+</div>
+
+<p>Want to build around your winner? Open the <a href="team-planner.html">team planner</a> or check <a href="fixture-tracker.html">upcoming fixtures</a>.</p>
+<div class="ad"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</section>
+</div>
+
+<footer><div class="container">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/player-compare.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyric Writer — Rhyme Finder & Syllable Counter | AISingingVoice</title>
+<meta name="description" content="Free lyric writing helper: rhyme finder with built-in word lists, per-line syllable counter, and a verse organizer that exports your lyric sheet.">
+<link rel="canonical" href="https://nan-aisinging.surge.sh/tools/lyric-writer.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav wrap">
+<a class="logo" href="../index.html">🎤 AISingingVoice</a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<div class="navlinks">
+<a href="song-structure-planner.html">Structure Planner</a>
+<a class="active" href="lyric-writer.html">Lyric Writer</a>
+<a href="vocal-tool-comparator.html">Tool Comparator</a>
+<a href="demo-song-builder.html">Demo Song Builder</a>
+<a href="../guides/best-ai-singing-voice-tools-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div>
+</nav></header>
+
+<main class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Lyric Writer</p>
+<section class="hero" style="padding:36px 0 10px">
+<h1>Lyric Writer</h1>
+<p class="lead">Find rhymes, count syllables, and organize verses — everything stays in your browser, so your lyrics stay yours.</p>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="block">
+<div class="panel">
+<h3>🔍 Rhyme finder</h3>
+<label class="lbl" for="rhymeInput">Word to rhyme</label>
+<input type="text" id="rhymeInput" placeholder="e.g. fire" autocomplete="off">
+<div id="rhymeOut" style="margin-top:12px"><span class="hint">Type a word above to find rhymes.</span></div>
+</div>
+
+<div class="panel">
+<h3>🔢 Syllable counter</h3>
+<label class="lbl" for="lyricInput">Paste or type lyrics (one line per lyric line)</label>
+<textarea id="lyricInput" placeholder="Type your lyric lines here…"></textarea>
+<div id="syllOut" class="result"><span class="hint">Type or paste lyrics to count syllables per line.</span></div>
+<p class="hint">Matching syllable counts across rhyming lines is what makes lyrics feel singable — aim for consistent counts in your chorus.</p>
+</div>
+
+<div class="panel">
+<h3>🗂️ Verse organizer</h3>
+<p class="muted">Build your lyric sheet section by section. <button class="btn small" id="loadExample">Load example</button></p>
+<div id="orgWrap"></div>
+<p><button class="btn small" id="addSecBtn">+ Add section</button></p>
+<h4>Lyric sheet <button class="btn ghost small copybtn" data-copy="#sheetOut">Copy</button>
+<button class="btn ghost small copybtn" data-download="lyrics.txt" data-download-src="#sheetOut">Download .txt</button></h4>
+<pre class="lyrics" id="sheetOut">Your lyric sheet will appear here…</pre>
+</div>
+
+<div class="callout"><p><b>Originality note:</b> Write your own lines or use public-domain sources — never paste copyrighted lyrics into this tool or into AI vocal generators. Next step: map your sections' timing in the <a href="song-structure-planner.html">Song Structure Planner</a>.</p></div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</main>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free AI singing voice tools for songwriters</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/lyric-writer.js"></script>
+</body>
+</html>

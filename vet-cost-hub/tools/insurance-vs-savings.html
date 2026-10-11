@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Insurance vs Self-Insuring: Break-Even Analyzer (2026)</title>
+<meta name="description" content="Free analyzer: compare pet insurance premiums, deductible & reimbursement against self-insuring. Find your break-even vet spend and 5-year cost winner.">
+<link rel="canonical" href="https://nan-vetcost.surge.sh/tools/insurance-vs-savings.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pet Insurance vs Self-Insuring Break-Even Analyzer","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🐾 Vet<span>CostHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="visit-cost.html">Visit Cost</a><a href="emergency-fund.html">Emergency Fund</a><a href="../guides/why-vet-so-expensive.html">Guides</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Pet Insurance vs Self-Insuring</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Pet Insurance vs Self-Insuring: Break-Even Analyzer</h1>
+<p>Enter a real (or quoted) policy's numbers and your expected yearly vet spending. We'll find the annual spend where insurance starts beating a savings account — and project 5-year costs.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Monthly premium ($)</label><input type="number" id="prem" value="45" min="0"></div>
+<div class="field"><label>Annual deductible ($)</label><input type="number" id="ded" value="500" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Reimbursement %</label><input type="number" id="reimb" value="80" min="50" max="100"></div>
+<div class="field"><label>Annual coverage limit ($)</label><input type="number" id="limit" value="10000" min="1000"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Your expected annual vet costs ($)</label><input type="number" id="exp" value="1500" min="0"></div>
+<div class="field"><label>Projection years</label><input type="number" id="years" value="5" min="1" max="15"></div>
+</div>
+<button class="btn btn-teal" onclick="calc()">Run the Comparison</button>
+<div class="result" id="res">
+<h3>Break-even analysis</h3>
+<div class="big" id="verdict"></div>
+<p id="breakeven" style="font-weight:700;color:var(--teal-dark)"></p>
+<table class="cmp" id="tbl"></table>
+<p id="explain" style="color:var(--muted);font-size:.9rem"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Cost estimates only — not veterinary advice. Always consult your veterinarian.</strong> This compares expected costs, not coverage details — read any policy's exclusions (pre-existing conditions, waiting periods) before buying. Not insurance advice.</div>
+<div class="related"><h3>Keep planning</h3>
+<ul>
+<li><a href="emergency-fund.html">Pet Emergency Fund Calculator</a> — the self-insuring safety net</li>
+<li><a href="visit-cost.html">Vet Visit Cost Estimator</a> — ground your expected costs in real prices</li>
+<li><a href="../guides/how-to-save-on-vet-bills.html">How to Save Money on Vet Bills</a></li>
+<li><a href="../blog/vet-payment-options.html">Vet Payment Options: CareCredit, Plans & Financing</a></li>
+</ul></div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> VetCostHub. Cost estimates only — not veterinary advice. Always consult your veterinarian.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function insuredAnnual(p,d,r,lim,e){
+  if(e<=d) return 12*p+e;             // nothing reimbursed below deductible
+  var payout=Math.min((e-d)*r,lim);   // reimbursement after deductible, capped
+  return 12*p+e-payout;
+}
+function calc(){
+  var p=num('prem'), d=num('ded'), r=num('reimb')/100, lim=num('limit');
+  var e=num('exp'), yrs=Math.max(1,Math.min(15,Math.round(num('years')||5)));
+  if(r<=0) r=0.8;
+  var be=(12*p+d*r)/r; // break-even annual spend
+  var cost=insuredAnnual(p,d,r,lim,e);
+  var win=cost < e;
+  document.getElementById('verdict').textContent = win ? 'Insurance likely wins' : 'Self-insuring likely cheaper';
+  document.getElementById('breakeven').textContent =
+    'Break-even point: '+money(be)+'/year. Above this, insurance usually costs less than paying out of pocket; below it, premiums usually cost more than they return.';
+  var html='<tr><th>Annual vet spend</th><th>Insurance ('+yrs+'-yr total)</th><th>Self-insured ('+yrs+'-yr total)</th><th>Cheaper</th></tr>';
+  [0.5,1,1.5,2].forEach(function(f){
+    var spend=Math.round(e*f), ic=Math.round(insuredAnnual(p,d,r,lim,spend)*yrs), sc=spend*yrs;
+    var w=ic<sc?'Insurance':'Self-insure';
+    html+='<tr'+(f===1?' class="winner"':'')+'><td>'+money(spend)+'</td><td>'+money(ic)+'</td><td>'+money(sc)+'</td><td>'+w+'</td></tr>';
+  });
+  document.getElementById('tbl').innerHTML=html;
+  document.getElementById('explain').textContent='Assumes one claim year at a time after the annual deductible; real payouts vary with exclusions, waiting periods, and per-condition limits. Your highlighted row is your entered estimate of '+money(e)+'/year.';
+  show('res');
+}
+calc();
+</script>
+</body>
+</html>

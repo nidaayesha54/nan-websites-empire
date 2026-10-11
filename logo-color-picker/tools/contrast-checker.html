@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Contrast Checker — WCAG Text & Background Ratio | LogoColorPicker</title>
+<meta name="description" content="Free WCAG contrast ratio checker for logos: test text vs background color combinations for AA and AAA readability, with a live logo preview.">
+<link rel="canonical" href="https://nan-logocolors.surge.sh/tools/contrast-checker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../index.html">LogoColorPicker</a>
+<nav class="main">
+<a href="palette-generator.html">Palette Generator</a>
+<a href="brand-color-quiz.html">Color Quiz</a>
+<a href="contrast-checker.html">Contrast Checker</a>
+<a href="../guides/best-logo-colors-2026.html">Guides</a>
+<a href="../blog/logo-color-trends.html">Blog</a>
+</nav>
+</div></header>
+<div class="wrap">
+<article class="prose">
+<h1>Logo Contrast Checker (WCAG)</h1>
+<p>A beautiful logo that nobody can read is a failed logo. Pick your text and background colors — we calculate the exact contrast ratio and grade it against WCAG 2.1 standards.</p>
+<div class="tool-box">
+<div class="btn-row">
+<label style="display:flex;align-items:center;gap:10px;font-weight:600">Text color: <input type="color" id="fgColor" value="#1e1b2e"></label>
+<label style="display:flex;align-items:center;gap:10px;font-weight:600">Background: <input type="color" id="bgColor" value="#ffffff"></label>
+<button class="btn ghost" id="swapBtn">⇄ Swap</button>
+</div>
+<div id="contrastOut"></div>
+<div id="textPreview" style="margin-top:18px"></div>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<h2>What ratio does a logo need?</h2>
+<p>Aim for <strong>AA (4.5:1)</strong> on any logo text — small wordmarks appear at favicon and app-icon sizes. Large display lettering passes at <strong>3:1</strong>. AAA (7:1) is ideal for accessibility.</p>
+<p>Designing your palette? Build it in the <a href="palette-generator.html">palette generator</a>, match it to your niche with the <a href="brand-color-quiz.html">brand color quiz</a>, and review the <a href="../guides/how-to-choose-brand-colors.html">choosing brand colors guide</a>.</p>
+</article>
+</div>
+<footer class="site"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</div></footer>
+<script src="../js/color-utils.js"></script>
+<script src="../js/contrast.js"></script>
+</body>
+</html>

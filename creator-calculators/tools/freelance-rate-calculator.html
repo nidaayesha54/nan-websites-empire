@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Hourly Rate Calculator — Find Your True Rate (2026)</title>
+  <meta name="description" content="Free freelance rate calculator: enter your income goal, expenses, taxes and billable hours to find the hourly rate you actually need to charge. Includes project pricing examples.">
+  <link rel="canonical" href="https://creatorcalculators.github.io/tools/freelance-rate-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🧮 Creator<span>Calculators</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="freelance-rate-calculator.html">Rate Calc</a>
+        <a href="youtube-revenue-calculator.html">YouTube Calc</a>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="calc-page">
+    <div class="wrap">
+      <h1>Freelance Hourly Rate Calculator</h1>
+      <p class="lede">Stop guessing your rate. Enter what you need to earn, and we&rsquo;ll calculate the hourly rate that covers your income goal, expenses, and taxes — plus project pricing examples.</p>
+
+      <div class="calc-grid">
+        <div class="panel">
+          <h2>Your Numbers</h2>
+          <div class="field">
+            <label for="income">Desired monthly take-home income ($)</label>
+            <input type="number" id="income" value="3000" min="0" step="50">
+            <span class="hint">What you want in your pocket after expenses and taxes.</span>
+          </div>
+          <div class="field">
+            <label for="expenses">Monthly business expenses ($)</label>
+            <input type="number" id="expenses" value="400" min="0" step="25">
+            <span class="hint">Software, internet, coworking, equipment, etc.</span>
+          </div>
+          <div class="field">
+            <label for="tax">Effective tax rate (%)</label>
+            <input type="number" id="tax" value="20" min="0" max="60" step="1">
+            <span class="hint">Your estimated income + self-employment tax rate.</span>
+          </div>
+          <div class="field">
+            <label for="hours">Billable hours per month</label>
+            <input type="number" id="hours" value="100" min="1" max="300" step="5">
+            <span class="hint">Hours you actually bill clients (not admin/marketing time). 100 hrs ≈ 25 hrs/week.</span>
+          </div>
+          <button class="btn" onclick="calculate()">Calculate My Rate</button>
+        </div>
+
+        <div class="result" id="result" style="display:none;">
+          <h2>Your Rate</h2>
+          <div class="big"><span id="r-rate">$0</span><small>recommended hourly rate (includes 15% buffer)</small></div>
+          <table>
+            <tr><td>Minimum hourly rate (break-even)</td><td id="r-min">$0</td></tr>
+            <tr><td>Gross monthly revenue needed</td><td id="r-gross">$0</td></tr>
+            <tr><td>Small project (5 hrs)</td><td id="r-small">$0</td></tr>
+            <tr><td>Medium project (20 hrs)</td><td id="r-med">$0</td></tr>
+            <tr><td>Large project (40 hrs)</td><td id="r-large">$0</td></tr>
+          </table>
+          <div class="note">💡 The recommended rate adds a 15% buffer for unpaid time (proposals, revisions, admin). Never charge below your minimum rate.</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>How the freelance rate formula works</h2>
+        <div class="formula">Gross needed = (Take-home goal + Expenses) ÷ (1 − Tax rate)<br>Hourly rate = Gross needed ÷ Billable hours</div>
+        <p>Example: you want $3,000 take-home, spend $400 on expenses, pay 20% tax, and bill 100 hours/month:</p>
+        <div class="formula">($3,000 + $400) ÷ (1 − 0.20) = $4,375 gross<br>$4,375 ÷ 100 hours = <strong>$43.75/hour minimum</strong></div>
+        <h2>Why most freelancers undercharge</h2>
+        <ul>
+          <li><strong>They forget taxes.</strong> A 20–30% tax rate means you must earn far more than your target take-home.</li>
+          <li><strong>They count all hours as billable.</strong> Realistically only 50–70% of work hours are billable.</li>
+          <li><strong>They skip the buffer.</strong> Unpaid revisions and admin eat profit — price a 15% cushion in.</li>
+        </ul>
+        <p>Want the full deep-dive? Read our <a href="../blog/freelance-hourly-rate-calculator.html">freelance hourly rate guide</a>.</p>
+        <h2>Related calculators</h2>
+        <p>
+          <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a> ·
+          <a href="ad-budget-calculator.html">Ad Budget Calculator</a> ·
+          <a href="video-cost-calculator.html">Video Cost Calculator</a>
+        </p>
+      </div>
+    </div>
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>🧮 Creator Calculators</h4><p style="font-size:.92rem;">Free, accurate calculators for freelancers and creators.</p></div>
+      <div><h4>Calculators</h4>
+        <a href="freelance-rate-calculator.html">Freelance Rate Calculator</a>
+        <a href="youtube-revenue-calculator.html">YouTube Revenue Calculator</a>
+        <a href="ad-budget-calculator.html">Ad Budget Calculator</a>
+        <a href="video-cost-calculator.html">Video Cost Calculator</a>
+      </div>
+      <div><h4>Resources</h4>
+        <a href="../blog/freelance-hourly-rate-calculator.html">Freelance Rate Guide</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="wrap bottom">© 2026 Creator Calculators · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Estimates for planning purposes only.</div>
+  </footer>
+
+  <script src="../js/freelance-rate.js"></script>
+</body>
+</html>

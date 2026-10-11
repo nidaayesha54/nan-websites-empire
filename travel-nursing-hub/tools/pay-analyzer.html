@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Nurse Pay Package Analyzer — Free Tool</title>
+<meta name="description" content="Free travel nurse pay package analyzer: enter hourly rate, housing stipend, per diem and bonuses to reveal your true weekly pay and effective hourly rate.">
+<link rel="canonical" href="https://nan-travelnurse.surge.sh/tools/pay-analyzer.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/pay-analyzer.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">Travel<span class="pulse">Nursing</span>Hub</a>
+    <nav class="main-nav">
+      <a href="pay-analyzer.html">Pay Analyzer</a>
+      <a href="contract-compare.html">Contract Compare</a>
+      <a href="take-home.html">Take-Home Pay</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <h1>Travel Nurse Pay Package Analyzer</h1>
+  <p>Decode any offer in seconds: hourly pay + tax-free stipends + bonuses = your true weekly pay.</p>
+</section>
+
+<div class="ad-slot-note"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<main class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Pay Package Analyzer</p>
+
+  <div class="tool-box">
+    <div class="field">
+      <label for="pa-hourly">Taxable hourly rate ($)</label>
+      <input type="number" id="pa-hourly" min="0" step="0.01" placeholder="e.g. 45.00">
+      <p class="hint">The base rate that appears on your paycheck and is subject to income tax.</p>
+    </div>
+    <div class="field">
+      <label for="pa-hours">Guaranteed hours per week</label>
+      <input type="number" id="pa-hours" min="0" step="0.5" placeholder="e.g. 36">
+    </div>
+    <div class="field">
+      <label for="pa-housing">Housing stipend per week ($)</label>
+      <input type="number" id="pa-housing" min="0" step="0.01" placeholder="e.g. 1100">
+      <p class="hint">Tax-free if you maintain a tax home and duplicate expenses.</p>
+    </div>
+    <div class="field">
+      <label for="pa-perdiem">Meals &amp; incidentals (M&amp;IE) per week ($)</label>
+      <input type="number" id="pa-perdiem" min="0" step="0.01" placeholder="e.g. 400">
+    </div>
+    <div class="field">
+      <label for="pa-bonus">Weekly bonus equivalent ($)</label>
+      <input type="number" id="pa-bonus" min="0" step="0.01" placeholder="e.g. 75">
+      <p class="hint">Divide lump sums by contract weeks (e.g. a $1,000 completion bonus on 13 weeks ≈ $77/week).</p>
+    </div>
+    <button class="btn" id="pa-calc" type="button">Analyze My Package</button>
+
+    <div class="result" id="pa-result">
+      <h2>Your True Pay Breakdown</h2>
+      <table>
+        <tr><th>Component</th><th>Weekly value</th></tr>
+        <tr><td>Taxable wages (rate × hours)</td><td id="pa-r-taxable">—</td></tr>
+        <tr><td>Tax-free stipends (housing + M&amp;IE)</td><td id="pa-r-taxfree">—</td></tr>
+        <tr><td>Bonus equivalent</td><td id="pa-r-bonus">—</td></tr>
+        <tr class="total"><td>True weekly pay</td><td id="pa-r-true">—</td></tr>
+      </table>
+      <table>
+        <tr><td>Effective hourly rate</td><td id="pa-r-effective">—</td></tr>
+        <tr><td colspan="2" id="pa-r-pct">—</td></tr>
+        <tr><td>Annualized equivalent</td><td id="pa-r-annual">—</td></tr>
+      </table>
+      <p id="pa-r-note" style="margin-top:.6rem;font-size:.95rem"></p>
+      <p style="margin-top:.8rem">Got two offers? <a href="contract-compare.html">Compare them side by side</a>, or see your <a href="take-home.html">estimated take-home pay</a>.</p>
+    </div>
+  </div>
+
+  <div class="disclaimer">Estimates only — consult a tax professional for stipend rules.</div>
+
+  <div class="prose">
+    <h2>How this analyzer works</h2>
+    <p>Recruiters quote the biggest weekly number possible. This tool separates the package into <strong>taxable wages</strong>, <strong>tax-free stipends</strong> and <strong>bonuses</strong>, then computes your effective hourly rate — the single number that lets you compare travel offers with staff jobs or with each other.</p>
+    <h2>Why the tax-free share matters</h2>
+    <p>A dollar of tax-free stipend is worth more than a dollar of taxable wages. If roughly half your package is tax-free, your take-home can rival a staff job paying a much higher headline rate. Learn more in our <a href="../guides/travel-nurse-pay-2026.html">2026 travel nurse pay guide</a> and the <a href="../blog/travel-nurse-tax-tips.html">tax tips article</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <nav class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="contract-compare.html">Contract Compare</a>
+      <a href="take-home.html">Take-Home Pay</a>
+      <a href="../guides/how-to-become-travel-nurse-2026.html">Become a Travel Nurse</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+    <p style="font-size:.8rem;color:#8fa9bb">Estimates only — consult a tax professional for stipend rules.</p>
+  </div>
+</footer>
+
+</body>
+</html>

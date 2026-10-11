@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Return Calculator — Total & Annualized Gains | StockROI</title>
+<meta name="description" content="Free stock return calculator: enter buy price, sell price, shares and dividends to get total return % and annualized return. Instant, no signup.">
+<link rel="canonical" href="https://stockroi.github.io/tools/stock-return-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is annualized return calculated?","acceptedAnswer":{"@type":"Answer","text":"Annualized return (CAGR) = (ending value ÷ beginning value)^(1 ÷ years) − 1. It smooths your total gain into an equivalent yearly rate."}},
+{"@type":"Question","name":"Should dividends be included in stock return?","acceptedAnswer":{"@type":"Answer","text":"Yes — total return includes both price appreciation and dividends received. Ignoring dividends understates your true gain, especially on dividend stocks held for years."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">📈 Stock<span>ROI</span></a>
+<nav class="nav">
+<a href="../index.html">Home</a>
+<a href="stock-return-calculator.html">Stock Calc</a>
+<a href="dca-calculator.html">DCA Calc</a>
+<a href="crypto-profit-calculator.html">Crypto Calc</a>
+</nav>
+</div></header>
+
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> → Stock Return Calculator</p>
+<section class="section">
+<span class="kicker">Free Tool</span>
+<h1>Stock Return Calculator</h1>
+<p class="lede">Enter your trade details to see total return %, annualized return, and how much dividends added.</p>
+
+<div class="tool-box">
+<div class="field"><label for="buyPrice">Buy price per share ($)</label><input type="number" id="buyPrice" value="50" min="0" step="0.01"></div>
+<div class="field"><label for="sellPrice">Sell price per share ($)</label><input type="number" id="sellPrice" value="75" min="0" step="0.01"></div>
+<div class="field"><label for="shares">Number of shares</label><input type="number" id="shares" value="100" min="0" step="1"></div>
+<div class="field"><label for="dividends">Total dividends received ($)</label><input type="number" id="dividends" value="120" min="0" step="0.01"><div class="hint">All dividend payments collected while holding.</div></div>
+<div class="field"><label for="years">Holding period (years)</label><input type="number" id="years" value="3" min="0" step="0.1"><div class="hint">Used to annualize your return (CAGR).</div></div>
+<div class="results">
+<h3>Your Results</h3>
+<div class="result-row"><span>Total invested</span><span class="val" id="rInvested">$0.00</span></div>
+<div class="result-row"><span>Sale proceeds</span><span class="val" id="rProceeds">$0.00</span></div>
+<div class="result-row"><span>Price gain / loss</span><span class="val" id="rGain">$0.00</span></div>
+<div class="result-row"><span>Dividends received</span><span class="val" id="rDividends">$0.00</span></div>
+<div class="result-row"><span>Total profit</span><span class="val" id="rTotal">$0.00</span></div>
+<div class="result-row"><span>Total return</span><span class="val" id="rPct">0.00%</span></div>
+<div class="result-row"><span>Annualized return (CAGR)</span><span class="val" id="rAnn">—</span></div>
+</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<article class="prose">
+<h2>How this stock return calculator works</h2>
+<p><strong>Total return</strong> measures everything you gained: price appreciation plus dividends, relative to what you invested.</p>
+<p><strong>Total return %</strong> = (Sale proceeds − Buy cost + Dividends) ÷ Buy cost × 100</p>
+<p><strong>Annualized return (CAGR)</strong> converts that into an equivalent yearly rate, so a 3-year trade can be fairly compared with a 10-year one:</p>
+<p><strong>CAGR</strong> = (Ending value ÷ Beginning value)<sup>1 ÷ years</sup> − 1</p>
+<p>Learn more in our <a href="../guides/cagr-explained.html">CAGR explained guide</a>, or project future growth with the <a href="dca-calculator.html">DCA calculator</a>.</p>
+<h2>FAQ</h2>
+<div class="faq">
+<div class="faq-item"><div class="faq-q">How is annualized return calculated? <span>+</span></div><div class="faq-a">Annualized return (CAGR) = (ending value ÷ beginning value)^(1 ÷ years) − 1. It smooths your total gain into an equivalent yearly rate.</div></div>
+<div class="faq-item"><div class="faq-q">Should dividends be included in stock return? <span>+</span></div><div class="faq-a">Yes — total return includes both price appreciation and dividends received. Ignoring dividends understates your true gain, especially on dividend stocks held for years.</div></div>
+</div>
+</article>
+
+<div class="disclaimer"><strong>⚠️ Disclaimer:</strong> Educational tool only — not financial advice. Investing involves risk, including possible loss of principal. Consult a licensed financial professional before making investment decisions.</div>
+</section>
+</div>
+
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div><h4>Calculators</h4><a href="stock-return-calculator.html">Stock Return Calculator</a><a href="dca-calculator.html">DCA Calculator</a><a href="crypto-profit-calculator.html">Crypto Profit Calculator</a></div>
+<div><h4>Guides</h4><a href="../guides/cagr-explained.html">CAGR Explained</a><a href="../guides/dca-vs-lump-sum.html">DCA vs Lump Sum</a></div>
+<div><h4>StockROI</h4><a href="../index.html">Home</a></div>
+</div>
+<div class="bottom">© 2026 StockROI. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>. Educational only — not financial advice.</div>
+</div></footer>
+<script src="../js/stock-return.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

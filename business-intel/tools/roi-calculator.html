@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Calculator — Return on Investment Calculator (Free)</title>
+  <meta name="description" content="Free ROI calculator: enter investment, returns and timeframe to get ROI %, annualized return and payback period. For business investments, marketing and projects.">
+  <link rel="canonical" href="https://businessinteldaily.github.io/tools/roi-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📊 Business<span>Intel</span>Daily</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../guides/how-to-start-online-business-2026.html">Guides</a>
+      <a href="business-idea-validator.html" class="active">Tools</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-shell">
+  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html">Tools</a> / ROI Calculator</div>
+  <h1>ROI Calculator</h1>
+  <p class="sub">Investment, returns, timeframe — get your return on investment %, annualized return and payback period.</p>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <form id="roi-form">
+    <div class="two-col">
+      <div class="field">
+        <label>Total investment ($)</label>
+        <input type="number" id="investment" min="0" step="0.01" value="5000" required>
+        <div class="hint">All money put in: capital, costs, ad spend</div>
+      </div>
+      <div class="field">
+        <label>Total return ($)</label>
+        <input type="number" id="returns" min="0" step="0.01" value="8000" required>
+        <div class="hint">All money back: revenue, profit, resale value</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Timeframe (months)</label>
+      <input type="number" id="months" min="1" step="1" value="12" required>
+      <div class="hint">How long the investment took to produce the return</div>
+    </div>
+    <button type="submit" class="btn btn-gold">Calculate ROI</button>
+  </form>
+
+  <div class="result" id="result">
+    <h3>Your Results</h3>
+    <table class="data">
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>Net profit</td><td id="r-profit">–</td></tr>
+      <tr><td><strong>ROI</strong></td><td id="r-roi" style="font-size:1.3rem;font-weight:800;color:#0e7c5b">–</td></tr>
+      <tr><td>Annualized ROI</td><td id="r-annual">–</td></tr>
+      <tr><td>Payback period</td><td id="r-payback">–</td></tr>
+      <tr><td>Return multiple</td><td id="r-multiple">–</td></tr>
+    </table>
+    <div class="verdict" id="r-verdict"></div>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <h2 style="margin-top:28px;font-size:1.3rem">How ROI is calculated</h2>
+  <p><strong>ROI %</strong> = (Total Return − Investment) ÷ Investment × 100. <strong>Annualized ROI</strong> adjusts for time: (1 + ROI)^(12/months) − 1. <strong>Payback period</strong> assumes returns accrue evenly: Investment ÷ (Net Profit ÷ months).</p>
+  <p><strong>Benchmarks:</strong> stock market ~10%/yr · good marketing campaign 300–500% ROI · strong small business investment 50–200%/yr.</p>
+
+  <p style="margin-top:20px"><strong>Related:</strong> <a href="break-even-calculator.html">Break-Even Calculator →</a> · <a href="business-idea-validator.html">Idea Validator →</a></p>
+</div>
+
+<script>
+document.getElementById('roi-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var inv = parseFloat(document.getElementById('investment').value);
+  var ret = parseFloat(document.getElementById('returns').value);
+  var months = parseFloat(document.getElementById('months').value);
+  if (!(inv > 0) || !(months > 0) || isNaN(ret)) return;
+  var profit = ret - inv;
+  var roi = (profit / inv) * 100;
+  var annual = (Math.pow(1 + roi/100, 12/months) - 1) * 100;
+  var payback = profit > 0 ? inv / (profit / months) : Infinity;
+  var multiple = ret / inv;
+  function money(n){ return '$' + n.toLocaleString('en-US',{maximumFractionDigits:2}); }
+  document.getElementById('r-profit').textContent = money(profit);
+  document.getElementById('r-roi').textContent = roi.toFixed(1) + '%';
+  document.getElementById('r-annual').textContent = annual.toFixed(1) + '% per year';
+  document.getElementById('r-payback').textContent = isFinite(payback) ? payback.toFixed(1) + ' months' : 'Never (no profit)';
+  document.getElementById('r-multiple').textContent = multiple.toFixed(2) + 'x';
+  var v;
+  if (roi < 0) v = '🔴 Negative return — you lost money. Reconsider the investment.';
+  else if (annual >= 50) v = '🟢 Excellent — beating most asset classes. Scale what works.';
+  else if (annual >= 15) v = '🟢 Solid — comfortably beating the stock market average.';
+  else if (annual >= 0) v = '🟡 Positive but modest — compare against safer alternatives.';
+  else v = '🔴 Negative annualized return.';
+  document.getElementById('r-verdict').textContent = v;
+  document.getElementById('result').classList.add('show');
+});
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Business Intel Daily</h4><p>Daily business intelligence for entrepreneurs in premium markets.</p></div>
+      <div><h4>Guides</h4><p><a href="../guides/how-to-start-online-business-2026.html">Start an online business</a><br><a href="../guides/small-business-marketing-strategies.html">Marketing strategies</a><br><a href="../guides/passive-income-ideas-2026.html">Passive income ideas</a></p></div>
+      <div><h4>Tools</h4><p><a href="business-idea-validator.html">Idea validator</a><br><a href="roi-calculator.html">ROI calculator</a><br><a href="break-even-calculator.html">Break-even calculator</a></p></div>
+    </div>
+    <div class="fine">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 Business Intel Daily. Educational content only — not financial advice.</div>
+  </div>
+</footer>
+</body>
+</html>

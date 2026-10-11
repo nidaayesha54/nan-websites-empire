@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Travel Checklist Generator — Free Packing List Tool</title>
+<meta name="description" content="Build a custom pet travel packing list in seconds. Choose car or plane, trip length & pet type — get an itemized, printable checklist. Free, no signup.">
+<link rel="canonical" href="https://nan-pettravel.surge.sh/tools/travel-checklist.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🐾 PetTravelHub</a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="travel-checklist.html" class="active">Checklist</a>
+      <a href="flight-rules.html">Flight Rules</a>
+      <a href="road-trip-planner.html">Road Trip</a>
+      <a href="../guides/flying-with-dog-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Travel Checklist</p>
+
+  <div class="tool-box section">
+    <h1>Pet Travel Checklist Generator</h1>
+    <p class="intro">Answer three quick questions and get an itemized, printable packing list tailored to your trip. Check items off as you pack!</p>
+
+    <form id="checklist-form">
+      <div class="field">
+        <label>How are you traveling?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="mode" value="car" checked> 🚗 Car / road trip</label>
+          <label><input type="radio" name="mode" value="plane"> ✈️ Plane</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="duration">Trip duration</label>
+        <select id="duration">
+          <option value="day">Day trip (under 24 hours)</option>
+          <option value="weekend">Weekend (2–3 days)</option>
+          <option value="week">Week (4–7 days)</option>
+          <option value="long">Long trip (8+ days)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Your pet</label>
+        <div class="radio-row">
+          <label><input type="radio" name="pet" value="dog" checked> 🐶 Dog</label>
+          <label><input type="radio" name="pet" value="cat"> 🐱 Cat</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Generate My Checklist</button>
+      <button type="button" class="btn btn-ghost" id="print-btn" style="color:var(--teal-dark);border-color:var(--teal-dark);margin-left:8px;" onclick="window.print()">🖨️ Print</button>
+    </form>
+
+    <div class="result" id="result">
+      <div class="result-card">
+        <h2 id="result-title">Your Packing List</h2>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px;" id="result-summary"></p>
+        <div id="result-groups"></div>
+        <p style="margin-top:14px;font-size:.9rem;color:var(--muted);"><strong id="packed-count">0</strong> of <span id="total-count">0</span> items packed.</p>
+      </div>
+    </div>
+
+    <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+    <p style="margin-top:24px;">Traveling by air? Check <a href="flight-rules.html">airline pet policies</a> before you pack, or read our <a href="../guides/pet-travel-essentials.html">essentials checklist guide</a> for more detail.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="flight-rules.html">Flight Rules</a>
+      <a href="road-trip-planner.html">Road Trip</a>
+      <a href="../guides/flying-with-dog-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var GROUPS = {
+    essentials: "🎒 Essentials",
+    food: "🍖 Food & Water",
+    comfort: "🧸 Comfort & Calm",
+    health: "🩺 Health & Documents",
+    plane: "✈️ Flight Extras",
+    car: "🚗 Car Extras"
+  };
+
+  var ITEMS = [
+    { g: "essentials", t: "Sturdy leash + backup leash", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "essentials", t: "Well-fitting harness (dogs) or secure carrier (cats)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "essentials", t: "Collar with ID tag (your name + phone)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "essentials", t: "Waste bags (cats: portable litter + scoop)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"], pet: "dog" },
+    { g: "essentials", t: "Portable litter box, litter & scoop", modes: ["car", "plane"], dur: ["weekend", "week", "long"], pet: "cat" },
+    { g: "essentials", t: "Portable litter tray + litter for layovers", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"], pet: "cat" },
+    { g: "food", t: "Your pet's regular food (trip amount + 2 extra days)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "food", t: "Collapsible food & water bowls", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "food", t: "Water bottle filled from home (avoid sudden water changes)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "food", t: "Training treats + a long-lasting chew", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "food", t: "Frozen water bowl for the carrier (melts slowly on flights)", modes: ["plane"], dur: ["day", "weekend", "week", "long"], note: "Flight tip" },
+    { g: "comfort", t: "Favorite blanket or bed that smells like home", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "comfort", t: "One familiar toy", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "comfort", t: "Calming aid (vet-approved treats, spray, or wrap)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "comfort", t: "Old T-shirt you've worn (comfort scent for the carrier)", modes: ["plane"], dur: ["day", "weekend", "week", "long"], note: "Flight tip" },
+    { g: "health", t: "Vaccination records + vet contact info", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "health", t: "Any daily medications + dosing schedule", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "health", t: "Pet first-aid kit (bandages, antiseptic, tweezers, styptic powder)", modes: ["car", "plane"], dur: ["weekend", "week", "long"] },
+    { g: "health", t: "Recent photo of your pet (in case they get lost)", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "health", t: "USDA-endorsed health certificate (issued within 10 days of flight)", modes: ["plane"], dur: ["day", "weekend", "week", "long"], note: "Required" },
+    { g: "health", t: "Microchip number + registry updated with your phone", modes: ["car", "plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "plane", t: "Airline-approved carrier that fits under the seat", modes: ["plane"], dur: ["day", "weekend", "week", "long"], note: "Required" },
+    { g: "plane", t: "\"Live Animal\" stickers + your contact info on the carrier", modes: ["plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "plane", t: "Pee pads lining the carrier (2–3 extras)", modes: ["plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "plane", t: "Zip ties for carrier door (TSA-approved latches)", modes: ["plane"], dur: ["day", "weekend", "week", "long"] },
+    { g: "car", t: "Crash-tested car harness or secured crate", modes: ["car"], dur: ["day", "weekend", "week", "long"], note: "Safety" },
+    { g: "car", t: "Seat cover or hammock to protect upholstery", modes: ["car"], dur: ["day", "weekend", "week", "long"] },
+    { g: "car", t: "Sunshade for windows + portable fan", modes: ["car"], dur: ["day", "weekend", "week", "long"] },
+    { g: "car", t: "Towel & pet-safe wipes for muddy paws", modes: ["car"], dur: ["day", "weekend", "week", "long"] },
+    { g: "car", t: "Poop bags for rest stops", modes: ["car"], dur: ["weekend", "week", "long"], pet: "dog" },
+    { g: "car", t: "Spill-proof travel water dispenser", modes: ["car"], dur: ["weekend", "week", "long"] }
+  ];
+
+  function matches(item, mode, dur, pet) {
+    if (item.modes.indexOf(mode) === -1) return false;
+    if (item.dur.indexOf(dur) === -1) return false;
+    if (item.pet && item.pet !== pet) return false;
+    return true;
+  }
+
+  var form = document.getElementById("checklist-form");
+  var result = document.getElementById("result");
+  var resultGroups = document.getElementById("result-groups");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var mode = form.querySelector('input[name="mode"]:checked').value;
+    var dur = document.getElementById("duration").value;
+    var pet = form.querySelector('input[name="pet"]:checked').value;
+
+    var filtered = ITEMS.filter(function (it) { return matches(it, mode, dur, pet); });
+
+    var grouped = {};
+    filtered.forEach(function (it) {
+      (grouped[it.g] = grouped[it.g] || []).push(it);
+    });
+
+    var petLabel = pet === "dog" ? "Dog" : "Cat";
+    var modeLabel = mode === "car" ? "car trip" : "flight";
+    var durLabel = {
+      day: "day trip", weekend: "weekend trip", week: "week-long trip", long: "long trip"
+    }[dur];
+
+    document.getElementById("result-title").textContent =
+      "Your " + petLabel + " Packing List — " + durLabel + " by " + (mode === "car" ? "car" : "plane");
+    document.getElementById("result-summary").textContent =
+      filtered.length + " items tailored to a " + durLabel + " " + modeLabel + " with a " + petLabel.toLowerCase() + ". Tick them off as you pack!";
+
+    resultGroups.innerHTML = "";
+    var idx = 0;
+    Object.keys(GROUPS).forEach(function (g) {
+      if (!grouped[g]) return;
+      var h = document.createElement("h3");
+      h.textContent = GROUPS[g];
+      h.style.cssText = "color:var(--teal-dark);margin:18px 0 6px;font-size:1.05rem;";
+      resultGroups.appendChild(h);
+      grouped[g].forEach(function (it) {
+        var div = document.createElement("label");
+        div.className = "check-item";
+        var cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.id = "item-" + (idx++);
+        cb.addEventListener("change", function () {
+          div.classList.toggle("done", cb.checked);
+          updateCount();
+        });
+        var span = document.createElement("span");
+        span.textContent = it.t;
+        div.appendChild(cb);
+        div.appendChild(span);
+        if (it.note) {
+          var tag = document.createElement("span");
+          tag.className = "tag";
+          tag.textContent = it.note;
+          div.appendChild(tag);
+        }
+        resultGroups.appendChild(div);
+      });
+    });
+
+    document.getElementById("total-count").textContent = filtered.length;
+    document.getElementById("packed-count").textContent = "0";
+    result.classList.add("show");
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  function updateCount() {
+    var checked = resultGroups.querySelectorAll('input[type="checkbox"]:checked').length;
+    document.getElementById("packed-count").textContent = checked;
+  }
+})();
+</script>
+
+</body>
+</html>

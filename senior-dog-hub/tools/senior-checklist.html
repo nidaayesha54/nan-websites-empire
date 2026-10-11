@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior Dog Wellness Checklist Generator — SeniorDogHub</title>
+<meta name="description" content="Generate a personalized senior dog wellness plan: vet visit frequency, diet guidance, exercise routine, and comfort checklist by size and age.">
+<link rel="canonical" href="https://nan-seniordog.surge.sh/tools/senior-checklist.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Senior<span>Dog</span>Hub</a>
+    <div class="nav-links">
+      <a href="senior-age.html">Age Calculator</a>
+      <a href="senior-checklist.html">Wellness Checklist</a>
+      <a href="senior-cost.html">Cost Estimator</a>
+      <a href="../guides/senior-dog-care-guide.html">Care Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Senior Dog Wellness Checklist</h1>
+  <p style="text-align:center;color:var(--muted)">Answer three questions and get a personalized golden-years wellness plan.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="breedSize">Breed size</label>
+    <select id="breedSize">
+      <option value="small">Small (under 20 lbs)</option>
+      <option value="medium" selected>Medium (20–50 lbs)</option>
+      <option value="large">Large (50–90 lbs)</option>
+      <option value="giant">Giant (90+ lbs)</option>
+    </select>
+
+    <label for="dogAge">Dog's age (years)</label>
+    <input type="number" id="dogAge" min="1" max="25" step="0.25" value="10" placeholder="e.g. 10">
+
+    <label for="mobility">How is your dog's mobility?</label>
+    <select id="mobility">
+      <option value="spry">Still spry — moves easily</option>
+      <option value="slowing">Slowing down a bit</option>
+      <option value="stiff">Stiff — struggles with stairs/jumps</option>
+    </select>
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="genChecklist()">Build My Checklist</button>
+    </div>
+
+    <div class="result" id="planResult" role="status">
+      <div class="big" id="planTitle"></div>
+      <div id="planBody"></div>
+    </div>
+  </div>
+
+  <div class="container disclaimer"><strong>Disclaimer:</strong> Wellness information only — not a substitute for professional veterinary advice. Discuss any health changes with your veterinarian.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="senior-age.html">Senior Age Calculator</a> · <a href="../guides/senior-dog-care-guide.html">Complete Senior Care Guide</a> · <a href="../guides/best-food-senior-dogs.html">Best Food for Senior Dogs</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="senior-age.html">Age Calculator</a> · <a href="senior-checklist.html">Checklist</a> · <a href="senior-cost.html">Cost Estimator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+function genChecklist() {
+  var size = SDH.$('breedSize').value;
+  var age = parseFloat(SDH.$('dogAge').value);
+  var mobility = SDH.$('mobility').value;
+  if (isNaN(age) || age < 1 || age > 25) {
+    alert('Please enter an age between 1 and 25 years.');
+    return;
+  }
+
+  var seniorAt = { small: 10, medium: 9, large: 8, giant: 6 }[size];
+  var sizeLabel = { small: 'Small', medium: 'Medium', large: 'Large', giant: 'Giant' }[size];
+  var isSenior = age >= seniorAt;
+
+  var vetVisits = isSenior
+    ? '<strong>Vet checkups every 6 months.</strong> Senior dogs can develop new changes quickly — twice-yearly exams catch things early. Ask your vet about routine senior bloodwork.'
+    : '<strong>Annual vet checkup.</strong> Your dog isn\'t quite senior yet by size, but start scheduling senior-style monitoring from age ' + seniorAt + '.';
+
+  var diet = isSenior
+    ? '<strong>Switch to a senior formula.</strong> Senior recipes are usually lower-calorie and easier to digest, often with added joint support. Measure meals, limit treats to 10% of daily calories, and weigh monthly — extra weight is hard on aging joints.'
+    : '<strong>Stay on a balanced adult diet.</strong> Begin transitioning to a senior formula around age ' + seniorAt + '. Do it gradually over 7–10 days to avoid stomach upset.';
+
+  var exercise;
+  if (mobility === 'spry') {
+    exercise = '<strong>Two 20–30 minute sessions daily.</strong> Keep the activities your dog loves, but shorten sessions and add rest days between high-energy outings.';
+  } else if (mobility === 'slowing') {
+    exercise = '<strong>Two 15-minute gentle walks daily.</strong> Choose flat routes, keep a steady slow pace, and consider low-impact options like swimming (ask your vet first).';
+  } else {
+    exercise = '<strong>Short, gentle sniff walks only.</strong> Let your dog set the pace. Add ramps at home, avoid stairs and jumping, and discuss a comfort plan with your vet.';
+  }
+
+  var comfort = '<strong>Comfort upgrades:</strong> orthopedic bed, raised food/water bowls, non-slip mats on slick floors, and a warm draft-free sleeping spot. Keep water within easy reach on every floor your dog uses.';
+
+  var grooming = '<strong>Grooming &amp; senses:</strong> brush teeth regularly, check nails monthly (less activity means less natural wear), and gently clean ears. Vision and hearing may fade — use hand signals, speak before touching, and keep furniture in familiar places.';
+
+  var items = [vetVisits, diet, exercise, comfort, grooming];
+  var html = '';
+  for (var i = 0; i < items.length; i++) {
+    html += '<div class="check-item">' + (i + 1) + '. ' + items[i] + '</div>';
+  }
+
+  SDH.$('planTitle').textContent = 'Wellness Plan — ' + sizeLabel + ', age ' + age;
+  SDH.$('planBody').innerHTML = html;
+  SDH.$('planResult').classList.add('show');
+}
+</script>
+</body>
+</html>

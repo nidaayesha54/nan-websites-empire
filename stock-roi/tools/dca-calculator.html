@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCA Calculator — Project Monthly Investing Growth | StockROI</title>
+<meta name="description" content="Free dollar-cost averaging calculator: project what monthly investing grows into over years. Adjust contribution, timeframe and growth rate. No signup.">
+<link rel="canonical" href="https://stockroi.github.io/tools/dca-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is dollar-cost averaging a good strategy?","acceptedAnswer":{"@type":"Answer","text":"DCA reduces timing risk and builds discipline, but historically lump-sum investing wins about two-thirds of the time in rising markets. Read our DCA vs lump sum guide for the full comparison."}},
+{"@type":"Question","name":"How much should I invest monthly?","acceptedAnswer":{"@type":"Answer","text":"A common rule is 15–20% of income toward long-term investing, after an emergency fund. The right amount depends on your goals, debts, and timeline — this calculator helps you see what any monthly amount could grow into."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">📈 Stock<span>ROI</span></a>
+<nav class="nav">
+<a href="../index.html">Home</a>
+<a href="stock-return-calculator.html">Stock Calc</a>
+<a href="dca-calculator.html">DCA Calc</a>
+<a href="crypto-profit-calculator.html">Crypto Calc</a>
+</nav>
+</div></header>
+
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> → DCA Calculator</p>
+<section class="section">
+<span class="kicker">Free Tool</span>
+<h1>Dollar-Cost Averaging (DCA) Calculator</h1>
+<p class="lede">See what steady monthly investing could grow into. Adjust the numbers — results update instantly.</p>
+
+<div class="tool-box">
+<div class="field"><label for="monthly">Monthly investment ($)</label><input type="number" id="monthly" value="500" min="0" step="10"></div>
+<div class="field"><label for="startAmt">Starting amount ($, optional)</label><input type="number" id="startAmt" value="0" min="0" step="100"></div>
+<div class="field"><label for="years">Time horizon (years)</label><input type="number" id="years" value="20" min="1" max="60" step="1"></div>
+<div class="field"><label for="rate">Assumed annual growth rate (%)</label><input type="number" id="rate" value="8" min="0" max="30" step="0.5"><div class="hint">S&amp;P 500 long-run average ≈ 10% before inflation.</div></div>
+<div class="results">
+<h3>Your Projection</h3>
+<div class="result-row"><span>Total invested</span><span class="val" id="rInvested">$0</span></div>
+<div class="result-row"><span>Projected value</span><span class="val positive" id="rValue">$0</span></div>
+<div class="result-row"><span>Growth on contributions</span><span class="val" id="rGain">$0</span></div>
+<div class="result-row"><span>Money multiple</span><span class="val" id="rMult">—</span></div>
+<p id="rNote" style="color:var(--muted);font-size:.85rem;margin-top:12px"></p>
+</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<article class="prose">
+<h2>What is dollar-cost averaging?</h2>
+<p>Dollar-cost averaging (DCA) means investing a fixed dollar amount on a regular schedule — say $500 every month — regardless of market prices. When prices are high you buy fewer shares; when they're low you buy more. Over time, this smooths your average purchase price and removes the stress of "timing the market."</p>
+<h2>The math behind the projection</h2>
+<p>This calculator compounds monthly: each contribution grows at 1/12th of your assumed annual rate for every remaining month. It's a simplified model — real markets zigzag — but it shows the <em>power of consistency plus time</em>.</p>
+<h2>DCA vs lump sum: which wins?</h2>
+<p>Research (including Vanguard's well-known study) finds lump-sum investing beats DCA about two-thirds of the time in rising markets — because markets rise more often than they fall. But DCA wins on psychology: it's easier to stay invested through volatility. Read our full <a href="../guides/dca-vs-lump-sum.html">DCA vs lump sum investing guide</a>.</p>
+<h2>FAQ</h2>
+<div class="faq">
+<div class="faq-item"><div class="faq-q">Is dollar-cost averaging a good strategy? <span>+</span></div><div class="faq-a">DCA reduces timing risk and builds discipline, but historically lump-sum investing wins about two-thirds of the time in rising markets. Read our <a href="../guides/dca-vs-lump-sum.html">DCA vs lump sum guide</a> for the full comparison.</div></div>
+<div class="faq-item"><div class="faq-q">How much should I invest monthly? <span>+</span></div><div class="faq-a">A common rule is 15–20% of income toward long-term investing, after an emergency fund. The right amount depends on your goals, debts, and timeline.</div></div>
+</div>
+</article>
+
+<div class="disclaimer"><strong>⚠️ Disclaimer:</strong> Projections are hypothetical and educational only — not financial advice. Real returns vary; past performance never guarantees future results. Investing involves risk, including possible loss of principal.</div>
+</section>
+</div>
+
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div><h4>Calculators</h4><a href="stock-return-calculator.html">Stock Return Calculator</a><a href="dca-calculator.html">DCA Calculator</a><a href="crypto-profit-calculator.html">Crypto Profit Calculator</a></div>
+<div><h4>Guides</h4><a href="../guides/cagr-explained.html">CAGR Explained</a><a href="../guides/dca-vs-lump-sum.html">DCA vs Lump Sum</a></div>
+<div><h4>StockROI</h4><a href="../index.html">Home</a></div>
+</div>
+<div class="bottom">© 2026 StockROI. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>. Educational only — not financial advice.</div>
+</div></footer>
+<script src="../js/dca.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landlord Insurance Quote Estimator: Cost by Property (2026)</title>
+<meta name="description" content="Estimate landlord insurance cost by property type, location risk, age & deductible. Free instant premium estimate for US rental properties in 2026.">
+<link rel="canonical" href="https://nan-landlordins.surge.sh/tools/quote-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Landlord Insurance Quote Estimator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🏠 Landlord<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="coverage-calculator.html">Coverage</a><a href="rent-vs-risk.html">Worth It?</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Quote Estimator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Landlord Insurance Quote Estimator</h1>
+<p>National averages are misleading — your rate depends on <strong>your</strong> property. Select the details below for a realistic ballpark.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Property type</label><select id="ptype">
+<option value="1450">Single-family rental</option>
+<option value="1850">Duplex</option>
+<option value="2400">Triplex / 4-plex</option>
+<option value="950">Condo unit (rented out)</option>
+<option value="3400">Small apartment building (5+ units)</option>
+</select></div>
+<div class="field"><label>Location risk (state/area)</label><select id="risk">
+<option value="0.85">Low risk — e.g. Midwest, low disaster exposure</option>
+<option value="1.0" selected>Average — most US states</option>
+<option value="1.25">High risk — FL, TX, CA, hurricane/wildfire zones</option>
+</select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Construction</label><select id="constr">
+<option value="1.15">Wood frame</option>
+<option value="1.0" selected>Frame + brick veneer</option>
+<option value="0.95">Masonry / brick</option>
+</select></div>
+<div class="field"><label>Property age</label><select id="age">
+<option value="0.95">Built after 2000</option>
+<option value="1.0" selected>1980–2000</option>
+<option value="1.2">Before 1980 (older wiring/plumbing)</option>
+</select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Deductible</label><select id="ded">
+<option value="1.15">$500</option>
+<option value="1.05" selected>$1,000</option>
+<option value="0.95">$2,500</option>
+<option value="0.85">$5,000</option>
+</select></div>
+<div class="field"><label>Claims in the last 3 years</label><select id="claims">
+<option value="1.0" selected>None</option>
+<option value="1.15">1 claim</option>
+<option value="1.35">2 or more claims</option>
+</select></div>
+</div>
+<div class="field"><label style="font-weight:400"><input type="checkbox" id="bundle" style="width:auto"> Bundle with my auto/home insurer (−10%)</label></div>
+<button class="btn" onclick="calc()">Estimate My Premium</button>
+<div class="result" id="res">
+<h3>Estimated annual premium</h3>
+<div class="big" id="annual"></div>
+<p style="color:var(--muted)">≈ <span id="monthly"></span> per month · Likely range: <span id="range"></span></p>
+<table class="cmp">
+<tr><th>Factor</th><th>Your selection</th><th>Effect on rate</th></tr>
+<tbody id="factors"></tbody>
+</table>
+<p style="color:var(--muted);font-size:.9rem">Range reflects the ±15% spread seen between insurers for the same risk.</p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimates only — not financial advice.</strong> Real quotes vary by carrier, underwriting rules and exact coverage. Use this as a budget starting point, then get 2–3 real quotes from licensed agents.</div>
+</div>
+</div></section>
+
+<section class="section"><div class="container"><div class="faq" style="max-width:760px;margin:0 auto">
+<h2 style="text-align:center">Premium FAQ</h2>
+<div class="faq-item"><div class="faq-q">Why is landlord insurance more expensive than homeowners?</div><div class="faq-a">Insurers price in higher risk: tenants file claims more often than owner-occupants, turnover increases damage risk, and loss-of-rent coverage adds a benefit homeowners policies don't include. Typically 15–25% more. Details in our <a href="../guides/landlord-insurance-cost-2026.html">2026 cost guide</a>.</div></div>
+<div class="faq-item"><div class="faq-q">What's the biggest lever to lower my premium?</div><div class="faq-a">Raising the deductible from $1,000 to $2,500 typically cuts 15–20% off the premium. Bundling with your auto insurer adds another ~10%. Security systems and claim-free years help too.</div></div>
+<div class="faq-item"><div class="faq-q">Does the state really matter that much?</div><div class="faq-a">Yes — weather and litigation risk drive it. A frame duplex in Florida can cost double the same building in Ohio. High-risk states face more carrier restrictions and higher base rates.</div></div>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> LandlordInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+var FACTORS=[
+  ['ptype','Property type'],['risk','Location risk'],['constr','Construction'],
+  ['age','Property age'],['ded','Deductible'],['claims','Claims history']
+];
+function calc(){
+  var base=parseFloat(val('ptype'));
+  var mult=1, rows='';
+  FACTORS.forEach(function(f){
+    var sel=document.getElementById(f[0]);
+    var m=parseFloat(sel.value);
+    var label=sel.options[sel.selectedIndex].text;
+    mult*=m;
+    var eff = m>1 ? '+'+Math.round((m-1)*100)+'%': (m<1 ? '−'+Math.round((1-m)*100)+'%':'—');
+    rows+='<tr><td>'+f[1]+'</td><td>'+label+'</td><td>'+eff+'</td></tr>';
+  });
+  var bundle=document.getElementById('bundle').checked;
+  if(bundle){ mult*=0.90; rows+='<tr><td>Multi-policy bundle</td><td>Bundled</td><td>−10%</td></tr>'; }
+  var annual=base*mult;
+  var monthly=annual/12;
+  document.getElementById('annual').textContent=money(annual)+'/yr';
+  document.getElementById('monthly').textContent=money(monthly);
+  document.getElementById('range').textContent=money(annual*0.85)+' – '+money(annual*1.15);
+  document.getElementById('factors').innerHTML=rows;
+  show('res');
+}
+</script>
+</body>
+</html>

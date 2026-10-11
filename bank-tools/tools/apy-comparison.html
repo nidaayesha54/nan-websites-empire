@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings APY Comparison Calculator: See the Interest Gap</title>
+<meta name="description" content="Compare two savings account APYs side by side. Enter deposit, both rates and years — see future values and the interest difference.">
+<link rel="canonical" href="https://nan-banktools.surge.sh/tools/apy-comparison.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="../index.html">🏦 Bank<span>Tools</span></a><nav class="nav"><a href="../index.html">Home</a><a href="../tools/apy-comparison.html">APY Compare</a><a href="../tools/cd-ladder.html">CD Ladder</a><a href="../tools/hysa-projector.html">HYSA Projector</a><a href="../blog/index.html">Blog</a></nav></div></header>
+<main class="wrap"><div class="article" style="padding-bottom:0">
+<h1>Savings APY Comparison</h1>
+<p class="meta">A 0.01% bank account vs a 4%+ high-yield account looks small — until you see the dollar gap over years.</p></div>
+<div class="toolbox">
+<div class="form-grid"><div class="field"><label for="dep">Deposit amount ($)</label><input type="number" id="dep" value="10000" ></div><div class="field"><label for="apya">APY — Account A (%)</label><input type="number" id="apya" value="4.50" ><div class="hint">e.g. high-yield savings</div></div><div class="field"><label for="apyb">APY — Account B (%)</label><input type="number" id="apyb" value="0.01" ><div class="hint">e.g. big-bank savings</div></div><div class="field"><label for="yrs">Years</label><input type="number" id="yrs" value="10" ></div></div><div style="text-align:center"><button class="btn" id="calcBtn">Calculate</button></div>
+<div class="result-box" id="resultBox"></div>
+<p class="disclaimer">⚠️ Educational purposes only — not financial advice.</p>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="article">
+<h2>Why APY gaps matter more than they look</h2>
+<p>Interest compounds on interest, so a 4-point APY gap doesn't cost you 4% — over a decade it can cost you half your balance in forgone growth. That's why high-yield accounts are the easiest raise most people never ask for. Learn what to look for in our <a href="../guides/best-high-yield-savings-accounts-2026.html">best HYSA guide</a>.</p>
+<h2>APY already includes compounding</h2>
+<p>APY (annual percentage yield) is the effective yearly rate after compounding — so future value is simply deposit × (1+APY)<sup>years</sup>, whatever the bank's compounding schedule. Confused by the jargon? Read <a href="../guides/apy-vs-apr-difference.html">APY vs APR explained</a>.</p>
+<h2>Project with monthly deposits</h2>
+<p>Most savers add money monthly. The <a href="hysa-projector.html">HYSA projector</a> models starting balance plus monthly deposits year by year.</p><div class="related"><h3>Related</h3><ul><li><a href="hysa-projector.html">High-Yield Savings Projector</a></li><li><a href="cd-ladder.html">CD Ladder Builder</a></li><li><a href="../guides/apy-vs-apr-difference.html">APY vs APR Guide</a></li></ul></div></div></main>
+<footer>
+  <div class="wrap">
+    <div><strong>🏦 BankTools</strong><p>APY, CD ladder and high-yield savings calculators.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="../tools/apy-comparison.html">APY Comparison</a><br><a href="../tools/cd-ladder.html">CD Ladder</a><br><a href="../tools/hysa-projector.html">HYSA Projector</a></p></div>
+    <div><p><a href="../guides/best-high-yield-savings-accounts-2026.html">Best HYSAs 2026</a><br><a href="../guides/cd-ladder-strategy-explained.html">CD Ladder Strategy</a><br><a href="../guides/apy-vs-apr-difference.html">APY vs APR</a><br><a href="../blog/index.html">Blog</a></p></div>
+  </div>
+</footer>
+
+</body>
+</html>

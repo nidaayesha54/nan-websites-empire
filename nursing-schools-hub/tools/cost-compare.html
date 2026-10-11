@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursing School Cost Comparator | NursingSchoolsHub</title>
+<meta name="description" content="Compare nursing school costs: enter tuition and program length to see total cost, monthly loan payments, and payback time vs starting RN salary.">
+<link rel="canonical" href="https://nan-nursingschool.surge.sh/tools/cost-compare.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../index.html"><span class="logo-mark">✚</span> NursingSchoolsHub</a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="school-finder.html">School Finder</a>
+      <a href="cost-compare.html" class="active">Cost Compare</a>
+      <a href="nclex-pass.html">NCLEX Guide</a>
+      <a href="../guides/best-nursing-schools-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Cost Compare</div>
+  <h1>Nursing School Cost Comparator</h1>
+  <p class="meta">Tuition sticker price isn't the whole story. Enter your numbers to see the true total cost — and how long it takes to earn it back as an RN.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <form id="cost-form" class="tool-form">
+    <div class="field-row">
+      <div class="field">
+        <label for="tuition">Tuition per year ($)</label>
+        <input type="number" id="tuition" min="0" value="12000" required>
+      </div>
+      <div class="field">
+        <label for="years">Program length (years)</label>
+        <input type="number" id="years" min="1" max="6" step="0.5" value="2" required>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="fees">Extra fees total ($)</label>
+        <input type="number" id="fees" min="0" value="3000">
+      </div>
+      <div class="field">
+        <label for="rate">Loan interest rate (%)</label>
+        <input type="number" id="rate" min="0" max="20" step="0.1" value="5.5">
+      </div>
+    </div>
+    <div class="field">
+      <label for="salary">Expected starting RN salary ($/year)</label>
+      <input type="number" id="salary" min="0" value="72000" required>
+    </div>
+    <button type="submit" class="btn">Calculate True Cost</button>
+  </form>
+
+  <div id="cost-results" aria-live="polite"></div>
+
+  <div class="callout" style="margin-top:32px">
+    <strong>Rule of thumb:</strong> aim for total student debt below one year of your starting salary. Nursing's strong job outlook makes the investment pay off — but a $90,000 private program only makes sense if the outcomes (NCLEX pass rate, job placement) justify it. Always file the <a href="https://studentaid.gov" target="_blank" rel="noopener">FAFSA</a> and compare community college options first.
+  </div>
+
+  <div class="related">
+    <h2>Keep researching</h2>
+    <ul>
+      <li><a href="school-finder.html">Find programs that fit your budget</a></li>
+      <li><a href="../guides/adn-vs-bsn.html">ADN vs BSN cost comparison</a></li>
+      <li><a href="../guides/best-nursing-schools-2026.html">How to choose a nursing school in 2026</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="school-finder.html">School Finder</a>
+      <a href="cost-compare.html">Cost Compare</a>
+      <a href="nclex-pass.html">NCLEX Guide</a>
+      <a href="../guides/best-nursing-schools-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../js/cost-compare.js"></script>
+</body>
+</html>

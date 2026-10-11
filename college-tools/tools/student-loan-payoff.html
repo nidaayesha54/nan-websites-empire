@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Loan Payoff Calculator — Compare Repayment Plans</title>
+  <meta name="description" content="Free student loan payoff calculator: compare your payment, extra payments, and the standard 10-year plan — plus a rough income-driven repayment estimate.">
+  <link rel="canonical" href="https://nan-collegetools.surge.sh/tools/student-loan-payoff.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is the standard student loan payment calculated?","acceptedAnswer":{"@type":"Answer","text":"Federal loans default to the Standard Repayment Plan: fixed payments over 10 years, calculated with the standard loan amortization formula from your balance and interest rate."}},
+    {"@type":"Question","name":"Do extra student loan payments save money?","acceptedAnswer":{"@type":"Answer","text":"Yes. Extra payments go toward principal, which reduces the balance that interest accrues on — shortening the loan and cutting total interest, sometimes by thousands of dollars."}},
+    {"@type":"Question","name":"What is income-driven repayment?","acceptedAnswer":{"@type":"Answer","text":"Income-driven plans cap your monthly payment at a percentage of discretionary income (often 10%) and forgive the remaining balance after 20-25 years of payments. Forgiven amounts may be taxable."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">College<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="529-projector.html">529 Projector</a>
+      <a href="college-cost.html">College Cost</a>
+      <a href="student-loan-payoff.html">Loan Payoff</a>
+      <a href="../guides/student-loan-repayment-plans.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Student Loan Payoff Calculator</p>
+  <h1>Student Loan Payoff Calculator</h1>
+  <p>Enter your balance, rate, and payment to see your payoff date and total interest — then compare against extra payments, the standard 10-year plan, and a rough income-driven estimate.</p>
+
+  <div class="calc">
+    <div class="field-row">
+      <div class="field"><label for="sl-bal">Loan balance ($)</label><input type="number" id="sl-bal" value="30000"></div>
+      <div class="field"><label for="sl-rate">Interest rate (%)</label><input type="number" id="sl-rate" value="6" step="0.25"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="sl-pmt">Your monthly payment ($)</label><input type="number" id="sl-pmt" value="350"></div>
+      <div class="field"><label for="sl-extra">Extra per month ($, optional)</label><input type="number" id="sl-extra" value="100"></div>
+    </div>
+    <div class="field"><label for="sl-income">Annual income ($, for IDR estimate — optional)</label><input type="number" id="sl-income" value="55000"></div>
+    <button class="btn btn-blue" id="sl-calc">Compare payoff plans</button>
+  </div>
+
+  <div class="result" id="sl-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout tip">
+    <strong class="label">The extra-payment effect</strong>
+    On a $30,000 loan at 6%, adding just $100/month to a $350 payment can cut roughly two years off the loan and save thousands in interest. Small extras compound. See <a href="../guides/student-loan-repayment-plans.html">repayment plans explained</a> for the full menu of options.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">How is the standard student loan payment calculated? <span>+</span></div><div class="faq-a">Federal loans default to the Standard Repayment Plan: fixed amortized payments over 10 years, computed from your balance and interest rate with the standard loan formula.</div></div>
+  <div class="faq-item"><div class="faq-q">Do extra student loan payments save money? <span>+</span></div><div class="faq-a">Yes — extra payments go straight to principal, shrinking the balance that interest accrues on. That shortens the loan and cuts total interest, often by thousands of dollars.</div></div>
+  <div class="faq-item"><div class="faq-q">What is income-driven repayment? <span>+</span></div><div class="faq-a">Income-driven plans cap payments at a share of discretionary income (often 10%) and forgive the remainder after 20–25 years. Lower payments now usually mean more interest overall — and forgiven debt may be taxable.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

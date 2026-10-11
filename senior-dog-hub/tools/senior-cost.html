@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior Dog Yearly Cost Estimator USA — SeniorDogHub</title>
+<meta name="description" content="Estimate senior dog yearly costs in the USA. Pick size + care level for a vet, food, medication & supplement cost breakdown.">
+<link rel="canonical" href="https://nan-seniordog.surge.sh/tools/senior-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Senior<span>Dog</span>Hub</a>
+    <div class="nav-links">
+      <a href="senior-age.html">Age Calculator</a>
+      <a href="senior-checklist.html">Wellness Checklist</a>
+      <a href="senior-cost.html">Cost Estimator</a>
+      <a href="../guides/senior-dog-care-guide.html">Care Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Senior Dog Yearly Cost Estimator</h1>
+  <p style="text-align:center;color:var(--muted)">What does a senior dog really cost per year in the USA? Pick your dog's size and care level.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="breedSize">Breed size</label>
+    <select id="breedSize">
+      <option value="small">Small (under 20 lbs)</option>
+      <option value="medium" selected>Medium (20–50 lbs)</option>
+      <option value="large">Large (50–90 lbs)</option>
+      <option value="giant">Giant (90+ lbs)</option>
+    </select>
+
+    <label for="careLevel">Care level</label>
+    <select id="careLevel">
+      <option value="healthy" selected>Healthy senior — routine care only</option>
+      <option value="managed">Managed — daily joint/heart supplement + one medication</option>
+      <option value="chronic">Chronic care — multiple medications + extra vet visits</option>
+    </select>
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="calcCost()">Estimate Yearly Cost</button>
+    </div>
+
+    <div class="result" id="costResult" role="status">
+      <div class="big" id="costBig"></div>
+      <p id="costNote"></p>
+      <table class="cost-table" id="costTable"></table>
+    </div>
+  </div>
+
+  <div class="container disclaimer"><strong>Disclaimer:</strong> Wellness information only — not a substitute for professional veterinary advice. Cost estimates are US averages; prices vary by region and provider.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="senior-age.html">Senior Age Calculator</a> · <a href="senior-checklist.html">Wellness Checklist Generator</a> · <a href="../guides/senior-dog-care-guide.html">Senior Dog Care Guide</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="senior-age.html">Age Calculator</a> · <a href="senior-checklist.html">Checklist</a> · <a href="senior-cost.html">Cost Estimator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+// Base US-average yearly figures per size (healthy senior). Care-level adds medications/extras.
+var BASE_COSTS = {
+  small:  { exams: 160, bloodwork: 180, vaccines: 60,  food: 420,  grooming: 180 },
+  medium: { exams: 180, bloodwork: 200, vaccines: 75,  food: 600,  grooming: 120 },
+  large:  { exams: 200, bloodwork: 230, vaccines: 90,  food: 780,  grooming: 100 },
+  giant:  { exams: 240, bloodwork: 260, vaccines: 110, food: 1050, grooming: 90 }
+};
+var LEVEL_ADDS = {
+  healthy: { supplements: 120, meds: 0,   extraVisits: 0,   label: 'Healthy senior — routine care only' },
+  managed: { supplements: 240, meds: 360, extraVisits: 120, label: 'Managed care — supplements + one daily medication' },
+  chronic: { supplements: 360, meds: 900, extraVisits: 300, label: 'Chronic care — multiple medications + extra visits' }
+};
+function calcCost() {
+  var size = SDH.$('breedSize').value;
+  var level = SDH.$('careLevel').value;
+  var base = BASE_COSTS[size];
+  var add = LEVEL_ADDS[level];
+
+  var rows = [
+    ['Vet exams (2x/year senior schedule)', base.exams + add.extraVisits],
+    ['Senior bloodwork + diagnostics', base.bloodwork],
+    ['Vaccines + preventatives', base.vaccines],
+    ['Senior dog food', base.food],
+    ['Supplements (joint, omega-3)', add.supplements],
+    ['Daily medications', add.meds],
+    ['Grooming + dental basics', base.grooming]
+  ];
+
+  var total = 0, html = '<tr><th>Expense</th><th style="text-align:right">Est. / year</th></tr>';
+  for (var i = 0; i < rows.length; i++) {
+    total += rows[i][1];
+    html += '<tr><td>' + rows[i][0] + '</td><td class="num">$' + SDH.fmt(rows[i][1]) + '</td></tr>';
+  }
+  var low = Math.round(total * 0.85 / 10) * 10;
+  var high = Math.round(total * 1.25 / 10) * 10;
+  html += '<tr class="total"><td>Estimated yearly total</td><td class="num">$' + SDH.fmt(low) + ' – $' + SDH.fmt(high) + '</td></tr>';
+
+  SDH.$('costBig').textContent = '$' + SDH.fmt(low) + ' – $' + SDH.fmt(high) + ' / year';
+  SDH.$('costNote').textContent = add.label + '. Averages for the USA — emergency care, surgery, and pet insurance premiums are not included.';
+  SDH.$('costTable').innerHTML = html;
+  SDH.$('costResult').classList.add('show');
+}
+</script>
+</body>
+</html>

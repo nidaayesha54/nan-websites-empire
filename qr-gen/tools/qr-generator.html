@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free QR Code Generator — No Signup Required | QRGen</title>
+  <meta name="description" content="Create free QR codes instantly — no signup. Links, WiFi, vCards, SMS & more. Custom colors, logo overlay, PNG & SVG download. 100% private.">
+  <link rel="canonical" href="https://qrgen.surge.sh/tools/qr-generator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"QRGen QR Code Generator",
+   "url":"https://qrgen.surge.sh/tools/qr-generator.html",
+   "applicationCategory":"UtilitiesApplication","operatingSystem":"Any",
+   "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">QR<span>Gen</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="qr-generator.html" class="active">QR Generator</a>
+      <a href="wifi-qr.html">WiFi QR</a>
+      <a href="../guides/qr-code-uses.html">Uses Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:36px;">
+    <div class="wrap">
+      <h1 style="text-align:center;font-size:2rem;margin-bottom:8px;">Free QR Code Generator</h1>
+      <p class="lead">No signup. No tracking. Your code is built entirely in your browser.</p>
+
+      <div class="tool-layout" id="qrForm" style="margin-top:28px;">
+        <div class="panel">
+          <h2>1. What should your QR code do?</h2>
+          <div class="tabs" id="qrTabs">
+            <button class="tab active" data-type="link">🔗 Link</button>
+            <button class="tab" data-type="text">📝 Text</button>
+            <button class="tab" data-type="wifi">📶 WiFi</button>
+            <button class="tab" data-type="contact">👤 Contact</button>
+            <button class="tab" data-type="email">✉️ Email</button>
+            <button class="tab" data-type="phone">📞 Phone</button>
+            <button class="tab" data-type="sms">💬 SMS</button>
+          </div>
+
+          <div class="type-fields" id="fields-link">
+            <div class="field"><label for="inLink">Website URL</label>
+              <input type="url" id="inLink" placeholder="https://yourwebsite.com" autocomplete="off"></div>
+          </div>
+          <div class="type-fields" id="fields-text" style="display:none;">
+            <div class="field"><label for="inText">Text</label>
+              <textarea id="inText" rows="3" placeholder="Any text, coupon code, message…"></textarea></div>
+          </div>
+          <div class="type-fields" id="fields-wifi" style="display:none;">
+            <div class="field"><label for="inWifiSsid">Network name (SSID)</label>
+              <input type="text" id="inWifiSsid" placeholder="MyHomeWiFi" autocomplete="off"></div>
+            <div class="field-row">
+              <div class="field"><label for="inWifiPass">Password</label>
+                <input type="text" id="inWifiPass" placeholder="WiFi password" autocomplete="off"></div>
+              <div class="field"><label for="inWifiSec">Security</label>
+                <select id="inWifiSec"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None (open)</option></select></div>
+            </div>
+            <div class="field"><label class="check"><input type="checkbox" id="inWifiHidden"> Hidden network</label></div>
+          </div>
+          <div class="type-fields" id="fields-contact" style="display:none;">
+            <div class="field-row">
+              <div class="field"><label for="inCFirst">First name</label><input type="text" id="inCFirst" placeholder="Jane"></div>
+              <div class="field"><label for="inCLast">Last name</label><input type="text" id="inCLast" placeholder="Doe"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="inCPhone">Phone</label><input type="tel" id="inCPhone" placeholder="+1 555 123 4567"></div>
+              <div class="field"><label for="inCEmail">Email</label><input type="email" id="inCEmail" placeholder="jane@company.com"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="inCOrg">Company</label><input type="text" id="inCOrg" placeholder="Company Inc."></div>
+              <div class="field"><label for="inCUrl">Website</label><input type="url" id="inCUrl" placeholder="https://…"></div>
+            </div>
+          </div>
+          <div class="type-fields" id="fields-email" style="display:none;">
+            <div class="field"><label for="inEmailTo">Email address</label><input type="email" id="inEmailTo" placeholder="hello@company.com"></div>
+            <div class="field"><label for="inEmailSub">Subject (optional)</label><input type="text" id="inEmailSub" placeholder="Hello!"></div>
+            <div class="field"><label for="inEmailBody">Message (optional)</label><textarea id="inEmailBody" rows="2" placeholder="Pre-filled message…"></textarea></div>
+          </div>
+          <div class="type-fields" id="fields-phone" style="display:none;">
+            <div class="field"><label for="inPhone">Phone number</label><input type="tel" id="inPhone" placeholder="+1 555 123 4567"></div>
+          </div>
+          <div class="type-fields" id="fields-sms" style="display:none;">
+            <div class="field"><label for="inSmsNum">Phone number</label><input type="tel" id="inSmsNum" placeholder="+1 555 123 4567"></div>
+            <div class="field"><label for="inSmsMsg">Message (optional)</label><textarea id="inSmsMsg" rows="2" placeholder="Pre-filled text…"></textarea></div>
+          </div>
+
+          <div class="error" id="qrError"></div>
+
+          <h2 style="margin-top:24px;">2. Customize</h2>
+          <div class="field-row">
+            <div class="field"><label for="qrFg">QR color</label><input type="color" id="qrFg" value="#0b1220"></div>
+            <div class="field"><label for="qrBg">Background</label><input type="color" id="qrBg" value="#ffffff"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="qrSize">Download size</label>
+              <select id="qrSize"><option value="512">512px (web)</option><option value="1024" selected>1024px (standard)</option><option value="2048">2048px (print)</option></select></div>
+            <div class="field"><label for="qrEcl">Error correction</label>
+              <select id="qrEcl"><option value="M" selected>M — standard</option><option value="L">L — denser codes</option></select></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="qrMargin">Quiet zone</label>
+              <select id="qrMargin"><option value="4" selected>Standard (4 modules)</option><option value="2">Small (2 modules)</option><option value="0">None</option></select></div>
+            <div class="field"><label for="logoInput">Logo overlay (PNG)</label>
+              <input type="file" id="logoInput" accept="image/*">
+              <div style="margin-top:6px;"><button class="btn ghost small" id="btnClearLogo" type="button">Remove logo</button></div>
+            </div>
+          </div>
+          <p class="hint">Tip: keep logos small and test-scan before printing. Level M is recommended with a logo.</p>
+        </div>
+
+        <div class="panel preview">
+          <h2>3. Download</h2>
+          <div class="qr-frame"><canvas id="qrCanvas" width="300" height="300"></canvas></div>
+          <div class="dl-row">
+            <button class="btn small" id="btnPng" type="button">⬇ PNG</button>
+            <button class="btn ghost small" id="btnSvg" type="button">⬇ SVG</button>
+          </div>
+          <p class="hint">PNG is best for web &amp; documents.<br>SVG is infinite-resolution — ideal for print &amp; signage.</p>
+        </div>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+      <div class="ad-slot">Advertisement</div>
+
+      <div class="article" style="margin-top:8px;">
+        <h2>Why generate QR codes here?</h2>
+        <p>Most free QR tools upload your data to their servers, slap on watermarks, or charge for high-resolution downloads. QRGen is different: the entire QR code engine runs in JavaScript <strong>inside your page</strong>. Your URLs, WiFi passwords and contact details never travel over the network — open your browser's network tab and see for yourself: zero requests.</p>
+        <p>Codes are <strong>static and permanent</strong> — there's no account or subscription that can expire them. Generate once, use forever on menus, business cards, packaging, event posters and more.</p>
+        <p>Looking for creative ideas? Read our <a href="../guides/qr-code-uses.html">QR code uses guide for businesses</a>, or jump straight to the dedicated <a href="wifi-qr.html">WiFi QR generator</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span data-year></span> QRGen — free QR codes, generated privately in your browser.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="wifi-qr.html">WiFi QR</a>
+      <a href="../guides/qr-code-uses.html">Uses Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</footer>
+<script src="../js/qrcode.js"></script>
+<script src="../js/generator.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

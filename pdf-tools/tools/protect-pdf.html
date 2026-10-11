@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protect PDF with Password Online Free — No Signup | PDF Tools Hub</title>
+<meta name="description" content="Add password protection to a PDF online for free. Encrypt your PDF in your browser — no signup, files never leave your device.">
+<link rel="canonical" href="https://pdftoolshub.github.io/tools/protect-pdf.html">
+<link rel="stylesheet" href="../css/style.css">
+<!-- Encryption engine: qpdf WASM, vendored locally, runs in a Web Worker -->
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📄 PDF<span>ToolsHub</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="merge-pdf.html">Merge</a>
+      <a href="split-pdf.html">Split</a>
+      <a href="compress-pdf.html">Compress</a>
+      <a href="jpg-to-pdf.html">JPG→PDF</a>
+      <a href="pdf-to-jpg.html">PDF→JPG</a>
+      <a href="rotate-pdf.html">Rotate</a>
+      <a href="protect-pdf.html">Protect</a>
+      <a href="watermark-pdf.html">Watermark</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="article" style="padding-bottom:0">
+    <h1>Protect PDF with a Password — Free, No Signup</h1>
+    <p class="meta">Encrypt your PDF so only people with the password can open it. The password never leaves your browser.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="dropzone" id="dz">
+      <div style="font-size:2.2rem">🔐</div>
+      <strong>Drop a PDF file here</strong> or click to select
+      <p>Select one PDF file to password-protect.</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden>
+    </div>
+    <div id="fileInfo" style="text-align:center;margin:10px 0"></div>
+    <div style="max-width:420px;margin:12px auto">
+      <label style="display:block;margin-bottom:10px">Password:
+        <input type="password" id="pw1" placeholder="Choose a strong password" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px" autocomplete="new-password">
+      </label>
+      <label style="display:block">Confirm password:
+        <input type="password" id="pw2" placeholder="Repeat the password" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px" autocomplete="new-password">
+      </label>
+      <p class="hint" style="margin-top:8px">⚠️ We cannot recover a forgotten password — the file is encrypted on your device and we never see it. Store your password somewhere safe.</p>
+    </div>
+    <div class="progress" id="prog"><div id="progBar"></div></div>
+    <div style="text-align:center;margin-top:10px">
+      <button class="btn" id="goBtn" disabled>Protect PDF</button>
+    </div>
+    <div class="result-box" id="resultBox"></div>
+    <p class="hint">🔒 Privacy: encryption happens entirely in your browser's memory. Your password and file are never sent anywhere.</p>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>How to password-protect a PDF</h2>
+    <ol>
+      <li>Click the box above or drag in a PDF file.</li>
+      <li>Type a password twice.</li>
+      <li>Click <strong>Protect PDF</strong> — the encrypted file downloads immediately.</li>
+    </ol>
+    <h2>Common questions</h2>
+    <h3>What kind of encryption is used?</h3>
+    <p>Real AES-256 encryption — the same standard banks and governments use — applied by the qpdf engine running entirely in your browser. It stops anyone without the password from opening the file.</p>
+    <h3>Can the password be recovered if I forget it?</h3>
+    <p>No. Encryption happens on your device and nobody else ever sees your password or file, so there is no "forgot password" option. Keep a copy of the password.</p>
+    <h3>Will it work in Adobe Reader and other apps?</h3>
+    <p>Yes. The protected PDF uses the standard PDF password format, so any PDF reader will ask for the password on open.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>📄 PDF Tools Hub</strong><p>Free, private, no-signup PDF tools.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="merge-pdf.html">Merge PDF</a><br><a href="split-pdf.html">Split PDF</a><br><a href="compress-pdf.html">Compress PDF</a><br><a href="rotate-pdf.html">Rotate PDF</a><br><a href="protect-pdf.html">Protect PDF</a></p></div>
+  </div>
+</footer>
+<script type="module" src="../js/protect.js"></script>
+</body>
+</html>

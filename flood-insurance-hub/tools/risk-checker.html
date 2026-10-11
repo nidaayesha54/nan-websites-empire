@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flood Zone Risk Checker — Is My Home at Risk of Flooding?</title>
+<meta name="description" content="Take a 6-question flood risk quiz and get plain-English flood zone explanations. Find out if your home is at risk — even outside official flood zones.">
+<link rel="canonical" href="https://nan-floodins.surge.sh/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Flood Zone Risk Checker — Is My Home at Risk of Flooding?",
+  "description": "Interactive flood risk quiz and plain-English flood zone explanations for US homeowners.",
+  "url": "https://nan-floodins.surge.sh/"
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><span class="wave">🌊</span> FloodInsuranceHub</a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰ Menu</button>
+    <div class="nav-links" id="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="quote-estimator.html">Quote Estimator</a>
+      <a href="risk-checker.html">Risk Checker</a>
+      <a href="coverage-calculator.html">Coverage Calculator</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html" style="color:#bae6fd">Home</a> › Risk Checker</p>
+    <h1>Is My Area at Risk of Flooding?</h1>
+    <p>Answer 6 quick questions for an honest read on your flood exposure — then learn what flood zones really mean.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container tool-wrap">
+    <div class="tool-card">
+      <h2 style="font-size:1.3rem;color:var(--blue-900);margin-bottom:16px">Flood Risk Quiz</h2>
+      <form id="quizForm" onsubmit="return false;">
+        <div class="quiz-q">
+          <p><strong>1. How close is your home to water?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q1" value="3"> On the coast / beachfront</label>
+            <label><input type="radio" name="q1" value="2"> Within 1 mile of a river, lake, or coast</label>
+            <label><input type="radio" name="q1" value="1"> 1–5 miles from any water body</label>
+            <label><input type="radio" name="q1" value="0"> More than 5 miles from water</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <p><strong>2. Has your neighborhood ever flooded?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q2" value="3"> Yes, more than once</label>
+            <label><input type="radio" name="q2" value="2"> Yes, once</label>
+            <label><input type="radio" name="q2" value="1"> Nearby streets flooded, not my home</label>
+            <label><input type="radio" name="q2" value="0"> Never, as far as I know</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <p><strong>3. What does your FEMA flood map say?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q3" value="3"> Zone A/AE or V/VE (high risk)</label>
+            <label><input type="radio" name="q3" value="1"> Zone B/X shaded (moderate risk)</label>
+            <label><input type="radio" name="q3" value="0"> Zone X unshaded / C (low risk)</label>
+            <label><input type="radio" name="q3" value="2"> I don't know</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <p><strong>4. Does your home have a basement or sit low?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q4" value="2"> Yes, basement or ground floor below street level</label>
+            <label><input type="radio" name="q4" value="1"> No basement, but yard pools water in heavy rain</label>
+            <label><input type="radio" name="q4" value="0"> Elevated, good drainage</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <p><strong>5. Does your area get hurricanes, tropical storms, or heavy seasonal rain?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q5" value="2"> Yes — hurricanes or tropical storms</label>
+            <label><input type="radio" name="q5" value="1"> Yes — heavy rain / monsoon seasons</label>
+            <label><input type="radio" name="q5" value="0"> No, weather is generally mild</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <p><strong>6. Is the area heavily paved / developed around you?</strong></p>
+          <div class="quiz-opts">
+            <label><input type="radio" name="q6" value="1"> Yes — lots of concrete, poor drainage</label>
+            <label><input type="radio" name="q6" value="0"> No — plenty of green space and drainage</label>
+          </div>
+        </div>
+        <button class="btn" type="submit" onclick="checkRisk()">Get My Risk Result</button>
+      </form>
+    </div>
+
+    <div class="result" id="result" role="status" aria-live="polite"></div>
+
+    <h2 style="margin:34px 0 14px;color:var(--blue-900)">Flood Zones, Explained Simply</h2>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <div class="card"><div class="icon">🌊</div><h3>Zone V / VE</h3><p><strong>Highest risk.</strong> Coastal areas with wave action. 1%+ annual flood chance <em>plus</em> storm-wave hazard. Flood insurance is almost always required with a mortgage.</p></div>
+      <div class="card"><div class="icon">🏞️</div><h3>Zone A / AE</h3><p><strong>High risk.</strong> 1% annual flood chance ("100-year floodplain"). Mandatory insurance with federally backed mortgages. This is the classic "flood zone."</p></div>
+      <div class="card"><div class="icon">🌧️</div><h3>Zone B / X (shaded)</h3><p><strong>Moderate risk.</strong> 0.2% annual chance ("500-year floodplain") or shallow flooding areas. Insurance optional — but claims here are common.</p></div>
+      <div class="card"><div class="icon">☀️</div><h3>Zone X (unshaded) / C</h3><p><strong>Low risk.</strong> Outside the 500-year floodplain. Cheapest insurance — yet over 25% of NFIP claims come from these areas.</p></div>
+      <div class="card"><div class="icon">❔</div><h3>Zone D</h3><p><strong>Unknown risk.</strong> No flood-hazard analysis done. Don't mistake "undetermined" for "safe" — treat it as moderate risk.</p></div>
+    </div>
+
+    <div class="alert info">
+      <strong>Look up your official zone:</strong> Enter your address at FEMA's Map Service Center (msc.fema.gov) or FloodSmart.gov to see your property's designated flood zone.
+    </div>
+
+    <div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> This quiz is an educational self-assessment, not a professional flood study. Confirm your zone with FEMA maps and a licensed agent.</div>
+
+    <p style="color:var(--muted)">Next steps: <a href="quote-estimator.html">estimate your premium</a> · <a href="coverage-calculator.html">calculate coverage needs</a> · <a href="../guides/do-i-need-flood-insurance.html">do I need flood insurance outside a flood zone?</a></p>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>🌊 FloodInsuranceHub</h4>
+        <p>Free flood insurance tools and guides for US homeowners.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="quote-estimator.html">Quote Estimator</a></li>
+          <li><a href="risk-checker.html">Risk Checker</a></li>
+          <li><a href="coverage-calculator.html">Coverage Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides &amp; Blog</h4>
+        <ul>
+          <li><a href="../guides/flood-insurance-cost-2026.html">Flood Insurance Cost 2026</a></li>
+          <li><a href="../guides/nfip-vs-private-flood.html">NFIP vs Private</a></li>
+          <li><a href="../guides/do-i-need-flood-insurance.html">Do I Need It?</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+      <br>Estimates only, not financial advice.
+    </div>
+  </div>
+</footer>
+
+<script>
+function checkRisk() {
+  var total = 0, answered = 0;
+  for (var i = 1; i <= 6; i++) {
+    var opts = document.getElementsByName('q' + i);
+    var picked = false;
+    for (var j = 0; j < opts.length; j++) {
+      if (opts[j].checked) { total += parseInt(opts[j].value, 10); picked = true; break; }
+    }
+    if (picked) answered++;
+  }
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  if (answered < 6) {
+    box.innerHTML = '<div class="alert warn"><strong>Almost there!</strong> Please answer all 6 questions (' + answered + ' of 6 answered) for an accurate result.</div>';
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    return;
+  }
+  // Max score: 3+3+3+2+2+1 = 14
+  var level, cls, advice, pct;
+  if (total >= 9) {
+    level = 'High flood risk'; cls = 'danger'; pct = 90;
+    advice = '<strong>Strongly consider flood insurance now.</strong> Your answers point to meaningful flood exposure. Even outside a mapped high-risk zone, history and geography beat map labels. Get quotes from both NFIP and private insurers — and don\'t wait out the 30-day NFIP waiting period.';
+  } else if (total >= 5) {
+    level = 'Moderate flood risk'; cls = 'warn'; pct = 60;
+    advice = '<strong>Flood insurance is worth serious consideration.</strong> You have real exposure factors. Preferred-risk NFIP policies in moderate/low zones are surprisingly affordable — often a few hundred dollars a year. One storm can change everything.';
+  } else {
+    level = 'Lower flood risk'; cls = 'good'; pct = 30;
+    advice = '<strong>Your risk looks lower — but not zero.</strong> Remember: over 25% of flood claims come from low-risk zones, and flash floods can hit anywhere. A low-risk Preferred Risk Policy is the cheapest insurance you\'ll ever buy. Worth a look.';
+  }
+  box.innerHTML =
+    '<h3>Your result: ' + level + '</h3>' +
+    '<div class="bar-wrap"><div class="bar" style="width:' + pct + '%;background:' +
+      (cls === 'danger' ? 'linear-gradient(90deg,#ef4444,#b91c1c)' : cls === 'warn' ? 'linear-gradient(90deg,#fbbf24,#d97706)' : 'linear-gradient(90deg,#4ade80,#15803d)') + '"></div></div>' +
+    '<div class="alert ' + cls + '">' + advice + '</div>' +
+    '<p style="font-size:.9rem;color:var(--muted)">Score: ' + total + ' / 14. This is an educational self-check, not a professional assessment. <a href="quote-estimator.html">Estimate your premium →</a></p>';
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>

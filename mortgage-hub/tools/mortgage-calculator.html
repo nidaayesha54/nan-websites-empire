@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortgage Payment Calculator (2026) — P&I + Tax + Insurance + PMI</title>
+<meta name="description" content="Free mortgage payment calculator: principal & interest plus property tax, homeowners insurance, PMI, and HOA. See your true monthly cost instantly.">
+<link rel="canonical" href="https://nan-mortgagehub.surge.sh/tools/mortgage-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../index.html">🏠 Mortgage<span>Hub</span></a>
+<nav class="main"><a href="mortgage-calculator.html">Payment</a><a href="affordability.html">Affordability</a><a href="refinance.html">Refinance</a><a href="amortization.html">Amortization</a></nav>
+</div></header>
+<div class="wrap">
+  <section><h1 style="color:var(--navy);margin-top:24px">Mortgage Payment Calculator</h1>
+  <p style="color:var(--muted)">Your true monthly cost: principal &amp; interest, property tax, insurance, PMI, and HOA.</p></section>
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+  <form class="calc" id="mcalc">
+    <div class="field"><label for="price">Home price ($)</label><input id="price" type="number" value="450000" min="0"></div>
+    <div class="field"><label for="downpct">Down payment (%)</label><input id="downpct" type="number" value="20" min="0" max="100"><small>PMI auto-applies below 20%.</small></div>
+    <div class="field"><label for="rate">Interest rate (APR %)</label><input id="rate" type="number" step="0.01" value="6.5" min="0"></div>
+    <div class="field"><label for="term">Loan term (years)</label><select id="term"><option value="30" selected>30-year fixed</option><option value="20">20-year fixed</option><option value="15">15-year fixed</option><option value="10">10-year fixed</option></select></div>
+    <div class="field"><label for="tax">Property tax (annual $)</label><input id="tax" type="number" value="5400" min="0"></div>
+    <div class="field"><label for="ins">Homeowners insurance (annual $)</label><input id="ins" type="number" value="1800" min="0"></div>
+    <div class="field"><label for="hoa">HOA dues (monthly $)</label><input id="hoa" type="number" value="0" min="0"></div>
+    <button class="calcbtn" type="submit">Calculate Payment</button>
+  </form>
+  <div class="result" id="out">
+    <div>Total monthly payment</div><div class="big" id="r-total">$0</div>
+    <table>
+      <tr><th>Component</th><th>Monthly</th></tr>
+      <tr><td>Principal &amp; interest</td><td id="r-pi">$0</td></tr>
+      <tr><td>Property tax</td><td id="r-tax">$0</td></tr>
+      <tr><td>Homeowners insurance</td><td id="r-ins">$0</td></tr>
+      <tr><td>PMI</td><td id="r-pmi">$0</td></tr>
+      <tr><td>HOA</td><td id="r-hoa">$0</td></tr>
+      <tr><td>Loan amount</td><td id="r-loan">$0</td></tr>
+      <tr><td>Down payment</td><td id="r-down">$0</td></tr>
+      <tr><td>Total interest over loan life</td><td id="r-interest">$0</td></tr>
+    </table>
+  </div>
+  <div class="disclaimer">Estimate only. PMI is estimated at 0.5% annually; actual PMI varies by lender. Not financial advice.</div>
+  <p>Also try: <a href="affordability.html">affordability calculator</a> · <a href="amortization.html">amortization schedule</a> · <a href="../index.html">all tools</a></p>
+</div>
+<footer class="site"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p><small>© <span id="yr"></span> MortgageHub. Estimates only.</small></p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/mortgage.js"></script>
+</body>
+</html>

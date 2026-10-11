@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business ROI Calculator — Free Small Business ROI Tool | BizROI</title>
+<meta name="description" content="Free business ROI calculator: enter startup cost, monthly revenue and expenses to get ROI %, payback period, profit multiple and total profit. No signup.">
+<link rel="canonical" href="https://bizroi.github.io/tools/business-roi.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Biz<span>ROI</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="business-roi.html">ROI Calc</a>
+      <a href="break-even.html">Break-Even</a>
+      <a href="../guides/how-to-calculate-business-roi.html">Guides</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+<section>
+  <h1 style="font-size:2rem;margin:34px 0 10px">Business ROI Calculator</h1>
+  <p class="section-lead">Enter your numbers below. Results update automatically.</p>
+
+  <div class="calc">
+    <div class="row2">
+      <div>
+        <label for="startup-cost">Total startup cost ($)</label>
+        <input type="number" id="startup-cost" value="25000" min="0">
+      </div>
+      <div>
+        <label for="horizon">Analysis period</label>
+        <select id="horizon">
+          <option value="6">6 months</option>
+          <option value="12" selected>12 months</option>
+          <option value="24">24 months</option>
+          <option value="36">36 months</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2">
+      <div>
+        <label for="monthly-rev">Expected monthly revenue ($)</label>
+        <input type="number" id="monthly-rev" value="8000" min="0">
+      </div>
+      <div>
+        <label for="monthly-exp">Monthly expenses ($)</label>
+        <input type="number" id="monthly-exp" value="5000" min="0">
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="result"><div class="val" id="r-roi">—</div><div class="lbl">ROI</div></div>
+      <div class="result"><div class="val" id="r-payback">—</div><div class="lbl">Payback period</div></div>
+      <div class="result"><div class="val" id="r-profit">—</div><div class="lbl">Monthly profit</div></div>
+      <div class="result"><div class="val" id="r-total">—</div><div class="lbl">Total profit (period)</div></div>
+      <div class="result"><div class="val" id="r-multiple">—</div><div class="lbl">Money multiple</div></div>
+    </div>
+
+    <div class="verdict" id="verdict"></div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>How this calculator works</h2>
+    <p><strong>Monthly profit</strong> = monthly revenue − monthly expenses. <strong>Total profit</strong> = monthly profit × months in your analysis period. <strong>ROI</strong> = (total profit − startup cost) ÷ startup cost × 100. <strong>Payback period</strong> = startup cost ÷ monthly profit. <strong>Money multiple</strong> = total profit ÷ startup cost.</p>
+    <p>For a full walkthrough with worked examples, see <a href="../guides/how-to-calculate-business-roi.html">how to calculate business ROI</a>, and compare your result against <a href="../guides/small-business-roi-benchmarks.html">industry ROI benchmarks</a>.</p>
+    <p>Also try the <a href="break-even.html">break-even calculator</a> to find how many units you must sell before you turn a profit.</p>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">Home</a><a href="business-roi.html">ROI Calculator</a><a href="break-even.html">Break-Even</a><a href="../blog/small-business-investment-calculator.html">Blog</a>
+    <p style="margin-top:14px">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Educational estimates only, not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/roi.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

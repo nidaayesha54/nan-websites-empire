@@ -1,0 +1,57 @@
+/* TextToolsPro — clean utility design (emerald/green + white), mobile-responsive */
+:root{
+  --brand:#0e7a4d; --brand-dark:#0a5f3b; --brand-light:#e8f7ef;
+  --ink:#1a2430; --muted:#5b6b7c; --bg:#ffffff; --soft:#f4f8f6;
+  --card:#ffffff; --line:#dfe7e3; --accent:#f59e0b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:800;font-size:1.25rem;color:var(--brand-dark);text-decoration:none}
+.brand span{color:var(--accent)}
+.nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--brand)}
+.hero{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;padding:56px 0;text-align:center}
+.hero h1{font-size:2.1rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:640px;margin:0 auto 18px}
+.btn{display:inline-block;background:var(--accent);color:#3a2a00;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{filter:brightness(1.06)}
+.btn-ghost{background:#fff;color:var(--brand-dark);border:2px solid var(--brand)}
+.section{padding:44px 0}
+.section h2{font-size:1.6rem;margin-bottom:16px;color:var(--brand-dark)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;display:block;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.card .emoji{font-size:2rem}
+.card h3{margin:10px 0 6px;color:var(--brand-dark);font-size:1.1rem}
+.card p{color:var(--muted);font-size:.92rem}
+.tool-box{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:24px;margin:18px 0}
+textarea,input[type=text],input[type=number],select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit;background:#fff}
+textarea{min-height:180px;resize:vertical}
+label{font-weight:600;display:block;margin:12px 0 6px}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.stat .num{font-size:1.6rem;font-weight:800;color:var(--brand-dark)}
+.stat .lbl{font-size:.82rem;color:var(--muted)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+button,.btn-sm{background:var(--brand);color:#fff;font-weight:700;padding:10px 20px;border-radius:10px;border:none;cursor:pointer;font-size:.95rem}
+button:hover{background:var(--brand-dark)}
+.btn-sm.secondary{background:#fff;color:var(--brand-dark);border:2px solid var(--brand)}
+.output{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:12px;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto}
+.faq{margin-top:8px}
+.faq-item{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff}
+.faq-q{padding:14px 16px;font-weight:700;cursor:pointer;list-style:none}
+.faq-a{padding:0 16px 14px;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin:18px 0 0}
+.breadcrumb a{color:var(--brand);text-decoration:none}
+.prose h2{margin:26px 0 10px;color:var(--brand-dark)}
+.prose h3{margin:20px 0 8px}
+.prose p{margin:10px 0}
+.prose ul,.prose ol{margin:10px 0 10px 22px}
+footer{background:#0d1b14;color:#cfe3d6;padding:30px 0;margin-top:40px;font-size:.9rem}
+footer a{color:#8fd6ab;text-decoration:none}
+.ad-slot{background:#f0f4f2;border:1px dashed #b9c8c1;border-radius:10px;text-align:center;padding:18px;color:#8a9a92;font-size:.85rem;margin:24px 0}
+@media(max-width:640px){.hero h1{font-size:1.6rem}.hero{padding:38px 0}.nav a{margin-left:10px;font-size:.85rem}}

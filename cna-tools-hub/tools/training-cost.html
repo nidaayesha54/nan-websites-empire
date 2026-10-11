@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNA Training Cost vs Salary ROI Calculator</title>
+<meta name="description" content="Is CNA training worth it? Enter tuition & fees to see total cost, break-even time and first-year net gain as a CNA — free ROI calculator.">
+<link rel="canonical" href="https://nan-cnatools.surge.sh/tools/training-cost.html">
+<meta property="og:title" content="CNA Training Cost vs Salary ROI Calculator">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🩺</span> CNAToolsHub</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="cna-salary.html">Salary Calculator</a>
+      <a href="cna-quiz.html">Career Quiz</a>
+      <a href="training-cost.html">Training ROI</a>
+      <a href="../guides/how-to-become-cna-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>CNA Training Cost vs Salary ROI Calculator</h1>
+      <p>Is CNA training worth the money? Enter any program's real costs and your expected pay to see your total investment, break-even point, and first-year net gain.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+    <div class="tool-wrap">
+      <div class="form-grid">
+        <div class="field">
+          <label for="preset">Program type (preset costs)</label>
+          <select id="preset">
+            <option value="1500|250">Private vocational school — ~$1,500 tuition</option>
+            <option value="800|200">Community college — ~$800 tuition</option>
+            <option value="350|150">Adult education / workforce program — ~$350</option>
+            <option value="0|120">Nursing-home sponsored — $0 tuition (work commitment)</option>
+            <option value="0|0">Free grant-funded program — $0 total</option>
+            <option value="custom">Custom — I'll enter my own numbers</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="weeks">Weeks without income during training</label>
+          <input type="number" id="weeks" value="6" min="0" max="26">
+          <span class="hint">Time you can't work full-time while training.</span>
+        </div>
+        <div class="field">
+          <label for="tuition">Tuition ($)</label>
+          <input type="number" id="tuition" value="1500" min="0" max="10000">
+        </div>
+        <div class="field">
+          <label for="fees">Extra fees — exam, background check, scrubs ($)</label>
+          <input type="number" id="fees" value="250" min="0" max="2000">
+        </div>
+        <div class="field">
+          <label for="wage">Expected starting hourly wage ($)</label>
+          <input type="number" id="wage" value="18.50" min="10" max="40" step="0.25">
+          <span class="hint"><a href="cna-salary.html">Not sure? Use the salary calculator →</a></span>
+        </div>
+        <div class="field">
+          <label for="hrs">Hours per week you'll work</label>
+          <input type="number" id="hrs" value="40" min="8" max="60">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="calcBtn">Calculate my ROI</button>
+
+      <div class="result" id="result" aria-live="polite">
+        <h2>Your training ROI</h2>
+        <div class="stat-row">
+          <div class="stat"><b id="rCost">–</b><span>total investment</span></div>
+          <div class="stat"><b id="rBreak">–</b><span>break-even time</span></div>
+          <div class="stat"><b id="rNet">–</b><span>year-1 net gain</span></div>
+        </div>
+        <p id="verdict"></p>
+        <p class="hint">How fast your investment pays back:</p>
+        <div class="bar-track"><div class="bar-fill" id="roiBar" style="width:0%"></div></div>
+        <p class="hint" id="roiNote"></p>
+        <div class="callout" style="margin-top:22px">
+          <b>💡 Ways to cut the cost to $0:</b> many nursing homes pay your full tuition in exchange for a 6–12 month work commitment; workforce (WIOA) grants and American Job Centers often fund training completely; some hospitals offer tuition reimbursement from day one.
+        </div>
+      </div>
+    </div>
+
+    <div class="related">
+      <h3>Keep exploring</h3>
+      <p><a href="../guides/how-to-become-cna-2026.html">How to Become a CNA in 2026 (free-training options) →</a><br>
+      <a href="cna-salary.html">CNA Salary Calculator →</a><br>
+      <a href="cna-quiz.html">Is CNA right for me? Quiz →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const preset = document.getElementById('preset');
+const tuition = document.getElementById('tuition');
+const fees = document.getElementById('fees');
+
+preset.addEventListener('change', function(){
+  if (preset.value === 'custom') return;
+  const parts = preset.value.split('|');
+  tuition.value = parts[0];
+  fees.value = parts[1];
+});
+
+function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+document.getElementById('calcBtn').addEventListener('click', function(){
+  const t = parseFloat(tuition.value) || 0;
+  const f = parseFloat(fees.value) || 0;
+  const weeks = parseFloat(document.getElementById('weeks').value) || 0;
+  const wage = parseFloat(document.getElementById('wage').value) || 0;
+  const hrs = parseFloat(document.getElementById('hrs').value) || 0;
+
+  const totalCost = t + f;
+  const weeklyGross = wage * hrs;
+  if (weeklyGross <= 0){
+    alert('Please enter a valid wage and weekly hours.');
+    return;
+  }
+  const breakEvenWeeks = totalCost / weeklyGross;
+  const yearGross = weeklyGross * 52;
+  const netYear1 = yearGross - totalCost;
+
+  document.getElementById('rCost').textContent = money(totalCost);
+  document.getElementById('rBreak').textContent =
+    breakEvenWeeks < 1 ? 'under 1 week' : breakEvenWeeks.toFixed(1) + ' weeks';
+  document.getElementById('rNet').textContent = money(netYear1);
+
+  let verdict;
+  if (totalCost === 0){
+    verdict = '🎉 <strong>Zero-cost training:</strong> you start earning from day one — every paycheck is pure gain.';
+  } else if (breakEvenWeeks <= 6){
+    verdict = '✅ <strong>Excellent ROI:</strong> you recoup the full investment in about ' +
+      breakEvenWeeks.toFixed(1) + ' weeks of work, then keep roughly ' + money(netYear1) +
+      ' in year one. Few career moves pay back this fast.';
+  } else if (breakEvenWeeks <= 16){
+    verdict = '👍 <strong>Solid ROI:</strong> break-even in ' + breakEvenWeeks.toFixed(1) +
+      ' weeks, with about ' + money(netYear1) + ' net in year one. Still one of the fastest-payback credentials in healthcare.';
+  } else {
+    verdict = '⚠️ <strong>Slow payback:</strong> ' + breakEvenWeeks.toFixed(1) +
+      ' weeks to break even. Look for a cheaper program or employer-sponsored (free) training before enrolling.';
+  }
+  document.getElementById('verdict').innerHTML = verdict;
+
+  const pct = Math.min(100, Math.round(breakEvenWeeks / 26 * 100));
+  document.getElementById('roiBar').style.width = pct + '%';
+  document.getElementById('roiNote').textContent =
+    'Break-even at ' + breakEvenWeeks.toFixed(1) + ' weeks of full-time-equivalent work (bar scaled to 26 weeks).';
+
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</body>
+</html>

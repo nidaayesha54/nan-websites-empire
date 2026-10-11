@@ -1,0 +1,78 @@
+:root{
+  --pitch-dark:#0b3d1f;
+  --pitch:#10602e;
+  --pitch-light:#1a8a43;
+  --accent:#ffd23f;
+  --ink:#10251a;
+  --paper:#f5faf6;
+  --card:#ffffff;
+  --muted:#5c6f62;
+  --danger:#d64545;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+}
+a{color:var(--pitch-light)}
+header.site-header{
+  background:linear-gradient(135deg,var(--pitch-dark),var(--pitch));
+  color:#fff;
+  padding:.9rem 1rem;
+  position:sticky;top:0;z-index:50;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.35rem;color:#fff;text-decoration:none}
+.brand .ball{color:var(--accent)}
+nav.main-nav a{color:#e8f5ec;text-decoration:none;margin:0 .55rem;font-weight:600}
+nav.main-nav a:hover{color:var(--accent)}
+.hero{
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 70px,transparent 70px 140px),
+    radial-gradient(ellipse at center,rgba(255,255,255,.10),transparent 70%),
+    linear-gradient(160deg,var(--pitch-dark),var(--pitch));
+  color:#fff;text-align:center;padding:3.2rem 1rem 2.8rem;
+}
+.hero h1{margin:0 0 .6rem;font-size:2.3rem}
+.hero p.lead{max-width:640px;margin:0 auto 1.4rem;color:#e6f3e9;font-size:1.1rem}
+.btn{
+  display:inline-block;background:var(--accent);color:var(--ink);
+  font-weight:800;text-decoration:none;padding:.75rem 1.5rem;border-radius:10px;border:none;cursor:pointer;
+}
+.btn:hover{background:#ffe06a}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff;margin-left:.6rem}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:var(--card);border-radius:14px;padding:1.4rem;box-shadow:0 2px 10px rgba(16,96,46,.08);border-top:5px solid var(--pitch-light)}
+.card h2,.card h3{margin-top:0}
+.card a.card-link{font-weight:700;text-decoration:none;color:var(--pitch)}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;padding:.2rem .6rem;border-radius:999px;letter-spacing:.4px;text-transform:uppercase}
+.tag.live{background:#ffe0e0;color:#a31212;border:1px solid #f2a3a3}
+.tag.daily{background:#e2f2e8;color:#0f5c2c;border:1px solid #a9d8ba}
+.badge-note{font-size:.85rem;color:var(--muted)}
+footer.site-footer{background:var(--pitch-dark);color:#d9eadf;text-align:center;padding:1.6rem 1rem;font-size:.92rem}
+footer.site-footer a{color:var(--accent);text-decoration:none}
+footer.site-footer a:hover{text-decoration:underline}
+h1{font-size:2rem;margin:1.2rem 0 .8rem}
+h2{margin-top:2rem;color:var(--pitch-dark)}
+table.score{width:100%;border-collapse:collapse;margin:1rem 0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+table.score th{background:var(--pitch);color:#fff;padding:.6rem;text-align:left}
+table.score td{padding:.6rem;border-bottom:1px solid #eee}
+table.score tr:hover td{background:#f2faf4}
+th.sortable{cursor:pointer}
+input,select{padding:.55rem .7rem;border:1px solid #c4d6c9;border-radius:8px;font-size:1rem;margin:.2rem}
+.match-card{background:#fff;border-radius:12px;padding:1rem;margin:.8rem 0;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.teams{font-weight:700}
+.kickoff{color:var(--muted);font-size:.9rem}
+.faq details{background:#fff;border-radius:10px;padding:.9rem 1.1rem;margin:.7rem 0;box-shadow:0 1px 5px rgba(0,0,0,.05)}
+.faq summary{font-weight:700;cursor:pointer;color:var(--pitch-dark)}
+.ad-slot{background:#eef4ef;border:1px dashed #9fbfa9;color:var(--muted);text-align:center;padding:1rem;border-radius:10px;margin:1.4rem 0;font-size:.85rem}
+.prose img{max-width:100%;height:auto;border-radius:12px}
+.toc{background:#eef7f0;border-left:5px solid var(--pitch-light);padding:1rem 1.2rem;border-radius:0 12px 12px 0;margin:1.4rem 0}
+.toc a{text-decoration:none;font-weight:600}
+.alert{background:#fff8e1;border:1px solid #f0d96b;border-radius:10px;padding:.9rem 1.1rem;margin:1rem 0}
+@media(max-width:640px){.hero h1{font-size:1.7rem}}

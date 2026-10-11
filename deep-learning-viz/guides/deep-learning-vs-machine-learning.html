@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Learning vs Machine Learning: What's the Difference? (2026)</title>
+<meta name="description" content="Deep learning vs machine learning explained: definitions, key differences, when to use each, real examples, and a simple decision framework. Updated for 2026.">
+<link rel="canonical" href="https://nan-deeplearnviz.surge.sh/guides/deep-learning-vs-machine-learning.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Deep Learning vs Machine Learning: What's the Difference?",
+ "author":{"@type":"Organization","name":"DeepLearnViz"},
+ "datePublished":"2026-10-12",
+ "description":"The definitive plain-language comparison of deep learning and machine learning."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is deep learning part of machine learning?","acceptedAnswer":{"@type":"Answer","text":"Yes. Think of it as nesting dolls: artificial intelligence is the biggest doll, machine learning sits inside it, and deep learning sits inside machine learning. Deep learning is machine learning done with multi-layer neural networks."}},
+{"@type":"Question","name":"When should I use deep learning instead of machine learning?","acceptedAnswer":{"@type":"Answer","text":"Use deep learning for unstructured data (images, audio, video, raw text) at large scale, where you have lots of data and compute. Use classical machine learning for tabular data, smaller datasets, and when you need interpretability or fast training."}},
+{"@type":"Question","name":"Does deep learning always beat machine learning?","acceptedAnswer":{"@type":"Answer","text":"No. On small tabular datasets, gradient-boosted trees (like XGBoost) routinely beat neural networks while training in seconds on a laptop. Deep learning wins when data is abundant, unstructured, and complex."}}
+]}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="n1">Deep</span><span class="n2">Learn</span>Viz</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../tools/neural-net.html">Neural Net Playground</a>
+      <a href="../tools/activation.html">Activation Functions</a>
+      <a href="../tools/cnn-explainer.html">CNN Explainer</a>
+      <a href="neural-networks-explained-simply.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap article">
+  <div class="breadcrumb"><a href="../index.html">Home</a> → <a href="../blog/index.html">Guides</a> → Deep Learning vs Machine Learning</div>
+  <h1>Deep Learning vs Machine Learning: What's the Actual Difference?</h1>
+  <p class="meta">By DeepLearnViz · Updated October 2026 · 7 min read</p>
+
+  <p>People use "AI", "machine learning", and "deep learning" interchangeably. They're not the same. Here's the relationship in one sentence:</p>
+  <p><strong>Artificial intelligence</strong> is the big umbrella. <strong>Machine learning</strong> is AI that learns from data instead of hand-written rules. <strong>Deep learning</strong> is machine learning done with multi-layer <strong>neural networks</strong>.</p>
+  <p>Nesting dolls: AI ⊃ Machine Learning ⊃ Deep Learning.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <h2>The core difference: who does the feature engineering?</h2>
+  <p>This is the distinction that actually matters in practice:</p>
+  <ul>
+    <li><strong>Classical machine learning</strong> (random forests, SVMs, gradient boosting) needs <em>you</em> to hand-craft features. Building a spam filter? You decide the features: "contains FREE", "number of exclamation marks", "sender reputation". The algorithm just learns how to weight them.</li>
+    <li><strong>Deep learning</strong> learns the features <em>itself</em>. Show a CNN a million cat photos and its early layers discover edges, middle layers discover textures and ears, deep layers discover "cat-ness" — with zero human feature design.</li>
+  </ul>
+  <p>That's the superpower and the price tag: automatic feature learning, paid for with data and compute.</p>
+
+  <h2>Head-to-head comparison</h2>
+  <table>
+    <tr><th></th><th>Classical ML</th><th>Deep Learning</th></tr>
+    <tr><td><strong>Data appetite</strong></td><td>Works with hundreds–thousands of examples</td><td>Hungry: usually needs tens of thousands+</td></tr>
+    <tr><td><strong>Compute</strong></td><td>Laptop-friendly, trains in seconds–minutes</td><td>GPUs/TPUs, trains in hours–weeks</td></tr>
+    <tr><td><strong>Best data type</strong></td><td>Tabular / structured data</td><td>Images, audio, video, raw text</td></tr>
+    <tr><td><strong>Feature engineering</strong></td><td>Manual (domain expertise matters)</td><td>Automatic (learned by the network)</td></tr>
+    <tr><td><strong>Interpretability</strong></td><td>Often explainable (feature importances)</td><td>Mostly a black box</td></tr>
+    <tr><td><strong>Examples</strong></td><td>XGBoost, random forests, SVM, logistic regression</td><td>CNNs, RNNs, Transformers, GANs</td></tr>
+    <tr><td><strong>Shines at</strong></td><td>Fraud detection, churn, pricing, forecasting</td><td>Vision, speech, translation, generative AI</td></tr>
+  </table>
+
+  <h2>Does deep learning always win?</h2>
+  <p><strong>No — and this surprises people.</strong> On small-to-medium tabular datasets (the bread and butter of business analytics), gradient-boosted trees like XGBoost and LightGBM routinely <em>beat</em> neural networks while training in seconds on a laptop. Kaggle competitions on structured data are still dominated by boosted trees, not deep learning.</p>
+  <p>Deep learning dominates where data is <strong>unstructured and abundant</strong>: pixels, waveforms, raw language. If your problem is "predict customer churn from a spreadsheet", reach for classical ML. If it's "detect tumors in MRI scans", reach for deep learning.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <h2>A simple decision framework</h2>
+  <ol>
+    <li><strong>Is your data tabular/structured?</strong> → Start with gradient boosting. You'll likely stop there.</li>
+    <li><strong>Is it images, audio, video, or raw text?</strong> → Deep learning (CNNs, Transformers).</li>
+    <li><strong>Do you have &lt; 10k examples?</strong> → Classical ML, or transfer learning (a pre-trained deep model fine-tuned on your small dataset).</li>
+    <li><strong>Do you need to explain every decision?</strong> (medicine, lending, courts) → Classical ML's interpretability wins.</li>
+    <li><strong>Do you have GPUs and millions of examples?</strong> → Now deep learning can stretch its legs.</li>
+  </ol>
+
+  <h2>Why did deep learning explode after 2012?</h2>
+  <p>The ideas are old — backpropagation dates to the 1980s. What changed was the <strong>fuel</strong>: ImageNet gave us 14 million labeled images, GPUs made training 50× faster, and tricks like ReLU and dropout fixed the training instabilities. The 2012 AlexNet moment (a CNN crushing an image competition) lit the fuse for everything since, including today's large language models — which are, at heart, very large neural networks trained on very large piles of text.</p>
+
+  <h2>See the difference yourself</h2>
+  <p>The best way to feel what "deep" means: open our <a href="../tools/neural-net.html">Neural Network Playground</a>, train a 1-hidden-layer network on the XOR dataset, then add layers and watch the boundary get smarter. Then read <a href="neural-networks-explained-simply.html">neural networks explained simply</a> for the full intuition.</p>
+
+  <h2>Quick FAQ</h2>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q">Is deep learning part of machine learning?</button><div class="faq-a">Yes. Think of nesting dolls: artificial intelligence is the biggest doll, machine learning sits inside it, and deep learning sits inside machine learning. Deep learning is machine learning done with multi-layer neural networks.</div></div>
+    <div class="faq-item"><button class="faq-q">When should I use deep learning instead of machine learning?</button><div class="faq-a">Use deep learning for unstructured data (images, audio, video, raw text) at large scale, where you have lots of data and compute. Use classical machine learning for tabular data, smaller datasets, and when you need interpretability or fast training.</div></div>
+    <div class="faq-item"><button class="faq-q">Does deep learning always beat machine learning?</button><div class="faq-a">No. On small tabular datasets, gradient-boosted trees (like XGBoost) routinely beat neural networks while training in seconds on a laptop. Deep learning wins when data is abundant, unstructured, and complex.</div></div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Tools</h4><a href="../tools/neural-net.html">Neural Net Playground</a><a href="../tools/activation.html">Activation Functions</a><a href="../tools/cnn-explainer.html">CNN Explainer</a></div>
+      <div><h4>Learn</h4><a href="neural-networks-explained-simply.html">Neural Networks Explained Simply</a><a href="deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a><a href="../blog/index.html">Blog</a></div>
+      <div><h4>About</h4><a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    </div>
+    <div class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span data-year>2026</span> DeepLearnViz</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

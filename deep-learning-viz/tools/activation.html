@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activation Function Lab — Sigmoid, Tanh, ReLU, Softmax Visualized</title>
+<meta name="description" content="See every activation function come alive: sigmoid, tanh, ReLU, Leaky ReLU, Swish graphed with derivatives, plus an interactive softmax probability demo. Free, no signup.">
+<link rel="canonical" href="https://nan-deeplearnviz.surge.sh/tools/activation.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Activation Function Lab",
+ "url":"https://nan-deeplearnviz.surge.sh/tools/activation.html",
+ "applicationCategory":"EducationalApplication","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="n1">Deep</span><span class="n2">Learn</span>Viz</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="neural-net.html">Neural Net Playground</a>
+      <a href="activation.html">Activation Functions</a>
+      <a href="cnn-explainer.html">CNN Explainer</a>
+      <a href="../guides/neural-networks-explained-simply.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> → Activation Function Lab</div>
+  <h1 style="margin-bottom:6px">📈 Activation Function Lab</h1>
+  <p style="color:var(--muted);max-width:760px;margin-bottom:20px">Activation functions decide what a neuron "fires". Pick one, drag the input slider, and watch the output — and its gradient — respond in real time.</p>
+
+  <div class="tool-shell">
+    <div class="panel">
+      <h3>⚙️ Controls</h3>
+      <div class="btn-row" style="margin-bottom:16px">
+        <button class="btn btn-ghost btn-sm" data-fn="sigmoid">Sigmoid</button>
+        <button class="btn btn-ghost btn-sm" data-fn="tanh">Tanh</button>
+        <button class="btn btn-primary btn-sm" data-fn="relu">ReLU</button>
+        <button class="btn btn-ghost btn-sm" data-fn="leaky">Leaky ReLU</button>
+        <button class="btn btn-ghost btn-sm" data-fn="swish">Swish</button>
+      </div>
+      <label class="ctl">Input x <output id="outX">0.00</output>
+        <input type="range" id="ctlX" min="-6" max="6" value="1" step="0.05">
+      </label>
+      <label class="ctl" style="display:flex;align-items:center;gap:8px">
+        <input type="checkbox" id="chkDeriv" checked style="width:auto"> Show derivative f′(x)
+      </label>
+      <div class="legend">
+        <span><span class="dot" style="background:var(--cyan)"></span> f(x)</span>
+        <span><span class="dot" style="background:var(--magenta)"></span> f′(x) gradient</span>
+        <span><span class="dot" style="background:var(--lime)"></span> your input</span>
+      </div>
+      <div class="formula" id="roFormula" style="margin-top:16px">ReLU(x) = max(0, x)</div>
+      <div class="stat-grid">
+        <div class="stat"><div class="v" id="roF">—</div><div class="l">f(x) output</div></div>
+        <div class="stat"><div class="v" id="roD">—</div><div class="l">f′(x) gradient</div></div>
+      </div>
+      <p class="note"><strong id="roName">ReLU</strong> · output range <span id="roRange">[0, ∞)</span><br>
+      ✅ <span id="roUse"></span><br>⚠️ <span id="roGotcha"></span></p>
+    </div>
+    <div class="stage">
+      <h3 style="color:var(--cyan);margin-bottom:10px">Live graph</h3>
+      <canvas id="actCanvas" class="board" width="640" height="420"></canvas>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-shell mt">
+    <div class="panel">
+      <h3>🎲 Softmax playground</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">Softmax turns raw scores (logits) into probabilities. Drag the sliders.</p>
+      <label class="ctl">Logit z₁ <output id="smOut1">2.0</output><input type="range" id="sm1" min="-6" max="6" value="2" step="0.1"></label>
+      <label class="ctl">Logit z₂ <output id="smOut2">1.0</output><input type="range" id="sm2" min="-6" max="6" value="1" step="0.1"></label>
+      <label class="ctl">Logit z₃ <output id="smOut3">0.0</output><input type="range" id="sm3" min="-6" max="6" value="0" step="0.1"></label>
+      <label class="ctl">Temperature T <output id="smTOut">1.00</output><input type="range" id="smT" min="0.2" max="4" value="1" step="0.05"></label>
+      <p class="note">Low temperature → confident, peaky. High temperature → soft, uncertain. <span id="smWinner" style="color:var(--cyan);font-weight:700"></span></p>
+    </div>
+    <div class="stage">
+      <h3 style="color:var(--cyan);margin-bottom:10px">Probability bars</h3>
+      <canvas id="smCanvas" class="board" width="640" height="320"></canvas>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2>Why do activation functions matter?</h2>
+    <p style="color:var(--muted);max-width:800px">Without a non-linear activation, a 100-layer network would collapse into a single linear transformation — no smarter than plain regression. The activation is what lets networks bend, fold, and carve up data into the wild decision boundaries you saw in the <a href="neural-net.html">playground</a>. The derivative (pink dashed line) is what training actually follows: where it's flat, learning stalls — the famous <em>vanishing gradient</em> problem that killed sigmoid in hidden layers.</p>
+    <p class="mt"><a class="btn btn-ghost btn-sm" href="neural-net.html">🧠 Back to the playground →</a>
+    <a class="btn btn-ghost btn-sm" href="cnn-explainer.html">🖼️ See convolutions →</a></p>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Tools</h4><a href="neural-net.html">Neural Net Playground</a><a href="activation.html">Activation Functions</a><a href="cnn-explainer.html">CNN Explainer</a></div>
+      <div><h4>Learn</h4><a href="../guides/neural-networks-explained-simply.html">Neural Networks Explained Simply</a><a href="../guides/deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a><a href="../blog/index.html">Blog</a></div>
+      <div><h4>About</h4><a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    </div>
+    <div class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span data-year>2026</span> DeepLearnViz</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/activation.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Voice Cost Calculator — Compare Monthly Pricing by Minutes</title>
+<meta name="description" content="Free AI voice cost calculator: enter monthly audio minutes and instantly compare the cheapest plan on ElevenLabs, Murf, Play.ht, Speechify & LOVO.">
+<link rel="canonical" href="https://nan-aivoicegen.surge.sh/tools/voice-cost-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🎙️ AIVoiceGeneratorHub</a>
+<div class="navlinks">
+<a href="text-to-speech-demo.html">TTS Demo</a>
+<a href="voice-tool-comparator.html">Compare Tools</a>
+<a href="voice-cost-calculator.html">Cost Calculator</a>
+<a href="use-case-finder.html">Find Your Fit</a>
+<a href="../guides/best-ai-voice-generators-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="toolhead">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Cost Calculator</p>
+<h1>💰 AI Voice Cost Calculator</h1>
+<p>How much will your project actually cost per month? Enter your audio minutes and see the cheapest plan on every major platform.</p>
+</div>
+
+<div class="toolbox">
+<label for="cc-minutes">Audio minutes per month</label>
+<input type="number" id="cc-minutes" min="1" value="60" placeholder="e.g. 60">
+<div style="margin-top:10px" id="cc-presets">
+<span class="chip" data-min="15">15 min — testing</span>
+<span class="chip active" data-min="60">60 min — 1 hr</span>
+<span class="chip" data-min="240">4 hrs — weekly podcast</span>
+<span class="chip" data-min="600">10 hrs — daily creator</span>
+</div>
+<div style="margin-top:14px"><button class="btn-sm" id="cc-go">Calculate costs →</button></div>
+<div id="cc-result" style="margin-top:10px"><div class="result">Press <b>Calculate</b> — or pick a preset above — to see the cheapest plan on each platform.</div></div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section">
+<h2>💡 How pricing actually works</h2>
+<div class="cards">
+<div class="card"><h3>🔤 Characters (ElevenLabs, LOVO)</h3><p>≈850 characters = 1 minute of audio. Efficient scripts cost less — punctuation and pauses are "free" value.</p></div>
+<div class="card"><h3>⏱️ Minutes (Murf)</h3><p>The simplest model: you buy audio time directly. Great when you know your output schedule.</p></div>
+<div class="card"><h3>📝 Words (Play.ht)</h3><p>≈150 words = 1 minute. Word-based plans are generous for slow, deliberate narration.</p></div>
+</div>
+<p style="text-align:center"><a href="../blog/ai-voice-pricing-models-explained.html">Read: AI voice pricing models explained →</a></p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/voice-data.js"></script>
+<script src="../js/cost-calculator.js"></script>
+</body>
+</html>

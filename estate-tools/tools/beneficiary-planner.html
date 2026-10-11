@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beneficiary Designation Planner — Validate 100% Allocations</title>
+  <meta name="description" content="Free beneficiary planner: map every account's beneficiaries, validate percentages sum to 100%, and learn per stirpes vs per capita.">
+  <link rel="canonical" href="https://nan-estatetools.surge.sh/tools/beneficiary-planner.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What does per stirpes mean?","acceptedAnswer":{"@type":"Answer","text":"Per stirpes means if a beneficiary dies before you, their share passes to their children (their branch of the family). It keeps inheritance within each family line."}},
+    {"@type":"Question","name":"What does per capita mean?","acceptedAnswer":{"@type":"Answer","text":"Per capita means if a beneficiary dies before you, their share is divided equally among the surviving named beneficiaries — not passed to the deceased beneficiary's children."}},
+    {"@type":"Question","name":"Do beneficiary percentages have to add up to 100%?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each account's beneficiary percentages must total exactly 100%, or the designation may be rejected or cause disputes. This planner validates every account."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Estate<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="estate-tax-estimator.html">Estate Tax</a>
+      <a href="will-checklist.html">Will Checklist</a>
+      <a href="beneficiary-planner.html">Beneficiaries</a>
+      <a href="../guides/estate-planning-checklist-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Beneficiary Allocation Planner</p>
+  <h1>Beneficiary Allocation Planner</h1>
+  <p>Beneficiary designations override your will — a stale form can send your 401(k) to an ex-spouse. List each account, assign percentages, and validate that every account totals exactly 100%. Your plan saves on this device.</p>
+
+  <div id="bp-accounts"></div>
+  <div class="no-print" style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0">
+    <button class="btn btn-gold" id="bp-add">+ Add account</button>
+    <button class="btn btn-char" id="bp-validate">Validate my plan</button>
+  </div>
+
+  <div class="result" id="bp-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout note">
+    <strong class="label">Per stirpes vs per capita — what happens if a beneficiary dies first?</strong>
+    <strong>Per stirpes</strong> ("by branch"): the deceased beneficiary's share passes to <em>their</em> children. Example: you leave 50% each to two children per stirpes; one dies leaving two kids — those grandkids split the 50%.<br><br>
+    <strong>Per capita</strong> ("by head"): the deceased beneficiary's share is divided among the <em>surviving</em> named beneficiaries. In the same example, the surviving child would receive 100%.<br><br>
+    Most families with grandchildren choose <strong>per stirpes</strong> to keep each branch's share intact. Your account's beneficiary form is where you make this election — ask the plan administrator.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">What does per stirpes mean? <span>+</span></div><div class="faq-a">Per stirpes ("by branch") means if a beneficiary dies before you, their share passes to their own children — keeping inheritance within each family line.</div></div>
+  <div class="faq-item"><div class="faq-q">What does per capita mean? <span>+</span></div><div class="faq-a">Per capita ("by head") means a deceased beneficiary's share is divided among the surviving named beneficiaries, not passed to the deceased person's children.</div></div>
+  <div class="faq-item"><div class="faq-q">Do beneficiary percentages have to add up to 100%? <span>+</span></div><div class="faq-a">Yes — each account's designations must total exactly 100%, or the form may be rejected or trigger disputes. This planner validates every account for you.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

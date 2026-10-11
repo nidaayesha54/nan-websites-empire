@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Wedding Guest List Manager & RSVP Tracker | GuestListPro</title>
+<meta name="description" content="Add guests, track RSVPs, meal choices and plus-ones with live counts. Export to CSV. Free, no signup, saved in your browser.">
+<link rel="canonical" href="https://nan-wedguests.surge.sh/tools/guest-manager.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Can I export my guest list to a spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Yes — the Export CSV button downloads your full guest list, ready to open in Excel or Google Sheets."}},
+{"@type":"Question","name":"Is my guest data private?","acceptedAnswer":{"@type":"Answer","text":"Completely. Everything is stored in your own browser's localStorage. Nothing is uploaded anywhere."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">💒 Guest<span>List</span>Pro</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="guest-manager.html">Guest Manager</a><a href="seating-planner.html">Seating Planner</a><a href="../guides/wedding-guest-list-guide.html">Guides</a></nav>
+</div></header>
+
+<div class="wrap section">
+<div class="tool-panel">
+<h1 class="sans" style="font-size:1.9rem;">Wedding Guest List Manager</h1>
+<p style="color:#8a7d6d;margin-bottom:20px;">Add guests below. Your list auto-saves in this browser — no account needed.</p>
+
+<div class="form-row">
+<div><label for="gname">Guest name</label><input id="gname" type="text" placeholder="e.g. Sarah Miller"></div>
+<div><label for="gside">Side</label><select id="gside"><option value="Bride">Bride</option><option value="Groom">Groom</option><option value="Mutual">Mutual</option></select></div>
+<div><label for="grsvp">RSVP status</label><select id="grsvp"><option value="Pending">Pending</option><option value="Accepted">Accepted</option><option value="Declined">Declined</option><option value="Maybe">Maybe</option></select></div>
+</div>
+<div class="form-row">
+<div><label for="gplus">Plus-ones</label><input id="gplus" type="number" min="0" max="5" value="0"></div>
+<div><label for="gmeal">Meal choice</label><select id="gmeal"><option value="">Not chosen</option><option value="Chicken">Chicken</option><option value="Beef">Beef</option><option value="Fish">Fish</option><option value="Vegetarian">Vegetarian</option><option value="Vegan">Vegan</option><option value="Kids">Kids meal</option></select></div>
+<div><label for="gnote">Note (optional)</label><input id="gnote" type="text" placeholder="e.g. needs wheelchair access"></div>
+</div>
+<button class="btn btn-terracotta" id="addBtn">+ Add Guest</button>
+</div>
+
+<div class="stats sans" id="stats"></div>
+
+<div class="tool-panel">
+<div class="form-row" style="align-items:flex-end;">
+<div><label for="filterSide">Filter by side</label><select id="filterSide"><option value="">All sides</option><option value="Bride">Bride</option><option value="Groom">Groom</option><option value="Mutual">Mutual</option></select></div>
+<div><label for="filterRsvp">Filter by RSVP</label><select id="filterRsvp"><option value="">All statuses</option><option value="Accepted">Accepted</option><option value="Pending">Pending</option><option value="Declined">Declined</option><option value="Maybe">Maybe</option></select></div>
+<div><label for="search">Search name</label><input id="search" type="text" placeholder="Type to search…"></div>
+</div>
+<div style="margin-bottom:14px;">
+<button class="btn btn-outline" id="exportBtn" style="padding:10px 22px;font-size:.95rem;">⬇ Export CSV</button>
+<button class="btn btn-outline" id="clearBtn" style="padding:10px 22px;font-size:.95rem;">🗑 Clear All</button>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Side</th><th>RSVP</th><th>+1s</th><th>Meal</th><th>Note</th><th>Actions</th></tr></thead>
+<tbody id="guestRows"></tbody>
+</table></div>
+<p id="emptyMsg" style="color:#8a7d6d;text-align:center;padding:20px;">No guests yet — add your first guest above. 👆</p>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot">AD-SLOT: in-content (Ezoic/Media.net)</div>
+
+<div class="faq" style="margin-top:20px;">
+<div class="faq-item"><div class="faq-q">Can I export my guest list to a spreadsheet? <span>+</span></div><div class="faq-a">Yes — the Export CSV button downloads your full guest list, ready to open in Excel or Google Sheets.</div></div>
+<div class="faq-item"><div class="faq-q">Is my guest data private? <span>+</span></div><div class="faq-a">Completely. Everything is stored in your own browser's localStorage. Nothing is uploaded anywhere.</div></div>
+</div>
+</div>
+
+<footer><div class="wrap">
+<a href="../index.html">Home</a><a href="guest-manager.html">Guest Manager</a><a href="seating-planner.html">Seating Planner</a>
+<p style="margin-top:14px;">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 GuestListPro</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/guest-manager.js"></script>
+</body>
+</html>

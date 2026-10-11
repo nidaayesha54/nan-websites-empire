@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Student Loan Payoff Calculator | Campus Tools USA</title>
+<meta name="description" content="Calculate student loan monthly payments, total interest, and payoff date. See how extra payments save thousands. Free, no signup.">
+<link rel="canonical" href="https://campustoolsusa.github.io/tools/student-loan-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is student loan monthly payment calculated?","acceptedAnswer":{"@type":"Answer","text":"Using standard amortization: M = P × r(1+r)^n / ((1+r)^n − 1), where P is principal, r is monthly rate, n is number of payments."}},
+{"@type":"Question","name":"Do extra payments really save money on student loans?","acceptedAnswer":{"@type":"Answer","text":"Yes. Even $50 extra per month on a typical loan can save thousands in interest and cut years off repayment, because extra payments go straight to principal."}},
+{"@type":"Question","name":"What is a good student loan interest rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"Federal undergraduate loans are fixed by Congress each year; private loan rates vary by credit. Always compare the APR, not just the headline rate."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎓 Campus<span>Tools</span> USA</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="gpa-calculator.html">GPA Calc</a><a href="student-loan-calculator.html">Loan Calc</a><a href="citation-generator.html">Citations</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Student Loan Calculator</p>
+<div class="tool-shell">
+<h1>Student Loan Payoff Calculator</h1>
+<p class="lede">Monthly payment, total interest, and payoff date — plus what extra payments save you. Standard amortization math.</p>
+
+<div class="form-row">
+<div><label for="principal">Loan Amount ($)</label><input type="number" id="principal" value="30000" min="0"></div>
+<div><label for="rate">Annual Interest Rate (%)</label><input type="number" id="rate" value="6.5" step="0.01" min="0"></div>
+</div>
+<div class="form-row">
+<div><label for="years">Repayment Term (years)</label><input type="number" id="years" value="10" min="1" max="30"></div>
+<div><label for="extra">Extra Payment per Month ($) — optional</label><input type="number" id="extra" value="0" min="0"></div>
+</div>
+
+<div class="result-box" id="resultBox">
+<h3>Repayment Summary</h3>
+<div class="result-big" id="monthlyOut">$0</div>
+<p style="color:#cdd8ec">per month</p>
+<table class="result-table"><tbody>
+<tr><th>Total Interest</th><td id="interestOut">—</td></tr>
+<tr><th>Total Paid</th><td id="totalOut">—</td></tr>
+<tr><th>Payoff Time</th><td id="timeOut">—</td></tr>
+<tr><th>Extra-Payment Savings</th><td id="saveOut">—</td></tr>
+</tbody></table>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="prose" style="margin-top:32px">
+<h2>How Student Loan Payments Work</h2>
+<p>Monthly payment uses standard amortization: <strong>M = P × r(1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</strong> — P is principal, r monthly rate, n number of payments. Early payments are mostly interest; later ones mostly principal.</p>
+<div class="callout"><strong>Power move:</strong> an extra $50/month on a $30,000 loan at 6.5% saves roughly $2,700 in interest and cuts ~2 years off a 10-year term. Extra payments attack principal directly.</div>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>How is the monthly payment calculated?</summary><p>Standard loan amortization on principal, annual rate, and term.</p></details>
+<details><summary>Do extra payments save money?</summary><p>Yes — they go straight to principal, cutting interest and time.</p></details>
+<details><summary>Should I refinance?</summary><p>Compare APRs and check for origination fees. Refinancing federal loans into private ones loses federal protections — weigh carefully.</p></details>
+</div>
+<p style="margin-top:16px">Related: <a href="scholarship-guide.html">Scholarship Guide</a> · <a href="../index.html">All Tools</a></p>
+</div>
+</div>
+</div>
+<footer><div class="wrap"><div><strong>🎓 Campus Tools USA</strong></div><div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div><div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div></div></footer>
+<script src="../js/loan.js"></script>
+</body>
+</html>

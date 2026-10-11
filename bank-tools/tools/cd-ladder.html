@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Ladder Builder: Schedule &amp; Blended APY Calculator</title>
+<meta name="description" content="Build a 5-rung CD ladder: enter your total and 1–5 year CD rates for an annual maturities schedule and blended APY.">
+<link rel="canonical" href="https://nan-banktools.surge.sh/tools/cd-ladder.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="../index.html">🏦 Bank<span>Tools</span></a><nav class="nav"><a href="../index.html">Home</a><a href="../tools/apy-comparison.html">APY Compare</a><a href="../tools/cd-ladder.html">CD Ladder</a><a href="../tools/hysa-projector.html">HYSA Projector</a><a href="../blog/index.html">Blog</a></nav></div></header>
+<main class="wrap"><div class="article" style="padding-bottom:0">
+<h1>CD Ladder Builder</h1>
+<p class="meta">Split savings across 1- to 5-year CDs so money frees up every year while you earn long-term rates.</p></div>
+<div class="toolbox">
+<div class="form-grid"><div class="field"><label for="total">Total amount to ladder ($)</label><input type="number" id="total" value="25000" ></div><div class="field"><label for="r1">1-year CD rate (%)</label><input type="number" id="r1" value="4.00" ></div><div class="field"><label for="r2">2-year CD rate (%)</label><input type="number" id="r2" value="4.20" ></div><div class="field"><label for="r3">3-year CD rate (%)</label><input type="number" id="r3" value="4.30" ></div><div class="field"><label for="r4">4-year CD rate (%)</label><input type="number" id="r4" value="4.40" ></div><div class="field"><label for="r5">5-year CD rate (%)</label><input type="number" id="r5" value="4.50" ></div></div><div style="text-align:center"><button class="btn" id="calcBtn">Calculate</button></div>
+<div class="result-box" id="resultBox"></div>
+<p class="disclaimer">⚠️ Educational purposes only — not financial advice.</p>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="article">
+<h2>How a CD ladder works</h2>
+<p>Divide your money into five equal CDs with 1- to 5-year terms. Each year one CD matures — spend it, or roll it into a new 5-year CD at the then-current rate. After year one, you always have a CD maturing within 12 months while earning 5-year yields. Strategy deep-dive: <a href="../guides/cd-ladder-strategy-explained.html">CD ladder strategy explained</a>.</p>
+<h2>Ladder vs lump sum</h2>
+<p>Locking everything in a 5-year CD usually pays a touch more — until rates rise or you need cash early and eat a penalty. The ladder trades a sliver of yield for yearly liquidity.</p>
+<h2>Watch the penalties</h2>
+<p>Breaking a CD early typically costs 3–12 months of interest. Keep true emergency money in a <a href="hysa-projector.html">high-yield savings account</a> instead.</p><div class="related"><h3>Related</h3><ul><li><a href="apy-comparison.html">Savings APY Comparison</a></li><li><a href="hysa-projector.html">High-Yield Savings Projector</a></li><li><a href="../guides/cd-ladder-strategy-explained.html">CD Ladder Strategy Guide</a></li></ul></div></div></main>
+<footer>
+  <div class="wrap">
+    <div><strong>🏦 BankTools</strong><p>APY, CD ladder and high-yield savings calculators.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="../tools/apy-comparison.html">APY Comparison</a><br><a href="../tools/cd-ladder.html">CD Ladder</a><br><a href="../tools/hysa-projector.html">HYSA Projector</a></p></div>
+    <div><p><a href="../guides/best-high-yield-savings-accounts-2026.html">Best HYSAs 2026</a><br><a href="../guides/cd-ladder-strategy-explained.html">CD Ladder Strategy</a><br><a href="../guides/apy-vs-apr-difference.html">APY vs APR</a><br><a href="../blog/index.html">Blog</a></p></div>
+  </div>
+</footer>
+
+</body>
+</html>

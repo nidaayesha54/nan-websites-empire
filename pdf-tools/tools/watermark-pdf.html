@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Watermark to PDF Online Free — No Signup | PDF Tools Hub</title>
+<meta name="description" content="Add a text watermark (DRAFT, CONFIDENTIAL, your name) to PDF pages online for free. No signup, files never leave your browser.">
+<link rel="canonical" href="https://pdftoolshub.github.io/tools/watermark-pdf.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📄 PDF<span>ToolsHub</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="merge-pdf.html">Merge</a>
+      <a href="split-pdf.html">Split</a>
+      <a href="compress-pdf.html">Compress</a>
+      <a href="jpg-to-pdf.html">JPG→PDF</a>
+      <a href="pdf-to-jpg.html">PDF→JPG</a>
+      <a href="rotate-pdf.html">Rotate</a>
+      <a href="protect-pdf.html">Protect</a>
+      <a href="watermark-pdf.html">Watermark</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="article" style="padding-bottom:0">
+    <h1>Add Watermark to PDF — Free, No Signup</h1>
+    <p class="meta">Stamp DRAFT, CONFIDENTIAL, your company name, or any text diagonally across every page.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="dropzone" id="dz">
+      <div style="font-size:2.2rem">💧</div>
+      <strong>Drop a PDF file here</strong> or click to select
+      <p>Select one PDF file to watermark.</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden>
+    </div>
+    <div id="fileInfo" style="text-align:center;margin:10px 0"></div>
+    <div style="max-width:480px;margin:12px auto;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <label>Watermark text:
+        <input type="text" id="wmText" value="DRAFT" maxlength="40" style="width:160px;padding:8px;border:1px solid #d1d5db;border-radius:8px">
+      </label>
+      <label>Style:
+        <select id="wmStyle">
+          <option value="diagonal">Diagonal</option>
+          <option value="horizontal">Horizontal</option>
+        </select>
+      </label>
+      <label>Opacity:
+        <input type="range" id="wmOpacity" min="10" max="60" value="25" style="width:110px;vertical-align:middle">
+        <span id="opVal">25%</span>
+      </label>
+      <label>Size:
+        <select id="wmSize">
+          <option value="48">Medium</option>
+          <option value="72" selected>Large</option>
+          <option value="110">Extra large</option>
+        </select>
+      </label>
+    </div>
+    <div class="progress" id="prog"><div id="progBar"></div></div>
+    <div style="text-align:center;margin-top:10px">
+      <button class="btn" id="goBtn" disabled>Add Watermark</button>
+    </div>
+    <div class="result-box" id="resultBox"></div>
+    <p class="hint">🔒 Privacy: watermarking happens entirely in your browser's memory. Nothing is sent to any server.</p>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>How to watermark a PDF</h2>
+    <ol>
+      <li>Click the box above or drag in a PDF file.</li>
+      <li>Type your watermark text (for example <strong>DRAFT</strong> or <strong>CONFIDENTIAL</strong>).</li>
+      <li>Pick a style and opacity, then click <strong>Add Watermark</strong>.</li>
+    </ol>
+    <h2>Common questions</h2>
+    <h3>Can the watermark be removed later?</h3>
+    <p>The watermark is drawn permanently onto each page of the downloaded file. Keep a copy of the original if you need a clean version.</p>
+    <h3>Will it cover the page content?</h3>
+    <p>The watermark is semi-transparent (adjustable), so text underneath stays readable. Diagonal placement keeps it visible without blocking content.</p>
+    <h3>Which pages get watermarked?</h3>
+    <p>Every page of the PDF gets the same watermark.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>📄 PDF Tools Hub</strong><p>Free, private, no-signup PDF tools.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="merge-pdf.html">Merge PDF</a><br><a href="split-pdf.html">Split PDF</a><br><a href="compress-pdf.html">Compress PDF</a><br><a href="watermark-pdf.html">Watermark PDF</a><br><a href="protect-pdf.html">Protect PDF</a></p></div>
+  </div>
+</footer>
+<script src="../js/watermark.js"></script>
+</body>
+</html>

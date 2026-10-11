@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Lyric Video Planner — Song Structure → Timing Plan</title>
+<meta name="description" content="Free lyric video planner: enter song length, BPM and structure to get a full timing plan with timecodes, lyric-sync segments, motion beats and typography styles.">
+<link rel="canonical" href="https://nan-aimusicvideo.surge.sh/tools/lyric-video-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar"><div class="nav">
+<a class="logo" href="../index.html">🎵 AIMusicVideo</a>
+<nav class="nav-links"><a href="concept-generator.html">Concept Generator</a><a href="lyric-video-planner.html">Lyric Planner</a><a href="budget-calculator.html">Budget Calculator</a><a href="../guides/ai-music-videos-2026.html">Guides</a></nav>
+</div></header>
+<main>
+<article class="prose">
+<span class="kicker">Free tool</span>
+<h1>Lyric Video Planner</h1>
+<p class="byline">Song structure in, production-ready timing plan out — timecodes, lyric-sync segments, motion beats, and type styles per section.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="toolbox">
+  <div class="grid2">
+    <div>
+      <label for="duration">⏱️ Song length (seconds)</label>
+      <input type="number" id="duration" value="210" min="30" max="1200">
+    </div>
+    <div>
+      <label for="bpm">🥁 BPM (beats per minute)</label>
+      <input type="number" id="bpm" value="100" min="40" max="220">
+    </div>
+  </div>
+  <label for="structure">🎼 Song structure preset</label>
+  <select id="structure">
+    <option value="pop">Pop — Intro/Verse/Pre/Chorus ×2/Bridge/Chorus/Outro</option>
+    <option value="ballad">Ballad — Intro/Verse/Chorus/Verse/Chorus/Bridge/Chorus/Outro</option>
+    <option value="edm">EDM — Intro/Verse/Chorus/Drop/Break/Build/Chorus/Outro</option>
+    <option value="hiphop">Hip-Hop — Intro/Verse/Chorus/Verse/Chorus/Verse/Chorus/Outro</option>
+    <option value="short">Short / Reels — Intro/Verse/Chorus/Chorus/Outro</option>
+  </select>
+  <div style="margin-top:20px"><button class="btn primary" id="planBtn">🗺️ Build Timing Plan</button></div>
+  <div class="result" id="planResult"><p style="color:var(--muted)">Your timing plan will appear here.</p></div>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<h2>Lyric-sync rules that matter</h2>
+<ul>
+<li><strong>Beat-1 anchoring:</strong> land each line's first word on the downbeat — the #1 trick for "in-sync" feel.</li>
+<li><strong>Two-line maximum</strong> on screen for mobile viewers.</li>
+<li>Reuse one chorus design across repeats for instant recognition.</li>
+<li>Compare tools in our <a href="../guides/ai-lyric-video-makers-compared.html">AI lyric video makers guide</a>.</li>
+</ul>
+</article>
+</main>
+<footer><div class="foot">
+<div>© <span id="year">2026</span> AIMusicVideo · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div><span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/lyric-planner.js"></script>
+</body>
+</html>

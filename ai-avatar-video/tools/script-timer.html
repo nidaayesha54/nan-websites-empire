@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Script Timer — Word Count to Spoken Duration Calculator (Free)</title>
+<meta name="description" content="Free script timer: paste your talking-head script to get live word count and spoken duration at any WPM. Plus a reverse calculator for words-per-minute targets.">
+<meta name="keywords" content="script timer, word count to minutes, spoken duration calculator, wpm calculator, teleprompter timing, video script length">
+<link rel="canonical" href="https://nan-aiavatar.surge.sh/tools/script-timer.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🤖</span> AIAvatarVideo</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="avatar-script-writer.html">Script Writer</a>
+      <a href="tool-finder.html">Tool Finder</a>
+      <a href="script-timer.html" class="active">Script Timer</a>
+      <a href="../guides/best-ai-avatar-video-generators-2026.html">Guides</a>
+      <a href="../blog/ai-avatars-vs-human-spokespeople.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:48px 0 32px">
+    <div class="container">
+      <h1>Script <span class="grad-text">Timer</span></h1>
+      <p class="lead">Paste your script — see the live word count and exactly how long it takes to speak at any pace.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start">
+        <div class="form-card">
+          <div class="form-group">
+            <label for="st-script">Your script</label>
+            <textarea id="st-script" rows="10" placeholder="Paste your talking-head script here..."></textarea>
+          </div>
+          <div class="copy-row" style="margin-top:0">
+            <button class="btn btn-ghost btn-sm" id="st-load-sample">Load sample</button>
+            <button class="btn btn-ghost btn-sm" id="st-clear">Clear</button>
+          </div>
+          <div class="form-group" style="margin-top:20px">
+            <label for="st-wpm">Speaking pace</label>
+            <div class="range-row">
+              <input type="range" id="st-wpm" min="110" max="200" value="150" step="5">
+              <span class="range-val" id="st-wpm-val">150 WPM</span>
+            </div>
+            <div class="radio-pills" style="margin-top:12px">
+              <label><input type="radio" name="st-preset" data-wpm="130"><span>Slow · 130</span></label>
+              <label><input type="radio" name="st-preset" data-wpm="150"><span>Natural · 150</span></label>
+              <label><input type="radio" name="st-preset" data-wpm="170"><span>Brisk · 170</span></label>
+              <label><input type="radio" name="st-preset" data-wpm="190"><span>Fast · 190</span></label>
+            </div>
+            <span class="hint">Most AI avatar voices default to ~150 WPM. Narration-style voices run slower (~130); energetic promo reads run faster (~175+).</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="result" id="st-result">
+            <h3>Live timing</h3>
+            <div class="stat-row">
+              <div class="stat"><div class="num" id="stat-words">0</div><div class="lbl">Words</div></div>
+              <div class="stat"><div class="num" id="stat-chars">0</div><div class="lbl">Characters</div></div>
+              <div class="stat"><div class="num" id="stat-time" style="font-size:1.25rem">0 sec</div><div class="lbl">Spoken duration</div></div>
+            </div>
+            <h4 style="margin:18px 0 8px">Duration at common paces</h4>
+            <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+              <tbody id="st-table"></tbody>
+            </table>
+            <ul id="st-hints" style="margin:16px 0 0 18px;color:var(--muted);font-size:.92rem;display:none"></ul>
+            <div class="copy-row">
+              <button class="btn btn-primary btn-sm" id="st-copy">Copy timing summary</button>
+            </div>
+          </div>
+
+          <div class="form-card" style="margin-top:20px">
+            <h3 style="margin-bottom:10px">Reverse calculator</h3>
+            <p class="section-sub" style="margin-bottom:14px">How many words do I need for a target video length?</p>
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label for="rc-mins">Target length (minutes)</label>
+                <input type="number" id="rc-mins" min="0.25" step="0.25" value="1" placeholder="1">
+              </div>
+              <div class="form-group">
+                <label for="rc-wpm">Pace (WPM)</label>
+                <input type="number" id="rc-wpm" min="100" max="220" value="150">
+              </div>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="rc-calc">Calculate words →</button>
+            <p id="rc-out" style="margin-top:14px"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container" style="max-width:760px">
+      <h2 class="section-title">Script length cheat sheet</h2>
+      <div class="article">
+        <ul>
+          <li><b>15-second ad:</b> ~35–40 words</li>
+          <li><b>30-second short:</b> ~70–80 words</li>
+          <li><b>60-second video:</b> ~140–160 words</li>
+          <li><b>2-minute explainer:</b> ~280–320 words</li>
+          <li><b>5-minute training video:</b> ~700–800 words</li>
+        </ul>
+        <p>Need a script from scratch? <a href="avatar-script-writer.html">Generate one with the script writer</a> — it targets these word counts automatically.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>AIAvatarVideo</h4>
+        <p>Free tools and guides for AI avatar video creators — script writing, tool matching, and timing.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <a href="avatar-script-writer.html">Script Writer</a>
+        <a href="tool-finder.html">Tool Finder Quiz</a>
+        <a href="script-timer.html">Script Timer</a>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <a href="../guides/best-ai-avatar-video-generators-2026.html">Best AI Avatar Generators 2026</a>
+        <a href="../guides/how-to-make-ai-talking-head-videos.html">Talking-Head How-To</a>
+        <a href="../guides/ai-avatar-for-business-training.html">Avatars for Training</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year">2026</span> AIAvatarVideo. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script-timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNN Explainer — See Convolution & Pooling Step by Step</title>
+<meta name="description" content="How do CNNs see? Upload an image, apply real convolution filters (edge, blur, sharpen, emboss), then watch a sliding-window animation compute every step. Free, no signup.">
+<link rel="canonical" href="https://nan-deeplearnviz.surge.sh/tools/cnn-explainer.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CNN Convolution Explainer",
+ "url":"https://nan-deeplearnviz.surge.sh/tools/cnn-explainer.html",
+ "applicationCategory":"EducationalApplication","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="n1">Deep</span><span class="n2">Learn</span>Viz</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="neural-net.html">Neural Net Playground</a>
+      <a href="activation.html">Activation Functions</a>
+      <a href="cnn-explainer.html">CNN Explainer</a>
+      <a href="../guides/neural-networks-explained-simply.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> → CNN Explainer</div>
+  <h1 style="margin-bottom:6px">🖼️ CNN Convolution Explainer</h1>
+  <p style="color:var(--muted);max-width:760px;margin-bottom:20px">Convolutional networks "see" by sliding tiny filters across an image. Try it on your own photo, then watch the famous sliding window compute every single multiplication.</p>
+
+  <div class="tool-shell">
+    <div class="panel">
+      <h3>⚙️ Image &amp; filter</h3>
+      <label class="ctl">Upload an image
+        <input type="file" id="fileUp" accept="image/*">
+      </label>
+      <div class="btn-row" style="margin-bottom:8px">
+        <button class="btn btn-ghost btn-sm" id="btnSample">🎲 Sample image</button>
+      </div>
+      <div class="btn-row" style="margin-bottom:8px">
+        <button class="btn btn-primary btn-sm" data-filter="edge">Edge detect</button>
+        <button class="btn btn-ghost btn-sm" data-filter="sharpen">Sharpen</button>
+        <button class="btn btn-ghost btn-sm" data-filter="blur">Blur</button>
+      </div>
+      <div class="btn-row" style="margin-bottom:8px">
+        <button class="btn btn-ghost btn-sm" data-filter="emboss">Emboss</button>
+        <button class="btn btn-ghost btn-sm" data-filter="sobelx">Sobel X</button>
+        <button class="btn btn-ghost btn-sm" data-filter="identity">Identity</button>
+        <button class="btn btn-ghost btn-sm" data-filter="custom">Custom 3×3</button>
+      </div>
+      <div id="customBox" style="display:none">
+        <table class="kernel-table"><tbody>
+          <tr><td><input class="kernel-in" id="ck00" type="number" value="0" step="0.5"></td><td><input class="kernel-in" id="ck01" type="number" value="-1" step="0.5"></td><td><input class="kernel-in" id="ck02" type="number" value="0" step="0.5"></td></tr>
+          <tr><td><input class="kernel-in" id="ck10" type="number" value="-1" step="0.5"></td><td><input class="kernel-in" id="ck11" type="number" value="5" step="0.5"></td><td><input class="kernel-in" id="ck12" type="number" value="-1" step="0.5"></td></tr>
+          <tr><td><input class="kernel-in" id="ck20" type="number" value="0" step="0.5"></td><td><input class="kernel-in" id="ck21" type="number" value="-1" step="0.5"></td><td><input class="kernel-in" id="ck22" type="number" value="0" step="0.5"></td></tr>
+        </tbody></table>
+      </div>
+      <p class="note" id="convMsg">Loading…</p>
+      <p class="warn">🔒 Privacy: your image never leaves your browser. Everything runs locally.</p>
+    </div>
+    <div>
+      <div class="two">
+        <div class="stage"><h3 style="color:var(--cyan);margin-bottom:10px">Input (grayscale)</h3><canvas id="inCanvas" class="board"></canvas></div>
+        <div class="stage"><h3 style="color:var(--cyan);margin-bottom:10px">Filter kernel</h3><div id="kernelViz"></div>
+        <p style="color:var(--muted);font-size:.85rem">Cyan = positive weight, pink = negative. This tiny 3×3 matrix is what "learns" during CNN training.</p></div>
+      </div>
+      <div class="stage mt"><h3 style="color:var(--cyan);margin-bottom:10px">Output feature map</h3><canvas id="outCanvas" class="board" style="max-height:320px"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <section class="section">
+    <h2>🔬 The sliding window, step by step</h2>
+    <p style="color:var(--muted);max-width:800px;margin-bottom:18px">Here's exactly what "convolution" means: the 3×3 filter sits on top of the image, multiplies each overlapping pair of numbers, adds them up — and that single sum becomes one pixel of the output. Then it slides one step right and repeats. Watch:</p>
+    <div class="tool-shell">
+      <div class="panel">
+        <h3>⚙️ Animation controls</h3>
+        <div class="btn-row">
+          <button class="btn btn-primary btn-sm" id="btnAnimPlay">▶ Play</button>
+          <button class="btn btn-ghost btn-sm" id="btnAnimStep">⏭ Step</button>
+          <button class="btn btn-ghost btn-sm" id="btnAnimReset">↺ New grid</button>
+        </div>
+        <p class="note" id="animMath">Press Step to begin.</p>
+      </div>
+      <div class="stage">
+        <div class="two">
+          <div><h3 style="color:var(--cyan);margin-bottom:8px;font-size:1rem">Input grid (7×7)</h3><div id="animIn"></div></div>
+          <div><h3 style="color:var(--cyan);margin-bottom:8px;font-size:1rem">Output (5×5)</h3><div id="animOut"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>⬇️ Pooling: shrinking with max-pool</h2>
+    <p style="color:var(--muted);max-width:800px;margin-bottom:18px">After convolution, CNNs <em>pool</em> — they shrink each region down to its strongest value. This makes the network robust to small shifts and cuts computation.</p>
+    <div class="tool-shell">
+      <div class="panel">
+        <h3>⚙️ Pooling demo</h3>
+        <div class="btn-row"><button class="btn btn-primary btn-sm" id="btnPool">🎲 New 4×4 grid</button></div>
+        <p class="note" id="poolMsg"></p>
+      </div>
+      <div class="stage">
+        <div class="two">
+          <div><h3 style="color:var(--cyan);margin-bottom:8px;font-size:1rem">Before (4×4)</h3><div id="poolIn"></div></div>
+          <div><h3 style="color:var(--cyan);margin-bottom:8px;font-size:1rem">After 2×2 max-pool</h3><div id="poolOut"></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="mt"><a class="btn btn-ghost btn-sm" href="neural-net.html">🧠 Neural net playground →</a>
+    <a class="btn btn-ghost btn-sm" href="../guides/neural-networks-explained-simply.html">📖 Read the guide →</a></p>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Tools</h4><a href="neural-net.html">Neural Net Playground</a><a href="activation.html">Activation Functions</a><a href="cnn-explainer.html">CNN Explainer</a></div>
+      <div><h4>Learn</h4><a href="../guides/neural-networks-explained-simply.html">Neural Networks Explained Simply</a><a href="../guides/deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a><a href="../blog/index.html">Blog</a></div>
+      <div><h4>About</h4><a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    </div>
+    <div class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span data-year>2026</span> DeepLearnViz</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/cnn.js"></script>
+</body>
+</html>

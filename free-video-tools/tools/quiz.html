@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Free Video Tool Fits Me? — 60-Second Quiz</title>
+<meta name="description" content="Answer 3 quick questions — your use case, skill level and budget — and get a personalized free AI video tool recommendation instantly.">
+<link rel="canonical" href="https://nan-freevideotools.surge.sh/tools/quiz.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Free<span>Video</span>Tools</a>
+    <nav>
+      <a href="directory.html">Directory</a>
+      <a href="tool-comparator.html">Comparator</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="../guides/best-free-ai-video-tools-2026.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Quiz</div>
+  <section class="block">
+    <h1 style="font-size:2rem;margin:0 0 8px">Which Free Video Tool Fits Me?</h1>
+    <p class="sub">Answer 3 questions — get your match in under a minute.</p>
+
+    <div class="quiz-q" id="q1">
+      <h3>1. What will you mainly make?</h3>
+      <label class="opt"><input type="radio" name="use" value="social"> Social media shorts & reels</label>
+      <label class="opt"><input type="radio" name="use" value="marketing"> Marketing promos & ads</label>
+      <label class="opt"><input type="radio" name="use" value="education"> Tutorials & educational videos</label>
+      <label class="opt"><input type="radio" name="use" value="entertainment"> Fun / cinematic AI clips</label>
+    </div>
+
+    <div class="quiz-q" id="q2">
+      <h3>2. Your skill level?</h3>
+      <label class="opt"><input type="radio" name="skill" value="beginner"> Beginner — I want templates & one-click</label>
+      <label class="opt"><input type="radio" name="skill" value="intermediate"> Intermediate — I'm fine learning a new UI</label>
+    </div>
+
+    <div class="quiz-q" id="q3">
+      <h3>3. Your budget stance?</h3>
+      <label class="opt"><input type="radio" name="budget" value="free-only"> 100% free — no watermark if possible</label>
+      <label class="opt"><input type="radio" name="budget" value="any"> Free trials are fine — I might upgrade later</label>
+    </div>
+
+    <button class="btn" id="go">Get My Recommendation →</button>
+    <div id="result"></div>
+  </section>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot">
+<script>atOptions={'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+<script src="../js/tools-data.js"></script>
+<script>
+(function(){
+  document.getElementById('go').addEventListener('click',function(){
+    var use=(document.querySelector('input[name=use]:checked')||{}).value;
+    var skill=(document.querySelector('input[name=skill]:checked')||{}).value;
+    var budget=(document.querySelector('input[name=budget]:checked')||{}).value;
+    var box=document.getElementById('result');
+    if(!use||!skill||!budget){
+      box.innerHTML='<div class="result"><p><strong>⚠️ Please answer all 3 questions first.</strong></p></div>';
+      box.scrollIntoView({behavior:'smooth'});return;
+    }
+    var scored=window.FVT_TOOLS.map(function(t){
+      var s=t.rating*10, why=[];
+      if(t.bestFor.indexOf(use)>-1){s+=30;why.push('great for '+use);}
+      if(t.bestFor.indexOf(skill)>-1){s+=15;why.push('fits '+skill+' users');}
+      if(budget==='free-only'){
+        if(t.bestFor.indexOf('free-only')>-1){s+=25;why.push('strong free tier');}
+        if(t.watermark==='No'){s+=20;why.push('no watermark');}else{s-=15;}
+      }
+      if(t.rating>=4.5){s+=5;why.push('top rated');}
+      return {t:t,s:s,why:why};
+    }).sort(function(a,b){return b.s-a.s;});
+    var top3=scored.slice(0,3);
+    var html='<div class="result"><h2>🎯 Your Top Matches</h2>';
+    top3.forEach(function(r,i){
+      var medal=['🥇','🥈','🥉'][i];
+      html+='<h3>'+medal+' '+r.t.name+' <span class="stars">★ '+r.t.rating+'</span></h3>'+
+      '<p>'+r.t.blurb+'</p>'+
+      '<p><strong>Why it fits you:</strong> '+r.why.join(' · ')+'</p>'+
+      '<p><strong>Free tier:</strong> '+r.t.freeTier+' | <strong>Watermark:</strong> '+r.t.watermark+
+      ' | <strong>Max length:</strong> '+r.t.maxLength+'</p>'+
+      '<p><a class="btn" href="'+r.t.site+'" target="_blank" rel="noopener nofollow">Try '+r.t.name+' →</a></p>';
+    });
+    html+='<p class="sub">Still torn? <a href="tool-comparator.html">Compare your top picks side by side →</a></p></div>';
+    box.innerHTML=html;
+    box.scrollIntoView({behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACA Subsidy Estimator 2026 — Check Savings</title>
+<meta name="description" content="Estimate your 2026 ACA premium tax credit from household size, income & state. See your likely monthly savings in seconds.">
+<link rel="canonical" href="https://nan-healthinsurance.surge.sh/tools/subsidy-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ACA Subsidy Estimator 2026 \u2014 Check Savings",
+  "url": "https://nan-healthinsurance.surge.sh/tools/subsidy-estimator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">🏥</span> HealthInsuranceHub</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#tools">Calculators</a>
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#blog">Blog</a>
+    </nav>
+  </div>
+</header>
+<main><div class="container">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="../index.html">Home</a> › <a href="../index.html#tools">Calculators</a> › <span>Subsidy Estimator</span>
+</nav><div class="page-head">
+<h1>ACA Subsidy Estimator (2026)</h1>
+<p class="lead">Most marketplace shoppers qualify for help — but few know how much. This estimator applies the federal subsidy formula to your income.</p>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="tool-wrap">
+<form id="seForm">
+  <div class="form-grid">
+    <div class="field"><label for="seSize">Household size</label><select id="seSize"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div>
+    <div class="field"><label for="seIncome">Annual household income ($)</label><input type="number" id="seIncome" min="0" step="1000" value="35000"><p class="hint">Modified adjusted gross income.</p></div>
+    <div class="field"><label for="seState">State</label><select id="seState"><option value="TX" selected>Texas</option><option value="CA">California</option><option value="FL">Florida</option><option value="NY">New York</option><option value="AK">Alaska</option><option value="HI">Hawaii</option><option value="OTHER">Other state</option></select><p class="hint">Adjusts the benchmark premium for high-cost states.</p></div>
+  </div>
+  <button class="btn" type="submit">Estimate My Subsidy</button>
+</form>
+<div class="result" id="seResult" hidden></div>
+</div>
+<div class="disclaimer-box"><strong>Disclaimer:</strong> Educational purposes only — not financial advice. Estimates, not quotes.</div>
+<article class="prose">
+<h2>How the subsidy estimate works</h2>
+<p>The ACA premium tax credit caps what you pay for a benchmark Silver plan at a <strong>percentage of your income</strong>, based on where your income falls against the <strong>federal poverty level (FPL)</strong>:</p>
+<ul>
+<li><strong>FPL (2026 approx):</strong> $15,650 for one person + $5,490 per additional household member.</li>
+<li><strong>Your share:</strong> slides from 2.07% of income at 133% FPL to 9.83% at 400% FPL (8.5% cap above 400% under extended rules).</li>
+<li><strong>Subsidy</strong> = benchmark premium − your share. If that's negative, the subsidy is $0.</li>
+<li><strong>Benchmark:</strong> we use a ~$550/month national average second-lowest-cost Silver plan, adjusted up for high-cost states (AK, HI, NY-area).</li>
+</ul>
+<div class="callout"><p><strong>Note:</strong> These are 2026 estimates for education. Subsidy law has changed before and can change again — confirm your actual credit at enrollment on Healthcare.gov or your state exchange.</p></div>
+</article>
+<aside class="related"><h2>More free calculators</h2>
+<ul>
+<li><a href="../tools/plan-comparator.html">Health Plan Cost Comparator (2026)</a></li>
+<li><a href="../tools/cost-explainer.html">Deductible vs Premium: Interactive Explainer</a></li>
+</ul></aside><aside class="related"><h2>Learn more in our guides</h2>
+<ul>
+<li><a href="../guides/how-to-choose-health-insurance.html">How to Choose Health Insurance in 2026</a></li>
+<li><a href="../guides/deductible-vs-premium.html">Deductible vs Premium Explained Simply</a></li>
+<li><a href="../guides/aca-subsidies-2026.html">ACA Subsidies 2026: Complete Explainer</a></li>
+</ul></aside></div></main>
+<footer class="site-footer">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p class="footer-note">All content is educational and for general information only — not financial advice. Calculator results are estimates, not quotes.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/subsidy-estimator.js"></script>
+</body>
+</html>

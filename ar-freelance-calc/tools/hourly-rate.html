@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة السعر بالساعة للمستقلين | حاسبتي</title>
+<meta name="description" content="احسب سعرك العادل بالساعة كمستقل عربي: أدخل دخلك المستهدف ومصاريفك وساعات عملك بالريال أو الدرهم أو الجنيه واحصل على النتيجة فوراً.">
+<link rel="canonical" href="https://hasibati.github.io/tools/hourly-rate.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🧮 حاسب<span>تي</span></a>
+    <nav class="nav">
+      <a href="../index.html">الرئيسية</a>
+      <a href="hourly-rate.html">حاسبة الساعة</a>
+      <a href="project-estimator.html">مقدّر المشاريع</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h1 style="color:var(--green-dark);font-size:2rem;margin-bottom:8px;">حاسبة السعر بالساعة</h1>
+    <p class="lead">أدخل أرقامك الحقيقية واحصل على سعرك العادل — الصيغة: (الدخل المستهدف + المصاريف) ÷ ساعات العمل × (1 + نسبة الرسوم).</p>
+
+    <div class="calc-box">
+      <div class="field">
+        <label for="income">الدخل الشهري المستهدف</label>
+        <input type="number" id="income" value="5000" min="0">
+        <div class="hint">المبلغ الذي تريد تحقيقه شهرياً بعد كل المصاريف.</div>
+      </div>
+      <div class="field">
+        <label for="currency">العملة</label>
+        <select id="currency">
+          <option value="SAR">🇸🇦 ريال سعودي (SAR)</option>
+          <option value="AED">🇦🇪 درهم إماراتي (AED)</option>
+          <option value="EGP">🇪🇬 جنيه مصري (EGP)</option>
+          <option value="USD">🇺🇸 دولار أمريكي (USD)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="hours">ساعات العمل القابلة للفوترة شهرياً</label>
+        <input type="number" id="hours" value="80" min="1">
+        <div class="hint">فقط الساعات التي تدفع لك فعلياً (ليست ساعات التسويق والإدارة). القاعدة: ~50% من إجمالي ساعات عملك.</div>
+      </div>
+      <div class="field">
+        <label for="expenses">المصاريف الشهرية</label>
+        <input type="number" id="expenses" value="500" min="0">
+        <div class="hint">اشتراكات الأدوات، الإنترنت، الكهرباء، وأي تكاليف عمل.</div>
+      </div>
+      <div class="field">
+        <label for="fees">نسبة عمولة المنصة / الرسوم %</label>
+        <input type="number" id="fees" value="10" min="0" max="50">
+        <div class="hint">خمسات ومستقل تأخذان عمولة — أدخل النسبة لتغطيتها في سعرك.</div>
+      </div>
+      <button class="btn btn-green" onclick="calcRate()">احسب سعري</button>
+
+      <div class="result-box" id="result">
+        <div class="sub">سعرك الأدنى بالساعة</div>
+        <div class="big" id="minRate">—</div>
+        <div class="result-row">
+          <div class="result-chip"><span>السعر الموصى به (+25% هامش)</span><strong id="recRate">—</strong></div>
+          <div class="result-chip"><span>الدخل الشهري المتوقع</span><strong id="monthly">—</strong></div>
+        </div>
+        <p class="sub" style="margin-top:14px;">💡 لا تقبل أبداً أقل من السعر الأدنى — إنه حدّ البقاء. السعر الموصى به يمنحك هامش نمو.</p>
+      </div>
+    </div>
+
+    <div class="article">
+      <h2>كيف تستخدم هذه الحاسبة؟</h2>
+      <p>معظم المستقلين العرب يحددون أسعارهم عشوائياً أو بتقليد الآخرين — وهذه أسرع طريقة للعمل بخسارة. هذه الحاسبة تبني سعرك من أرقامك الحقيقية:</p>
+      <ol>
+        <li><strong>الدخل المستهدف:</strong> كن واقعياً لكن طموحاً. ابدأ بتغطية معيشتك ثم أضف هدف الادخار.</li>
+        <li><strong>الساعات القابلة للفوترة:</strong> إذا عملت 160 ساعة شهرياً، فربما 80 ساعة فقط مدفوعة — الباقي تسويق وتواصل وإدارة.</li>
+        <li><strong>المصاريف:</strong> لا تنسَ الاشتراكات والأدوات — هي تكلفة حقيقية.</li>
+        <li><strong>العمولة:</strong> المنصات العربية تأخذ نسبتها؛ سعرك يجب أن يمتصّها دون أن تأكل من ربحك.</li>
+      </ol>
+      <h2>نصيحة للمبتدئين</h2>
+      <p>إذا كنت جديداً تماماً، يمكنك البدء عند 80% من السعر الموصى به لأول 3-5 مشاريع لبناء التقييمات، ثم ارفع إلى السعر الكامل — ولا تنزل عنه أبداً بعد ذلك.</p>
+      <p>اقرأ أيضاً: <a href="../guides/khamsat-mostaql-pricing.html">دليل التسعير في خمسات ومستقل</a></p>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer>
+  <div class="wrap">
+    <p><a href="../index.html">حاسبتي</a> · <a href="hourly-rate.html">حاسبة الساعة</a> · <a href="project-estimator.html">مقدّر المشاريع</a></p>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+<script src="../js/calculators.js"></script>
+</body>
+</html>

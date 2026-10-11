@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pomodoro Study Timer — Focus Sessions | Study Daily</title>
+  <meta name="description" content="Free Pomodoro study timer with customizable focus and break intervals, session tracking and audio alerts. No signup — study smarter today.">
+  <link rel="canonical" href="https://studydailyreports.github.io/tools/study-timer.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">📚 Study<span>Daily</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../reports/daily-study-report.html">Daily Report</a>
+      <a href="study-timer.html">Study Timer</a>
+      <a href="grade-tracker.html">Grade Tracker</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html">Tools</a> › Study Timer</p>
+  <div class="tool-box">
+    <h1>⏱️ Pomodoro Study Timer</h1>
+    <p class="lede">Focus in sprints, rest in breaks. Customize your intervals below, then hit start — the timer tracks your completed sessions automatically.</p>
+
+    <div class="grid2">
+      <div class="field"><label for="focus-min">Focus session (minutes)</label><input type="number" id="focus-min" value="25" min="1" max="180"></div>
+      <div class="field"><label for="short-min">Short break (minutes)</label><input type="number" id="short-min" value="5" min="1" max="60"></div>
+      <div class="field"><label for="long-min">Long break (minutes)</label><input type="number" id="long-min" value="15" min="1" max="90"></div>
+      <div class="field"><label>&nbsp;</label><p style="color:var(--muted);font-size:.9rem;padding-top:10px">A long break starts automatically after every 4 focus sessions.</p></div>
+    </div>
+
+    <div class="timer-mode" id="timer-mode">🎯 Focus time</div>
+    <div class="timer-display" id="timer-display">25:00</div>
+    <div class="timer-bar"><div class="timer-bar-fill" id="timer-bar-fill"></div></div>
+    <div class="timer-controls">
+      <button class="btn" id="btn-start">▶ Start</button>
+      <button class="btn-outline" id="btn-pause" style="color:var(--navy-900);border-color:var(--navy-600)">⏸ Pause</button>
+      <button class="btn-outline" id="btn-skip" style="color:var(--navy-900);border-color:var(--navy-600)">⏭ Skip</button>
+      <button class="btn-outline" id="btn-reset" style="color:var(--navy-900);border-color:var(--navy-600)">↺ Reset</button>
+    </div>
+
+    <h3>Session log</h3>
+    <ul class="session-log" id="session-log"><li>Your completed sessions will appear here.</li></ul>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article">
+    <h2>Why the Pomodoro Technique works</h2>
+    <p>Developed by Francesco Cirillo in the 1980s, the Pomodoro Technique breaks study into focused 25-minute sprints separated by short breaks. Research on attention shows that <strong>focused work in bounded intervals</strong> reduces procrastination and mental fatigue compared to open-ended study marathons.</p>
+    <h3>Tips for best results</h3>
+    <ul>
+      <li><strong>One task per sprint.</strong> Decide what you'll work on <em>before</em> the timer starts.</li>
+      <li><strong>Protect the sprint.</strong> Silence notifications; a single interruption can cost 15+ minutes of refocus time.</li>
+      <li><strong>Use breaks properly.</strong> Stand up, stretch, get water — don't scroll social media, which drains the same attention you just built.</li>
+    </ul>
+    <p>Pair the timer with <a href="../guides/study-techniques-2026.html">evidence-based study techniques</a> for maximum effect.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><h4>Study Daily</h4><a href="../index.html">Home</a><a href="../reports/daily-study-report.html">Daily Report</a><a href="../blog/index.html">Blog</a></div>
+    <div><h4>Tools</h4><a href="study-timer.html">Study Timer</a><a href="grade-tracker.html">Grade Tracker</a></div>
+    <div><h4>Guides</h4><a href="../guides/study-techniques-2026.html">Study Techniques</a><a href="../guides/top-online-courses-2026.html">Online Courses</a><a href="../guides/exam-prep-guide.html">Exam Prep</a></div>
+  </div>
+  <div class="wrap bottom">© 2026 Study Daily Reports. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>. Free forever.</div>
+</footer>
+<script src="../js/study-timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Image Compressor to Target KB (50KB, 100KB) | ImageShrink</title>
+<meta name="description" content="Compress any image to your exact target size — 20KB, 50KB, 100KB or custom. Browser-based, private, no signup. JPG & WebP output.">
+<link rel="canonical" href="https://imageshrink.github.io/tools/compress.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🖼️ Image<span>Shrink</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="compress.html">Compress</a><a href="resize.html">Resize</a><a href="convert.html">Convert</a><a href="../guides/how-to-compress-images.html">Guide</a></nav>
+</div></header>
+
+<div class="wrap">
+<div class="article" style="margin-top:24px">
+<h1>Image Compressor — Hit Any Target Size</h1>
+<p class="meta">Free · No signup · Images never leave your browser</p>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div id="msg" style="display:none"></div>
+
+<div class="dropzone" id="dropzone">
+<div class="dz-icon">📤</div>
+<strong>Drop your image here</strong>
+<p>or click to browse · JPG, PNG, WebP, GIF · max 50 MB</p>
+<input type="file" id="fileInput" accept="image/*">
+</div>
+
+<div class="preview-area" id="previewArea">
+<div class="preview-grid">
+<div class="preview-box"><strong>Original</strong><br><img id="previewImg" alt="Original image preview"><div class="stat"><strong id="origName">—</strong><span id="origSize">—</span> · <span id="origDims">—</span></div></div>
+<div class="preview-box"><strong>Compressed</strong><br><span id="resultBox" style="display:none"><img id="resImg" alt="Compressed image preview"><div class="stat"><strong id="resSize">—</strong><span id="resSaved">—</span><br><span id="resDims">—</span><br><span id="resVerdict"></span></div></span><span id="resPlaceholder" class="stat">Press “Compress” to see the result.</span></div>
+</div>
+</div>
+
+<div class="controls" id="controls" style="display:none">
+<div class="control-row">
+<label>🎯 Target size: <span class="slider-val" id="targetKBVal">100 KB</span></label>
+<input type="range" id="targetKB" min="10" max="2000" value="100" step="10">
+<div class="hint">Common targets: 20 KB (signatures), 50 KB (job portals), 100 KB (forms), 200 KB (web).</div>
+</div>
+<div class="control-row">
+<label for="formatSel">Output format</label>
+<select id="formatSel">
+<option value="jpeg">JPG — best for photos</option>
+<option value="webp">WebP — 25–35% smaller, modern browsers</option>
+</select>
+</div>
+<div class="control-row">
+<label for="maxDim">Max dimension (optional resize)</label>
+<select id="maxDim">
+<option value="0">Keep original dimensions</option>
+<option value="1920">Max 1920 px (full HD)</option>
+<option value="1280">Max 1280 px (web)</option>
+<option value="800">Max 800 px (small web)</option>
+</select>
+</div>
+<button class="btn-purple" id="compressBtn" style="width:100%">Compress Image</button>
+<div class="progress" id="progress"><div id="progressBar"></div></div>
+<div id="resultActions" style="text-align:center;margin-top:16px">
+<button class="btn-purple" id="downloadBtn">⬇ Download Compressed Image</button>
+</div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="article">
+<h2>How it works</h2>
+<ol>
+<li><strong>Upload</strong> — your image is read locally in your browser. Nothing is sent anywhere.</li>
+<li><strong>Set a target</strong> — drag the slider to 50 KB, 100 KB, or any size you need.</li>
+<li><strong>Compress</strong> — ImageShrink binary-searches the perfect quality setting to land at or under your target.</li>
+<li><strong>Download</strong> — save your compressed JPG or WebP instantly.</li>
+</ol>
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><button class="faq-q">Is my photo uploaded to a server? <span>＋</span></button><div class="faq-a">Never. Compression runs entirely in your browser via the Canvas API. This is faster than server tools and completely private.</div></div>
+<div class="faq-item"><button class="faq-q">What if my image can't reach the target size? <span>＋</span></button><div class="faq-a">ImageShrink will tell you the closest achievable size. Tip: choose a smaller max dimension or WebP output — both shrink files dramatically.</div></div>
+<div class="faq-item"><button class="faq-q">JPG or WebP — which should I pick? <span>＋</span></button><div class="faq-a">WebP is 25–35% smaller at the same visual quality and works in all modern browsers. Use JPG only when the receiving site demands it (some government portals do).</div></div>
+<div class="faq-item"><button class="faq-q">Does compression work on PNG screenshots? <span>＋</span></button><div class="faq-a">Yes — PNG screenshots often shrink 70–90% when converted to JPG/WebP, because screenshots compress very well as photos.</div></div>
+<p style="margin-top:24px">Also try our <a href="resize.html">image resizer</a> and <a href="convert.html">format converter</a>, or read <a href="../guides/how-to-compress-images.html">the full compression guide</a>.</p>
+</div>
+</div>
+
+<footer><div class="wrap">
+<div><h4>ImageShrink</h4><a href="../index.html">Home</a><a href="compress.html">Compress</a><a href="resize.html">Resize</a></div>
+<div><h4>Tools</h4><a href="convert.html">Format Converter</a><a href="../guides/how-to-compress-images.html">Compression Guide</a><a href="../blog/index.html">Blog</a></div>
+<div><h4>Privacy</h4><p style="font-size:14px">All processing happens in your browser. Nothing is uploaded.</p></div>
+</div>
+<p class="copyright">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 ImageShrink</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/compressor.js"></script>
+</body>
+</html>

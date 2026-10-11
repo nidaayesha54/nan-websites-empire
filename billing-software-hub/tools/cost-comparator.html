@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Billing Software Cost Comparator — Free (2026)</title>
+<meta name="description" content="Compare medical billing software pricing models free: flat monthly vs per-claim vs % of collections. See true annual cost for your practice.">
+<link rel="canonical" href="https://nan-billingsoftware.surge.sh/tools/cost-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Medical Billing Software Cost Comparator","applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+</script>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">💳 Billing<span>SoftwareHub</span></div>
+<nav><a href="../index.html">Home</a><a href="software-finder.html">Software Finder</a><a href="roi-calculator.html">ROI Calc</a><a href="../blog/index.html">Blog</a></nav>
+</div>
+</header>
+
+<section class="section"><div class="container">
+<h1 style="text-align:center;margin-bottom:8px">Billing Software Cost Comparator</h1>
+<p class="sub">Enter your practice numbers — see the true annual cost of each pricing model.</p>
+
+<div class="tool">
+<div class="field"><label>Providers</label><input type="number" id="providers" value="3" min="1" max="200"></div>
+<div class="field"><label>Claims per provider per month</label><input type="number" id="claims" value="300" min="10" max="5000"></div>
+<div class="field"><label>Average monthly collections (per provider)</label><input type="number" id="collections" value="45000" min="1000" step="1000"></div>
+<button class="btn" id="calc">Compare Models</button>
+
+<div class="result" id="result"></div>
+</div>
+
+<div class="ad-wrap"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="disclaimer" style="max-width:760px;margin:24px auto">General information only. Pricing bands are typical 2026 ranges; vendors vary. Verify quotes before buying.</div>
+</div></section>
+
+<footer>
+<div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p>© <span id="year">2026</span> BillingSoftwareHub. General information only.</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+document.getElementById('calc').addEventListener('click', function(){
+  var prov=num('providers',3), claims=num('claims',300), coll=num('collections',45000);
+  var totalClaims=prov*claims, totalColl=prov*coll;
+  // Model A: flat monthly mid-market
+  var a=prov*450*12;
+  // Model B: per-claim
+  var b=prov*199*12 + totalClaims*12*0.75;
+  // Model C: % of collections full service
+  var c=totalColl*12*0.055;
+  var models=[
+    {name:'Flat monthly software', detail:'$450/provider/mo (mid-market cloud)', cost:a, note:'Predictable. You still need billing staff or handle claims yourself.'},
+    {name:'Per-claim + base', detail:'$199/provider/mo + $0.75/claim', cost:b, note:'Scales with volume. Good for variable claim counts.'},
+    {name:'Full-service (% of collections)', detail:'5.5% of collections', cost:c, note:'Zero staff needed. Company handles coding, claims, denials.'}
+  ];
+  models.sort(function(x,y){return x.cost-y.cost;});
+  var h='<div class="badge">CHEAPEST: '+models[0].name.toUpperCase()+'</div><h3>Annual cost comparison</h3>';
+  h+='<table><tr><th>Model</th><th>Pricing</th><th>Annual cost</th></tr>';
+  models.forEach(function(m){
+    h+='<tr><td><strong>'+m.name+'</strong><br><span style="color:var(--muted);font-size:.85rem">'+m.note+'</span></td><td>'+m.detail+'</td><td><strong>'+fmtUSD(m.cost)+'</strong></td></tr>';
+  });
+  h+='</table>';
+  var diff=models[2].cost-models[0].cost;
+  h+='<p style="margin-top:16px">The most expensive model costs <strong>'+fmtUSD(diff)+'</strong>/yr more than the cheapest for your inputs. ';
+  h+='Remember: full-service % models include labor you would otherwise pay for separately — run our <a href="roi-calculator.html">in-house vs outsourced ROI calculator</a> for the full picture.</p>';
+  var r=document.getElementById('result');
+  r.className='result show'; r.innerHTML=h;
+});
+</script>
+</body>
+</html>

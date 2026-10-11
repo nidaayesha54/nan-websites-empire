@@ -1,0 +1,74 @@
+/* AdSpendROI — marketing-tech design system: purple/orange, mobile-responsive */
+:root{
+  --purple:#6d28d9; --purple-dark:#4c1d95; --orange:#f97316; --orange-dark:#c2410c;
+  --ink:#1e1b2e; --muted:#6b7280; --bg:#faf7ff; --card:#ffffff; --line:#e9e2f5;
+  --green:#16a34a; --red:#dc2626;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* header */
+.site-header{background:linear-gradient(135deg,var(--purple-dark),var(--purple));position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(76,29,149,.25)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{color:#fff;text-decoration:none;font-size:1.5rem;font-weight:800}
+.brand span{color:var(--orange)}
+.nav a{color:#e9d5ff;text-decoration:none;margin-left:22px;font-weight:600}
+.nav a:hover{color:#fff}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--purple-dark) 0%,var(--purple) 55%,var(--orange-dark) 130%);color:#fff;padding:64px 0;text-align:center}
+.hero h1{font-size:2.4rem;line-height:1.25;max-width:760px;margin:0 auto 16px}
+.hero p{font-size:1.1rem;color:#ede9fe;max-width:680px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--orange-dark)}
+.btn-outline{background:transparent;border:2px solid #fff;color:#fff;margin-left:12px}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:36px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(109,40,217,.12)}
+.card h3{margin-bottom:8px;font-size:1.15rem}
+.card h3 a{color:var(--purple-dark);text-decoration:none}
+.card p{color:var(--muted);font-size:.95rem}
+.card .emoji{font-size:2rem}
+/* sections */
+section.block{padding:44px 0}
+h2.sec{font-size:1.7rem;margin-bottom:14px;color:var(--purple-dark)}
+/* calculator */
+.calc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;max-width:680px;margin:24px auto}
+.calc label{display:block;font-weight:600;margin:16px 0 6px}
+.calc input[type=number],.calc select{width:100%;padding:12px;border:2px solid var(--line);border-radius:8px;font-size:1rem}
+.calc input:focus,.calc select:focus{outline:none;border-color:var(--purple)}
+.result{background:linear-gradient(135deg,#f5f0ff,#fff7ed);border:2px solid var(--line);border-radius:12px;padding:24px;margin-top:24px;text-align:center}
+.result .big{font-size:2.6rem;font-weight:800;color:var(--purple-dark)}
+.result .verdict{font-weight:700;margin-top:8px;font-size:1.1rem}
+.verdict.good{color:var(--green)} .verdict.warn{color:var(--orange-dark)} .verdict.bad{color:var(--red)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px}
+.stat .k{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.stat .v{font-size:1.4rem;font-weight:800;color:var(--ink)}
+.note{font-size:.88rem;color:var(--muted);margin-top:14px}
+/* faq */
+.faq{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff;overflow:hidden}
+.faq button{width:100%;text-align:left;background:none;border:none;padding:16px 20px;font-size:1rem;font-weight:700;cursor:pointer;color:var(--purple-dark)}
+.faq .a{display:none;padding:0 20px 18px;color:var(--muted)}
+.faq.open .a{display:block}
+/* article */
+.article{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+.article h1{font-size:2rem;color:var(--purple-dark);margin-bottom:10px;line-height:1.3}
+.article h2{font-size:1.45rem;color:var(--purple-dark);margin:30px 0 12px}
+.article h3{font-size:1.15rem;margin:22px 0 8px}
+.article p,.article li{margin-bottom:12px}
+.article ul,.article ol{padding-left:22px}
+.article table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.95rem}
+.article th,.article td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article th{background:#f5f0ff;color:var(--purple-dark)}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+/* footer */
+footer{background:var(--purple-dark);color:#c4b5fd;padding:34px 0;margin-top:50px;text-align:center;font-size:.9rem}
+footer a{color:#fff;text-decoration:none;font-weight:600}
+/* ad slot */
+.ad-slot{background:#f3f0ff;border:2px dashed #c4b5fd;border-radius:10px;color:#8b7cb8;text-align:center;padding:26px;margin:30px auto;max-width:728px;font-size:.85rem}
+/* breadcrumb */
+.crumb{font-size:.88rem;color:var(--muted);margin:18px 0}
+.crumb a{color:var(--purple);text-decoration:none}
+@media(max-width:640px){.hero h1{font-size:1.7rem}.grid2{grid-template-columns:1fr}.calc{padding:20px}.article{padding:22px}.nav a{margin-left:12px;font-size:.9rem}}

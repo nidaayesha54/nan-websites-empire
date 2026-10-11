@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umbrella Coverage Calculator — How Much Do I Need? (2026)</title>
+<meta name="description" content="Free umbrella insurance coverage calculator: enter your net worth and risk factors to get a recommended coverage amount in $1M tiers. USA 2026.">
+<link rel="canonical" href="https://nan-umbrellains.surge.sh/tools/coverage-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">☂️ Umbrella<span>InsuranceHub</span></a>
+<nav class="nav"><a href="coverage-calculator.html">Coverage Calculator</a><a href="asset-quiz.html">Risk Quiz</a><a href="cost-estimator.html">Cost Estimator</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Coverage Calculator</div></div>
+
+<section class="section" style="padding-top:8px"><div class="container">
+<div class="tool-wrap">
+<h1>Umbrella Coverage Calculator</h1>
+<p style="color:#5b6b7c">The classic rule: carry at least as much liability coverage as your <strong>net worth</strong> — because a lawsuit judgment can reach everything you own, plus garnish future wages. Answer below for your personalized number.</p>
+
+<div class="field"><label for="assets">Total assets ($)</label><input type="number" id="assets" value="500000" min="0" step="1000"><div style="font-size:.85rem;color:#5b6b7c;margin-top:4px">Home equity + savings + investments + cars + other property</div></div>
+<div class="field"><label for="debts">Total debts ($)</label><input type="number" id="debts" value="200000" min="0" step="1000"><div style="font-size:.85rem;color:#5b6b7c;margin-top:4px">Mortgage balance + loans + credit cards</div></div>
+<div class="field"><label for="income">Annual household income ($)</label><input type="number" id="income" value="120000" min="0" step="1000"><div style="font-size:.85rem;color:#5b6b7c;margin-top:4px">Future wages can be garnished after a judgment — higher income often means more coverage.</div></div>
+
+<div class="field"><label>Risk factors (check all that apply)</label>
+<div class="checks">
+<label><input type="checkbox" class="risk" value="500000"> Teen or young driver in the household (biggest single claim source)</label>
+<label><input type="checkbox" class="risk" value="250000"> Swimming pool, trampoline, or dog (attractive nuisances / bite liability)</label>
+<label><input type="checkbox" class="risk" value="500000"> Rental property or landlord exposure</label>
+<label><input type="checkbox" class="risk" value="250000"> Boat, jet ski, ATV, or motorcycle</label>
+<label><input type="checkbox" class="risk" value="250000"> You frequently host parties / guests at home</label>
+<label><input type="checkbox" class="risk" value="500000"> High-profile job, business owner, or visible wealth (lawsuit target)</label>
+<label><input type="checkbox" class="risk" value="250000"> Volunteer, coach, or serve on a board (personal liability exposure)</label>
+</div></div>
+
+<button class="btn" onclick="calc()">Calculate My Coverage</button>
+
+<div id="result" class="result"></div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> This tool gives a rough guideline based on common industry rules of thumb. Confirm your needs with a licensed insurance agent.</div>
+<p>Related: <a href="asset-quiz.html">Asset &amp; risk quiz</a> · <a href="cost-estimator.html">Cost estimator</a> · <a href="../guides/who-needs-umbrella-insurance.html">Who needs umbrella insurance?</a> · <a href="../blog/umbrella-insurance-examples.html">Real claim examples</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> UmbrellaInsuranceHub. Estimates only, not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../guides/what-is-umbrella-insurance.html">Guides</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var assets=num('assets'), debts=num('debts'), income=num('income');
+  var netWorth=Math.max(0, assets-debts);
+  var riskAdd=0, checked=[];
+  document.querySelectorAll('.risk:checked').forEach(function(c){
+    riskAdd+=parseFloat(c.value);
+    checked.push(c.parentElement.textContent.trim().split('(')[0].trim());
+  });
+  // Wage garnishment exposure: roughly 25% of income x 10 years as proxy
+  var wageExposure=Math.max(0, income*0.25*10);
+  var target=netWorth + riskAdd + wageExposure;
+  // Round UP to nearest $1M tier (policies are sold in $1M increments), minimum $1M
+  var tier=Math.max(1, Math.ceil(target/1000000));
+  var r=document.getElementById('result');
+  var html='<h3>Your recommended umbrella coverage</h3>';
+  html+='<div class="big">'+money(tier*1000000)+'</div>';
+  html+='<table class="cmp"><tr><th>Factor</th><th>Amount</th></tr>';
+  html+='<tr><td>Net worth (assets − debts)</td><td>'+money(netWorth)+'</td></tr>';
+  html+='<tr><td>Future-wage exposure proxy (25% of income × 10 yrs)</td><td>'+money(wageExposure)+'</td></tr>';
+  html+='<tr><td>Risk-factor loading ('+checked.length+' selected)</td><td>'+money(riskAdd)+'</td></tr>';
+  html+='<tr class="winner"><td>Rounded up to nearest $1M tier</td><td>'+money(tier*1000000)+'</td></tr></table>';
+  if(checked.length){ html+='<p style="margin-top:10px;font-size:.92rem">Risk factors counted: '+checked.join('; ')+'.</p>'; }
+  html+='<p style="font-size:.92rem">Note: your underlying auto/home policies usually must carry high limits first (often $250k/$500k auto, $300k home) before an insurer will sell you an umbrella policy. <a href="cost-estimator.html">See what this costs →</a></p>';
+  r.innerHTML=html; show('result');
+}
+</script>
+</body>
+</html>

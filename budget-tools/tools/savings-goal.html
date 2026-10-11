@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Goal Tracker — Free Goal Calculator with APY | BudgetTools</title>
+<meta name="description" content="Free savings goal tracker: enter your goal, current savings, monthly contribution and APY to see months to goal, interest earned, and a live progress bar. Auto-saves.">
+<link rel="canonical" href="https://nan-budgettools.surge.sh/tools/savings-goal.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Savings Goal Tracker","url":"https://nan-budgettools.surge.sh/tools/savings-goal.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Budget<span>Tools</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="budget-planner.html">Budget Planner</a>
+      <a href="emergency-fund.html">Emergency Fund</a>
+      <a href="savings-goal.html">Savings Goal</a>
+      <a href="../guides/save-money-low-income.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Savings Goal Tracker</p>
+<h1>Savings Goal Tracker</h1>
+<p class="lede">Name your goal, enter what you've saved and what you can add each month, and see exactly when you'll reach it — with compound interest included. Your progress auto-saves in this browser.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice.</div>
+
+<section class="tool">
+  <label for="goal">Savings goal ($)</label>
+  <input type="number" id="goal" value="10000" min="0" step="100">
+  <label for="current">Already saved ($)</label>
+  <input type="number" id="current" value="1500" min="0" step="50">
+  <label for="monthly">Monthly contribution ($)</label>
+  <input type="number" id="monthly" value="300" min="0" step="25">
+  <label for="apy">Annual interest rate — APY (%)</label>
+  <input type="number" id="apy" value="4" min="0" max="20" step="0.1">
+  <br><button class="btn-calc" id="calcBtn">Calculate Timeline</button>
+  <p id="err" class="warn-text"></p>
+</section>
+
+<section class="results" id="results" aria-live="polite"></section>
+
+<section>
+  <h2>How to Reach Any Savings Goal Faster</h2>
+  <ul>
+    <li><strong>Automate the transfer</strong> — move money to savings on payday before you can spend it.</li>
+    <li><strong>Earn real interest</strong> — a high-yield savings account (often 4%+ APY) adds hundreds over a year versus a 0.01% checking account.</li>
+    <li><strong>Raise contributions with raises</strong> — save half of every raise and you'll barely feel it.</li>
+    <li><strong>Break big goals into milestones</strong> — $10,000 feels far; the first $2,500 feels winnable.</li>
+  </ul>
+  <p>Struggling to find the money? Read <a href="../guides/save-money-low-income.html">How to Save Money on a Low Income</a>.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>50/30/20 Budget Planner</h3><p>Carve your monthly contribution out of a real budget.</p><a href="budget-planner.html">Open →</a></div>
+    <div class="card"><h3>Emergency Fund Calculator</h3><p>Make your safety net your first savings goal.</p><a href="emergency-fund.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="budget-planner.html">Budget Planner</a><a href="emergency-fund.html">Emergency Fund</a><a href="../guides/save-money-low-income.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> BudgetTools. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/savings-goal.js"></script>
+</body>
+</html>

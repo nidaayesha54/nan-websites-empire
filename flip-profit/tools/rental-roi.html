@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Property ROI Calculator — Cap Rate &amp; Cash Flow (Free)</title>
+  <meta name="description" content="Free rental property ROI calculator: cap rate, cash-on-cash return, monthly cash flow and the 1% rule. Analyze any rental deal in seconds.">
+  <link rel="canonical" href="https://flipprofit.github.io/tools/rental-roi.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Rental Property ROI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate cap rate, cash-on-cash return and monthly cash flow for rental properties."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">🏠 Flip<span>Profit</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="flip-calculator.html">Flip Calculator</a>
+        <a href="rental-roi.html">Rental ROI</a>
+        <a href="../guides/house-flipping-guide-2026.html">Flipping Guide</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> › Rental ROI Calculator</p>
+  </div>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="wrap">
+      <span class="kicker">Interactive tool</span>
+      <h1 style="font-size:2rem; font-weight:800; margin-bottom:8px;">Rental Property ROI Calculator</h1>
+      <p class="sub">Analyze any buy-and-hold deal: mortgage, taxes, insurance, vacancy, management — get cap rate, cash-on-cash return, and monthly cash flow instantly.</p>
+
+      <div class="tool-grid">
+        <div class="form-card" id="rental-form">
+          <div class="field">
+            <label for="rt-price">Purchase price</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-price" value="220000" min="0" step="1000"></div>
+          </div>
+          <div class="field">
+            <label for="rt-down">Down payment</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-down" value="44000" min="0" step="1000"></div>
+          </div>
+          <div class="field">
+            <label for="rt-rate">Mortgage interest rate (%)</label>
+            <input type="number" id="rt-rate" value="7" min="0" max="20" step="0.125">
+          </div>
+          <div class="field">
+            <label for="rt-years">Loan term (years)</label>
+            <input type="number" id="rt-years" value="30" min="1" max="40" step="1">
+          </div>
+          <div class="field">
+            <label for="rt-rent">Monthly rent</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-rent" value="1950" min="0" step="25"></div>
+          </div>
+          <div class="field">
+            <label for="rt-tax">Property tax (annual)</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-tax" value="2600" min="0" step="50"></div>
+          </div>
+          <div class="field">
+            <label for="rt-ins">Insurance (annual)</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-ins" value="1400" min="0" step="50"></div>
+          </div>
+          <div class="field">
+            <label for="rt-maint">Maintenance (annual)</label>
+            <div class="input-wrap"><span class="prefix">$</span><input type="number" id="rt-maint" value="1800" min="0" step="50"></div>
+          </div>
+          <div class="field">
+            <label for="rt-vac">Vacancy rate (%) <span class="hint">Typical: 5–8%</span></label>
+            <input type="number" id="rt-vac" value="6" min="0" max="50" step="0.5">
+          </div>
+          <div class="field">
+            <label for="rt-mgmt">Property management (%) <span class="hint">Typical: 8–10% of rent; 0 if self-managing</span></label>
+            <input type="number" id="rt-mgmt" value="8" min="0" max="30" step="0.5">
+          </div>
+        </div>
+
+        <div>
+          <div class="result-card" id="rental-results" style="display:none;">
+            <h3>📊 Rental analysis</h3>
+            <div class="result-row"><span class="k">Monthly cash flow</span><span class="v" id="rt-cashflow">$0</span></div>
+            <div class="result-row"><span class="k">Cap rate</span><span class="v" id="rt-cap">0%</span></div>
+            <div class="result-row"><span class="k">Cash-on-cash return</span><span class="v" id="rt-coc">0%</span></div>
+            <div class="result-row"><span class="k">1% rule (rent ÷ price)</span><span class="v" id="rt-1pct">0%</span></div>
+            <div class="result-row"><span class="k">Annual NOI</span><span class="v" id="rt-noi">$0</span></div>
+            <div class="result-row"><span class="k">Monthly expenses (total)</span><span class="v" id="rt-exp">$0</span></div>
+            <div class="result-row"><span class="k">↳ Mortgage (P&amp;I)</span><span class="v" id="rt-pmt">$0</span></div>
+          </div>
+          <div class="verdict" id="rental-verdict" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div class="faq">
+        <h2 style="margin-bottom:16px;">Rental ROI FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-q">What is a good cap rate for a rental property?</button>
+          <div class="faq-a">In most US markets, a cap rate of 6–8% is considered solid for residential rentals. Above 8% is strong (but check why it's priced that way — rough area or deferred maintenance). Below 4% usually means you're betting on appreciation, not cash flow.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What is cash-on-cash return?</button>
+          <div class="faq-a">Cash-on-cash return = annual cash flow ÷ cash you invested (down payment + closing costs). It tells you the yearly yield on your actual out-of-pocket money. Most investors want at least 8–12%.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What is the 1% rule?</button>
+          <div class="faq-a">The 1% rule says monthly rent should be at least 1% of the purchase price for the property to cash flow. It's a quick screening filter, not a final decision tool — always run the full numbers.</div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Flipping instead of holding?</h2>
+        <p>Run the same property through the fix-and-flip calculator to compare strategies.</p>
+        <a class="btn btn-gold" href="flip-calculator.html">🔨 Try the Flip Calculator</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <a class="brand" href="../index.html" style="font-size:1.2rem;">🏠 Flip<span>Profit</span></a>
+        <p style="margin-top:10px; max-width:320px;">Free calculators and guides for real estate investors. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</p>
+      </div>
+      <div>
+        <strong style="color:#fff;">Tools</strong><br>
+        <a href="flip-calculator.html">Flip Calculator</a><br>
+        <a href="rental-roi.html">Rental ROI</a>
+      </div>
+      <div>
+        <strong style="color:#fff;">Guides</strong><br>
+        <a href="../guides/house-flipping-guide-2026.html">Flipping Guide 2026</a><br>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+      <p class="fine">Estimates only — not financial advice. Always verify numbers with your own due diligence before investing. © 2026 FlipProfit.</p>
+    </div>
+  </footer>
+
+  <script src="../js/rental.js"></script>
+</body>
+</html>

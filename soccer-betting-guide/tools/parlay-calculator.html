@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parlay Calculator: Multi-Leg Payout & Implied Probability | SoccerBettingGuide</title>
+<meta name="description" content="Free parlay calculator for up to 8 legs: combined odds, total payout, and true implied probability. See how unlikely big parlays really are. Educational only.">
+<link rel="canonical" href="https://nan-soccerbetting.surge.sh/tools/parlay-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="rg-banner">⚠️ <strong>21+ only.</strong> Gambling involves risk — only bet what you can afford to lose. Need help? Call <strong>1-800-GAMBLER</strong>. Educational content only.</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="../index.html">⚽ Soccer<span>BettingGuide</span></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="odds-converter.html">Odds Converter</a>
+      <a href="bankroll-calculator.html">Bankroll Calculator</a>
+      <a href="parlay-calculator.html" class="active">Parlay Calculator</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Parlay Calculator</div>
+  <article class="article">
+    <h1>Parlay / Accumulator Calculator (Up to 8 Legs)</h1>
+    <p class="meta">Free tool · Educational · No signup</p>
+    <p>Enter the odds for each leg (choose American, decimal, or fractional per leg) and your stake. The calculator multiplies the legs into combined odds, total payout — and the real implied probability of the ticket. Compare with <a href="bankroll-calculator.html">proper stake sizing</a>.</p>
+
+    <div class="tool-form">
+      <label class="field" style="max-width:260px">Stake (USD)
+        <input type="number" id="parlay-stake" value="25" min="1" step="1">
+      </label>
+      <div id="legs"></div>
+      <button class="btn" id="parlay-btn" type="button">Calculate Parlay</button>
+      <div class="result-box" id="parlay-result" aria-live="polite">
+        <p class="note">Enter odds for at least 2 legs to build a parlay.</p>
+      </div>
+    </div>
+
+    <h2>The honest math about parlays</h2>
+    <ul>
+      <li>One losing leg loses the <strong>entire</strong> ticket — that is the whole risk.</li>
+      <li>Each added leg multiplies the bookmaker margin, raising the house edge.</li>
+      <li>A 5-leg parlay at −110 each has an implied probability under 3.2%.</li>
+    </ul>
+
+    <div class="disclaimer-box">
+      <strong>Responsible gambling:</strong> 21+ only. Parlays are high-variance entertainment, not an income strategy. No combination of legs overcomes the house edge. Only bet what you can afford to lose. <strong>1-800-GAMBLER</strong>.
+    </div>
+  </article>
+</div>
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="rg-note">21+ only. Gambling involves risk — only bet what you can afford to lose. If you or someone you know has a gambling problem, call or text <strong>1-800-GAMBLER</strong>. This site is educational only and does not guarantee any wins.</p>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p>© <span id="year">2026</span> SoccerBettingGuide. Educational content only.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/parlay-calculator.js"></script>
+</body>
+</html>

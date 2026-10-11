@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LASIK vs Glasses Break-Even Calculator | VisionInsuranceHub</title>
+<meta name="description" content="Compare one-time LASIK cost vs a lifetime of glasses and contacts. Find your break-even year and 20-year savings with this free calculator.">
+<link rel="canonical" href="https://nan-visionins.surge.sh/tools/lasik-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="../index.html">Vision<span>Insurance</span>Hub</a>
+<nav class="main-nav">
+<a href="../index.html">Home</a>
+<a href="eye-care-cost.html">Eye Care Cost</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="lasik-calculator.html">LASIK Calculator</a>
+<a href="../guides/vision-insurance-cost-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Tools &rsaquo; LASIK Break-Even Calculator</div>
+</div>
+
+<section class="section" style="padding-top:10px">
+<div class="container">
+<div class="tool-box">
+<h1>LASIK vs Glasses Break-Even Calculator</h1>
+<p style="color:var(--muted)">One surgery or a lifetime of lenses? Enter your numbers to see when LASIK pays for itself.</p>
+
+<div class="form-group">
+<label for="lasikCost">LASIK total cost, both eyes ($)</label>
+<input type="number" id="lasikCost" value="4500" min="0">
+</div>
+<div class="form-group">
+<label for="glassesYear">Yearly glasses spending ($)</label>
+<input type="number" id="glassesYear" value="200" min="0">
+</div>
+<div class="form-group">
+<label for="contactsYear">Yearly contacts spending ($)</label>
+<input type="number" id="contactsYear" value="300" min="0">
+</div>
+<div class="form-group">
+<label for="horizon">Comparison horizon (years)</label>
+<select id="horizon">
+<option value="10">10 years</option>
+<option value="20" selected>20 years</option>
+<option value="30">30 years</option>
+</select>
+</div>
+
+<button class="btn" onclick="calculate()">Calculate Break-Even</button>
+
+<div class="result" id="result">
+<h2>Break-Even Analysis</h2>
+<div class="result-row"><span>Lifetime glasses + contacts cost</span><span class="val" id="glassesTotal"></span></div>
+<div class="result-row"><span>One-time LASIK cost</span><span class="val" id="lasikTotal"></span></div>
+<div class="result-row"><span>Total savings with LASIK</span><span class="val big" id="savings"></span></div>
+<div class="verdict" id="verdict"></div>
+</div>
+<p style="font-size:.82rem;color:var(--muted);margin-top:22px">Estimates only, not financial or medical advice. LASIK results vary; not everyone is a candidate — consult an eye doctor.</p>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div style="max-width:760px;margin:34px auto 0">
+<p>Related tools: <a href="eye-care-cost.html">Eye Care Cost Estimator</a> · <a href="plan-comparator.html">Vision Plan Comparator</a></p>
+<p>Related guides: <a href="../guides/lasik-vs-glasses-cost.html">LASIK vs Glasses: Lifetime Cost Comparison</a> · <a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a></p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-col">
+<h4>Tools</h4>
+<ul>
+<li><a href="eye-care-cost.html">Eye Care Cost Estimator</a></li>
+<li><a href="plan-comparator.html">Plan Comparator</a></li>
+<li><a href="lasik-calculator.html">LASIK Calculator</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Guides</h4>
+<ul>
+<li><a href="../guides/vision-insurance-cost-2026.html">Vision Insurance Cost 2026</a></li>
+<li><a href="../guides/is-vision-insurance-worth-it.html">Is Vision Insurance Worth It?</a></li>
+<li><a href="../guides/lasik-vs-glasses-cost.html">LASIK vs Glasses Cost</a></li>
+<li><a href="../blog/eye-care-saving-tips.html">Eye-Care Saving Tips</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="../blog/index.html">Blog</a></li>
+<li><a href="../index.html">Home</a></li>
+</ul>
+</div>
+<div class="footer-note">
+Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+<br><br>Estimates only, not financial or medical advice.
+</div>
+</div>
+</footer>
+
+<script>
+function money(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+function calculate(){
+  var L=+document.getElementById("lasikCost").value||0,
+      g=+document.getElementById("glassesYear").value||0,
+      c=+document.getElementById("contactsYear").value||0,
+      H=+document.getElementById("horizon").value;
+
+  var yearly=g+c, lifetime=yearly*H, savings=lifetime-L;
+  document.getElementById("glassesTotal").textContent=money(lifetime)+" over "+H+" yrs";
+  document.getElementById("lasikTotal").textContent=money(L)+" one-time";
+  var sEl=document.getElementById("savings");
+  sEl.textContent=(savings>=0?"+":"−")+money(Math.abs(savings));
+  sEl.style.color=savings>=0?"var(--green-dark)":"#c0392b";
+
+  var v=document.getElementById("verdict");
+  if(yearly<=0){
+    v.innerHTML="<strong>Result:</strong> You spend $0/year on glasses or contacts — LASIK is a lifestyle choice, not a money-saver for you.";
+  } else {
+    var be=Math.ceil(L/yearly);
+    if(be<=H){
+      v.innerHTML="<strong>Result:</strong> LASIK breaks even in <strong>about "+be+" year"+(be>1?"s":"")+"</strong>. Over "+H+" years you save roughly <strong>"+money(savings)+"</strong> versus continuing glasses/contacts.";
+    } else {
+      v.innerHTML="<strong>Result:</strong> LASIK breaks even in about <strong>"+be+" years</strong> — beyond your "+H+"-year horizon. Glasses/contacts remain cheaper over "+H+" years for you.";
+    }
+  }
+  document.getElementById("result").classList.add("show");
+  document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workers' Comp Cost Estimator by State (2026) | BusinessInsuranceHub</title>
+<meta name="description" content="Estimate your 2026 workers' comp premium: enter payroll by class (office vs field), pick your state, and see an illustrative annual range. Free tool.">
+<link rel="canonical" href="https://nan-bizinsurance.surge.sh/tools/workers-comp.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Workers' Compensation Cost Estimator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="logo" href="../index.html">🛡️ Business<span>Insurance</span>Hub</a>
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="coverage-finder.html">Coverage Finder</a>
+<a href="cost-estimator.html">Cost Estimator</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div>
+</nav>
+</header>
+
+<section class="tool-hero">
+<div class="wrap">
+<h1>Workers' Comp Cost Estimator</h1>
+<p>Workers' comp is priced per $100 of payroll by job class. Enter your payroll split and state for an illustrative 2026 estimate.</p>
+</div>
+</section>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="tool-box">
+<div class="panel">
+<div class="field">
+<label for="wc-state">State</label>
+<select id="wc-state"></select>
+<div class="hint">Rates and requirements differ by state — see our <a href="../guides/workers-comp-requirements-by-state.html">requirements by state guide</a>.</div>
+</div>
+<div class="field">
+<label for="wc-office-pay">Annual office / clerical payroll (USD)</label>
+<input type="number" id="wc-office-pay" value="120000" min="0" step="5000">
+<div class="hint">Desk workers, admin, sales — the lowest-risk class (e.g. code 8810).</div>
+</div>
+<div class="field">
+<label for="wc-field-pay">Annual field / manual-work payroll (USD)</label>
+<input type="number" id="wc-field-pay" value="80000" min="0" step="5000">
+<div class="hint">Drivers, installers, warehouse, construction — rates run many times higher.</div>
+</div>
+<div class="field">
+<label for="wc-mod">Experience modification factor (1.00 = average)</label>
+<input type="number" id="wc-mod" value="1.00" min="0.5" max="2" step="0.05">
+<div class="hint">Below 1.00 means better-than-average claims history (discount); above 1.00 means surcharge. New businesses start near 1.00.</div>
+</div>
+<button class="btn" onclick="estimateWC()">Estimate My Workers' Comp →</button>
+
+<div id="wc-result" class="result"></div>
+
+<div class="disclaimer">
+<strong>Disclaimer:</strong> Educational purposes only — not financial advice. Rates shown are illustrative samples per $100 of payroll, not quotes. Actual premiums depend on exact class codes, carrier, claims history, and payroll audits. Consult a licensed insurance agent for real quotes.
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<section class="faq">
+<h2 style="text-align:center;margin-bottom:24px;color:var(--navy)">Workers' Comp Pricing, Explained</h2>
+<div class="faq-item"><div class="faq-q">Why is field payroll so much more expensive to insure? <span>+</span></div><div class="faq-a">Injury frequency and severity are far higher for manual work. A clerical class can cost $0.30–$0.50 per $100 of payroll while a roofing or framing class can exceed $20 — same formula, wildly different risk.</div></div>
+<div class="faq-item"><div class="faq-q">What is the experience mod? <span>+</span></div><div class="faq-a">A multiplier (usually 0.50–2.00) reflecting your claims history versus similar businesses. Few claims → discount below 1.00; frequent claims → surcharge. It's the biggest lever you control after class codes.</div></div>
+<div class="faq-item"><div class="faq-q">Can I skip workers' comp if I only use contractors? <span>+</span></div><div class="faq-a">Careful — misclassified employees are a classic audit penalty. If someone works set hours, uses your equipment, and can't work for others, states often treat them as employees regardless of the 1099.</div></div>
+<div class="faq-item"><div class="faq-q">Is this a real quote? <span>+</span></div><div class="faq-a">No. This tool uses illustrative sample rates for education. Real pricing needs exact class codes and underwriting — talk to a licensed agent.</div></div>
+</section>
+
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div>© <span id="year">2026</span> BusinessInsuranceHub · Educational purposes only — not financial advice.</div>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/workers-comp.js"></script>
+</body>
+</html>

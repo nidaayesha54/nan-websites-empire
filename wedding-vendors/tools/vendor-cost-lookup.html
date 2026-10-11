@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Vendor Cost Lookup — Fair 2026 Prices</title>
+  <meta name="description" content="Look up fair 2026 USA price ranges for 14 wedding vendor types by region. See what's included, red flags, and whether a quote is fair — free.">
+  <link rel="canonical" href="https://nan-wedvendors.surge.sh/tools/vendor-cost-lookup.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How do I know if a wedding vendor quote is fair?","acceptedAnswer":{"@type":"Answer","text":"Compare the quote to the typical 2026 range for that vendor type in your region. Quotes within roughly 30% of the typical price are usually fair; far above or below deserves scrutiny."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="../index.html">💍 Vendor<span>Compare</span></a>
+  <nav class="nav"><a href="../index.html">Home</a><a href="vendor-cost-lookup.html">Cost Lookup</a><a href="quote-comparator.html">Compare Quotes</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <h1 style="color:var(--navy);text-align:center;margin-bottom:8px">Wedding Vendor Cost Lookup</h1>
+  <p class="lead">Select a vendor type and your region to see the fair 2026 price range, typical inclusions, and red flags.</p>
+
+  <div class="tool-box">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="vendor">Vendor type</label>
+        <select id="vendor"></select>
+      </div>
+      <div class="form-group">
+        <label for="region">Your region</label>
+        <select id="region"></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="quote">Got a quote? Enter it to check (optional, $)</label>
+        <input type="number" id="quote" placeholder="e.g. 3500" min="0">
+      </div>
+      <div class="form-group" style="justify-content:flex-end">
+        <button class="btn btn-navy" id="checkBtn" style="margin-top:24px">Check Fair Price</button>
+      </div>
+    </div>
+
+    <div class="result" id="result">
+      <h2 id="rName" style="text-align:left;color:var(--navy)"></h2>
+      <p id="rDesc" style="color:var(--gray-600)"></p>
+      <div class="price-range">
+        <span class="typical" id="rTypical"></span>
+        <span class="band" id="rBand"></span>
+      </div>
+      <div id="rVerdict"></div>
+      <h3 style="color:var(--navy);margin-top:18px">Typically included</h3>
+      <table class="includes-table"><tbody id="rIncludes"></tbody></table>
+      <div class="redflags"><h4>🚩 Red flags to watch for</h4><ul id="rFlags"></ul></div>
+      <p style="margin-top:16px;color:var(--gray-600);font-size:.95rem"><strong>Ask before booking:</strong> <span id="rQuestions"></span></p>
+      <p style="margin-top:10px;font-size:.82rem;color:var(--gray-600)"><em>Estimates based on 2026 USA industry data, adjusted for region. Actual prices vary.</em></p>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="article" style="margin-top:10px">
+    <div class="faq-item"><h3>How do I know if a wedding vendor quote is fair?</h3><p>Compare it to the typical range for your region. Within about 30% of typical is usually fair. Far above? Ask what extras justify it. Far below? Verify experience, insurance, and contract terms — the cheapest quote is where most horror stories start.</p></div>
+    <div class="faq-item"><h3>Why do prices vary so much by region?</h3><p>Vendor cost of living, demand density, and local competition. Northeast and West Coast metro areas run 20–25% above the national typical; the South and Midwest often run 5–10% below.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="brand" href="../index.html" style="font-size:1.1rem">💍 Vendor<span>Compare</span></a><p style="margin-top:8px;font-size:.9rem">Free wedding vendor cost tools.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</p></div>
+  <div><a href="vendor-cost-lookup.html">Cost Lookup</a><br><a href="quote-comparator.html">Compare Quotes</a><br><a href="../blog/index.html">Blog</a></div>
+</div>
+<div class="wrap"><p class="disclaimer">Price ranges are estimates based on published 2026 USA industry data and vary by region, season, and vendor experience. Educational information only.</p></div>
+</footer>
+<script src="../js/vendor-data.js"></script>
+<script src="../js/lookup.js"></script>
+</body>
+</html>

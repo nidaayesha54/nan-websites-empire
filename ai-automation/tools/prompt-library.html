@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>54 Free AI Prompts for Business — Copy-Paste Prompt Library</title>
+<meta name="description" content="54 battle-tested copy-paste AI prompts for marketing, sales, coding, operations, productivity & content. Filter by category, copy in one click. Free, no signup.">
+<link rel="canonical" href="https://ai-automation.surge.sh/tools/prompt-library.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"AI Prompt Library","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🤖 AIAutomationHub</a>
+<div class="navlinks">
+<a href="prompt-library.html">Prompt Library</a>
+<a href="workflow-builder.html">Workflow Builder</a>
+<a href="roi-calculator.html">ROI Calculator</a>
+<a href="tool-finder.html">What to Automate?</a>
+<a href="../guides/ai-automation-small-business-2026.html">Guides</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Prompt Library</div>
+<h1>📚 AI Prompt Library — 54 Copy-Paste Prompts</h1>
+<p style="color:var(--muted)">Battle-tested prompts for ChatGPT, Claude, or any AI assistant. Fill the [BRACKETS], copy, paste, done.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="prompt-search">Search prompts</label>
+<input id="prompt-search" type="text" placeholder="e.g. cold email, regex, SOP…" oninput="renderPrompts()">
+<label>Category</label>
+<div id="prompt-cats"></div>
+<p style="color:var(--muted);font-size:.9rem;margin-top:10px"><span id="prompt-count"></span></p>
+</div>
+
+<div id="prompt-list"></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section">
+<h2>How to get the best results</h2>
+<ul style="color:#d7d3f2;margin-left:20px">
+<li><b>Fill every bracket</b> — specific context beats clever wording.</li>
+<li><b>Iterate once</b> — ask "make it punchier" or "give 3 variants" after the first output.</li>
+<li><b>Save winners</b> — turn your best outputs into templates and SOPs.</li>
+</ul>
+<p>Next: plan the automation around your favorite prompt in the <a href="workflow-builder.html">Workflow Builder</a>.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free AI automation tools for everyone</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/prompts.js"></script>
+<script>
+var activeCat = 'All';
+function renderCats() {
+  var cats = ['All'];
+  PROMPTS.forEach(function (p) { if (cats.indexOf(p.cat) === -1) cats.push(p.cat); });
+  document.getElementById('prompt-cats').innerHTML = cats.map(function (c) {
+    return '<span class="chip' + (c === activeCat ? ' active' : '') + '" data-cat="' + c + '">' + c + '</span>';
+  }).join('');
+  document.querySelectorAll('#prompt-cats .chip').forEach(function (ch) {
+    ch.addEventListener('click', function () { activeCat = ch.getAttribute('data-cat'); renderCats(); renderPrompts(); });
+  });
+}
+function renderPrompts() {
+  var q = (document.getElementById('prompt-search').value || '').toLowerCase();
+  var box = document.getElementById('prompt-list');
+  var shown = 0, html = '';
+  PROMPTS.forEach(function (p) {
+    if (activeCat !== 'All' && p.cat !== activeCat) return;
+    if (q && (p.title + ' ' + p.text + ' ' + p.cat).toLowerCase().indexOf(q) === -1) return;
+    shown++;
+    html += '<div class="prompt-card"><div class="meta">' + esc(p.cat) + '</div><b>' + esc(p.title) + '</b><pre>' + esc(p.text) + '</pre><button class="btn-sm" onclick="copyText(this.parentElement.querySelector(\'pre\').textContent, this)">Copy prompt</button></div>';
+  });
+  box.innerHTML = html || '<p style="color:var(--muted)">No prompts match. Try a different search.</p>';
+  document.getElementById('prompt-count').textContent = shown + ' of ' + PROMPTS.length + ' prompts';
+}
+document.addEventListener('DOMContentLoaded', function () { renderCats(); renderPrompts(); });
+</script>
+</body>
+</html>

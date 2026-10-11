@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiverr / Upwork फीस कैलकुलेटर — हाथ में कितना आएगा? | कमाई कैलकुलेटर</title>
+  <meta name="description" content="Fiverr (20%) और Upwork (10%) की फीस कटने के बाद आपकी असली कमाई कितनी होगी? मुफ़्त हिंदी फीस कैलकुलेटर — ₹ और $ दोनों में।">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">💰 कमाई<span>कैलकुलेटर</span></a>
+      <nav class="nav">
+        <a href="../index.html">होम</a>
+        <a href="hourly-rate.html">रेट कैलकुलेटर</a>
+        <a href="fiverr-fee-calculator.html">फीस कैलकुलेटर</a>
+        <a href="../guides/freelancing-start-india.html">गाइड</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="article">
+      <h1>Fiverr / Upwork फीस कैलकुलेटर</h1>
+      <p class="meta">$100 का ऑर्डर मतलब $100 नहीं! प्लेटफ़ॉर्म अपनी फीस काटता है — देखें आपके हाथ में कितना आएगा।</p>
+    </div>
+
+    <div class="calc">
+      <div id="calc-error" style="display:none;color:#b71c1c;font-weight:700;margin-bottom:12px;"></div>
+      <label for="amount">प्रोजेक्ट की राशि</label>
+      <input type="number" id="amount" value="100" min="1">
+
+      <label for="currency">मुद्रा (Currency)</label>
+      <select id="currency">
+        <option value="USD" selected>US Dollar ($)</option>
+        <option value="INR">Indian Rupee (₹)</option>
+      </select>
+
+      <label for="platform">प्लेटफ़ॉर्म</label>
+      <select id="platform">
+        <option value="fiverr" selected>Fiverr — 20% फीस</option>
+        <option value="upwork">Upwork — 10% फीस</option>
+        <option value="upwork_vip">Upwork — 5% (पुराना क्लाइंट, $10k+ बिलिंग)</option>
+      </select>
+
+      <button id="calc-btn">हिसाब करें</button>
+
+      <div class="results" id="results">
+        <div class="result-box">
+          <div class="label">प्लेटफ़ॉर्म: <span id="r-platform">—</span></div>
+          <div class="label" style="margin-top:8px;">कटने वाली फीस</div>
+          <div class="big" id="r-fee" style="color:#b71c1c;">—</div>
+        </div>
+        <div class="result-box">
+          <div class="label">✅ आपके हाथ में आएगा (नेट कमाई)</div>
+          <div class="big" id="r-net">—</div>
+          <div class="label" id="r-note"></div>
+        </div>
+        <div class="result-note">
+          <strong>टिप:</strong> रेट तय करते समय फीस पहले से जोड़ लें। उदाहरण: अगर आपको $80 चाहिए और Fiverr 20% काटता है,
+          तो ऑर्डर प्राइस $100 रखें ($100 − 20% = $80)।
+        </div>
+      </div>
+    </div>
+
+    <div class="article">
+      <h2>2026 में प्लेटफ़ॉर्म फीस</h2>
+      <table>
+        <tr><th>प्लेटफ़ॉर्म</th><th>फीस</th><th>नोट</th></tr>
+        <tr><td>Fiverr</td><td>20%</td><td>हर ऑर्डर पर सीधी कटौती</td></tr>
+        <tr><td>Upwork</td><td>10%</td><td>ज़्यादातर कॉन्ट्रैक्ट पर</td></tr>
+        <tr><td>Upwork (पुराना क्लाइंट)</td><td>5%</td><td>एक ही क्लाइंट से $10,000+ बिलिंग के बाद</td></tr>
+      </table>
+      <h2>पेमेंट तक पहुँचने में और कटौती</h2>
+      <ul>
+        <li><strong>Payoneer:</strong> लगभग 1–3% (मुद्रा बदलने पर)</li>
+        <li><strong>PayPal:</strong> लगभग 3–4% + फिक्स्ड फीस</li>
+        <li><strong>बैंक ट्रांसफ़र (Payoneer से):</strong> आमतौर पर मुफ़्त या मामूली फीस</li>
+      </ul>
+      <p>पूरी तस्वीर के लिए <a href="hourly-rate.html">प्रति घंटा रेट कैलकुलेटर</a> में फीस का हिसाब जोड़ना न भूलें।</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> • <a href="../index.html">कमाई कैलकुलेटर</a></p>
+  </footer>
+  <script src="../js/fiverr-fee.js"></script>
+</body>
+</html>

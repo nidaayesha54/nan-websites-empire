@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROAS Calculator — Free Return on Ad Spend Tool | AdSpendROI</title>
+<meta name="description" content="Free ROAS calculator: enter ad spend and revenue to get your ROAS, profit, and a verdict. Includes Meta, Google, TikTok & Amazon benchmark presets. No signup.">
+<link rel="canonical" href="https://adspendroi.github.io/tools/roas-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is ROAS calculated?","acceptedAnswer":{"@type":"Answer","text":"ROAS = Revenue from ads ÷ Ad spend. If you spent $1,000 and earned $4,000, your ROAS is 4x (or 400%)."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">📈 AdSpend<span>ROI</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="roas-calculator.html">ROAS Calc</a><a href="break-even-roas.html">Break-Even</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<div class="wrap"><div class="crumb"><a href="../index.html">Home</a> → ROAS Calculator</div></div>
+
+<section class="block"><div class="wrap">
+<h1 class="sec" style="text-align:center">ROAS Calculator</h1>
+<p style="text-align:center;max-width:640px;margin:0 auto 10px">Enter your ad spend and the revenue it generated. Get your ROAS instantly — or apply a platform benchmark preset to see what average performance looks like.</p>
+<div class="calc">
+<label for="spend">Total ad spend ($)</label>
+<input type="number" id="spend" value="1000" min="0" step="any">
+<label for="revenue">Revenue from ads ($)</label>
+<input type="number" id="revenue" value="3500" min="0" step="any">
+<div style="margin-top:16px">
+<strong>Platform benchmark presets:</strong><br>
+<button class="btn" style="padding:8px 16px;margin:6px 6px 0 0;font-size:.9rem" data-preset="meta">Meta Ads ~3.2x</button>
+<button class="btn" style="padding:8px 16px;margin:6px 6px 0 0;font-size:.9rem" data-preset="google">Google Ads ~4.0x</button>
+<button class="btn" style="padding:8px 16px;margin:6px 6px 0 0;font-size:.9rem" data-preset="tiktok">TikTok Ads ~2.5x</button>
+<button class="btn" style="padding:8px 16px;margin:6px 6px 0 0;font-size:.9rem" data-preset="amazon">Amazon Ads ~3.8x</button>
+<p class="note" id="preset-note">Benchmarks are industry averages — your mileage varies by niche, creative and targeting.</p>
+</div>
+<div class="result" id="result" style="display:none">
+<div class="big" id="roas-big">—</div>
+<div class="verdict" id="verdict"></div>
+<div class="grid2" id="stats"></div>
+</div>
+<p class="note">Formula: ROAS = Revenue ÷ Ad Spend. A ROAS above your <a href="break-even-roas.html">break-even ROAS</a> means the campaign is profitable.</p>
+</div>
+</div></section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="wrap"><div class="ad-slot">AD-SLOT: in-content — Ezoic/Media.net</div></div>
+
+<section class="block"><div class="wrap">
+<h2 class="sec">Frequently asked questions</h2>
+<div class="faq"><button>How is ROAS calculated?</button><div class="a"><p>ROAS = Revenue from ads ÷ Ad spend. If you spent $1,000 and earned $4,000, your ROAS is 4x (or 400%).</p></div></div>
+<div class="faq"><button>What ROAS should I target?</button><div class="a"><p>At minimum, your ROAS must exceed your <a href="break-even-roas.html">break-even ROAS</a>. Use our break-even calculator to find your floor, then aim 20–50% above it for a healthy profit.</p></div></div>
+<div class="faq"><button>Does ROAS include product costs?</button><div class="a"><p>No — ROAS only compares revenue to ad spend. That's why a 3x ROAS can still lose money if your margins are thin. Always pair ROAS with your break-even number.</p></div></div>
+</div></section>
+
+<footer><div class="wrap">
+<p><strong>AdSpendROI</strong> — free ROAS &amp; ad spend ROI tools for advertisers.</p>
+<p>Built by <a href="https://nidaayesha.com/">NAN Marketing Agency</a> · <a href="../index.html">Home</a> · <a href="break-even-roas.html">Break-Even ROAS</a> · <a href="../blog/">Blog</a></p>
+</div></footer>
+<script src="../js/calculators.js"></script>
+</body>
+</html>

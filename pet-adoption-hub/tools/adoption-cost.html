@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Adoption Cost Calculator: First-Year Costs (USA)</title>
+<meta name="description" content="Free pet adoption cost calculator: estimate adoption fees, first vet visit, supplies, food & insurance by pet type. Plan your first year accurately.">
+<link rel="canonical" href="https://nan-petadoption.surge.sh/tools/adoption-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="../index.html"><span class="paw">🐾</span> PetAdoptionHub</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="adoption-quiz.html">Quiz</a><a href="../guides/how-to-adopt-a-dog-2026.html">Guides</a><a href="../blog/index.html">Blog</a></nav>
+</div>
+</header>
+
+<div class="wrap">
+<p class="breadcrumbs"><a href="../index.html">Home</a> → Adoption Cost Calculator</p>
+<h1 style="margin:14px 0 6px">Pet Adoption Cost Calculator 💰</h1>
+<p style="color:var(--muted);max-width:640px">See the <em>true</em> first-year cost — not just the adoption fee. Adjust the numbers to match your shelter and local prices.</p>
+
+<div class="tool-shell">
+<div class="calc-grid">
+<div>
+<div class="field">
+<label for="pet-type">Pet type</label>
+<select id="pet-type">
+<option value="dog" selected>Dog</option>
+<option value="cat">Cat</option>
+<option value="rabbit">Rabbit</option>
+<option value="bird">Bird</option>
+</select>
+</div>
+<div class="field">
+<label for="fee">Adoption fee ($)</label>
+<input type="number" id="fee" min="0" max="2000" value="200">
+</div>
+<div class="field">
+<label for="vet">First vet visit + vaccines ($)</label>
+<input type="number" id="vet" min="0" max="1500" value="150">
+</div>
+<div class="field">
+<label for="supplies">Initial supplies — crate, bed, bowls, leash ($)</label>
+<input type="number" id="supplies" min="0" max="1500" value="180">
+</div>
+</div>
+<div>
+<div class="field">
+<label for="food">Monthly food cost ($)</label>
+<input type="number" id="food" min="0" max="500" value="50">
+</div>
+<div class="field">
+<label for="insurance">Monthly pet insurance ($, 0 if none)</label>
+<input type="number" id="insurance" min="0" max="300" value="35">
+</div>
+<div class="field">
+<label for="misc">Monthly misc (toys, treats, grooming) ($)</label>
+<input type="number" id="misc" min="0" max="300" value="25">
+</div>
+<button class="btn green" id="calc-btn" type="button">Calculate My Costs 🧮</button>
+</div>
+</div>
+
+<div id="calc-result"></div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="related">
+<h3>Keep planning</h3>
+<ul>
+<li><a href="../guides/pet-adoption-fees-explained.html">Pet Adoption Fees Explained</a> — what the fee really covers</li>
+<li><a href="adoption-quiz.html">Adoption Readiness Quiz</a> — are you ready?</li>
+<li><a href="shelter-checklist.html">Shelter Visit Checklist</a> — prepare for the visit</li>
+<li><a href="../guides/adoption-vs-breeder.html">Adopting vs Buying: Honest Comparison</a></li>
+</ul>
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-nav"><a href="../index.html">Home</a><a href="adoption-quiz.html">Readiness Quiz</a><a href="adoption-cost.html">Cost Calculator</a><a href="shelter-checklist.html">Shelter Checklist</a><a href="../blog/index.html">Blog</a></div>
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div style="font-size:.85rem;color:#b8a897">© 2026 PetAdoptionHub. Adopt, don't shop. 🐾</div>
+</div>
+</footer>
+<script src="adoption-cost.js"></script>
+</body>
+</html>

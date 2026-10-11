@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent vs Buy Calculator — Break-Even Year Comparison 2026</title>
+  <meta name="description" content="Free rent vs buy calculator: compare the true cost of buying vs renting over up to 30 years, with opportunity cost. Find your break-even year.">
+  <link rel="canonical" href="https://nan-realestatetools.surge.sh/tools/rent-vs-buy.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How long until buying beats renting?","acceptedAnswer":{"@type":"Answer","text":"Often 5-15 years, depending on your rent-to-price ratio. Closing costs (about 2%) and selling costs (about 6%) are large one-time expenses that renting avoids, so buying needs time for appreciation and principal paydown to catch up."}},
+    {"@type":"Question","name":"What is the opportunity cost of a down payment?","acceptedAnswer":{"@type":"Answer","text":"Money locked in a down payment could have been invested elsewhere. This calculator assumes a 6% annual return on that money and counts the foregone growth as part of buying's cost."}},
+    {"@type":"Question","name":"Does this calculator include home appreciation?","acceptedAnswer":{"@type":"Answer","text":"Yes. It assumes 3% annual home price appreciation and 3% annual rent growth, and nets appreciation against your costs when comparing with renting."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">RealEstate<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="rental-roi.html">Rental ROI</a>
+      <a href="flip-calculator.html">Flip Calculator</a>
+      <a href="rent-vs-buy.html">Rent vs Buy</a>
+      <a href="../guides/rent-vs-buy-calculator-guide.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Rent vs Buy Calculator</p>
+  <h1>Rent vs Buy Calculator</h1>
+  <p>Buying isn't just the mortgage — it's closing costs, selling costs, and the opportunity cost of your down payment. This calculator compares the true net cost of both paths and finds your break-even year.</p>
+
+  <div class="calc">
+    <div class="field-row">
+      <div class="field"><label for="rb-price">Home price ($)</label><input type="number" id="rb-price" value="400000"></div>
+      <div class="field"><label for="rb-down">Down payment ($)</label><input type="number" id="rb-down" value="80000"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="rb-rate">Mortgage rate (%)</label><input type="number" id="rb-rate" value="7" step="0.125"></div>
+      <div class="field"><label for="rb-rent">Current monthly rent ($)</label><input type="number" id="rb-rent" value="2400"></div>
+    </div>
+    <div class="field"><label for="rb-years">How many years to compare (1–30)</label><input type="number" id="rb-years" value="10" min="1" max="30"></div>
+    <button class="btn btn-amber" id="rb-calc">Compare rent vs buy</button>
+  </div>
+
+  <div class="result" id="rb-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout warn">
+    <strong class="label">The short answer</strong>
+    Renting is usually cheaper if you'll move within ~5 years. Buying usually wins if you stay 7–10+ years. Your break-even year above is the number that matters — read <a href="../guides/rent-vs-buy-calculator-guide.html">how the comparison works</a> to understand the assumptions behind it.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">How long until buying beats renting? <span>+</span></div><div class="faq-a">Typically 5–10 years. Closing costs (~2%) and selling costs (~6%) are large one-time expenses renters avoid, so buying needs time for appreciation and principal paydown to catch up.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the opportunity cost of a down payment? <span>+</span></div><div class="faq-a">Money locked in a down payment could have been invested elsewhere. This calculator assumes a 6% annual return on that money and counts the foregone growth as part of buying's true cost.</div></div>
+  <div class="faq-item"><div class="faq-q">Does this calculator include home appreciation? <span>+</span></div><div class="faq-a">Yes — 3% annual home appreciation and 3% annual rent growth. Appreciation reduces buying's net cost, while rising rent increases renting's total cost over time.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

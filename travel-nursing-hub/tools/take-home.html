@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Nurse Take-Home Pay Calculator — Free Tool</title>
+<meta name="description" content="Estimate your real weekly take-home as a travel nurse: taxable wages vs tax-free stipends, federal and state tax estimates. Free and instant.">
+<link rel="canonical" href="https://nan-travelnurse.surge.sh/tools/take-home.html">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/take-home.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">Travel<span class="pulse">Nursing</span>Hub</a>
+    <nav class="main-nav">
+      <a href="pay-analyzer.html">Pay Analyzer</a>
+      <a href="contract-compare.html">Contract Compare</a>
+      <a href="take-home.html">Take-Home Pay</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <h1>Travel Nurse Take-Home Pay Calculator</h1>
+  <p>Tax-free stipends change everything. Estimate your net weekly paycheck after federal and state taxes.</p>
+</section>
+
+<div class="ad-slot-note"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<main class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Take-Home Pay Calculator</p>
+
+  <div class="tool-box">
+    <div class="field">
+      <label for="th-taxable">Weekly taxable wages ($)</label>
+      <input type="number" id="th-taxable" min="0" step="0.01" placeholder="e.g. 1620">
+      <p class="hint">Hourly rate × guaranteed hours. Get this from the <a href="pay-analyzer.html">pay analyzer</a>.</p>
+    </div>
+    <div class="field">
+      <label for="th-taxfree">Weekly tax-free stipends ($)</label>
+      <input type="number" id="th-taxfree" min="0" step="0.01" placeholder="e.g. 1500">
+      <p class="hint">Housing + meals &amp; incidentals (M&amp;IE) combined.</p>
+    </div>
+    <div class="field">
+      <label for="th-status">Filing status</label>
+      <select id="th-status">
+        <option value="single">Single</option>
+        <option value="married">Married filing jointly</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="th-state">Tax home state</label>
+      <select id="th-state">
+        <option value="0">Texas / Florida / no income tax (0%)</option>
+        <option value="3">Arizona (3%)</option>
+        <option value="4">Colorado (4%)</option>
+        <option value="4.4">North Carolina (4.4%)</option>
+        <option value="4.5">Georgia (4.5%)</option>
+        <option value="4.75">Ohio (4.75%)</option>
+        <option value="5">Illinois (5%)</option>
+        <option value="5.75">Virginia (5.75%)</option>
+        <option value="6">South Carolina (6%)</option>
+        <option value="6.5">Idaho (6.5%)</option>
+        <option value="7">New Jersey (7%)</option>
+        <option value="8">New York (8%)</option>
+        <option value="9.3">California (9.3%)</option>
+        <option value="5">Other — estimate 5%</option>
+      </select>
+      <p class="hint">Approximate effective state rate. Travel nurses generally pay tax in their tax-home state.</p>
+    </div>
+    <button class="btn" id="th-calc" type="button">Calculate Take-Home Pay</button>
+
+    <div class="result" id="th-result">
+      <h2>Estimated Weekly Take-Home</h2>
+      <table>
+        <tr><th>Tax</th><th>Weekly estimate</th></tr>
+        <tr><td>Federal income tax</td><td id="th-r-fed">—</td></tr>
+        <tr><td>State income tax</td><td id="th-r-state">—</td></tr>
+        <tr><td>FICA (Social Security + Medicare)</td><td id="th-r-fica">—</td></tr>
+        <tr class="total"><td>Total taxes</td><td id="th-r-total">—</td></tr>
+      </table>
+      <table>
+        <tr class="total"><td>Net take-home</td><td id="th-r-takehome">—</td></tr>
+        <tr><td>Monthly equivalent</td><td id="th-r-monthly">—</td></tr>
+        <tr><td colspan="2" id="th-r-keep">—</td></tr>
+      </table>
+      <p id="th-r-note" style="margin-top:.6rem;font-size:.95rem"></p>
+      <p style="margin-top:.8rem">Read the <a href="../blog/travel-nurse-tax-tips.html">travel nurse tax tips</a> before you file, and <a href="contract-compare.html">compare contracts</a> on after-tax value.</p>
+    </div>
+  </div>
+
+  <div class="disclaimer">Estimates only — consult a tax professional for stipend rules.</div>
+
+  <div class="prose">
+    <h2>Why take-home beats the weekly rate</h2>
+    <p>Two nurses can earn the same $2,600/week gross and take home very different paychecks. The nurse with $1,600 in tax-free stipends keeps far more than the nurse whose package is mostly taxable wages. This calculator shows the gap so you can negotiate the <strong>split</strong>, not just the total.</p>
+    <h2>How the estimate works</h2>
+    <p>We annualize your taxable wages, apply simplified 2026 federal brackets and the standard deduction, add your selected state rate, and include FICA at 7.65%. Tax-free stipends pass through untouched. Real paychecks vary with pre-tax deductions, local taxes and multi-state filing — treat this as a planning estimate.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <nav class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="pay-analyzer.html">Pay Analyzer</a>
+      <a href="contract-compare.html">Contract Compare</a>
+      <a href="../guides/how-to-become-travel-nurse-2026.html">Become a Travel Nurse</a>
+      <a href="../guides/travel-nurse-pay-2026.html">Pay Guide</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+    <p style="font-size:.8rem;color:#8fa9bb">Estimates only — consult a tax professional for stipend rules.</p>
+  </div>
+</footer>
+
+</body>
+</html>

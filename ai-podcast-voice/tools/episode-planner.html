@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Podcast Episode Planner: Outline + Segment Timers | AIPodcastVoice</title>
+<meta name="description" content="Free podcast episode planner: turn any topic into a timed outline with intro, segments, outro, talking points, and live segment countdown timers."/>
+<link rel="canonical" href="https://nan-aipodcastvoice.surge.sh/tools/episode-planner.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">AI<span>Podcast</span>Voice</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Tools</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Podcast Episode Planner: Outline Generator + Segment Timers</h1><p class="lede">Enter your topic and target length. Get a ready-to-record outline with timed segments, talking points, hooks — and a live countdown timer for every segment.</p><div class="tool-grid"><div>
+<form id="epForm" class="tool-form">
+<div class="field"><label for="epTopic">Episode topic</label><input type="text" id="epTopic" maxlength="120" placeholder="e.g. how AI voices are made" required><div class="hint">One clear topic — the more specific, the better the outline.</div></div>
+<div class="field-row">
+<div class="field"><label for="epDuration">Target duration</label><select id="epDuration"><option value="15">15 minutes</option><option value="20">20 minutes</option><option value="30" selected>30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select></div>
+<div class="field"><label for="epSegments">Segments</label><select id="epSegments"><option value="2">2 segments</option><option value="3" selected>3 segments</option><option value="4">4 segments</option><option value="5">5 segments</option></select></div>
+</div>
+<div class="field"><label for="epTone">Show tone</label><select id="epTone"><option value="casual" selected>Casual &amp; friendly</option><option value="professional">Professional</option><option value="humorous">Humorous</option><option value="inspiring">Inspiring</option></select></div>
+<button type="submit" class="btn btn-primary">Generate my outline</button>
+</form></div><div class="tool-results" id="epResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the planner works</h2>
+<p>Your target runtime is split into blocks: roughly <strong>8% intro, 7% outro</strong>, and the rest divided evenly across your segments (leftover minutes go to the earliest segments). Each block gets a built-in countdown timer, so you can rehearse against the clock and learn your real pacing before you record.</p>
+<h2>Why timed outlines work</h2>
+<ul><li><strong>No rambling:</strong> a timer per segment forces one idea per block.</li><li><strong>Consistent length:</strong> listeners subscribe to shows that respect their commute.</li><li><strong>Easier editing:</strong> timed blocks map cleanly to chapters on Spotify and Apple Podcasts.</li></ul>
+<h2>Tips</h2>
+<ul class="tips"><li>Write your hook word-for-word; improvise the rest from the talking points.</li><li>Run the timers while rehearsing once — most hosts discover they talk 20% faster on mic.</li><li>End every segment with a one-line bridge into the next to keep listeners from dropping off.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="podcast-script-writer.html">Script Writer</a></li><li><a href="voice-picker.html">AI Voice Picker</a></li><li><a href="tts-demo.html">TTS Voice Demo</a></li><li><a href="../guides/best-ai-voices-for-podcasts-2026.html">Best AI Voices for Podcasts in 2026</a></li><li><a href="../guides/how-to-start-ai-podcast.html">How to Start an AI Podcast in 2026</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Tools</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All tools are free and run in your browser. Educational content only — not professional advice.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/episode-planner.js"></script></body>
+</html>

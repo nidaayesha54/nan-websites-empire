@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Tool Comparator — Compare Free Video Tools Side by Side</title>
+<meta name="description" content="Side-by-side comparison of free AI video tools: free tier, watermark, max length, ease of use and ratings. Pick 2–3 tools and compare instantly.">
+<link rel="canonical" href="https://nan-freevideotools.surge.sh/tools/tool-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Free<span>Video</span>Tools</a>
+    <nav>
+      <a href="directory.html">Directory</a>
+      <a href="tool-comparator.html">Comparator</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="../guides/best-free-ai-video-tools-2026.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Comparator</div>
+  <section class="block">
+    <h1 style="font-size:2rem;margin:0 0 8px">AI Video Tool Comparator</h1>
+    <p class="sub">Pick 2 or 3 tools to compare free tiers, watermarks, clip length and ratings side by side.</p>
+    <div class="pick">
+      <select id="s1" aria-label="Tool 1"></select>
+      <select id="s2" aria-label="Tool 2"></select>
+      <select id="s3" aria-label="Tool 3 (optional)"><option value="">— optional 3rd —</option></select>
+    </div>
+    <div id="table"></div>
+    <p class="sub">Want a personal pick instead? <a href="quiz.html">Take the quiz →</a></p>
+  </section>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot">
+<script>atOptions={'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+<script src="../js/tools-data.js"></script>
+<script>
+(function(){
+  var tools=window.FVT_TOOLS;
+  var sels=[document.getElementById('s1'),document.getElementById('s2'),document.getElementById('s3')];
+  var opts=tools.map(function(t,i){return '<option value="'+i+'">'+t.name+'</option>';}).join('');
+  sels[0].innerHTML=opts;
+  sels[1].innerHTML=opts;
+  sels[2].innerHTML='<option value="">— optional 3rd —</option>'+opts;
+  sels[0].selectedIndex=0; sels[1].selectedIndex=1;
+  var rows=[["Tool","name"],["Category","category"],["Free tier","freeTier"],["Watermark","watermark"],
+            ["Max clip length","maxLength"],["Ease of use","ease"],["Rating","rating"],["Description","blurb"]];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function render(){
+    var picked=sels.map(function(s){return s.value===""?null:tools[+s.value];}).filter(Boolean);
+    if(picked.length<2){document.getElementById('table').innerHTML='<p class="sub">Pick at least 2 tools.</p>';return;}
+    var html='<table class="cmp"><tr><th>Feature</th>'+picked.map(function(t){return '<th><a href="'+t.site+'" target="_blank" rel="noopener nofollow">'+esc(t.name)+'</a></th>';}).join('')+'</tr>';
+    rows.forEach(function(r){
+      html+='<tr><td><strong>'+r[0]+'</strong></td>';
+      var vals=picked.map(function(t){return t[r[1]];});
+      var allSame=vals.every(function(v){return v===vals[0];});
+      html+=picked.map(function(t){
+        var v=t[r[1]];
+        var cls=(r[1]==="watermark")?(v==="No"?"hl":""):(r[1]==="rating"?"hl":"");
+        if(r[1]==="rating") v='★ '+v;
+        return '<td class="'+cls+'">'+esc(v)+'</td>';
+      }).join('')+'</tr>';
+    });
+    html+='</table>';
+    document.getElementById('table').innerHTML=html;
+  }
+  sels.forEach(function(s){s.addEventListener('change',render);});
+  render();
+})();
+</script>
+</body>
+</html>

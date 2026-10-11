@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Voice Script Generator — Ads, Explainers, IVR | VoiceScriptWriter</title>
+<meta name="description" content="Generate professional voice-over scripts free — 30s ads, explainers, IVR menus & announcements with word count and duration estimates.">
+<link rel="canonical" href="https://nan-voicescripts.surge.sh/tools/script-generator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html"><span class="mark">🎙️</span> VoiceScriptWriter</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="script-generator.html" class="active">Script Generator</a>
+      <a href="tone-analyzer.html">Tone Analyzer</a>
+      <a href="hook-writer.html">Hook Writer</a>
+      <a href="cta-builder.html">CTA Builder</a>
+      <a href="../guides/how-to-write-voice-scripts-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Free AI Voice Script Generator</h1>
+    <p>Pick your purpose, add your details, and get a structured hook–body–CTA script with word count and duration estimate — ready to record.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Script Generator</p>
+
+  <div class="tool-box">
+    <div class="field-row">
+      <div class="field">
+        <label for="purpose">Script purpose</label>
+        <select id="purpose">
+          <option value="ad">Advertisement (30 sec)</option>
+          <option value="explainer">Explainer (60–90 sec)</option>
+          <option value="ivr">IVR / Phone Menu</option>
+          <option value="announcement">Announcement</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="tone">Tone of voice</label>
+        <select id="tone">
+          <option value="friendly">Friendly</option>
+          <option value="professional">Professional</option>
+          <option value="urgent">Urgent / High-energy</option>
+          <option value="playful">Playful</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="topic">Product / topic <span class="hint">— what is this script about?</span></label>
+        <input type="text" id="topic" placeholder="e.g. FreshBrew Coffee, CloudSync app, flu shots">
+      </div>
+      <div class="field">
+        <label for="brand">Brand / company name</label>
+        <input type="text" id="brand" placeholder="e.g. FreshBrew Co.">
+      </div>
+    </div>
+    <div class="field">
+      <label for="audience">Audience <span class="hint">— who is listening? (optional)</span></label>
+      <input type="text" id="audience" placeholder="e.g. busy parents, small business owners">
+    </div>
+    <div class="field">
+      <label for="points">Key points <span class="hint">— one per line (optional). Each becomes a scripted sentence.</span></label>
+      <textarea id="points" placeholder="e.g.&#10;Free delivery on first order&#10;Roasted fresh every morning&#10;30-day money-back guarantee"></textarea>
+    </div>
+    <button class="btn btn-brand" id="genBtn" type="button">✨ Generate Script</button>
+
+    <div class="result hidden" id="result">
+      <h2>Your Voice Script</h2>
+      <div class="stats">
+        <div class="stat"><strong id="statWords">0</strong>words</div>
+        <div class="stat"><strong id="statTime">0:00 min</strong>duration @150 wpm</div>
+        <div class="stat"><strong id="statPurpose">—</strong>purpose</div>
+      </div>
+      <div class="script-block">
+        <h3>Opening Hook</h3>
+        <p id="outHook"></p>
+      </div>
+      <div class="script-block">
+        <h3>Main Message</h3>
+        <p id="outBody"></p>
+      </div>
+      <div class="script-block">
+        <h3>Call to Action</h3>
+        <p id="outCta"></p>
+      </div>
+      <div class="actions">
+        <button class="btn btn-brand" id="copyBtn" type="button">Copy Script</button>
+        <button class="btn btn-outline" id="dlBtn" type="button">Download .txt</button>
+        <a class="btn btn-outline" href="tone-analyzer.html">Analyze this tone →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <section class="section">
+    <h2>How to Use the Script Generator</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Choose a purpose</h3>
+        <p>Ads, explainers, IVR menus and announcements each follow a different structure — the generator adapts automatically.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Add your details</h3>
+        <p>Topic, brand and key points feed the templates. One key point per line keeps the script tight and rhythmic.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Generate &amp; refine</h3>
+        <p>Check the word count and duration, then polish the draft with the <a href="tone-analyzer.html">tone analyzer</a> and a stronger <a href="cta-builder.html">CTA</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Voice Script Timing Cheat Sheet</h2>
+    <p class="sub">At the standard 150 words per minute pace used in US voice-over work:</p>
+    <div class="cards">
+      <div class="card"><h3>30-second ad</h3><p>≈ 75 words. One hook, one benefit, one CTA. Every word must earn its place.</p></div>
+      <div class="card"><h3>60-second explainer</h3><p>≈ 150 words. Problem → solution → proof → CTA.</p></div>
+      <div class="card"><h3>IVR greeting</h3><p>≈ 20–40 words. Short, calm, and always offer a human option.</p></div>
+      <div class="card"><h3>Announcement</h3><p>≈ 50–100 words. Lead with the news, then the details.</p></div>
+    </div>
+    <p style="margin-top:18px">Want the full method? Read <a href="../guides/how-to-write-voice-scripts-2026.html">How to Write Voice Scripts in 2026</a> or browse <a href="../guides/voice-script-examples.html">copy-ready examples</a>.</p>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <h4>🎙️ VoiceScriptWriter</h4>
+        <p>Free AI voice script tools for creators, marketers and businesses across the USA.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="script-generator.html">Script Generator</a></li>
+          <li><a href="tone-analyzer.html">Tone Analyzer</a></li>
+          <li><a href="hook-writer.html">Hook Writer</a></li>
+          <li><a href="cta-builder.html">CTA Builder</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../guides/how-to-write-voice-scripts-2026.html">How to Write Voice Scripts (2026)</a></li>
+          <li><a href="../guides/voice-script-examples.html">Voice Script Examples</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span id="year">2026</span></span>
+      <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+<script src="../js/script-generator.js"></script>
+</body>
+</html>

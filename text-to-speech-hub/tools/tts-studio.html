@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTS Studio — Free Online Text-to-Speech Voice Reader</title>
+<meta name="description" content="Free TTS studio: paste text, choose any installed voice, adjust rate, pitch & volume, and listen instantly. Word count + spoken duration included.">
+<link rel="canonical" href="https://nan-ttshub.surge.sh/tools/tts-studio.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🔊 TextToSpeechHub</a>
+<div class="navlinks">
+<a href="tts-studio.html">TTS Studio</a>
+<a href="voice-style-guide.html">Voice Styles</a>
+<a href="ssml-helper.html">SSML Builder</a>
+<a href="readability-scorer.html">Readability</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<h1 style="margin:24px 0 6px">🎛️ TTS Studio</h1>
+<p style="color:var(--muted);max-width:700px">A free text-to-speech reader that runs entirely in your browser using the Web Speech API. Nothing is uploaded — your text stays on your device. Works best in Chrome or Edge.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="ttsText">Your text</label>
+<textarea id="ttsText" placeholder="Paste your script, article, or story here…"></textarea>
+<p><b>Words:</b> <span id="wordCount">0</span> &nbsp;·&nbsp; <b>Est. spoken duration:</b> <span id="estDur">0m 0s</span></p>
+
+<label for="voiceSel">Voice</label>
+<select id="voiceSel"><option>Loading voices…</option></select>
+
+<label for="rate">Rate (speed): <span id="rateVal">1</span></label>
+<input type="range" id="rate" min="0.5" max="2" step="0.05" value="1">
+
+<label for="pitch">Pitch: <span id="pitchVal">1</span></label>
+<input type="range" id="pitch" min="0.5" max="2" step="0.05" value="1">
+
+<label for="vol">Volume: <span id="volVal">1</span></label>
+<input type="range" id="vol" min="0" max="1" step="0.05" value="1">
+
+<div style="margin-top:16px">
+<button class="btn-sm" id="btnPlay">▶ Play</button>
+<button class="btn-sm" id="btnPause">⏸ Pause</button>
+<button class="btn-sm" id="btnStop">⏹ Stop</button>
+<button class="btn-sm" id="btnSample">✨ Load sample</button>
+</div>
+<p class="status" id="ttsStatus">Ready.</p>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section prose">
+<h2>How to use the TTS studio</h2>
+<ol>
+<li><b>Paste your text</b> — scripts, blog drafts, or e-book chapters. Longer text is fine; the studio speaks it in order.</li>
+<li><b>Pick a voice</b> — your browser lists every voice installed on your device. US English voices are sorted first.</li>
+<li><b>Dial in the delivery</b> — slow the rate for tutorials, raise the pitch for upbeat intros, or lower it for dramatic narration.</li>
+<li><b>Preview before you produce</b> — test pacing here, then paste your script into a premium tool like ElevenLabs for the final render.</li>
+</ol>
+<p>Want a pro-level result? Pair this studio with our <a href="voice-style-guide.html">voice style guide</a> for tone-matched settings and the <a href="ssml-helper.html">SSML helper</a> for precise pauses and emphasis.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script src="../js/tts-studio.js"></script>
+</body>
+</html>

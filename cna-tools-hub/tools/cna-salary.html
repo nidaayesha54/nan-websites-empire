@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNA Salary Calculator by State, Experience & Setting</title>
+<meta name="description" content="Free CNA salary calculator: estimate your hourly, monthly & annual pay by state, experience, work setting and shift differential using 2026 pay data.">
+<link rel="canonical" href="https://nan-cnatools.surge.sh/tools/cna-salary.html">
+<meta property="og:title" content="CNA Salary Calculator by State, Experience & Setting">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🩺</span> CNAToolsHub</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="cna-salary.html">Salary Calculator</a>
+      <a href="cna-quiz.html">Career Quiz</a>
+      <a href="training-cost.html">Training ROI</a>
+      <a href="../guides/how-to-become-cna-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>CNA Salary Calculator</h1>
+      <p>Estimate your real CNA pay — hourly, monthly and annual — based on your state, experience, work setting and shift. Built on 2026 Bureau of Labor Statistics pay data.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+    <div class="tool-wrap">
+      <div class="form-grid">
+        <div class="field">
+          <label for="state">Your state</label>
+          <select id="state"></select>
+        </div>
+        <div class="field">
+          <label for="exp">Experience level</label>
+          <select id="exp">
+            <option value="0">Entry level (0–1 yr)</option>
+            <option value="0.05">1–3 years (+5%)</option>
+            <option value="0.10">3–5 years (+10%)</option>
+            <option value="0.15">5+ years (+15%)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="setting">Work setting</label>
+          <select id="setting">
+            <option value="1.00">Nursing home / long-term care (avg)</option>
+            <option value="1.08">Hospital (+8%)</option>
+            <option value="1.05">Home health (+5%)</option>
+            <option value="0.97">Assisted living (−3%)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="shift">Shift differential</label>
+          <select id="shift">
+            <option value="0">Day shift (no differential)</option>
+            <option value="1.50">Evening (+$1.50/hr)</option>
+            <option value="2.50">Night (+$2.50/hr)</option>
+            <option value="3.00">Weekend (+$3.00/hr)</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="hours">Hours per week: <span id="hoursVal">40</span></label>
+          <input type="range" id="hours" min="16" max="60" value="40" step="2">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="calcBtn">Calculate my salary</button>
+
+      <div class="result" id="result" aria-live="polite">
+        <h2>Your estimated CNA pay</h2>
+        <div class="stat-row">
+          <div class="stat"><b id="rHourly">–</b><span>per hour</span></div>
+          <div class="stat"><b id="rMonthly">–</b><span>per month</span></div>
+          <div class="stat"><b id="rAnnual">–</b><span>per year</span></div>
+        </div>
+        <p id="compareNote"></p>
+        <p class="hint">How your state compares to the highest- and lowest-paying states:</p>
+        <div class="bar-track"><div class="bar-fill" id="stateBar" style="width:0%"></div></div>
+        <p class="hint" id="stateNote"></p>
+      </div>
+    </div>
+
+    <div class="related">
+      <h3>Keep exploring</h3>
+      <p><a href="../guides/cna-salary-by-state.html">CNA Salary by State 2026 — full pay tables →</a><br>
+      <a href="training-cost.html">Training Cost vs Salary ROI calculator →</a><br>
+      <a href="../blog/cna-career-tips.html">10 tips that boost CNA pay →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Mean hourly CNA wage by state (BLS Occupational Employment data, rounded) */
+const STATE_WAGES = {
+  "Alabama":16.19,"Alaska":23.52,"Arizona":21.55,"Arkansas":16.33,"California":24.13,
+  "Colorado":22.79,"Connecticut":21.85,"Delaware":20.33,"District of Columbia":23.04,
+  "Florida":18.83,"Georgia":18.64,"Hawaii":21.98,"Idaho":18.80,"Illinois":21.75,
+  "Indiana":19.33,"Iowa":19.95,"Kansas":19.10,"Kentucky":18.83,"Louisiana":15.51,
+  "Maine":22.84,"Maryland":20.82,"Massachusetts":22.93,"Michigan":19.95,
+  "Minnesota":22.13,"Mississippi":15.81,"Missouri":18.47,"Montana":20.75,
+  "Nebraska":20.38,"Nevada":21.59,"New Hampshire":23.70,"New Jersey":22.50,
+  "New Mexico":19.90,"New York":23.46,"North Carolina":18.89,"North Dakota":20.83,
+  "Ohio":19.48,"Oklahoma":17.27,"Oregon":25.08,"Pennsylvania":21.14,
+  "Rhode Island":22.29,"South Carolina":17.98,"South Dakota":19.00,
+  "Tennessee":18.38,"Texas":18.65,"Utah":19.45,"Vermont":22.52,"Virginia":20.27,
+  "Washington":25.11,"West Virginia":15.95,"Wisconsin":20.70,"Wyoming":21.30
+};
+const NATIONAL_MEDIAN = 19.75;
+
+const stateSel = document.getElementById('state');
+Object.keys(STATE_WAGES).sort().forEach(function(st){
+  const o = document.createElement('option');
+  o.value = st; o.textContent = st;
+  stateSel.appendChild(o);
+});
+stateSel.value = "Texas";
+
+const hoursInput = document.getElementById('hours');
+hoursInput.addEventListener('input', function(){
+  document.getElementById('hoursVal').textContent = hoursInput.value;
+});
+
+function money(n){ return '$' + n.toLocaleString('en-US',{maximumFractionDigits:0}); }
+
+document.getElementById('calcBtn').addEventListener('click', function(){
+  const base = STATE_WAGES[stateSel.value];
+  const exp = parseFloat(document.getElementById('exp').value);
+  const setting = parseFloat(document.getElementById('setting').value);
+  const shift = parseFloat(document.getElementById('shift').value);
+  const hrs = parseFloat(hoursInput.value);
+
+  const hourly = base * (1 + exp) * setting + shift;
+  const annual = hourly * hrs * 52;
+  const monthly = annual / 12;
+
+  document.getElementById('rHourly').textContent = '$' + hourly.toFixed(2);
+  document.getElementById('rMonthly').textContent = money(monthly);
+  document.getElementById('rAnnual').textContent = money(annual);
+
+  const diff = ((hourly - NATIONAL_MEDIAN) / NATIONAL_MEDIAN * 100);
+  const note = diff >= 0
+    ? 'That is ' + diff.toFixed(1) + '% ABOVE the national median CNA wage of $' + NATIONAL_MEDIAN.toFixed(2) + '/hr. 👍'
+    : 'That is ' + Math.abs(diff).toFixed(1) + '% BELOW the national median CNA wage of $' + NATIONAL_MEDIAN.toFixed(2) + '/hr.';
+  document.getElementById('compareNote').innerHTML = '<strong>' + note + '</strong>';
+
+  const wages = Object.values(STATE_WAGES);
+  const minW = Math.min.apply(null, wages), maxW = Math.max.apply(null, wages);
+  const pct = Math.round((base - minW) / (maxW - minW) * 100);
+  document.getElementById('stateBar').style.width = pct + '%';
+  document.getElementById('stateNote').textContent =
+    stateSel.value + ' base avg: $' + base.toFixed(2) + '/hr (range across states: $' +
+    minW.toFixed(2) + '–$' + maxW.toFixed(2) + '/hr)';
+
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</body>
+</html>

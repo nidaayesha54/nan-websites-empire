@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Study Planner for College Exams | Campus Tools USA</title>
+<meta name="description" content="Build a day-by-day college study schedule: enter exam dates, subjects, and daily hours. Free study planner, no signup.">
+<link rel="canonical" href="https://campustoolsusa.github.io/tools/study-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎓 Campus<span>Tools</span> USA</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="gpa-calculator.html">GPA Calc</a><a href="student-loan-calculator.html">Loan Calc</a><a href="citation-generator.html">Citations</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Study Planner</p>
+<div class="tool-shell">
+<h1>College Study Planner</h1>
+<p class="lede">Enter your exams and available hours — get a day-by-day study schedule. Harder subjects automatically get more time.</p>
+
+<div class="form-row">
+<div><label for="hoursPerDay">Study Hours Available Per Day</label><input type="number" id="hoursPerDay" value="3" min="0.5" max="12" step="0.5"></div>
+<div><label for="startDate">Start Date</label><input type="date" id="startDate"></div>
+</div>
+
+<div id="subjects"></div>
+<button class="btn btn-sm" id="addSubject">+ Add Subject</button>
+<button class="btn" id="buildPlan" style="margin-top:18px">Build My Study Plan</button>
+
+<div class="result-box" id="resultBox">
+<h3>Your Study Schedule</h3>
+<p id="planSummary" style="color:#cdd8ec"></p>
+<table class="result-table"><thead><tr><th>Date</th><th>Subject</th><th>Hours</th><th>Focus</th></tr></thead><tbody id="planBody"></tbody></table>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="prose" style="margin-top:32px">
+<h2>How the Planner Works</h2>
+<p>Subjects are weighted by difficulty (1–5) and days remaining until each exam. Harder, sooner exams get priority. The final 2 days before each exam are reserved for review and practice problems — research consistently shows retrieval practice beats re-reading.</p>
+<div class="callout"><strong>Study smarter:</strong> 25-minute focused blocks (Pomodoro) with 5-minute breaks outperform 3-hour marathons. Sleep consolidates memory — never sacrifice it the night before.</div>
+<p style="margin-top:16px">Related: <a href="gpa-calculator.html">GPA Calculator</a> · <a href="../index.html">All Tools</a></p>
+</div>
+</div>
+</div>
+<footer><div class="wrap"><div><strong>🎓 Campus Tools USA</strong></div><div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div><div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div></div></footer>
+<script src="../js/planner.js"></script>
+</body>
+</html>

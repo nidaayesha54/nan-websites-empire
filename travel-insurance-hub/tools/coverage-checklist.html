@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Trip Coverage Checklist Generator 2026 | TravelInsuranceHub</title>
+<meta name="description" content="Free pre-trip travel insurance checklist generator: pick your trip type (cruise, family, adventure…) and get a personalized, printable checklist.">
+<link rel="canonical" href="https://nan-travelins.surge.sh/tools/coverage-checklist.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pre-Trip Coverage Checklist Generator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">✈️ Travel<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="quote-estimator.html">Estimator</a><a href="need-quiz.html">Quiz</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Pre-Trip Coverage Checklist</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Pre-Trip Coverage Checklist Generator</h1>
+<p>Choose your trip type. We generate a personalized checklist of coverage items to verify <strong>before</strong> you buy — check them off as you go.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="field"><label>Your trip type</label><select id="triptype">
+<option value="general">General / Leisure Trip</option>
+<option value="family">Family Trip (with kids)</option>
+<option value="senior">Senior Traveler (65+)</option>
+<option value="adventure">Adventure / Sports Trip</option>
+<option value="cruise">Cruise</option>
+<option value="business">Business Travel</option>
+<option value="backpack">Long-term / Backpacking</option>
+</select></div>
+<button class="btn" id="genBtn">Generate My Checklist</button>
+
+<div class="result" id="result">
+<h3 id="clTitle"></h3>
+<div class="progress"><div id="bar"></div></div>
+<p id="count" style="font-weight:700"></p>
+<div id="list"></div>
+<button class="btn btn-blue" id="printBtn" style="margin-top:12px">🖨️ Print Checklist</button>
+</div>
+
+<div class="disclaimer"><strong>Estimates only, not financial advice.</strong> Coverage needs vary by insurer and policy. Verify every item against your actual policy documents before traveling.</div>
+
+<div class="related"><h2>Keep going</h2><ul>
+<li><a href="quote-estimator.html">Estimate your travel insurance cost</a></li>
+<li><a href="need-quiz.html">Do I need travel insurance? Take the quiz</a></li>
+<li><a href="../guides/what-does-travel-insurance-cover.html">Guide: What does travel insurance actually cover?</a></li>
+<li><a href="../blog/travel-insurance-mistakes.html">Blog: 7 costly travel insurance mistakes</a></li>
+</ul></div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> TravelInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+var BASE=[
+ 'Trip cancellation limit covers your full non-refundable trip cost',
+ 'Trip interruption benefit is at least 100–150% of trip cost',
+ 'Emergency medical coverage is $100,000+ (higher for remote destinations)',
+ 'Medical evacuation coverage is $250,000+ (evacuations can cost $100k+)',
+ 'Baggage loss limit covers your packed valuables',
+ 'Travel delay benefit starts at a reasonable delay (6–12 hrs, not 24)',
+ '24/7 assistance hotline number saved in your phone',
+ 'Pre-existing condition waiver included (bought within 14–21 days of first payment)',
+ 'COVID / illness cancellation is covered (check the exact wording)',
+ 'Policy documents + claim instructions downloaded offline'
+];
+var EXTRA={
+ family:['Kids are covered under the same policy (some plans include them free)','Car seat / stroller rental is covered if luggage is delayed','Family emergency: interruption covers traveling home for any family member'],
+ senior:['No upper age limit on medical coverage (or age limit above your age)','Pre-existing conditions covered with the waiver','Medical limit increased to $250k+ for international trips','Companion / escort-home benefit included if hospitalized'],
+ adventure:['Adventure activities you plan are NOT excluded (skiing, scuba, hiking at altitude)','Sports equipment rental/loss covered','Emergency evacuation includes helicopter / air ambulance from remote areas'],
+ cruise:['Missed connection covers catching up to the ship at the next port','Cabin confinement benefit included (illness onboard)','Cruise interruption covers the unused cruise + flights home'],
+ business:['Trip cancellation covers work-related cancellations (jury duty, work emergency)','Business equipment (laptop) covered under baggage','Rental car collision coverage included if you will drive'],
+ backpack:['Policy covers trips longer than 90 days (or buy long-stay plan)','Multiple destinations in one trip are covered','Gear theft coverage limit is high enough for your equipment']
+};
+var TITLES={general:'General Leisure Trip',family:'Family Trip',senior:'Senior Travel',adventure:'Adventure / Sports Trip',cruise:'Cruise',business:'Business Travel',backpack:'Long-term / Backpacking'};
+document.getElementById('genBtn').addEventListener('click',function(){
+  var t=val('triptype');
+  var items=BASE.slice();
+  if(EXTRA[t]){ items=items.concat(EXTRA[t]); }
+  document.getElementById('clTitle').textContent='Your '+TITLES[t]+' Checklist ('+items.length+' items)';
+  var list=document.getElementById('list'); list.innerHTML='';
+  items.forEach(function(txt,i){
+    var d=document.createElement('div'); d.className='check-item';
+    var cb=document.createElement('input'); cb.type='checkbox'; cb.id='ci'+i;
+    cb.addEventListener('change',function(){
+      d.classList.toggle('done',cb.checked);
+      var boxes=list.querySelectorAll('input[type="checkbox"]');
+      var done=Array.prototype.filter.call(boxes,function(b){return b.checked;}).length;
+      document.getElementById('bar').style.width=(done/boxes.length*100)+'%';
+      document.getElementById('count').textContent=done+' of '+boxes.length+' verified';
+    });
+    var lb=document.createElement('label'); lb.htmlFor='ci'+i; lb.textContent=txt; lb.style.cursor='pointer';
+    d.appendChild(cb); d.appendChild(lb); list.appendChild(d);
+  });
+  document.getElementById('bar').style.width='0%';
+  document.getElementById('count').textContent='0 of '+items.length+' verified';
+  show('result');
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('printBtn').addEventListener('click',function(){ window.print(); });
+</script>
+</body>
+</html>

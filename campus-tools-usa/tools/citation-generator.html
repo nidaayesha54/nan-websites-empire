@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free APA &amp; MLA Citation Generator (No Signup) | Campus Tools USA</title>
+<meta name="description" content="Generate APA 7th and MLA 9th citations for books and websites free. Copy-paste ready, no signup required.">
+<link rel="canonical" href="https://campustoolsusa.github.io/tools/citation-generator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the difference between APA and MLA citation?","acceptedAnswer":{"@type":"Answer","text":"APA (7th ed.) is used in social sciences and emphasizes author-date in-text citations. MLA (9th ed.) is used in humanities and emphasizes author-page in-text citations."}},
+{"@type":"Question","name":"How do you cite a website in APA 7th edition?","acceptedAnswer":{"@type":"Answer","text":"Author, A. (Year, Month Day). Title of page. Site Name. URL"}},
+{"@type":"Question","name":"How do you cite a book in MLA 9th edition?","acceptedAnswer":{"@type":"Answer","text":"Last Name, First Name. Title of Book. Publisher, Year."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎓 Campus<span>Tools</span> USA</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="gpa-calculator.html">GPA Calc</a><a href="student-loan-calculator.html">Loan Calc</a><a href="citation-generator.html">Citations</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Citation Generator</p>
+<div class="tool-shell">
+<h1>APA &amp; MLA Citation Generator</h1>
+<p class="lede">Books and websites, formatted to APA 7th or MLA 9th edition. Free, no signup — copy and paste into your paper.</p>
+
+<div class="form-row">
+<div><label for="style">Citation Style</label><select id="style"><option value="apa">APA (7th edition)</option><option value="mla">MLA (9th edition)</option></select></div>
+<div><label for="srcType">Source Type</label><select id="srcType"><option value="book">Book</option><option value="website">Website</option></select></div>
+</div>
+<div class="form-row">
+<div><label for="author">Author (Last, First)</label><input type="text" id="author" placeholder="e.g. Smith, John"></div>
+<div><label for="year">Year Published</label><input type="number" id="year" placeholder="e.g. 2024" min="1500" max="2030"></div>
+</div>
+<div><label for="title">Title</label><input type="text" id="title" placeholder="Book title or webpage title"></div>
+<div id="bookFields">
+<div class="form-row">
+<div><label for="publisher">Publisher</label><input type="text" id="publisher" placeholder="e.g. Oxford University Press"></div>
+<div><label for="pubPlace">City (MLA only, optional)</label><input type="text" id="pubPlace" placeholder="e.g. New York"></div>
+</div>
+</div>
+<div id="webFields" style="display:none">
+<div class="form-row">
+<div><label for="siteName">Website / Publisher Name</label><input type="text" id="siteName" placeholder="e.g. The New York Times"></div>
+<div><label for="url">URL</label><input type="text" id="url" placeholder="https://..."></div>
+</div>
+<div><label for="accessDate">Date Accessed (Month Day, Year)</label><input type="text" id="accessDate" placeholder="e.g. October 11, 2026"></div>
+</div>
+
+<button class="btn" id="genBtn" style="margin-top:18px">Generate Citation</button>
+
+<div id="citeOut" style="display:none">
+<pre class="citation" id="citeText"></pre>
+<button class="btn btn-sm copy-btn" id="copyBtn">📋 Copy Citation</button>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="prose" style="margin-top:32px">
+<h2>APA vs MLA: Quick Reference</h2>
+<table><thead><tr><th></th><th>APA (7th)</th><th>MLA (9th)</th></tr></thead><tbody>
+<tr><td><strong>Used in</strong></td><td>Psychology, sciences, business</td><td>Literature, humanities, arts</td></tr>
+<tr><td><strong>In-text</strong></td><td>(Smith, 2024)</td><td>(Smith 45)</td></tr>
+<tr><td><strong>Book</strong></td><td>Smith, J. (2024). <em>Title</em>. Publisher.</td><td>Smith, John. <em>Title</em>. Publisher, 2024.</td></tr>
+<tr><td><strong>Website</strong></td><td>Smith, J. (2024, Jan 5). Title. Site. URL</td><td>Smith, John. "Title." <em>Site</em>, 5 Jan. 2024, URL.</td></tr>
+</tbody></table>
+<div class="callout"><strong>Always double-check</strong> against your professor's required edition — some courses still use APA 6th or MLA 8th.</div>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>APA vs MLA — which do I use?</summary><p>APA for social sciences; MLA for humanities. Your syllabus always specifies.</p></details>
+<details><summary>How do I cite a website with no author?</summary><p>Start with the title: APA — <em>Title</em>. (Year). Site. URL · MLA — "Title." <em>Site</em>, Date, URL.</p></details>
+</div>
+</div>
+</div>
+</div>
+<footer><div class="wrap"><div><strong>🎓 Campus Tools USA</strong></div><div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div><div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div></div></footer>
+<script src="../js/cite.js"></script>
+</body>
+</html>

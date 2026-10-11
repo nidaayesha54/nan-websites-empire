@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Storyboard Planner for AI Animation — Scenes, Shots &amp; Timing (2026)</title>
+<meta name="description" content="Free storyboard planner for AI animation: break your video into scenes with shot descriptions, camera angles, dialogue, and timing. Export as text — no sign-up.">
+<meta name="keywords" content="storyboard planner, ai animation storyboard, storyboard template, animation planning tool, free storyboard maker">
+<link rel="canonical" href="https://nan-aianimation.surge.sh/tools/storyboard-planner.html">
+<meta property="og:title" content="Free Storyboard Planner for AI Animation">
+<meta property="og:description" content="Plan scenes, shots, and timing for your AI animated video. Export as text.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🎬</span> AIAnimationMaker</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="storyboard-planner.html">Storyboard Planner</a>
+      <a href="animation-prompt-builder.html">Prompt Builder</a>
+      <a href="style-finder.html">Style Quiz</a>
+      <a href="../guides/best-ai-animation-generators-2026.html">Guides</a>
+      <a href="../blog/ai-animation-trends-2026.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:44px 0 20px">
+    <div class="container">
+      <h1>🧭 <span class="grad-text">Storyboard Planner</span> for AI Animation</h1>
+      <p class="lead">Break your video into scenes — shot descriptions, camera angles, dialogue, timing — then export a clean text storyboard to feed into any AI animation generator. Your work auto-saves in this browser.</p>
+    </div>
+  </section>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="container"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container tool-wrap">
+
+      <div class="tool-box">
+        <h2 style="margin-bottom:18px">➕ Add a Scene</h2>
+        <form id="scene-form">
+          <div class="form-row">
+            <label for="f-title">Scene title</label>
+            <input type="text" id="f-title" placeholder="e.g. The dragon wakes up" maxlength="80">
+          </div>
+          <div class="grid grid-2" style="gap:16px">
+            <div class="form-row">
+              <label for="f-duration">Duration (seconds)</label>
+              <input type="number" id="f-duration" min="0.5" step="0.5" value="5">
+            </div>
+            <div class="form-row">
+              <label for="f-shot">Camera shot</label>
+              <select id="f-shot">
+                <option>Wide shot</option><option>Medium shot</option><option>Close-up</option>
+                <option>Extreme close-up</option><option>Overhead / aerial</option><option>POV</option>
+                <option>Tracking shot</option><option>Establishing shot</option><option>Montage</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="f-desc">Shot description</label>
+            <textarea id="f-desc" placeholder="Describe exactly what happens on screen: who, what, where, movement…" maxlength="1000"></textarea>
+            <p class="hint">This becomes the core of your AI generation prompt — be visual and specific.</p>
+          </div>
+          <div class="form-row">
+            <label for="f-dialogue">Dialogue / voiceover (optional)</label>
+            <input type="text" id="f-dialogue" placeholder="e.g. &quot;Good morning, little one!&quot;" maxlength="300">
+          </div>
+          <div class="form-row">
+            <label for="f-notes">Notes (optional)</label>
+            <input type="text" id="f-notes" placeholder="e.g. warm lighting, slow motion, keep character consistent" maxlength="300">
+          </div>
+          <button type="submit" class="btn btn-primary">➕ Add Scene</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-clear" style="margin-left:10px">🗑 Clear all</button>
+        </form>
+      </div>
+
+      <div class="tool-box">
+        <h2 style="margin-bottom:18px">🎞️ Your Scenes</h2>
+        <div id="total-bar" class="total-bar" style="display:none"></div>
+        <div id="scene-list"></div>
+      </div>
+
+      <div class="tool-box">
+        <h2 style="margin-bottom:18px">📄 Export Storyboard</h2>
+        <button class="btn btn-teal" id="btn-export">📄 Export as Text</button>
+        <div id="export-box" class="output-box"><p class="output-empty">Click "Export as Text" to generate your storyboard document.</p></div>
+        <div class="result-actions" id="export-actions" style="display:none">
+          <button class="btn btn-ghost btn-sm" id="btn-copy">📋 Copy to clipboard</button>
+          <button class="btn btn-ghost btn-sm" id="btn-download">⬇️ Download .txt</button>
+        </div>
+      </div>
+
+      <div class="tool-box" style="margin-top:24px">
+        <h2>💡 How to use this planner</h2>
+        <ol style="padding-left:22px;color:var(--muted)">
+          <li style="margin-bottom:8px"><strong style="color:#fff">Write one scene per shot.</strong> AI generators work best with 3–10 second clips, so keep scenes short.</li>
+          <li style="margin-bottom:8px"><strong style="color:#fff">Describe the visuals.</strong> The "shot description" becomes your generation prompt.</li>
+          <li style="margin-bottom:8px"><strong style="color:#fff">Export and generate.</strong> Feed each scene block to your generator (see our <a href="../guides/best-ai-animation-generators-2026.html">best AI animation generators 2026</a> guide), then stitch clips in CapCut.</li>
+        </ol>
+        <p style="margin-top:12px;color:var(--muted)">Not sure what style to animate in? Take the <a href="style-finder.html">animation style finder quiz</a> first.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="storyboard-planner.html">Storyboard Planner</a>
+      <a href="animation-prompt-builder.html">Prompt Builder</a>
+      <a href="style-finder.html">Style Quiz</a>
+      <a href="../guides/how-to-make-ai-animated-videos.html">Animation Guides</a>
+    </nav>
+    <p class="credit">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/storyboard.js"></script>
+</body>
+</html>

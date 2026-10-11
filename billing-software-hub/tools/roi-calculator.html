@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In-House vs Outsourced Billing ROI Calculator — Free (2026)</title>
+<meta name="description" content="Free ROI calculator: should your practice hire billing staff or outsource? Compare true annual cost of in-house billing vs outsourced billing companies.">
+<link rel="canonical" href="https://nan-billingsoftware.surge.sh/tools/roi-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"In-House vs Outsourced Billing ROI Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+</script>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">💳 Billing<span>SoftwareHub</span></div>
+<nav><a href="../index.html">Home</a><a href="software-finder.html">Software Finder</a><a href="cost-comparator.html">Cost Compare</a><a href="../blog/index.html">Blog</a></nav>
+</div>
+</header>
+
+<section class="section"><div class="container">
+<h1 style="text-align:center;margin-bottom:8px">In-House vs Outsourced Billing ROI</h1>
+<p class="sub">The real question isn't software cost — it's software + staff vs one outsourcing fee.</p>
+
+<div class="tool">
+<h3 style="margin-bottom:16px">Your practice</h3>
+<div class="field"><label>Providers</label><input type="number" id="prov" value="4" min="1" max="200"></div>
+<div class="field"><label>Average monthly collections (total practice)</label><input type="number" id="coll" value="200000" min="10000" step="5000"></div>
+<div class="field"><label>Current denial rate % (typical: 5–15%)</label><input type="number" id="denial" value="9" min="0" max="40"></div>
+
+<h3 style="margin:20px 0 16px">In-house option</h3>
+<div class="field"><label>Billers needed (FTE)</label><input type="number" id="billers" value="2" min="0" max="50"></div>
+<div class="field"><label>Fully-loaded cost per biller / year (salary + benefits)</label><input type="number" id="billerCost" value="62000" min="20000" step="1000"></div>
+<div class="field"><label>Billing software cost / year</label><input type="number" id="softCost" value="18000" min="0" step="500"></div>
+
+<h3 style="margin:20px 0 16px">Outsourced option</h3>
+<div class="field"><label>Outsourcing fee (% of collections)</label><input type="number" id="pct" value="6" min="1" max="12" step="0.5"></div>
+<div class="field"><label>Expected denial rate with outsourced team %</label><input type="number" id="denialOut" value="6" min="0" max="40"></div>
+
+<button class="btn" id="calc">Calculate ROI</button>
+<div class="result" id="result"></div>
+</div>
+
+<div class="ad-wrap"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="disclaimer" style="max-width:760px;margin:24px auto">General information only. Salary and fee figures are typical 2026 US ranges — your market may differ. Outsourcing quality varies widely; always check references.</div>
+</div></section>
+
+<footer>
+<div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p>© <span id="year">2026</span> BillingSoftwareHub. General information only.</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+document.getElementById('calc').addEventListener('click', function(){
+  var coll=num('coll',200000), denial=num('denial',9);
+  var billers=num('billers',2), billerCost=num('billerCost',62000), softCost=num('softCost',18000);
+  var pct=num('pct',6), denialOut=num('denialOut',6);
+  var annualColl=coll*12;
+  var inhouse=billers*billerCost + softCost;
+  var outsourced=annualColl*(pct/100);
+  // Denial improvement value: recovered revenue
+  var recoverIn=(denial/100)*annualColl*0.4; // assume 40% of denied $ recoverable in-house
+  var recoverOut=(denialOut/100)*annualColl*0.55; // outsourced teams recover more
+  var netIn=inhouse + (denial/100)*annualColl*0.6; // lost revenue = unrecovered denials
+  var netOut=outsourced + (denialOut/100)*annualColl*0.45;
+  var winner = netIn<netOut ? 'IN-HOUSE' : 'OUTSOURCED';
+  var save=Math.abs(netIn-netOut);
+  var h='<div class="badge">'+winner+' WINS FOR YOUR PRACTICE</div><h3>True annual cost (fees + lost revenue)</h3>';
+  h+='<table><tr><th>Option</th><th>Fees / year</th><th>Lost to denials / year</th><th>Total</th></tr>';
+  h+='<tr><td><strong>In-house</strong></td><td>'+fmtUSD(inhouse)+'</td><td>'+fmtUSD((denial/100)*annualColl*0.6)+'</td><td><strong>'+fmtUSD(netIn)+'</strong></td></tr>';
+  h+='<tr><td><strong>Outsourced ('+pct+'%)</strong></td><td>'+fmtUSD(outsourced)+'</td><td>'+fmtUSD((denialOut/100)*annualColl*0.45)+'</td><td><strong>'+fmtUSD(netOut)+'</strong></td></tr></table>';
+  h+='<p style="margin-top:16px"><span class="big-num">'+fmtUSD(save)+'</span><br>estimated yearly difference.</p>';
+  h+='<p style="color:var(--muted)">Rule of thumb: under ~3 providers, outsourcing usually wins. Over ~6 providers with steady volume, in-house usually wins. Your inputs point to <strong>'+winner.toLowerCase()+'</strong>.</p>';
+  var r=document.getElementById('result');
+  r.className='result show'; r.innerHTML=h;
+});
+</script>
+</body>
+</html>

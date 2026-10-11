@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Score Simulator — See How Actions Change Your Score | CreditHub</title>
+<meta name="description" content="Free credit score simulator: see how paying down debt, opening a new card, a late payment, or closing an old card could affect your 300–850 score.">
+<link rel="canonical" href="https://nan-credithub.surge.sh/tools/credit-score-simulator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Credit Score Simulator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}</script>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="logo" href="../index.html">Credit<span>Hub</span></a>
+<div class="nav-links"><a href="../index.html">Home</a><a href="credit-score-simulator.html">Simulator</a><a href="debt-payoff.html">Debt Payoff</a><a href="credit-utilization.html">Utilization</a><a href="../guides/improve-credit-score-fast-2026.html">Guides</a></div>
+</div></nav>
+
+<header class="tool-head"><div class="wrap">
+<h1>Credit Score Simulator</h1>
+<p>Pick a scenario and see an educational estimate of how it could move your 300–850 score — based on published FICO factor weights.</p>
+</div></header>
+
+<div class="wrap">
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="tool-body">
+<form id="sim-form">
+<h2 style="margin-bottom:16px">1. Your current picture</h2>
+<div class="grid2">
+<div class="field"><label>Current score: <strong id="score-out">700</strong></label><input type="range" id="in-score" min="300" max="850" value="700" step="5"></div>
+<div class="field"><label>Total revolving debt ($)</label><input type="number" id="in-debt" min="0" step="50" value="6000"></div>
+<div class="field"><label>Total credit limit ($)</label><input type="number" id="in-limit" min="0" step="100" value="15000"></div>
+<div class="field"><label>Oldest account age (years)</label><input type="number" id="in-age" min="0" step="1" value="7"></div>
+<div class="field"><label>Hard inquiries (last 12 mo)</label><input type="number" id="in-inq" min="0" step="1" value="1"></div>
+</div>
+
+<h2 style="margin:24px 0 12px">2. Choose a scenario</h2>
+<div class="field"><label><input type="radio" name="scenario" value="paydown" checked> 💰 Pay down revolving debt</label>
+<div class="hint">Amount to pay ($): <input type="number" id="ex-pay" min="0" step="50" value="2000" style="width:140px;padding:6px"></div></div>
+<div class="field"><label><input type="radio" name="scenario" value="newcard"> 💳 Open a new credit card</label>
+<div class="hint">New card limit ($): <input type="number" id="ex-newlimit" min="0" step="100" value="5000" style="width:140px;padding:6px"></div></div>
+<div class="field"><label><input type="radio" name="scenario" value="late30"> ⏰ Miss a payment (30 days late)</label></div>
+<div class="field"><label><input type="radio" name="scenario" value="late60"> ⏰⏰ Miss a payment (60 days late)</label></div>
+<div class="field"><label><input type="radio" name="scenario" value="late90"> 🚨 Miss a payment (90 days late)</label></div>
+<div class="field"><label><input type="radio" name="scenario" value="closeoldest"> ✂️ Close my oldest credit card</label></div>
+<div class="field"><label><input type="radio" name="scenario" value="ontime"> ✅ Pay everything on time for 6 months</label></div>
+
+<button type="submit" class="btn btn-gold" style="margin-top:14px">Run Simulation</button>
+</form>
+<div id="sim-result"></div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="article">
+<h2>How the simulation works</h2>
+<p>FICO scores weigh five factors: payment history (~35%), amounts owed (~30%), length of credit history (~15%), new credit (~10%), and credit mix (~10%). This simulator applies published, widely-cited impact ranges to your inputs:</p>
+<ul>
+<li><strong>Utilization brackets:</strong> under 10% / 10–29% / 30–49% / 50%+. Dropping a bracket typically adds 10–25 points, with diminishing returns above 760.</li>
+<li><strong>Late payments:</strong> a single 30-day late mark can cost 60–110 points (higher starting scores fall further) and stays on reports up to 7 years.</li>
+<li><strong>Hard inquiries:</strong> usually −3 to −5 points each and fade within months.</li>
+<li><strong>Closing old cards:</strong> shortens average account age and cuts total available credit — a double hit to utilization and history length.</li>
+</ul>
+<div class="disclaimer"><strong>Educational estimate only.</strong> Real scoring models use far more signals. This is not a prediction and not financial advice.</div>
+<p>Want the full playbook? Read <a href="../guides/improve-credit-score-fast-2026.html">how to improve your credit score fast</a> or check your <a href="credit-utilization.html">utilization ratio</a>.</p>
+</div>
+</div>
+
+<footer><div class="wrap">
+<div class="foot-grid">
+<div><strong style="color:#fff">CreditHub</strong><br>Free credit score tools & education.</div>
+<div><strong style="color:#fff">Tools</strong><br><a href="credit-score-simulator.html">Score Simulator</a><br><a href="debt-payoff.html">Debt Payoff</a><br><a href="credit-utilization.html">Utilization</a></div>
+<div><strong style="color:#fff">Guides</strong><br><a href="../guides/improve-credit-score-fast-2026.html">Improve Score Fast</a><br><a href="../guides/what-is-good-credit-score.html">Good Score Ranges</a></div>
+</div>
+<div class="copy">© <span class="yr">2026</span> CreditHub · Educational content only, not financial advice. · Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/simulator.js"></script>
+</body>
+</html>

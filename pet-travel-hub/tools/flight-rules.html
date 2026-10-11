@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline Pet Policy Finder 2026 — Fees &amp; Carrier Rules</title>
+<meta name="description" content="Compare 2026 pet fees, in-cabin carrier sizes & restrictions for 12 major US airlines. Find the cheapest, most pet-friendly airline in seconds. Free tool.">
+<link rel="canonical" href="https://nan-pettravel.surge.sh/tools/flight-rules.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🐾 PetTravelHub</a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="travel-checklist.html">Checklist</a>
+      <a href="flight-rules.html" class="active">Flight Rules</a>
+      <a href="road-trip-planner.html">Road Trip</a>
+      <a href="../guides/flying-with-dog-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Airline Pet Policy Finder</p>
+
+  <div class="tool-box section">
+    <h1>Airline Pet Policy Finder</h1>
+    <p class="intro">Select an airline to see its 2026 in-cabin pet fee, carrier size limits, weight rules, and key restrictions — or compare all 12 at a glance.</p>
+
+    <form id="airline-form">
+      <div class="field">
+        <label for="airline">Choose an airline</label>
+        <select id="airline"></select>
+      </div>
+      <button type="submit" class="btn btn-primary">Show Pet Policy</button>
+      <button type="button" class="btn btn-ghost" id="compare-btn" style="color:var(--teal-dark);border-color:var(--teal-dark);margin-left:8px;">Compare All 12</button>
+    </form>
+
+    <div class="result" id="result">
+      <div class="result-card" id="policy-card"></div>
+    </div>
+
+    <div class="result" id="compare-result">
+      <div class="result-card">
+        <h2>All Airlines Compared (2026)</h2>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:10px;">Fees are per pet, each way, for in-cabin travel on US domestic flights.</p>
+        <div style="overflow-x:auto;">
+          <table class="policy-table" id="compare-table">
+            <thead><tr><th>Airline</th><th>In-cabin fee</th><th>Max carrier size (in)</th><th>Notes</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+    <div class="warn">⚠️ Policies change often and vary by route and aircraft. Always confirm directly with the airline before booking. Figures below reflect typical 2026 US domestic policies.</div>
+
+    <p style="margin-top:20px;">Flying soon? Build your <a href="travel-checklist.html">flight packing checklist</a> or read the full <a href="../guides/flying-with-dog-2026.html">flying with a dog guide</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="travel-checklist.html">Checklist</a>
+      <a href="road-trip-planner.html">Road Trip</a>
+      <a href="../guides/flying-with-dog-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Typical 2026 US domestic in-cabin pet policies. Confirm with the airline before booking. */
+  var AIRLINES = [
+    { name: "Alaska Airlines", fee: "$100", carrier: "17 × 11 × 9.5", pets: "Dogs & cats", notes: "Pet + carrier max 25 lbs. Furry Friends discount program available." },
+    { name: "Allegiant Air", fee: "$50", carrier: "18 × 14 × 8", pets: "Dogs & cats", notes: "One of the lowest fees. Carrier must fit fully under seat." },
+    { name: "American Airlines", fee: "$150", carrier: "19 × 13 × 9", pets: "Dogs & cats", notes: "Size varies by aircraft. Carry-on pet counts as your carry-on bag." },
+    { name: "Delta Air Lines", fee: "$95", carrier: "18 × 11 × 11", pets: "Dogs, cats & household birds", notes: "Soft-sided carrier recommended. Max 4 pets per flight." },
+    { name: "Frontier Airlines", fee: "$99", carrier: "18 × 14 × 8", pets: "Dogs & cats", notes: "Carrier counts as personal item. No cargo pet service." },
+    { name: "Hawaiian Airlines", fee: "$35–$125", carrier: "16 × 10 × 9.5", pets: "Dogs & cats", notes: "Fee varies by route; inter-island lowest. Hawaii has quarantine rules." },
+    { name: "JetBlue", fee: "$125", carrier: "17 × 12.5 × 8.5", pets: "Dogs & cats", notes: "JetPaws program: free pet travel on your pet's birthday." },
+    { name: "Southwest Airlines", fee: "$95", carrier: "18.5 × 13.5 × 8.5", pets: "Dogs & cats", notes: "No cargo service — in-cabin only. Max 6 carriers per flight." },
+    { name: "Spirit Airlines", fee: "$125", carrier: "18 × 14 × 9", pets: "Dogs & cats", notes: "Carrier must be soft-sided and leak-proof." },
+    { name: "Sun Country", fee: "$100", carrier: "16 × 11 × 8", pets: "Dogs & cats", notes: "Book pet spot by phone after ticketing." },
+    { name: "United Airlines", fee: "$125", carrier: "18 × 11 × 11", pets: "Dogs & cats", notes: "PetSafe cargo program suspended for many breeds — check current status." },
+    { name: "Virgin America (merged w/ Alaska)", fee: "$100", carrier: "17 × 11 × 9.5", pets: "Dogs & cats", notes: "Now operates under Alaska Airlines pet policy." }
+  ];
+
+  var select = document.getElementById("airline");
+  AIRLINES.forEach(function (a, i) {
+    var opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = a.name;
+    select.appendChild(opt);
+  });
+
+  var form = document.getElementById("airline-form");
+  var result = document.getElementById("result");
+  var card = document.getElementById("policy-card");
+  var compareResult = document.getElementById("compare-result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    compareResult.classList.remove("show");
+    var a = AIRLINES[parseInt(select.value, 10)];
+    card.innerHTML =
+      "<h2>✈️ " + a.name + "</h2>" +
+      '<table class="policy-table"><tbody>' +
+      "<tr><th>In-cabin fee (each way)</th><td><strong>" + a.fee + "</strong></td></tr>" +
+      "<tr><th>Max carrier size</th><td>" + a.carrier + " inches (L × W × H)</td></tr>" +
+      "<tr><th>Allowed pets</th><td>" + a.pets + "</td></tr>" +
+      "<tr><th>Key restrictions</th><td>" + a.notes + "</td></tr>" +
+      "</tbody></table>" +
+      '<div class="tip">💡 <strong>Booking tip:</strong> Call the airline right after booking your ticket to reserve your pet\'s spot — in-cabin pet spaces are limited per flight and sell out on busy routes.</div>';
+    result.classList.add("show");
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  document.getElementById("compare-btn").addEventListener("click", function () {
+    result.classList.remove("show");
+    var tbody = document.querySelector("#compare-table tbody");
+    tbody.innerHTML = "";
+    AIRLINES.forEach(function (a) {
+      var tr = document.createElement("tr");
+      [a.name, a.fee, a.carrier + " in", a.notes].forEach(function (val, idx) {
+        var td = document.createElement(idx === 0 ? "th" : "td");
+        td.textContent = val;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    compareResult.classList.add("show");
+    compareResult.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+})();
+</script>
+
+</body>
+</html>

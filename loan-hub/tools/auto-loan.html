@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Loan Calculator — Car Payment With Trade-In & Tax (2026)</title>
+<meta name="description" content="Free auto loan calculator with down payment, trade-in value, and sales tax. Find your true monthly car payment before visiting the dealer.">
+<link rel="canonical" href="https://nan-loanhub.surge.sh/tools/auto-loan.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="logo" href="../index.html">Loan<span>Hub</span></a>
+<nav><ul class="nav-links">
+<li><a href="personal-loan.html">Personal Loan</a></li>
+<li><a href="auto-loan.html">Auto Loan</a></li>
+<li><a href="student-loan.html">Student Loan</a></li>
+<li><a href="../blog/index.html">Blog</a></li>
+</ul></nav>
+</div></header>
+
+<main class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Auto Loan Calculator</div>
+<h1>Auto Loan Calculator</h1>
+<p>Vehicle price, down payment, trade-in, and sales tax — get the real monthly payment dealers don't show you upfront.</p>
+
+<div class="calc-wrap">
+<div class="form-row">
+<div class="form-group"><label for="price">Vehicle Price ($)</label><input type="number" id="price" value="28000" min="1"></div>
+<div class="form-group"><label for="down">Down Payment ($)</label><input type="number" id="down" value="4000" min="0"></div>
+<div class="form-group"><label for="trade">Trade-In Value ($)</label><input type="number" id="trade" value="5000" min="0"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="rate">APR (%)</label><input type="number" id="rate" value="7.5" min="0" step="0.1"></div>
+<div class="form-group"><label for="years">Term (years)</label><input type="number" id="years" value="5" min="1" step="1"></div>
+<div class="form-group"><label for="tax">Sales Tax (%)</label><input type="number" id="tax" value="7" min="0" step="0.1"></div>
+</div>
+<button class="btn-primary" onclick="calcAutoLoan()">Calculate Car Payment</button>
+<div class="result" id="result">
+<h3>Your Auto Loan Summary</h3>
+<div class="big" id="r-monthly">$0</div><p style="color:var(--muted)">per month</p>
+<div class="stat-row"><span>Price + tax</span><span class="val" id="r-taxed">$0</span></div>
+<div class="stat-row"><span>Amount financed</span><span class="val" id="r-financed">$0</span></div>
+<div class="stat-row"><span>Total paid</span><span class="val" id="r-total">$0</span></div>
+<div class="stat-row"><span>Total interest</span><span class="val" id="r-interest">$0</span></div>
+</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="article">
+<h2>How to Avoid Overpaying on a Car Loan</h2>
+<ul>
+<li><strong>Get pre-approved</strong> at a bank or credit union before visiting the dealer — it beats dealer financing most of the time.</li>
+<li><strong>Shorter terms save interest:</strong> a 48-month loan vs 72-month can save thousands.</li>
+<li><strong>Trade-in leverage:</strong> get an online quote (Carvana, CarMax) and make the dealer match it.</li>
+<li><strong>Watch add-ons:</strong> extended warranties and paint protection are high-margin dealer profit.</li>
+<li>Compare with a <a href="personal-loan.html">personal loan</a> if you're buying from a private seller.</li>
+</ul>
+</section>
+
+<div class="disclaimer"><strong>Disclaimer:</strong> Estimates only, not financial advice. Dealer fees, registration, and incentives vary by state.</div>
+</main>
+
+<footer class="site"><div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></p>
+<p class="network">Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></p>
+<p>© <span id="year">2026</span> LoanHub.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/auto-loan.js"></script>
+</body>
+</html>

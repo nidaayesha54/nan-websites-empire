@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is CNA Right for Me? Free CNA Career Fit Quiz</title>
+<meta name="description" content="Free 3-minute quiz: is a CNA career right for you? Answer 8 questions about the work, shifts & goals to get an honest career-fit score.">
+<link rel="canonical" href="https://nan-cnatools.surge.sh/tools/cna-quiz.html">
+<meta property="og:title" content="Is CNA Right for Me? Free CNA Career Fit Quiz">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">🩺</span> CNAToolsHub</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="cna-salary.html">Salary Calculator</a>
+      <a href="cna-quiz.html">Career Quiz</a>
+      <a href="training-cost.html">Training ROI</a>
+      <a href="../guides/how-to-become-cna-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Is CNA Right for Me?</h1>
+      <p>Answer 8 honest questions about the physical work, the shifts, the people and your goals. Get an instant career-fit score — and straight-talking next steps.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+    <div class="tool-wrap">
+      <div id="quiz"></div>
+      <button class="btn btn-primary" id="scoreBtn">Get my result</button>
+
+      <div class="result" id="result" aria-live="polite">
+        <h2>Your career-fit result</h2>
+        <p style="font-size:2.6rem"> <span id="emoji"></span></p>
+        <p><strong id="verdict"></strong></p>
+        <p id="detail"></p>
+        <p class="hint">Your score: <b id="scoreOut"></b> out of 24</p>
+        <div id="nextSteps"></div>
+      </div>
+    </div>
+
+    <div class="related">
+      <h3>Keep exploring</h3>
+      <p><a href="../guides/how-to-become-cna-2026.html">How to Become a CNA in 2026 →</a><br>
+      <a href="../guides/cna-vs-lpn.html">CNA vs LPN: which should you choose? →</a><br>
+      <a href="cna-salary.html">CNA Salary Calculator →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const QUESTIONS = [
+  {q:"How do you feel about physically demanding work — lifting, standing, and walking for 8–12 hour shifts?",
+   opts:["I thrive on active, on-my-feet work",3,"I can handle it most days",2,"I'd struggle with it regularly",1,"I need a desk-based or low-physical job",0]},
+  {q:"Are you comfortable helping patients with very personal tasks — bathing, toileting, dressing?",
+   opts:["Completely — dignity in care matters to me",3,"A bit nervous but I could learn",2,"Only if I really had to",1,"No, that's not for me",0]},
+  {q:"Can you work evenings, nights, weekends or holidays (common CNA schedules)?",
+   opts:["Yes — flexible, and shift differentials pay extra",3,"Yes, with some limits",2,"Days only, if possible",1,"No — I need a fixed 9-to-5",0]},
+  {q:"How do you handle emotionally tough days — illness, aging, loss?",
+   opts:["I'm steady and find meaning in helping",3,"It's hard, but I cope and recover",2,"It would weigh on me heavily",1,"I avoid emotionally heavy work",0]},
+  {q:"Do you enjoy working closely with people all day — patients, families, nurses?",
+   opts:["Yes — people energize me",3,"Mostly yes",2,"I prefer working solo",1,"I'd rather avoid constant interaction",0]},
+  {q:"What attracts you most about the CNA path?",
+   opts:["Fast entry into healthcare + a career ladder (LPN/RN)",3,"Stable, meaningful work with quick training",2,"Just need a paycheck soon",1,"Not sure — exploring options",0]},
+  {q:"How do you feel about starting pay around $15–$20/hour while you gain experience?",
+   opts:["Fine — it's a stepping stone and grows with experience",3,"Acceptable for now",2,"A bit low — I'd want more, fast",1,"Too low for me",0]},
+  {q:"Could you see yourself doing this work for at least 1–2 years (or using it as a bridge to nursing)?",
+   opts:["Absolutely — or as my bridge to LPN/RN",3,"Probably, yes",2,"Maybe short-term only",1,"No — I'd quit quickly",0]}
+];
+
+const quizDiv = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  const box = document.createElement('div');
+  box.className = 'quiz-q';
+  let html = '<h3>' + (qi+1) + '. ' + item.q + '</h3><div class="quiz-opts">';
+  for (let i = 0; i < item.opts.length; i += 2){
+    html += '<label><input type="radio" name="q' + qi + '" value="' + item.opts[i+1] + '">' +
+            '<span>' + item.opts[i] + '</span></label>';
+  }
+  box.innerHTML = html + '</div>';
+  quizDiv.appendChild(box);
+});
+
+quizDiv.addEventListener('change', function(e){
+  if (e.target.type === 'radio'){
+    const labels = e.target.closest('.quiz-opts').querySelectorAll('label');
+    labels.forEach(l => l.classList.remove('sel'));
+    e.target.closest('label').classList.add('sel');
+  }
+});
+
+document.getElementById('scoreBtn').addEventListener('click', function(){
+  let total = 0, answered = 0;
+  QUESTIONS.forEach(function(_, qi){
+    const sel = document.querySelector('input[name="q' + qi + '"]:checked');
+    if (sel){ total += parseInt(sel.value, 10); answered++; }
+  });
+  if (answered < QUESTIONS.length){
+    alert('Please answer all ' + QUESTIONS.length + ' questions to get your result.');
+    return;
+  }
+  let emoji, verdict, detail, steps;
+  if (total >= 19){
+    emoji = '🌟';
+    verdict = 'Excellent fit — CNA looks like a strong match for you.';
+    detail = 'You are comfortable with the physical and emotional realities of the job, flexible on shifts, and motivated by the career ladder. Most successful CNAs share exactly this profile.';
+    steps = '<p><strong>Next steps:</strong> 1) <a href="../guides/how-to-become-cna-2026.html">Read the step-by-step guide to becoming a CNA</a>, 2) <a href="training-cost.html">check your training ROI</a>, 3) look for employer-paid training at local nursing homes — it is often free.</p>';
+  } else if (total >= 12){
+    emoji = '💡';
+    verdict = 'Promising fit — with eyes open.';
+    detail = 'You have the core motivation, but one or two areas (shifts, physical demands, or pay expectations) gave you pause. That is normal — talk to working CNAs, try a job shadow day, and consider starting part-time or in a lower-acuity setting like assisted living.';
+    steps = '<p><strong>Next steps:</strong> 1) <a href="../guides/cna-vs-lpn.html">Compare CNA vs LPN</a> in case a different role fits better, 2) <a href="cna-salary.html">calculate realistic pay in your state</a>, 3) shadow a CNA for a day before enrolling.</p>';
+  } else {
+    emoji = '🧭';
+    verdict = 'CNA may not be your best path — and that is useful to know.';
+    detail = 'The day-to-day realities of CNA work (physical strain, personal care, shift work) clash with what you want. Forcing it usually leads to fast burnout. Consider adjacent healthcare roles: medical assistant, phlebotomist, pharmacy tech, or health-unit coordinator.';
+    steps = '<p><strong>Next steps:</strong> explore our <a href="../guides/cna-vs-lpn.html">CNA vs LPN guide</a> to see if a different rung of the ladder fits, or research medical-assistant programs (similar training length, more clinical variety).</p>';
+  }
+  document.getElementById('emoji').textContent = emoji;
+  document.getElementById('verdict').textContent = verdict;
+  document.getElementById('detail').textContent = detail;
+  document.getElementById('scoreOut').textContent = total;
+  document.getElementById('nextSteps').innerHTML = steps;
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</body>
+</html>

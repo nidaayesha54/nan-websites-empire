@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSA vs PPO Calculator 2026 — HDHP Break-Even Analyzer</title>
+<meta name="description" content="HSA high-deductible plan vs PPO: enter both plans and your expected medical spending to see which wins — including HSA tax savings. Free 2026.">
+<link rel="canonical" href="https://nan-healthinsurance.surge.sh/tools/hsa-vs-ppo.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"HSA vs PPO Analyzer","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🏥 Health<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="plan-comparator.html">Plan Comparator</a><a href="subsidy-estimator.html">Subsidy Estimator</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › HSA vs PPO Analyzer</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>HSA vs PPO Break-Even Analyzer</h1>
+<p>An HDHP with an HSA gives you a <strong>triple tax advantage</strong> — but a bigger deductible. Enter both options plus your expected medical spending to see which truly costs less.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<h3>HDHP + HSA</h3>
+<div class="field-row">
+<div class="field"><label>Monthly premium ($)</label><input type="number" id="hp" value="220" min="0"></div>
+<div class="field"><label>Deductible ($)</label><input type="number" id="hd" value="3500" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Out-of-pocket max ($)</label><input type="number" id="ho" value="7000" min="0"></div>
+<div class="field"><label>Coinsurance after deductible (%)</label><input type="number" id="hc" value="20" min="0" max="100"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Your yearly HSA contribution ($)</label><input type="number" id="hsa" value="4300" min="0"></div>
+<div class="field"><label>Employer HSA seed money ($)</label><input type="number" id="emp" value="1000" min="0"></div>
+</div>
+<h3>PPO</h3>
+<div class="field-row">
+<div class="field"><label>Monthly premium ($)</label><input type="number" id="pp" value="520" min="0"></div>
+<div class="field"><label>Deductible ($)</label><input type="number" id="pd" value="1000" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Out-of-pocket max ($)</label><input type="number" id="po" value="5000" min="0"></div>
+<div class="field"><label>Coinsurance after deductible (%)</label><input type="number" id="pc" value="20" min="0" max="100"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Your expected medical bills this year ($)</label><input type="number" id="sp" value="3000" min="0"></div>
+<div class="field"><label>Your marginal tax rate (%)</label><input type="number" id="tx" value="22" min="0" max="50"></div>
+</div>
+<button class="btn" onclick="calc()">Which Wins?</button>
+<div class="result" id="res"><h3>Result</h3><div id="out"></div></div>
+<div class="disclaimer">⚠️ <strong>Estimate only — not financial, tax, or medical advice.</strong> Simplified model (no copays, assumes HSA contributions are fully deductible at your marginal rate, HSA funds used for medical costs). 2026 HSA limits: $4,400 individual / $8,750 family (+$1,000 catch-up at 55+). Verify plan details before enrolling.</div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> HealthInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function oopCost(ded, oop, coin, spend){
+  if(spend<=ded) return spend;
+  return Math.min(ded + (spend-ded)*(coin/100), oop);
+}
+function totalHDHP(spend){
+  var prem = num('hp')*12;
+  var oop = oopCost(num('hd'), num('ho'), num('hc'), spend);
+  var hsa = num('hsa'), emp = num('emp'), tax = num('tx')/100;
+  // You pay OOP from HSA dollars: employer seed is free money, your contributions save taxes
+  var taxSaving = hsa*tax;
+  return prem + oop - taxSaving - emp;
+}
+function totalPPO(spend){
+  return num('pp')*12 + oopCost(num('pd'), num('po'), num('pc'), spend);
+}
+function calc(){
+  var spend = num('sp');
+  var h = totalHDHP(spend), p = totalPPO(spend);
+  // find break-even: scan spending 0..60000
+  var be = null, prev = totalHDHP(0)-totalPPO(0);
+  for(var s=500; s<=60000; s+=500){
+    var d = totalHDHP(s)-totalPPO(s);
+    if((prev<=0 && d>0)||(prev>=0 && d<0)){ be = s; break; }
+    prev = d;
+  }
+  var winner = h<p ? 'HDHP + HSA' : (p<h ? 'PPO' : 'Tie');
+  var out = '<p>At <strong>'+money(spend)+'</strong> in medical bills:</p>'
+    + '<table class="cmp"><tr><th>Plan</th><th>True yearly cost</th></tr>'
+    + '<tr><td>HDHP + HSA</td><td class="'+(h<=p?'winner':'')+'">'+money(h)+'</td></tr>'
+    + '<tr><td>PPO</td><td class="'+(p<=h?'winner':'')+'">'+money(p)+'</td></tr></table>'
+    + '<p><strong>Winner: '+winner+'</strong> (saves '+money(Math.abs(h-p))+' vs the other).</p>';
+  if(be!==null){
+    out += '<p style="color:var(--muted);font-size:.9rem">Break-even point: around <strong>'+money(be)+'</strong> in yearly medical bills — below that the HDHP+HSA wins, above it the PPO wins.</p>';
+  } else {
+    out += '<p style="color:var(--muted);font-size:.9rem">One plan wins at every spending level in the scanned range (up to $60K).</p>';
+  }
+  document.getElementById('out').innerHTML = out;
+  show('res');
+}
+</script>
+</body>
+</html>

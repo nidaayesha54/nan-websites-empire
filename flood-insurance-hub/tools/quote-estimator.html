@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flood Insurance Cost Estimator 2026 — NFIP vs Private Quotes</title>
+<meta name="description" content="Estimate flood insurance costs in 2026. Compare NFIP vs private flood insurance premiums by flood zone, home value, and coverage level — free, no signup.">
+<link rel="canonical" href="https://nan-floodins.surge.sh/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Flood Insurance Cost Estimator 2026 — NFIP vs Private Quotes",
+  "description": "Free flood insurance cost estimator comparing NFIP vs private premiums by zone, home value, and coverage.",
+  "url": "https://nan-floodins.surge.sh/"
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../index.html"><span class="wave">🌊</span> FloodInsuranceHub</a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰ Menu</button>
+    <div class="nav-links" id="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="quote-estimator.html">Quote Estimator</a>
+      <a href="risk-checker.html">Risk Checker</a>
+      <a href="coverage-calculator.html">Coverage Calculator</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html" style="color:#bae6fd">Home</a> › Quote Estimator</p>
+    <h1>Flood Insurance Cost Estimator</h1>
+    <p>Compare estimated NFIP vs private flood insurance premiums for your home. Free, instant, no signup.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container tool-wrap">
+    <div class="tool-card">
+      <form id="quoteForm" onsubmit="return false;">
+        <div class="field">
+          <label for="zone">Flood zone</label>
+          <select id="zone">
+            <option value="low">Zone X (unshaded) / C — Low risk</option>
+            <option value="moderate">Zone B / X (shaded) — Moderate risk</option>
+            <option value="high">Zone A / AE — High risk</option>
+            <option value="coastal">Zone V / VE — Coastal high risk</option>
+          </select>
+          <small>Not sure? Use our <a href="risk-checker.html">flood zone risk checker</a>.</small>
+        </div>
+        <div class="field">
+          <label for="homeValue">Home rebuilding cost ($)</label>
+          <input type="number" id="homeValue" min="50000" max="2000000" value="300000" step="5000">
+          <small>Rebuilding cost, not market price. Typical: $150k–$500k.</small>
+        </div>
+        <div class="field">
+          <label for="buildingCov">Building coverage needed ($)</label>
+          <input type="number" id="buildingCov" min="0" max="1000000" value="250000" step="10000">
+          <small>NFIP caps building coverage at $250,000.</small>
+        </div>
+        <div class="field">
+          <label for="contentsCov">Contents coverage needed ($)</label>
+          <input type="number" id="contentsCov" min="0" max="500000" value="50000" step="5000">
+          <small>NFIP caps contents coverage at $100,000.</small>
+        </div>
+        <div class="field">
+          <label for="deductible">Deductible</label>
+          <select id="deductible">
+            <option value="1000">$1,000 (higher premium)</option>
+            <option value="2000" selected>$2,000 (standard)</option>
+            <option value="5000">$5,000 (lower premium)</option>
+            <option value="10000">$10,000 (lowest premium)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="basement">Basement or below-grade enclosure?</label>
+          <select id="basement">
+            <option value="no" selected>No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <button class="btn" type="submit" onclick="estimateQuote()">Estimate My Premium</button>
+      </form>
+    </div>
+
+    <div class="result" id="result" role="status" aria-live="polite"></div>
+
+    <div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> Actual premiums depend on your insurer, elevation certificate, claims history, and local rates. Get a licensed agent's quote before buying.</div>
+
+    <p style="color:var(--muted)">Want to understand the numbers? Read <a href="../guides/flood-insurance-cost-2026.html">how much flood insurance costs in 2026</a> and <a href="../guides/nfip-vs-private-flood.html">NFIP vs private flood insurance</a>.</p>
+  </div>
+</section>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>🌊 FloodInsuranceHub</h4>
+        <p>Free flood insurance tools and guides for US homeowners.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="quote-estimator.html">Quote Estimator</a></li>
+          <li><a href="risk-checker.html">Risk Checker</a></li>
+          <li><a href="coverage-calculator.html">Coverage Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides &amp; Blog</h4>
+        <ul>
+          <li><a href="../guides/flood-insurance-cost-2026.html">Flood Insurance Cost 2026</a></li>
+          <li><a href="../guides/nfip-vs-private-flood.html">NFIP vs Private</a></li>
+          <li><a href="../guides/do-i-need-flood-insurance.html">Do I Need It?</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+      <br>Estimates only, not financial advice.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Quote estimator: simplified actuarial model for illustration.
+   Base rates approximate 2026 NFIP averages by zone; NOT insurer quotes. */
+function estimateQuote() {
+  var zone = document.getElementById('zone').value;
+  var homeValue = Math.max(50000, parseFloat(document.getElementById('homeValue').value) || 300000);
+  var buildingCov = Math.min(1000000, Math.max(0, parseFloat(document.getElementById('buildingCov').value) || 0));
+  var contentsCov = Math.min(500000, Math.max(0, parseFloat(document.getElementById('contentsCov').value) || 0));
+  var deductible = parseFloat(document.getElementById('deductible').value) || 2000;
+  var basement = document.getElementById('basement').value === 'yes';
+
+  // Zone-based base annual premium (building-only reference, NFIP-style)
+  var zoneData = {
+    low:      { base: 450,  per100k: 90,  label: 'Zone X (unshaded) / C' },
+    moderate: { base: 650,  per100k: 150, label: 'Zone B / X (shaded)' },
+    high:     { base: 1200, per100k: 230, label: 'Zone A / AE' },
+    coastal:  { base: 1900, per100k: 330, label: 'Zone V / VE' }
+  };
+  var z = zoneData[zone];
+
+  // Deductible factor: higher deductible lowers premium
+  var dedFactor = { 1000: 1.18, 2000: 1.0, 5000: 0.82, 10000: 0.68 }[deductible];
+
+  // NFIP-style annual premium
+  var nfipBuilding = (z.base + (Math.min(buildingCov, 250000) / 100000) * z.per100k) * dedFactor;
+  var nfipContents = (contentsCov / 100000) * 120; // ~$120 per $100k contents
+  var nfip = nfipBuilding + nfipContents;
+  if (basement) nfip *= 1.15;
+
+  // Private insurers: often cheaper in low/moderate risk, variable in high risk
+  var privateFactor = { low: 0.80, moderate: 0.90, high: 1.10, coastal: 1.25 }[zone];
+  var priv = nfip * privateFactor;
+  if (basement) priv *= 1.10;
+
+  // Present as a range (+/- 15%)
+  function range(v) {
+    var lo = Math.round(v * 0.85), hi = Math.round(v * 1.15);
+    return '$' + lo.toLocaleString() + ' – $' + hi.toLocaleString();
+  }
+  function mid(v) { return Math.round(v); }
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.innerHTML =
+    '<h3>Your estimated flood insurance premium</h3>' +
+    '<p style="color:var(--muted)">Based on ' + z.label + ', $' + homeValue.toLocaleString() + ' rebuilding cost' +
+    (basement ? ', with basement' : ', no basement') + ', $' + deductible.toLocaleString() + ' deductible.</p>' +
+    '<table class="compare-table">' +
+    '<tr><th>Option</th><th>Annual estimate</th><th>Monthly (~)</th></tr>' +
+    '<tr><td><strong>NFIP</strong><br><small>federal program</small></td><td><span class="big-number" style="font-size:1.5rem">$' + mid(nfip).toLocaleString() + '</span><br><small>range ' + range(nfip) + '</small></td><td>$' + Math.round(nfip / 12).toLocaleString() + '</td></tr>' +
+    '<tr><td><strong>Private insurer</strong><br><small>typical range</small></td><td><span class="big-number" style="font-size:1.5rem">$' + mid(priv).toLocaleString() + '</span><br><small>range ' + range(priv) + '</small></td><td>$' + Math.round(priv / 12).toLocaleString() + '</td></tr>' +
+    '</table>' +
+    '<div class="alert ' + (zone === 'low' || zone === 'moderate' ? 'good' : 'warn') + '">' +
+    (zone === 'low'
+      ? '<strong>Good news:</strong> In low-risk zones, private insurers often beat NFIP prices. Compare 2–3 private quotes — a Preferred Risk Policy can be very affordable.'
+      : zone === 'moderate'
+      ? '<strong>Tip:</strong> Moderate-risk zones see competitive private pricing. NFIP is the reliable baseline; private may save you 10–20%.'
+      : '<strong>Note:</strong> High-risk zones cost more everywhere. NFIP guarantees availability; shop private insurers for potentially better coverage limits and shorter waiting periods.') +
+    '</div>' +
+    '<p style="font-size:.9rem;color:var(--muted)">NFIP caps: $250,000 building / $100,000 contents. Need more? <a href="coverage-calculator.html">Calculate your coverage needs</a> and consider private excess coverage.</p>';
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>

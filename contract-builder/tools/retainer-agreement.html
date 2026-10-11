@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Retainer Agreement Generator for Freelancers</title>
+<meta name="description" content="Generate a free monthly retainer agreement for ongoing freelance clients: hours, rate, rollover & termination terms. No signup, print or save as PDF.">
+<link rel="canonical" href="https://contractbuilder.surge.sh/tools/retainer-agreement.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a freelance retainer agreement?","acceptedAnswer":{"@type":"Answer","text":"A contract where a client pays a fixed monthly fee for a set number of hours or ongoing services — giving the freelancer predictable income and the client guaranteed availability."}},
+{"@type":"Question","name":"Do unused retainer hours roll over?","acceptedAnswer":{"@type":"Answer","text":"That depends on your agreement. Our generator lets you choose: hours expire monthly, roll over one month, or roll over indefinitely."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">⚖️ Contract<span>Builder</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="service-agreement.html">Service Agreement</a>
+      <a href="nda-generator.html">NDA</a>
+      <a href="retainer-agreement.html">Retainer</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:48px 0">
+  <div class="wrap">
+    <h1>Freelance <span class="gold">Retainer Agreement</span> Generator</h1>
+    <p class="lead">Lock in predictable monthly income. Set hours, rate, rollover rules & termination terms.</p>
+  </div>
+</section>
+
+<div class="wrap">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+
+<form class="tool-form no-print" id="ret-form" onsubmit="return generateRet();">
+  <h2 style="color:var(--navy);margin-bottom:20px">1. The Parties</h2>
+  <div class="form-grid">
+    <div class="field"><label>Your full name / business name</label><input id="f_name" required placeholder="Jane Doe / Doe Studio LLC"></div>
+    <div class="field"><label>Client full name / company</label><input id="c_name" required placeholder="Acme Corp"></div>
+  </div>
+  <h2 style="color:var(--navy);margin:28px 0 20px">2. Retainer Terms</h2>
+  <div class="field"><label>Services covered (describe ongoing work)</label><textarea id="r_services" required placeholder="e.g. Ongoing social media management: 12 posts/month, community management, monthly analytics report."></textarea></div>
+  <div class="form-grid">
+    <div class="field"><label>Monthly retainer fee (USD)</label><input id="r_fee" type="number" min="0" step="0.01" required placeholder="1500"></div>
+    <div class="field"><label>Hours included per month</label><input id="r_hours" type="number" min="0" step="0.5" required placeholder="20"></div>
+    <div class="field"><label>Overtime hourly rate (USD)</label><input id="r_ot" type="number" min="0" step="0.01" placeholder="100"></div>
+    <div class="field"><label>Unused hours</label><select id="r_roll"><option>Expire at month end</option><option>Roll over up to 1 month</option><option>Roll over indefinitely</option></select></div>
+    <div class="field"><label>Retainer start date</label><input id="r_start" type="date"></div>
+    <div class="field"><label>Initial term (months)</label><select id="r_term"><option>1</option><option selected>3</option><option>6</option><option>12</option></select></div>
+    <div class="field"><label>Notice period to cancel</label><select id="r_notice"><option>15 days</option><option selected>30 days</option><option>60 days</option></select></div>
+    <div class="field"><label>Governing state / jurisdiction</label><input id="r_gov" placeholder="e.g. California, USA"></div>
+  </div>
+  <div style="text-align:center;margin-top:24px"><button type="submit" class="btn btn-gold">Generate My Retainer →</button></div>
+</form>
+
+<div class="doc-output" id="doc-out">
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy)" onclick="document.getElementById('doc-out').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})">← Edit details</button>
+  </div>
+  <div class="doc-paper" id="doc-paper"></div>
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+</div>
+
+<div class="disclaimer">⚠️ <strong>Template only — not legal advice.</strong> This is a general retainer template. Consult a licensed attorney for high-value or complex engagements.</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><a href="../index.html">Home</a><a href="service-agreement.html">Service Agreement</a><a href="nda-generator.html">NDA</a><a href="../guides/freelance-contract-guide.html">Guide</a></div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Templates only, not legal advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+function generateRet(){
+  var fee = parseFloat(val('r_fee'))||0;
+  var hrs = parseFloat(val('r_hours'))||0;
+  var eff = hrs>0 ? (fee/hrs).toFixed(2) : '—';
+  var html =
+  '<h2 class="doc-title">FREELANCE RETAINER AGREEMENT</h2>'+
+  '<p class="doc-sub">Generated on '+esc(todayStr())+' via ContractBuilder</p>'+
+  '<p>This Freelance Retainer Agreement ("Agreement") is entered into as of <strong>'+esc(val('r_start')||'[start date]')+'</strong>, by and between <strong>'+esc(val('f_name'))+'</strong> ("Contractor") and <strong>'+esc(val('c_name'))+'</strong> ("Client").</p>'+
+  '<p><span class="clause-num">1. Services.</span> Contractor shall provide the following ongoing services: '+esc(val('r_services'))+'</p>'+
+  '<p><span class="clause-num">2. Retainer fee.</span> Client shall pay Contractor a monthly retainer of <strong>$'+fee.toFixed(2)+'</strong>, covering up to <strong>'+hrs+' hours</strong> of services per month (effective rate: $'+eff+'/hour). The retainer is invoiced on the 1st of each month and due within 14 days.</p>'+
+  '<p><span class="clause-num">3. Overtime.</span> Hours beyond the monthly allowance are billed at $'+esc(val('r_ot')||'[rate]')+'/hour, invoiced with the following month\'s retainer.</p>'+
+  '<p><span class="clause-num">4. Unused hours.</span> '+esc(val('r_roll'))+'. Unused hours have no cash value and are not refundable.</p>'+
+  '<p><span class="clause-num">5. Term.</span> This Agreement has an initial term of '+esc(val('r_term'))+' month(s) and renews automatically month-to-month thereafter unless terminated per Section 6.</p>'+
+  '<p><span class="clause-num">6. Termination.</span> Either party may terminate with '+esc(val('r_notice'))+' written notice. Fees for the notice period remain payable; unused hours at termination are forfeited.</p>'+
+  '<p><span class="clause-num">7. Availability.</span> Contractor shall make reasonable efforts to be available during agreed working hours and to respond to Client communications within one business day.</p>'+
+  '<p><span class="clause-num">8. Confidentiality.</span> Each party shall keep confidential any proprietary information disclosed under this Agreement.</p>'+
+  '<p><span class="clause-num">9. Intellectual property.</span> Upon receipt of each month\'s payment, Contractor assigns IP rights in that month\'s deliverables to Client. Contractor may display work in their portfolio unless Client objects in writing.</p>'+
+  '<p><span class="clause-num">10. Independent contractor.</span> Contractor is an independent contractor, not an employee, and is responsible for their own taxes and insurance.</p>'+
+  '<p><span class="clause-num">11. Governing law.</span> This Agreement is governed by the laws of '+esc(val('r_gov')||'[jurisdiction]')+'.</p>'+
+  '<p><span class="clause-num">12. Entire agreement.</span> This document is the entire agreement between the parties regarding the retainer relationship.</p>'+
+  '<div class="sig-block"><div><div class="sig-line"><strong>Contractor:</strong> '+esc(val('f_name'))+'<br>Date: _______________</div></div>'+
+  '<div><div class="sig-line"><strong>Client:</strong> '+esc(val('c_name'))+'<br>Date: _______________</div></div></div>';
+  document.getElementById('doc-paper').innerHTML = html;
+  document.getElementById('doc-out').classList.add('show');
+  document.getElementById('doc-out').scrollIntoView({behavior:'smooth'});
+  return false;
+}
+</script>
+</body>
+</html>

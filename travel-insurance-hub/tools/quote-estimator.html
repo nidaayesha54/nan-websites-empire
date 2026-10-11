@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Insurance Quote Estimator 2026 | TravelInsuranceHub</title>
+<meta name="description" content="Free travel insurance cost estimator: enter trip cost, duration, destination & age for an instant 2026 premium range. Runs in your browser.">
+<link rel="canonical" href="https://nan-travelins.surge.sh/tools/quote-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Travel Insurance Quote Estimator 2026","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">✈️ Travel<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="need-quiz.html">Quiz</a><a href="coverage-checklist.html">Checklist</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Travel Insurance Quote Estimator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Travel Insurance Quote Estimator 2026</h1>
+<p>Enter your trip details below. We model your premium using 2026 industry pricing: a base rate of <strong>4–8% of trip cost</strong>, adjusted for age, destination risk, trip length and plan level.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="field-row">
+<div class="field"><label>Total trip cost ($)</label><input type="number" id="tripcost" value="5000" min="100"></div>
+<div class="field"><label>Trip length (days)</label><input type="number" id="days" value="10" min="1" max="365"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Destination</label><select id="dest">
+<option value="1.0">USA (domestic)</option>
+<option value="1.05">Mexico / Caribbean</option>
+<option value="1.1">Europe</option>
+<option value="1.2">Asia</option>
+<option value="1.25">South America</option>
+<option value="1.35">Africa / Middle East</option>
+<option value="1.45">Cruise (any region)</option>
+</select></div>
+<div class="field"><label>Traveler age</label><select id="age">
+<option value="0.9">Under 30</option>
+<option value="1.0" selected>30–49</option>
+<option value="1.25">50–64</option>
+<option value="1.7">65–74</option>
+<option value="2.3">75+</option>
+</select></div>
+</div>
+<div class="field"><label>Plan level</label><select id="level">
+<option value="1.0">Comprehensive (cancellation + medical + baggage)</option>
+<option value="0.75">Basic (medical + evacuation focus)</option>
+<option value="0.5">Medical-only (no trip cancellation)</option>
+</select></div>
+<button class="btn" id="calcBtn">Estimate My Premium</button>
+
+<div class="result" id="result">
+<h3>Your estimated premium range</h3>
+<div class="big" id="range"></div>
+<p id="pct"></p>
+<table class="cmp">
+<tr><th>Factor</th><th>Your input</th><th>Effect</th></tr>
+<tr><td>Trip cost</td><td id="rCost"></td><td>Base 4–8% of cost</td></tr>
+<tr><td>Destination</td><td id="rDest"></td><td id="rDestF"></td></tr>
+<tr><td>Age</td><td id="rAge"></td><td id="rAgeF"></td></tr>
+<tr><td>Plan level</td><td id="rLevel"></td><td id="rLevelF"></td></tr>
+</table>
+<p style="font-size:.85rem;color:var(--muted)">Method: mid-rate 6% of trip cost × destination risk factor × age factor × plan factor, plus a small per-day add-on for long trips. Range = ±25% around the midpoint.</p>
+</div>
+
+<div class="disclaimer"><strong>Estimates only, not financial advice.</strong> Real quotes vary by insurer, pre-existing conditions, and exact itinerary. Use this as a starting point, then compare real quotes before buying.</div>
+
+<div class="related"><h2>Keep going</h2><ul>
+<li><a href="need-quiz.html">Do I even need travel insurance? Take the quiz</a></li>
+<li><a href="coverage-checklist.html">Build your pre-trip coverage checklist</a></li>
+<li><a href="../guides/travel-insurance-cost-2026.html">Guide: How much does travel insurance cost in 2026?</a></li>
+<li><a href="../guides/what-does-travel-insurance-cover.html">Guide: What does travel insurance actually cover?</a></li>
+</ul></div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> TravelInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+document.getElementById('calcBtn').addEventListener('click',function(){
+  var cost=num('tripcost'), days=num('days');
+  if(cost<=0){ alert('Please enter a trip cost greater than 0.'); return; }
+  if(days<=0){ days=1; }
+  var destF=parseFloat(val('dest')), ageF=parseFloat(val('age')), lvlF=parseFloat(val('level'));
+  var mid=cost*0.06*destF*ageF*lvlF;
+  if(days>30){ mid+= (days-30)*1.5; } // long-trip surcharge
+  var lo=mid*0.75, hi=mid*1.25;
+  document.getElementById('range').textContent=money(lo)+' – '+money(hi);
+  document.getElementById('pct').textContent='About '+(lo/cost*100).toFixed(1)+'–'+(hi/cost*100).toFixed(1)+'% of your trip cost.';
+  document.getElementById('rCost').textContent=money(cost);
+  var dsel=document.getElementById('dest'), asel=document.getElementById('age'), lsel=document.getElementById('level');
+  document.getElementById('rDest').textContent=dsel.options[dsel.selectedIndex].text;
+  document.getElementById('rDestF').textContent=(destF>1?'×'+destF+' (higher risk)':'base rate');
+  document.getElementById('rAge').textContent=asel.options[asel.selectedIndex].text;
+  document.getElementById('rAgeF').textContent=(ageF>1?'×'+ageF+' (older travelers cost more)':'base rate');
+  document.getElementById('rLevel').textContent=lsel.options[lsel.selectedIndex].text;
+  document.getElementById('rLevelF').textContent='×'+lvlF;
+  show('result');
+});
+</script>
+</body>
+</html>

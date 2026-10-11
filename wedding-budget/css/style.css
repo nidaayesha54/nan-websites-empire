@@ -1,0 +1,134 @@
+/* WeddingBudgetPro — elegant wedding theme: blush / rose gold / charcoal */
+:root{
+  --blush:#fdf3f0;
+  --blush-deep:#f7e3dc;
+  --rose:#c07a6b;
+  --rose-deep:#a45f50;
+  --gold:#c9a227;
+  --charcoal:#2b2725;
+  --gray:#6b625e;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(164,95,80,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--charcoal);
+  background:var(--blush);
+  line-height:1.7;
+  font-size:17px;
+}
+.sans,h1,h2,h3,nav,.btn,header.site-header{font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* header */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--blush-deep);
+  position:sticky;top:0;z-index:50;
+}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{font-size:1.35rem;font-weight:700;color:var(--rose-deep);text-decoration:none;letter-spacing:.5px}
+.brand span{color:var(--gold)}
+.nav{display:flex;gap:18px;flex-wrap:wrap}
+.nav a{color:var(--charcoal);text-decoration:none;font-size:.95rem;font-weight:600}
+.nav a:hover{color:var(--rose-deep)}
+
+/* hero */
+.hero{
+  background:linear-gradient(135deg,var(--blush-deep),#fff);
+  text-align:center;padding:64px 20px 54px;
+}
+.hero h1{font-size:2.4rem;line-height:1.25;color:var(--charcoal);max-width:760px;margin:0 auto 16px}
+.hero h1 em{color:var(--rose-deep);font-style:italic}
+.hero p.lead{font-size:1.12rem;color:var(--gray);max-width:640px;margin:0 auto 26px}
+.btn{
+  display:inline-block;background:var(--rose-deep);color:#fff;
+  padding:13px 30px;border-radius:50px;text-decoration:none;font-weight:700;
+  box-shadow:var(--shadow);border:none;cursor:pointer;font-size:1rem;
+}
+.btn:hover{background:var(--rose)}
+.btn.ghost{background:#fff;color:var(--rose-deep);border:2px solid var(--rose-deep)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:40px 0}
+.card{
+  background:var(--white);border-radius:var(--radius);padding:28px;
+  box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  border-top:4px solid var(--rose);transition:transform .15s;
+}
+.card:hover{transform:translateY(-4px)}
+.card h3{font-size:1.25rem;margin-bottom:10px;color:var(--rose-deep)}
+.card p{color:var(--gray);font-size:.98rem}
+
+/* sections */
+.section{padding:56px 0}
+.section.alt{background:var(--white)}
+.section h2{font-size:1.9rem;margin-bottom:14px;color:var(--charcoal)}
+.section h2 .accent{color:var(--rose-deep)}
+.section p{color:var(--gray);margin-bottom:14px}
+.prose{max-width:760px;margin:0 auto}
+.prose h2{margin-top:36px}
+.prose h3{margin:26px 0 10px;color:var(--rose-deep)}
+.prose ul,.prose ol{margin:10px 0 18px 24px;color:var(--gray)}
+.prose table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.95rem}
+.prose th,.prose td{border:1px solid var(--blush-deep);padding:10px 12px;text-align:left}
+.prose th{background:var(--blush-deep)}
+.problem-box{
+  background:#fff8f6;border-left:5px solid var(--rose);
+  padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;margin:22px 0;
+}
+.problem-box strong{color:var(--rose-deep)}
+.solution-box{
+  background:#f6fbf6;border-left:5px solid #5a8f5a;
+  padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;margin:22px 0;
+}
+
+/* calculator */
+.calc{
+  background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:32px;max-width:720px;margin:30px auto;
+}
+.calc label{display:block;font-weight:700;margin:18px 0 8px}
+.calc input[type=range]{width:100%}
+.calc select,.calc input[type=number]{
+  width:100%;padding:11px 14px;border:1.5px solid var(--blush-deep);
+  border-radius:10px;font-size:1rem;font-family:inherit;
+}
+.calc .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-output{
+  background:var(--blush);border-radius:var(--radius);padding:24px;margin-top:24px;
+}
+.calc-output .total{font-size:2rem;color:var(--rose-deep);font-weight:800}
+.breakdown{margin-top:16px}
+.breakdown .brow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--blush-deep);font-size:.97rem}
+.breakdown .brow:last-child{border:none}
+.bar{height:10px;background:var(--blush-deep);border-radius:6px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:6px}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--white);border-radius:10px;margin:10px 0;padding:16px 20px;box-shadow:var(--shadow)}
+.faq summary{font-weight:700;cursor:pointer;color:var(--rose-deep)}
+.faq p{margin-top:10px;color:var(--gray)}
+
+/* footer */
+footer.site-footer{background:var(--charcoal);color:#cfc6c1;padding:40px 0;margin-top:60px}
+footer.site-footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px}
+footer.site-footer h4{color:#fff;margin-bottom:12px}
+footer.site-footer a{color:#cfc6c1;text-decoration:none;display:block;margin:6px 0;font-size:.95rem}
+footer.site-footer a:hover{color:var(--gold)}
+footer.site-footer .fine{grid-column:1/-1;text-align:center;font-size:.85rem;color:#9a918c;border-top:1px solid #453f3c;padding-top:18px;margin-top:10px}
+
+/* ad slot */
+.ad-slot{
+  background:#f4efe9;border:1px dashed #c9bda8;border-radius:10px;
+  text-align:center;color:#a89a83;font-size:.8rem;padding:14px;margin:28px auto;max-width:728px;
+}
+
+@media(max-width:640px){
+  .hero h1{font-size:1.7rem}
+  .calc .row{grid-template-columns:1fr}
+  .calc{padding:22px}
+}

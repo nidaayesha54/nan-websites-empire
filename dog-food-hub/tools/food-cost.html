@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Dog Food Cost Calculator by Brand Tier</title>
+<meta name="description" content="Estimate your monthly dog food cost. Pick your dog's size and brand tier — budget, mid-range, or premium — for a clear monthly budget.">
+<link rel="canonical" href="https://nan-dogfood.surge.sh/tools/food-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Dog<span>Food</span>Hub</a>
+    <div class="nav-links">
+      <a href="daily-portion.html">Portion Calculator</a>
+      <a href="food-cost.html">Cost Calculator</a>
+      <a href="treat-calculator.html">Treat Calculator</a>
+      <a href="../guides/how-much-to-feed-dog-2026.html">Feeding Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Monthly Dog Food Cost Calculator</h1>
+  <p style="text-align:center;color:var(--muted)">Pick your dog's size and the food tier you buy — get your estimated monthly and yearly spend.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="dogSize">Dog size</label>
+    <select id="dogSize">
+      <option value="0.75">Small (under 25 lbs) — ~0.75 cups/day</option>
+      <option value="1.75" selected>Medium (25–60 lbs) — ~1.75 cups/day</option>
+      <option value="3.25">Large (60–100 lbs) — ~3.25 cups/day</option>
+      <option value="5">Giant (100+ lbs) — ~5 cups/day</option>
+    </select>
+
+    <label for="tier">Brand tier</label>
+    <select id="tier">
+      <option value="0.9">Budget — ~$0.90/lb</option>
+      <option value="1.6" selected>Mid-range — ~$1.60/lb</option>
+      <option value="2.8">Premium — ~$2.80/lb</option>
+    </select>
+
+    <label for="bagLbs">Typical bag size you buy (lbs)</label>
+    <select id="bagLbs">
+      <option value="5">5 lbs</option>
+      <option value="15" selected>15 lbs</option>
+      <option value="30">30 lbs</option>
+      <option value="45">45 lbs</option>
+    </select>
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="calcCost()">Calculate Monthly Cost</button>
+    </div>
+
+    <div class="result" id="costResult" role="status">
+      <div class="big" id="costBig"></div>
+      <p id="costDetail"></p>
+      <p id="costYear"></p>
+    </div>
+  </div>
+
+  <div class="container disclaimer"><strong>Note:</strong> Feeding guidelines are estimates — consult your vet for your dog's specific needs.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="daily-portion.html">Daily Portion Calculator</a> · <a href="treat-calculator.html">Treat Calorie Budget</a> · <a href="../guides/best-dog-food-guide.html">How to Choose Dog Food</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="daily-portion.html">Portion Calculator</a> · <a href="food-cost.html">Cost Calculator</a> · <a href="treat-calculator.html">Treat Calculator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+function calcCost() {
+  var cupsPerDay = parseFloat(DFH.$('dogSize').value);
+  var pricePerLb = parseFloat(DFH.$('tier').value);
+  var bagLbs = parseFloat(DFH.$('bagLbs').value);
+
+  var gramsPerCup = 100;              // avg kibble
+  var gramsPerLb = 453.592;
+  var lbsPerDay = (cupsPerDay * gramsPerCup) / gramsPerLb;
+  var lbsPerMonth = lbsPerDay * 30;
+  var monthlyCost = lbsPerMonth * pricePerLb;
+  var bagsPerMonth = lbsPerMonth / bagLbs;
+
+  DFH.$('costBig').textContent = '$' + DFH.fmt(monthlyCost, 2) + ' / month';
+  DFH.$('costDetail').textContent = '≈ ' + DFH.fmt(lbsPerMonth, 1) + ' lbs per month — about ' +
+    DFH.fmt(bagsPerMonth, 1) + ' ' + bagLbs + '-lb bag(s).';
+  DFH.$('costYear').textContent = 'Yearly estimate: $' + DFH.fmt(monthlyCost * 12, 0) + '. Buying the largest bag size usually lowers the per-lb price.';
+  DFH.$('costResult').classList.add('show');
+}
+</script>
+</body>
+</html>

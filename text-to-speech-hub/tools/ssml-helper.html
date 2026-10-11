@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSML Helper — Build Speech Markup Snippets Free</title>
+<meta name="description" content="Free SSML tag builder: select break, emphasis, prosody & more, enter text, and copy a ready SSML snippet for ElevenLabs, Polly, or Google TTS.">
+<link rel="canonical" href="https://nan-ttshub.surge.sh/tools/ssml-helper.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🔊 TextToSpeechHub</a>
+<div class="navlinks">
+<a href="tts-studio.html">TTS Studio</a>
+<a href="voice-style-guide.html">Voice Styles</a>
+<a href="ssml-helper.html">SSML Builder</a>
+<a href="readability-scorer.html">Readability</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<h1 style="margin:24px 0 6px">🧩 SSML Helper</h1>
+<p style="color:var(--muted);max-width:700px">SSML (Speech Synthesis Markup Language) controls pauses, emphasis, pronunciation, and pacing. Pick tags, type your text, and copy production-ready markup — compatible with ElevenLabs, Amazon Polly, Google Cloud TTS, and Azure.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="ssmlBase">Your text</label>
+<textarea id="ssmlBase" placeholder="Type or paste the text to wrap in SSML…">Welcome to our channel. Today, we reveal the secret behind amazing voiceovers.</textarea>
+
+<label>Select SSML tags to apply</label>
+<div>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="break" checked> &lt;break&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="emphasis"> &lt;emphasis&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="prosody"> &lt;prosody&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="sentence"> &lt;s&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="paragraph"> &lt;p&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="sayAs"> &lt;say-as&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="sub"> &lt;sub&gt;</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="whisper"> whisper effect</label>
+<label class="chip" style="display:inline-block;font-weight:normal"><input type="checkbox" class="tagcheck" value="lang"> &lt;lang&gt;</label>
+</div>
+
+<div style="margin-top:14px"><button class="btn-sm" id="ssmlBuild">⚙️ Build SSML</button></div>
+
+<label>Generated SSML</label>
+<div class="result"><pre id="ssmlOut" style="white-space:pre-wrap"></pre></div>
+<div style="margin-top:10px"><button class="btn-sm" id="ssmlCopy">Copy SSML</button></div>
+
+<label>What each tag does</label>
+<div class="result" id="ssmlDesc"><p class="status">Select one or more tags above to see what each does.</p></div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section prose">
+<h2>SSML cheat sheet</h2>
+<table>
+<tr><th>Tag</th><th>Use it for</th></tr>
+<tr><td><span class="tag">&lt;break time="500ms"/&gt;</span></td><td>Natural pauses at commas and before big reveals</td></tr>
+<tr><td><span class="tag">&lt;emphasis level="strong"&gt;</span></td><td>Stress on keywords like "free", "never", "secret"</td></tr>
+<tr><td><span class="tag">&lt;prosody rate="90%"&gt;</span></td><td>Slow down for tutorials, speed up for excitement</td></tr>
+<tr><td><span class="tag">&lt;say-as interpret-as="digits"&gt;</span></td><td>Phone numbers and codes read digit-by-digit</td></tr>
+<tr><td><span class="tag">&lt;sub alias="…"&gt;</span></td><td>Fix abbreviations ("CEO" → "C. E. O.")</td></tr>
+</table>
+<p>Note: exact tag support varies by provider — ElevenLabs, Amazon Polly, Google, and Azure each document their own flavor. Test every snippet before publishing. Learn the full playbook in our guide: <a href="../guides/how-to-make-text-to-speech-sound-natural.html">how to make TTS sound natural</a>.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script src="../js/ssml.js"></script>
+</body>
+</html>

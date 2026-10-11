@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RVU Calculator — Medicare Payment Estimator</title>
+<meta name="description" content="Free RVU calculator: enter work, practice expense, and malpractice RVUs to estimate Medicare physician payment with GPCI adjustments.">
+<link rel="canonical" href="https://nan-medicalcoding.surge.sh/tools/rvu-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container">
+    <a class="logo" href="../index.html">Medical<span>Coding</span>Hub</a>
+    <nav class="main">
+      <a href="code-lookup.html">Code Lookup</a>
+      <a href="rvu-calculator.html">RVU Calculator</a>
+      <a href="modifier-checker.html">Modifiers</a>
+      <a href="../guides/how-to-become-medical-coder-2026.html">Guides</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <section class="section">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → RVU Calculator</div>
+    <h1 style="font-size:1.9rem;color:var(--navy);margin-bottom:10px">RVU Payment Calculator</h1>
+    <p class="sub">Estimate Medicare physician payment from RVUs. Pick a sample code or enter values manually.</p>
+
+    <div class="form-card">
+      <div class="form-row">
+        <div style="grid-column:1/-1">
+          <label for="sampleCode">Load sample code RVUs (approximate)</label>
+          <select id="sampleCode"><option value="">— Choose a sample code —</option></select>
+        </div>
+        <div><label for="wrvu">Work RVU</label><input type="number" id="wrvu" step="0.01" value="1.30"></div>
+        <div><label for="pervu">Practice expense RVU</label><input type="number" id="pervu" step="0.01" value="1.14"></div>
+        <div><label for="mprvu">Malpractice RVU</label><input type="number" id="mprvu" step="0.01" value="0.10"></div>
+        <div><label for="cf">Conversion factor ($)</label><input type="number" id="cf" step="0.01" value="32.35"></div>
+        <div><label for="wg">Work GPCI</label><input type="number" id="wg" step="0.001" value="1.000"></div>
+        <div><label for="pg">PE GPCI</label><input type="number" id="pg" step="0.001" value="1.000"></div>
+        <div><label for="mg">MP GPCI</label><input type="number" id="mg" step="0.001" value="1.000"></div>
+      </div>
+      <button class="btn" onclick="calcRVU()">Calculate Payment</button>
+      <div id="result" class="result"></div>
+    </div>
+
+    <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+    <div class="prose" style="margin-top:24px">
+      <h2>How the RVU formula works</h2>
+      <p>Medicare pays physicians using this formula:</p>
+      <p><strong>Payment = (Work RVU × Work GPCI + PE RVU × PE GPCI + MP RVU × MP GPCI) × Conversion Factor</strong></p>
+      <ul>
+        <li><strong>Work RVU</strong> — the physician's time, skill, and intensity.</li>
+        <li><strong>Practice expense (PE) RVU</strong> — overhead: staff, rent, equipment.</li>
+        <li><strong>Malpractice (MP) RVU</strong> — liability insurance cost.</li>
+        <li><strong>GPCI</strong> — geographic adjustment (1.000 = national average).</li>
+        <li><strong>Conversion factor</strong> — dollars per RVU, set annually by CMS (default here is the 2025 value, $32.35 — update it for the current year).</li>
+      </ul>
+    </div>
+
+    <div class="disclaimer"><strong>Educational use only.</strong> Sample RVUs are approximate and for learning — verify against the current CMS Physician Fee Schedule before any billing use. Actual payment varies by payer contract.</div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    <div>© <span id="year"></span> Medical Coding Hub — Educational content only.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/rvu-calculator.js"></script>
+</body>
+</html>

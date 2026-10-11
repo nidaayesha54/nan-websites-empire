@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Loan Payoff Planner — Standard vs Income-Driven (2026)</title>
+<meta name="description" content="Compare the standard 10-year student loan repayment plan with income-driven repayment. See payments, total cost, and potential forgiveness.">
+<link rel="canonical" href="https://nan-loanhub.surge.sh/tools/student-loan.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="logo" href="../index.html">Loan<span>Hub</span></a>
+<nav><ul class="nav-links">
+<li><a href="personal-loan.html">Personal Loan</a></li>
+<li><a href="auto-loan.html">Auto Loan</a></li>
+<li><a href="student-loan.html">Student Loan</a></li>
+<li><a href="../blog/index.html">Blog</a></li>
+</ul></nav>
+</div></header>
+
+<main class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Student Loan Payoff Planner</div>
+<h1>Student Loan Payoff Planner</h1>
+<p>Compare the standard repayment plan with an income-driven estimate. Which costs less over time?</p>
+
+<div class="calc-wrap">
+<div class="form-row">
+<div class="form-group"><label for="balance">Loan Balance ($)</label><input type="number" id="balance" value="35000" min="1"></div>
+<div class="form-group"><label for="rate">Interest Rate (%)</label><input type="number" id="rate" value="6.5" min="0" step="0.1"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="income">Annual Income ($)</label><input type="number" id="income" value="55000" min="0"></div>
+<div class="form-group"><label for="years">Standard Plan Term (years)</label><input type="number" id="years" value="10" min="1" step="1"></div>
+</div>
+<button class="btn-primary" onclick="calcStudentLoan()">Compare Plans</button>
+<div class="result" id="result">
+<h3>Standard Plan</h3>
+<div class="stat-row"><span>Monthly payment</span><span class="val" id="r-std-pmt">$0</span></div>
+<div class="stat-row"><span>Total paid</span><span class="val" id="r-std-total">$0</span></div>
+<h3 style="margin-top:14px">Income-Driven (Estimate)</h3>
+<div class="stat-row"><span>Estimated monthly payment</span><span class="val" id="r-idr-pmt">$0</span></div>
+<div class="stat-row"><span>Total paid</span><span class="val" id="r-idr-paid">$0</span></div>
+<div class="stat-row"><span>Outcome</span><span class="val" id="r-idr-years">—</span></div>
+</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="article">
+<h2>Standard vs Income-Driven: Which Wins?</h2>
+<p><strong>Standard plan:</strong> fixed payments, lowest total cost, paid off fastest. Best when you can afford the payment.</p>
+<p><strong>Income-driven:</strong> payments based on ~10% of discretionary income, recertified yearly. Lower payments now, but interest accrues longer — and any forgiven balance after 20–25 years may be taxable.</p>
+<h3>Strategies That Actually Work</h3>
+<ul>
+<li>Pay extra toward the highest-rate loan first (avalanche method).</li>
+<li>Refinancing private loans can cut rates — but never refinance <em>federal</em> loans into private ones (you lose protections).</li>
+<li>Check <a href="../guides/student-loan-repayment-options.html">all federal repayment options</a> before choosing.</li>
+</ul>
+</section>
+
+<div class="disclaimer"><strong>Disclaimer:</strong> IDR is simplified here for illustration. Federal program rules (SAVE, PAYE, IBR) change frequently — check <a href="https://studentaid.gov" target="_blank" rel="noopener">studentaid.gov</a> for current rules. Educational estimates only.</div>
+</main>
+
+<footer class="site"><div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></p>
+<p class="network">Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></p>
+<p>© <span id="year">2026</span> LoanHub.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/student-loan.js"></script>
+</body>
+</html>

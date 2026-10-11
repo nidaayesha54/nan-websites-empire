@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Medication Reminder — Daily Dose Checklist | PetHealthHub</title>
+<meta name="description" content="Free pet medication planner: set dose times for each medication, get a printable daily checklist, and track every dose you give.">
+<link rel="canonical" href="https://nan-pethealth.surge.sh/tools/medication-reminder.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">🐾 Pet<span>Health</span>Hub</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="vaccination-tracker.html">Vaccination</a>
+      <a href="weight-tracker.html">Weight</a>
+      <a href="medication-reminder.html" class="active">Medication</a>
+      <a href="../guides/puppy-vaccination-schedule-2026.html">Puppy Schedule</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer"><strong>Wellness information only</strong> — not a substitute for professional veterinary advice. See your vet for diagnosis or treatment.</div>
+
+<section class="section">
+  <div class="container">
+    <div class="tool-wrap">
+      <h1>Pet Medication Reminder</h1>
+      <p class="lede">Plan your pet's medication schedule, then tick off each dose on today's checklist. Use the print button for a paper copy. <strong>Only log medications prescribed by your vet</strong> — never start, stop, or change a dose without veterinary guidance.</p>
+
+      <h2 style="color:var(--g800);font-size:1.25rem">Add a medication</h2>
+      <div class="form-row">
+        <div class="field"><label for="mPet">Pet name</label><input id="mPet" type="text" placeholder="e.g. Luna"></div>
+        <div class="field"><label for="mName">Medication</label><input id="mName" type="text" placeholder="e.g. Apoquel"></div>
+        <div class="field"><label for="mDose">Dose</label><input id="mDose" type="text" placeholder="e.g. 16 mg tablet"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="mTimes">Dose times (comma-separated, 24h)</label><input id="mTimes" type="text" placeholder="e.g. 08:00, 20:00"></div>
+        <div class="field"><label for="mNotes">Notes (with food? etc.)</label><input id="mNotes" type="text" placeholder="e.g. give with breakfast"></div>
+      </div>
+      <button class="btn btn-green" id="mAdd">Add Medication</button>
+
+      <h2 style="color:var(--g800);font-size:1.25rem;margin-top:28px">Today's checklist — <span id="mToday"></span></h2>
+      <div id="mProgress" style="margin-bottom:14px;font-weight:700;color:var(--g700)"></div>
+      <div class="checklist" id="mChecklist"></div>
+
+      <h2 style="color:var(--g800);font-size:1.25rem;margin-top:28px">All medications</h2>
+      <div style="overflow-x:auto"><table class="data" id="mTable">
+        <thead><tr><th>Pet</th><th>Medication</th><th>Dose</th><th>Times</th><th>Notes</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+
+      <div class="no-print" style="margin-top:18px">
+        <button class="btn btn-green" id="mPrint" onclick="window.print()">🖨️ Print Today's Checklist</button>
+      </div>
+      <p style="margin-top:14px"><a href="vaccination-tracker.html">Vaccination Tracker →</a> · <a href="../guides/pet-emergency-preparedness.html">Emergency Preparedness Guide →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a>
+    <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+  </div>
+</footer>
+<script src="../js/medication.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Automation Workflow Builder — Plan Triggers, Actions & Conditions</title>
+<meta name="description" content="Plan AI automations visually: add triggers, actions and conditions, reorder steps, and export a ready checklist for Zapier, Make or n8n. Free, saves in your browser.">
+<link rel="canonical" href="https://ai-automation.surge.sh/tools/workflow-builder.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Automation Workflow Builder","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🤖 AIAutomationHub</a>
+<div class="navlinks">
+<a href="prompt-library.html">Prompt Library</a>
+<a href="workflow-builder.html">Workflow Builder</a>
+<a href="roi-calculator.html">ROI Calculator</a>
+<a href="tool-finder.html">What to Automate?</a>
+<a href="../guides/ai-automation-small-business-2026.html">Guides</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Workflow Builder</div>
+<h1>🧩 Automation Workflow Builder</h1>
+<p style="color:var(--muted)">Design your automation before you build it. Add triggers (⚡), actions (🔧) and conditions (🔀), then export a checklist for Zapier, Make, or n8n. Saved automatically in your browser.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<h2 style="font-size:1.15rem;margin-bottom:6px">Add a step <span id="wf-count" style="color:var(--muted);font-size:.9rem"></span></h2>
+<label for="wf-type">Step type</label>
+<select id="wf-type">
+<option value="trigger">⚡ Trigger — the event that starts it</option>
+<option value="action">🔧 Action — what happens</option>
+<option value="condition">🔀 Condition — a branch / check</option>
+</select>
+<label for="wf-name">Step name</label>
+<input id="wf-name" type="text" placeholder='e.g. "New lead submits form"'>
+<label for="wf-detail">Details (optional)</label>
+<textarea id="wf-detail" placeholder="e.g. Tally form 'Contact' → fields: name, email, budget"></textarea>
+<div style="margin-top:12px">
+<button class="btn-sm" onclick="wfAdd()">+ Add step</button>
+<button class="btn-sm" id="wf-export-btn" onclick="wfExport()" style="margin-left:8px">📋 Export checklist</button>
+<button class="btn-sm" onclick="wfClear()" style="margin-left:8px;background:transparent;border:1px solid #f87171;color:#f87171">Clear</button>
+</div>
+</div>
+
+<h2>Your workflow</h2>
+<div id="wf-list"></div>
+<div class="result" id="wf-output" style="display:none;white-space:pre-wrap;font-size:.9rem"></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section">
+<h2>Example: lead follow-up automation</h2>
+<ol style="color:#d7d3f2;margin-left:20px">
+<li><b>⚡ Trigger:</b> New row in "Leads" Google Sheet</li>
+<li><b>🔀 Condition:</b> Budget field is filled?</li>
+<li><b>🔧 Action:</b> Send personalized intro email (use the Cold Email prompt from the <a href="prompt-library.html">Prompt Library</a>)</li>
+<li><b>🔧 Action:</b> Create HubSpot deal + task for day 3</li>
+</ol>
+<p>Check the economics first with the <a href="roi-calculator.html">ROI Calculator</a>.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free AI automation tools for everyone</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/workflow.js"></script>
+</body>
+</html>

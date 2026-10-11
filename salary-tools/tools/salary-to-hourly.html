@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary to Hourly Calculator — Free Converter + Overtime | SalaryTools</title>
+<meta name="description" content="Free salary to hourly calculator: convert annual salary to hourly (and back), see weekly/monthly equivalents, and calculate overtime pay at 1.5×.">
+<link rel="canonical" href="https://nan-salarytools.surge.sh/tools/salary-to-hourly.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Salary to Hourly Calculator","url":"https://nan-salarytools.surge.sh/tools/salary-to-hourly.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Salary<span>Tools</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="salary-to-hourly.html">Salary ↔ Hourly</a>
+      <a href="paycheck-estimator.html">Paycheck Estimator</a>
+      <a href="raise-calculator.html">Raise Calculator</a>
+      <a href="../guides/salary-vs-hourly.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Salary to Hourly</p>
+<h1>Salary to Hourly Calculator</h1>
+<p class="lede">Convert annual salary to an hourly rate (and back), see weekly, biweekly, and monthly equivalents, and calculate what overtime at 1.5× is really worth.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice.</div>
+
+<section class="tool">
+  <h3 style="margin-top:0">Salary → Hourly</h3>
+  <label for="salary">Annual salary ($)</label>
+  <input type="number" id="salary" value="65000" min="0" step="1000">
+  <label for="hours">Hours per week</label>
+  <input type="number" id="hours" value="40" min="0" max="168" step="1">
+  <label for="weeks">Weeks per year</label>
+  <input type="number" id="weeks" value="52" min="0" max="52" step="1">
+  <br><button class="btn-calc" id="btn1">Convert to Hourly</button>
+  <p id="err1" class="warn-text"></p>
+</section>
+<section class="results" id="res1" aria-live="polite"></section>
+
+<section class="tool">
+  <h3 style="margin-top:0">Hourly → Salary</h3>
+  <label for="hourly">Hourly rate ($)</label>
+  <input type="number" id="hourly" value="25" min="0" step="0.5">
+  <label for="hours2">Hours per week</label>
+  <input type="number" id="hours2" value="40" min="0" max="168" step="1">
+  <label for="weeks2">Weeks per year</label>
+  <input type="number" id="weeks2" value="52" min="0" max="52" step="1">
+  <br><button class="btn-calc" id="btn2">Convert to Salary</button>
+  <p id="err2" class="warn-text"></p>
+</section>
+<section class="results" id="res2" aria-live="polite"></section>
+
+<section class="tool">
+  <h3 style="margin-top:0">Overtime Calculator (1.5×)</h3>
+  <label for="otRate">Regular hourly rate ($)</label>
+  <input type="number" id="otRate" value="25" min="0" step="0.5">
+  <label for="otHours">Overtime hours per week</label>
+  <input type="number" id="otHours" value="5" min="0" step="0.5">
+  <br><button class="btn-calc" id="btn3">Calculate Overtime Pay</button>
+  <p id="err3" class="warn-text"></p>
+</section>
+<section class="results" id="res3" aria-live="polite"></section>
+
+<section>
+  <h2>The 2,080-Hour Rule of Thumb</h2>
+  <p>A standard full-time year is <strong>40 hours × 52 weeks = 2,080 hours</strong>. So $65,000 ÷ 2,080 ≈ $31.25/hr. But real life varies: unpaid time off, part-time schedules, and actual hours worked change the number — which is why the converter above lets you set your own hours and weeks.</p>
+  <p>Comparing a salary offer against an hourly one? Read <a href="../guides/salary-vs-hourly.html">Salary vs Hourly: Pros and Cons</a> — overtime and benefits often flip the answer.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Paycheck Estimator</h3><p>See what that salary is actually worth per paycheck after taxes.</p><a href="paycheck-estimator.html">Open →</a></div>
+    <div class="card"><h3>Raise Calculator</h3><p>What does a raise do to your hourly equivalent?</p><a href="raise-calculator.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="paycheck-estimator.html">Paycheck Estimator</a><a href="raise-calculator.html">Raise Calculator</a><a href="../guides/salary-vs-hourly.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> SalaryTools. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/salary-to-hourly.js"></script>
+</body>
+</html>

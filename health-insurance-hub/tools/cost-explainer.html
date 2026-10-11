@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deductible vs Premium: Interactive Explainer</title>
+<meta name="description" content="Move the sliders on a $20,000 hospital bill to see exactly who pays what — you vs the insurer — under any deductible & coinsurance.">
+<link rel="canonical" href="https://nan-healthinsurance.surge.sh/tools/cost-explainer.html">
+<link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Deductible vs Premium: Interactive Explainer",
+  "url": "https://nan-healthinsurance.surge.sh/tools/cost-explainer.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">🏥</span> HealthInsuranceHub</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#tools">Calculators</a>
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#blog">Blog</a>
+    </nav>
+  </div>
+</header>
+<main><div class="container">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="../index.html">Home</a> › <a href="../index.html#tools">Calculators</a> › <span>Cost Explainer</span>
+</nav><div class="page-head">
+<h1>Deductible, OOP Max & Coinsurance: Interactive Explainer</h1>
+<p class="lead">Health insurance jargon finally made visual: set a hospital bill and your plan's numbers, then watch the payment split between you and the insurer.</p>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="tool-wrap">
+<div class="slider-row"><label for="ceBill">Hospital bill <output id="ceBillOut"></output></label><input type="range" id="ceBill" min="1000" max="100000" step="500" value="20000"></div>
+<div class="slider-row"><label for="ceDed">Your deductible <output id="ceDedOut"></output></label><input type="range" id="ceDed" min="0" max="10000" step="250" value="2000"></div>
+<div class="slider-row"><label for="ceOop">Your out-of-pocket max <output id="ceOopOut"></output></label><input type="range" id="ceOop" min="1000" max="20000" step="500" value="7000"></div>
+<div class="slider-row"><label for="ceCoin">Your coinsurance share <output id="ceCoinOut"></output></label><input type="range" id="ceCoin" min="0" max="50" step="5" value="20"></div>
+<div class="result" id="ceLive">
+  <h2>Who pays what</h2>
+  <div class="legend"><span><i class="bar-you" style="background:var(--accent)"></i>You pay: <strong id="ceYouPay"></strong></span><span><i class="bar-insurer" style="background:var(--primary)"></i>Insurer pays: <strong id="ceInsPay"></strong></span></div>
+  <div class="bar-stack"><div class="bar-you" id="ceYouBar"></div><div class="bar-insurer" id="ceInsBar"></div></div>
+  <ul id="ceBreakdown"></ul>
+</div>
+</div>
+<div class="disclaimer-box"><strong>Disclaimer:</strong> Educational purposes only — not financial advice. Estimates, not quotes.</div>
+<article class="prose">
+<h2>The three terms, in plain English</h2>
+<ul>
+<li><strong>Deductible:</strong> what you pay first each year before insurance helps (except free preventive care and copay visits).</li>
+<li><strong>Coinsurance:</strong> after the deductible, you pay this percentage and the insurer pays the rest — e.g., 20% coinsurance on a $10,000 balance = $2,000 from you.</li>
+<li><strong>Out-of-pocket max:</strong> your yearly safety net. Once your deductible + coinsurance (+ copays) hit this number, the insurer pays 100% of covered care for the rest of the year.</li>
+</ul>
+<p>The math: <strong>you pay = min(OOP max, min(bill, deductible) + coinsurance × (bill − deductible))</strong>. Try the extremes: a $0 deductible with 50% coinsurance vs a $10,000 deductible with 10% coinsurance — the OOP max decides more than people think.</p>
+<div class="callout"><p><strong>Note:</strong> Premiums are separate — you pay those every month regardless. The explainer shows cost-sharing only.</p></div>
+</article>
+<aside class="related"><h2>More free calculators</h2>
+<ul>
+<li><a href="../tools/plan-comparator.html">Health Plan Cost Comparator (2026)</a></li>
+<li><a href="../tools/subsidy-estimator.html">ACA Subsidy Estimator 2026 — Check Savings</a></li>
+</ul></aside><aside class="related"><h2>Learn more in our guides</h2>
+<ul>
+<li><a href="../guides/how-to-choose-health-insurance.html">How to Choose Health Insurance in 2026</a></li>
+<li><a href="../guides/deductible-vs-premium.html">Deductible vs Premium Explained Simply</a></li>
+<li><a href="../guides/aca-subsidies-2026.html">ACA Subsidies 2026: Complete Explainer</a></li>
+</ul></aside></div></main>
+<footer class="site-footer">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p class="footer-note">All content is educational and for general information only — not financial advice. Calculator results are estimates, not quotes.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/cost-explainer.js"></script>
+</body>
+</html>

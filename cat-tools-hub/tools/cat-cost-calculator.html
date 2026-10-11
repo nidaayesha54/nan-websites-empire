@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Cost Calculator — Yearly &amp; Lifetime Cat Cost (Free)</title>
+<meta name="description" content="Free cat cost calculator: see the true first-year, yearly, and lifetime cost of owning a cat in the USA — adjustable 2026 price defaults.">
+<link rel="canonical" href="https://nan-cattools.surge.sh/tools/cat-cost-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Cat Cost Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🐱 CatToolsHub</a>
+<div class="navlinks">
+<a href="cat-age-calculator.html">Age Calculator</a>
+<a href="cat-cost-calculator.html">Cost Calculator</a>
+<a href="cat-food-portion.html">Food Portion</a>
+<a href="litter-calculator.html">Litter Calculator</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Cat Cost Calculator</div>
+<h1>💵 Cat Cost Calculator: Yearly + Lifetime Budget</h1>
+<p class="intro">Adjust any cost to match your area — all amounts update live. USA 2026 price defaults included.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<h3>First-year (one-time) costs</h3>
+<label for="c-adoption">Adoption fee ($) <input id="c-adoption" type="number" min="0" value="150"></label>
+<label for="c-spay">Spay/neuter surgery ($) <input id="c-spay" type="number" min="0" value="200"></label>
+<label for="c-supplies">Startup supplies — carrier, boxes, tree, bed ($) <input id="c-supplies" type="number" min="0" value="250"></label>
+<label for="c-firstvet">First vet visit + vaccinations ($) <input id="c-firstvet" type="number" min="0" value="200"></label>
+<h3 style="margin-top:24px">Annual recurring costs</h3>
+<label for="c-food">Food per month ($) <input id="c-food" type="number" min="0" value="40"></label>
+<label for="c-litter">Litter per month ($) <input id="c-litter" type="number" min="0" value="20"></label>
+<label for="c-vet">Routine vet care per year ($) <input id="c-vet" type="number" min="0" value="250"></label>
+<label for="c-insurance">Pet insurance per year ($, 0 if none) <input id="c-insurance" type="number" min="0" value="300"></label>
+<label for="c-misc">Toys, treats, grooming per year ($) <input id="c-misc" type="number" min="0" value="150"></label>
+<h3 style="margin-top:24px">Lifetime</h3>
+<label for="c-years">Expected lifespan (years): <span id="c-years-lbl">15</span></label>
+<input id="c-years" type="range" min="5" max="22" value="15" step="1">
+</div>
+
+<div class="result" id="cost-result"><p>Adjust the costs above to see your totals.</p></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>What affects your total?</h2>
+<ul>
+<li><b>Adoption vs. breeder:</b> shelter adoption ($50–$200) is far cheaper than a breeder kitten ($500–$2,000+).</li>
+<li><b>Pet insurance:</b> $20–$50/month typically, but one emergency surgery can cost $2,000–$5,000.</li>
+<li><b>Senior years:</b> vet costs often double after age 10–11 — budget a cushion.</li>
+</ul>
+<p>For the complete 2026 breakdown with saving strategies, read <a href="../guides/how-much-does-a-cat-cost-2026.html">How Much Does a Cat Cost in 2026?</a></p>
+
+<h2>More cat tools</h2>
+<div class="related">
+<a href="cat-age-calculator.html">🐱 Cat Age Calculator<span>Cat years to human years</span></a>
+<a href="cat-food-portion.html">🍽️ Food Portion Calculator<span>Daily calories by RER formula</span></a>
+<a href="litter-calculator.html">🧹 Litter Calculator<span>Litter boxes, usage & cost</span></a>
+<a href="../guides/how-much-does-a-cat-cost-2026.html">📖 Cat Cost Guide 2026<span>Full USA breakdown</span></a>
+</div>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script>
+(function(){
+  var ids=['c-adoption','c-spay','c-supplies','c-firstvet','c-food','c-litter','c-vet','c-insurance','c-misc'];
+  var yrs=document.getElementById('c-years'), out=document.getElementById('cost-result');
+  function val(id){ return Math.max(0, +document.getElementById(id).value || 0); }
+  function money(n){ return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0}); }
+  function calc(){
+    document.getElementById('c-years-lbl').textContent=yrs.value;
+    var firstYearOneTime=val('c-adoption')+val('c-spay')+val('c-supplies')+val('c-firstvet');
+    var annual=(val('c-food')+val('c-litter'))*12+val('c-vet')+val('c-insurance')+val('c-misc');
+    var year1=firstYearOneTime+annual;
+    var lifetime=firstYearOneTime+annual*+yrs.value;
+    var note = annual>1500 ? 'Above the US average — look for savings on food bought in bulk and DIY toys.' :
+               annual<600 ? 'Below average — great budget plan. Keep a vet emergency cushion.' :
+               'Right around the US average for one cat. 👍';
+    out.innerHTML='<p>First-year total: <span class="big">'+money(year1)+'</span></p>'+
+      '<p>Annual cost after year 1: <b>'+money(annual)+'</b> / year</p>'+
+      '<p>Lifetime cost over <b>'+yrs.value+'</b> years: <b>'+money(lifetime)+'</b></p>'+
+      '<table><tr><th>Category</th><th>Amount</th></tr>'+
+      '<tr><td>One-time first-year setup</td><td>'+money(firstYearOneTime)+'</td></tr>'+
+      '<tr><td>Recurring, per year</td><td>'+money(annual)+'</td></tr></table>'+
+      '<p class="cat-fact">'+note+'</p>';
+  }
+  ids.forEach(function(id){ document.getElementById(id).addEventListener('input',calc); });
+  yrs.addEventListener('input',calc);
+  calc();
+})();
+</script>
+</body>
+</html>

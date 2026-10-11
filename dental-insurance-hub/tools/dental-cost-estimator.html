@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Cost Estimator 2026 – With vs Without Insurance</title>
+<meta name="description" content="Estimate what cleanings, fillings, crowns, root canals and implants cost in 2026 — with vs without dental insurance. Free calculator.">
+<link rel="canonical" href="https://nan-dentalins.surge.sh/tools/dental-cost-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<div class="logo">🦷 Dental<span>Insurance</span>Hub</div>
+<nav class="main">
+<a href="../index.html">Home</a>
+<a href="dental-cost-estimator.html">Cost Estimator</a>
+<a href="plan-comparator.html">Plan Comparator</a>
+<a href="need-quiz.html">Do I Need It?</a>
+<a href="../guides/dental-insurance-cost-2026.html">Costs 2026</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+</div></header>
+
+<div class="wrap"><div class="breadcrumb"><a href="../index.html">Home</a> › Tools › Cost Estimator</div></div>
+
+<section class="section"><div class="wrap">
+<h1>Dental Cost Estimator (2026)</h1>
+<p class="sub">Pick a procedure, add your insurance details, and see your estimated out-of-pocket cost with vs. without dental insurance.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="procedure">Dental procedure</label>
+<select id="procedure">
+<option value="cleaning">Cleaning &amp; exam</option>
+<option value="filling">Filling (per tooth)</option>
+<option value="crown">Crown</option>
+<option value="rootcanal">Root canal</option>
+<option value="implant">Dental implant</option>
+</select>
+
+<label for="network">Dentist network</label>
+<select id="network">
+<option value="in">In-network (discounted rate)</option>
+<option value="out">Out-of-network (full rate)</option>
+</select>
+
+<label for="deductible">Remaining annual deductible ($) <span id="dedOut" style="font-weight:400">50</span></label>
+<input type="range" id="deductible" min="0" max="500" value="50" step="10">
+
+<label for="maxrem">Remaining annual maximum ($) <span id="maxOut" style="font-weight:400">1500</span></label>
+<input type="range" id="maxrem" min="0" max="3000" value="1500" step="50">
+
+<label for="coins">Coinsurance your plan pays for this procedure (%) <span id="coinOut" style="font-weight:400">50</span></label>
+<input type="range" id="coins" min="0" max="100" value="50" step="5">
+
+<button class="calc" onclick="estimate()">Estimate My Cost</button>
+
+<div class="result" id="result" style="display:none"></div>
+</div>
+
+<div class="disclaimer">Estimates only, not financial advice. Actual costs vary by state, dentist, and plan. Check your plan's fee schedule before treatment.</div>
+
+<p style="margin-top:24px">Compare full plans with the <a href="plan-comparator.html">Plan Comparator</a>, or read <a href="../guides/dental-insurance-cost-2026.html">how much dental insurance costs in 2026</a> and whether <a href="../guides/is-dental-insurance-worth-it.html">dental insurance is worth it</a>.</p>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></div>
+<div><span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+</div></footer>
+
+<script>
+var COSTS = {
+  cleaning:  {name:"Cleaning & exam", in: 170,  out: 250},
+  filling:   {name:"Filling (per tooth)", in: 200, out: 300},
+  crown:     {name:"Crown", in: 1100, out: 1600},
+  rootcanal: {name:"Root canal", in: 1000, out: 1500},
+  implant:   {name:"Dental implant", in: 3500, out: 5000}
+};
+function syncLabels(){
+  document.getElementById('dedOut').textContent = document.getElementById('deductible').value;
+  document.getElementById('maxOut').textContent = document.getElementById('maxrem').value;
+  document.getElementById('coinOut').textContent = document.getElementById('coins').value;
+}
+['deductible','maxrem','coins'].forEach(function(id){document.getElementById(id).addEventListener('input',syncLabels);});
+syncLabels();
+
+function estimate(){
+  var proc = COSTS[document.getElementById('procedure').value];
+  var net = document.getElementById('network').value;
+  var full = (net === 'in') ? proc.in : proc.out;
+  var ded = parseFloat(document.getElementById('deductible').value) || 0;
+  var maxRem = parseFloat(document.getElementById('maxrem').value) || 0;
+  var coin = (parseFloat(document.getElementById('coins').value) || 0) / 100;
+
+  // With insurance: pay deductible first (up to remaining), then coinsurance on remainder, capped by annual max
+  var afterDed = Math.max(0, full - ded);
+  var patientAfterDed = Math.min(ded, full);
+  var insurerPays = afterDed * coin;
+  insurerPays = Math.min(insurerPays, maxRem);
+  var withIns = patientAfterDed + (full - patientAfterDed - insurerPays);
+
+  var el = document.getElementById('result');
+  el.style.display = 'block';
+  el.innerHTML =
+    '<h3>' + proc.name + ' — estimated cost</h3>' +
+    '<p>Full billed cost: <strong>$' + full.toLocaleString() + '</strong> (' + (net==='in' ? 'in-network' : 'out-of-network') + ')</p>' +
+    '<p class="big">With insurance: $' + Math.round(withIns).toLocaleString() + '</p>' +
+    '<p class="big">Without insurance: $' + full.toLocaleString() + '</p>' +
+    '<p>You save <strong>$' + Math.round(full - withIns).toLocaleString() + '</strong> with insurance on this procedure.</p>' +
+    '<p style="font-size:.9rem;color:#5b6f80">Breakdown: $' + Math.round(patientAfterDed) + ' deductible + $' + Math.round(full - patientAfterDed - insurerPays) + ' coinsurance, insurer pays $' + Math.round(insurerPays) + '.</p>';
+}
+</script>
+</body>
+</html>

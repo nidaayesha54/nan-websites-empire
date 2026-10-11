@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NP School ROI Calculator: Cost vs Salary Payoff | NPToolsHub</title>
+<meta name="description" content="Is NP school worth it? Enter tuition, program length, and RN salary to see your break-even year and 10-year net gain versus staying an RN.">
+<link rel="canonical" href="https://nan-nptools.surge.sh/tools/np-roi.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../"><span class="plus">+</span> NPToolsHub</a>
+<button class="menu-btn" aria-label="Menu" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+<nav class="main">
+<a href="np-salary.html">Salary Calculator</a>
+<a href="np-programs.html">Program Comparison</a>
+<a href="np-roi.html">ROI Calculator</a>
+<a href="../guides/how-to-become-np-2026.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<main class="wrap">
+<p class="breadcrumb"><a href="../">Home</a> › Tools › NP School ROI Calculator</p>
+<h1>NP School ROI Calculator</h1>
+<p>NP school is a five- or six-figure investment. This calculator adds up your true cost — tuition <em>plus</em> the RN earnings you give up while studying — and shows how fast the NP salary bump pays it back.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="tool-box">
+<div class="form-grid">
+<div class="field"><label for="prog">Program type</label>
+<select id="prog">
+<option value="60000|2.5">MSN (avg $60k tuition, 2.5 yrs)</option>
+<option value="140000|3.5">DNP (avg $140k tuition, 3.5 yrs)</option>
+<option value="25000|1.5">Post-grad certificate (avg $25k, 1.5 yrs)</option>
+<option value="custom">Custom (enter below)</option>
+</select></div>
+<div class="field"><label for="tuition">Total tuition ($)</label><input type="number" id="tuition" value="60000" min="0"></div>
+<div class="field"><label for="years">Years in program</label><input type="number" id="years" value="2.5" min="0.5" max="8" step="0.5"></div>
+<div class="field"><label for="rn">Current RN salary ($/yr)</label><input type="number" id="rn" value="85000" min="0"></div>
+<div class="field"><label for="np">Expected NP salary ($/yr)</label><input type="number" id="np" value="128500" min="0"></div>
+<div class="field"><label for="work">Work while studying? (earn % of RN salary)</label>
+<select id="work">
+<option value="0">No — full-time student (0%)</option>
+<option value="0.5" selected>Yes — part-time RN work (50%)</option>
+<option value="1">Yes — keep full RN salary (100%)</option>
+</select></div>
+</div>
+<p style="margin-top:1rem"><button class="btn teal" id="calc">Calculate My ROI</button></p>
+<div class="result" id="result"></div>
+</div>
+
+<h2>What counts as "cost"?</h2>
+<ul>
+<li><strong>Tuition and fees</strong> — the obvious part, averaging $60k for an MSN and $140k+ for a DNP.</li>
+<li><strong>Forgone earnings</strong> — the hidden cost. Two years of part-time RN work instead of full-time can mean $85k+ in missed income.</li>
+<li><strong>Interest</strong> — federal grad loans currently accrue interest from day one; this calculator adds a 6% APR estimate.</li>
+</ul>
+<p>Compare program paths in detail with our <a href="np-programs.html">NP program comparison tool</a>, or see what you'd earn with the <a href="np-salary.html">NP salary calculator</a>.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div class="foot-links"><a href="../">Home</a><a href="np-salary.html">NP Salary Calculator</a><a href="np-programs.html">NP Program Comparison</a><a href="../guides/how-to-become-np-2026.html">How to Become an NP</a><a href="../blog/">Blog</a></div>
+<small>Illustrative estimate only — not financial advice. © 2026 NPToolsHub.</small>
+</div></footer>
+
+<script>
+(function(){
+  var tuition = document.getElementById('tuition');
+  var years = document.getElementById('years');
+  var rn = document.getElementById('rn');
+  var np = document.getElementById('np');
+  var work = document.getElementById('work');
+  document.getElementById('prog').addEventListener('change', function(){
+    if (this.value === 'custom') return;
+    var parts = this.value.split('|');
+    tuition.value = parts[0];
+    years.value = parts[1];
+  });
+  function fmt(n){
+    var neg = n < 0; n = Math.abs(Math.round(n));
+    return (neg ? '-$' : '$') + n.toLocaleString('en-US');
+  }
+  document.getElementById('calc').addEventListener('click', function(){
+    var t = Math.max(0, parseFloat(tuition.value) || 0);
+    var y = Math.max(0.5, parseFloat(years.value) || 2.5);
+    var r = Math.max(0, parseFloat(rn.value) || 0);
+    var n = Math.max(0, parseFloat(np.value) || 0);
+    var w = parseFloat(work.value);
+    var forgone = r * y * (1 - w);            // earnings given up
+    var interest = t * 0.06 * (y / 2);        // rough average interest during school
+    var totalCost = t + forgone + interest;
+    var raise = n - r;
+    var box = document.getElementById('result');
+    var html;
+    if (raise <= 0) {
+      html = '<p><strong>Your expected NP salary does not exceed your current RN salary.</strong> With these numbers the degree does not pay for itself financially — double-check your salary inputs with the <a href="np-salary.html">NP salary calculator</a>.</p>';
+    } else {
+      var breakeven = totalCost / raise;
+      var gain10 = raise * 10 - totalCost;
+      var gain20 = raise * 20 - totalCost;
+      var verdict = breakeven <= 3
+        ? 'Excellent ROI — the degree pays for itself in under 3 years.'
+        : breakeven <= 6
+          ? 'Solid ROI — typical for most MSN programs.'
+          : 'Slow payback — consider a cheaper program or part-time work during school.';
+      html =
+        '<p><strong>' + verdict + '</strong></p>' +
+        '<div class="row"><span>Total tuition</span><span>' + fmt(t) + '</span></div>' +
+        '<div class="row"><span>Forgone RN earnings</span><span>' + fmt(forgone) + '</span></div>' +
+        '<div class="row"><span>Estimated interest during school (6% APR)</span><span>' + fmt(interest) + '</span></div>' +
+        '<div class="row"><span><strong>True total cost</strong></span><span><strong>' + fmt(totalCost) + '</strong></span></div>' +
+        '<div class="row"><span>Annual salary raise (NP vs RN)</span><span>' + fmt(raise) + '</span></div>' +
+        '<div class="row"><span><strong>Break-even point</strong></span><span><strong>' + breakeven.toFixed(1) + ' years after graduation</strong></span></div>' +
+        '<div class="row"><span>10-year net gain vs staying RN</span><span>' + fmt(gain10) + '</span></div>' +
+        '<div class="row"><span>20-year net gain vs staying RN</span><span>' + fmt(gain20) + '</span></div>' +
+        '<p style="margin-top:.8rem;font-size:.88rem;color:var(--muted)">Simplified model — ignores raises, taxes, and loan repayment terms. For planning purposes only, not financial advice.</p>';
+    }
+    box.innerHTML = html;
+    box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>

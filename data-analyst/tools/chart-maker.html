@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Chart Maker — Bar, Line & Pie Charts Online</title>
+<meta name="description" content="Create bar, line and pie charts from your data in seconds. Paste data or upload CSV, customize colors, download as PNG. Free, no signup.">
+<link rel="canonical" href="https://datatools.surge.sh/tools/chart-maker.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Chart Maker","applicationCategory":"DesignApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">📊 Data<span>Analyst</span>Tools</a>
+    <nav class="links">
+      <a href="csv-analyzer.html">CSV Analyzer</a>
+      <a href="chart-maker.html">Chart Maker</a>
+      <a href="stats-calculator.html">Stats Calc</a>
+      <a href="data-cleaner.html">Data Cleaner</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="badge">FREE · NO SIGNUP · PNG DOWNLOAD</div>
+  <h1>Chart Maker</h1>
+  <p>Paste your data or upload a CSV, pick a chart type, and download a clean PNG image for reports and presentations.</p>
+
+  <div class="panel">
+    <div class="row">
+      <div>
+        <label for="chart-type">Chart type</label>
+        <select id="chart-type">
+          <option value="bar">Bar chart</option>
+          <option value="line">Line chart</option>
+          <option value="pie">Pie chart</option>
+        </select>
+      </div>
+      <div>
+        <label for="chart-title">Chart title</label>
+        <input type="text" id="chart-title" value="My Chart" placeholder="My Chart">
+      </div>
+    </div>
+    <label for="data">Data — one item per line, format: <span class="kbd">Label, Value</span></label>
+    <textarea id="data" placeholder="January, 120&#10;February, 190&#10;March, 150&#10;April, 220">January, 120
+February, 190
+March, 150
+April, 220</textarea>
+    <div class="row">
+      <div>
+        <label for="csvfile">…or upload a CSV (first column = labels, second = values)</label>
+        <input type="file" id="csvfile" accept=".csv,.txt">
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:10px;">
+        <button class="btn" id="draw">Draw Chart</button>
+        <button class="btn btn-outline" id="download" disabled>Download PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Preview</h2>
+    <canvas id="chart" class="chart" width="900" height="520"></canvas>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <section class="section">
+    <h2>How to make a chart</h2>
+    <ol>
+      <li>Type or paste data lines as <span class="kbd">Label, Value</span> — or upload a CSV.</li>
+      <li>Choose <strong>bar</strong>, <strong>line</strong> or <strong>pie</strong>.</li>
+      <li>Click <strong>Draw Chart</strong>, then <strong>Download PNG</strong> to save the image.</li>
+    </ol>
+    <p style="color:var(--muted)">Tip: for line charts, keep labels in order (e.g. months). For pie charts, use 8 or fewer slices for readability.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="container">
+    <div>📊 DataAnalystTools — free tools for data people.</div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © <span id="year"></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/chart-maker.js"></script>
+</body>
+</html>

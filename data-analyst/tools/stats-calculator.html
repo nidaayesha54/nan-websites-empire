@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Statistics Calculator — Mean, Median, Mode, Std Dev</title>
+<meta name="description" content="Compute descriptive statistics instantly: mean, median, mode, standard deviation, variance, quartiles and percentiles. Free, no signup.">
+<link rel="canonical" href="https://datatools.surge.sh/tools/stats-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Statistics Calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">📊 Data<span>Analyst</span>Tools</a>
+    <nav class="links">
+      <a href="csv-analyzer.html">CSV Analyzer</a>
+      <a href="chart-maker.html">Chart Maker</a>
+      <a href="stats-calculator.html">Stats Calc</a>
+      <a href="data-cleaner.html">Data Cleaner</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="badge">FREE · NO SIGNUP · INSTANT</div>
+  <h1>Statistics Calculator</h1>
+  <p>Paste your numbers (separated by commas, spaces or new lines) and get full descriptive statistics instantly.</p>
+
+  <div class="panel">
+    <label for="nums">Your numbers</label>
+    <textarea id="nums" placeholder="12, 15, 18, 22, 22, 30, 45">12, 15, 18, 22, 22, 30, 45</textarea>
+    <button class="btn" id="calc" style="margin-top:12px;">Calculate Statistics</button>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:8px;">Standard deviation and variance use population formulas (divide by N).</p>
+  </div>
+
+  <div id="out" style="display:none;" class="panel">
+    <h2>Results</h2>
+    <div class="stat-grid" id="stats"></div>
+    <h3 style="margin-top:16px;">Percentiles</h3>
+    <table>
+      <tr><th>25th (Q1)</th><th>50th (Median)</th><th>75th (Q3)</th><th>90th</th><th>95th</th></tr>
+      <tr><td id="p-q1"></td><td id="p-med"></td><td id="p-q3"></td><td id="p-90"></td><td id="p-95"></td></tr>
+    </table>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <section class="section">
+    <h2>What each statistic means</h2>
+    <ul>
+      <li><strong>Mean</strong> — the average of all values.</li>
+      <li><strong>Median</strong> — the middle value when sorted; robust against outliers.</li>
+      <li><strong>Mode</strong> — the most frequent value(s).</li>
+      <li><strong>Standard deviation</strong> — how spread out the values are around the mean.</li>
+      <li><strong>Variance</strong> — the square of the standard deviation.</li>
+      <li><strong>Range</strong> — max minus min.</li>
+    </ul>
+  </section>
+</main>
+<footer class="site">
+  <div class="container">
+    <div>📊 DataAnalystTools — free tools for data people.</div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © <span id="year"></span></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/stats-calculator.js"></script>
+</body>
+</html>

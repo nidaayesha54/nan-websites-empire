@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negative Prompts That Fix Bad AI Video Outputs (2026 Guide)</title>
+<meta name="description" content="Lesson 3 of the free video prompt engineering course: negative prompts that kill extra limbs, morphing faces, flicker, watermarks and other AI video artifacts — with copy-paste lists for Sora, Runway, Luma & Pika.">
+<meta name="keywords" content="negative prompts AI video, AI video artifacts fix, extra limbs AI video, morphing face fix, negative prompt list 2026">
+<link rel="canonical" href="https://nan-promptengineer.surge.sh/guides/negative-prompts.html">
+<meta property="og:title" content="Negative Prompts That Fix Bad AI Video Outputs">
+<meta property="og:description" content="Free Lesson 3: copy-paste negative prompts that kill AI video artifacts across Sora, Runway, Luma & Pika.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Negative Prompts That Fix Bad AI Video Outputs","description":"Lesson 3 of the free video prompt engineering course: negative prompts that fix AI video artifacts.","author":{"@type":"Organization","name":"NAN Marketing Agency"},"datePublished":"2026-10-12"}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html"><b>Video</b>PromptEngineer</a>
+<nav class="nav-links">
+<a href="../tools/prompt-builder.html">Prompt Builder</a>
+<a href="../tools/prompt-grader.html">Prompt Grader</a>
+<a href="../tools/style-mixer.html">Style Mixer</a>
+<a href="video-prompt-engineering-101.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<section><div class="wrap">
+<article class="prose">
+<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="video-prompt-engineering-101.html">Guides</a> › Lesson 3</p>
+<h1>Negative Prompts That Fix Bad Outputs</h1>
+<div class="lesson-meta"><span>📚 Lesson 3 of 3</span><span>🔴 Pro</span><span>⏱ 15 min</span></div>
+
+<p>Extra fingers. Faces that melt mid-sentence. A watermark from a stock site burned into your "original" clip. These <strong>artifacts</strong> are the uncanny valley of AI video — and the fix isn't a better model, it's a <strong>negative prompt</strong>: an explicit list of what the AI must <em>not</em> generate.</p>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>Lesson objectives</h2>
+<ul>
+<li>Understand what negative prompts do (and their limits)</li>
+<li>Get copy-paste negative prompts for the 6 most common artifacts</li>
+<li>Learn where to place them per tool (Sora, Runway, Luma, Pika)</li>
+</ul>
+
+<h2>What a negative prompt actually does</h2>
+<p>Diffusion and transformer video models sample from learned patterns. A negative prompt steers sampling <em>away</em> from unwanted patterns — it's a guardrail, not a guarantee. It works best on <strong>anatomy and quality artifacts</strong> (limbs, faces, blur) and worst on <strong>conceptual errors</strong> (wrong object, wrong physics) — those need a better main prompt.</p>
+
+<h2>The universal negative prompt (copy-paste)</h2>
+<blockquote>extra limbs, extra fingers, deformed hands, morphing face, flickering, blurry motion, distorted anatomy, watermark, text overlay, logo, low quality, grainy, oversaturated, unnatural movement</blockquote>
+
+<div class="tip"><strong>💡 Pro tip:</strong> our <a href="../tools/prompt-builder.html">Prompt Builder</a> has a dedicated negative-prompt field that appends it correctly to every prompt you generate.</div>
+
+<h2>Artifact-by-artifact fixes</h2>
+<table>
+<tr><th>Artifact</th><th>Add to negative prompt</th></tr>
+<tr><td>Extra / melting limbs</td><td><code>extra limbs, deformed hands, extra fingers, fused fingers</code></td></tr>
+<tr><td>Face morphing mid-clip</td><td><code>morphing face, shifting facial features, inconsistent face</code></td></tr>
+<tr><td>Flicker / pulsing</td><td><code>flicker, strobing, pulsing light, frame jitter</code></td></tr>
+<tr><td>Watermarks &amp; text</td><td><code>watermark, text overlay, logo, subtitle, username</code></td></tr>
+<tr><td>Soupy motion blur</td><td><code>blurry motion, smeared movement, ghosting</code></td></tr>
+<tr><td>Plastic / oversmooth skin</td><td><code>plastic skin, airbrushed, waxy, oversaturated</code></td></tr>
+</table>
+
+<h2>Where negative prompts go (per tool, 2026)</h2>
+<ul>
+<li><strong>Runway / Luma / Pika / Kling:</strong> dedicated "negative prompt" field — use it, don't cram negatives into the main prompt.</li>
+<li><strong>Sora:</strong> no separate field — append at the end: <code>"Avoid: extra limbs, watermark, flicker."</code> Keep it short; Sora weighs the main prompt heavily.</li>
+<li><strong>APIs (general):</strong> pass as the <code>negative_prompt</code> parameter alongside your prompt.</li>
+</ul>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>What negative prompts CAN'T fix</h2>
+<ol>
+<li><strong>Bad composition</strong> — rewrite the main prompt with <a href="camera-language-ai-video.html">camera language</a>.</li>
+<li><strong>Wrong subject</strong> — the model misunderstood; simplify and specify (see <a href="video-prompt-engineering-101.html">Lesson 1</a>).</li>
+<li><strong>Physics weirdness</strong> — partially fixable with "natural movement, realistic physics" in the <em>positive</em> prompt.</li>
+</ol>
+
+<div class="exercise"><strong>✏️ Exercise:</strong> Generate any human close-up with no negative prompt, then regenerate with the universal negative prompt above. Compare hands and teeth frame-by-frame — that's the lesson.</div>
+
+<h2>Key takeaways</h2>
+<ul>
+<li>Negative prompts are guardrails against anatomy and quality artifacts.</li>
+<li>Keep one universal list; add artifact-specific terms per project.</li>
+<li>Use the tool's dedicated field where it exists; append briefly for Sora.</li>
+<li>Conceptual errors need a better main prompt, not more negatives.</li>
+</ul>
+
+<div class="next-lesson">
+<a class="btn" href="../tools/prompt-builder.html">Practice: Build a Prompt →</a>
+<a class="btn ghost" href="camera-language-ai-video.html">← Back to Lesson 2</a>
+</div>
+
+<p style="margin-top:26px">Course complete 🎓 — now put it to work: <a href="../tools/prompt-builder.html">build</a>, <a href="../tools/prompt-grader.html">grade</a> and <a href="../tools/style-mixer.html">remix</a> your prompts. And when you publish, verify your clip with a free <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI video detector</a> so your audience always knows what's AI.</p>
+</article>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

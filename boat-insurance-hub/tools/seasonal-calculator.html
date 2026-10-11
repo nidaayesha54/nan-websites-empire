@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lay-Up vs Year-Round Boat Insurance Calculator — Seasonal Savings 2026</title>
+<meta name="description" content="Compare a winter lay-up endorsement vs year-round boat insurance. See exactly how much seasonal storage saves you. Free calculator.">
+<link rel="canonical" href="https://nan-boatins.surge.sh/tools/seasonal-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Lay-Up vs Year-Round Boat Insurance Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">⚓ Boat<span>InsuranceHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="quote-estimator.html">Cost Estimator</a><a href="coverage-advisor.html">Coverage Quiz</a><a href="../blog/boat-insurance-discounts.html">Discounts</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Lay-Up vs Year-Round Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Lay-Up vs Year-Round Boat Insurance</h1>
+<p>If you store your boat in winter, a <strong>lay-up endorsement</strong> typically cuts hull premiums by 40–60% during storage months — while keeping liability coverage. See which option wins for you.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="field-row">
+<div class="field"><label>Your annual premium (quoted, $)</label><input type="number" id="prem" value="600" min="50" max="20000"></div>
+<div class="field"><label>Lay-up discount on hull portion (%)</label><input type="number" id="disc" value="50" min="0" max="90"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Months boat is stored / laid up</label><input type="number" id="months" value="5" min="0" max="11"></div>
+<div class="field"><label>Share of premium from hull coverage (%)</label><input type="number" id="hullshare" value="60" min="10" max="100"></div>
+</div>
+<div class="field"><label>Where is it stored?</label><select id="stor">
+<option value="home">Trailered at home (lowest risk)</option>
+<option value="indoor" selected>Indoor storage facility</option>
+<option value="outdoor">Outdoor storage / shrink-wrapped</option>
+<option value="water">Left in the water (in-water storage)</option>
+</select></div>
+<button class="btn" onclick="calc()">Compare the Options</button>
+<div class="result" id="res">
+<h3>Year-round vs lay-up</h3>
+<div class="big" id="save"></div>
+<table class="cmp">
+<tr><th>Option</th><th>Annual cost</th><th>Coverage during storage</th></tr>
+<tr><td>Year-round policy</td><td id="yrcost"></td><td>Full coverage all 12 months</td></tr>
+<tr id="layrow"><td>Lay-up endorsement</td><td id="laycost"></td><td id="laycov"></td></tr>
+</table>
+<p id="detail" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimates only, not financial advice.</strong> Lay-up terms vary by insurer — some require the boat to be hauled out, winterized and unused. If you take the boat out even once during lay-up, coverage may be void. Confirm terms with your insurer.</div>
+<p style="font-size:.9rem">More ways to save: <a href="../blog/boat-insurance-discounts.html">11 boat insurance discounts</a> · <a href="quote-estimator.html">estimate your premium first</a>.</p>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> BoatInsuranceHub. Estimates only, not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var P = num('prem'), d = num('disc')/100, m = num('months'),
+      hs = num('hullshare')/100, st = val('stor');
+  if(P<50) P=50; if(m>11) m=11; if(m<0) m=0;
+  var liabilityPart = P*(1-hs);          // stays on all year
+  var hullPart = P*hs;
+  var storedHull = hullPart*(1 - d)*(m/12);
+  var boatingHull = hullPart*((12-m)/12);
+  var layup = liabilityPart + storedHull + boatingHull;
+  var save = P - layup, pct = save/P*100;
+  document.getElementById('save').textContent =
+    (save>0 ? 'You save '+money(save)+'/yr ('+Math.round(pct)+'%) with lay-up' : 'Year-round costs the same or less');
+  document.getElementById('yrcost').textContent = money(P);
+  document.getElementById('laycost').textContent = money(layup);
+  var cov = {'home':'Hull protected in storage; liability continues','indoor':'Hull protected; confirm facility requirements','outdoor':'Hull protected; theft/fire usually covered','water':'Check — many lay-ups EXCLUDE in-water storage'};
+  document.getElementById('laycov').textContent = cov[st];
+  document.getElementById('layrow').className = (save>0)?'winner':'';
+  document.getElementById('detail').textContent =
+    'Math: your '+money(P)+'/yr splits into roughly '+money(liabilityPart)+' liability (unchanged all year) and '+money(hullPart)+' hull. '+
+    'The '+Math.round(d*100)+'% lay-up discount applies to the hull portion for '+m+' storage months, saving about '+money(hullPart*d*(m/12))+'.';
+  show('res');
+}
+</script>
+</body>
+</html>

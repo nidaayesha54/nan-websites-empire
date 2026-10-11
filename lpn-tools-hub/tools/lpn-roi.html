@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LPN School ROI Calculator 2026 — Cost vs Salary Payoff</title>
+<meta name="description" content="Free LPN ROI calculator: compare LPN school cost vs your expected salary lift and find your breakeven month plus 10-year net gain.">
+<link rel="canonical" href="https://nan-lpntools.surge.sh/tools/lpn-roi.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../index.html">🩺 LPN<span>Tools</span>Hub</a>
+<nav class="main"><a href="../index.html">Home</a><a href="lpn-salary.html">Salary Calc</a><a href="lpn-programs.html">Program Finder</a><a href="lpn-roi.html">ROI Calc</a><a href="../guides/how-to-become-lpn-2026.html">Guides</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> › LPN School ROI Calculator</div>
+<h1 style="color:var(--blue-dark);margin-bottom:6px">LPN School Cost vs. Salary ROI Calculator</h1>
+<p class="lead">Is LPN school worth it for <em>you</em>? Enter your costs and expected salary — we'll show your breakeven month and long-term net gain.</p>
+
+<div class="tool">
+<label for="roi-state">State (auto-fills expected salary)</label>
+<select id="roi-state"><option value="">— Select your state —</option></select>
+
+<label for="roi-cost">Total program cost (tuition + fees + books), $</label>
+<input type="number" id="roi-cost" value="12000" min="0" step="500">
+
+<label for="roi-months">Program length (months)</label>
+<input type="number" id="roi-months" value="14" min="6" max="36">
+
+<label for="roi-current">Current annual salary, $</label>
+<input type="number" id="roi-current" value="35000" min="0" step="1000">
+
+<label for="roi-salary">Expected LPN annual salary, $</label>
+<input type="number" id="roi-salary" value="62000" min="0" step="1000">
+
+<label for="roi-years">Years to project (1–40)</label>
+<input type="number" id="roi-years" value="10" min="1" max="40">
+
+<div style="margin-top:18px"><button class="btn btn-blue" id="roi-btn">Calculate My ROI</button></div>
+
+<div class="result" id="roi-result">
+<h3>Your LPN investment results</h3>
+<p><strong>Total investment</strong> (tuition + est. foregone earnings): <span class="big" id="roi-invest"></span></p>
+<p style="font-size:.9rem;color:var(--muted)" id="roi-costline"></p>
+<p><strong id="roi-years"></strong></p>
+<p class="big" id="roi-net"></p>
+<p><strong>Breakeven:</strong> <span id="roi-breach"></span></p>
+<div id="roi-bars" style="margin-top:16px"></div>
+</div>
+</div>
+
+<div class="disclaimer"><strong>Estimate only.</strong> Foregone earnings assume you cut work hours by ~50% during school — adjust if you'll keep working full-time. For program cost benchmarks, see <a href="lpn-programs.html">Program Finder</a> and the <a href="../guides/how-to-become-lpn-2026.html">How to Become an LPN</a> guide.</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<section class="block" style="padding-top:0"><div class="wrap" style="padding:0">
+<h2 class="sec">Related LPN tools & guides</h2>
+<div class="grid">
+<a class="card" href="lpn-salary.html"><div class="emoji">💰</div><h3>Salary Calculator</h3><p>Estimate LPN pay in your state.</p></a>
+<a class="card" href="lpn-programs.html"><div class="emoji">🎯</div><h3>Program Finder Quiz</h3><p>Match with the right program type.</p></a>
+<a class="card" href="../guides/lpn-salary-by-state.html"><div class="emoji">🗺️</div><h3>Salary by State</h3><p>All 50 states ranked for LPN pay.</p></a>
+</div>
+</div></section>
+</div>
+
+<footer class="site"><div class="wrap">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+<div>© <span id="yr"></span> LPNToolsHub · <a href="../blog/">Blog</a> · Salary data: <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener">BLS</a></div>
+</div></footer>
+<script src="../js/lpn-salary-data.js"></script>
+<script src="../js/lpn-roi.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

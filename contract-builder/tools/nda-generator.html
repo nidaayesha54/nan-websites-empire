@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free NDA Generator — Non-Disclosure Agreement Tool</title>
+<meta name="description" content="Generate a free mutual NDA (non-disclosure agreement) in minutes. Protect your ideas, data & trade secrets before sharing. No signup, print or save as PDF.">
+<link rel="canonical" href="https://contractbuilder.surge.sh/tools/nda-generator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"When should I use an NDA?","acceptedAnswer":{"@type":"Answer","text":"Before sharing business ideas, product plans, customer data, source code, or any proprietary information with clients, partners, or collaborators."}},
+{"@type":"Question","name":"What is a mutual NDA?","acceptedAnswer":{"@type":"Answer","text":"A mutual NDA protects both parties — each agrees to keep the other's confidential information private. A one-way NDA protects only the disclosing party."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">⚖️ Contract<span>Builder</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="service-agreement.html">Service Agreement</a>
+      <a href="nda-generator.html">NDA</a>
+      <a href="retainer-agreement.html">Retainer</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:48px 0">
+  <div class="wrap">
+    <h1>Free <span class="gold">NDA</span> Generator</h1>
+    <p class="lead">Protect your ideas before you share them. Mutual non-disclosure agreement in minutes.</p>
+  </div>
+</section>
+
+<div class="wrap">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+
+<form class="tool-form no-print" id="nda-form" onsubmit="return generateNDA();">
+  <h2 style="color:var(--navy);margin-bottom:20px">1. The Parties</h2>
+  <div class="form-grid">
+    <div class="field"><label>Party A — full name / company</label><input id="a_name" required placeholder="Jane Doe"></div>
+    <div class="field"><label>Party A — address (optional)</label><input id="a_addr" placeholder="City, State"></div>
+    <div class="field"><label>Party B — full name / company</label><input id="b_name" required placeholder="Acme Corp"></div>
+    <div class="field"><label>Party B — address (optional)</label><input id="b_addr" placeholder="City, State"></div>
+  </div>
+  <h2 style="color:var(--navy);margin:28px 0 20px">2. Purpose & Duration</h2>
+  <div class="field"><label>Purpose of disclosure (what will you discuss?)</label><textarea id="n_purpose" required placeholder="e.g. Evaluating a potential freelance web development project, including business plans and customer data."></textarea></div>
+  <div class="form-grid">
+    <div class="field"><label>Confidentiality period</label><select id="n_years"><option>1 year</option><option selected>2 years</option><option>3 years</option><option>5 years</option></select></div>
+    <div class="field"><label>Effective date</label><input id="n_date" type="date"></div>
+    <div class="field"><label>Governing state / jurisdiction</label><input id="n_gov" placeholder="e.g. California, USA"></div>
+  </div>
+  <div style="text-align:center;margin-top:24px"><button type="submit" class="btn btn-gold">Generate My NDA →</button></div>
+</form>
+
+<div class="doc-output" id="doc-out">
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy)" onclick="document.getElementById('doc-out').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})">← Edit details</button>
+  </div>
+  <div class="doc-paper" id="doc-paper"></div>
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+</div>
+
+<div class="disclaimer">⚠️ <strong>Template only — not legal advice.</strong> This is a general mutual NDA template. Consult a licensed attorney for sensitive or high-stakes disclosures.</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><a href="../index.html">Home</a><a href="service-agreement.html">Service Agreement</a><a href="retainer-agreement.html">Retainer</a><a href="../guides/freelance-contract-guide.html">Guide</a></div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Templates only, not legal advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+function generateNDA(){
+  var html =
+  '<h2 class="doc-title">MUTUAL NON-DISCLOSURE AGREEMENT</h2>'+
+  '<p class="doc-sub">Generated on '+esc(todayStr())+' via ContractBuilder</p>'+
+  '<p>This Mutual Non-Disclosure Agreement ("Agreement") is entered into as of <strong>'+esc(val('n_date')||'[effective date]')+'</strong>, by and between:</p>'+
+  '<p><strong>Party A:</strong> '+esc(val('a_name'))+(val('a_addr')?', '+esc(val('a_addr')):'')+'<br>'+
+  '<strong>Party B:</strong> '+esc(val('b_name'))+(val('b_addr')?', '+esc(val('b_addr')):'')+'<br>(each a "Party", together the "Parties").</p>'+
+  '<p><span class="clause-num">1. Purpose.</span> The Parties wish to share confidential information in connection with: '+esc(val('n_purpose'))+'</p>'+
+  '<p><span class="clause-num">2. Confidential Information.</span> "Confidential Information" means any non-public information disclosed by either Party, including business plans, financial data, customer lists, product designs, source code, marketing strategies, and trade secrets — whether disclosed orally, visually, or in writing.</p>'+
+  '<p><span class="clause-num">3. Obligations.</span> Each receiving Party agrees to: (a) hold Confidential Information in strict confidence; (b) not disclose it to any third party without prior written consent; (c) use it solely for the Purpose stated above; and (d) protect it with at least the same care it uses for its own confidential information.</p>'+
+  '<p><span class="clause-num">4. Exclusions.</span> Confidential Information does not include information that: (a) is or becomes publicly available through no fault of the receiving Party; (b) was already known to the receiving Party; (c) is independently developed without use of the Confidential Information; or (d) is disclosed under legal compulsion, with prompt notice to the disclosing Party where permitted.</p>'+
+  '<p><span class="clause-num">5. Term.</span> This Agreement begins on the effective date above and the confidentiality obligations survive for <strong>'+esc(val('n_years'))+'</strong> from the date of disclosure.</p>'+
+  '<p><span class="clause-num">6. No license.</span> Nothing in this Agreement grants any intellectual property rights. All Confidential Information remains the property of the disclosing Party.</p>'+
+  '<p><span class="clause-num">7. Return of materials.</span> Upon request, each Party shall promptly return or destroy all Confidential Information received.</p>'+
+  '<p><span class="clause-num">8. Remedies.</span> The Parties acknowledge that breach may cause irreparable harm, and the disclosing Party is entitled to seek injunctive relief in addition to any other remedies.</p>'+
+  '<p><span class="clause-num">9. Governing law.</span> This Agreement is governed by the laws of '+esc(val('n_gov')||'[jurisdiction]')+'.</p>'+
+  '<p><span class="clause-num">10. Entire agreement.</span> This document is the entire agreement regarding confidentiality between the Parties and may only be amended in writing signed by both Parties.</p>'+
+  '<div class="sig-block"><div><div class="sig-line"><strong>Party A:</strong> '+esc(val('a_name'))+'<br>Date: _______________</div></div>'+
+  '<div><div class="sig-line"><strong>Party B:</strong> '+esc(val('b_name'))+'<br>Date: _______________</div></div></div>';
+  document.getElementById('doc-paper').innerHTML = html;
+  document.getElementById('doc-out').classList.add('show');
+  document.getElementById('doc-out').scrollIntoView({behavior:'smooth'});
+  return false;
+}
+</script>
+</body>
+</html>

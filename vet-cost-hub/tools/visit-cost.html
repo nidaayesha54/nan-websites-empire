@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vet Visit Cost Estimator 2026 — Checkup, Vaccine & Surgery Prices</title>
+<meta name="description" content="Estimate vet visit costs in 2026: checkups, vaccines, dental, X-rays, spay/neuter & surgery ranges adjusted by US region and pet type. Free, instant, no signup.">
+<link rel="canonical" href="https://nan-vetcost.surge.sh/tools/visit-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Vet Visit Cost Estimator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🐾 Vet<span>CostHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="emergency-fund.html">Emergency Fund</a><a href="insurance-vs-savings.html">Insurance vs Savings</a><a href="../guides/how-much-does-vet-cost-2026.html">Guides</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Vet Visit Cost Estimator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Vet Visit Cost Estimator (2026)</h1>
+<p>Pick a procedure, your pet type, and your US region. Ranges are based on national 2026 averages and adjusted for regional cost differences.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field"><label>Pet type</label><select id="pet">
+<option value="dog">Dog</option>
+<option value="cat">Cat</option>
+<option value="other">Other (rabbit, ferret, bird…)</option>
+</select></div>
+<div class="field"><label>Procedure</label><select id="proc">
+<option value="checkup">Routine exam / checkup</option>
+<option value="vaccines">Core vaccines (annual set)</option>
+<option value="spay">Spay (female)</option>
+<option value="neuter">Neuter (male)</option>
+<option value="dental">Dental cleaning</option>
+<option value="xray">X-rays</option>
+<option value="bloodwork">Blood work (senior panel)</option>
+<option value="ultrasound">Ultrasound</option>
+<option value="er">Emergency exam (after hours)</option>
+<option value="mass">Mass / lump removal</option>
+<option value="foreign">Foreign body surgery</option>
+<option value="cruciate">Cruciate ligament (TPLO) surgery</option>
+</select></div>
+<div class="field"><label>Your US region</label><select id="region">
+<option value="1">National average</option>
+<option value="0.9">South (AL, TX, GA, FL…)</option>
+<option value="0.95">Midwest (OH, IL, MI, MN…)</option>
+<option value="1.15">West (CA, WA, CO, AZ…)</option>
+<option value="1.22">Northeast (NY, MA, NJ, CT…)</option>
+</select></div>
+<button class="btn btn-teal" onclick="calc()">Estimate Cost</button>
+<div class="result" id="res">
+<h3>Estimated cost range</h3>
+<div class="big" id="range"></div>
+<p id="note" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Cost estimates only — not veterinary advice. Always consult your veterinarian.</strong> Ranges reflect typical 2026 US prices; your clinic may charge more or less. Call ahead for an exact quote before booking.</div>
+<div class="related"><h3>Keep planning</h3>
+<ul>
+<li><a href="emergency-fund.html">Pet Emergency Fund Calculator</a> — build a safety net for surprise bills</li>
+<li><a href="insurance-vs-savings.html">Pet Insurance vs Self-Insuring</a> — which pays off for you?</li>
+<li><a href="../guides/how-much-does-vet-cost-2026.html">How Much Does a Vet Visit Cost in 2026?</a> — full price guide</li>
+<li><a href="../guides/how-to-save-on-vet-bills.html">How to Save Money on Vet Bills</a> — 15 proven tips</li>
+</ul></div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> VetCostHub. Cost estimates only — not veterinary advice. Always consult your veterinarian.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+// National 2026 average ranges: [low, high] per pet type
+var PROC={
+ checkup:{dog:[50,100],cat:[50,100],other:[40,90]},
+ vaccines:{dog:[75,150],cat:[75,150],other:[60,120]},
+ spay:{dog:[200,500],cat:[100,250],other:[150,300]},
+ neuter:{dog:[150,400],cat:[80,200],other:[120,250]},
+ dental:{dog:[300,800],cat:[300,800],other:[250,600]},
+ xray:{dog:[150,300],cat:[150,300],other:[120,250]},
+ bloodwork:{dog:[100,250],cat:[100,250],other:[90,200]},
+ ultrasound:{dog:[300,600],cat:[300,600],other:[250,500]},
+ er:{dog:[150,300],cat:[150,300],other:[150,300]},
+ mass:{dog:[300,1200],cat:[300,1200],other:[250,900]},
+ foreign:{dog:[1500,7000],cat:[1500,7000],other:[1000,4000]},
+ cruciate:{dog:[3000,5500],cat:[1500,3000],other:[1500,3000]}
+};
+function calc(){
+  var pet=val('pet'), p=PROC[val('proc')][pet], m=num('region');
+  var lo=Math.round(p[0]*m), hi=Math.round(p[1]*m);
+  var mid=Math.round((p[0]+p[1])/2*m);
+  var procName=document.getElementById('proc').selectedOptions[0].text;
+  document.getElementById('range').textContent=money(lo)+' – '+money(hi);
+  document.getElementById('note').textContent='Typical range for: '+procName+'. National midpoint: '+money(mid)+'. Regional multiplier applied: '+m.toFixed(2)+'×.';
+  show('res');
+}
+calc();
+</script>
+</body>
+</html>

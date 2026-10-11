@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avalanche vs Snowball Calculator — Free Simulation | DebtPayoff</title>
+<meta name="description" content="Free avalanche vs snowball calculator: enter up to 6 debts and your extra payment, and see both strategies simulated month-by-month with a clear winner.">
+<link rel="canonical" href="https://nan-debtpayoff.surge.sh/tools/avalanche-vs-snowball.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Avalanche vs Snowball Calculator","url":"https://nan-debtpayoff.surge.sh/tools/avalanche-vs-snowball.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Debt<span>Payoff</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="avalanche-vs-snowball.html">Avalanche vs Snowball</a>
+      <a href="payoff-timeline.html">Payoff Timeline</a>
+      <a href="debt-consolidation.html">Consolidation</a>
+      <a href="../guides/avalanche-vs-snowball-guide.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Avalanche vs Snowball</p>
+<h1>Avalanche vs Snowball Calculator</h1>
+<p class="lede">Enter your debts and one extra monthly payment. We'll simulate <strong>both</strong> payoff strategies month-by-month — payoff order, months, total interest — and declare a winner with the exact dollar difference.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice.</div>
+
+<section class="tool">
+  <h3 style="margin-top:0">Your Debts (up to 6)</h3>
+  <div id="debtRows"></div>
+  <button type="button" class="btn-calc" id="addDebt" style="background:var(--muted)">+ Add Debt</button>
+  <label for="extra">Extra payment per month (on top of all minimums) ($)</label>
+  <input type="number" id="extra" value="200" min="0" step="25">
+  <br><button class="btn-calc" id="calcBtn">Simulate Both Strategies</button>
+  <p id="err" class="warn-text"></p>
+</section>
+
+<section class="results" id="results" aria-live="polite"></section>
+
+<section>
+  <h2>Avalanche vs Snowball — Quick Refresher</h2>
+  <p><strong>Avalanche:</strong> pay minimums everywhere, attack the <strong>highest APR</strong> first. Mathematically cheapest — every extra dollar kills the most expensive interest.</p>
+  <p><strong>Snowball:</strong> pay minimums everywhere, attack the <strong>smallest balance</strong> first. You get a paid-off account fastest, and that win keeps you going.</p>
+  <p>The honest truth: the best strategy is the one you'll actually follow for months. Run your numbers above, see the real dollar gap, then decide. Deep dive: <a href="../guides/avalanche-vs-snowball-guide.html">Debt Avalanche vs Snowball (2026)</a>.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Debt Payoff Timeline</h3><p>Zoom in on a single debt with an extra-payment slider.</p><a href="payoff-timeline.html">Open →</a></div>
+    <div class="card"><h3>Consolidation Comparison</h3><p>Would one loan beat your current minimums?</p><a href="debt-consolidation.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="payoff-timeline.html">Payoff Timeline</a><a href="debt-consolidation.html">Consolidation</a><a href="../guides/avalanche-vs-snowball-guide.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> DebtPayoff. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/avalanche-vs-snowball.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Freelance Service Agreement Generator | ContractBuilder</title>
+<meta name="description" content="Generate a professional freelance service agreement free: scope, payment terms, deadlines, revisions & IP. Fill the form, print or save as PDF. No signup.">
+<link rel="canonical" href="https://contractbuilder.surge.sh/tools/service-agreement.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What should a freelance service agreement include?","acceptedAnswer":{"@type":"Answer","text":"Scope of work, deliverables, payment amount and schedule, deadlines, revision limits, late fees, termination terms, confidentiality, and intellectual property ownership."}},
+{"@type":"Question","name":"How do I make this agreement legally binding?","acceptedAnswer":{"@type":"Answer","text":"Both parties should review, sign, and date the document. Electronic signatures are legally valid in most jurisdictions, including under the US ESIGN Act."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">⚖️ Contract<span>Builder</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="service-agreement.html">Service Agreement</a>
+      <a href="nda-generator.html">NDA</a>
+      <a href="retainer-agreement.html">Retainer</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:48px 0">
+  <div class="wrap">
+    <h1>Freelance <span class="gold">Service Agreement</span> Generator</h1>
+    <p class="lead">Fill in the details below — get a professional contract covering scope, pay, deadlines & ownership.</p>
+  </div>
+</section>
+
+<div class="wrap">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+
+<form class="tool-form no-print" id="sa-form" onsubmit="return generateSA();">
+  <h2 style="color:var(--navy);margin-bottom:20px">1. The Parties</h2>
+  <div class="form-grid">
+    <div class="field"><label>Your full name / business name</label><input id="f_name" required placeholder="Jane Doe / Doe Studio LLC"></div>
+    <div class="field"><label>Your email</label><input id="f_email" type="email" placeholder="jane@example.com"></div>
+    <div class="field"><label>Client full name / company</label><input id="c_name" required placeholder="Acme Corp"></div>
+    <div class="field"><label>Client email</label><input id="c_email" type="email" placeholder="client@acme.com"></div>
+  </div>
+  <h2 style="color:var(--navy);margin:28px 0 20px">2. The Work</h2>
+  <div class="form-grid">
+    <div class="field"><label>Project title</label><input id="p_title" required placeholder="Website redesign"></div>
+    <div class="field"><label>Service type</label>
+      <select id="p_type"><option>Design</option><option>Writing / Copywriting</option><option>Web Development</option><option>Video Production</option><option>Marketing</option><option>Consulting</option><option>Other</option></select>
+    </div>
+  </div>
+  <div class="field"><label>Scope of work & deliverables (be specific)</label><textarea id="p_scope" required placeholder="e.g. 5-page marketing website: homepage, about, services, blog, contact. Includes mobile-responsive design and basic SEO setup."></textarea></div>
+  <div class="form-grid">
+    <div class="field"><label>Start date</label><input id="p_start" type="date"></div>
+    <div class="field"><label>Deadline / delivery date</label><input id="p_end" type="date"></div>
+    <div class="field"><label>Revision rounds included</label><select id="p_revisions"><option>1</option><option selected>2</option><option>3</option><option>Unlimited</option></select></div>
+  </div>
+  <h2 style="color:var(--navy);margin:28px 0 20px">3. Payment</h2>
+  <div class="form-grid">
+    <div class="field"><label>Total project fee (USD)</label><input id="pay_total" type="number" min="0" step="0.01" required placeholder="2500"></div>
+    <div class="field"><label>Upfront deposit %</label><select id="pay_deposit"><option>0</option><option>25</option><option selected>50</option><option>100</option></select></div>
+    <div class="field"><label>Payment due (days after invoice)</label><select id="pay_terms"><option>7</option><option selected>14</option><option>30</option></select></div>
+    <div class="field"><label>Late fee (% per month)</label><select id="pay_late"><option>0</option><option selected>1.5</option><option>3</option><option>5</option></select></div>
+  </div>
+  <h2 style="color:var(--navy);margin:28px 0 20px">4. Ownership & Extras</h2>
+  <div class="form-grid">
+    <div class="field"><label>IP transfers to client</label><select id="ip_when"><option>Upon final payment</option><option>Upon delivery</option><option>Freelancer retains ownership (license to client)</option></select></div>
+    <div class="field"><label>Governing state / jurisdiction</label><input id="gov" placeholder="e.g. California, USA"></div>
+  </div>
+  <div class="field"><label>Additional terms (optional)</label><textarea id="p_extra" placeholder="Anything else: kill fee, rush charges, communication expectations..."></textarea></div>
+  <div style="text-align:center;margin-top:24px"><button type="submit" class="btn btn-gold">Generate My Agreement →</button></div>
+</form>
+
+<div class="doc-output" id="doc-out">
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy)" onclick="document.getElementById('doc-out').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})">← Edit details</button>
+  </div>
+  <div class="doc-paper" id="doc-paper"></div>
+  <div class="doc-actions no-print">
+    <button class="btn btn-navy" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+</div>
+
+<div class="disclaimer">⚠️ <strong>Template only — not legal advice.</strong> This generator produces a general freelance service agreement. Review it carefully, and consult a licensed attorney for high-value or complex engagements.</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot no-print">Advertisement placeholder — 728×90</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><a href="../index.html">Home</a><a href="nda-generator.html">NDA</a><a href="retainer-agreement.html">Retainer</a><a href="../guides/freelance-contract-guide.html">Guide</a></div>
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Templates only, not legal advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+function generateSA(){
+  var deposit = parseFloat(val('pay_deposit'))||0;
+  var total = parseFloat(val('pay_total'))||0;
+  var depAmt = (total*deposit/100).toFixed(2);
+  var balAmt = (total-depAmt).toFixed(2);
+  var html =
+  '<h2 class="doc-title">FREELANCE SERVICE AGREEMENT</h2>'+
+  '<p class="doc-sub">Generated on '+esc(todayStr())+' via ContractBuilder</p>'+
+  '<p>This Freelance Service Agreement ("Agreement") is entered into as of <strong>'+esc(val('p_start')||'[start date]')+'</strong>, by and between:</p>'+
+  '<p><strong>Freelancer:</strong> '+esc(val('f_name'))+(val('f_email')?' ('+esc(val('f_email'))+')':'')+' ("Contractor")<br>'+
+  '<strong>Client:</strong> '+esc(val('c_name'))+(val('c_email')?' ('+esc(val('c_email'))+')':'')+' ("Client").</p>'+
+  '<p><span class="clause-num">1. Services.</span> Contractor agrees to perform the following services ("Project"): <strong>'+esc(val('p_title'))+'</strong> — '+esc(val('p_type'))+'. Scope of work: '+esc(val('p_scope'))+'</p>'+
+  '<p><span class="clause-num">2. Timeline.</span> Work begins on '+esc(val('p_start')||'[start date]')+' and deliverables are due by '+esc(val('p_end')||'[deadline]')+'. Time is of the essence. Delays caused by Client (late feedback, missing assets) extend the deadline accordingly.</p>'+
+  '<p><span class="clause-num">3. Compensation.</span> Client shall pay Contractor a total fee of <strong>$'+total.toFixed(2)+'</strong>. An upfront deposit of '+deposit+'% ($'+depAmt+') is due before work begins; the remaining balance of $'+balAmt+' is due within '+esc(val('pay_terms'))+' days of final invoice.</p>'+
+  '<p><span class="clause-num">4. Late payments.</span> Invoices unpaid after the due date accrue a late fee of '+esc(val('pay_late'))+'% per month. Contractor may pause work on overdue accounts after written notice.</p>'+
+  '<p><span class="clause-num">5. Revisions.</span> The fee includes '+esc(val('p_revisions'))+' round(s) of revisions. Additional revisions are billed at Contractor\'s standard hourly rate, agreed in writing before work continues.</p>'+
+  '<p><span class="clause-num">6. Intellectual property.</span> '+(val('ip_when').indexOf('final payment')>-1?'Upon receipt of final payment, Contractor assigns all intellectual property rights in the deliverables to Client. Until then, Contractor retains ownership.':val('ip_when').indexOf('license')>-1?'Contractor retains all intellectual property rights and grants Client a non-exclusive, worldwide license to use the deliverables for their intended purpose.':'Intellectual property in the deliverables transfers to Client upon delivery.')+' Contractor may display the work in their portfolio unless Client requests otherwise in writing.</p>'+
+  '<p><span class="clause-num">7. Confidentiality.</span> Each party shall keep confidential any proprietary information disclosed during the Project and shall not disclose it to third parties without prior written consent.</p>'+
+  '<p><span class="clause-num">8. Termination.</span> Either party may terminate with 14 days\' written notice. Client shall pay for all work completed through the termination date, plus any non-refundable deposit.</p>'+
+  '<p><span class="clause-num">9. Independent contractor.</span> Contractor is an independent contractor, not an employee. Contractor is responsible for their own taxes and insurance.</p>'+
+  '<p><span class="clause-num">10. Governing law.</span> This Agreement is governed by the laws of '+esc(val('gov')||'[jurisdiction]')+'.</p>'+
+  (val('p_extra')?'<p><span class="clause-num">11. Additional terms.</span> '+esc(val('p_extra'))+'</p>':'')+
+  '<p><span class="clause-num">'+(val('p_extra')?'12':'11')+'. Entire agreement.</span> This document constitutes the entire agreement between the parties regarding the Project and supersedes all prior discussions.</p>'+
+  '<div class="sig-block"><div><div class="sig-line"><strong>Contractor:</strong> '+esc(val('f_name'))+'<br>Date: _______________</div></div>'+
+  '<div><div class="sig-line"><strong>Client:</strong> '+esc(val('c_name'))+'<br>Date: _______________</div></div></div>';
+  document.getElementById('doc-paper').innerHTML = html;
+  document.getElementById('doc-out').classList.add('show');
+  document.getElementById('doc-out').scrollIntoView({behavior:'smooth'});
+  return false;
+}
+</script>
+</body>
+</html>

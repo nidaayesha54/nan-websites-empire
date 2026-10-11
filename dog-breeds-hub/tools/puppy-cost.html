@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First-Year Puppy Cost Calculator (2026) — DogBreedsHub</title>
+<meta name="description" content="Free first-year puppy cost calculator: estimate food, vet, training, grooming & insurance costs by dog size with 2026 US averages.">
+<link rel="canonical" href="https://nan-dogbreeds.surge.sh/tools/puppy-cost.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Puppy Cost Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}</script>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="logo" href="../index.html">🐾 Dog<span>Breeds</span>Hub</a>
+<button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="breed-finder.html">Breed Finder</a></li>
+<li><a href="breed-comparator.html">Compare</a></li>
+<li><a href="puppy-cost.html">Puppy Cost</a></li>
+<li><a href="../blog/index.html">Blog</a></li>
+</ul>
+</div></nav>
+
+<section class="section"><div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Puppy Cost Calculator</p>
+<h1 style="text-align:center;margin-bottom:8px">First-Year Puppy Cost Calculator 💰</h1>
+<p class="sub">The real price of year one — purchase, food, vet, training, grooming &amp; insurance, based on 2026 US averages.</p>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<form class="tool-box" id="costForm">
+<div class="field"><label for="size">Dog size</label>
+<select id="size" name="size">
+<option value="S">Small — under 25 lb (Chihuahua, Pug, Shih Tzu)</option>
+<option value="M" selected>Medium — 25–55 lb (Beagle, Corgi, Aussie)</option>
+<option value="L">Large — 55–90 lb (Labrador, Golden, Husky)</option>
+<option value="XL">Giant — 90+ lb (Great Dane, Newfoundland)</option>
+</select></div>
+<div class="field"><label for="acqType">How are you getting your puppy?</label>
+<select id="acqType" name="acqType">
+<option value="adoption">Adoption (shelter/rescue)</option>
+<option value="breeder" selected>Breeder purchase</option>
+</select></div>
+<div class="field"><label for="acqAmount">Acquisition cost ($)</label>
+<input type="number" id="acqAmount" name="acqAmount" min="0" max="10000" value="1500" placeholder="e.g. 1500"></div>
+<div class="field"><label for="groom">Grooming plan</label>
+<select id="groom" name="groom">
+<option value="diy">DIY only — brush &amp; bathe at home ($0)</option>
+<option value="occ" selected>Occasional — 2–4 pro grooms/year</option>
+<option value="reg">Regular — monthly pro grooming</option>
+</select></div>
+<div class="field">
+<label style="display:flex;align-items:center;gap:10px;font-weight:600"><input type="checkbox" id="spay" name="spay" checked style="width:auto"> Include spay/neuter</label>
+<label style="display:flex;align-items:center;gap:10px;font-weight:600;margin-top:8px"><input type="checkbox" id="training" name="training" checked style="width:auto"> Include puppy training classes (~$250)</label>
+<label style="display:flex;align-items:center;gap:10px;font-weight:600;margin-top:8px"><input type="checkbox" id="insurance" name="insurance" style="width:auto"> Include pet insurance</label>
+</div>
+<button class="btn" type="submit" style="width:100%">Calculate First-Year Cost 🧮</button>
+</form>
+
+<div class="result" id="costResult" style="max-width:780px;margin-left:auto;margin-right:auto"></div>
+
+<div class="callout" style="max-width:780px;margin:24px auto 0"><strong>🐾 Choosing a breed?</strong> Run the <a href="breed-finder.html">breed finder quiz</a> to match breeds to your budget and lifestyle, or <a href="breed-comparator.html">compare breeds</a> side by side. Curious about common misconceptions? Read <a href="../blog/dog-breed-myths.html">10 dog breed myths debunked</a>.</div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="foot-grid">
+<div><strong>🐾 DogBreedsHub</strong><br>Free breed tools &amp; guides for happy dogs.</div>
+<div><strong>Tools</strong><br>
+<a href="breed-finder.html">Breed Finder Quiz</a><br>
+<a href="breed-comparator.html">Breed Comparator</a><br>
+<a href="puppy-cost.html">Puppy Cost Calculator</a></div>
+<div><strong>Learn</strong><br>
+<a href="../guides/best-dog-breeds-families-2026.html">Family Breeds 2026</a><br>
+<a href="../guides/best-apartment-dogs.html">Apartment Dogs</a><br>
+<a href="../blog/index.html">Blog</a></div>
+</div>
+<p class="foot-note">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year"></span> DogBreedsHub. For general information only — always consult your veterinarian.</p>
+</div></footer>
+<script src="../js/cost.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

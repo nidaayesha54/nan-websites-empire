@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disability Coverage Needs Calculator 2026 | Free Estimate</title>
+<meta name="description" content="How much disability insurance do you need? Enter monthly expenses and other income to get your recommended monthly benefit — free, instant, private.">
+<link rel="canonical" href="https://nan-disabilityins.surge.sh/tools/coverage-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Disability<span>InsuranceHub</span></a>
+<nav class="nav"><a href="coverage-calculator.html">Coverage</a><a href="short-vs-long.html">Short vs Long</a><a href="elimination-quiz.html">Quiz</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Coverage Needs Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Disability Coverage Needs Calculator</h1>
+<p class="sub">Enter your numbers below. The calculator finds the monthly benefit that keeps your essential expenses covered if you can't work.</p>
+
+<div class="field-row">
+<div class="field"><label for="income">Monthly gross income ($)</label><input type="number" id="income" placeholder="e.g. 6500" min="0"></div>
+<div class="field"><label for="expenses">Monthly essential expenses ($)</label><input type="number" id="expenses" placeholder="e.g. 4200" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="other">Other monthly income (spouse, side work, rental) ($)</label><input type="number" id="other" placeholder="e.g. 1500" min="0"></div>
+<div class="field"><label for="current">Current disability benefit you already have ($/mo)</label><input type="number" id="current" placeholder="e.g. 0" min="0"></div>
+</div>
+
+<button class="btn" onclick="calcCoverage()">Calculate My Coverage</button>
+
+<div class="result" id="result">
+<h3>Your Coverage Results</h3>
+<p>Recommended monthly disability benefit: <span class="big" id="recBenefit">$0</span></p>
+<p>Annual benefit value: <strong id="annualBenefit">$0</strong></p>
+<p>Remaining monthly gap (expenses not covered): <strong id="gap">$0</strong></p>
+<p>Emergency savings target (6 months of gap): <strong id="emergency">$0</strong></p>
+<p id="note" style="font-size:.92rem;color:#5a6c7d"></p>
+</div>
+
+<div class="disclaimer">Estimates only, not financial advice. Most individual policies cap benefits at about 60% of gross income.</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2 style="margin-top:30px">Next steps</h2>
+<ul>
+<li>Compare <a href="short-vs-long.html">short-term vs long-term disability insurance</a> to see which fits your gap.</li>
+<li>Find the right waiting period with our <a href="elimination-quiz.html">elimination period quiz</a>.</li>
+<li>Read <a href="../guides/disability-insurance-cost-2026.html">how much disability insurance costs in 2026</a>.</li>
+<li>Not sure you need coverage? Read <a href="../guides/do-i-need-disability-insurance.html">do I need disability insurance?</a></li>
+</ul>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> DisabilityInsuranceHub. Estimates only — not financial advice.</div>
+<div><a href="../blog/index.html">Blog</a> · <a href="../guides/disability-insurance-cost-2026.html">Guides</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-US');}
+function calcCoverage(){
+  var income=parseFloat(document.getElementById('income').value)||0;
+  var expenses=parseFloat(document.getElementById('expenses').value)||0;
+  var other=parseFloat(document.getElementById('other').value)||0;
+  var current=parseFloat(document.getElementById('current').value)||0;
+  if(income<=0||expenses<=0){alert('Please enter your monthly income and essential expenses.');return;}
+  var gap=Math.max(0,expenses-other-current);
+  var cap=income*0.60;
+  var rec=Math.min(gap,cap);
+  var uncapped=Math.max(0,gap-cap);
+  document.getElementById('recBenefit').textContent=fmt(rec)+'/mo';
+  document.getElementById('annualBenefit').textContent=fmt(rec*12);
+  document.getElementById('gap').textContent=fmt(uncapped)+'/mo';
+  document.getElementById('emergency').textContent=fmt(gap*6);
+  var note=document.getElementById('note');
+  if(gap<=0){note.textContent='Good news: your current income sources already cover your essential expenses. You may still want coverage to protect savings and lifestyle expenses.';}
+  else if(uncapped>0){note.textContent='Your gap exceeds the typical 60%-of-income cap. Consider trimming expenses, building larger emergency savings, or a policy with a higher cap if available.';}
+  else{note.textContent='This benefit level covers your essential expenses after other income. A 90-day elimination period usually offers the best value — take the quiz below to confirm.';}
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

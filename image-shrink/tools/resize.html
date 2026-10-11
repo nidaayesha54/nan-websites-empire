@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Image Resizer — Social Media Size Presets | ImageShrink</title>
+<meta name="description" content="Resize images to exact pixels or one-click presets: Instagram, YouTube thumbnail, X, LinkedIn, Pinterest. Free, private, browser-based.">
+<link rel="canonical" href="https://imageshrink.github.io/tools/resize.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🖼️ Image<span>Shrink</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="compress.html">Compress</a><a href="resize.html">Resize</a><a href="convert.html">Convert</a><a href="../guides/how-to-compress-images.html">Guide</a></nav>
+</div></header>
+
+<div class="wrap">
+<div class="article" style="margin-top:24px">
+<h1>Image Resizer — Exact Pixels or Social Presets</h1>
+<p class="meta">Free · No signup · Images never leave your browser</p>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div id="msg2" style="display:none"></div>
+
+<div class="dropzone" id="dropzone2">
+<div class="dz-icon">📐</div>
+<strong>Drop your image here</strong>
+<p>or click to browse · JPG, PNG, WebP, GIF</p>
+<input type="file" id="fileInput2" accept="image/*">
+</div>
+
+<div class="preview-area" id="rPreview">
+<div class="preview-grid">
+<div class="preview-box"><strong>Original</strong><br><img id="previewImg2" alt="Original image"><div class="stat"><span id="rOrigDims">—</span> · <span id="rOrigSize">—</span></div></div>
+<div class="preview-box"><strong>Resized</strong><br><span id="rResult" style="display:none"><img id="rResImg" alt="Resized image"><div class="stat"><strong id="rResDims">—</strong><span id="rResSize">—</span></div></span><span class="stat">Press “Resize” to see the result.</span></div>
+</div>
+</div>
+
+<div class="controls" id="rControls" style="display:none">
+<div class="control-row">
+<label>Social media presets</label>
+<div class="preset-chips" id="presets"></div>
+</div>
+<div class="control-row">
+<label>Custom dimensions (px)</label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input type="number" id="widthIn" placeholder="Width" min="1" max="8000">
+<input type="number" id="heightIn" placeholder="Height" min="1" max="8000">
+</div>
+<div class="hint" id="aspectLabel"></div>
+</div>
+<div class="control-row">
+<label>Fit mode</label>
+<div>
+<label style="display:inline;font-weight:400;margin-right:20px"><input type="radio" name="fitmode" id="modeFit" value="fit" checked> Fit (pad with background)</label>
+<label style="display:inline;font-weight:400"><input type="radio" name="fitmode" value="fill"> Fill (crop to fill)</label>
+</div>
+</div>
+<div class="control-row">
+<label for="rFormat">Output format</label>
+<select id="rFormat">
+<option value="original">Keep original format</option>
+<option value="jpeg">JPG</option>
+<option value="png">PNG</option>
+<option value="webp">WebP</option>
+</select>
+</div>
+<button class="btn-purple" id="resizeBtn" style="width:100%">Resize Image</button>
+<div style="text-align:center;margin-top:16px">
+<button class="btn-purple" id="downloadBtn2">⬇ Download Resized Image</button>
+</div>
+</div>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="article">
+<h2>Popular resize presets</h2>
+<table>
+<tr><th>Platform</th><th>Size (px)</th></tr>
+<tr><td>Instagram Post</td><td>1080 × 1080</td></tr>
+<tr><td>Instagram Story / Reels</td><td>1080 × 1920</td></tr>
+<tr><td>YouTube Thumbnail</td><td>1280 × 720</td></tr>
+<tr><td>X / Twitter Post</td><td>1200 × 675</td></tr>
+<tr><td>Facebook Post</td><td>1200 × 630</td></tr>
+<tr><td>LinkedIn Post</td><td>1200 × 627</td></tr>
+<tr><td>Pinterest Pin</td><td>1000 × 1500</td></tr>
+</table>
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><button class="faq-q">Will resizing reduce quality? <span>＋</span></button><div class="faq-a">Downsizing (making smaller) keeps quality excellent. Upsizing beyond the original size can look soft — we recommend staying at or below the original dimensions.</div></div>
+<div class="faq-item"><button class="faq-q">What's the difference between Fit and Fill? <span>＋</span></button><div class="faq-a">Fit scales your image to fit inside the target size (padding the rest). Fill scales to cover the target and crops the overflow — best for exact social-media dimensions.</div></div>
+<p style="margin-top:24px">Need smaller files too? Try the <a href="compress.html">target-KB compressor</a>.</p>
+</div>
+</div>
+
+<footer><div class="wrap">
+<div><h4>ImageShrink</h4><a href="../index.html">Home</a><a href="compress.html">Compress</a><a href="resize.html">Resize</a></div>
+<div><h4>Tools</h4><a href="convert.html">Format Converter</a><a href="../guides/how-to-compress-images.html">Compression Guide</a><a href="../blog/index.html">Blog</a></div>
+<div><h4>Privacy</h4><p style="font-size:14px">All processing happens in your browser. Nothing is uploaded.</p></div>
+</div>
+<p class="copyright">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · © 2026 ImageShrink</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/resizer.js"></script>
+</body>
+</html>

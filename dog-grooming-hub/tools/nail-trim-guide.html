@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Nail Trimming Guide: Safe Angle & Length</title>
+<meta name="description" content="Interactive dog nail trimming guide: visual nail anatomy, safe cut-length slider, 45-degree angle demo & step-by-step checklist. Never cut the quick again.">
+<link rel="canonical" href="https://nan-doggrooming.surge.sh/tools/nail-trim-guide.html">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="logo" href="../index.html">🐾 Dog<span>Grooming</span>Hub</a>
+<button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="grooming-schedule.html">Schedule</a></li>
+<li><a href="grooming-cost.html">Cost Compare</a></li>
+<li><a href="nail-trim-guide.html">Nail Guide</a></li>
+<li><a href="../guides/how-often-groom-dog.html">Guides</a></li>
+<li><a href="../blog/index.html">Blog</a></li>
+</ul>
+</div></nav>
+
+<div class="wrap"><p class="breadcrumb"><a href="../index.html">Home</a> → Tools → Interactive Nail Trimming Guide</p></div>
+
+<header class="hero"><div class="wrap">
+<h1>Interactive Dog Nail Trimming Guide ✂️</h1>
+<p>See exactly where the quick is, how much is safe to cut, and the right angle — before you ever pick up the clippers.</p>
+</div></header>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section"><div class="wrap">
+<div class="tool-box">
+<h2 style="color:var(--teal-dark);margin-bottom:6px">Nail Anatomy Simulator</h2>
+<p style="color:var(--muted);margin-bottom:14px">Drag the slider to move the cut line. Watch the safety rating update in real time.</p>
+
+<svg id="nailSvg" viewBox="0 0 420 300" style="width:100%;max-width:640px;display:block;margin:0 auto;background:#f8fffd;border-radius:14px;border:1px solid var(--line)" role="img" aria-label="Interactive dog nail anatomy diagram">
+<defs>
+<clipPath id="nailClip">
+<path d="M 60 100 C 170 100 260 120 335 160 Q 362 175 355 195 Q 348 212 322 203 C 240 178 150 165 60 168 Z"/>
+</clipPath>
+</defs>
+<ellipse cx="34" cy="140" rx="28" ry="52" fill="#f3e3cd" stroke="#e0c9a6" stroke-width="2"/>
+<text x="10" y="235" font-size="13" fill="#8a7a63">toe</text>
+<path id="nailBody" d="M 60 100 C 170 100 260 120 335 160 Q 362 175 355 195 Q 348 212 322 203 C 240 178 150 165 60 168 Z" fill="#dcd6cc" stroke="#8f8a80" stroke-width="2"/>
+<g clip-path="url(#nailClip)">
+<path id="quickShape" d="M 66 112 L 250 128 L 250 152 L 66 152 Z" fill="#f472a0" opacity="0.85"/>
+</g>
+<text x="120" y="92" font-size="13" fill="#be5a7d" font-weight="bold">quick (blood + nerve)</text>
+<line x1="150" y1="96" x2="150" y2="122" stroke="#be5a7d" stroke-width="1.5"/>
+<text x="70" y="196" font-size="13" fill="#6b6257" font-weight="bold">shell (safe to trim)</text>
+<line id="cutLine" x1="330" y1="55" x2="330" y2="245" stroke="#16a34a" stroke-width="3" stroke-dasharray="8 5"/>
+<line id="angleLine" x1="330" y1="100" x2="330" y2="185" stroke="#7c3aed" stroke-width="3"/>
+<text id="angleLabel" x="336" y="90" font-size="13" fill="#7c3aed" font-weight="bold">45° cut angle</text>
+<circle id="cutPoint" cx="330" cy="142" r="5" fill="#7c3aed"/>
+</svg>
+
+<div class="field" style="margin-top:18px"><label for="trimSlider">Cut position — how much to trim</label>
+<input type="range" id="trimSlider" min="0" max="100" value="12">
+<div class="hint">Left = just the tip · Right = deep cut toward the quick</div></div>
+
+<div class="field"><label>Nail color</label>
+<div class="toggle-row">
+<button class="toggle-btn active" id="btnLight" onclick="setColor('light')">Light nails (quick visible)</button>
+<button class="toggle-btn" id="btnDark" onclick="setColor('dark')">Dark nails (quick hidden)</button>
+</div></div>
+
+<div class="field"><label>Cut angle</label>
+<div class="toggle-row">
+<button class="toggle-btn" id="ang30" onclick="setAngle(30)">30°</button>
+<button class="toggle-btn active" id="ang45" onclick="setAngle(45)">45° ✓ recommended</button>
+<button class="toggle-btn" id="ang60" onclick="setAngle(60)">60°</button>
+</div></div>
+
+<div class="field"><label style="font-weight:400"><input type="checkbox" id="neglected" onchange="render()"> My dog's nails are long / neglected</label>
+<div class="hint">Long nails mean a longer quick. Trim weekly in small slivers to make the quick recede.</div></div>
+
+<div class="result" id="safetyBox" style="margin-top:8px"></div>
+</div>
+
+<div class="tool-box" style="margin-top:26px">
+<h2 style="color:var(--teal-dark);margin-bottom:6px">Step-by-Step Checklist</h2>
+<p style="color:var(--muted)">Check each step off as you go. <span id="progText"><strong>0 of 7</strong> complete</span></p>
+<div class="bar-wrap"><div class="bar" id="progBar" style="width:0%">0%</div></div>
+<ul class="checklist" id="steps">
+<li><label><input type="checkbox" class="step"> <strong>Gather tools:</strong> sharp nail clippers (guillotine or scissor style for your dog's size), styptic powder or cornstarch, treats, and good lighting.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Calm your dog:</strong> handle the paws gently first, reward calm behavior, and work when your dog is relaxed — never rushed.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Find the quick:</strong> on light nails look for the pink center; on dark nails trim sliver by sliver and watch for a gray-pink oval in the cut surface.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Position the clippers:</strong> hold at roughly a 45° angle, following the natural downward curve of the nail.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Cut small slivers:</strong> take off 1–2 mm at a time, stopping 2–3 mm before the quick. When in doubt, stop — you can always trim more tomorrow.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Handle a nick calmly:</strong> if you nick the quick, press styptic powder on it for 10 seconds. It looks dramatic but stops quickly — stay calm so your dog does too.</label></li>
+<li><label><input type="checkbox" class="step"> <strong>Reward and repeat:</strong> big praise and a treat after each paw. Aim for every 2–4 weeks to keep nails at a healthy length.</label></li>
+</ul>
+</div>
+
+<div class="disclaimer" style="max-width:820px;margin:24px auto">If your dog's nails are severely overgrown, curled, or your dog panics, let a groomer or vet handle the first trim — then maintain at home with this guide.</div>
+
+<div class="related" style="max-width:820px;margin:24px auto">
+<h3>Related tools &amp; guides</h3>
+<ul>
+<li><a href="grooming-schedule.html">Grooming Schedule Generator</a></li>
+<li><a href="grooming-cost.html">DIY vs Groomer Cost Calculator</a></li>
+<li><a href="../guides/dog-grooming-at-home.html">DIY Dog Grooming at Home Guide</a></li>
+<li><a href="../guides/how-often-groom-dog.html">How Often Should You Groom Your Dog?</a></li>
+<li><a href="../blog/grooming-mistakes.html">10 Dog Grooming Mistakes Owners Make</a></li>
+</ul>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p class="foot-note">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year"></span> DogGroomingHub. For general information only — always consult your veterinarian.</p>
+</div></footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('show');});
+document.getElementById('year').textContent=new Date().getFullYear();
+
+var state={trim:12,angle:45,color:'light'};
+var BASE_X=60, TIP_X=355;
+
+function quickFrac(){return document.getElementById('neglected').checked?0.74:0.62;}
+function quickEndX(){return BASE_X+quickFrac()*(TIP_X-BASE_X);}
+function cutX(){return TIP_X-(state.trim/100)*(TIP_X-BASE_X-15);}
+function nailCenterY(x){return 132+(x-BASE_X)*0.19;}
+
+function setColor(c){state.color=c;
+ document.getElementById('btnLight').classList.toggle('active',c==='light');
+ document.getElementById('btnDark').classList.toggle('active',c==='dark');
+ render();}
+function setAngle(a){state.angle=a;
+ [30,45,60].forEach(function(x){document.getElementById('ang'+x).classList.toggle('active',x===a);});
+ render();}
+
+function render(){
+ var qx=quickEndX(), cx=cutX(), cy=nailCenterY(cx);
+ // quick shape
+ var qy1=118+(qx-66)*0.22, qy2=152+(qx-66)*0.22;
+ document.getElementById('quickShape').setAttribute('d','M 66 112 L '+qx.toFixed(1)+' '+qy1.toFixed(1)+' L '+qx.toFixed(1)+' '+qy2.toFixed(1)+' L 66 152 Z');
+ document.getElementById('quickShape').style.display=(state.color==='dark')?'none':'block';
+ // nail body color
+ document.getElementById('nailBody').setAttribute('fill',state.color==='dark'?'#4b4b52':'#dcd6cc');
+ // cut line
+ var line=document.getElementById('cutLine');
+ line.setAttribute('x1',cx);line.setAttribute('x2',cx);
+ // angle guideline through cut point
+ var rad=state.angle*Math.PI/180, dy=42, dx=Math.tan(rad)*dy;
+ var al=document.getElementById('angleLine');
+ al.setAttribute('x1',cx-dx/2);al.setAttribute('y1',cy-dy);
+ al.setAttribute('x2',cx+dx/2);al.setAttribute('y2',cy+dy);
+ var lbl=document.getElementById('angleLabel');
+ lbl.setAttribute('x',cx+8);lbl.setAttribute('y',cy-dy-8);
+ lbl.textContent=state.angle+'° cut angle';
+ var cp=document.getElementById('cutPoint');
+ cp.setAttribute('cx',cx);cp.setAttribute('cy',cy);
+ // safety rating
+ var mm=((TIP_X-cx)/6).toFixed(0);
+ var pill,msg,col;
+ if(cx>qx+18){pill='green';msg='SAFE — you are trimming well clear of the quick. Perfect for a maintenance trim.';col='#16a34a';}
+ else if(cx>qx){pill='yellow';msg='CAUTION — you are close to the quick. Take only thin slivers from here, and stop at the first pink/gray center.';col='#d97706';}
+ else{pill='red';msg='DANGER — this cut would hit the quick and cause bleeding. Move the slider left!';col='#dc2626';}
+ line.setAttribute('stroke',col);
+ var darkNote=state.color==='dark'?'<br><small>🌑 Dark nails: the quick is hidden — trim sliver by sliver and stop when the cut surface shows a gray-pink oval.</small>':'';
+ var negNote=document.getElementById('neglected').checked?'<br><small>⚠️ Neglected nails have a longer quick. Trim a sliver weekly — the quick recedes over time.</small>':'';
+ document.getElementById('safetyBox').innerHTML=
+ '<h3>Safety check: <span class="pill '+pill+'">'+(pill==='green'?'SAFE':pill==='yellow'?'CAUTION':'DANGER')+'</span></h3>'+
+ '<p>Trimming about <strong>'+mm+' mm</strong> from the tip at a <strong>'+state.angle+'°</strong> angle.</p>'+
+ '<p>'+msg+'</p><p>'+darkNote+negNote+'</p>';
+}
+document.getElementById('trimSlider').addEventListener('input',function(e){state.trim=parseInt(e.target.value,10);render();});
+
+// checklist progress
+var boxes=document.querySelectorAll('.step');
+boxes.forEach(function(b){b.addEventListener('change',updateProg);});
+function updateProg(){
+ var done=0;boxes.forEach(function(b){if(b.checked)done++;});
+ var pct=Math.round(done/boxes.length*100);
+ document.getElementById('progBar').style.width=pct+'%';
+ document.getElementById('progBar').textContent=pct+'%';
+ document.getElementById('progText').innerHTML='<strong>'+done+' of '+boxes.length+'</strong> complete';
+}
+render();
+</script>
+</body>
+</html>

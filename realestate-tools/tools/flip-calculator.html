@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Flip Profit Calculator — ROI & 70% Rule Check</title>
+  <meta name="description" content="Free house flipping calculator: estimate profit and ROI from purchase price, rehab budget, ARV, holding and selling costs. Includes 70% rule check.">
+  <link rel="canonical" href="https://nan-realestatetools.surge.sh/tools/flip-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the 70% rule in house flipping?","acceptedAnswer":{"@type":"Answer","text":"Pay no more than 70% of the after-repair value (ARV) minus repair costs. It builds in a margin for profit, holding costs, and surprises."}},
+    {"@type":"Question","name":"What selling costs should flippers budget?","acceptedAnswer":{"@type":"Answer","text":"Typically 6-10% of the sale price: agent commissions (5-6%), closing costs, and sometimes seller concessions. This calculator defaults to 6% and lets you adjust it."}},
+    {"@type":"Question","name":"What ROI should a house flip target?","acceptedAnswer":{"@type":"Answer","text":"Most experienced flippers want at least 10-20% ROI or $25,000-$30,000 minimum profit per deal, because one surprise can erase a thin margin."}}
+  ]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">RealEstate<span>Tools</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="rental-roi.html">Rental ROI</a>
+      <a href="flip-calculator.html">Flip Calculator</a>
+      <a href="rent-vs-buy.html">Rent vs Buy</a>
+      <a href="../guides/rental-property-roi-explained.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> › House Flip Profit Calculator</p>
+  <h1>House Flip Profit Calculator</h1>
+  <p>Enter purchase price, rehab budget, after-repair value, and your costs. See estimated profit, ROI, and whether the deal fits the 70% rule.</p>
+
+  <div class="calc">
+    <div class="field-row">
+      <div class="field"><label for="fl-purchase">Purchase price ($)</label><input type="number" id="fl-purchase" value="180000"></div>
+      <div class="field"><label for="fl-rehab">Rehab budget ($)</label><input type="number" id="fl-rehab" value="45000"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="fl-arv">After-repair value — ARV ($)</label><input type="number" id="fl-arv" value="280000"></div>
+      <div class="field"><label for="fl-holding">Holding costs ($)</label><input type="number" id="fl-holding" value="12000"></div>
+    </div>
+    <div class="field"><label for="fl-sell">Selling costs (% of sale price)</label><input type="number" id="fl-sell" value="6" step="0.5"></div>
+    <button class="btn btn-amber" id="fl-calc">Calculate flip profit</button>
+  </div>
+
+  <div class="result" id="fl-result"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="callout info">
+    <strong class="label">Holding costs</strong>
+    Include every month you own the property: loan payments, property tax, insurance, utilities, and HOA dues. A 6-month flip at $2,000/month in carrying costs is $12,000 of profit gone — budget honestly.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the 70% rule in house flipping? <span>+</span></div><div class="faq-a">Pay no more than 70% of the after-repair value minus repair costs. The 30% margin covers your profit, holding costs, selling costs, and the surprises every rehab hides.</div></div>
+  <div class="faq-item"><div class="faq-q">What selling costs should flippers budget? <span>+</span></div><div class="faq-a">Typically 6–10% of the sale price: agent commissions (5–6%), title and closing fees, and sometimes buyer concessions. This calculator defaults to 6% — adjust it to match your market.</div></div>
+  <div class="faq-item"><div class="faq-q">What ROI should a house flip target? <span>+</span></div><div class="faq-a">Most experienced flippers want at least 10–20% ROI or a $25,000–$30,000 minimum profit per deal. Thin margins are dangerous because one foundation surprise or permit delay can erase them.</div></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · <a href="../index.html">Home</a></div>
+    <div class="disclaimer">Educational purposes only — not financial advice.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

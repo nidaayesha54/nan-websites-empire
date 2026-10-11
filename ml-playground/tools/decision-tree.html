@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decision Tree Explorer — Which ML Algorithm Fits Your Project?</title>
+<meta name="description" content="Interactive decision tree: answer 3 simple questions and follow the exact classification path to discover which ML algorithm fits your project. Free, no signup.">
+<link rel="canonical" href="https://mlplayground.surge.sh/tools/decision-tree.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Decision Tree Explorer","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="../index.html">ML<span>Playground</span></a>
+<div class="links"><a href="linear-regression.html">Regression</a><a href="kmeans.html">K-Means</a><a href="train-test.html">Overfitting</a></div>
+</nav></header>
+<div class="tool-wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Decision Tree Explorer</div>
+<h1>🌳 Decision Tree Explorer</h1>
+<p class="lede">Answer 3 questions about <b>your</b> project. You're walking down a real decision tree — the same kind of model used in production ML systems.</p>
+<div id="treeBox"></div>
+<div class="path" id="treePath">Path so far: <code>—</code></div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="explain">
+<h3>What's happening here?</h3>
+<p>A decision tree is a flowchart learned from data: at each node it asks the yes/no question that <b>best splits</b> the examples (maximizing "information gain"). You just traced a path from root to leaf — that's exactly how a trained tree classifies a new input, except its questions are learned from thousands of examples instead of hand-written.</p>
+<ul>
+<li><b>Strength:</b> fully interpretable — you can explain every prediction.</li>
+<li><b>Weakness:</b> single trees overfit easily, memorizing noise.</li>
+<li><b>The fix:</b> <b>Random Forests</b> — grow hundreds of trees on random data samples and let them vote. That's the "Gradient Boosting / Random Forest" leaf you may have landed on.</li>
+</ul>
+</div>
+</div>
+<footer><p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></footer>
+<script src="../js/decision-tree.js"></script>
+</body>
+</html>

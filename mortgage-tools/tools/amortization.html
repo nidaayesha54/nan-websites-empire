@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Amortization Schedule Calculator (CSV) | MortgageTools</title>
+<meta name="description" content="Generate a full mortgage amortization schedule: every payment split into principal and interest, with totals and CSV download."/>
+<link rel="canonical" href="https://nan-mortgagetools.surge.sh/tools/amortization.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Mortgage<span>Tools</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Amortization Schedule Generator</h1><p class="lede">See where every dollar goes over the life of your loan — and download the full schedule as a CSV.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="amortForm" class="tool-form">
+<div class="field"><label for="loanAmount">Loan amount ($)</label><input type="number" id="loanAmount" min="1" step="1000" value="350000" required></div>
+<div class="field-row">
+<div class="field"><label for="amortRate">Interest rate (% APR)</label><input type="number" id="amortRate" min="0" max="20" step="0.125" value="6.5" required></div>
+<div class="field"><label for="amortTerm">Term (years)</label><input type="number" id="amortTerm" min="1" max="50" value="30" required></div>
+</div>
+<button type="submit" class="btn btn-primary">Generate schedule</button>
+</form></div><div class="tool-results" id="amortResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the math works</h2>
+<p>Each month, interest = remaining balance &times; APR/12; the rest of your fixed payment reduces principal. Early payments are mostly interest — on a 30-year loan at 6.5%, only about 15% of your first payment touches principal. The table recomputes this split for every payment until the balance hits zero.</p>
+<h2>Tips</h2>
+<ul><li>Extra principal payments early in the loan save the most interest.</li>
+<li>Use the CSV download to model "what if I pay $200 extra?" scenarios in a spreadsheet.</li>
+<li>Biweekly payments (26 half-payments/year) equal one extra full payment annually.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="refinance-calculator.html">Refinance Calculator</a></li><li><a href="../guides/how-much-house-can-i-afford.html">How Much House Can I Afford in 2026?</a></li><li><a href="../guides/refinance-rates-explained.html">Refinance Rates Explained: When Does It Make Sense?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/amortization.js"></script></body>
+</html>

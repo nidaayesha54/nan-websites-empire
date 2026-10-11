@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sora vs Runway Prompting in 2026 — How to Adapt Your Prompts</title>
+<meta name="description" content="Sora vs Runway prompting compared: how the two leading 2026 AI video models interpret prompts differently, and how to adapt one prompt for each model's strengths — camera language, physics, style and negative prompts.">
+<meta name="keywords" content="Sora vs Runway prompting, Sora prompt tips 2026, Runway prompt guide, AI video model comparison prompts">
+<link rel="canonical" href="https://nan-promptengineer.surge.sh/blog/sora-vs-runway-prompting.html">
+<meta property="og:title" content="Sora vs Runway: How Prompting Differs in 2026">
+<meta property="og:description" content="Same scene, two models — how to adapt one prompt for Sora's and Runway's different strengths.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Sora vs Runway Prompting in 2026 — How to Adapt Your Prompts","description":"How Sora and Runway interpret prompts differently and how to adapt one prompt for each model.","author":{"@type":"Organization","name":"NAN Marketing Agency"},"datePublished":"2026-10-12"}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html"><b>Video</b>PromptEngineer</a>
+<nav class="nav-links">
+<a href="../tools/prompt-builder.html">Prompt Builder</a>
+<a href="../tools/prompt-grader.html">Prompt Grader</a>
+<a href="../tools/style-mixer.html">Style Mixer</a>
+<a href="../guides/video-prompt-engineering-101.html">Guides</a>
+<a href="../blog/">Blog</a>
+</nav>
+</div></header>
+
+<section><div class="wrap">
+<article class="prose">
+<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog/">Blog</a> › Comparison</p>
+<h1>Sora vs Runway: How Prompting Differs in 2026</h1>
+<p class="section-sub">Oct 12, 2026 · 7 min read</p>
+
+<p>Copy-pasting the same prompt into Sora and Runway gives you two different videos — sometimes wildly different. The models have different architectures, training mixes and control surfaces. Here's how to write <strong>one master prompt</strong> and adapt it per model.</p>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>The core difference, simply</h2>
+<ul>
+<li><strong>Sora</strong> excels at coherent long shots, complex scenes and natural physics — but offers fewer explicit controls. Your words carry more weight, so <em>descriptive richness</em> matters most.</li>
+<li><strong>Runway</strong> excels at stylization and offers granular controls (camera moves, motion brush, negative prompt fields). <em>Structured, directed</em> prompts with explicit camera language win here.</li>
+</ul>
+
+<h2>Same scene, two prompts</h2>
+<p><strong>Master prompt (works as a base for both):</strong></p>
+<blockquote>"Slow dolly in: a lone astronaut walking across a neon-lit rainy Tokyo street, reflections rippling in puddles. Mysterious atmosphere, cinematic photorealistic style."</blockquote>
+<p><strong>Sora adaptation</strong> — expand the description, append negatives inline (no separate field):</p>
+<blockquote>"…Cinematic photorealistic, rain streaking past glowing signs, the astronaut's visor fogging slightly. Mysterious, filmic mood. Avoid: extra limbs, morphing face, watermark, flicker."</blockquote>
+<p><strong>Runway adaptation</strong> — lean on camera controls + the negative field:</p>
+<blockquote>Main prompt: "Slow dolly in: a lone astronaut walking across a neon-lit rainy Tokyo street, reflections rippling. Mysterious, cinematic photorealistic."<br>Negative field: <code>extra limbs, morphing face, watermark, flicker, blurry motion</code><br>+ set camera motion to a slow push-in for extra control.</blockquote>
+
+<h2>Adaptation cheat sheet</h2>
+<table>
+<tr><th>Prompt element</th><th>Sora (2026)</th><th>Runway (2026)</th></tr>
+<tr><td>Camera language</td><td>Describe in words; model interprets</td><td>Words + explicit camera controls</td></tr>
+<tr><td>Negative prompts</td><td>Append inline: "Avoid: …"</td><td>Dedicated negative field</td></tr>
+<tr><td>Prompt length</td><td>Handles longer, richer descriptions</td><td>60 words sweet spot; front-load</td></tr>
+<tr><td>Physics/motion</td><td>Strong — trust natural description</td><td>Add "natural movement, realistic physics"</td></tr>
+<tr><td>Style control</td><td>Name styles explicitly</td><td>Styles + presets; try the <a href="../tools/style-mixer.html">Style Mixer</a> hybrids</td></tr>
+</table>
+
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<h2>Workflow: write once, adapt twice</h2>
+<ol>
+<li>Write the master prompt with the <a href="../guides/video-prompt-engineering-101.html">6-part formula</a> using our <a href="../tools/prompt-builder.html">Prompt Builder</a>.</li>
+<li>Score it with the <a href="../tools/prompt-grader.html">Prompt Grader</a> — 75+ before adapting.</li>
+<li>Fork it: richer description + inline negatives for Sora; tighter prompt + negative field + camera controls for Runway.</li>
+<li>Generate both, compare, and keep the winner's phrasing as your template.</li>
+</ol>
+
+<div class="tip"><strong>💡 Pro tip:</strong> Luma and Pika sit closer to Runway's control style (dedicated fields, camera moves), while Kling rewards Sora-style rich description. One master prompt, two adaptation patterns, covers all five major 2026 models.</div>
+
+<p>Whichever model you ship on, verify the final render with a free <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI video detector</a> — different models leave different fingerprints, and knowing yours builds audience trust.</p>
+</article>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

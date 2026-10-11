@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free College GPA Calculator (4.0 Scale) | Campus Tools USA</title>
+<meta name="description" content="Calculate your college semester and cumulative GPA free on the US 4.0 scale. Add courses, grades, and credit hours — instant results, no signup.">
+<link rel="canonical" href="https://campustoolsusa.github.io/tools/gpa-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is college GPA calculated?","acceptedAnswer":{"@type":"Answer","text":"GPA = total grade points divided by total credit hours. Each letter grade converts to points (A=4.0, B=3.0, C=2.0, D=1.0, F=0.0), multiplied by the course's credit hours."}},
+{"@type":"Question","name":"What is the difference between semester and cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"Semester GPA covers one term only. Cumulative GPA combines all completed credits, weighted by credit hours — never a simple average of semester GPAs."}},
+{"@type":"Question","name":"What GPA do I need for scholarships?","acceptedAnswer":{"@type":"Answer","text":"Most merit scholarships require 3.0+. Competitive awards at top universities often want 3.5+, and honors like summa cum laude need 3.9-4.0."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">🎓 Campus<span>Tools</span> USA</a>
+<nav class="nav"><a href="../index.html">Home</a><a href="gpa-calculator.html">GPA Calc</a><a href="student-loan-calculator.html">Loan Calc</a><a href="citation-generator.html">Citations</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> › GPA Calculator</p>
+<div class="tool-shell">
+<h1>College GPA Calculator</h1>
+<p class="lede">US 4.0 scale. Add your courses below — semester GPA updates instantly. Add prior credits for cumulative GPA.</p>
+
+<div id="courses"></div>
+<button class="btn btn-sm" id="addCourse">+ Add Course</button>
+
+<div class="form-row" style="margin-top:20px">
+<div><label for="priorGpa">Prior Cumulative GPA (optional)</label><input type="number" id="priorGpa" step="0.01" min="0" max="4" placeholder="e.g. 3.20"></div>
+<div><label for="priorCredits">Prior Completed Credits (optional)</label><input type="number" id="priorCredits" min="0" placeholder="e.g. 45"></div>
+</div>
+
+<div class="result-box show" id="resultBox" style="display:block">
+<h3>Your GPA</h3>
+<div class="result-big" id="gpaOut">—</div>
+<p id="gpaDetail" style="color:#cdd8ec"></p>
+<table class="result-table" id="breakdownTable" style="display:none"><thead><tr><th>Course</th><th>Grade</th><th>Credits</th><th>Points</th></tr></thead><tbody id="breakdownBody"></tbody></table>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="prose" style="margin-top:32px">
+<h2>How College GPA Works (4.0 Scale)</h2>
+<p>Your GPA is the weighted average of your grades. Each letter grade converts to grade points, multiplied by credit hours:</p>
+<table><thead><tr><th>Grade</th><th>Points</th></tr></thead><tbody>
+<tr><td>A / A+</td><td>4.0</td></tr><tr><td>A−</td><td>3.7</td></tr>
+<tr><td>B+</td><td>3.3</td></tr><tr><td>B</td><td>3.0</td></tr><tr><td>B−</td><td>2.7</td></tr>
+<tr><td>C+</td><td>2.3</td></tr><tr><td>C</td><td>2.0</td></tr><tr><td>D</td><td>1.0</td></tr><tr><td>F</td><td>0.0</td></tr>
+</tbody></table>
+<p><strong>Formula:</strong> GPA = Σ (grade points × credit hours) ÷ Σ credit hours</p>
+<div class="callout"><strong>Tip:</strong> High-credit courses move your GPA more. A 4-credit A helps four times more than a 1-credit A — prioritize accordingly.</div>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>How is college GPA calculated?</summary><p>Total grade points divided by total credit hours, on the 4.0 scale.</p></details>
+<details><summary>Semester vs cumulative GPA?</summary><p>Semester covers one term. Cumulative combines all credits weighted by hours — never average semester GPAs directly.</p></details>
+<details><summary>What GPA do scholarships need?</summary><p>Usually 3.0+; competitive awards 3.5+; summa cum laude 3.9–4.0.</p></details>
+</div>
+<p style="margin-top:16px">Related: <a href="study-planner.html">Study Planner</a> · <a href="../blog/gpa-calculator-college-guide.html">GPA Guide</a></p>
+</div>
+</div>
+</div>
+<footer><div class="wrap"><div><strong>🎓 Campus Tools USA</strong></div><div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div><div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div></div></footer>
+<script src="../js/gpa.js"></script>
+</body>
+</html>

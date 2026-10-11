@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Simplicity Checker — Free Minimalist Score (0–100) | MinimalistLogoMaker</title>
+<meta name="description" content="Free logo simplicity scorer: answer 9 questions about colors, elements, gradients and scalability to get your logo's minimalism score (0–100) plus exact tips to simplify it.">
+<link rel="canonical" href="https://nan-minilogo.surge.sh/tools/whitespace-checker.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Logo Whitespace Checker","url":"https://nan-minilogo.surge.sh/tools/whitespace-checker.html","description":"Free tool that scores your logo's simplicity from 0 to 100 and gives targeted tips to make it more minimal."}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="../index.html"><span class="mark"></span>MinimalistLogoMaker</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav class="main" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="shape-combiner.html">Shape Combiner</a>
+      <a href="minimalist-quiz.html">Quiz</a>
+      <a href="whitespace-checker.html">Simplicity Score</a>
+      <a href="../guides/minimalist-logo-design-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container page">
+  <div class="crumb"><a href="../index.html">Home</a> › Tools › Whitespace Checker</div>
+  <h1>Logo Whitespace Checker</h1>
+  <p class="lede">How minimal is your logo, really? Answer 9 quick questions about your mark and get a simplicity score from 0–100 — plus the exact changes that would make it cleaner.</p>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+  <div class="tool-wrap">
+    <div>
+      <form class="panel" id="scoreForm">
+        <h2>Describe your logo</h2>
+        <div class="row2">
+          <div class="field"><label for="fColors">How many colors?</label>
+            <select id="fColors"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5plus">5 or more</option></select>
+          </div>
+          <div class="field"><label for="fElements">Distinct shapes / elements?</label>
+            <input type="number" id="fElements" min="1" max="10" value="2">
+          </div>
+        </div>
+        <div class="field"><label>Does it use gradients?</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="fGrad" value="yes">Yes</label>
+            <label class="radio-pill on"><input type="radio" name="fGrad" value="no" checked>No</label>
+          </div>
+        </div>
+        <div class="field"><label>Does it use shadows or 3D effects?</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="fShadow" value="yes">Yes</label>
+            <label class="radio-pill on"><input type="radio" name="fShadow" value="no" checked>No</label>
+          </div>
+        </div>
+        <div class="field"><label>Does it have fine detail (thin lines, tiny text in the mark)?</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="fDetail" value="yes">Yes</label>
+            <label class="radio-pill on"><input type="radio" name="fDetail" value="no" checked>No</label>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="fWords">Words inside the logo?</label>
+            <input type="number" id="fWords" min="0" max="6" value="0">
+          </div>
+          <div class="field"><label>Is it still readable at favicon size (32px)?</label>
+            <div class="radio-row">
+              <label class="radio-pill on"><input type="radio" name="fFavicon" value="yes" checked>Yes</label>
+              <label class="radio-pill"><input type="radio" name="fFavicon" value="no">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="field"><label>Does it work in a single color (pure black or white)?</label>
+          <div class="radio-row">
+            <label class="radio-pill on"><input type="radio" name="fMono" value="yes" checked>Yes</label>
+            <label class="radio-pill"><input type="radio" name="fMono" value="no">No</label>
+          </div>
+        </div>
+        <div class="field"><label>Does it use negative space cleverly?</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="fNeg" value="yes">Yes</label>
+            <label class="radio-pill on"><input type="radio" name="fNeg" value="no" checked>No</label>
+          </div>
+        </div>
+        <button type="submit" class="btn">Score My Logo</button>
+      </form>
+    </div>
+    <div class="preview-box">
+      <div class="panel" style="text-align:center">
+        <h2>Your simplicity score</h2>
+        <div id="scoreResult">
+          <p class="hint">Fill in the form and hit “Score My Logo” — your grade and personalized simplification tips will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article" style="margin-top:34px">
+    <h2>What the score measures</h2>
+    <p>The checker weighs the five things that separate minimal logos from cluttered ones: <strong>color count</strong> (1–2 is ideal), <strong>element count</strong> (one idea beats three), <strong>flatness</strong> (no gradients, shadows or fine detail), <strong>scalability</strong> (readable at favicon size, works in one color), and a <strong>bonus for negative space</strong> — the hallmark of clever minimal design.</p>
+    <h2>How to improve a low score</h2>
+    <ul>
+      <li>Cut colors first — it's the fastest win. See the <a href="../blog/minimalist-logo-color-guide.html">minimalist color guide</a>.</li>
+      <li>Merge elements: two overlapping shapes often say more than four separate ones. Try the <a href="shape-combiner.html">shape combiner</a>.</li>
+      <li>Learn the timeless rules in <a href="../guides/minimalist-logo-design-2026.html">minimalist logo design 2026</a>.</li>
+    </ul>
+  </div>
+
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <p class="flinks">
+      <a href="shape-combiner.html">Shape Combiner</a>
+      <a href="minimalist-quiz.html">Quiz</a>
+      <a href="whitespace-checker.html">Simplicity Score</a>
+      <a href="../guides/minimalist-logo-design-2026.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </p>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/whitespace-checker.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Preços UGC Brasil 2026 — Quanto Cobrar por Vídeo</title>
+<meta name="description" content="Calculadora gratuita: descubra quanto cobrar por vídeos UGC no Brasil. Escolha o tipo de vídeo, direitos de uso e urgência e receba sua faixa de preço em reais.">
+<link rel="canonical" href="https://quantocobrarugc.github.io/tools/calculadora-precos.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="../index.html">💰 Quanto<span>Cobrar</span>UGC</a>
+<nav class="nav">
+<a href="../index.html">Início</a>
+<a href="calculadora-precos.html">Calculadora</a>
+<a href="tabela-precos.html">Tabela de Preços</a>
+<a href="modelos-proposta.html">Propostas</a>
+</nav>
+</div>
+</header>
+
+<div class="wrap">
+<section class="section">
+<h1>🧮 Calculadora de Preços UGC — Brasil</h1>
+<p>Responda as perguntas abaixo e descubra sua faixa de preço ideal em reais, com base nos valores praticados no mercado brasileiro em 2026.</p>
+
+<div class="tool-box">
+<div class="field">
+<label for="tipo">Tipo de vídeo</label>
+<select id="tipo">
+<option value="15">Vídeo curto (15 segundos)</option>
+<option value="30" selected>Vídeo padrão (30 segundos)</option>
+<option value="60">Vídeo longo (60 segundos)</option>
+</select>
+</div>
+<div class="field">
+<label for="nivel">Seu nível de experiência</label>
+<select id="nivel">
+<option value="0">Iniciante (0–10 vídeos entregues)</option>
+<option value="1" selected>Intermediário (10–50 vídeos)</option>
+<option value="2">Avançado (50+ vídeos / portfólio forte)</option>
+</select>
+</div>
+<div class="field">
+<label for="uso">Direitos de uso</label>
+<select id="uso">
+<option value="0">Somente orgânico (feed/stories da marca)</option>
+<option value="1" selected>Anúncios pagos — 3 meses</option>
+<option value="2">Anúncios pagos — 12 meses</option>
+</select>
+</div>
+<div class="field">
+<label for="prazo">Prazo de entrega</label>
+<select id="prazo">
+<option value="0" selected>Normal (5–7 dias)</option>
+<option value="1">Urgente (48 horas) +30%</option>
+</select>
+</div>
+<button class="btn btn-green" onclick="calcular()">Calcular meu preço</button>
+<div class="result" id="resultado" style="display:none">
+<div>💵 Sua faixa de preço:</div>
+<div class="price" id="preco">R$ 0 – R$ 0</div>
+<div class="note" id="nota"></div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço para anúncio</div>
+
+<h2>Como a calculadora funciona?</h2>
+<p>Os valores-base vêm de pesquisa com criadores brasileiros ativos em 2026. O cálculo multiplica o valor-base pelo tipo de vídeo, nível de experiência, direitos de uso e urgência — os 4 fatores que mais impactam o preço no mercado nacional.</p>
+<p>Veja a <a href="tabela-precos.html">tabela completa de preços</a> por nicho e os <a href="modelos-proposta.html">modelos de proposta</a> para enviar às marcas.</p>
+</section>
+</div>
+
+<div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer>
+<div class="wrap">
+<div>© 2026 QuantoCobrarUGC — Ferramentas gratuitas para criadores brasileiros.</div>
+<div>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a></div>
+</div>
+</footer>
+
+<script>
+function calcular(){
+  var tipo=document.getElementById('tipo').value;
+  var nivel=parseInt(document.getElementById('nivel').value,10);
+  var uso=parseInt(document.getElementById('uso').value,10);
+  var urgente=document.getElementById('prazo').value==='1';
+
+  // base por nível (vídeo 30s, uso orgânico): [min, max]
+  var bases=[[100,250],[250,600],[600,1400]];
+  var base=bases[nivel];
+
+  // multiplicador por duração
+  var multTipo={'15':0.8,'30':1.0,'60':1.7};
+  var m=multTipo[tipo]||1.0;
+
+  // multiplicador por direitos de uso
+  var multUso=[1.0,1.5,2.1];
+  m*=multUso[uso];
+
+  // urgência
+  if(urgente){m*=1.3;}
+
+  var min=Math.round(base[0]*m/10)*10;
+  var max=Math.round(base[1]*m/10)*10;
+
+  document.getElementById('preco').textContent='R$ '+min.toLocaleString('pt-BR')+' – R$ '+max.toLocaleString('pt-BR')+'';
+
+  var notas=[];
+  if(uso===2){notas.push('Direitos de 12 meses valem ouro: nunca venda barato.');}
+  if(urgente){notas.push('Taxa de urgência de 30% aplicada.');}
+  if(nivel===0){notas.push('Dica: feche os 5 primeiros jobs com preço de entrada e peça depoimento + autorização de portfólio.');}
+  if(nivel===2){notas.push('Com portfólio forte, negocie pacotes mensais — marcas pagam mais por recorrência.');}
+  notas.push('Valores em reais, baseados no mercado brasileiro em 2026.');
+  document.getElementById('nota').textContent=notas.join(' ');
+
+  document.getElementById('resultado').style.display='block';
+  document.getElementById('resultado').scrollIntoView({behavior:'smooth',block:'center'});
+}
+calcular();
+</script>
+</body>
+</html>

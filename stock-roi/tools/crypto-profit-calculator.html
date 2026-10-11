@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Profit Calculator — Net Gains After Fees | StockROI</title>
+<meta name="description" content="Free crypto profit calculator: enter buy/sell prices and exchange fees to see your true net profit, ROI % and breakeven price. Instant, no signup.">
+<link rel="canonical" href="https://stockroi.github.io/tools/crypto-profit-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do crypto exchange fees affect profit?","acceptedAnswer":{"@type":"Answer","text":"You pay fees on both sides: a buy fee on your cost and a sell fee on your revenue. On small trades, fees can erase several percent of gains — this calculator subtracts both so you see true net profit."}},
+{"@type":"Question","name":"What is the breakeven price for a crypto trade?","acceptedAnswer":{"@type":"Answer","text":"The sell price at which your after-fee revenue exactly equals your cost including buy fees. Our calculator shows it automatically — any sale above breakeven is profit."}}
+]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">📈 Stock<span>ROI</span></a>
+<nav class="nav">
+<a href="../index.html">Home</a>
+<a href="stock-return-calculator.html">Stock Calc</a>
+<a href="dca-calculator.html">DCA Calc</a>
+<a href="crypto-profit-calculator.html">Crypto Calc</a>
+</nav>
+</div></header>
+
+<div class="wrap">
+<p class="breadcrumb"><a href="../index.html">Home</a> → Crypto Profit Calculator</p>
+<section class="section">
+<span class="kicker">Free Tool</span>
+<h1>Crypto Profit Calculator</h1>
+<p class="lede">Fees eat crypto gains. Enter your trade with exchange fees to see your <em>true</em> net profit.</p>
+
+<div class="tool-box">
+<div class="field"><label for="buyPrice">Buy price per coin ($)</label><input type="number" id="buyPrice" value="60000" min="0" step="0.01"></div>
+<div class="field"><label for="sellPrice">Sell price per coin ($)</label><input type="number" id="sellPrice" value="75000" min="0" step="0.01"></div>
+<div class="field"><label for="amount">Amount of coins</label><input type="number" id="amount" value="0.5" min="0" step="0.001"></div>
+<div class="field"><label for="buyFee">Buy fee (%)</label><input type="number" id="buyFee" value="0.5" min="0" max="5" step="0.1"><div class="hint">Typical: 0.1–1% per trade depending on exchange.</div></div>
+<div class="field"><label for="sellFee">Sell fee (%)</label><input type="number" id="sellFee" value="0.5" min="0" max="5" step="0.1"></div>
+<div class="results">
+<h3>Your Results</h3>
+<div class="result-row"><span>Total cost</span><span class="val" id="rCost">$0.00</span></div>
+<div class="result-row"><span>Total fees</span><span class="val" id="rFees">$0.00</span></div>
+<div class="result-row"><span>Revenue after sell fee</span><span class="val" id="rRevenue">$0.00</span></div>
+<div class="result-row"><span>Net profit</span><span class="val" id="rNet">$0.00</span></div>
+<div class="result-row"><span>ROI</span><span class="val" id="rRoi">0.00%</span></div>
+<div class="result-row"><span>Breakeven sell price</span><span class="val" id="rBe">—</span></div>
+</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<article class="prose">
+<h2>Why fees matter in crypto</h2>
+<p>A "25% gain" on paper can shrink fast: pay 0.5% buying and 0.5% selling and you've given up roughly 1% of the round trip — more on leveraged or frequent trades. This calculator subtracts both fees so the profit you see is the profit you'd actually keep.</p>
+<h2>The formula</h2>
+<p><strong>Net profit</strong> = (Sell price × coins × (1 − sell fee)) − (Buy price × coins × (1 + buy fee))</p>
+<p><strong>Breakeven</strong> = (Cost + buy fee) ÷ (coins × (1 − sell fee)) — the sell price where you neither gain nor lose.</p>
+<p>For stock trades (with dividends and multi-year holds), use our <a href="stock-return-calculator.html">stock return calculator</a> instead.</p>
+<h2>FAQ</h2>
+<div class="faq">
+<div class="faq-item"><div class="faq-q">How do crypto exchange fees affect profit? <span>+</span></div><div class="faq-a">You pay fees on both sides: a buy fee on your cost and a sell fee on your revenue. On small trades, fees can erase several percent of gains — this calculator subtracts both so you see true net profit.</div></div>
+<div class="faq-item"><div class="faq-q">What is the breakeven price for a crypto trade? <span>+</span></div><div class="faq-a">The sell price at which your after-fee revenue exactly equals your cost including buy fees. Our calculator shows it automatically — any sale above breakeven is profit.</div></div>
+</div>
+</article>
+
+<div class="disclaimer"><strong>⚠️ Disclaimer:</strong> Educational tool only — not financial advice. Crypto is highly volatile; you can lose some or all of your investment. Consult a licensed financial professional. Tax treatment of crypto gains varies by jurisdiction.</div>
+</section>
+</div>
+
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div><h4>Calculators</h4><a href="stock-return-calculator.html">Stock Return Calculator</a><a href="dca-calculator.html">DCA Calculator</a><a href="crypto-profit-calculator.html">Crypto Profit Calculator</a></div>
+<div><h4>Guides</h4><a href="../guides/cagr-explained.html">CAGR Explained</a><a href="../guides/dca-vs-lump-sum.html">DCA vs Lump Sum</a></div>
+<div><h4>StockROI</h4><a href="../index.html">Home</a></div>
+</div>
+<div class="bottom">© 2026 StockROI. Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>. Educational only — not financial advice.</div>
+</div></footer>
+<script src="../js/crypto.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paycheck Calculator — Estimate Take-Home Pay After Taxes | SalaryTools</title>
+<meta name="description" content="Free paycheck calculator: enter gross pay, filing status, and pay frequency for an estimated net paycheck using federal tax brackets plus FICA.">
+<link rel="canonical" href="https://nan-salarytools.surge.sh/tools/paycheck-estimator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Paycheck Estimator","url":"https://nan-salarytools.surge.sh/tools/paycheck-estimator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Salary<span>Tools</span></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="salary-to-hourly.html">Salary ↔ Hourly</a>
+      <a href="paycheck-estimator.html">Paycheck Estimator</a>
+      <a href="raise-calculator.html">Raise Calculator</a>
+      <a href="../guides/how-paychecks-work.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › Paycheck Estimator</p>
+<h1>Paycheck Estimator</h1>
+<p class="lede">Where does your gross pay go? Enter your salary, filing status, and pay frequency for an <strong>estimated</strong> net paycheck — federal income tax plus FICA, clearly labeled as estimates.</p>
+<div class="disclaimer">⚠️ Educational purposes only — not financial advice. Tax figures are estimates, not tax advice.</div>
+
+<section class="tool">
+  <label for="gross">Gross annual pay ($)</label>
+  <input type="number" id="gross" value="75000" min="0" step="1000">
+  <label for="status">Filing status</label>
+  <select id="status">
+    <option value="single" selected>Single</option>
+    <option value="married">Married filing jointly</option>
+  </select>
+  <label for="freq">Pay frequency</label>
+  <select id="freq">
+    <option value="weekly">Weekly (52 paychecks)</option>
+    <option value="biweekly" selected>Biweekly (26 paychecks)</option>
+    <option value="semimonthly">Semimonthly (24 paychecks)</option>
+    <option value="monthly">Monthly (12 paychecks)</option>
+  </select>
+  <label for="state">State income tax</label>
+  <select id="state">
+    <option value="taxed" selected>My state has income tax (not included in estimate)</option>
+    <option value="none">No state income tax (TX, FL, WA, NV, WY, SD, AK, TN, NH)</option>
+  </select>
+  <br><button class="btn-calc" id="calcBtn">Estimate My Paycheck</button>
+  <p id="err" class="warn-text"></p>
+</section>
+
+<section class="results" id="results" aria-live="polite"></section>
+
+<section>
+  <h2>What This Estimate Includes (and Doesn't)</h2>
+  <ul>
+    <li><strong>Included:</strong> federal income tax (2025 brackets + standard deduction, as an estimate) and FICA — 6.2% Social Security + 1.45% Medicare.</li>
+    <li><strong>Not included:</strong> state/local income tax, pre-tax deductions (401(k), HSA, health premiums), or post-tax deductions (Roth 401(k), garnishments).</li>
+  </ul>
+  <p>Your actual paycheck will differ — use this to sanity-check offers and budgets, not for tax filing. Full explainer: <a href="../guides/how-paychecks-work.html">How Paychecks Work: Taxes Explained</a>.</p>
+</section>
+
+<section>
+  <h2>Related Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>Salary ↔ Hourly</h3><p>Convert your salary into an hourly rate.</p><a href="salary-to-hourly.html">Open →</a></div>
+    <div class="card"><h3>Raise Calculator</h3><p>See what a raise does to take-home pay.</p><a href="raise-calculator.html">Open →</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <div class="flinks"><a href="../index.html">Home</a><a href="salary-to-hourly.html">Salary ↔ Hourly</a><a href="raise-calculator.html">Raise Calculator</a><a href="../guides/how-paychecks-work.html">Guides</a></div>
+    <p style="margin-top:14px;color:#94a3b8">© <span id="year">2026</span> SalaryTools. Educational purposes only — not financial advice.</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/paycheck-estimator.js"></script>
+</body>
+</html>

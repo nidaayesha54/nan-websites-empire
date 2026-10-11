@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Regression Explained Simply: One Line, One Formula, Endless Uses</title>
+<meta name="description" content="Linear regression explained in plain English: the formula, how least squares works, R² meaning, assumptions, and when NOT to use it. With a live interactive demo.">
+<link rel="canonical" href="https://mlplayground.surge.sh/guides/linear-regression-explained.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Linear Regression Explained Simply: One Line, One Formula, Endless Uses","author":{"@type":"Organization","name":"NAN Marketing Agency"},"datePublished":"2026-10-12"}
+</script>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="../index.html">ML<span>Playground</span></a>
+<div class="links"><a href="../tools/linear-regression.html">Live Demo</a><a href="ml-for-beginners.html">ML Beginners Guide</a></div>
+</nav></header>
+<div class="article">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Guides › Linear Regression Explained</div>
+<h1>Linear Regression, Explained Simply</h1>
+<p class="meta">By NAN Marketing Agency · Updated October 2026 · 6 min read</p>
+
+<p>Linear regression is the "hello world" of machine learning — and quietly one of the most-used algorithms on Earth. House-price estimators, sales forecasts, and scientific studies all lean on it. Here's the whole idea in plain English. <a href="../tools/linear-regression.html">Try the live demo →</a></p>
+
+<h2>The one-sentence version</h2>
+<p>Linear regression draws the <b>single straight line</b> that sits closest to all your data points at once.</p>
+
+<h2>The formula: y = mx + b</h2>
+<p>You already know this from school:</p>
+<ul>
+<li><code>y</code> — what you're predicting (house price)</li>
+<li><code>x</code> — what you're predicting from (square footage)</li>
+<li><code>m</code> — slope: how much y rises per unit of x</li>
+<li><code>b</code> — intercept: y's value when x is zero</li>
+</ul>
+<p>Learning <em>is</em> finding the best m and b. That's the entire algorithm.</p>
+
+<h2>How does it find the "best" line? (Least squares)</h2>
+<p>For each point, measure the vertical gap between the point and the line — that's the <b>error</b> (or residual). Square each gap (so negative and positive misses don't cancel, and big misses hurt more), then add them all up. The best line is the one with the <b>smallest total</b>.</p>
+<p>The beautiful part: there's a direct formula — no guessing required:</p>
+<pre><code>m = (n·Σxy − Σx·Σy) / (n·Σx² − (Σx)²)
+b = (Σy − m·Σx) / n</code></pre>
+<p>Plug in your data's sums and out pop the optimal m and b. Our <a href="../tools/linear-regression.html">Regression Lab</a> computes exactly this every time you drag a point.</p>
+
+<h2>What is R²? (The "how good is it" number)</h2>
+<p>R² tells you what fraction of the ups-and-downs in y your line explains:</p>
+<ul>
+<li><b>R² = 0.95</b> — the line explains 95% of the variation. Excellent.</li>
+<li><b>R² = 0.50</b> — half explained, half is noise or other factors.</li>
+<li><b>R² = 0.05</b> — the line is barely better than guessing the average.</li>
+</ul>
+<p>Formula: R² = 1 − (unexplained variance ÷ total variance).</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>The 4 assumptions (when the line lies to you)</h2>
+<ol>
+<li><b>Linearity</b> — the true relationship is roughly straight. Fitting a line to a curve gives nonsense.</li>
+<li><b>Independence</b> — data points don't influence each other (no double-counting the same event).</li>
+<li><b>Equal spread</b> — errors are similarly sized across x. If errors fan out, predictions at the extremes are shaky.</li>
+<li><b>No extreme outliers</b> — one wild point can drag the whole line. <a href="../tools/linear-regression.html">Drag an outlier in the demo</a> and watch it happen.</li>
+</ol>
+
+<h2>When NOT to use linear regression</h2>
+<ul>
+<li>Predicting <b>categories</b> (spam/not-spam) — use logistic regression or trees instead.</li>
+<li>Clearly <b>curved</b> relationships — try polynomial features or tree-based models.</li>
+<li>When you need <b>certainty ranges</b> without checking assumptions — the line will happily give you a wrong answer with confidence.</li>
+</ul>
+
+<h2>Linear regression in one table</h2>
+<p><b>Use it for:</b> predicting numbers from numbers, establishing baselines, interpretable models.<br>
+<b>Strengths:</b> fast, transparent, mathematically optimal for its assumptions.<br>
+<b>Weaknesses:</b> straight lines only, outlier-sensitive, assumes the world is linear.</p>
+
+<h2>FAQ</h2>
+<p><b>Is linear regression machine learning or statistics?</b><br>Both — statisticians invented it 200 years ago; ML adopted it as the simplest supervised learner. The math is identical.</p>
+<p><b>What's multiple linear regression?</b><br>Same idea with more inputs: y = m₁x₁ + m₂x₂ + b. One slope per feature.</p>
+</div>
+<footer><p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></footer>
+</body>
+</html>

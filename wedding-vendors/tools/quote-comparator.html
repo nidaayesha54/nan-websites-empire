@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Wedding Vendor Quotes Side by Side</title>
+  <meta name="description" content="Got 3 quotes from wedding vendors? Enter them side by side with what's included and get a value score showing the best deal — free.">
+  <link rel="canonical" href="https://nan-wedvendors.surge.sh/tools/quote-comparator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="../index.html">💍 Vendor<span>Compare</span></a>
+  <nav class="nav"><a href="../index.html">Home</a><a href="vendor-cost-lookup.html">Cost Lookup</a><a href="quote-comparator.html">Compare Quotes</a><a href="../blog/index.html">Blog</a></nav>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <h1 style="color:var(--navy);text-align:center;margin-bottom:8px">Compare Vendor Quotes</h1>
+  <p class="lead">Enter up to 3 quotes for the same vendor type. We'll score each on price-vs-fair-range and inclusions so the best value is obvious.</p>
+
+  <div class="tool-box">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="vendor">Vendor type (same for all quotes)</label>
+        <select id="vendor"></select>
+      </div>
+      <div class="form-group">
+        <label for="region">Your region</label>
+        <select id="region"></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Quote A — vendor name</label><input type="text" id="nameA" placeholder="e.g. Smith Photography"></div>
+      <div class="form-group"><label>Quote A — price ($)</label><input type="number" id="priceA" placeholder="e.g. 3200" min="0"></div>
+    </div>
+    <div class="form-group full" style="margin-bottom:18px"><label>Quote A — key inclusions (comma separated)</label><input type="text" id="incA" placeholder="e.g. 8 hrs, second shooter, album"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Quote B — vendor name</label><input type="text" id="nameB" placeholder="e.g. Jones Studio"></div>
+      <div class="form-group"><label>Quote B — price ($)</label><input type="number" id="priceB" placeholder="e.g. 2800" min="0"></div>
+    </div>
+    <div class="form-group full" style="margin-bottom:18px"><label>Quote B — key inclusions (comma separated)</label><input type="text" id="incB" placeholder="e.g. 6 hrs, online gallery"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Quote C — vendor name (optional)</label><input type="text" id="nameC" placeholder="e.g. Lee Films"></div>
+      <div class="form-group"><label>Quote C — price ($)</label><input type="number" id="priceC" placeholder="e.g. 4100" min="0"></div>
+    </div>
+    <div class="form-group full" style="margin-bottom:18px"><label>Quote C — key inclusions (comma separated)</label><input type="text" id="incC" placeholder="e.g. 10 hrs, drone, album"></div>
+    <button class="btn btn-navy" id="compareBtn">Compare Quotes</button>
+
+    <div class="result" id="result">
+      <h2 style="text-align:left;color:var(--navy)">Results</h2>
+      <p id="fairNote" style="color:var(--gray-600)"></p>
+      <div class="quote-cols" id="quoteCols"></div>
+      <p style="margin-top:18px;font-size:.85rem;color:var(--gray-600)"><em>Value score: 50 pts for price vs fair range + 50 pts for inclusions. Estimates only — always verify contract terms.</em></p>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  <div class="ad-slot">Advertisement</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="brand" href="../index.html" style="font-size:1.1rem">💍 Vendor<span>Compare</span></a><p style="margin-top:8px;font-size:.9rem">Free wedding vendor cost tools.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>.</p></div>
+  <div><a href="vendor-cost-lookup.html">Cost Lookup</a><br><a href="quote-comparator.html">Compare Quotes</a><br><a href="../blog/index.html">Blog</a></div>
+</div>
+<div class="wrap"><p class="disclaimer">Comparisons are estimates based on 2026 USA industry data. Educational information only.</p></div>
+</footer>
+<script src="../js/vendor-data.js"></script>
+<script src="../js/compare.js"></script>
+</body>
+</html>

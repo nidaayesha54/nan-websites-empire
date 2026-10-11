@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Billing Software Finder Quiz — Free (2026)</title>
+<meta name="description" content="Free quiz: answer 4 questions about your practice size, specialty, and budget to get a matched medical billing software recommendation.">
+<link rel="canonical" href="https://nan-billingsoftware.surge.sh/tools/software-finder.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Medical Billing Software Finder","applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+</script>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">💳 Billing<span>SoftwareHub</span></div>
+<nav><a href="../index.html">Home</a><a href="cost-comparator.html">Cost Compare</a><a href="roi-calculator.html">ROI Calc</a><a href="../blog/index.html">Blog</a></nav>
+</div>
+</header>
+
+<section class="section"><div class="container">
+<h1 style="text-align:center;margin-bottom:8px">Which Billing Software Fits Your Practice?</h1>
+<p class="sub">4 questions → a matched recommendation. No signup.</p>
+
+<div class="tool">
+<div class="stepper" id="stepper"><span></span><span></span><span></span><span></span></div>
+<div id="quiz"></div>
+<div class="result" id="result"></div>
+</div>
+
+<div class="ad-wrap"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+
+<div class="disclaimer" style="max-width:760px;margin:24px auto">General information only. Software categories below are illustrative types based on common 2026 pricing models — always verify current features and pricing with vendors.</div>
+</div></section>
+
+<footer>
+<div class="container">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<p>© <span id="year">2026</span> BillingSoftwareHub. General information only.</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+(function(){
+var step=0, answers={};
+var questions=[
+ {id:'size', q:'How many providers are in your practice?', opts:['Solo (1)','Small (2–5)','Medium (6–20)','Large (20+)']},
+ {id:'specialty', q:'What best describes your specialty?', opts:['Primary care / family','Specialty (ortho, derm, etc.)','Mental / behavioral health','Multi-specialty / hospital-affiliated']},
+ {id:'budget', q:'Monthly budget per provider for billing tools?', opts:['Under $300',' $300–$600','$600–$1,000','Budget is flexible']},
+ {id:'model', q:'Which pricing model do you prefer?', opts:['Flat monthly (predictable)','Per claim (pay for volume)','% of collections (full service)','Not sure — advise me']}
+];
+function rec(){
+ var s=answers.size, b=answers.budget, m=answers.model;
+ var title, why, features, price;
+ if(s==='Solo (1)'||b==='Under $300'){
+   title='Budget cloud bundle (EHR + billing)';
+   why='Solo and small practices with tight budgets do best with an all-in-one cloud platform: low monthly fee, claim scrubbing included, no IT overhead.';
+   features=['Cloud EHR + billing in one login','Claim scrubbing & ERA/EFT','Patient portal & e-statements','Free onboarding for 1 provider'];
+   price='≈ $200–$350 / provider / month';
+ } else if(m==='% of collections (full service)'||s==='Small (2–5)'){
+   title='Full-service billing company (4–7% of collections)';
+   why='When you prefer zero billing staff, a full-service company takes a cut of collections and handles everything: coding, claims, denials, AR follow-up.';
+   features=['Dedicated account manager','Denial management included','Monthly AR reports','No software to learn'];
+   price='≈ 4–7% of monthly collections';
+ } else if(s==='Large (20+)'){
+   title='Enterprise revenue-cycle platform';
+   why='Large groups need workflow automation, multi-location reporting, and payer contract analytics — enterprise platforms pay for themselves at scale.';
+   features=['Multi-location dashboards','Payer contract modeling','Advanced denial analytics','API + clearinghouse choice'];
+   price='≈ $600–$1,000+ / provider / month';
+ } else {
+   title='Mid-market billing platform (flat monthly)';
+   why='Growing practices get predictable pricing, strong clearinghouse integration, and room to add providers without per-claim surprises.';
+   features=['Flat monthly per provider','Unlimited or high-volume claims','Real-time eligibility checks','Customizable reporting'];
+   price='≈ $350–$600 / provider / month';
+ }
+ return {title:title,why:why,features:features,price:price};
+}
+function render(){
+ var bar=document.getElementById('stepper').children;
+ for(var i=0;i<4;i++) bar[i].className = i<step ? 'done' : '';
+ var box=document.getElementById('quiz');
+ if(step>=4){
+   var r=rec();
+   document.getElementById('result').className='result show';
+   document.getElementById('result').innerHTML =
+     '<div class="badge">YOUR MATCH</div><h3>'+r.title+'</h3><p style="color:var(--muted)">'+r.why+'</p>'+
+     '<p><strong>Typical price:</strong> '+r.price+'</p><ul style="margin:12px 0 12px 20px;color:#d7e3f4">'+
+     r.features.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
+     '<p><a class="btn" href="cost-comparator.html">Compare exact costs →</a> <a class="btn btn-outline" href="#" id="retake">Retake quiz</a></p>'+
+     '<p style="font-size:.85rem;color:var(--muted);margin-top:12px">Category recommendation based on common 2026 pricing models. Compare specific vendors with our <a href="cost-comparator.html">cost comparator</a>.</p>';
+   document.getElementById('retake').onclick=function(e){e.preventDefault();step=0;answers={};document.getElementById('result').className='result';render();};
+   box.innerHTML='';
+   return;
+ }
+ var q=questions[step];
+ var h='<div class="quiz-q">'+(step+1)+'. '+q.q+'</div><div class="radio-grid">';
+ q.opts.forEach(function(o){
+   h+='<div class="radio-card" data-v="'+o.replace(/"/g,'&quot;')+'">'+o+'</div>';
+ });
+ box.innerHTML=h+'</div>';
+ box.querySelectorAll('.radio-card').forEach(function(el){
+   el.addEventListener('click',function(){
+     answers[q.id]=el.getAttribute('data-v');
+     step++; render();
+   });
+ });
+}
+render();
+})();
+</script>
+</body>
+</html>

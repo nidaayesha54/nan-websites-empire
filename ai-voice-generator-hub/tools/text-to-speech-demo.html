@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Text-to-Speech Demo — Hear AI Voices Free in Browser</title>
+<meta name="description" content="Free live text-to-speech demo: paste text, choose a voice, adjust rate & pitch, and listen instantly. Uses your browser's Web Speech API — no signup.">
+<link rel="canonical" href="https://nan-aivoicegen.surge.sh/tools/text-to-speech-demo.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🎙️ AIVoiceGeneratorHub</a>
+<div class="navlinks">
+<a href="text-to-speech-demo.html">TTS Demo</a>
+<a href="voice-tool-comparator.html">Compare Tools</a>
+<a href="voice-cost-calculator.html">Cost Calculator</a>
+<a href="use-case-finder.html">Find Your Fit</a>
+<a href="../guides/best-ai-voice-generators-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="toolhead">
+<p class="breadcrumb"><a href="../index.html">Home</a> › Tools › TTS Demo</p>
+<h1>🔊 Live Text-to-Speech Demo</h1>
+<p>Paste any script, pick a voice from your device, tune the speed and pitch, and hear it read aloud — all in your browser, no signup, no upload.</p>
+</div>
+
+<div class="toolbox">
+<label for="tts-text">Your text</label>
+<textarea id="tts-text" placeholder="Paste your script here…"></textarea>
+<div class="statusline" id="tts-count">0 characters · 0 words</div>
+
+<label for="tts-voice">Voice</label>
+<select id="tts-voice"><option value="">Loading voices…</option></select>
+
+<label for="tts-rate">Speed (rate): <span id="tts-rate-val">1x</span></label>
+<input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1">
+
+<label for="tts-pitch">Pitch: <span id="tts-pitch-val">1</span></label>
+<input type="range" id="tts-pitch" min="0" max="2" step="0.1" value="1">
+
+<div style="margin-top:16px">
+<button class="btn-sm" id="tts-sample">📝 Load sample script</button>
+<button class="btn-sm" id="tts-play">▶ Play</button>
+<button class="btn-sm plain" id="tts-pause">⏸ Pause</button>
+<button class="btn-sm plain" id="tts-stop">⏹ Stop</button>
+<button class="btn-sm plain" id="tts-download">⬇ Download note</button>
+</div>
+<div class="statusline" id="tts-status">Initializing…</div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section">
+<h2>💡 Tips for a better demo</h2>
+<div class="cards">
+<div class="card"><h3>✍️ Write for the ear</h3><p>Short sentences and simple punctuation sound far more natural. Commas create pauses — use them like a director.</p></div>
+<div class="card"><h3>🎚️ Slow down for narration</h3><p>A rate of 0.9x feels calmer and more authoritative for audiobooks; 1.1x suits punchy ads.</p></div>
+<div class="card"><h3>🚀 Need production quality?</h3><p>Browser voices are a free preview. For studio-grade realism, see our <a href="voice-tool-comparator.html">tool comparison</a>.</p></div>
+</div>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/tts-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Rate to FI Calculator: Years Until Retirement</title>
+<meta name="description" content="How many years until financial independence? Enter income, savings rate and returns — plus the classic savings-rate table.">
+<link rel="canonical" href="https://nan-firetools.surge.sh/tools/savings-rate.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="../index.html">🔥 FIRE<span>Tools</span></a><nav class="nav"><a href="../index.html">Home</a><a href="../tools/fire-number.html">FIRE Number</a><a href="../tools/savings-rate.html">Savings Rate</a><a href="../tools/coast-fire.html">Coast FIRE</a><a href="../blog/index.html">Blog</a></nav></div></header>
+<main class="wrap"><div class="article" style="padding-bottom:0">
+<h1>Savings Rate → Years to FI</h1>
+<p class="meta">Your savings rate matters more than your income or returns. See exactly how many years stand between you and FI.</p></div>
+<div class="toolbox">
+<div class="form-grid"><div class="field"><label for="income">Annual after-tax income ($)</label><input type="number" id="income" value="100000" ></div><div class="field"><label for="sr">Savings rate (%)</label><input type="number" id="sr" value="40" ><div class="hint">Percent of income you save + invest</div></div><div class="field"><label for="nw">Current net worth invested ($)</label><input type="number" id="nw" value="50000" ><div class="hint">Already invested (not home equity)</div></div><div class="field"><label for="ret">Expected real annual return (%)</label><input type="number" id="ret" value="5" ><div class="hint">After inflation; 5% is the classic assumption</div></div></div><div style="text-align:center"><button class="btn" id="calcBtn">Calculate</button></div>
+<div class="result-box" id="resultBox"></div>
+<p class="disclaimer">⚠️ Educational purposes only — not financial advice.</p>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="article">
+<h2>Why savings rate dominates</h2>
+<p>A 10% saver needs ~51 years to reach FI; a 50% saver needs ~17. The math is brutal and beautiful: every extra point of savings rate cuts both your FI number (lower spending) and the time to reach it. The table above uses the classic formula from the Mr. Money Mustache 'shockingly simple math' post.</p>
+<h2>The two levers</h2>
+<p>You can only move two levers: save more or spend less — they're the same lever, really. A raise you don't spend is pure FI acceleration. Already have a head start? The <a href="coast-fire.html">Coast FIRE calculator</a> shows what your current stash becomes on its own.</p>
+<h2>Assumptions to sanity-check</h2>
+<p>The simulation uses constant real returns and ignores taxes, fees, and lifestyle inflation. Treat the year count as a compass, not a contract — then read <a href="../guides/how-to-calculate-fire-number.html">how to calculate your FIRE number</a>.</p><div class="related"><h3>Related</h3><ul><li><a href="fire-number.html">FIRE Number Calculator</a></li><li><a href="coast-fire.html">Coast FIRE Calculator</a></li><li><a href="../guides/how-to-calculate-fire-number.html">Calculate Your FIRE Number</a></li></ul></div></div></main>
+<footer>
+  <div class="wrap">
+    <div><strong>🔥 FIRETools</strong><p>FIRE number, savings-rate and Coast FIRE calculators.<br>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></div>
+    <div><p><a href="../tools/fire-number.html">FIRE Number</a><br><a href="../tools/savings-rate.html">Savings Rate</a><br><a href="../tools/coast-fire.html">Coast FIRE</a></p></div>
+    <div><p><a href="../guides/what-is-fire-movement-2026.html">What Is FIRE?</a><br><a href="../guides/how-to-calculate-fire-number.html">Calculate FIRE Number</a><br><a href="../guides/coast-fire-explained.html">Coast FIRE Explained</a><br><a href="../blog/index.html">Blog</a></p></div>
+  </div>
+</footer>
+
+</body>
+</html>

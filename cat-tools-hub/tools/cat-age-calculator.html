@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Age Calculator — Cat Years to Human Years (Free)</title>
+<meta name="description" content="Free cat age calculator: convert your cat's age to human years instantly. Supports years + months and shows life stage from kitten to senior.">
+<link rel="canonical" href="https://nan-cattools.surge.sh/tools/cat-age-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Cat Age Calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🐱 CatToolsHub</a>
+<div class="navlinks">
+<a href="cat-age-calculator.html">Age Calculator</a>
+<a href="cat-cost-calculator.html">Cost Calculator</a>
+<a href="cat-food-portion.html">Food Portion</a>
+<a href="litter-calculator.html">Litter Calculator</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Cat Age Calculator</div>
+<h1>🐱 Cat Age Calculator: Cat Years to Human Years</h1>
+<p class="intro">Cats age fast in their first two years. Enter your cat's age — results update live.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="age-years">Cat's age (years): <span id="age-years-lbl">5</span></label>
+<input id="age-years" type="range" min="0" max="25" value="5" step="1">
+<label for="age-months">Additional months: <span id="age-months-lbl">0</span></label>
+<input id="age-months" type="range" min="0" max="11" value="0" step="1">
+<label><input type="checkbox" id="age-indoors" checked style="width:auto;margin-right:8px">Indoor cat (adds ~2 human years of life-expectancy context)</label>
+</div>
+
+<div class="result" id="age-result"><p>Move the sliders to see results.</p></div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>How the cat-to-human-years formula works</h2>
+<p>Veterinarians commonly use this conversion: the first year of a cat's life equals <b>15 human years</b>, the second year adds <b>9 more</b> (24 total), and <b>every year after adds 4 human years</b>. This reflects the fact that cats mature rapidly as kittens and then age steadily.</p>
+<table>
+<tr><th>Cat age</th><th>Human equivalent</th><th>Life stage</th></tr>
+<tr><td>1 month</td><td>~1 year</td><td>Neonatal kitten</td></tr>
+<tr><td>6 months</td><td>~10 years</td><td>Kitten</td></tr>
+<tr><td>1 year</td><td>15 years</td><td>Junior (adolescent)</td></tr>
+<tr><td>2 years</td><td>24 years</td><td>Prime adult</td></tr>
+<tr><td>7 years</td><td>44 years</td><td>Mature adult</td></tr>
+<tr><td>11 years</td><td>60 years</td><td>Senior</td></tr>
+<tr><td>15 years</td><td>76 years</td><td>Geriatric</td></tr>
+<tr><td>20 years</td><td>96 years</td><td>Geriatric</td></tr>
+</table>
+<p>Indoor cats typically live <b>13–17 years</b> on average versus 2–5 years for outdoor cats, which is why this calculator includes the indoor/outdoor context. For the full comparison, see our guide <a href="../guides/indoor-vs-outdoor-cats.html">Indoor vs Outdoor Cats: Pros and Cons</a>.</p>
+
+<div class="callout"><b>🐾 Tip:</b> Once you know your cat's stage, <a href="cat-food-portion.html">calculate the right daily food portion</a> — kittens, adults, and seniors have very different calorie needs.</div>
+
+<h2>More cat tools</h2>
+<div class="related">
+<a href="cat-cost-calculator.html">💵 Cat Cost Calculator<span>Yearly + lifetime budget planner</span></a>
+<a href="cat-food-portion.html">🍽️ Food Portion Calculator<span>Daily calories by RER formula</span></a>
+<a href="litter-calculator.html">🧹 Litter Calculator<span>Litter boxes, usage & cost</span></a>
+<a href="../guides/first-time-cat-owner-guide.html">📖 First-Time Cat Owner Guide<span>Week-by-week starter plan</span></a>
+</div>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+</footer>
+<script>
+(function(){
+  var yEl=document.getElementById('age-years'), mEl=document.getElementById('age-months'),
+      inEl=document.getElementById('age-indoors'), out=document.getElementById('age-result');
+  function stage(age){ if(age<0.5) return 'Neonatal kitten 🍼'; if(age<1) return 'Kitten 🐾'; if(age<2) return 'Junior (adolescent) 😼'; if(age<7) return 'Prime adult 🐈'; if(age<11) return 'Mature adult 🐈‍⬛'; if(age<15) return 'Senior 👴'; return 'Geriatric 🎂'; }
+  function calc(){
+    var y=+yEl.value, m=+mEl.value;
+    document.getElementById('age-years-lbl').textContent=y;
+    document.getElementById('age-months-lbl').textContent=m;
+    var age=y+m/12, human;
+    if(age<=1) human=15*age;
+    else if(age<=2) human=15+9*(age-1);
+    else human=24+4*(age-2);
+    human=Math.round(human*10)/10;
+    var expectancy = inEl.checked ? '13–17 years' : '2–5 years';
+    out.innerHTML='<p>Your cat is <span class="big">'+human+'</span> in human years.</p>'+
+      '<p>Actual cat age: <b>'+y+'</b> year(s), <b>'+m+'</b> month(s) &nbsp;·&nbsp; Life stage: <b>'+stage(age)+'</b></p>'+
+      '<p class="cat-fact">Typical lifespan for an '+(inEl.checked?'indoor':'outdoor')+' cat: <b>'+expectancy+'</b>. Regular vet checkups add healthy years — twice a year after age 10.</p>';
+  }
+  yEl.addEventListener('input',calc); mEl.addEventListener('input',calc); inEl.addEventListener('change',calc);
+  calc();
+})();
+</script>
+</body>
+</html>

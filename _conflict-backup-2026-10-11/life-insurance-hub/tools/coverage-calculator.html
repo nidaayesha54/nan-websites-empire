@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIME Life Insurance Coverage Calculator (2026) | LifeInsuranceHub</title>
+<meta name="description" content="Free DIME method life insurance calculator: enter debts, income, mortgage, and education costs to find exactly how much coverage you need in 2026.">
+<link rel="canonical" href="https://nan-lifeinsurance.surge.sh/tools/coverage-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"DIME Life Insurance Coverage Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="../index.html">Life<span>Insurance</span>Hub</a>
+    <ul class="nav-links">
+      <li><a href="coverage-calculator.html">Coverage Calculator</a></li>
+      <li><a href="term-vs-whole.html">Term vs Whole</a></li>
+      <li><a href="premium-estimator.html">Premium Estimator</a></li>
+      <li><a href="../guides/how-much-life-insurance-do-i-need-2026.html">Guides</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../index.html">Home</a> › DIME Coverage Calculator</p>
+  <section class="hero" style="padding:40px 20px 10px">
+    <h1>How Much <span class="hl">Life Insurance</span> Do You Need?</h1>
+    <p>The DIME method is what financial planners actually use: <strong>D</strong>ebts + <strong>I</strong>ncome replacement + <strong>M</strong>ortgage + <strong>E</strong>ducation, minus your assets. Fill in your numbers below.</p>
+  </section>
+
+  <div class="tool-form">
+    <div class="field">
+      <label for="debts">D — Debts (excluding mortgage) $</label>
+      <input type="number" id="debts" value="15000" min="0">
+      <small>Credit cards, car loans, student loans, personal loans.</small>
+    </div>
+    <div class="field">
+      <label for="income">I — Annual income to replace $</label>
+      <input type="number" id="income" value="80000" min="0">
+    </div>
+    <div class="field">
+      <label for="years">Years of income to replace</label>
+      <input type="number" id="years" value="15" min="1" max="40">
+      <small>Common choice: until your youngest child is independent.</small>
+    </div>
+    <div class="field">
+      <label for="mortgage">M — Remaining mortgage balance $</label>
+      <input type="number" id="mortgage" value="250000" min="0">
+    </div>
+    <div class="field">
+      <label for="education">E — College cost per child $</label>
+      <input type="number" id="education" value="100000" min="0">
+    </div>
+    <div class="field">
+      <label for="kids">Number of children</label>
+      <input type="number" id="kids" value="2" min="0" max="10">
+    </div>
+    <div class="field">
+      <label for="assets">Existing assets to subtract $</label>
+      <input type="number" id="assets" value="50000" min="0">
+      <small>Savings, investments, existing life insurance cash value.</small>
+    </div>
+    <div class="field">
+      <label for="existing">Existing life insurance coverage $</label>
+      <input type="number" id="existing" value="0" min="0">
+      <small>Employer policy, existing personal policies.</small>
+    </div>
+    <button class="btn" id="calcDime">Calculate My Coverage</button>
+  </div>
+
+  <div class="result" id="dimeResult"></div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <section class="section">
+    <h2>Why the DIME method?</h2>
+    <p>Simple "10× income" rules ignore your mortgage, your debts, and your kids' education — the three things that actually determine what your family needs. DIME builds the number from your real obligations, so you neither overpay for coverage you don't need nor leave your family short.</p>
+    <p>Read the full walkthrough: <a href="../guides/how-much-life-insurance-do-i-need-2026.html">How Much Life Insurance Do I Need in 2026?</a></p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+    <p class="disclaimer">Disclaimer: Estimates only — not financial advice. Consult a licensed insurance professional.</p>
+    <p>© <span id="year"></span> LifeInsuranceHub</p>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/coverage.js"></script>
+</body>
+</html>

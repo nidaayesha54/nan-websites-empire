@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>प्रति घंटा रेट कैलकुलेटर — फ्रीलांस Hourly Rate in ₹ | कमाई कैलकुलेटर</title>
+  <meta name="description" content="अपनी सही फ्रीलांस hourly rate निकालें: मासिक आय लक्ष्य, खर्च, टैक्स और बिल वाले घंटों के हिसाब से। भारतीय फ्रीलांसरों के लिए मुफ़्त हिंदी टूल।">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">💰 कमाई<span>कैलकुलेटर</span></a>
+      <nav class="nav">
+        <a href="../index.html">होम</a>
+        <a href="hourly-rate.html">रेट कैलकुलेटर</a>
+        <a href="fiverr-fee-calculator.html">फीस कैलकुलेटर</a>
+        <a href="../guides/freelancing-start-india.html">गाइड</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="article">
+      <h1>प्रति घंटा रेट कैलकुलेटर</h1>
+      <p class="meta">अंदाज़े से रेट मत लगाइए — हिसाब से लगाइए। नीचे अपने नंबर डालें और अपनी असली hourly rate पाएँ।</p>
+    </div>
+
+    <div class="calc">
+      <div id="calc-error" style="display:none;color:#b71c1c;font-weight:700;margin-bottom:12px;"></div>
+      <label for="income">मासिक आय का लक्ष्य (₹)</label>
+      <input type="number" id="income" value="50000" min="0">
+
+      <label for="hours">बिल वाले घंटे (प्रति माह)</label>
+      <input type="number" id="hours" value="100" min="1">
+      <p style="color:#6b6b6b;font-size:.9rem;margin-top:6px;">टिप: हफ़्ते में 25 घंटे × 4 हफ़्ते = 100 घंटे। छुट्टियाँ और बिना-काम के घंटे घटा दें।</p>
+
+      <label for="expenses">मासिक खर्च (₹) — इंटरनेट, बिजली, सॉफ़्टवेयर आदि</label>
+      <input type="number" id="expenses" value="8000" min="0">
+
+      <label for="tax">टैक्स दर (%)</label>
+      <input type="number" id="tax" value="10" min="0" max="99">
+
+      <button id="calc-btn">रेट निकालें</button>
+
+      <div class="results" id="results">
+        <div class="result-box">
+          <div class="label">न्यूनतम रेट (खर्च पूरे, टैक्स नहीं)</div>
+          <div class="big" id="r-min">—</div>
+          <div class="label" id="r-min-note"></div>
+        </div>
+        <div class="result-box">
+          <div class="label">✅ सुझाई गई रेट (टैक्स + 10% मार्जिन सहित)</div>
+          <div class="big" id="r-rec">—</div>
+          <div class="label" id="r-rec-note"></div>
+        </div>
+        <div class="result-box">
+          <div class="label">अनुमानित मासिक कमाई</div>
+          <div class="big" id="r-monthly">—</div>
+          <div class="label" id="r-monthly-note"></div>
+        </div>
+        <div class="result-note">
+          <strong>याद रखें:</strong> नए फ्रीलांसर अक्सर कम रेट लगाकर शुरुआत करते हैं और 3–6 महीने में बढ़ाते हैं।
+          अपनी <a href="../guides/per-skill-pricing-hindi.html">स्किल के हिसाब से बाज़ार रेट</a> भी ज़रूर देखें।
+        </div>
+      </div>
+    </div>
+
+    <div class="article">
+      <h2>रेट निकालने का फ़ॉर्मूला</h2>
+      <p><strong>बेस रेट</strong> = (मासिक आय लक्ष्य + मासिक खर्च) ÷ बिल वाले घंटे</p>
+      <p><strong>असली रेट</strong> = बेस रेट ÷ (1 − टैक्स दर) × 1.10 (सुरक्षा मार्जिन)</p>
+      <p>उदाहरण: ₹50,000 लक्ष्य + ₹8,000 खर्च = ₹58,000 ÷ 100 घंटे = ₹580/घंटा। 10% टैक्स पर: ₹580 ÷ 0.90 = ₹644, और 10% मार्जिन के साथ ≈ <strong>₹709/घंटा</strong>।</p>
+      <h2>आम गलतियाँ</h2>
+      <ul>
+        <li>सिर्फ़ "पॉकेट मनी" के हिसाब से रेट लगाना — खर्च और टैक्स भूल जाना</li>
+        <li>160 घंटे/माह मान लेना — असल में बिल वाले घंटे 80–120 ही होते हैं</li>
+        <li>प्लेटफ़ॉर्म फीस (Fiverr 20%) का हिसाब न करना — <a href="fiverr-fee-calculator.html">फीस कैलकुलेटर</a> देखें</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:20px 0;">
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<footer>
+    <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> • <a href="../index.html">कमाई कैलकुलेटर</a></p>
+  </footer>
+  <script src="../js/hourly-rate.js"></script>
+</body>
+</html>

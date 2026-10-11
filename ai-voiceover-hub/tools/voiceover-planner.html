@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voiceover Planner — Word Targets, Takes & Recording Timeline</title>
+<meta name="description" content="Free voiceover project planner: enter video length for a script word target, takes/retakes estimator, and a full recording-session timeline (setup, record, edit, mix).">
+<link rel="canonical" href="https://nan-aivoiceover.surge.sh/tools/voiceover-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Voiceover Project Planner","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site"><nav class="nav">
+<a class="logo" href="../index.html">🎙️ AIVoiceoverHub</a>
+<div class="navlinks">
+<a href="script-optimizer.html">Script Optimizer</a>
+<a href="voiceover-planner.html">Voiceover Planner</a>
+<a href="voice-director.html">Voice Director</a>
+<a href="tts-preview.html">TTS Preview</a>
+<a href="../guides/best-ai-voiceover-tools-2026.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</div></nav></header>
+
+<div class="wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> → Voiceover Planner</div>
+<h1>📅 Voiceover Project Planner</h1>
+<p style="color:var(--muted)">Start from your video length — get a script word target, realistic session time with takes and retakes, and a phase-by-phase timeline.</p>
+
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toolbox">
+<label for="vp-preset">Quick preset</label>
+<select id="vp-preset">
+<option value="">— choose a common length —</option>
+<option value="0.5">30-second ad / Short</option>
+<option value="1">60-second spot</option>
+<option value="2">2-minute explainer</option>
+<option value="5">5-minute YouTube video</option>
+<option value="10">10-minute YouTube video</option>
+<option value="20">20-minute deep dive</option>
+</select>
+<label for="vp-length">Target video length (minutes)</label>
+<input id="vp-length" type="number" min="0.1" step="0.1" value="5">
+<label for="vp-pace">Speaking pace</label>
+<select id="vp-pace">
+<option value="130">Slow narration — 130 WPM (documentary, audiobook)</option>
+<option value="150" selected>Conversational — 150 WPM (YouTube, explainer)</option>
+<option value="170">Energetic — 170 WPM (ads, promos)</option>
+</select>
+<label for="vp-sections">Number of script sections (for punch-in recording)</label>
+<input id="vp-sections" type="number" min="1" max="20" value="3">
+<label for="vp-takes">Takes per section</label>
+<input id="vp-takes" type="number" min="1" max="6" value="2">
+<label for="vp-pause">Pause/breath allowance: <span id="vp-pause-lbl">12%</span></label>
+<input id="vp-pause" type="range" min="5" max="30" value="12" oninput="document.getElementById('vp-pause-lbl').textContent=this.value+'%'">
+<label style="margin-top:10px"><input id="vp-music" type="checkbox" checked style="width:auto;margin-right:8px">Background music bed (adds mixing time)</label>
+</div>
+
+<div class="result" id="vp-result"><p>Enter your numbers above.</p></div>
+
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<section class="section">
+<h2>The math behind the plan</h2>
+<ul style="color:#d7dcf0;margin-left:20px">
+<li><b>Word target</b> = minutes × words-per-minute at your chosen pace.</li>
+<li><b>Recording time</b> adds your pause allowance, then multiplies by a retake factor (extra takes are partial passes, not full re-reads).</li>
+<li><b>Editing</b> runs ~6× the video length — cutting, de-breathing, and pacing take longer than the read itself.</li>
+</ul>
+<p>Write the script with the <a href="script-optimizer.html">Script Optimizer</a>, then get performance notes from the <a href="voice-director.html">Voice Director</a>.</p>
+</section>
+</div>
+
+<footer class="site">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free voiceover tools for creators</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/voiceover-planner.js"></script>
+</body>
+</html>

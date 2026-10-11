@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is My Dog a Senior? Dog Age Calculator — SeniorDogHub</title>
+<meta name="description" content="Find out if your dog is a senior. Pick breed size + age to get life stage, approximate human years, and age-matched care tips.">
+<link rel="canonical" href="https://nan-seniordog.surge.sh/tools/senior-age.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">🐾 Senior<span>Dog</span>Hub</a>
+    <div class="nav-links">
+      <a href="senior-age.html">Age Calculator</a>
+      <a href="senior-checklist.html">Wellness Checklist</a>
+      <a href="senior-cost.html">Cost Estimator</a>
+      <a href="../guides/senior-dog-care-guide.html">Care Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 style="text-align:center;color:var(--brand-dark)">Is My Dog a Senior?</h1>
+  <p style="text-align:center;color:var(--muted)">Big dogs age faster than small ones — pick your dog's size and age to see their true life stage.</p>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <div class="tool-wrap">
+    <label for="breedSize">Breed size</label>
+    <select id="breedSize">
+      <option value="small">Small (under 20 lbs) — e.g. Chihuahua, Shih Tzu</option>
+      <option value="medium" selected>Medium (20–50 lbs) — e.g. Beagle, Border Collie</option>
+      <option value="large">Large (50–90 lbs) — e.g. Labrador, German Shepherd</option>
+      <option value="giant">Giant (90+ lbs) — e.g. Great Dane, Mastiff</option>
+    </select>
+
+    <label for="dogAge">Dog's age (years)</label>
+    <input type="number" id="dogAge" min="0.25" max="25" step="0.25" value="8" placeholder="e.g. 8">
+
+    <div style="margin-top:18px">
+      <button class="btn" type="button" onclick="calcStage()">Find My Dog's Stage</button>
+    </div>
+
+    <div class="result" id="stageResult" role="status">
+      <span class="stage-badge" id="stageBadge"></span>
+      <div class="big" id="stageBig"></div>
+      <p id="stageDetail"></p>
+      <ul class="tips-list" id="stageTips"></ul>
+    </div>
+  </div>
+
+  <div class="container disclaimer"><strong>Disclaimer:</strong> Wellness information only — not a substitute for professional veterinary advice. Age stages are general guidelines; your vet knows your dog best.</div>
+
+  <p style="text-align:center;margin-top:24px">Related: <a href="senior-checklist.html">Wellness Checklist Generator</a> · <a href="../guides/when-is-dog-senior.html">When Is a Dog Considered Senior?</a> · <a href="../guides/senior-dog-care-guide.html">Senior Dog Care Guide</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="row">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+  <div class="row"><a href="../index.html">Home</a> · <a href="senior-age.html">Age Calculator</a> · <a href="senior-checklist.html">Checklist</a> · <a href="senior-cost.html">Cost Estimator</a> · <a href="../blog/index.html">Blog</a></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+'use strict';
+var SIZE_DATA = {
+  small:  { label: 'Small',  seniorAge: 10, geriatricAge: 14, humanPerYear: 4, lifeExp: '14–16 years' },
+  medium: { label: 'Medium', seniorAge: 9,  geriatricAge: 13, humanPerYear: 5, lifeExp: '12–14 years' },
+  large:  { label: 'Large',  seniorAge: 8,  geriatricAge: 12, humanPerYear: 6, lifeExp: '10–12 years' },
+  giant:  { label: 'Giant',  seniorAge: 6,  geriatricAge: 10, humanPerYear: 8, lifeExp: '8–10 years' }
+};
+var STAGE_TIPS = {
+  puppy: [
+    'Focus on positive-reward training and early socialization — these years shape lifelong behavior.',
+    'Feed an age-appropriate puppy formula and keep vaccines current on your vet\'s schedule.',
+    'Watch for good habits now: gentle handling, teeth brushing, and nail trims build a lifetime of easy care.'
+  ],
+  adult: [
+    'Keep annual vet checkups and maintain a healthy weight — it pays off in the senior years.',
+    'Provide daily exercise matched to breed energy: most adults need 30–60 minutes of activity.',
+    'Feed a balanced adult diet and keep dental care consistent.'
+  ],
+  senior: [
+    'Move to vet checkups every 6 months — seniors can develop changes quickly.',
+    'Consider a senior dog food formula: fewer calories, easier to digest, often with joint support.',
+    'Switch to shorter, gentler exercise sessions twice a day instead of one long workout.',
+    'Add comfort upgrades: an orthopedic bed and non-slip mats on slick floors.'
+  ],
+  geriatric: [
+    'Keep vet visits every 6 months with routine senior bloodwork as your vet recommends.',
+    'Prioritize comfort: warm bedding, easy access to water, and ramps instead of stairs or jumps.',
+    'Keep routines predictable — elderly dogs thrive on calm, familiar patterns.',
+    'Celebrate every day: gentle play, sniff walks, and lots of quiet companionship.'
+  ]
+};
+function calcStage() {
+  var sizeKey = SDH.$('breedSize').value;
+  var age = parseFloat(SDH.$('dogAge').value);
+  if (isNaN(age) || age < 0.25 || age > 25) {
+    alert('Please enter an age between 0.25 and 25 years.');
+    return;
+  }
+  var d = SIZE_DATA[sizeKey];
+  var stage, stageLabel;
+  if (age < 1.5) { stage = 'puppy'; stageLabel = 'Puppy / Young'; }
+  else if (age < d.seniorAge) { stage = 'adult'; stageLabel = 'Adult'; }
+  else if (age < d.geriatricAge) { stage = 'senior'; stageLabel = 'Senior'; }
+  else { stage = 'geriatric'; stageLabel = 'Geriatric (Golden Senior)'; }
+
+  var humanYears = age <= 2 ? Math.round(age * 12) : Math.round(24 + (age - 2) * d.humanPerYear);
+
+  SDH.$('stageBadge').textContent = stageLabel;
+  SDH.$('stageBig').textContent = '≈ ' + humanYears + ' human years';
+  var detail = 'A ' + d.label.toLowerCase() + ' dog at age ' + age + ' is ' + (age === 1 ? '1 year' : age + ' years') + ' old. ';
+  if (stage === 'senior' || stage === 'geriatric') {
+    detail += d.label + ' breeds are considered senior from age ' + d.seniorAge + '; typical lifespan is ' + d.lifeExp + '.';
+  } else {
+    detail += d.label + ' breeds typically become senior around age ' + d.seniorAge + ' (lifespan ' + d.lifeExp + ').';
+  }
+  SDH.$('stageDetail').textContent = detail;
+  var tipsHtml = '';
+  for (var i = 0; i < STAGE_TIPS[stage].length; i++) {
+    tipsHtml += '<li>' + STAGE_TIPS[stage][i] + '</li>';
+  }
+  SDH.$('stageTips').innerHTML = tipsHtml;
+  SDH.$('stageResult').classList.add('show');
+}
+</script>
+</body>
+</html>

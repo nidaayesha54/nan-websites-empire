@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Insurance Calculator (DIME Method) 2026 — How Much Coverage Do You Need?</title>
+<meta name="description" content="Free life insurance needs calculator using the DIME method: debts, income replacement, mortgage, education minus assets. Instant estimate, USA 2026.">
+<link rel="canonical" href="https://nan-insurancetools.surge.sh/tools/life-insurance-calculator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Life Insurance Calculator (DIME Method)","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Insurance<span>ToolsHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="auto-insurance-estimator.html">Auto</a><a href="health-insurance-comparator.html">Health</a><a href="home-insurance-calculator.html">Home</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Life Insurance Calculator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Life Insurance Calculator (DIME Method)</h1>
+<p>Enter your numbers below. The DIME method adds up <strong>D</strong>ebt + <strong>I</strong>ncome replacement + <strong>M</strong>ortgage + <strong>E</strong>ducation, then subtracts existing assets.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Annual income to replace ($)</label><input type="number" id="income" value="75000" min="0"></div>
+<div class="field"><label>Years of income to replace</label><input type="number" id="years" value="15" min="1" max="40"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Non-mortgage debts ($)</label><input type="number" id="debt" value="15000" min="0"></div>
+<div class="field"><label>Mortgage balance ($)</label><input type="number" id="mortgage" value="250000" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Future education costs ($)</label><input type="number" id="edu" value="100000" min="0"></div>
+<div class="field"><label>Existing savings/assets ($)</label><input type="number" id="assets" value="50000" min="0"></div>
+</div>
+<div class="field"><label>Existing life insurance ($)</label><input type="number" id="existing" value="0" min="0"></div>
+<button class="btn" onclick="calc()">Calculate My Coverage Need</button>
+<div class="result" id="res">
+<h3>Your estimated coverage need</h3>
+<div class="big" id="need"></div>
+<p id="breakdown" style="color:var(--muted)"></p>
+</div>
+<div class="disclaimer">⚠️ <strong>Estimate only — not financial advice.</strong> This calculator gives a rough planning number. Actual needs depend on inflation, investment returns, and personal circumstances. Consult a licensed insurance professional before buying.</div>
+</div>
+</div></section>
+
+<section class="section"><div class="container"><div class="faq" style="max-width:760px;margin:0 auto">
+<h2 style="text-align:center">Life Insurance FAQ</h2>
+<div class="faq-item"><div class="faq-q">What is the DIME method?</div><div class="faq-a">DIME = Debt + Income + Mortgage + Education, minus liquid assets. It's the most widely recommended formula for estimating life insurance needs.</div></div>
+<div class="faq-item"><div class="faq-q">Is 10x income enough life insurance?</div><div class="faq-a">The 10x rule is a quick starting point, but it ignores debts and mortgages. The DIME method above is more accurate for most families.</div></div>
+<div class="faq-item"><div class="faq-q">How much does life insurance cost?</div><div class="faq-a">A healthy 30-year-old can often get a $500K 20-year term policy for roughly $20–30/month. Rates rise sharply with age and health issues.</div></div>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> InsuranceToolsHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function calc(){
+  var income=num('income'), years=num('years'), debt=num('debt'),
+      mort=num('mortgage'), edu=num('edu'), assets=num('assets'), ex=num('existing');
+  var need = debt + income*years + mort + edu - assets - ex;
+  need = Math.max(0, need);
+  document.getElementById('need').textContent = money(need);
+  document.getElementById('breakdown').textContent =
+    'Debt '+money(debt)+' + Income '+money(income*years)+' ('+years+' yrs) + Mortgage '+money(mort)+
+    ' + Education '+money(edu)+' − Assets '+money(assets)+' − Existing insurance '+money(ex);
+  show('res');
+}
+</script>
+</body>
+</html>

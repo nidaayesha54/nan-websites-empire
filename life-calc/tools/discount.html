@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Calculator — Sale Price & Savings | LifeCalc</title>
+  <meta name="description" content="Free discount calculator: enter the original price and discount percent to see the sale price and exactly how much you save.">
+  <meta name="keywords" content="discount calculator, sale price calculator, percent off calculator">
+  <link rel="canonical" href="https://lifecalc.surge.sh/tools/discount.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Discount Calculator",
+   "url":"https://lifecalc.surge.sh/tools/discount.html",
+   "applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">🧮 Life<span>Calc</span></a>
+    <nav class="nav"><a href="../index.html">Home</a><a href="age-calculator.html">Age</a><a href="bmi.html">BMI</a><a href="tip-calculator.html">Tip</a></nav>
+  </div>
+</header>
+<section class="tool-hero"><div class="wrap">
+  <h1>Discount Calculator</h1>
+  <p>"30% off $79.99" — but what do you actually pay? Get the sale price and your savings instantly.</p>
+</div></section>
+<div class="wrap"><p class="crumb"><a href="../index.html">Home</a> → Discount Calculator</p></div>
+
+<div class="wrap">
+  <div class="calc">
+    <div class="row2">
+      <div class="field">
+        <label for="price">Original price ($)</label>
+        <input type="number" id="price" placeholder="e.g. 79.99" min="0" step="0.01">
+      </div>
+      <div class="field">
+        <label for="disc">Discount (%)</label>
+        <input type="number" id="disc" placeholder="e.g. 30" min="0" max="100" step="0.1">
+      </div>
+    </div>
+    <button class="btn" onclick="calcDiscount()">Calculate Sale Price</button>
+    <div class="result" id="res">
+      <div style="color:#6b7280">You pay</div>
+      <div class="big" id="saleBig" style="color:var(--green)">—</div>
+      <div class="detail" id="saveDetail"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="ad-slot wrap">Advertisement</div>
+
+<div class="content">
+  <h2>How discount math works</h2>
+  <p><strong>Sale price</strong> = original price × (1 − discount ÷ 100). So a $80 item at 30% off costs $80 × 0.70 = $56, and you save $24.</p>
+  <h2>Quick mental-math tricks</h2>
+  <ul>
+    <li><strong>10% off:</strong> move the decimal one place left ($80 → $8 off).</li>
+    <li><strong>20% off:</strong> double the 10% amount.</li>
+    <li><strong>25% off:</strong> divide the price by 4.</li>
+    <li><strong>50% off:</strong> halve the price.</li>
+  </ul>
+  <div class="callout"><strong>Watch out:</strong> "extra 20% off sale price" is <em>not</em> the same as 50% off — discounts stack multiplicatively, not additively.</div>
+</div>
+
+<footer><div class="wrap">
+  <div><a href="../index.html">Home</a><a href="tip-calculator.html">Tip Calculator</a><a href="age-calculator.html">Age Calculator</a></div>
+  <p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span> · Free forever.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/discount.js"></script>
+</body>
+</html>

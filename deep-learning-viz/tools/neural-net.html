@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neural Network Playground — Train a Network in Your Browser</title>
+<meta name="description" content="Interactive neural network playground: pick layers and neurons, train on circle, XOR or blob data with real backpropagation. Free, no signup.">
+<link rel="canonical" href="https://nan-deeplearnviz.surge.sh/tools/neural-net.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Neural Network Playground",
+ "url":"https://nan-deeplearnviz.surge.sh/tools/neural-net.html",
+ "applicationCategory":"EducationalApplication","operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="n1">Deep</span><span class="n2">Learn</span>Viz</a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="neural-net.html">Neural Net Playground</a>
+      <a href="activation.html">Activation Functions</a>
+      <a href="cnn-explainer.html">CNN Explainer</a>
+      <a href="../guides/neural-networks-explained-simply.html">Guides</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="../index.html">Home</a> → Neural Network Playground</div>
+  <h1 style="margin-bottom:6px">🧠 Neural Network Playground</h1>
+  <p style="color:var(--muted);max-width:760px;margin-bottom:20px">A <strong>real</strong> neural network with <strong>real backpropagation</strong>, training live in your browser. Pick an architecture and a dataset, press Train, and watch it learn the decision boundary.</p>
+
+  <div class="tool-shell">
+    <div class="panel">
+      <h3>⚙️ Architecture &amp; training</h3>
+      <label class="ctl">Dataset
+        <select id="ctlData">
+          <option value="circle">Circle (non-linear)</option>
+          <option value="xor">XOR (classic hard)</option>
+          <option value="blobs">Two blobs (easy)</option>
+        </select>
+      </label>
+      <label class="ctl">Hidden layers <output id="outLayers">2</output>
+        <input type="range" id="ctlLayers" min="1" max="4" value="2" step="1">
+      </label>
+      <label class="ctl">Neurons per hidden layer <output id="outNeurons">4</output>
+        <input type="range" id="ctlNeurons" min="1" max="8" value="4" step="1">
+      </label>
+      <label class="ctl">Learning rate <output id="outLr">0.50</output>
+        <input type="range" id="ctlLr" min="0.05" max="2" value="0.5" step="0.05">
+      </label>
+      <label class="ctl">Max epochs <output id="outEpochs">600</output>
+        <input type="range" id="ctlEpochs" min="100" max="2000" value="600" step="100">
+      </label>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-sm" id="btnTrain">▶ Train network</button>
+        <button class="btn btn-ghost btn-sm" id="btnRebuild">↺ Rebuild</button>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-mag btn-sm" id="btnAnimate">✨ Animate forward pass</button>
+      </div>
+      <p class="note" id="trainMsg">Loading…</p>
+      <div class="stat-grid">
+        <div class="stat"><div class="v" id="stEpoch">0</div><div class="l">epoch</div></div>
+        <div class="stat"><div class="v" id="stLoss">—</div><div class="l">loss</div></div>
+        <div class="stat"><div class="v" id="stAcc">—</div><div class="l">accuracy</div></div>
+        <div class="stat"><div class="v" id="stParams">—</div><div class="l">parameters</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="stage" style="margin-bottom:20px">
+        <h3 style="color:var(--cyan);margin-bottom:10px">Network diagram <span style="color:var(--muted);font-weight:400;font-size:.85rem">— cyan edge = positive weight, pink = negative, thickness = strength</span></h3>
+        <svg id="netSvg" width="100%" role="img" aria-label="Neural network diagram"></svg>
+      </div>
+      <div class="two">
+        <div class="stage">
+          <h3 style="color:var(--cyan);margin-bottom:10px">Decision boundary</h3>
+          <canvas id="boundCanvas" class="board" width="300" height="300"></canvas>
+          <div class="legend"><span><span class="dot" style="background:var(--cyan)"></span> class 1</span><span><span class="dot" style="background:var(--magenta)"></span> class 0</span></div>
+        </div>
+        <div class="stage">
+          <h3 style="color:var(--cyan);margin-bottom:10px">Training loss</h3>
+          <canvas id="lossCanvas" class="board" width="300" height="300"></canvas>
+          <p class="note">Loss = binary cross-entropy. If it plateaus high, try more neurons, a higher learning rate, or rebuild for fresh random weights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+  <section class="section">
+    <h2>What am I looking at?</h2>
+    <p style="color:var(--muted);max-width:800px">Each circle is a <strong>neuron</strong>. Data enters on the left (your two input features, x and y), gets multiplied by <strong>weights</strong> along the edges, squashed by an <strong>activation function</strong> (tanh in hidden layers, sigmoid at the output), and out pops a prediction on the right. Training = nudging every weight a tiny bit, thousands of times, so wrong predictions hurt less. That's backpropagation — and it's running for real, right here, in plain JavaScript.</p>
+    <p class="mt"><a class="btn btn-ghost btn-sm" href="../guides/neural-networks-explained-simply.html">📖 Read the plain-English guide →</a>
+    <a class="btn btn-ghost btn-sm" href="activation.html">📈 Explore activation functions →</a></p>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Tools</h4><a href="neural-net.html">Neural Net Playground</a><a href="activation.html">Activation Functions</a><a href="cnn-explainer.html">CNN Explainer</a></div>
+      <div><h4>Learn</h4><a href="../guides/neural-networks-explained-simply.html">Neural Networks Explained Simply</a><a href="../guides/deep-learning-vs-machine-learning.html">Deep Learning vs Machine Learning</a><a href="../blog/index.html">Blog</a></div>
+      <div><h4>About</h4><a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></div>
+    </div>
+    <div class="copy">Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> · © <span data-year>2026</span> DeepLearnViz</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/neural-net.js"></script>
+</body>
+</html>

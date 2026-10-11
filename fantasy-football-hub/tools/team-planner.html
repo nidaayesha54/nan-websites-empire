@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Team Planner — Build Your £100m Squad | FantasyFootballHub</title>
+<meta name="description" content="Free fantasy football team planner: pick 11 players within a £100m budget, choose your formation, set captain & vice-captain, and track total points with localStorage save.">
+<link rel="canonical" href="https://nan-fantasyfootball.surge.sh/tools/team-planner.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="brand" href="/">⚽ Fantasy<span>Football</span>Hub</a>
+<nav><a href="/">Home</a><a href="team-planner.html">Team Planner</a><a href="player-compare.html">Compare</a><a href="fixture-tracker.html">Fixtures</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<div class="container">
+<div class="breadcrumb"><a href="/">Home</a> › <a href="team-planner.html">Tools</a> › Team Planner</div>
+<div class="demo-note">⚠️ <strong>Sample data:</strong> player names and stats below are demo placeholders, not real current-season stats. Update them with official game data before making gameweek decisions.</div>
+
+<section style="padding-top:1rem">
+<h1>Fantasy Team Planner — £100m Squad Builder</h1>
+<p>Build your dream XI. Budget: <strong>£<span id="spent">0.0</span>m</strong> / £100m — <span id="left" style="color:var(--green)">£100.0m left</span></p>
+
+<div class="panel">
+<div class="row2">
+<div><label for="formation">Formation</label>
+<select id="formation"><option>4-4-2</option><option>4-3-3</option><option>3-5-2</option><option>5-3-2</option><option>3-4-3</option></select></div>
+<div><label for="sortpos">Filter players</label>
+<select id="sortpos"><option value="ALL">All positions</option><option>GK</option><option>DEF</option><option>MID</option><option>FWD</option></select></div>
+</div>
+</div>
+
+<div class="pitch" id="pitch"></div>
+
+<div class="panel">
+<h2>Player Pool (sample data)</h2>
+<div class="list" id="pool"></div>
+</div>
+
+<div class="panel">
+<h2>Team Points Tracker</h2>
+<p>Squad points: <strong><span id="tpts">0</span></strong> | Projected gameweek points: <strong><span id="gpts">0</span></strong></p>
+<div class="row2">
+<div><label for="addpts">Add points (e.g. gameweek score)</label><input id="addpts" type="number" min="1" placeholder="e.g. 68"></div>
+</div>
+<button class="ta" id="logpts">Log Gameweek Points</button>
+<button class="ta ghost" id="save" style="background:transparent;border:2px solid var(--green);color:var(--green)">Save Squad</button>
+<button class="ta" id="clear" style="background:#b3261e">Reset Squad</button>
+<div id="history"></div>
+</div>
+
+<div class="ad"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</section>
+</div>
+
+<footer><div class="container">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/team-planner.js"></script>
+</body>
+</html>

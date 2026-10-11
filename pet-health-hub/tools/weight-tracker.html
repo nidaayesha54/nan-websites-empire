@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Weight Tracker — Healthy Ranges & Trends | PetHealthHub</title>
+<meta name="description" content="Free pet weight tracker: log weigh-ins, view a weight trend chart, and compare against healthy weight ranges for dogs and cats by size.">
+<link rel="canonical" href="https://nan-pethealth.surge.sh/tools/weight-tracker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">🐾 Pet<span>Health</span>Hub</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="vaccination-tracker.html">Vaccination</a>
+      <a href="weight-tracker.html" class="active">Weight</a>
+      <a href="medication-reminder.html">Medication</a>
+      <a href="../guides/puppy-vaccination-schedule-2026.html">Puppy Schedule</a>
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer"><strong>Wellness information only</strong> — not a substitute for professional veterinary advice. See your vet for diagnosis or treatment.</div>
+
+<section class="section">
+  <div class="container">
+    <div class="tool-wrap">
+      <h1>Pet Weight Tracker</h1>
+      <p class="lede">Log your pet's weight over time, see the trend on a chart, and check it against a healthy range. Weigh adults monthly and growing puppies/kittens every 1–2 weeks. <strong>This tool does not diagnose conditions</strong> — sudden weight changes deserve a vet visit.</p>
+
+      <h2 style="color:var(--g800);font-size:1.25rem">My pets</h2>
+      <div class="form-row">
+        <div class="field"><label for="wPetName">Pet name</label><input id="wPetName" type="text" placeholder="e.g. Max"></div>
+        <div class="field"><label for="wSpecies">Species</label>
+          <select id="wSpecies"><option value="dog">Dog</option><option value="cat">Cat</option><option value="other">Other</option></select>
+        </div>
+        <div class="field"><label for="wUnit">Unit</label>
+          <select id="wUnit"><option value="lb">lb</option><option value="kg">kg</option></select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="wMin">Healthy range min</label><input id="wMin" type="number" step="0.1" min="0" placeholder="e.g. 55"></div>
+        <div class="field"><label for="wMax">Healthy range max</label><input id="wMax" type="number" step="0.1" min="0" placeholder="e.g. 75"></div>
+        <div class="field" style="justify-content:flex-end;flex:0"><button class="btn btn-green" id="wAddPet" style="margin-top:26px">Save Pet</button></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="wPetSelect">Select pet</label><select id="wPetSelect"></select></div>
+      </div>
+
+      <h2 style="color:var(--g800);font-size:1.25rem">Log a weigh-in</h2>
+      <div class="form-row">
+        <div class="field"><label for="wDate">Date</label><input id="wDate" type="date"></div>
+        <div class="field"><label for="wWeight">Weight</label><input id="wWeight" type="number" step="0.1" min="0" placeholder="e.g. 62.5"></div>
+        <div class="field" style="justify-content:flex-end;flex:0"><button class="btn btn-green" id="wAddEntry" style="margin-top:26px">Log Weight</button></div>
+      </div>
+
+      <div id="wInsight"></div>
+      <h2 style="color:var(--g800);font-size:1.25rem">Weight trend</h2>
+      <canvas class="chart" id="wChart" width="820" height="280" aria-label="Weight trend chart"></canvas>
+      <div style="overflow-x:auto"><table class="data" id="wTable">
+        <thead><tr><th>Date</th><th>Weight</th><th>Change</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+
+      <h2 style="color:var(--g800);font-size:1.25rem;margin-top:26px">Healthy weight reference (adult)</h2>
+      <div style="overflow-x:auto"><table class="data">
+        <thead><tr><th>Pet</th><th>Size / breed example</th><th>Typical range</th></tr></thead>
+        <tbody>
+          <tr><td>Dog</td><td>Toy (Chihuahua, Yorkie)</td><td>4–12 lb (2–5 kg)</td></tr>
+          <tr><td>Dog</td><td>Small (Beagle, French Bulldog)</td><td>12–30 lb (5–14 kg)</td></tr>
+          <tr><td>Dog</td><td>Medium (Border Collie, Bulldog)</td><td>30–60 lb (14–27 kg)</td></tr>
+          <tr><td>Dog</td><td>Large (Labrador, Golden Retriever)</td><td>55–85 lb (25–39 kg)</td></tr>
+          <tr><td>Dog</td><td>Giant (Great Dane, Mastiff)</td><td>100–180+ lb (45–82+ kg)</td></tr>
+          <tr><td>Cat</td><td>Average domestic shorthair</td><td>8–10 lb (3.6–4.5 kg)</td></tr>
+          <tr><td>Cat</td><td>Large breeds (Maine Coon)</td><td>12–18 lb (5.5–8 kg)</td></tr>
+        </tbody>
+      </table></div>
+      <p style="color:var(--muted);font-size:.9rem">Ranges are general guides only — breed, age, and build matter. Ask your vet for your pet's ideal weight and body condition score.</p>
+      <p style="margin-top:14px"><a href="../guides/signs-healthy-dog.html">Read: Signs of a Healthy Dog →</a> · <a href="medication-reminder.html">Medication Reminder →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a>
+    <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+  </div>
+</footer>
+<script src="../js/weight.js"></script>
+</body>
+</html>

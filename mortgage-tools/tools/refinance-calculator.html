@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Refinance Calculator: Break-Even &amp; Savings | MortgageTools</title>
+<meta name="description" content="Free refinance calculator: find your break-even month, monthly savings, and lifetime savings net of closing costs."/>
+<link rel="canonical" href="https://nan-mortgagetools.surge.sh/tools/refinance-calculator.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Mortgage<span>Tools</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Refinance Calculator: Break-Even & Lifetime Savings</h1><p class="lede">A lower rate is not automatically a good deal. See exactly when refinancing pays for itself — and when it does not.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="refiForm" class="tool-form">
+<h3 style="margin-top:0">Your current loan</h3>
+<div class="field-row">
+<div class="field"><label for="curBalance">Remaining balance ($)</label><input type="number" id="curBalance" min="1" step="1000" value="280000" required></div>
+<div class="field"><label for="curRate">Current rate (% APR)</label><input type="number" id="curRate" min="0" max="20" step="0.125" value="7" required></div>
+</div>
+<div class="field"><label for="remainYears">Years remaining</label><input type="number" id="remainYears" min="1" max="40" step="0.5" value="25" required></div>
+<h3>The new loan</h3>
+<div class="field-row">
+<div class="field"><label for="newRate">New rate (% APR)</label><input type="number" id="newRate" min="0" max="20" step="0.125" value="5.75" required></div>
+<div class="field"><label for="newTerm">New term</label><select id="newTerm"><option value="30" selected>30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
+</div>
+<div class="field"><label for="closingCosts">Closing costs ($)</label><input type="number" id="closingCosts" min="0" step="100" value="6000" required><div class="hint">Typically 2&ndash;5% of the loan amount: origination, appraisal, title, points.</div></div>
+<button type="submit" class="btn btn-primary">Analyze refinance</button>
+</form></div><div class="tool-results" id="refiResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the math works</h2>
+<p>Both payments use the standard mortgage formula on the same balance. <strong>Break-even (months) = closing costs &divide; monthly savings</strong>. Lifetime savings = all remaining payments on the old loan &minus; all payments on the new loan &minus; closing costs. A longer new term can lower the payment while <em>raising</em> lifetime cost — watch both numbers.</p>
+<h2>Tips</h2>
+<ul><li>Forget the old "1% rule" — break-even math beats rules of thumb.</li>
+<li>A no-closing-cost refinance just rolls costs into a higher rate; compare its break-even too.</li>
+<li>If you will move or refinance again before break-even, do not refinance now.</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="amortization.html">Amortization Schedule Generator</a></li><li><a href="../guides/how-much-house-can-i-afford.html">How Much House Can I Afford in 2026?</a></li><li><a href="../guides/refinance-rates-explained.html">Refinance Rates Explained: When Does It Make Sense?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/refinance-calculator.js"></script></body>
+</html>

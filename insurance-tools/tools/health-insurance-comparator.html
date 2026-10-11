@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Insurance Plan Comparator 2026 — True Yearly Cost Calculator</title>
+<meta name="description" content="Compare health insurance plans side by side: annual premium + deductible + out-of-pocket max = true yearly cost at low, medium and high usage. Free 2026.">
+<link rel="canonical" href="https://nan-insurancetools.surge.sh/tools/health-insurance-comparator.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Health Insurance Plan Comparator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+<a class="brand" href="../index.html">🛡️ Insurance<span>ToolsHub</span></a>
+<nav class="nav"><a href="../index.html">Home</a><a href="life-insurance-calculator.html">Life</a><a href="auto-insurance-estimator.html">Auto</a><a href="home-insurance-calculator.html">Home</a></nav>
+</div></header>
+<div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> › Health Plan Comparator</div></div>
+
+<section class="section"><div class="container">
+<div class="tool-wrap">
+<h1>Health Insurance Plan Comparator</h1>
+<p>Enter two plans. We'll compute each plan's <strong>true yearly cost</strong> = annual premiums + what you'd pay out of pocket at low, medium, and high medical usage.</p>
+<div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+<div class="field-row">
+<div class="field"><label>Plan A name</label><input type="text" id="an" value="Plan A"></div>
+<div class="field"><label>Plan B name</label><input type="text" id="bn" value="Plan B"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Plan A monthly premium ($)</label><input type="number" id="ap" value="450" min="0"></div>
+<div class="field"><label>Plan B monthly premium ($)</label><input type="number" id="bp" value="280" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Plan A deductible ($)</label><input type="number" id="ad" value="1500" min="0"></div>
+<div class="field"><label>Plan B deductible ($)</label><input type="number" id="bd" value="5000" min="0"></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Plan A out-of-pocket max ($)</label><input type="number" id="ao" value="6000" min="0"></div>
+<div class="field"><label>Plan B out-of-pocket max ($)</label><input type="number" id="bo" value="9000" min="0"></div>
+</div>
+<div class="field"><label>Plan A coinsurance after deductible (%)</label><input type="number" id="ac" value="20" min="0" max="100"></div>
+<div class="field"><label>Plan B coinsurance after deductible (%)</label><input type="number" id="bc" value="30" min="0" max="100"></div>
+<button class="btn" onclick="calc()">Compare True Yearly Cost</button>
+<div class="result" id="res"><h3>True yearly cost comparison</h3><div id="tbl"></div></div>
+<div class="disclaimer">⚠️ <strong>Estimate only — not financial or medical advice.</strong> Simplified model: assumes you pay full deductible, then coinsurance until the OOP max. Copays and network differences not modeled. Check plan documents before enrolling.</div>
+</div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="cols">
+<div>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span><br>© <span id="year">2026</span> InsuranceToolsHub. Estimates only — not financial advice.</div>
+<div><a href="../index.html">Home</a> · <a href="../blog/index.html">Blog</a></div>
+</div></div></footer>
+<script src="../js/main.js"></script>
+<script>
+function planCost(prem, ded, oop, coin, usage){
+  var annual = prem*12;
+  if(usage<=ded) return annual+usage;
+  var after = (usage-ded)*(coin/100);
+  var oopPaid = Math.min(ded+after, oop);
+  return annual+oopPaid;
+}
+function calc(){
+  var A={n:val('an'),p:num('ap'),d:num('ad'),o:num('ao'),c:num('ac')};
+  var B={n:val('bn'),p:num('bp'),d:num('bd'),o:num('bo'),c:num('bc')};
+  var usages=[['Low ($2K care)',2000],['Medium ($10K care)',10000],['High ($40K care)',40000]];
+  var h='<table class="cmp"><tr><th>Usage</th><th>'+A.n+'</th><th>'+B.n+'</th><th>Cheaper</th></tr>';
+  usages.forEach(function(u){
+    var ca=planCost(A.p,A.d,A.o,A.c,u[1]), cb=planCost(B.p,B.d,B.o,B.c,u[1]);
+    var w = ca<cb ? A.n : (cb<ca ? B.n : 'Tie');
+    h+='<tr><td>'+u[0]+'</td><td class="'+(ca<cb?'winner':'')+'">'+money(ca)+'</td><td class="'+(cb<ca?'winner':'')+'">'+money(cb)+'</td><td>'+w+'</td></tr>';
+  });
+  h+='</table><p style="color:var(--muted);font-size:.9rem">Low-premium/high-deductible plans usually win if you rarely need care; high-premium/low-deductible plans win if you expect big medical bills.</p>';
+  document.getElementById('tbl').innerHTML=h;
+  show('res');
+}
+</script>
+</body>
+</html>

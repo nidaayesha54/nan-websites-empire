@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixture Difficulty Tracker — Find Easy Runs | FantasyFootballHub</title>
+<meta name="description" content="Free fixture difficulty tracker: rate upcoming fixtures 1–5 stars per team, spot easy runs, and plan your fantasy rotation with saved rankings.">
+<link rel="canonical" href="https://nan-fantasyfootball.surge.sh/tools/fixture-tracker.html">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="brand" href="/">⚽ Fantasy<span>Football</span>Hub</a>
+<nav><a href="/">Home</a><a href="team-planner.html">Team Planner</a><a href="player-compare.html">Compare</a><a href="fixture-tracker.html">Fixtures</a><a href="../blog/">Blog</a></nav>
+</div></header>
+
+<div class="container">
+<div class="breadcrumb"><a href="/">Home</a> › <a href="team-planner.html">Tools</a> › Fixture Tracker</div>
+<div class="demo-note">⚠️ <strong>Sample data:</strong> teams and fixtures below are demo placeholders — rate fixtures using real official fixture lists for the current season.</div>
+
+<section style="padding-top:1rem">
+<h1>Fixture Difficulty Tracker</h1>
+<p>Click the stars to rate each upcoming fixture (1 star = very easy, 5 stars = very hard). Teams with the easiest average fixtures are highlighted for your rotation planner.</p>
+
+<div class="panel">
+<label for="weeks">Gameweek window</label>
+<select id="weeks"><option value="3">Next 3 gameweeks</option><option value="5" selected>Next 5 gameweeks</option><option value="8">Next 8 gameweeks</option></select>
+<button class="ta" id="regen">Regenerate Demo Fixtures</button>
+</div>
+
+<div class="panel">
+<h2>Easiest upcoming runs <span style="color:var(--muted);font-size:.85rem">(green = target these players)</span></h2>
+<div id="easyruns"></div>
+</div>
+
+<div class="panel">
+<h2>Rate fixtures</h2>
+<table id="fixtable"><thead><tr><th>Gameweek</th><th>Team</th><th>Opponent</th><th>H/A</th><th>Difficulty</th></tr></thead><tbody></tbody></table>
+<button class="ta" id="savefix">Save Ratings</button>
+</div>
+
+<p>Combine fixture runs with our <a href="../guides/how-to-pick-fantasy-football-captain.html">captain guide</a> to pick the best armband each week.</p>
+<div class="ad"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</section>
+</div>
+
+<footer><div class="container">
+<span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a></span> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span>
+</div></footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/fixture-tracker.js"></script>
+</body>
+</html>

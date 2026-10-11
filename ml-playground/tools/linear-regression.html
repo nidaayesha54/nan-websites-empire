@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Regression Lab — Drag Points, Watch the Line Fit (Free)</title>
+<meta name="description" content="Interactive linear regression visualizer: drag data points and watch the least-squares line update live with slope, intercept and R². Free, no signup.">
+<link rel="canonical" href="https://mlplayground.surge.sh/tools/linear-regression.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Linear Regression Lab","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="../index.html">ML<span>Playground</span></a>
+<div class="links"><a href="kmeans.html">K-Means</a><a href="decision-tree.html">Decision Trees</a><a href="train-test.html">Overfitting</a></div>
+</nav></header>
+<div class="tool-wrap">
+<div class="breadcrumb"><a href="../index.html">Home</a> › Linear Regression Lab</div>
+<h1>📈 Linear Regression Lab</h1>
+<p class="lede"><b>Drag any blue dot</b> — the green line is the real least-squares fit, recomputed live. Click empty space to add a point. Watch R² collapse when you add an outlier!</p>
+<canvas id="regCanvas" class="demo"></canvas>
+<div class="controls">
+<button class="btn" id="btnReset">↺ Reset points</button>
+<button class="btn ghost" id="btnScatter">🎲 Random scatter</button>
+<button class="btn ghost" id="btnClear">Clear</button>
+</div>
+<div class="stats">
+<div class="stat"><div class="num" id="statSlope">—</div><div class="lbl">Slope (m)</div></div>
+<div class="stat"><div class="num" id="statIntercept">—</div><div class="lbl">Intercept (b)</div></div>
+<div class="stat"><div class="num" id="statR2">—</div><div class="lbl">R² (fit quality)</div></div>
+<div class="stat"><div class="num" id="statN">—</div><div class="lbl">Data points</div></div>
+</div>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+<div class="explain">
+<h3>What's happening here?</h3>
+<p>Linear regression finds the line <code>y = mx + b</code> that minimizes the <b>sum of squared errors</b> — the total of all the yellow vertical gaps between points and the line. The math (computed live above):</p>
+<ul>
+<li><b>Slope:</b> m = (nΣxy − ΣxΣy) / (nΣx² − (Σx)²)</li>
+<li><b>Intercept:</b> b = (Σy − mΣx) / n</li>
+<li><b>R²</b> = 1 − (unexplained variance ÷ total variance). 1.0 = perfect fit, 0 = the line explains nothing.</li>
+</ul>
+<p style="margin-top:.7rem"><b>Try this:</b> drag one point far away from the others — that's an <b>outlier</b>, and you'll see it yank the whole line toward itself. This sensitivity is why real data scientists clean their data first.</p>
+</div>
+</div>
+<footer><p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p></footer>
+<script src="../js/linear-regression.js"></script>
+</body>
+</html>

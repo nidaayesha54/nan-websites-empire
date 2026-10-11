@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Credit Score Simulator: What Moves It | CreditTools</title>
+<meta name="description" content="Free credit score simulator: see how payment history, utilization, and credit age move an estimated score, with tips to improve."/>
+<link rel="canonical" href="https://nan-credittools.surge.sh/tools/credit-score-simulator.html"/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="../index.html">Credit<span>Tools</span></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<nav class="main-nav" id="mainNav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html" class="active">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav></div></header>
+<main id="main"><div class="wrap page"><h1>Credit Score Simulator: What Affects Your Score?</h1><p class="lede">Your score is a weighted mix of five factors. Slide each one to see how it moves an estimated score — and get tips to improve.</p><p class="disclaimer"><strong>Disclaimer:</strong> Educational purposes only &mdash; not financial advice.</p><div class="tool-grid"><div>
+<form id="csForm" class="tool-form">
+<div class="field"><label for="ontime">On-time payments: <span class="range-val" id="ontimeVal">100%</span></label><input type="range" id="ontime" min="50" max="100" step="1" value="100"><div class="hint">Share of payments made on time (35% of score)</div></div>
+<div class="field"><label for="util">Credit utilization: <span class="range-val" id="utilVal">10%</span></label><input type="range" id="util" min="0" max="100" step="1" value="10"><div class="hint">Balances as % of limits (30% of score)</div></div>
+<div class="field"><label for="ageYears">Age of oldest account: <span class="range-val" id="ageYearsVal">8 yrs</span></label><input type="range" id="ageYears" min="0" max="25" step="1" value="8"><div class="hint">Length of credit history (15% of score)</div></div>
+<div class="field"><label for="inquiries">Hard inquiries (last 2 years): <span class="range-val" id="inquiriesVal">1</span></label><input type="range" id="inquiries" min="0" max="10" step="1" value="1"><div class="hint">New credit applications (10% of score)</div></div>
+<div class="field"><label for="mixTypes">Types of credit: <span class="range-val" id="mixTypesVal">2</span></label><input type="range" id="mixTypes" min="0" max="5" step="1" value="2"><div class="hint">e.g. cards, auto loan, mortgage (10% of score)</div></div>
+<button type="submit" class="btn btn-primary">Estimate my score</button>
+</form></div><div class="tool-results" id="csResults" aria-live="polite"><p class="hint">Fill in the form and submit to see your results.</p></div></div><div class="tool-explainer">
+<h2>How the estimate works</h2>
+<p>This simulator mirrors the well-known FICO factor weights: <strong>payment history 35%, amounts owed (utilization) 30%, length of history 15%, new credit 10%, credit mix 10%</strong>. Each slider is normalized to 0&ndash;1, weighted, and mapped to the 300&ndash;850 range. It is an <strong>educational model</strong> — your real score comes from bureau data and proprietary formulas.</p>
+<h2>Score bands</h2>
+<ul><li><strong>800&ndash;850 Exceptional</strong> — best rates and approvals</li>
+<li><strong>740&ndash;799 Very Good</strong> — above-average rates</li>
+<li><strong>670&ndash;739 Good</strong> — most approvals, near-median rates</li>
+<li><strong>580&ndash;669 Fair</strong> — subprime offers, higher rates</li>
+<li><strong>300&ndash;579 Poor</strong> — rebuild with secured cards</li></ul></div><section class="related"><h2>Related tools &amp; guides</h2><ul><li><a href="debt-payoff.html">Debt Payoff Calculator</a></li><li><a href="dti-calculator.html">DTI Calculator</a></li><li><a href="../guides/how-to-build-credit-fast.html">How to Build Credit Fast in 2026</a></li><li><a href="../guides/debt-avalanche-vs-snowball.html">Debt Avalanche vs Snowball: Which Payoff Method Wins?</a></li></ul></section></div></main>
+<div class="wrap"><div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div></div>
+<footer class="site-footer"><div class="wrap">
+<p>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> &middot; <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></p>
+<nav class="footer-nav">
+<a href="../index.html">Home</a>
+<a href="../tools/index.html">Calculators</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../blog/index.html">Blog</a>
+</nav>
+<p class="footer-note">All calculators are educational tools only &mdash; not financial advice. Figures are estimates.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+<script src="../js/credit-score-simulator.js"></script></body>
+</html>
