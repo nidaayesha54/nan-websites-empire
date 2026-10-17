@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InvoiceFlow — Get Paid Faster | Demo by NAN Marketing Agency</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A1628'/%3E%3Cpath d='M9 8h14v3H9zM9 14h14v3H9zM9 20h9v3H9z' fill='%2314B8A6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#14B8A6;--teal-d:#0F766E;--navy:#0A1628;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#F7FAF9;--card:#fff;--green:#16A34A;--red:#DC2626;--amber:#D97706}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+::selection{background:var(--teal);color:#fff}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hwrap{max-width:1200px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.3px}
+.logo .mk{width:34px;height:34px;border-radius:9px;background:var(--navy);display:grid;place-items:center}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--mut);letter-spacing:1.5px;text-transform:uppercase}
+.hnav{margin-left:auto;display:flex;align-items:center;gap:22px}
+.hnav a.nlink{color:#475569;font-size:14px;font-weight:500;transition:color .2s}
+.hnav a.nlink:hover{color:var(--teal-d)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:11px 20px;border-radius:10px;border:none;cursor:pointer;transition:transform .18s,box-shadow .18s;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-cta{background:var(--teal);color:#fff;box-shadow:0 6px 20px rgba(20,184,166,.35)}
+.btn-cta:hover{box-shadow:0 10px 26px rgba(20,184,166,.5)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-big{padding:15px 30px;font-size:16px;border-radius:12px}
+.btn-sm{padding:7px 13px;font-size:12.5px;border-radius:8px}
+
+.hero{background:var(--navy);color:#fff;padding:74px 22px 60px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 380px at 18% 0%,rgba(20,184,166,.22),transparent 60%)}
+.hinner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--teal);text-transform:uppercase;border:1px solid rgba(20,184,166,.45);padding:7px 14px;border-radius:100px;background:rgba(20,184,166,.08)}
+.hero h1{font-size:clamp(34px,5vw,58px);font-weight:800;letter-spacing:-1.5px;line-height:1.08;margin:22px 0 16px;max-width:720px}
+.hero h1 .hl{color:var(--teal)}
+.hero p.sub{color:#a9b8cf;font-size:18px;max-width:640px;line-height:1.65}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:44px 0 36px}
+@media(max-width:820px){.ba{grid-template-columns:1fr}}
+.bacard{border-radius:18px;padding:26px;transition:transform .25s}
+.bacard:hover{transform:translateY(-4px)}
+.ba-before{background:#141f31;border:1px solid #2b3b55}
+.ba-after{background:#fff;color:var(--ink);border:1.5px solid var(--teal);box-shadow:0 20px 50px rgba(20,184,166,.25)}
+.batag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.8px;padding:6px 12px;border-radius:6px;margin-bottom:16px}
+.ba-before .batag{background:#7f1d1d;color:#fecaca}
+.ba-after .batag{background:var(--teal);color:#fff}
+.chaos{background:#0d1626;border-radius:10px;padding:18px;font-size:13.5px;color:#94a3b8;line-height:2}
+.chaos .r{color:#f87171}.chaos .y{color:#fbbf24}
+.ba-caption{margin-top:14px;font-size:14px;color:#94a3b8}
+.ba-after .ba-caption{color:#475569}
+.minidash{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ministat{background:#f0fdfa;border:1px solid #99f6e4;border-radius:10px;padding:14px}
+.ministat b{font-size:20px;display:block;letter-spacing:-.4px}
+.ministat span{font-size:12px;color:var(--mut)}
+.ministat.alert{background:#fef2f2;border-color:#fca5a5}.ministat.alert b{color:var(--red)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-ctas .btn-ghost{color:#fff;border-color:#334155}
+
+section.block{max-width:1200px;margin:0 auto;padding:70px 22px}
+.sec-head{max-width:700px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.8px;margin-bottom:10px}
+.sec-head p{color:var(--mut);font-size:16.5px;line-height:1.6}
+.kicker{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--teal-d);text-transform:uppercase;margin-bottom:10px}
+.tabs{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+.tab{background:#fff;border:1.5px solid var(--line);padding:10px 20px;border-radius:100px;font-weight:700;font-size:14px;cursor:pointer;transition:all .2s;font-family:inherit;color:#475569}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
+.stat:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(10,22,40,.08)}
+.stat .t{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.stat b{font-size:30px;letter-spacing:-1px}
+.stat .d{font-size:12.5px;margin-top:6px}
+.stat.ok b{color:var(--green)} .stat.warn b{color:var(--amber)} .stat.bad b{color:var(--red)}
+.stat.bad{border-color:#fca5a5;background:#fffafa;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.25)}50%{box-shadow:0 0 0 8px rgba(220,38,38,0)}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 34px rgba(10,22,40,.05);margin-bottom:24px}
+.panel h3{font-size:17px;font-weight:700;margin-bottom:16px}
+table.data{width:100%;border-collapse:collapse;font-size:14px}
+table.data th{text-align:left;font-size:11.5px;letter-spacing:1px;color:var(--mut);text-transform:uppercase;padding:12px 14px;border-bottom:2px solid var(--line)}
+table.data td{padding:14px;border-bottom:1px solid #f1f5f9}
+table.data tr:last-child td{border-bottom:none}
+table.data tr.rowh{transition:background .15s}
+table.data tr.rowh:hover{background:#f8fafc}
+.pill{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:100px;text-transform:uppercase}
+.p-paid{background:#dcfce7;color:#15803d}.p-pending{background:#fef3c7;color:#92400e}.p-overdue{background:#fee2e2;color:#b91c1c}.p-draft{background:#f1f5f9;color:#64748b}
+.rowbtn{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 13px;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .18s;font-family:inherit;margin-right:6px}
+.rowbtn:hover{border-color:var(--teal);color:var(--teal-d)}
+.rowbtn.pay:hover{border-color:var(--green);color:var(--green)}
+.alertbar{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:14px;padding:18px 22px;display:flex;gap:14px;align-items:center;margin-bottom:24px;flex-wrap:wrap}
+.alertbar .dot{width:12px;height:12px;border-radius:50%;background:var(--red);animation:pulse 1.8s infinite}
+.alertbar p{font-size:14.5px}.alertbar b{color:var(--red)}
+.bars{display:flex;align-items:flex-end;gap:14px;height:170px;padding:10px 4px 0}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px}
+.bar .fill{width:100%;max-width:56px;background:linear-gradient(180deg,#2dd4bf,#0f766e);border-radius:8px 8px 3px 3px;transition:height 1s cubic-bezier(.2,.8,.3,1);min-height:6px}
+.bar span{font-size:11.5px;color:var(--mut);font-weight:600}
+.bar b{font-size:12px}
+.grid2{display:grid;grid-template-columns:1.6fr 1fr;gap:24px}
+@media(max-width:980px){.grid2{grid-template-columns:1fr}}
+.modal{position:fixed;inset:0;background:rgba(6,13,26,.55);backdrop-filter:blur(4px);display:none;place-items:center;z-index:100;padding:20px}
+.modal.open{display:grid}
+.mbox{background:#fff;border-radius:18px;padding:30px;max-width:480px;width:100%;animation:pop .3s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.mbox h3{font-size:20px;margin-bottom:18px}
+label.f{display:block;font-size:12.5px;font-weight:600;color:#475569;margin:12px 0 6px}
+input,select{width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:14px}
+input:focus,select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.16)}
+.lirow{display:grid;grid-template-columns:1fr 90px;gap:8px;margin-bottom:8px}
+.additem{margin-top:4px;background:#f0fdfa;border:1.5px dashed #5eead4;color:#0f766e;font-weight:700;font-size:13.5px;padding:10px;border-radius:10px;width:100%;cursor:pointer;font-family:inherit}
+.mactions{display:flex;gap:10px;margin-top:20px;justify-content:flex-end}
+.scale{background:var(--navy);color:#fff;border-radius:20px;padding:40px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.scale h3{font-size:22px;font-weight:800;letter-spacing:-.4px}
+.scale p{color:#94a3b8;font-size:15px;margin-top:6px;max-width:560px;line-height:1.6}
+.scale .btn{margin-left:auto}
+.final{background:radial-gradient(900px 400px at 50% 0%,#134e4a,#0A1628);color:#fff;text-align:center;padding:80px 22px}
+.final h2{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1px;margin-bottom:14px}
+.final h2 .hl{color:var(--teal)}
+.final p{color:#a9b8cf;font-size:17px;max-width:600px;margin:0 auto 30px;line-height:1.65}
+footer{background:#060d1a;color:#8fa1b8;padding:44px 22px;font-size:13.5px}
+.fwrap{max-width:1200px;margin:0 auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+footer b{color:#fff}footer .btn{margin-left:auto}
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:14px 24px;border-radius:12px;font-size:14.5px;font-weight:600;z-index:200;transition:transform .3s cubic-bezier(.2,1.2,.4,1);box-shadow:0 16px 40px rgba(0,0,0,.3);max-width:90vw;text-align:center}
+#toast.show{transform:translateX(-50%) translateY(0)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.clientrow{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid #f1f5f9}
+.clientrow:last-child{border:none}
+.avatar{width:42px;height:42px;border-radius:12px;background:#ccfbf1;color:#0f766e;font-weight:800;display:grid;place-items:center;font-size:16px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hwrap">
+    <a class="logo" href="#top"><span class="mk"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 3h12v4H6zM6 10h12v4H6zM6 17h8v4H6z" fill="#14B8A6"/></svg></span><span>InvoiceFlow<small>by NAN Marketing Agency</small></span></a>
+    <nav class="hnav">
+      <a class="nlink" href="#demo">Live demo</a>
+      <a class="nlink" href="#clients">Clients</a>
+      <a class="btn btn-cta" href="https://wa.me/923177415702?text=Hi%20NAN%20Marketing%20Agency!%20I%20want%20an%20invoice%20app%20like%20InvoiceFlow%20for%20my%20business." target="_blank" rel="noopener">Is this YOUR business? Get yours for $2,000 →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hinner">
+    <span class="eyebrow">For freelancers · designers · consultants</span>
+    <h1>Stop chasing payments.<br><span class="hl">Start collecting them.</span></h1>
+    <p class="sub">Sara Designs lost $2,400 to an invoice that sat "forgotten" for 47 days. Now InvoiceFlow watches every rupee — and nudges the client before you even notice.</p>
+
+    <div class="ba">
+      <div class="bacard ba-before reveal">
+        <span class="batag">❌ BEFORE — spreadsheet chaos</span>
+        <div class="chaos">
+          <div><span class="r">■</span> invoice_final_v3.xlsx — which tab??</div>
+          <div><span class="y">■</span> "Did Bloom pay? Let me scroll…"</div>
+          <div><span class="r">■</span> Rahim &amp; Co. — 47 days, no reminder sent</div>
+          <div><span class="y">■</span> WhatsApp: "bhai invoice bhej dena" ×14</div>
+        </div>
+        <p class="ba-caption">Money earned but never collected. The silent killer of freelancing.</p>
+      </div>
+      <div class="bacard ba-after reveal">
+        <span class="batag">✓ AFTER — InvoiceFlow</span>
+        <div class="minidash">
+          <div class="ministat"><span>Collected · Oct</span><b>$3,050</b></div>
+          <div class="ministat alert"><span>Overdue — auto-nudged</span><b>$2,400</b></div>
+          <div class="ministat"><span>Pending</span><b>$850</b></div>
+          <div class="ministat"><span>Avg. paid in</span><b>6 days</b></div>
+        </div>
+        <p class="ba-caption"><b>Every invoice tracked.</b> Overdue ones get automatic reminders — you just watch the money land.</p>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#demo" class="btn btn-cta btn-big">Try the live demo ↓</a>
+      <a class="btn btn-ghost btn-big" href="https://wa.me/923177415702?text=Hi!%20I%20want%20an%20invoice%20app%20like%20InvoiceFlow%20for%20my%20business." target="_blank" rel="noopener">Get yours for $2,000 →</a>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="demo">
+  <div class="sec-head reveal">
+    <div class="kicker">Live demo — Sara Designs, freelancer</div>
+    <h2>Your money, at a glance.</h2>
+    <p>Create an invoice, mark one paid, send a reminder — everything updates instantly. This is Sara's actual dashboard layout.</p>
+  </div>
+
+  <div class="tabs reveal">
+    <button class="tab active" onclick="tab('dash',this)">Dashboard</button>
+    <button class="tab" onclick="tab('inv',this)">Invoices</button>
+    <button class="tab" onclick="tab('cli',this)" id="clients">Clients</button>
+    <button class="tab" onclick="openNew()" style="background:var(--teal);color:#fff;border-color:var(--teal)">+ New invoice</button>
+  </div>
+
+  <div id="vdash">
+    <div class="alertbar reveal">
+      <span class="dot"></span>
+      <p><b>Overdue alert:</b> INV-1043 · Rahim &amp; Co. — <b>$2,400</b> is 12 days overdue. <span id="alertExtra">A reminder was auto-sent yesterday.</span></p>
+      <button class="btn btn-sm btn-ghost" style="margin-left:auto" onclick="sendReminder(2)">Send another reminder</button>
+    </div>
+    <div class="stats reveal">
+      <div class="stat ok"><div class="t">Collected · October</div><b id="s-collected">$3,050</b><div class="d" style="color:var(--green)">↑ 18% vs September</div></div>
+      <div class="stat"><div class="t">Pending</div><b id="s-pending">$850</b><div class="d" style="color:var(--mut)">due within 7 days</div></div>
+      <div class="stat bad"><div class="t">Overdue</div><b id="s-overdue">$2,400</b><div class="d" style="color:var(--red)">1 invoice · 12 days</div></div>
+      <div class="stat warn"><div class="t">Drafts</div><b id="s-drafts">1</b><div class="d" style="color:var(--mut)">ready to send</div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel reveal">
+        <h3>Revenue — last 6 months</h3>
+        <div class="bars" id="chart"></div>
+      </div>
+      <div class="panel reveal">
+        <h3>Needs your attention</h3>
+        <div id="attention"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="vinv" style="display:none">
+    <div class="panel reveal">
+      <h3>All invoices</h3>
+      <div style="overflow-x:auto">
+      <table class="data">
+        <thead><tr><th>Invoice</th><th>Client</th><th>Issued</th><th>Due</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+        <tbody id="inv-body"></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="vcli" style="display:none">
+    <div class="panel reveal">
+      <h3>Clients</h3>
+      <div id="cli-body"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="scale reveal">
+    <div>
+      <h3>Solo today, agency tomorrow.</h3>
+      <p>InvoiceFlow grows from one freelancer to a 50-person studio — team roles, multi-currency, and per-branch revenue reports in the full version.</p>
+    </div>
+    <a class="btn btn-cta" href="https://wa.me/923177415702?text=Hi!%20I%20want%20an%20invoice%20app%20like%20InvoiceFlow%20for%20my%20business." target="_blank" rel="noopener">Is this YOUR business? Get yours for $2,000 →</a>
+  </div>
+</section>
+
+<div class="final">
+  <h2>Never lose <span class="hl">$2,400</span> to a forgotten invoice again.</h2>
+  <p>Your logo, your clients, your currency — a billing system that chases payments while you do the work. Ready in days, not months.</p>
+  <a class="btn btn-cta btn-big" href="https://wa.me/923177415702?text=Hi%20NAN%20Marketing%20Agency!%20I%20want%20an%20app%20like%20InvoiceFlow%20for%20my%20business." target="_blank" rel="noopener">Get yours for $2,000 →</a>
+</div>
+
+<footer>
+  <div class="fwrap">
+    <div><b>InvoiceFlow</b> · demo by <b>NAN Marketing Agency</b><br>Custom business apps — nidaayesha.com · WhatsApp +92 317 7415702</div>
+    <a class="btn btn-cta" href="https://wa.me/923177415702?text=Hi%20NAN%20Marketing%20Agency!%20I%20want%20an%20app%20like%20this%20for%20my%20business." target="_blank" rel="noopener">Is this YOUR business? Get yours for $2,000 →</a>
+  </div>
+</footer>
+
+<div class="modal" id="newModal">
+  <div class="mbox">
+    <h3>New invoice</h3>
+    <label class="f">Client</label>
+    <select id="ni-client">
+      <option>TechStart Inc.</option><option>Bloom Boutique</option><option>Rahim &amp; Co.</option><option>Café Aroma</option><option>New client…</option>
+    </select>
+    <label class="f">Line items</label>
+    <div id="ni-items"><div class="lirow"><input type="text" placeholder="e.g. Logo design" value="Brand identity package"><input type="number" placeholder="$" value="1200"></div></div>
+    <button class="additem" onclick="niAdd()">+ Add item</button>
+    <label class="f">Due in (days)</label>
+    <input type="number" id="ni-due" value="14" min="1">
+    <div class="mactions">
+      <button class="btn btn-ghost" onclick="closeNew()">Cancel</button>
+      <button class="btn btn-cta" onclick="createInv()">Create invoice →</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const usd = n => "$" + n.toLocaleString("en-US");
+let invs = [
+  {no:"INV-1044", client:"Café Aroma", issued:"Oct 16", due:"Oct 30", amt:600, status:"Draft"},
+  {no:"INV-1043", client:"Rahim & Co.", issued:"Oct 2", due:"Oct 6", amt:2400, status:"Overdue", days:12},
+  {no:"INV-1042", client:"Bloom Boutique", issued:"Oct 12", due:"Oct 26", amt:850, status:"Pending"},
+  {no:"INV-1041", client:"TechStart Inc.", issued:"Sep 28", due:"Oct 12", amt:1200, status:"Paid"},
+  {no:"INV-1040", client:"TechStart Inc.", issued:"Sep 5", due:"Sep 19", amt:1850, status:"Paid"},
+];
+const clients = [
+  {n:"TechStart Inc.", e:"accounts@techstart.io", tot:3050, inv:2},
+  {n:"Bloom Boutique", e:"hello@bloomboutique.com", tot:850, inv:1},
+  {n:"Rahim & Co.", e:"finance@rahimco.pk", tot:2400, inv:1},
+  {n:"Café Aroma", e:"owner@cafearoma.com", tot:600, inv:1},
+];
+let seq = 1045;
+
+function pill(s){ return `<span class="pill p-${s.toLowerCase()}">${s}</span>`; }
+function drawInv(){
+  $("inv-body").innerHTML = invs.map((v,i)=>`
+    <tr class="rowh"><td><b>${v.no}</b></td><td>${v.client}</td><td>${v.issued}</td><td>${v.due}</td>
+    <td><b>${usd(v.amt)}</b></td><td>${pill(v.status)}${v.status==="Overdue"?`<div style="font-size:11.5px;color:var(--red);margin-top:4px">${v.days} days late</div>`:""}</td>
+    <td style="white-space:nowrap;text-align:right">
+      ${v.status==="Pending"||v.status==="Overdue"?`<button class="rowbtn pay" onclick="markPaid(${i})">Mark paid</button>`:""}
+      ${v.status==="Overdue"?`<button class="rowbtn" onclick="sendReminder(${i})">Remind</button>`:""}
+      ${v.status==="Draft"?`<button class="rowbtn" onclick="sendInv(${i})">Send</button>`:""}
+    </td></tr>`).join("");
+  const sum = s => invs.filter(v=>v.status===s).reduce((a,v)=>a+v.amt,0);
+  $("s-pending").textContent = usd(sum("Pending"));
+  $("s-overdue").textContent = usd(sum("Overdue"));
+  $("s-drafts").textContent = invs.filter(v=>v.status==="Draft").length;
+  $("s-collected").textContent = usd(sum("Paid"));
+  const od = invs.filter(v=>v.status==="Overdue");
+  $("attention").innerHTML = od.length
+    ? od.map(v=>`<div style="padding:12px;border:1.5px solid #fca5a5;background:#fff5f5;border-radius:10px;margin-bottom:10px;font-size:13.5px"><b style="color:var(--red)">${v.no}</b> · ${v.client} · <b>${usd(v.amt)}</b><br><span style="color:var(--mut)">${v.days} days overdue — reminder sent</span></div>`).join("")
+    : `<p style="color:var(--mut);font-size:14px">All clear — nothing overdue. 🎉</p>`;
+}
+function markPaid(i){ invs[i].status="Paid"; delete invs[i].days; drawInv(); toast(invs[i].no+" marked paid — "+usd(invs[i].amt)+" collected ✓"); }
+function sendInv(i){ invs[i].status="Pending"; drawInv(); toast(invs[i].no+" sent to "+invs[i].client+" ✓"); }
+function sendReminder(i){
+  const v=invs[i];
+  toast("Payment reminder sent to "+v.client+" ("+usd(v.amt)+") — polite but firm ✓");
+  $("alertExtra").textContent = "You just sent a follow-up reminder.";
+}
+function drawCli(){
+  $("cli-body").innerHTML = clients.map(c=>`
+    <div class="clientrow">
+      <div style="display:flex;gap:14px;align-items:center">
+        <span class="avatar">${c.n[0]}</span>
+        <div><b>${c.n}</b><div style="font-size:12.5px;color:var(--mut)">${c.e} · ${c.inv} invoice${c.inv>1?"s":""}</div></div>
+      </div>
+      <b>${usd(c.tot)}</b>
+    </div>`).join("");
+}
+function tab(name,btn){
+  document.querySelectorAll(".tab").forEach(t=>{if(!t.textContent.includes("New"))t.classList.remove("active")});
+  btn.classList.add("active");
+  $("vdash").style.display = name==="dash"?"block":"none";
+  $("vinv").style.display = name==="inv"?"block":"none";
+  $("vcli").style.display = name==="cli"?"block":"none";
+}
+function openNew(){ $("newModal").classList.add("open"); }
+function closeNew(){ $("newModal").classList.remove("open"); }
+function niAdd(){
+  const d=document.createElement("div"); d.className="lirow";
+  d.innerHTML=`<input type="text" placeholder="e.g. Social media pack"><input type="number" placeholder="$">`;
+  $("ni-items").appendChild(d);
+}
+function createInv(){
+  const rows=[...$("ni-items").querySelectorAll(".lirow")];
+  const amt=rows.reduce((s,r)=>s+(+r.children[1].value||0),0);
+  const due=+$("ni-due").value||14;
+  const d=new Date(); d.setDate(d.getDate()+due);
+  invs.unshift({no:"INV-"+(seq++), client:$("ni-client").value, issued:"Oct 18",
+    due:d.toLocaleDateString("en-GB",{day:"numeric",month:"short"}), amt:amt||0, status:"Pending"});
+  closeNew(); drawInv();
+  toast("Invoice created and ready to send ✓");
+}
+// revenue chart
+const months=[["May",2100],["Jun",2600],["Jul",2400],["Aug",2900],["Sep",3100],["Oct",3050]];
+$("chart").innerHTML = months.map(([m,v])=>`
+  <div class="bar"><b>${"$"+(v/1000).toFixed(1)}k</b><div class="fill" style="height:0" data-h="${Math.round(v/3100*130)}"></div><span>${m}</span></div>`).join("");
+setTimeout(()=>document.querySelectorAll(".fill").forEach(f=>f.style.height=f.dataset.h+"px"),300);
+
+let toastT;
+function toast(msg){
+  const t=$("toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),3400);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+$("newModal").addEventListener("click",e=>{if(e.target.id==="newModal")closeNew()});
+drawInv(); drawCli();
+</script>
+</body>
+</html>
