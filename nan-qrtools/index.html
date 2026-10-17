@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free QR Code Generator & Scanner Online | NAN</title>
+<meta name="description" content="Create free QR codes for URLs, WiFi & vCards, or scan QR codes with your camera or image upload. No signup, no app — 100% private, everything runs in your browser.">
+<link rel="canonical" href="https://nan-qrtools.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.tab{background:var(--card);border:1px solid var(--line);border-radius:.7rem .7rem 0 0;padding:.8rem 1.3rem;font-weight:700;cursor:pointer;color:var(--mut);border-bottom:0;font-size:1rem}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:0 .9rem .9rem .9rem;padding:1.4rem;margin:0 0 1.4rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.subtabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.subtab{background:#f1f5f9;border:1px solid var(--line);border-radius:2rem;padding:.45rem 1.1rem;font-weight:600;cursor:pointer;color:var(--mut);font-size:.95rem}
+.subtab.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.drop{border:2px dashed #94a3b8;border-radius:.8rem;padding:2.2rem 1rem;text-align:center;color:var(--mut);cursor:pointer;transition:.15s;background:#f8fafc}
+.drop:hover,.drop.over{border-color:var(--teal);background:#ecfdf5;color:var(--ink)}
+.drop .big{font-size:2rem}
+.field{margin:.9rem 0}.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input[type=text],.field input[type=password],.field input[type=tel],.field input[type=email],.field textarea,.field select{width:100%;max-width:32rem;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem;background:#fff;font-family:inherit}
+.field textarea{min-height:5rem;resize:vertical}
+.field select{width:auto}
+.checkrow{display:flex;align-items:center;gap:.5rem;margin:.9rem 0}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:.8rem}
+.btn:hover{filter:brightness(.94)}.btn:disabled{opacity:.55;cursor:wait}
+.btn.ghost{background:#e2e8f0;color:var(--navy)}
+.qrprev{display:none;margin:1.4rem 0;text-align:center}
+.qrprev .box{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:1rem}
+.qrprev canvas{image-rendering:pixelated;max-width:100%;height:auto}
+.result{display:none;margin:1.2rem 0;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.8rem;padding:1rem 1.2rem}
+.result .rtext{background:#fff;border:1px solid var(--line);border-radius:.5rem;padding:.7rem .9rem;margin:.7rem 0;word-break:break-word;max-height:12rem;overflow:auto;white-space:pre-wrap}
+.orline{display:flex;align-items:center;gap:1rem;margin:1.6rem 0;color:var(--mut)}
+.orline::before,.orline::after{content:"";flex:1;height:1px;background:var(--line)}
+video.cam{width:100%;max-width:26rem;border-radius:.8rem;border:1px solid var(--line);background:#000;display:none}
+.cammsg{margin:.8rem 0;color:var(--mut)}
+.camerr{background:#fef2f2;border:1px solid #fecaca;border-radius:.6rem;padding:.8rem 1rem;margin:.8rem 0;font-size:.94rem;display:none}
+.privacy{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.8rem;padding:1rem 1.2rem;margin:1.6rem 0;font-size:.95rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+section.guides ul{line-height:2}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>QR Tools</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/qr-code-generator-scanner-guide.html" data-i18n="nav_guide">Guide</a><button class="langbtn" id="langToggle" onclick="toggleLang()">اردو</button></nav>
+</div></header>
+<main><div class="wrap">
+<h1 data-i18n="h1">Free QR Code Generator & Scanner</h1>
+<p class="lede" data-i18n="lede">Create QR codes for URLs, WiFi networks and contact cards, or scan any QR code with your camera — right in your browser. <strong>100% free, no signup.</strong> Your data never leaves your device: everything is processed locally.</p>
+
+<div class="tabs">
+<button class="tab active" onclick="showTab('gen',this)" data-i18n="tab_gen">📝 QR Generator</button>
+<button class="tab" onclick="showTab('scan',this)" data-i18n="tab_scan">📷 QR Scanner</button>
+</div>
+
+<!-- ============ GENERATOR ============ -->
+<section class="panel" id="tool-gen">
+<h2 style="margin-top:0" data-i18n="gen_h">QR Code Generator</h2>
+<p data-i18n="gen_d">Pick a type, fill in the details, and download your QR code as a PNG image.</p>
+<div class="subtabs">
+<button class="subtab active" onclick="showGType('text',this)" data-i18n="gt_text">Text / URL</button>
+<button class="subtab" onclick="showGType('wifi',this)" data-i18n="gt_wifi">WiFi</button>
+<button class="subtab" onclick="showGType('vcard',this)" data-i18n="gt_vcard">vCard (contact)</button>
+</div>
+
+<div id="gtype-text">
+<div class="field"><label data-i18n="text_label">Text or website URL</label>
+<textarea id="inText" data-i18n-ph="text_ph" placeholder="https://example.com or any text"></textarea></div>
+</div>
+
+<div id="gtype-wifi" style="display:none">
+<div class="field"><label data-i18n="wifi_ssid">Network name (SSID)</label><input type="text" id="wifiSsid" placeholder="MyWiFi"></div>
+<div class="field"><label data-i18n="wifi_pass">Password</label><input type="password" id="wifiPass" placeholder="••••••••"></div>
+<div class="field"><label data-i18n="wifi_enc">Security type</label>
+<select id="wifiEnc"><option value="WPA" data-i18n="enc_wpa">WPA / WPA2</option><option value="WEP" data-i18n="enc_wep">WEP</option><option value="nopass" data-i18n="enc_none">None (open network)</option></select></div>
+<div class="checkrow"><input type="checkbox" id="wifiHidden"><label for="wifiHidden" data-i18n="wifi_hidden">Hidden network</label></div>
+</div>
+
+<div id="gtype-vcard" style="display:none">
+<div class="field"><label data-i18n="vc_first">First name</label><input type="text" id="vcFirst" placeholder="Ali"></div>
+<div class="field"><label data-i18n="vc_last">Last name</label><input type="text" id="vcLast" placeholder="Khan"></div>
+<div class="field"><label data-i18n="vc_phone">Phone</label><input type="tel" id="vcPhone" placeholder="+92 300 0000000"></div>
+<div class="field"><label data-i18n="vc_email">Email</label><input type="email" id="vcEmail" placeholder="name@example.com"></div>
+<div class="field"><label data-i18n="vc_org">Organization</label><input type="text" id="vcOrg" placeholder="Company"></div>
+</div>
+
+<div class="field"><label data-i18n="qr_size">QR code size</label>
+<select id="qrSize" onchange="if(lastPayload)makeQR(lastPayload)">
+<option value="256">256 px</option><option value="512" selected>512 px</option><option value="1024">1024 px</option>
+</select></div>
+
+<button class="btn" id="btnGen" onclick="generateQR()" data-i18n="gen_btn">Generate QR Code ⬇</button>
+
+<div class="qrprev" id="qrPrev"><div class="box"><div id="qrBox"></div><br>
+<button class="btn" onclick="downloadQR()" data-i18n="dl_btn">Download PNG ⬇</button></div></div>
+</section>
+
+<!-- ============ SCANNER ============ -->
+<section class="panel" id="tool-scan" style="display:none">
+<h2 style="margin-top:0" data-i18n="scan_h">QR Code Scanner — read any QR code online</h2>
+<p data-i18n="scan_d">Upload a QR code image or scan it live with your device camera. No app to install, no account needed.</p>
+
+<h3 data-i18n="scan_up_h">📁 Scan from image</h3>
+<div class="drop" id="dropScan" onclick="document.getElementById('fileScan').click()">
+<div class="big">🖼️</div>
+<div data-i18n="scan_drop">Tap to choose a QR image, or drag &amp; drop here</div>
+<input type="file" id="fileScan" accept="image/*" hidden>
+</div>
+
+<div class="orline"><span data-i18n="scan_or">OR</span></div>
+
+<h3 data-i18n="scan_cam_h">📷 Scan with camera</h3>
+<p class="cammsg" data-i18n="cam_d">Point your camera at a QR code. The scan starts automatically once the camera is on.</p>
+<button class="btn" id="btnCam" onclick="startCamera()" data-i18n="cam_start">Start camera</button>
+<button class="btn ghost" id="btnCamStop" onclick="stopCameraUI()" style="display:none" data-i18n="cam_stop">Stop camera</button>
+<div class="camerr" id="camErr"></div>
+<video class="cam" id="camVideo" playsinline muted></video>
+<canvas id="camCanvas" style="display:none"></canvas>
+
+<div class="result" id="scanResult">
+<strong data-i18n="res_h">✅ Decoded content:</strong>
+<div class="rtext" id="scanText"></div>
+<button class="btn ghost" id="copyBtn" onclick="copyResult()" data-i18n="copy_btn">Copy text</button>
+<a class="btn" id="openLink" href="#" target="_blank" rel="noopener" style="display:none;margin-left:.6rem" data-i18n="open_link">Open link ↗</a>
+</div>
+</section>
+
+<div class="privacy">🔒 <strong data-i18n="priv_h">Private by design:</strong> <span data-i18n="priv_d">QR codes are generated and decoded entirely inside your browser with open-source libraries. Nothing you type, scan or upload is ever sent to any server — safe for WiFi passwords and personal contacts.</span></div>
+
+<div style="text-align:center;margin:28px 0;">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="guides"><h2 data-i18n="guides">Guides</h2>
+<ul><li><a href="articles/qr-code-generator-scanner-guide.html">QR Code Generator & Scanner: The Complete Guide (WiFi QR, vCard, Scanning Tips)</a> — <span data-i18n="guides_d">How to create QR codes, scan them online, WiFi QR codes, and FAQs.</span></li></ul></section>
+
+<div class="faq"><h2 data-i18n="faq">FAQs</h2>
+<details><summary data-i18n="q1">Is this really free? Any limits?</summary><p data-i18n="a1">Yes — 100% free, unlimited QR codes, no signup and no watermarks. Everything runs in your browser, so there is nothing to pay for.</p></details>
+<details><summary data-i18n="q2">Do my QR codes expire or get tracked?</summary><p data-i18n="a2">No. The codes are static — your data is encoded directly into the QR pattern itself. There is no tracking redirect and no server involved, so they work forever and nobody can count your scans.</p></details>
+<details><summary data-i18n="q3">Is my WiFi password uploaded anywhere?</summary><p data-i18n="a3">No. The WiFi QR code is generated locally in your browser with JavaScript. Your network name and password never leave your phone or computer.</p></details>
+<details><summary data-i18n="q4">Why won't my camera start?</summary><p data-i18n="a4">Camera scanning needs two things: an HTTPS page (this site is secure) and your permission. If you denied access, allow the camera in your browser's site settings and try again — or simply upload a QR image instead.</p></details>
+<details><summary data-i18n="q5">Can I scan a QR code from a screenshot?</summary><p data-i18n="a5">Yes. Use the image upload above with any PNG, JPG or WebP screenshot or photo. Make sure the full QR code, including its quiet white border, is visible and sharp.</p></details>
+</div>
+
+<h2>اردو میں خلاصہ</h2>
+<div class="note">
+<p><strong>NAN QR Tools</strong> مفت آن لائن ٹولز ہیں: URLs، وائی فائی اور رابطہ کارڈ (vCard) کے لیے QR کوڈ بنائیں، یا کیمرے سے کسی بھی QR کوڈ کو اسکین کریں۔</p>
+<p>🔒 <strong>پرائیویسی:</strong> تمام کام آپ کے براؤزر میں ہوتا ہے — آپ کا ڈیٹا، وائی فائی پاس ورڈ یا رابطے کبھی کسی سرور پر نہیں بھیجے جاتے۔</p>
+<p>📱 موبائل پر بھی کام کرتا ہے — گیلری سے تصویر اپ لوڈ کریں یا کیمرہ استعمال کریں، ایک کلک میں نتیجہ کاپی کریں۔</p>
+</div>
+<div class="note"><strong>Disclaimer:</strong> These tools run locally in your browser for convenience. Always test a printed QR code with your phone camera before mass printing.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN QR Tools</h4><p data-i18n="foot">Free online QR code generator and scanner — URLs, WiFi and vCards. Private, fast, no signup.</p></div>
+<div><h4 data-i18n="tools_h">Tools</h4><p><a href="index.html">QR Tools</a><br><a href="articles/qr-code-generator-scanner-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-imagetools.surge.sh" style="color:#94a3b8;text-decoration:none;">Image Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-texttools.surge.sh" style="color:#94a3b8;text-decoration:none;">Text Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-passwordtools.surge.sh" style="color:#94a3b8;text-decoration:none;">Password Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-colortools.surge.sh" style="color:#94a3b8;text-decoration:none;">Color Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">NAN Urdu Portal</a> <span style="color:#334155;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Rozana Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Labour Law Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">EOBI Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-mosques-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Mosques Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-laundromats-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Laundromats Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-carwash-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Car Wash Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-halal-grocery-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Halal Grocery Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-pharmacy-24h-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">24h Pharmacy Near Me USA</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+<script>
+/* ---------- tabs ---------- */
+let currentGType='text';
+function showTab(id,btn){['gen','scan'].forEach(t=>{document.getElementById('tool-'+t).style.display=(t===id?'block':'none')});document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(id!=='scan')stopCameraUI();}
+function showGType(id,btn){currentGType=id;['text','wifi','vcard'].forEach(t=>{document.getElementById('gtype-'+t).style.display=(t===id?'block':'none')});document.querySelectorAll('.subtab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+/* ---------- i18n ---------- */
+const STR={
+ur:{nav_tools:"ٹولز",nav_guide:"رہنمائی",h1:"مفت QR کوڈ جنریٹر اور اسکینر",lede:"URLs، وائی فائی نیٹ ورکس اور رابطہ کارڈز کے لیے QR کوڈ بنائیں، یا اپنے کیمرے سے کسی بھی QR کوڈ کو اسکین کریں — براہِ راست آپ کے براؤزر میں۔ <strong>100% مفت، کوئی رجسٹریشن نہیں۔</strong> آپ کا ڈیٹا کبھی آپ کے ڈیوائس سے باہر نہیں جاتا: سب کچھ مقامی طور پر پروسیس ہوتا ہے۔",tab_gen:"📝 QR جنریٹر",tab_scan:"📷 QR اسکینر",gen_h:"QR کوڈ جنریٹر",gen_d:"ایک قسم منتخب کریں، تفصیلات بھریں، اور اپنا QR کوڈ PNG تصویر کے طور پر ڈاؤن لوڈ کریں۔",gt_text:"متن / URL",gt_wifi:"وائی فائی",gt_vcard:"vCard (رابطہ)",text_label:"متن یا ویب سائٹ کا URL",text_ph:"https://example.com یا کوئی متن",wifi_ssid:"نیٹ ورک کا نام (SSID)",wifi_pass:"پاس ورڈ",wifi_enc:"سیکیورٹی کی قسم",enc_wpa:"WPA / WPA2",enc_wep:"WEP",enc_none:"کوئی نہیں (کھلا نیٹ ورک)",wifi_hidden:"پوشیدہ نیٹ ورک",vc_first:"پہلا نام",vc_last:"آخری نام",vc_phone:"فون",vc_email:"ای میل",vc_org:"ادارہ",qr_size:"QR کوڈ کا سائز",gen_btn:"QR کوڈ بنائیں ⬇",dl_btn:"PNG ڈاؤن لوڈ کریں ⬇",scan_h:"QR کوڈ اسکینر — کوئی بھی QR کوڈ آن لائن پڑھیں",scan_d:"QR کوڈ کی تصویر اپ لوڈ کریں یا اپنے ڈیوائس کے کیمرے سے لائیو اسکین کریں۔ کوئی ایپ انسٹال نہیں، کوئی اکاؤنٹ نہیں۔",scan_up_h:"📁 تصویر سے اسکین کریں",scan_drop:"QR تصویر منتخب کرنے کے لیے ٹیپ کریں یا یہاں ڈراپ کریں",scan_or:"یا",scan_cam_h:"📷 کیمرے سے اسکین کریں",cam_d:"کیمرہ QR کوڈ کی طرف کریں۔ کیمرہ آن ہوتے ہی اسکین خودکار شروع ہو جائے گا۔",cam_start:"کیمرہ شروع کریں",cam_stop:"کیمرہ بند کریں",res_h:"✅ ڈی کوڈ شدہ مواد:",copy_btn:"متن کاپی کریں",open_link:"لنک کھولیں ↗",priv_h:"پرائیویسی:",priv_d:"QR کوڈ اوپن سورس لائبریریوں سے مکمل طور پر آپ کے براؤزر میں بنائے اور پڑھے جاتے ہیں۔ آپ جو کچھ لکھتے، اسکین کرتے یا اپ لوڈ کرتے ہیں وہ کبھی کسی سرور کو نہیں بھیجا جاتا — وائی فائی پاس ورڈز اور ذاتی رابطوں کے لیے محفوظ۔",guides:"رہنمائی",guides_d:"QR کوڈ بنانے کا طریقہ، انہیں آن لائن اسکین کریں، وائی فائی QR کوڈ، اور سوالات۔",faq:"سوالات",q1:"کیا یہ واقعی مفت ہے؟ کوئی حد؟",a1:"جی ہاں — 100% مفت، لامحدود QR کوڈ، کوئی رجسٹریشن اور کوئی واٹر مارک نہیں۔ سب کچھ آپ کے براؤزر میں چلتا ہے اس لیے ادائیگی کی کوئی وجہ نہیں۔",q2:"کیا میرے QR کوڈ ختم ہوتے ہیں یا ٹریک ہوتے ہیں؟",a2:"نہیں۔ یہ اسٹیٹک کوڈ ہیں — آپ کا ڈیٹا براہِ راست QR پیٹرن میں انکوڈ ہوتا ہے۔ کوئی ٹریکنگ ری ڈائریکٹ نہیں، کوئی سرور شامل نہیں، اس لیے یہ ہمیشہ کام کرتے ہیں اور کوئی آپ کے اسکین نہیں گن سکتا۔",q3:"کیا میرا وائی فائی پاس ورڈ کہیں اپ لوڈ ہوتا ہے؟",a3:"نہیں۔ وائی فائی QR کوڈ جاوا اسکرپٹ سے آپ کے براؤزر میں مقامی طور پر بنتا ہے۔ آپ کے نیٹ ورک کا نام اور پاس ورڈ آپ کے فون یا کمپیوٹر سے باہر نہیں جاتے۔",q4:"میرا کیمرہ کیوں شروع نہیں ہوتا؟",a4:"کیمرہ اسکیننگ کے لیے دو چیزیں درکار ہیں: HTTPS صفحہ (یہ سائٹ محفوظ ہے) اور آپ کی اجازت۔ اگر آپ نے رسائی مسترد کی تھی تو براؤزر کی سائٹ سیٹنگز میں کیمرے کی اجازت دیں اور دوبارہ کوشش کریں — یا بس QR تصویر اپ لوڈ کریں۔",q5:"کیا میں اسکرین شاٹ سے QR کوڈ اسکین کر سکتا ہوں؟",a5:"جی ہاں۔ اوپر دیے گئے اپ لوڈ سے کوئی بھی PNG، JPG یا WebP اسکرین شاٹ یا تصویر استعمال کریں۔ یقینی بنائیں کہ مکمل QR کوڈ، بشمول اس کا سفید حاشیہ، واضح نظر آ رہا ہو۔",foot:"مفت آن لائن QR کوڈ جنریٹر اور اسکینر — URLs، وائی فائی اور vCard۔ پرائیویٹ، تیز، کوئی رجسٹریشن نہیں۔",tools_h:"ٹولز",gen_empty:"پہلے مواد درج کریں",lib_missing:"QR لائبریری لوڈ نہیں ہو سکی۔ انٹرنیٹ چیک کریں اور صفحہ دوبارہ لوڈ کریں۔",decode_lib_missing:"اسکینر لائبریری لوڈ نہیں ہو سکی۔ انٹرنیٹ چیک کریں اور صفحہ دوبارہ لوڈ کریں۔",cam_denied:"کیمرے کی اجازت مسترد کر دی گئی۔ براؤزر کی سائٹ سیٹنگز میں کیمرے کی اجازت دیں، یا تصویر اپ لوڈ کر کے اسکین کریں۔",cam_nosupport:"آپ کا براؤزر کیمرے کو سپورٹ نہیں کرتا۔ براہ کرم تصویر اپ لوڈ کریں۔",cam_failed:"کیمرہ شروع نہیں ہو سکا۔ تصویر اپ لوڈ کر کے کوشش کریں۔",scan_none:"اس تصویر میں کوئی QR کوڈ نہیں ملا۔ واضح تصویر آزمائیں جس میں مکمل کوڈ نظر آئے۔",copied:"کاپی ہو گیا ✓"},
+en:{nav_tools:"Tools",nav_guide:"Guide",h1:"Free QR Code Generator & Scanner",lede:"Create QR codes for URLs, WiFi networks and contact cards, or scan any QR code with your camera — right in your browser. <strong>100% free, no signup.</strong> Your data never leaves your device: everything is processed locally.",tab_gen:"📝 QR Generator",tab_scan:"📷 QR Scanner",gen_h:"QR Code Generator",gen_d:"Pick a type, fill in the details, and download your QR code as a PNG image.",gt_text:"Text / URL",gt_wifi:"WiFi",gt_vcard:"vCard (contact)",text_label:"Text or website URL",text_ph:"https://example.com or any text",wifi_ssid:"Network name (SSID)",wifi_pass:"Password",wifi_enc:"Security type",enc_wpa:"WPA / WPA2",enc_wep:"WEP",enc_none:"None (open network)",wifi_hidden:"Hidden network",vc_first:"First name",vc_last:"Last name",vc_phone:"Phone",vc_email:"Email",vc_org:"Organization",qr_size:"QR code size",gen_btn:"Generate QR Code ⬇",dl_btn:"Download PNG ⬇",scan_h:"QR Code Scanner — read any QR code online",scan_d:"Upload a QR code image or scan it live with your device camera. No app to install, no account needed.",scan_up_h:"📁 Scan from image",scan_drop:"Tap to choose a QR image, or drag & drop here",scan_or:"OR",scan_cam_h:"📷 Scan with camera",cam_d:"Point your camera at a QR code. Scanning starts automatically once the camera is on.",cam_start:"Start camera",cam_stop:"Stop camera",res_h:"✅ Decoded content:",copy_btn:"Copy text",open_link:"Open link ↗",priv_h:"Private by design:",priv_d:"QR codes are generated and decoded entirely inside your browser with open-source libraries. Nothing you type, scan or upload is ever sent to any server — safe for WiFi passwords and personal contacts.",guides:"Guides",guides_d:"How to create QR codes, scan them online, WiFi QR codes, and FAQs.",faq:"FAQs",q1:"Is this really free? Any limits?",a1:"Yes — 100% free, unlimited QR codes, no signup and no watermarks. Everything runs in your browser, so there is nothing to pay for.",q2:"Do my QR codes expire or get tracked?",a2:"No. The codes are static — your data is encoded directly into the QR pattern itself. There is no tracking redirect and no server involved, so they work forever and nobody can count your scans.",q3:"Is my WiFi password uploaded anywhere?",a3:"No. The WiFi QR code is generated locally in your browser with JavaScript. Your network name and password never leave your phone or computer.",q4:"Why won't my camera start?",a4:"Camera scanning needs two things: an HTTPS page (this site is secure) and your permission. If you denied access, allow the camera in your browser's site settings and try again — or simply upload a QR image instead.",q5:"Can I scan a QR code from a screenshot?",a5:"Yes. Use the image upload above with any PNG, JPG or WebP screenshot or photo. Make sure the full QR code, including its quiet white border, is visible and sharp.",foot:"Free online QR code generator and scanner — URLs, WiFi and vCards. Private, fast, no signup.",tools_h:"Tools",gen_empty:"Please enter some content first",lib_missing:"QR library failed to load. Check your internet connection and reload the page.",decode_lib_missing:"Scanner library failed to load. Check your internet connection and reload the page.",cam_denied:"Camera permission was denied. Allow camera access in your browser's site settings, or upload an image instead.",cam_nosupport:"Your browser does not support camera access. Please upload an image instead.",cam_failed:"Could not start the camera. Try uploading an image instead.",scan_none:"No QR code found in this image. Try a sharper photo with the full code visible.",copied:"Copied ✓"}
+};
+let lang='en';
+function toggleLang(){lang=(lang==='en'?'ur':'en');document.documentElement.lang=lang;document.documentElement.dir=(lang==='ur'?'rtl':'ltr');document.querySelectorAll('[data-i18n]').forEach(function(el){const k=el.getAttribute('data-i18n');if(STR[lang][k])el.innerHTML=STR[lang][k];});document.querySelectorAll('[data-i18n-ph]').forEach(function(el){const k=el.getAttribute('data-i18n-ph');if(STR[lang][k])el.placeholder=STR[lang][k];});document.getElementById('langToggle').textContent=(lang==='en'?'اردو':'English');}
+/* ---------- QR GENERATOR ---------- */
+let lastPayload='';
+function escWifi(s){return s.replace(/([\\;,":])/g,'\\$1');}
+function buildWifi(){
+  const ssid=document.getElementById('wifiSsid').value.trim();
+  if(!ssid)return '';
+  const enc=document.getElementById('wifiEnc').value;
+  const pass=document.getElementById('wifiPass').value;
+  const hidden=document.getElementById('wifiHidden').checked?'true':'false';
+  let s='WIFI:T:'+enc+';S:'+escWifi(ssid)+';';
+  if(enc!=='nopass'&&pass)s+='P:'+escWifi(pass)+';';
+  s+='H:'+hidden+';;';
+  return s;
+}
+function buildVCard(){
+  const f=document.getElementById('vcFirst').value.trim();
+  const l=document.getElementById('vcLast').value.trim();
+  const p=document.getElementById('vcPhone').value.trim();
+  const e=document.getElementById('vcEmail').value.trim();
+  const o=document.getElementById('vcOrg').value.trim();
+  if(!f&&!l&&!p&&!e&&!o)return '';
+  const lines=['BEGIN:VCARD','VERSION:3.0','N:'+l+';'+f+';;;','FN:'+(f+' '+l).trim()];
+  if(p)lines.push('TEL;TYPE=CELL:'+p);
+  if(e)lines.push('EMAIL:'+e);
+  if(o)lines.push('ORG:'+o);
+  lines.push('END:VCARD');
+  return lines.join('\n');
+}
+function makeQR(payload){
+  const box=document.getElementById('qrBox');
+  box.innerHTML='';
+  const size=parseInt(document.getElementById('qrSize').value,10);
+  new QRCode(box,{text:payload,width:size,height:size,correctLevel:QRCode.CorrectLevel.M});
+  document.getElementById('qrPrev').style.display='block';
+}
+function generateQR(){
+  if(typeof QRCode==='undefined'){alert(STR[lang].lib_missing);return;}
+  let payload='';
+  if(currentGType==='text')payload=document.getElementById('inText').value.trim();
+  else if(currentGType==='wifi')payload=buildWifi();
+  else payload=buildVCard();
+  if(!payload){alert(STR[lang].gen_empty);return;}
+  lastPayload=payload;
+  makeQR(payload);
+}
+function downloadQR(){
+  const c=document.getElementById('qrBox').querySelector('canvas');
+  if(!c){alert(STR[lang].gen_empty);return;}
+  const a=document.createElement('a');
+  a.href=c.toDataURL('image/png');
+  a.download='nan-qrcode.png';
+  document.body.appendChild(a);a.click();a.remove();
+}
+/* ---------- QR SCANNER ---------- */
+function showInfo(msg){
+  let d=document.getElementById('scanInfo');
+  if(!d){d=document.createElement('div');d.id='scanInfo';d.className='note';document.getElementById('scanResult').before(d);}
+  d.textContent=msg;d.style.display='block';
+  document.getElementById('scanResult').style.display='none';
+}
+function hideInfo(){const d=document.getElementById('scanInfo');if(d)d.style.display='none';}
+function showResult(text){
+  hideInfo();
+  document.getElementById('scanText').textContent=text;
+  const b=document.getElementById('copyBtn');
+  if(b)b.textContent=STR[lang].copy_btn;
+  const ol=document.getElementById('openLink');
+  if(/^https?:\/\//i.test(text.trim())){ol.href=text.trim();ol.style.display='inline-block';}
+  else ol.style.display='none';
+  document.getElementById('scanResult').style.display='block';
+}
+function fallbackCopy(t){
+  const ta=document.createElement('textarea');
+  ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);
+}
+function copyResult(){
+  const t=document.getElementById('scanText').textContent;
+  const done=function(){
+    const b=document.getElementById('copyBtn');
+    b.textContent=STR[lang].copied;
+    setTimeout(function(){b.textContent=STR[lang].copy_btn;},1500);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallbackCopy(t);done();});}
+  else{fallbackCopy(t);done();}
+}
+function decodeFile(file){
+  if(typeof jsQR==='undefined'){showInfo(STR[lang].decode_lib_missing);return;}
+  const url=URL.createObjectURL(file);
+  const img=new Image();
+  img.onload=function(){
+    URL.revokeObjectURL(url);
+    const s=Math.min(1,1200/Math.max(img.naturalWidth,img.naturalHeight));
+    const cw=Math.max(1,Math.round(img.naturalWidth*s));
+    const ch=Math.max(1,Math.round(img.naturalHeight*s));
+    const c=document.createElement('canvas');c.width=cw;c.height=ch;
+    const ctx=c.getContext('2d');
+    ctx.drawImage(img,0,0,cw,ch);
+    let code=null;
+    try{code=jsQR(ctx.getImageData(0,0,cw,ch).data,cw,ch);}catch(e){code=null;}
+    if(code&&code.data)showResult(code.data);
+    else showInfo(STR[lang].scan_none);
+  };
+  img.onerror=function(){URL.revokeObjectURL(url);showInfo(STR[lang].scan_none);};
+  img.src=url;
+}
+(function(){
+  const z=document.getElementById('dropScan');
+  ['dragover','dragenter'].forEach(function(e){z.addEventListener(e,function(ev){ev.preventDefault();z.classList.add('over');});});
+  ['dragleave','drop'].forEach(function(e){z.addEventListener(e,function(ev){ev.preventDefault();z.classList.remove('over');});});
+  z.addEventListener('drop',function(ev){const f=ev.dataTransfer.files[0];if(f)decodeFile(f);});
+  document.getElementById('fileScan').addEventListener('change',function(ev){const f=ev.target.files[0];if(f)decodeFile(f);ev.target.value='';});
+})();
+/* ---------- camera ---------- */
+let camStream=null,camRaf=0,camActive=false;
+function camError(key){
+  const box=document.getElementById('camErr');
+  box.textContent=STR[lang][key]||key;
+  box.style.display='block';
+}
+function stopCamera(){
+  camActive=false;
+  if(camRaf)cancelAnimationFrame(camRaf);
+  camRaf=0;
+  if(camStream){camStream.getTracks().forEach(function(t){try{t.stop();}catch(e){}});camStream=null;}
+  const v=document.getElementById('camVideo');
+  try{v.pause();}catch(e){}
+  v.removeAttribute('src');v.srcObject=null;v.style.display='none';
+}
+function stopCameraUI(){
+  stopCamera();
+  document.getElementById('btnCam').style.display='inline-block';
+  document.getElementById('btnCamStop').style.display='none';
+}
+async function startCamera(){
+  const box=document.getElementById('camErr');
+  box.style.display='none';
+  if(typeof jsQR==='undefined'){camError('decode_lib_missing');return;}
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){camError('cam_nosupport');return;}
+  stopCamera();
+  try{
+    camStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'},audio:false});
+  }catch(e){
+    const name=(e&&e.name)||'';
+    camError((name==='NotAllowedError'||name==='SecurityError')?'cam_denied':'cam_failed');
+    return;
+  }
+  const v=document.getElementById('camVideo');
+  v.srcObject=camStream;
+  try{await v.play();}catch(e){}
+  v.style.display='block';
+  document.getElementById('btnCam').style.display='none';
+  document.getElementById('btnCamStop').style.display='inline-block';
+  camActive=true;
+  camTick();
+}
+function camTick(){
+  if(!camActive)return;
+  const v=document.getElementById('camVideo');
+  if(v.readyState>=2&&v.videoWidth>0){
+    const c=document.getElementById('camCanvas');
+    c.width=v.videoWidth;c.height=v.videoHeight;
+    const ctx=c.getContext('2d');
+    ctx.drawImage(v,0,0,c.width,c.height);
+    let code=null;
+    try{code=jsQR(ctx.getImageData(0,0,c.width,c.height).data,c.width,c.height);}catch(e){code=null;}
+    if(code&&code.data){stopCameraUI();showResult(code.data);return;}
+  }
+  camRaf=requestAnimationFrame(camTick);
+}
+</script>
+</body>
+</html>
