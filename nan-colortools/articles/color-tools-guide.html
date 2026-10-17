@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Color Tools Online: Color Picker, HEX to RGB Converter & Palette Generator — Complete Guide</title>
+<meta name="description" content="Free online color picker, hex to rgb converter, color palette generator and WCAG contrast checker. Learn how to pick, convert, combine and test colors like a designer — 100% free, no signup.">
+<link rel="canonical" href="https://nan-colortools.surge.sh/articles/color-tools-guide.html">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0}.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+article{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:2rem;margin:2rem 0}
+h1{color:var(--navy);font-size:1.8rem;line-height:1.3}h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}h3{color:var(--navy)}
+.meta{color:var(--mut);font-size:.88rem;margin-bottom:1.5rem}
+.cta{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.8rem;padding:1.1rem 1.3rem;margin:1.6rem 0;text-align:center}
+.cta a{background:var(--teal);color:#fff;font-weight:700;padding:.7rem 1.5rem;border-radius:.6rem;text-decoration:none;display:inline-block;margin-top:.4rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.sw{display:inline-block;width:2.6rem;height:2.6rem;border-radius:.5rem;border:1px solid rgba(0,0,0,.15);vertical-align:middle;margin:.2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left}
+th{background:#f1f5f9;color:var(--navy)}
+code{background:#f1f5f9;padding:.15rem .45rem;border-radius:.35rem;font-size:.92em}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem;font-size:.9rem}
+footer a{color:#94a3b8}.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+ol li,ul li{margin-bottom:.5rem}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="../index.html">NAN <span>Color Tools</span></a></div></header>
+<main><div class="wrap"><article>
+<p class="meta">NAN Color Tools Guide · Updated October 2026 · 10 min read</p>
+<h1>Free Color Tools Online: Color Picker, HEX to RGB Converter, Palette Generator &amp; Contrast Checker — The Complete Guide</h1>
+<p>Every day, millions of designers, developers, marketers and students search for a <strong>color picker</strong>, a <strong>hex to rgb</strong> converter, a <strong>color palette generator</strong> or a <strong>contrast checker</strong>. Someone needs the exact hex code of a brand color. A web developer needs <code>rgb(20, 184, 166)</code> from <code>#14B8A6</code> for a canvas script. A blogger wants a harmonious 5-color palette for a new website. A designer must prove their text passes WCAG contrast rules before launch. Different people, same problem: colors are precise values, and guessing doesn't work.</p>
+<p>This guide explains all of it — with four free tools that run entirely in your browser: <a href="../index.html">NAN Color Tools</a>. Pick any color, convert between HEX, RGB and HSL, generate harmonious palettes, and test contrast ratios for accessibility. No signup, no watermarks, no uploads — your colors never leave your device.</p>
+
+<div class="cta"><strong>Try the tools now — free, no signup</strong><br><a href="../index.html">Open NAN Color Tools →</a></div>
+
+<h2>1. Color Picker: Pick Any Color, Get Its Code Instantly</h2>
+<p>A <strong>color picker</strong> is the fastest way to go from "that teal looks right" to the exact code your tool needs. Our color picker combines three input methods:</p>
+<ol>
+<li><strong>Visual picker.</strong> Click the big color square to open your operating system's native color dialog — the full spectrum with hue, saturation and brightness controls. It feels familiar because it is the same picker built into Windows, macOS and Android.</li>
+<li><strong>Preset swatches.</strong> Twelve curated colors (teal, navy, amber, red, blue, violet, pink, green, orange, indigo, black, white) for one-tap selection.</li>
+<li><strong>Screen sampling (Chromium browsers).</strong> The "Pick from screen" button turns your cursor into an eyedropper that reads any pixel on your monitor — from a photo, a competitor's website, a PDF, even another app. This is the EyeDropper API, available in Chrome, Edge and other Chromium browsers.</li>
+</ol>
+<p>Whichever way you pick, three synced readouts show the <strong>HEX</strong>, <strong>RGB</strong> and <strong>HSL</strong> values instantly. Click any value to copy it to your clipboard — ready to paste into CSS, Figma, Photoshop, Canva or any design tool. There is also a random-color button for design inspiration: click it when prototyping and you need a fresh starting point.</p>
+
+<h2>2. HEX to RGB Converter: Understanding the Math</h2>
+<p>Converting <strong>hex to rgb</strong> is pure positional arithmetic — no approximation anywhere. A six-digit hex code like <code>#14B8A6</code> is three two-digit values in base 16 (red, green, blue in that order), using digits 0–9 then a–f for ten through fifteen. Two hex digits cover 0–255, exactly the range of an 8-bit RGB channel, which is why the notation exists: it is the shortest exact spelling of a 24-bit color.</p>
+<p>To convert one channel pair to decimal: multiply the first digit by 16, then add the second. Worked example with <code>#14B8A6</code>:</p>
+<table>
+<tr><th>Channel</th><th>Pair</th><th>Math</th><th>Decimal</th></tr>
+<tr><td>Red</td><td><code>14</code></td><td>1 × 16 + 4</td><td><strong>20</strong></td></tr>
+<tr><td>Green</td><td><code>B8</code></td><td>11 × 16 + 8</td><td><strong>184</strong></td></tr>
+<tr><td>Blue</td><td><code>A6</code></td><td>10 × 16 + 6</td><td><strong>166</strong></td></tr>
+</table>
+<p>Result: <code>#14B8A6 = rgb(20, 184, 166)</code>. Our <strong>HEX / RGB / HSL converter</strong> does this instantly in any direction: paste <code>#14B8A6</code>, <code>rgb(20, 184, 166)</code> or <code>hsl(173, 80%, 40%)</code> and get all three formats back, with a live color preview and one-click copy. It accepts 3-digit shorthand (<code>#fa3</code> expands to <code>#FFAA33</code>), with or without the leading <code>#</code>, and shows a clear error message on invalid input instead of silently guessing.</p>
+<div class="note"><strong>When to use which format:</strong> use HEX when writing CSS by hand (compact, universal); RGB when manipulating channels in JavaScript, canvas code, or APIs that want integers; HSL when you need to derive shades and hover states — to make a button 10% darker, keep the same H and S and drop L by 10%, and the hue stays perfect. Doing that in HEX or RGB requires juggling all three channels and usually shifts the hue by accident.</div>
+
+<h2>3. Color Palette Generator: Harmonious Colors From One Base</h2>
+<p>A <strong>color palette generator</strong> takes one base color and produces a set of colors that look good together, using classic color-harmony rules. Ours generates 5-color palettes in four modes:</p>
+<ul>
+<li><strong>Complementary</strong> — the base color plus its opposite on the color wheel (180° hue shift), with lighter and darker variants. Maximum contrast and energy; the classic choice for buttons and calls-to-action.</li>
+<li><strong>Analogous</strong> — colors ±15° and ±30° from the base hue. Calm, cohesive, and easy on the eyes — ideal for backgrounds, gradients and branding where everything should feel like family.</li>
+<li><strong>Triadic</strong> — three colors evenly spaced 120° apart, plus a tint and shade of the base. Bold and vibrant; great when you need three distinct accent colors that still balance.</li>
+<li><strong>Random</strong> — five fresh colors for brainstorming and mood-board sessions.</li>
+</ul>
+<p>Click any palette color to copy its HEX code, or use <strong>Copy all</strong> to grab the whole palette in one go. A practical workflow: pick your brand's primary color in the Color Picker tab, switch to the Palette Generator with that color as the base, and you have a complete UI palette — primary, accent, background tints and text shades — in seconds.</p>
+
+<h2>4. Contrast Checker: Pass WCAG Accessibility</h2>
+<p>A <strong>contrast checker</strong> measures the WCAG 2.1 contrast ratio between text (foreground) and its background. The formula compares relative luminance: ratio = (L1 + 0.05) / (L2 + 0.05), where L is the weighted luminance of each color. It ranges from 1:1 (same color — invisible) to 21:1 (black on white — maximum).</p>
+<p>The WCAG thresholds you must hit:</p>
+<table>
+<tr><th>Text type</th><th>AA (minimum)</th><th>AAA (enhanced)</th></tr>
+<tr><td>Normal text (below 18pt)</td><td>4.5 : 1</td><td>7 : 1</td></tr>
+<tr><td>Large text (18pt+, or 14pt+ bold)</td><td>3 : 1</td><td>4.5 : 1</td></tr>
+</table>
+<p>Our checker shows the exact ratio, live AA / AAA pass-fail badges for both normal and large text, and a <strong>live preview</strong> of your actual sample text on the chosen background. Enter colors via the visual pickers or paste hex codes directly. Common failures to avoid: light gray text on white, brand-color buttons with white text (many brand teals and greens fail at 4.5:1 — test before you ship), and colored text on busy image backgrounds.</p>
+<div class="note"><strong>Why this matters:</strong> contrast isn't just an accessibility nicety — in many regions it's a legal requirement for public and commercial sites, and readable text converts better. One 30-second check saves redesigns later.</div>
+
+<h2>5. Workflows: Designer &amp; Developer Use Cases</h2>
+<ul>
+<li><strong>Brand kit assembly:</strong> sample a logo color with the eyedropper → generate an analogous palette → copy all HEX codes into your style guide.</li>
+<li><strong>CSS theming:</strong> convert brand HEX to HSL, then derive hover/active/disabled states by shifting lightness only.</li>
+<li><strong>Landing page QA:</strong> run every text/background pair through the contrast checker before launch.</li>
+<li><strong>Client presentations:</strong> generate three triadic palettes from the client's brand color and present options in minutes.</li>
+<li><strong>Print work:</strong> note the RGB values from the converter for design tools that want 0–255 channels.</li>
+</ul>
+
+<h2>6. Privacy: Your Colors Stay Yours</h2>
+<p>Every tool on this site runs <strong>100% in your browser</strong> with vanilla JavaScript. No accounts, no file uploads, no servers processing your colors, no tracking of your choices. Brand colors are business-sensitive — a tool that phones home with every color you sample is a leak you don't need. This one can't leak what it never sends.</p>
+
+<div class="cta"><strong>Ready to pick, convert, and combine?</strong><br><a href="../index.html">Open NAN Color Tools →</a></div>
+
+<p style="color:var(--mut);font-size:.9rem">NAN Color Tools — free online color picker, hex to rgb converter, color palette generator and WCAG contrast checker. Updated October 2026.</p>
+</article></div></main>
+<footer>
+<div class="wrap"><p><a href="../index.html">NAN Color Tools</a> · More free tools: <a href="https://nan-pdftools.surge.sh">PDF Tools</a> · <a href="https://nan-imagetools.surge.sh">Image Tools</a> · <a href="https://nan-qrtools.surge.sh">QR Tools</a></p><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+</body>
+</html>
