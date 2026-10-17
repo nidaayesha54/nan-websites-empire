@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-uk-guarantee-pay.surge.sh/sitemap.xml
