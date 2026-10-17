@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Security Fairness Act Calculator 2026 — WEP Repeal Benefit Increase Estimator</title>
+<meta name="description" content="Free 2026 estimator: how much will your Social Security check increase after the Social Security Fairness Act repealed WEP and GPO? Enter your benefit, pension & work years for an instant estimate.">
+<link rel="canonical" href="https://nan-us-wep-repeal.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>WEP Repeal Estimator</span></a>
+<nav class="nav"><a href="index.html">Estimator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Social Security Fairness Act Calculator (2026)</h1>
+<p class="lede">The Social Security Fairness Act repealed the Windfall Elimination Provision (WEP) and Government Pension Offset (GPO). If you are a teacher, firefighter, police officer, or other public worker with a non-covered pension, estimate how much bigger your monthly check is now.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">WEP Repeal — Estimate Your Monthly Increase</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="benefit">Your current monthly Social Security benefit ($)</label>
+<input type="number" id="benefit" value="1200" min="0" step="10">
+<span class="hint">The WEP-reduced amount on your current SSA notice (before the Fairness Act adjustment).</span></div>
+<div class="field"><label for="yoc">Years of substantial Social Security-covered earnings</label>
+<input type="number" id="yoc" value="20" min="0" max="45" step="1">
+<span class="hint">Years you earned above SSA's "substantial earnings" threshold in covered work. 30+ years were always exempt from WEP.</span></div>
+<div class="field"><label for="pension">Monthly pension from non-covered government work ($)</label>
+<input type="number" id="pension" value="1500" min="0" step="10">
+<span class="hint">Your state/local government pension (the job that did not pay Social Security tax).</span></div>
+<button class="btn" onclick="calcWEP()">Estimate My Increase</button>
+</div>
+<div class="result" id="wepResult" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-US');}
+function wepFactor(y){if(y>=30)return 0.90;if(y<=20)return 0.40;return 0.40+0.05*(y-20);}
+function calcWEP(){
+  const b=parseFloat(document.getElementById('benefit').value)||0;
+  const y=parseFloat(document.getElementById('yoc').value)||0;
+  const p=parseFloat(document.getElementById('pension').value)||0;
+  const r=document.getElementById('wepResult');r.style.display='block';
+  if(b<=0||p<0){r.innerHTML='<p>Please enter your benefit and pension amounts.</p>';return;}
+  if(y>=30){r.innerHTML='<div class="big">$0<small>estimated monthly increase</small></div><p class="hint">With 30+ years of substantial covered earnings, WEP never reduced your benefit — the Fairness Act changes nothing for you.</p>';return;}
+  const f=wepFactor(y);
+  const BEND1=1286; // 2026 first bend point
+  const raw=(0.90-f)*BEND1;
+  const guarantee=0.5*p;
+  const reduction=Math.min(raw,guarantee);
+  const capped=raw>guarantee;
+  const nb=b+reduction;
+  r.innerHTML='<div class="big">+'+fmt(reduction)+'/mo<small>estimated MONTHLY increase from WEP repeal</small></div>'
+  +'<table>'
+  +'<tr><td>WEP factor that applied to you</td><td>'+Math.round(f*100)+'% (vs normal 90%)</td></tr>'
+  +'<tr><td>Formula reduction</td><td>'+fmt(raw)+'/mo</td></tr>'
+  +'<tr><td>WEP guarantee cap (50% of pension)</td><td>'+fmt(guarantee)+'/mo'+(capped?' — cap applied':'')+'</td></tr>'
+  +'<tr><td>Estimated new monthly benefit</td><td>'+fmt(nb)+'</td></tr>'
+  +'<tr><td>Estimated extra per year</td><td>'+fmt(reduction*12)+'</td></tr></table>'
+  +'<p class="hint">Math: (90% − '+Math.round(f*100)+') × $1,286 first bend point'+(capped?', capped at half your pension':'')+'. Uses 2026 bend points — if you first became eligible before 2026, your bend point was slightly lower, so treat this as an approximate upper bound. SSA recalculated benefits automatically; no application was needed.</p>';
+}
+</script>
+
+<div class="panel">
+<h2 style="margin-top:0">GPO Repeal — Spouse / Survivor Increase</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="gpoBenefit">Full monthly spousal or survivor benefit ($)</label>
+<input type="number" id="gpoBenefit" value="1800" min="0" step="10">
+<span class="hint">The spousal/survivor benefit before the GPO offset wiped part of it out.</span></div>
+<div class="field"><label for="gpoPension">Monthly government (non-covered) pension ($)</label>
+<input type="number" id="gpoPension" value="1500" min="0" step="10">
+<span class="hint">Your own pension from work that did not pay Social Security tax.</span></div>
+<button class="btn" onclick="calcGPO()">Estimate My Increase</button>
+</div>
+<div class="result" id="gpoResult" style="display:none"></div>
+</div>
+</div>
+<script>
+function calcGPO(){
+  const s=parseFloat(document.getElementById('gpoBenefit').value)||0;
+  const p=parseFloat(document.getElementById('gpoPension').value)||0;
+  const r=document.getElementById('gpoResult');r.style.display='block';
+  if(s<=0){r.innerHTML='<p>Please enter the spousal/survivor benefit amount.</p>';return;}
+  const offset=Math.min((2/3)*p,s);
+  const wiped=offset>=s;
+  r.innerHTML='<div class="big">+'+fmt(offset)+'/mo<small>estimated MONTHLY increase from GPO repeal</small></div>'
+  +'<table>'
+  +'<tr><td>GPO offset that was applied</td><td>2/3 of pension = '+fmt((2/3)*p)+'/mo</td></tr>'
+  +'<tr><td>Estimated restored monthly benefit</td><td>'+fmt(s)+'</td></tr>'
+  +'<tr><td>Estimated extra per year</td><td>'+fmt(offset*12)+'</td></tr></table>'
+  +'<p class="hint">GPO reduced spousal/survivor benefits by two-thirds of the non-covered pension'+(wiped?' — in your case it wiped the benefit out entirely':'')+'. Repeal restores the full benefit. CBO average increases: ~$700/mo for spouses, ~$1,190/mo for surviving spouses.</p>';
+}
+</script>
+
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<h2>What Did the Social Security Fairness Act Do?</h2>
+<p>Signed into law on <strong>January 5, 2025</strong>, the Social Security Fairness Act repealed two long-standing provisions — the <strong>Windfall Elimination Provision (WEP)</strong> and the <strong>Government Pension Offset (GPO)</strong> — that reduced Social Security benefits for public workers whose government jobs did not pay into Social Security. The repeal is <strong>retroactive to January 2024</strong>, and the Social Security Administration recalculated benefits automatically — no application was required. By spring 2025, SSA had issued over <strong>$14.8 billion</strong> in retroactive payments to more than 2 million people.</p>
+
+<h2>How WEP Reduced Benefits (the Old Formula)</h2>
+<p>Social Security computes benefits from your average indexed monthly earnings using "bend points": normally <strong>90% of the first $1,286</strong> (2026 bend point), 32% of the next bracket, and 15% above that. WEP cut that first-bracket factor as low as <strong>40%</strong>, depending on years of substantial covered earnings:</p>
+<table>
+<tr><th>Years of substantial earnings</th><th style="text-align:right">First-bracket factor</th></tr>
+<tr><td>30 or more</td><td style="text-align:right">90% (no reduction)</td></tr>
+<tr><td>25</td><td style="text-align:right">65%</td></tr>
+<tr><td>21</td><td style="text-align:right">45%</td></tr>
+<tr><td>20 or fewer</td><td style="text-align:right">40% (maximum reduction)</td></tr>
+</table>
+<p>One safeguard limited the damage: the <strong>WEP guarantee</strong> — the reduction could never exceed <strong>half of your monthly non-covered pension</strong>. The maximum WEP cut was about <strong>$587/month</strong> (2024). Our estimator above applies exactly this math in reverse.</p>
+
+<h2>How GPO Reduced Benefits (the Old Formula)</h2>
+<p>The Government Pension Offset reduced <strong>spousal and survivor</strong> Social Security benefits by <strong>two-thirds of the recipient's non-covered government pension</strong> — often wiping the benefit out entirely. Repeal restores the full spousal or survivor benefit.</p>
+
+<h2>Average Increases (Congressional Budget Office)</h2>
+<ul>
+<li><strong>WEP repeal:</strong> about <strong>+$360/month</strong> on average for ~2.1 million workers.</li>
+<li><strong>GPO repeal (spouses):</strong> about <strong>+$700/month</strong> on average for ~380,000 spouses.</li>
+<li><strong>GPO repeal (survivors):</strong> about <strong>+$1,190/month</strong> on average for ~390,000 surviving spouses.</li>
+</ul>
+
+<h2>Who Qualifies?</h2>
+<ul>
+<li>Retired <strong>teachers, firefighters, police officers</strong>, and other state/local workers with pensions from jobs not covered by Social Security.</li>
+<li>Spouses and surviving spouses whose spousal/survivor benefits were reduced or eliminated by GPO.</li>
+<li>Some federal workers hired before 1984 under the old Civil Service Retirement System.</li>
+</ul>
+
+<h2>What Should You Do Now?</h2>
+<ol>
+<li><strong>Nothing to apply for</strong> — SSA recalculated eligible records automatically.</li>
+<li>Make sure SSA has your <strong>current mailing address and direct-deposit information</strong> (update at ssa.gov or call 1-800-772-1213).</li>
+<li>Create or check your <strong>my Social Security</strong> account to confirm your new benefit amount.</li>
+<li>Retroactive payments covering January 2024 onward were issued as <strong>one-time lump sums</strong> during 2025 — if you believe you were affected and never received one, contact SSA.</li>
+</ol>
+
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Do I need to apply for the Fairness Act increase?</summary><p>No. The Social Security Administration identified affected records and recalculated benefits automatically. If you think you were missed, contact SSA at 1-800-772-1213.</p></details>
+<details><summary>When did the higher payments start?</summary><p>Adjusted monthly payments began in 2025, and one-time retroactive payments covered every month back to January 2024.</p></details>
+<details><summary>Will my retroactive lump sum be taxed?</summary><p>Possibly — the lump sum counts as Social Security income in the year received, and up to 85% of benefits can be taxable depending on your combined income. Consider estimated tax payments.</p></details>
+<details><summary>I have 30+ years of covered earnings. Does this affect me?</summary><p>No — WEP never applied with 30+ years of substantial earnings, so the repeal changes nothing for you.</p></details>
+<details><summary>Does the repeal affect my government pension?</summary><p>No. Your state/local pension is unchanged; only the Social Security reduction was removed.</p></details>
+<details><summary>What were "substantial earnings"?</summary><p>An annual threshold set by SSA (about $31,275 in 2024, rising yearly). Only years above the threshold counted toward the 30-year WEP exemption.</p></details>
+</div>
+
+<div class="note"><strong>Disclaimer:</strong> This estimator reverses the published WEP/GPO formulas to give an indicative estimate. Your actual adjustment depends on SSA's official earnings record, your eligibility year (bend points differ by year), and COLAs. Confirm your exact amount with SSA — call 1-800-772-1213 or check your my Social Security account. Not financial advice.</div>
+<p class="hint">Sources: Social Security Administration (Fairness Act implementation updates; WEP program explainer); Congressional Budget Office cost estimates; 42 U.S.C. § 415 (PIA computation); SSA 2026 bend points $1,286/$7,749.</p>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN WEP Repeal Estimator</h4><p>Free Social Security Fairness Act estimator — estimate your WEP/GPO repeal benefit increase, understand the old formulas, and learn what to do next.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Estimator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
