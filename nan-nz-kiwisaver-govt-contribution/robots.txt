@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-nz-kiwisaver-govt-contribution.surge.sh/sitemap.xml
