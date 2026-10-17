@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-carwash-nearme-usa.surge.sh/sitemap.xml
