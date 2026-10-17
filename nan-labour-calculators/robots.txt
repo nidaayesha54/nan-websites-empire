@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-labour-calculators.surge.sh/sitemap.xml
