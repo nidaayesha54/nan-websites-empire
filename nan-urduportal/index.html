@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NAN اردو پورٹل — اردو میں ٹیکنالوجی، فری لانسنگ، اسلامی معلومات اور رہنمائی</title>
+<meta name="description" content="NAN اردو پورٹل — اردو زبان میں ٹیکنالوجی کی خبریں، فری لانسنگ رہنمائی، اسلامی دعائیں و معلومات، اور روزمرہ زندگی کے عملی مضامین۔">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1a2433;--muted:#5b6b7f;--line:#e6ecf2;--bg:#f6f9fb;--card:#ffffff}
+*{box-sizing:border-box}
+body{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif;background:var(--bg);color:var(--ink);margin:0;line-height:2.2}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--navy);color:#cfe3e3;font-size:.82rem;padding:.35rem 0}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center}
+header{background:var(--navy);color:#fff;padding:1rem 0 .8rem;border-top:1px solid #1d3350}
+.brand{display:flex;align-items:center;gap:.8rem}
+.logo{width:52px;height:52px;border-radius:12px;background:var(--teal);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.6rem}
+.brand h1{margin:0;font-size:1.7rem}
+.brand p{margin:0;color:#9fb3c8;font-size:.85rem}
+nav{background:var(--teal)}
+nav .wrap{display:flex;gap:1.4rem;overflow-x:auto;padding:.55rem 1rem}
+nav a{color:#04282a;font-weight:600;font-size:1rem;white-space:nowrap}
+nav a:hover{color:#fff}
+.ticker{background:#fff;border-bottom:1px solid var(--line);padding:.5rem 0;overflow:hidden}
+.ticker .wrap{display:flex;gap:.8rem;align-items:center}
+.tag{background:#d61f2c;color:#fff;font-size:.8rem;font-weight:700;border-radius:6px;padding:.1rem .6rem;white-space:nowrap}
+.tick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.92rem;color:var(--ink)}
+main .wrap{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;padding:1.5rem 1rem}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;margin-bottom:1.8rem}
+.hero-main,.hero-side article{border-radius:14px;overflow:hidden;position:relative;min-height:220px;display:flex;align-items:flex-end;color:#fff}
+.hero-main{min-height:340px;background:linear-gradient(135deg,#0A1628 0%,#123a5e 60%,#0e6e64 100%)}
+.hero-side{display:grid;gap:1rem}
+.hero-side article{background:linear-gradient(135deg,#123a5e,#0e6e64)}
+.hero-txt{padding:1.1rem;background:linear-gradient(transparent,rgba(4,10,20,.85));width:100%}
+.hero-txt h2{margin:0 0 .3rem;font-size:1.35rem;line-height:2}
+.hero-main .hero-txt h2{font-size:1.7rem}
+.hero-txt p{margin:0;font-size:.9rem;color:#d7e6e6}
+.cat{display:inline-block;background:var(--teal);color:#04282a;font-size:.75rem;font-weight:700;border-radius:20px;padding:.05rem .7rem;margin-bottom:.4rem}
+section.block{margin-bottom:2rem}
+.sec-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;border-bottom:2px solid var(--teal);padding-bottom:.4rem}
+.sec-head h2{margin:0;font-size:1.4rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(10,22,40,.08)}
+.card .thumb{height:120px;background:linear-gradient(135deg,#0A1628,#0e6e64);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem}
+.card .body{padding:.8rem 1rem}
+.card h3{margin:0 0 .3rem;font-size:1.02rem;line-height:1.9}
+.card p{margin:0;color:var(--muted);font-size:.85rem;line-height:1.9}
+aside .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1.2rem}
+aside h3{margin:0 0 .7rem;font-size:1.15rem;border-bottom:2px solid var(--teal);padding-bottom:.3rem;display:inline-block}
+ol.pop{margin:0;padding:0 1.1rem 0 0}
+ol.pop li{margin-bottom:.55rem;font-size:.92rem;line-height:1.9}
+ol.pop li a:hover{color:var(--teal)}
+.tool-list{list-style:none;margin:0;padding:0}
+.tool-list li{margin-bottom:.5rem}
+.tool-list a{display:block;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.45rem .8rem;font-size:.92rem}
+.tool-list a:hover{border-color:var(--teal);color:#0b6e63}
+.ad{text-align:center;margin:1.4rem 0}
+footer{background:var(--navy);color:#9fb3c8;margin-top:2rem;padding:2rem 0 1rem;font-size:.88rem}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-bottom:1.2rem}
+footer h4{color:#fff;margin:0 0 .6rem;font-size:1rem}
+footer a:hover{color:var(--teal)}
+.copy{border-top:1px solid #1d3350;padding-top:.8rem;text-align:center;font-size:.8rem}
+@media(max-width:900px){main .wrap{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span id="udate">…</span><span>السلام علیکم — اردو پورٹل میں خوش آمدید</span></div></div>
+<header><div class="wrap"><div class="brand"><div class="logo">ن</div><div><h1>NAN اردو پورٹل</h1><p>اردو میں ٹیکنالوجی، رہنمائی اور معلومات</p></div></div></div></header>
+<nav><div class="wrap">
+<a href="/">ہوم</a><a href="#tech">ٹیکنالوجی</a><a href="#freelance">فری لانسنگ</a><a href="#islam">اسلامی</a><a href="#guides">رہنمائی</a><a href="#tools">مفت ٹولز</a>
+</div></nav>
+<div class="ticker"><div class="wrap"><span class="tag">تازہ ترین</span><span class="tick">آرٹیفیشل انٹیلیجنس کیا ہے؟ عام فہم تعارف &nbsp;•&nbsp; گھر بیٹھے فری لانسنگ شروع کرنے کی مکمل رہنمائی &nbsp;•&nbsp; بینظیر انکم سپورٹ پروگرام کی مکمل معلومات</span></div></div>
+
+<main><div class="wrap">
+<div>
+<div class="hero">
+<a class="hero-main" href="articles/art-ai-kya-hai.html"><div class="hero-txt"><span class="cat">ٹیکنالوجی</span><h2>آرٹیفیشل انٹیلیجنس کیا ہے؟ — عام فہم زبان میں مکمل تعارف</h2><p>اے آئی ہر جگہ ہے — جانیں یہ کیا ہے اور آپ کی زندگی پر کیا اثر ڈالے گی</p></div></a>
+<div class="hero-side">
+<a href="articles/art-freelancing-guide.html"><article><div class="hero-txt"><span class="cat">فری لانسنگ</span><h2>گھر بیٹھے آن لائن کمائی کی مکمل رہنمائی</h2></div></article></a>
+<a href="articles/art-subah-sham-duain.html"><article><div class="hero-txt"><span class="cat">اسلامی</span><h2>صبح و شام کی مسنون دعائیں ترجمے کے ساتھ</h2></div></article></a>
+</div>
+</div>
+
+<div class="ad">
+<!-- Adsterra Banner 300x250 -->
+<script>atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="block" id="tech"><div class="sec-head"><h2>ٹیکنالوجی</h2></div><div class="cards">
+<a class="card" href="articles/art-ai-kya-hai.html"><div class="thumb">🤖</div><div class="body"><h3>آرٹیفیشل انٹیلیجنس کیا ہے؟ مکمل تعارف</h3><p>اے آئی کی دنیا کو آسان اردو میں سمجھیں</p></div></a>
+<a class="card" href="articles/art-chatgpt-urdu.html"><div class="thumb">💬</div><div class="body"><h3>اردو میں چیٹ جی پی ٹی کا استعمال</h3><p>طلبہ اور کاروبار کے لیے عملی طریقے</p></div></a>
+</div></section>
+
+<section class="block" id="freelance"><div class="sec-head"><h2>فری لانسنگ اور کمائی</h2></div><div class="cards">
+<a class="card" href="articles/art-freelancing-guide.html"><div class="thumb">💼</div><div class="body"><h3>فری لانسنگ شروع کرنے کی مکمل رہنمائی</h3><p>صفر سے پہلی کمائی تک کا سفر</p></div></a>
+<a class="card" href="articles/art-online-paise-transfer.html"><div class="thumb">💸</div><div class="body"><h3>آن لائن رقم بھیجنے کے محفوظ طریقے</h3><p>پاکستان سے پیسے بھیجنے کی مکمل معلومات</p></div></a>
+</div></section>
+
+<section class="block" id="islam"><div class="sec-head"><h2>اسلامی معلومات</h2></div><div class="cards">
+<a class="card" href="articles/art-subah-sham-duain.html"><div class="thumb">🤲</div><div class="body"><h3>صبح و شام کی مسنون دعائیں</h3><p>عربی متن، اردو ترجمہ اور فضیلت</p></div></a>
+<a class="card" href="articles/art-ramadan-tayyari.html"><div class="thumb">🌙</div><div class="body"><h3>رمضان کی تیاری کیسے کریں؟</h3><p>روحانی اور عملی رہنمائی</p></div></a>
+</div></section>
+
+<section class="block" id="guides"><div class="sec-head"><h2>عملی رہنمائی</h2></div><div class="cards">
+<a class="card" href="articles/art-bisp-ehsaas.html"><div class="thumb">🏛️</div><div class="body"><h3>بینظیر انکم سپورٹ پروگرام کی مکمل معلومات</h3><p>اہلیت، رجسٹریشن اور رقم وصولی کا طریقہ</p></div></a>
+<a class="card" href="articles/art-bijli-bachat.html"><div class="thumb">💡</div><div class="body"><h3>بجلی کا بل کم کرنے کے آزمودہ طریقے</h3><p>15 عملی تدابیر سے بچت کریں</p></div></a>
+</div></section>
+
+<div class="ad">
+<script>atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+</div>
+
+<aside>
+<div class="box"><h3>مقبول ترین</h3><ol class="pop">
+<li><a href="articles/art-ai-kya-hai.html">آرٹیفیشل انٹیلیجنس کیا ہے؟</a></li>
+<li><a href="articles/art-freelancing-guide.html">فری لانسنگ کی مکمل رہنمائی</a></li>
+<li><a href="articles/art-subah-sham-duain.html">صبح و شام کی دعائیں</a></li>
+<li><a href="articles/art-bisp-ehsaas.html">بینظیر انکم سپورٹ پروگرام</a></li>
+<li><a href="articles/art-bijli-bachat.html">بجلی کا بل کم کریں</a></li>
+</ol></div>
+<div class="box" id="tools"><h3>مفت ٹولز</h3><ul class="tool-list">
+<li><a href="https://nan-eobi-calculator.surge.sh">ای او بی آئی پنشن کیلکولیٹر</a></li>
+<li><a href="https://nan-labour-calculators.surge.sh">اوور ٹائم اور گریجویٹی کیلکولیٹر</a></li>
+<li><a href="https://nan-urage-calculator.surge.sh">اردو عمر کیلکولیٹر</a></li>
+<li><a href="https://nan-aistock.surge.sh">مفت AI تصاویر</a></li>
+<li><a href="https://nan-pngstock.surge.sh">مفت PNG تصاویر</a></li>
+</ul></div>
+<div class="box"><h3>ہمارے بارے میں</h3><p style="font-size:.88rem;color:#5b6b7f;margin:0">NAN اردو پورٹل اردو زبان میں معیاری اور مفید مواد فراہم کرتا ہے — ٹیکنالوجی، فری لانسنگ، اسلامی معلومات اور روزمرہ رہنمائی۔</p></div>
+</aside>
+</div></main>
+
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>NAN اردو پورٹل</h4><p>اردو میں ٹیکنالوجی، رہنمائی اور معلومات کا معتبر ذریعہ۔</p></div>
+<div><h4>سیکشنز</h4><p><a href="#tech">ٹیکنالوجی</a><br><a href="#freelance">فری لانسنگ</a><br><a href="#islam">اسلامی</a><br><a href="#guides">رہنمائی</a></p></div>
+<div><h4>مفت ٹولز</h4><p><a href="https://nan-eobi-calculator.surge.sh">EOBI کیلکولیٹر</a><br><a href="https://nan-labour-calculators.surge.sh">لیبر کیلکولیٹرز</a><br><a href="https://nan-urage-calculator.surge.sh">عمر کیلکولیٹر</a></p></div>
+</div>
+<!--nan-network-links:start-->
+<p style="font-size:.8rem;color:#5b7a8a">مزید مفت ٹولز: <a href="https://nan-eobi-calculator.surge.sh">EOBI پنشن</a> · <a href="https://nan-labour-calculators.surge.sh">اوور ٹائم</a> · <a href="https://nan-urage-calculator.surge.sh">عمر</a> · <a href="https://nan-aistock.surge.sh">AI تصاویر</a> · <a href="https://nan-pngstock.surge.sh">PNG تصاویر</a> · <a href="https://nan-rozana-calculators.surge.sh">روزانہ کیلکولیٹرز</a></p>
+<!--nan-network-links:end-->
+<div class="copy">© 2026 NAN اردو پورٹل — جملہ حقوق محفوظ ہیں</div>
+</div></footer>
+<script>
+try{document.getElementById('udate').textContent=new Intl.DateTimeFormat('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date());}catch(e){document.getElementById('udate').textContent='';}
+</script>
+</body>
+</html>
