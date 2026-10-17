@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statutory Bonus Calculator India 2026 — Payment of Bonus Act Formula</title>
+<meta name="description" content="Free statutory bonus calculator for India: check eligibility under the Payment of Bonus Act, 1965 and Code on Wages, 2019, and estimate your bonus with the 8.33%–20% formula, Rs 21,000 eligibility ceiling and Rs 7,000 calculation base.">
+<link rel="canonical" href="https://nan-in-statutory-bonus-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Bonus Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Statutory Bonus Calculator India (2026)</h1>
+<p class="lede">Check your eligibility under the Payment of Bonus Act, 1965 (now the Code on Wages, 2019) and estimate your statutory bonus in seconds — Rs 21,000 eligibility ceiling, 8.33%–20% range.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Statutory Bonus</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="wage">Monthly wages — Basic + DA only (Rs)</label>
+<input type="number" id="wage" value="15000" min="0" step="100">
+<span class="hint">HRA, conveyance, overtime and other allowances are excluded from "wages" for bonus.</span></div>
+<div class="field"><label for="months">Months worked in the accounting year</label>
+<input type="number" id="months" value="12" min="1" max="12" step="1">
+<span class="hint">Bonus is reduced proportionately if you worked fewer months.</span></div>
+<div class="field"><label for="minwage">State minimum wage for your category (Rs/month)</label>
+<input type="number" id="minwage" value="7000" min="0" step="100">
+<span class="hint">Bonus base = Rs 7,000 OR your applicable minimum wage, whichever is HIGHER. Leave 7,000 if unsure.</span></div>
+<div class="field"><label for="rate">Bonus rate declared by employer (%)</label>
+<input type="number" id="rate" value="8.33" min="8.33" max="20" step="0.01">
+<span class="hint">Statutory minimum 8.33%; maximum 20% depending on allocable surplus.</span></div>
+<button class="btn" onclick="calcBonus()">Calculate Bonus</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-IN');}
+function calcBonus(){
+  const w=parseFloat(document.getElementById('wage').value)||0;
+  const m=Math.min(12,Math.max(1,parseFloat(document.getElementById('months').value)||12));
+  const mw=parseFloat(document.getElementById('minwage').value)||7000;
+  let r=parseFloat(document.getElementById('rate').value)||8.33;
+  if(r<8.33)r=8.33; if(r>20)r=20;
+  const out=document.getElementById('result');out.style.display='block';
+  if(w<=0){out.innerHTML='<p>Please enter your monthly wages (Basic + DA).</p>';return;}
+  if(w>21000){
+    out.innerHTML='<div class="big">Not eligible<small>monthly wages (Basic + DA) exceed the Rs 21,000 eligibility ceiling</small></div>'
+    +'<table><tr><td>Your wages</td><td>'+fmt(w)+'</td></tr>'
+    +'<tr><td>Eligibility ceiling</td><td>'+fmt(21000)+'</td></tr></table>'
+    +'<p class="hint">Only employees earning Rs 21,000/month or less in wages (Basic + DA) qualify for statutory bonus under the Payment of Bonus Act, 1965 / Code on Wages, 2019.</p>';
+    return;
+  }
+  const base=Math.min(w,Math.max(7000,mw));
+  let bonus=base*12*(r/100)*(m/12);
+  const minBonus=Math.max(100,base*12*0.0833*(m/12));
+  if(bonus<minBonus)bonus=minBonus;
+  const maxB=base*12*0.20*(m/12);
+  out.innerHTML='<div class="big">'+fmt(bonus)+'<small>estimated ANNUAL statutory bonus at '+r.toFixed(2)+'%</small></div>'
+  +'<table><tr><td>Eligibility</td><td>Eligible (wages &le; Rs 21,000)</td></tr>'
+  +'<tr><td>Bonus wage base</td><td>'+fmt(base)+'/month</td></tr>'
+  +'<tr><td>Annual bonus wage</td><td>'+fmt(base*12)+'</td></tr>'
+  +'<tr><td>Months worked</td><td>'+m+' of 12</td></tr>'
+  +'<tr><td>Minimum bonus (8.33%)</td><td>'+fmt(base*12*0.0833*(m/12))+'</td></tr>'
+  +'<tr><td>Maximum bonus (20%)</td><td>'+fmt(maxB)+'</td></tr></table>'
+  +'<p class="hint">Formula: Statutory Bonus = Bonus Wage &times; 12 &times; Bonus Rate, reduced in proportion to months worked. Minimum floor: 8.33% of wages or Rs 100, whichever is higher.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Is Statutory Bonus?</h2>
+<p><strong>Statutory bonus</strong> is a compulsory annual payment every covered employer in India must pay to eligible employees. It was governed by the <strong>Payment of Bonus Act, 1965</strong>; from 21 November 2025 the Act stands replaced by the <strong>Code on Wages, 2019</strong>, which keeps the same core rules: the Rs 21,000 eligibility ceiling, the 8.33%–20% bonus range and the Rs 7,000/minimum-wage calculation base. Establishments with <strong>20 or more employees</strong> must comply, and bonus must be paid <strong>within 8 months</strong> of the close of the accounting year.</p>
+<h2>Bonus Formula (2026)</h2>
+<div class="note"><strong>Statutory Bonus = Bonus Wage × 12 × Bonus Rate%</strong><br>
+Where <strong>Bonus Wage</strong> = your monthly wages (Basic + DA), capped at <strong>Rs 7,000 or your applicable state minimum wage, whichever is higher</strong>. The bonus rate is a <strong>minimum of 8.33%</strong> (or Rs 100, whichever is higher) and a <strong>maximum of 20%</strong>, linked to the employer's allocable surplus. Worked fewer months? The bonus is reduced proportionately.</div>
+<h3>Example</h3>
+<p>Monthly wages Rs 15,000, minimum wage Rs 9,000 → bonus base = Rs 9,000. Annual base = Rs 1,08,000. At the 8.33% minimum: <strong>Rs 8,996/year</strong>; at the 20% maximum: <strong>Rs 21,600/year</strong>.</p>
+<h2>Eligibility Checklist</h2>
+<ul>
+<li>Monthly wages (Basic + DA) of <strong>Rs 21,000 or less</strong>.</li>
+<li>Worked at least <strong>30 working days</strong> in the accounting year.</li>
+<li>Employer has <strong>20+ employees</strong> (establishment coverage).</li>
+<li>Not disqualified for fraud, riotous behaviour, theft or sabotage.</li>
+<li><strong>New establishments</strong> get a short exemption window (generally up to 5–6 years from commencement, depending on circumstances).</li>
+</ul>
+<h2>Bonus Is Taxable</h2>
+<p>Statutory bonus is treated as <strong>salary income</strong> and taxed at your applicable income-tax slab rate. It must be included in your salary when filing your ITR.</p>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>What counts as "wages" for bonus calculation?</summary><p>Only <strong>Basic salary + Dearness Allowance (DA)</strong>. HRA, conveyance, overtime, bonuses and commissions are excluded.</p></details>
+<details><summary>What if my salary is between Rs 7,000 and Rs 21,000?</summary><p>You are eligible, but the bonus is calculated on <strong>Rs 7,000 or the applicable minimum wage (whichever is higher)</strong> — not on your full salary.</p></details>
+<details><summary>What is the minimum bonus I must receive?</summary><p><strong>8.33% of your annual bonus wages or Rs 100, whichever is higher</strong> (Rs 60 for employees below 15 years of age), even if the employer made a loss.</p></details>
+<details><summary>When should bonus be paid?</summary><p>Within <strong>8 months</strong> of the end of the accounting (financial) year — typically before Diwali in October/November.</p></details>
+<details><summary>Is there a bonus for contract / fixed-term workers?</summary><p>Fixed-term employees covered by the establishment rules are eligible on the same 30-working-day service test; bonus is computed pro-rata on their bonus wages.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on the Payment of Bonus Act, 1965 / Code on Wages, 2019 parameters (Rs 21,000 ceiling, Rs 7,000 base, 8.33%–20% range). Your actual bonus depends on your employer's declared rate and your state's notified minimum wage. Verify with your HR or a labour-law adviser — this is not professional advice.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Statutory Bonus Calculator</h4><p>Free statutory bonus calculator for India — check Payment of Bonus Act eligibility and estimate your annual bonus under the 8.33%–20% formula.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
