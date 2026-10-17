@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-laundromats-nearme-usa.surge.sh/sitemap.xml
