@@ -1,0 +1,530 @@
+[
+ {
+  "name": "Mosque",
+  "lat": 41.4649809,
+  "lon": -74.1009464,
+  "address": "Mosque, Denniston, Town of New Windsor",
+  "city": "Town of New Windsor",
+  "state": "New York"
+ },
+ {
+  "name": "Chicago Mosque",
+  "lat": 41.989901,
+  "lon": -87.7831292,
+  "address": "Chicago Mosque, 6201, West Peterson Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Chicago Central Mosque & Islamic Center",
+  "lat": 41.9554259,
+  "lon": -87.718723,
+  "address": "Chicago Central Mosque & Islamic Center, 3617, West Belle Plaine Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Mosque Maryam",
+  "lat": 41.7609098,
+  "lon": -87.5850175,
+  "address": "Mosque Maryam, 7351, South Stony Island Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Al Sadiq Mosque",
+  "lat": 41.8132746,
+  "lon": -87.6249065,
+  "address": "Al Sadiq Mosque, 4448, South Wabash Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Faizan-e-Madinah Mosque",
+  "lat": 42.005884,
+  "lon": -87.6896656,
+  "address": "Faizan-e-Madinah Mosque, 6821, North Western Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Mosque of Umar",
+  "lat": 41.6867432,
+  "lon": -87.6206672,
+  "address": "Mosque of Umar, 11407, South Michigan Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Medical Center Islamic Society",
+  "lat": 29.6782592,
+  "lon": -95.3974368,
+  "address": "Medical Center Islamic Society, 2222, Houston",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "ISGH Bear Creek Islamic Center (BCIC) | Masjid Al-Mustafa",
+  "lat": 29.8626707,
+  "lon": -95.6714133,
+  "address": "ISGH Bear Creek Islamic Center (BCIC) | Masjid Al-Mustafa, 17250, Houston",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Islamic Education Center",
+  "lat": 29.7419206,
+  "lon": -95.5001088,
+  "address": "Islamic Education Center, 2313, South Voss Road",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Islamic Education Center",
+  "lat": 29.7420062,
+  "lon": -95.5002285,
+  "address": "Islamic Education Center, 2313, South Voss Road",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Islamic Da'wah Center",
+  "lat": 29.7629642,
+  "lon": -95.3605815,
+  "address": "Islamic Da'wah Center, 201, Travis Street",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Islamic Center of Middle Georgia",
+  "lat": 32.6329253,
+  "lon": -83.6679854,
+  "address": "Islamic Center of Middle Georgia, Willow Glen, Fairview Estates",
+  "city": "Centerville",
+  "state": "Georgia"
+ },
+ {
+  "name": "Valley Ranch Islamic Center",
+  "lat": 32.9172725,
+  "lon": -96.9478424,
+  "address": "Valley Ranch Islamic Center, 351, Ranchview Drive",
+  "city": "Irving",
+  "state": "Texas"
+ },
+ {
+  "name": "MAS Islamic Center Of Dallas",
+  "lat": 32.9640411,
+  "lon": -96.6963724,
+  "address": "MAS Islamic Center Of Dallas, 1515, Blake Drive",
+  "city": "Richardson",
+  "state": "Texas"
+ },
+ {
+  "name": "Duncanville Islamic Center",
+  "lat": 32.6341698,
+  "lon": -96.9011224,
+  "address": "Duncanville Islamic Center, 1419, Acton Avenue",
+  "city": "Duncanville",
+  "state": "Texas"
+ },
+ {
+  "name": "Lovejoy Islamic Cemetery",
+  "lat": 33.4432855,
+  "lon": -84.3422096,
+  "address": "Lovejoy Islamic Cemetery, Clayton County, Georgia",
+  "city": "",
+  "state": "Georgia"
+ },
+ {
+  "name": "Al-Farooq Masjid of Atlanta",
+  "lat": 33.7857889,
+  "lon": -84.4015413,
+  "address": "Al-Farooq Masjid of Atlanta, 442, 14th Street Northwest",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Islamic School of Seattle and Masjid Al Taqwa",
+  "lat": 47.6087079,
+  "lon": -122.2998112,
+  "address": "Islamic School of Seattle and Masjid Al Taqwa, 720, 25th Avenue",
+  "city": "Seattle",
+  "state": "Washington"
+ },
+ {
+  "name": "Dar Al-Hijrah Mosque",
+  "lat": 44.9685298,
+  "lon": -93.2476123,
+  "address": "Dar Al-Hijrah Mosque, 504, Cedar Avenue South",
+  "city": "Minneapolis",
+  "state": "Minnesota"
+ },
+ {
+  "name": "Rawdah Mosque (Somali Cultural Institute)",
+  "lat": 44.9557389,
+  "lon": -93.2365569,
+  "address": "Rawdah Mosque (Somali Cultural Institute), 2426, East 26th Street",
+  "city": "Minneapolis",
+  "state": "Minnesota"
+ },
+ {
+  "name": "Islamic Center of Orlando - Jama Masjid",
+  "lat": 28.3985895,
+  "lon": -81.5025161,
+  "address": "Islamic Center of Orlando - Jama Masjid, 11543, Ruby Lake Road",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Bait-ul-Aafiyat Mosque",
+  "lat": 39.9980569,
+  "lon": -75.1514784,
+  "address": "Bait-ul-Aafiyat Mosque, 1215, West Glenwood Avenue",
+  "city": "Philadelphia",
+  "state": "Pennsylvania"
+ },
+ {
+  "name": "Muhammad Mosque 12",
+  "lat": 40.0366667,
+  "lon": -75.175241,
+  "address": "Muhammad Mosque 12, 5727, Germantown Avenue",
+  "city": "Philadelphia",
+  "state": "Pennsylvania"
+ },
+ {
+  "name": "Nasir Mosque",
+  "lat": 40.0306901,
+  "lon": -75.1396094,
+  "address": "Nasir Mosque, North 10th Street, Wyoming",
+  "city": "Philadelphia",
+  "state": "Pennsylvania"
+ },
+ {
+  "name": "Muhammad Mosque #12 Nation of Islam",
+  "lat": 39.9913044,
+  "lon": -75.1553744,
+  "address": "Muhammad Mosque #12 Nation of Islam, 2508, North Broad Street",
+  "city": "Philadelphia",
+  "state": "Pennsylvania"
+ },
+ {
+  "name": "Islamic Society of San Francisco",
+  "lat": 37.7813727,
+  "lon": -122.4118466,
+  "address": "Islamic Society of San Francisco, 20, Jones Street",
+  "city": "San Francisco",
+  "state": "California"
+ },
+ {
+  "name": "Islamic Center",
+  "lat": 42.802488,
+  "lon": -73.9248831,
+  "address": "Islamic Center, Brandywine Avenue, Central State",
+  "city": "City of Schenectady",
+  "state": "New York"
+ },
+ {
+  "name": "Islamic Cultural Center of New York",
+  "lat": 40.7853929,
+  "lon": -73.9485933,
+  "address": "Islamic Cultural Center of New York, Manhattan Community Board 11, Manhattan",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Fatih Mosque",
+  "lat": 40.6353757,
+  "lon": -74.0091126,
+  "address": "Fatih Mosque, 5911, 8th Avenue",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Ibaadu'rrahman Central Mosque",
+  "lat": 40.6930569,
+  "lon": -73.9710254,
+  "address": "Ibaadu'rrahman Central Mosque, 380, Myrtle Avenue",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Mosque of American Mohammedan Society",
+  "lat": 40.7119444,
+  "lon": -73.9466667,
+  "address": "Mosque of American Mohammedan Society, 106, Powers Street",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Masjid",
+  "lat": 29.6775676,
+  "lon": -95.3973901,
+  "address": "Masjid, Mansard Street, Houston",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Mosque",
+  "lat": 34.1398669,
+  "lon": -117.9810568,
+  "address": "Mosque, Huntington Drive, Monrovia",
+  "city": "Monrovia",
+  "state": "California"
+ },
+ {
+  "name": "Islamic Center of America",
+  "lat": 42.3303597,
+  "lon": -83.2298121,
+  "address": "Islamic Center of America, Altar Road, Dearborn",
+  "city": "Dearborn",
+  "state": "Michigan"
+ },
+ {
+  "name": "Islamic Center of America",
+  "lat": 42.3307275,
+  "lon": -83.2299693,
+  "address": "Islamic Center of America, Dearborn, Wayne County",
+  "city": "Dearborn",
+  "state": "Michigan"
+ },
+ {
+  "name": "Jamia Masjid of Chicago",
+  "lat": 41.9970338,
+  "lon": -87.6929139,
+  "address": "Jamia Masjid of Chicago, 6340, North Campbell Avenue",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "American Fazl Mosque",
+  "lat": 38.9155207,
+  "lon": -77.0482582,
+  "address": "American Fazl Mosque, 2141, Leroy Place Northwest",
+  "city": "Washington",
+  "state": "District of Columbia"
+ },
+ {
+  "name": "Islamic Mosque and Cultural Center",
+  "lat": 38.9170697,
+  "lon": -77.0567693,
+  "address": "Islamic Mosque and Cultural Center, Belmont Road Northwest, Kalorama Heights",
+  "city": "Washington",
+  "state": "District of Columbia"
+ },
+ {
+  "name": "Muhammed Mosque",
+  "lat": 38.869851,
+  "lon": -76.960771,
+  "address": "Muhammed Mosque, 3160, Pennsylvania Avenue Southeast",
+  "city": "Washington",
+  "state": "District of Columbia"
+ },
+ {
+  "name": "Islamic Society of Boston Cultural Center",
+  "lat": 42.3309021,
+  "lon": -71.0933788,
+  "address": "Islamic Society of Boston Cultural Center, 100, Malcolm X Boulevard",
+  "city": "Boston",
+  "state": "Massachusetts"
+ },
+ {
+  "name": "Allston Brighton Islamic Center",
+  "lat": 42.3544876,
+  "lon": -71.1378352,
+  "address": "Allston Brighton Islamic Center, Clevemont Avenue, Union Square",
+  "city": "Boston",
+  "state": "Massachusetts"
+ },
+ {
+  "name": "Baitul Islam Mosque",
+  "lat": 42.387077,
+  "lon": -83.039482,
+  "address": "Baitul Islam Mosque, 7826, Klein Street",
+  "city": "Detroit",
+  "state": "Michigan"
+ },
+ {
+  "name": "Islamic Community Center of Phoenix Secondary",
+  "lat": 33.5454901,
+  "lon": -112.1129079,
+  "address": "Islamic Community Center of Phoenix Secondary, 7362, North Black Canyon Highway",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Islamic Community Center of Phoenix",
+  "lat": 33.5465416,
+  "lon": -112.1128175,
+  "address": "Islamic Community Center of Phoenix, 7516, North Black Canyon Highway",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "United Islamic Center of Arizona",
+  "lat": 33.6613466,
+  "lon": -112.1352313,
+  "address": "United Islamic Center of Arizona, West Yorkshire Drive, Amberwood North",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Islamic Center of Arizona",
+  "lat": 33.5689421,
+  "lon": -112.0618083,
+  "address": "Islamic Center of Arizona, 9026, North 9th Street",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Mosque",
+  "lat": 40.0617354,
+  "lon": -74.8479676,
+  "address": "Mosque, Fountain Avenue, Springside",
+  "city": "Burlington Township",
+  "state": "New Jersey"
+ },
+ {
+  "name": "Mosque of Williamsburg Virginia",
+  "lat": 37.2908109,
+  "lon": -76.7226783,
+  "address": "Mosque of Williamsburg Virginia, 1505, Richmond Road",
+  "city": "Williamsburg",
+  "state": "Virginia"
+ },
+ {
+  "name": "Altria Theater",
+  "lat": 37.546203,
+  "lon": -77.4521083,
+  "address": "Altria Theater, 6, North Laurel Street",
+  "city": "Richmond",
+  "state": "Virginia"
+ },
+ {
+  "name": "Mosque and Islamic Center of Hampton Roads",
+  "lat": 37.0540407,
+  "lon": -76.3759709,
+  "address": "Mosque and Islamic Center of Hampton Roads, 22, Tide Mill Lane",
+  "city": "Hampton",
+  "state": "Virginia"
+ },
+ {
+  "name": "Mubarak Mosque",
+  "lat": 38.8803862,
+  "lon": -77.4365641,
+  "address": "Mubarak Mosque, 4555, Ahmadiyya Drive",
+  "city": "Chantilly",
+  "state": "Virginia"
+ },
+ {
+  "name": "Masroor Mosque",
+  "lat": 38.6759544,
+  "lon": -77.3741272,
+  "address": "Masroor Mosque, 5640, Hoadly Road",
+  "city": "Manassas",
+  "state": "Virginia"
+ },
+ {
+  "name": "Al Zahra Islamic Center of Charlotte",
+  "lat": 35.1905077,
+  "lon": -80.7740168,
+  "address": "Al Zahra Islamic Center of Charlotte, 5227, Monroe Road",
+  "city": "Charlotte",
+  "state": "North Carolina"
+ },
+ {
+  "name": "Islamic Center of Charlotte",
+  "lat": 35.2086065,
+  "lon": -80.7691601,
+  "address": "Islamic Center of Charlotte, 1700, Progress Lane",
+  "city": "Charlotte",
+  "state": "North Carolina"
+ },
+ {
+  "name": "Masjid Namarah Pakistani Community Center",
+  "lat": 39.9146737,
+  "lon": -82.8762369,
+  "address": "Masjid Namarah Pakistani Community Center, Refugee Road, Eastland",
+  "city": "Columbus",
+  "state": "Ohio"
+ },
+ {
+  "name": "Masjid Omar Ibn El-Khattab",
+  "lat": 40.0245085,
+  "lon": -83.0287955,
+  "address": "Masjid Omar Ibn El-Khattab, 580, Riverside Drive",
+  "city": "Columbus",
+  "state": "Ohio"
+ },
+ {
+  "name": "Masjid As-Sahaba",
+  "lat": 40.0144444,
+  "lon": -82.9888889,
+  "address": "Masjid As-Sahaba, Hudson Shared-Use Path, South Linden",
+  "city": "Columbus",
+  "state": "Ohio"
+ },
+ {
+  "name": "Islamic Center",
+  "lat": 39.6788833,
+  "lon": -104.8770002,
+  "address": "Islamic Center, 2071, South Parker Road",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Baitul Tauheed Mosque",
+  "lat": 36.2182011,
+  "lon": -115.2374222,
+  "address": "Baitul Tauheed Mosque, 6547, West Cheyenne Avenue",
+  "city": "Las Vegas",
+  "state": "Nevada"
+ },
+ {
+  "name": "Muhammad Mosque Eight",
+  "lat": 32.7066577,
+  "lon": -117.1288173,
+  "address": "Muhammad Mosque Eight, Imperial Avenue, Grant Hill",
+  "city": "San Diego",
+  "state": "California"
+ },
+ {
+  "name": "Islamic Center of Portland",
+  "lat": 45.4508384,
+  "lon": -122.7219224,
+  "address": "Islamic Center of Portland, 10323, Southwest 43rd Avenue",
+  "city": "Portland",
+  "state": "Oregon"
+ },
+ {
+  "name": "Islamic Center of Portland",
+  "lat": 45.4508315,
+  "lon": -122.7218494,
+  "address": "Islamic Center of Portland, West Portland Park, Portland",
+  "city": "Portland",
+  "state": "Oregon"
+ },
+ {
+  "name": "Al-Iman Mosque",
+  "lat": 40.7684402,
+  "lon": -73.9116636,
+  "address": "Al-Iman Mosque, 24-30, Steinway Street",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Mimar Sinan Mosque",
+  "lat": 40.7464954,
+  "lon": -73.9186805,
+  "address": "Mimar Sinan Mosque, 45-06, Skillman Avenue",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Dar El Salaam Islamic Center",
+  "lat": 32.7569927,
+  "lon": -97.1117016,
+  "address": "Dar El Salaam Islamic Center, West Road to Six Flags Street, Arlington",
+  "city": "Arlington",
+  "state": "Texas"
+ }
+]
