@@ -74,6 +74,8 @@ footer a{color:#cbd5e1}
 <button class="pill" data-n="ramadan">Ramadan &amp; Patterns <span class="ur">رمضان</span></button>
 <button class="pill" data-n="seniors">Senior Lifestyle <span class="ur">بزرگ</span></button>
 <button class="pill" data-n="energy">Green Energy <span class="ur">سبز توانائی</span></button>
+<button class="pill" data-n="food">Pakistani Food <span class="ur">پاکستانی کھانے</span></button>
+<button class="pill" data-n="wellness">Wellness <span class="ur">صحت</span></button>
 </div>
 </div></section>
 
@@ -139,7 +141,7 @@ function render(list,label){grid.innerHTML=list.map(cardHTML).join('');title.tex
 function doSearch(){const q=document.getElementById('q').value.toLowerCase().trim();document.querySelectorAll('.pill').forEach(b=>b.classList.remove('active'));if(!q){render(PHOTOS,'Latest photos');return}const r=PHOTOS.filter(p=>(p.title+' '+p.tags+' '+p.niche).toLowerCase().includes(q));render(r,r.length?`Results for “${q}”`:'No matches — try another word')}
 document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
 document.querySelectorAll('.pill').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');const n=b.dataset.n;render(n==='all'?PHOTOS:PHOTOS.filter(p=>p.niche===n),n==='all'?'Latest photos':b.textContent.trim())}));
-function openLb(f){const p=PHOTOS.find(x=>x.file===f);if(!p)return;document.getElementById('lbImg').src='img/'+p.file;document.getElementById('lbImg').alt=p.title;document.getElementById('lbTitle').textContent=p.title;document.getElementById('lbDl').href='img/'+p.file;document.getElementById('lbTags').innerHTML=p.tags.split(',').map(t=>`<span>${t.trim()}</span>`).join('');document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden'}
+function openLb(f){const p=PHOTOS.find(x=>x.file===f);if(!p)return;document.getElementById('lbImg').src=p.file;document.getElementById('lbImg').alt=p.title;document.getElementById('lbTitle').textContent=p.title;document.getElementById('lbDl').href=p.file;document.getElementById('lbTags').innerHTML=p.tags.split(',').map(t=>`<span>${t.trim()}</span>`).join('');document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow=''}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
 render(PHOTOS,'Latest photos');
