@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RouteTrack — Delivery Tracking Your Customers Can See</title>
+<meta name="description" content="RouteTrack gives small businesses live delivery tracking. Demo built by NAN Marketing Agency.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314B8A6'/%3E%3Cpath d='M20 62h8l6-18 10 26 8-22 6 14h22' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A1628;--bg2:#0E1D33;--surface:#12253F;--card:#152A45;--ink:#F1F5F9;--muted:#8FA0B8;--line:rgba(255,255,255,.09);--teal:#14B8A6;--teal-soft:rgba(20,184,166,.14);--amber:#F59E0B;--amber-soft:rgba(245,158,11,.14);--green:#34D399;--green-soft:rgba(52,211,153,.14);--red:#F87171}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .mark{width:34px;height:34px;border-radius:10px;background:var(--teal);display:grid;place-items:center;color:#04211D;font-weight:800}
+nav.links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--muted)}
+nav.links a{color:inherit;text-decoration:none;transition:color .2s}nav.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#04211D;font-weight:700;font-size:15px;padding:12px 22px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(20,184,166,.35);background:#17D1BE}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--teal);color:#fff;box-shadow:none;background:transparent}
+.hero{padding:84px 0 36px;text-align:center}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);background:var(--teal-soft);border:1px solid rgba(20,184,166,.3);padding:7px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;letter-spacing:-.035em;line-height:1.06;max-width:780px;margin:0 auto 18px}
+.hero h1 .hl{color:var(--teal)}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 30px;line-height:1.6}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:54px 0 10px}
+@media(max-width:760px){.duel{grid-template-columns:1fr}}
+.duel .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+.tag{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:block}
+.before .tag{color:var(--red)}.after .tag{color:var(--teal)}
+.duel h3{font-size:21px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
+.duel p{font-size:15px;color:var(--muted);line-height:1.65}
+.duel .big{font-size:40px;font-weight:800;letter-spacing:-.03em;margin:14px 0 4px}
+.before .big{color:var(--red)}.after .big{color:var(--teal)}
+.demo{margin:70px 0 0}
+.demo-head{text-align:center;margin-bottom:34px}
+.demo-head h2{font-size:32px;font-weight:800;letter-spacing:-.03em;margin-bottom:10px}
+.demo-head p{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.panel-top{padding:24px 30px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.panel-top .avatar{width:52px;height:52px;border-radius:14px;background:var(--amber);display:grid;place-items:center;font-weight:800;font-size:20px;color:#3B2303}
+.panel-top h3{font-size:19px;font-weight:700}.panel-top p{font-size:13px;color:var(--muted)}
+.live-dot{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--teal)}
+.live-dot i{width:9px;height:9px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.grid2{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.pane{padding:30px}.pane+.pane{border-left:1px solid var(--line)}
+@media(max-width:900px){.pane+.pane{border-left:0;border-top:1px solid var(--line)}}
+.pane h4{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.del{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;background:var(--card);cursor:pointer;transition:border .2s,transform .2s}
+.del:hover{transform:translateY(-2px);border-color:rgba(20,184,166,.5)}
+.del.sel{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.del .r1{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.del .oid{font-weight:700;font-size:15px}
+.del .cust{font-size:13px;color:var(--muted)}
+.badge{margin-left:auto;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase}
+.b-prep{background:var(--amber-soft);color:var(--amber)}
+.b-way{background:var(--teal-soft);color:var(--teal)}
+.b-done{background:var(--green-soft);color:var(--green)}
+.del .r2{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.del .drv{width:28px;height:28px;border-radius:50%;background:#1E3A5F;display:grid;place-items:center;font-size:12px;font-weight:700;color:#BFD3EE}
+.prog{height:6px;background:rgba(255,255,255,.08);border-radius:99px;margin-top:10px;overflow:hidden}
+.prog i{display:block;height:100%;border-radius:99px;background:var(--teal);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.mapbox{background:#0B1A30;border:1px solid var(--line);border-radius:14px;padding:8px;margin-bottom:18px}
+.mapbox svg{width:100%;height:auto;display:block;border-radius:10px}
+.legend{display:flex;gap:18px;font-size:12.5px;color:var(--muted);margin-bottom:20px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:7px}
+.dot{width:10px;height:10px;border-radius:50%}
+.lookup label{display:block;font-size:13px;font-weight:600;margin-bottom:8px}
+.lookup .row{display:flex;gap:10px}
+.lookup input{flex:1;background:var(--card);border:1.5px solid var(--line);border-radius:11px;color:#fff;padding:12px 15px;font:500 15px 'Inter'}
+.lookup input:focus{outline:none;border-color:var(--teal)}
+.timeline{margin-top:18px}
+.tl-item{display:flex;gap:14px;position:relative;padding-bottom:20px}
+.tl-item::before{content:'';position:absolute;left:8px;top:20px;bottom:0;width:2px;background:rgba(255,255,255,.1)}
+.tl-item:last-child::before{display:none}
+.tl-item .pt{width:18px;height:18px;border-radius:50%;border:2px solid #3B4F6B;background:var(--bg2);flex-shrink:0;z-index:1}
+.tl-item.done .pt{background:var(--teal);border-color:var(--teal)}
+.tl-item.now .pt{background:var(--amber);border-color:var(--amber);animation:pulse 1.4s infinite}
+.tl-item b{font-size:14px;display:block}.tl-item span{font-size:12.5px;color:var(--muted)}
+.assign{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.assign h5{font-size:13px;font-weight:700;margin-bottom:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.drivers{display:flex;gap:10px;flex-wrap:wrap}
+.driver{display:flex;align-items:center;gap:9px;background:var(--bg2);border:1.5px solid var(--line);border-radius:12px;padding:9px 14px 9px 9px;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .2s}
+.driver:hover{border-color:var(--teal)}
+.driver.on{border-color:var(--teal);background:var(--teal-soft)}
+.driver .drv{width:32px;height:32px;border-radius:50%;background:#1E3A5F;display:grid;place-items:center;font-size:13px;font-weight:700}
+.driver small{display:block;font-weight:500;color:var(--muted);font-size:11.5px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:64px 0}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#04211D;font-weight:800;display:grid;place-items:center;margin-bottom:14px;font-size:17px}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}.step p{font-size:14.5px;color:var(--muted);line-height:1.65}
+.scale{border:1px solid rgba(20,184,166,.3);background:var(--teal-soft);border-radius:20px;padding:38px 40px;display:flex;align-items:center;gap:24px;margin:20px 0 70px;flex-wrap:wrap}
+.scale h3{font-size:22px;font-weight:700}.scale p{color:var(--muted);font-size:15px;margin-top:6px}.scale .btn{margin-left:auto}
+.cta{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:64px 40px;text-align:center;margin-bottom:70px}
+.cta h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.03em;margin-bottom:12px}
+.cta p{color:var(--muted);font-size:17px;max-width:560px;margin:0 auto 28px;line-height:1.6}
+.cta .fine{font-size:13px;color:var(--muted);margin-top:16px}
+footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:14px;color:var(--muted)}
+.ft{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:30px}
+.ft .brand{color:#fff}.ft h5{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.ft p{line-height:1.7;max-width:340px}
+.copy{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,80px);background:#fff;color:#0A1628;padding:15px 24px;border-radius:14px;font-size:14.5px;font-weight:600;opacity:0;transition:all .35s;z-index:100;display:flex;gap:10px;align-items:center;max-width:90vw}
+#toast.show{transform:translate(-50%,0);opacity:1}
+#toast .tick{width:24px;height:24px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-size:14px;color:#04211D;flex-shrink:0}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+<div class="brand"><span class="mark">◈</span> RouteTrack</div>
+<nav class="links"><a href="#demo">Live demo</a><a href="#how">How it works</a></nav>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20RouteTrack-style%20delivery%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Get yours — $2,000</a>
+</div></header>
+
+<div class="wrap">
+<section class="hero">
+<span class="eyebrow">Live demo · Built for local delivery businesses</span>
+<h1>"Where's my order?" <span class="hl">— answered before they ask.</span></h1>
+<p class="sub">RouteTrack gives your bakery, pharmacy or cloud kitchen live delivery tracking — drivers, routes and customer lookups in one clean dashboard.</p>
+<div class="cta-row">
+<a class="btn" href="#demo">Try the live demo ↓</a>
+<a class="btn ghost" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20RouteTrack-style%20delivery%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Is this YOUR business? Get yours for $2,000 →</a>
+</div>
+<div class="duel">
+<div class="card before rv"><span class="tag">Before · The painful manual way</span><h3>Sweet Crumbs Bakery — phone chaos</h3><p>Twelve daily deliveries, one landline. "Where's my order?" calls all afternoon. Drivers texted addresses from memory. Two cakes went to the wrong street in one week.</p><div class="big">40+ calls/day</div><p style="font-size:13px">just asking where the rider is</p></div>
+<div class="card after rv"><span class="tag">After · With RouteTrack</span><h3>Same bakery — silent phones</h3><p>Every customer gets a tracking link at dispatch. Drivers follow optimized routes. The owner watches all twelve orders on one screen.</p><div class="big">~3 calls/day</div><p style="font-size:13px">everything else self-serves on the tracker</p></div>
+</div>
+</section>
+
+<section class="demo" id="demo">
+<div class="demo-head rv"><h2>Try it — the owner dashboard + the customer view</h2><p><b>Sweet Crumbs Bakery, DHA Lahore</b> — 12 deliveries out today. Click any delivery to track it. Then try the customer lookup below, exactly as a buyer would.</p></div>
+<div class="panel rv">
+<div class="panel-top"><div class="avatar">SC</div><div><h3>Sweet Crumbs Bakery</h3><p>DHA Phase 5, Lahore · 12 deliveries today · 3 riders on shift</p></div><div class="live-dot"><i></i> LIVE</div></div>
+<div class="grid2">
+<div class="pane"><h4>Active deliveries — tap to track</h4><div id="delList"></div>
+<div class="assign"><h5>Assign driver</h5><div class="drivers" id="drivers"></div></div>
+</div>
+<div class="pane"><h4>Route map</h4>
+<div class="mapbox"><svg viewBox="0 0 400 220" id="routeSvg">
+<rect width="400" height="220" fill="#0B1A30"/>
+<g stroke="#1E3A5F" stroke-width="10" opacity=".55"><path d="M40 180 H 360 M40 180 V 60 M360 180 V 60 M40 60 H 360 M140 60 V 180 M260 60 V 180 M40 120 H 360" fill="none"/></g>
+<path id="routePath" d="M40 180 L140 180 L140 120 L260 120 L260 60 L360 60" fill="none" stroke="#14B8A6" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+<circle cx="40" cy="180" r="9" fill="#F59E0B"/><text x="40" y="205" fill="#8FA0B8" font-size="11" text-anchor="middle" font-family="Inter">Bakery</text>
+<circle cx="140" cy="120" r="7" fill="#3B4F6B"/><text x="140" y="145" fill="#8FA0B8" font-size="11" text-anchor="middle" font-family="Inter">Stop 1</text>
+<circle cx="260" cy="60" r="7" fill="#3B4F6B"/><text x="260" y="85" fill="#8FA0B8" font-size="11" text-anchor="middle" font-family="Inter">Stop 2</text>
+<circle cx="360" cy="60" r="9" fill="#34D399"/><text x="360" y="85" fill="#8FA0B8" font-size="11" text-anchor="middle" font-family="Inter">You</text>
+<circle id="riderDot" r="8" fill="#14B8A6" stroke="#fff" stroke-width="2.5"><animateMotion dur="9s" repeatCount="indefinite" path="M40 180 L140 180 L140 120 L260 120 L260 60 L360 60"/></circle>
+</svg></div>
+<div class="legend"><span><i class="dot" style="background:#F59E0B"></i> Bakery</span><span><i class="dot" style="background:#14B8A6"></i> Rider (live)</span><span><i class="dot" style="background:#34D399"></i> Delivered stop</span></div>
+<h4>"Where's my order?" — customer lookup</h4>
+<div class="lookup"><label>Enter order number <span style="color:var(--muted);font-weight:500">(try SC-1042, SC-1043 or SC-1044)</span></label>
+<div class="row"><input id="orderInput" placeholder="e.g. SC-1042"><button class="btn" id="lookupBtn">Track</button></div>
+<div class="timeline" id="timeline" style="display:none"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how"><div class="steps">
+<div class="step rv"><div class="n">1</div><h3>Dispatch in one tap</h3><p>Order comes in, you tap dispatch — the customer instantly gets a live tracking link by SMS or WhatsApp.</p></div>
+<div class="step rv"><div class="n">2</div><h3>Riders follow the route</h3><p>Drivers see stops in optimal order on their phone. Status updates itself: Preparing → On the way → Delivered.</p></div>
+<div class="step rv"><div class="n">3</div><h3>Customers self-serve</h3><p>No more "where's my rider?" calls. Buyers watch their order move on the map and get an ETA that updates live.</p></div>
+</div></section>
+
+<div class="scale rv"><div><h3>Works for 1 shop or 50 branches.</h3><p>Fleet view scales from a single rider to city-wide operations — same dashboard.</p></div>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20RouteTrack-style%20delivery%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Get yours for $2,000 →</a></div>
+
+<section class="cta rv"><h2>Is this YOUR business?</h2><p>If your phone won't stop ringing with "where's my order?", you're paying staff to be a human tracking page. We'll build you a RouteTrack-style app — your brand, your riders, live in weeks.</p>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20RouteTrack-style%20delivery%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener" style="font-size:17px;padding:15px 32px">Get yours for $2,000 →</a>
+<p class="fine">One-time build · Your branding · Driver + customer apps included · Fleet-ready</p></section>
+</div>
+
+<footer><div class="wrap"><div class="ft">
+<div><div class="brand" style="margin-bottom:12px"><span class="mark">◈</span> RouteTrack</div><p>A demo by <b style="color:#fff">NAN Marketing Agency</b> — we build custom apps that sell for local businesses worldwide.</p></div>
+<div><h5>Order yours</h5><p>Custom delivery-tracking app for your business.<br><a href="https://wa.me/923177415702" target="_blank" rel="noopener" style="color:#14B8A6;font-weight:700">WhatsApp: +92 317 7415702</a><br>nidaayesha.com</p></div>
+</div><div class="copy"><span>© 2026 NAN Marketing Agency. Demo data is fictional.</span><span><a href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20RouteTrack-style%20delivery%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener" style="color:#14B8A6;font-weight:700">Get yours for $2,000 →</a></span></div></div></footer>
+<div id="toast"><span class="tick">✓</span><span id="toastMsg"></span></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+function toast(m){$('#toastMsg').textContent=m;$('#toast').classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
+const DELS=[
+ {id:'SC-1042',cust:'Ayesha Khan · DHA Phase 5',items:'Chocolate truffle cake (2 lb)',st:'way',drv:'Imran',prog:65,eta:'18 min'},
+ {id:'SC-1043',cust:'Danish Malik · DHA Phase 6',items:'Assorted cupcakes ×12',st:'way',drv:'Sana',prog:35,eta:'32 min'},
+ {id:'SC-1044',cust:'Fatima Raza · Model Town',items:'Pineapple pastry cake (1 lb)',st:'prep',drv:'Imran',prog:10,eta:'55 min'},
+ {id:'SC-1041',cust:'Omar Farooq · Gulberg',items:'Red velvet cake (3 lb)',st:'done',drv:'Sana',prog:100,eta:'Delivered 2:40 PM'},
+];
+const ST={prep:['Preparing','b-prep'],way:['On the way','b-way'],done:['Delivered','b-done']};
+let sel=0, assigned={};
+function renderDels(){
+ $('#delList').innerHTML=DELS.map((d,i)=>`
+ <div class="del ${i===sel?'sel':''}" data-i="${i}">
+  <div class="r1"><span class="oid">${d.id}</span><span class="badge ${ST[d.st][1]}">${ST[d.st][0]}</span></div>
+  <div class="cust">${d.cust} · ${d.items}</div>
+  <div class="r2" style="margin-top:8px"><span class="drv">${(assigned[d.id]||d.drv)[0]}</span><span>Rider: <b style="color:#fff">${assigned[d.id]||d.drv}</b> · ETA ${d.eta}</span></div>
+  <div class="prog"><i style="width:${d.prog}%"></i></div>
+ </div>`).join('');
+ $$('#delList .del').forEach(el=>el.onclick=()=>{sel=+el.dataset.i;renderDels();renderDrivers();});
+}
+const DRIVERS=[{n:'Imran',v:'Honda CD 70 · 4.9★'},{n:'Sana',v:'Suzuki GD 110 · 5.0★'},{n:'Kamran',v:'Yamaha YBR · 4.8★'}];
+function renderDrivers(){
+ const d=DELS[sel], cur=assigned[d.id]||d.drv;
+ $('#drivers').innerHTML=DRIVERS.map(x=>`<div class="driver ${x.n===cur?'on':''}" data-n="${x.n}"><span class="drv">${x.n[0]}</span><span>${x.n}<small>${x.v}</small></span></div>`).join('');
+ $$('#drivers .driver').forEach(el=>el.onclick=()=>{assigned[d.id]=el.dataset.n;d.drv=el.dataset.n;renderDels();renderDrivers();toast(`${el.dataset.n} assigned to ${d.id}`);});
+}
+renderDels();renderDrivers();
+// customer lookup
+const ORDERS={
+ 'SC-1042':[['Order confirmed','Today, 1:12 PM — payment received',1],['Preparing','1:40 PM — cake boxed, quality checked',1],['Rider picked up','2:55 PM — Imran is on the way',1],['Arriving soon','Live — 18 min away, DHA Phase 5',0]],
+ 'SC-1043':[['Order confirmed','Today, 1:30 PM — payment received',1],['Preparing','2:05 PM — cupcakes boxed',1],['Rider picked up','Live — Sana left the bakery, 32 min away',0],['Delivered','Pending',0]],
+ 'SC-1044':[['Order confirmed','Today, 2:10 PM — payment received',1],['Preparing','Live — in the oven queue, ~55 min to dispatch',0],['Rider picked up','Pending',0],['Delivered','Pending',0]],
+};
+$('#lookupBtn').onclick=()=>{
+ const id=$('#orderInput').value.trim().toUpperCase();
+ const tl=$('#timeline');
+ if(!ORDERS[id]){tl.style.display='block';tl.innerHTML=`<p style="color:#F87171;font-size:14px">No order found with number <b>${id||'—'}</b>. Try SC-1042.</p>`;return;}
+ const steps=ORDERS[id];
+ tl.style.display='block';
+ tl.innerHTML=steps.map((s,i)=>{const cls=s[2]===1?'done':(i===steps.findIndex(x=>x[2]===0)?'now':'');
+  return `<div class="tl-item ${cls}"><span class="pt"></span><div><b>${s[0]}</b><span>${s[1]}</span></div></div>`;}).join('')
+  +`<p style="font-size:13px;color:var(--muted);margin-top:4px">This is exactly what your customer sees — live, on their phone, no app install needed.</p>`;
+ toast(`Tracking ${id} — live view loaded`);
+};
+$('#orderInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('#lookupBtn').click();});
+</script>
+</body>
+</html>
