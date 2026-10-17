@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-de-steuerklasse-finder.surge.sh/sitemap.xml
