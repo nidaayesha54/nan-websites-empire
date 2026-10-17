@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-ae-gratuity-calculator.surge.sh/sitemap.xml
