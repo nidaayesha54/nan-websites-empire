@@ -1,0 +1,5342 @@
+[
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6622979,
+    "lon": -73.8401093,
+    "address": "157-05 Cross Bay Boulevard, New York, New York, 11414",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 284918773
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7651357,
+    "lon": -73.7432114,
+    "address": "242-24 Northern Boulevard, New York, New York, 11363",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 248246903
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6081375,
+    "lon": -74.0020939,
+    "address": "8430 New Utrecht Avenue, New York, New York, 11214",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 249008946
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6965554,
+    "lon": -73.7456197,
+    "address": "116-46 207th Street, New York, New York, 11411",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 283035233
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.8529456,
+    "lon": -73.8530084,
+    "address": "1916 Williamsbridge Road, New York, New York, 10461",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 281722544
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.8104335,
+    "lon": -73.9524588,
+    "address": "288 West 125th Street, New York, New York, 10027",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 730049746
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7864372,
+    "lon": -73.9507771,
+    "address": "1500 Lexington Avenue, New York, New York, 10129",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 664750647
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6213052,
+    "lon": -73.9177001,
+    "address": "2320 Ralph Avenue, New York, New York, 11234",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5209136312
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7404562,
+    "lon": -73.7589248,
+    "address": "215-18 73rd Avenue, New York, New York, 11364",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 11255286846
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6083007,
+    "lon": -74.1642397,
+    "address": "1650 Richmond Avenue, New York, New York, 10314",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 9526028884
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.5955115,
+    "lon": -74.0863238,
+    "address": "1351 Hylan Boulevard, New York, New York, 10305",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 12385656269
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.743491,
+    "lon": -73.9586883,
+    "address": "1-50 50th Avenue, New York, New York, 11109",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5159871722
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.5495833,
+    "lon": -74.1523014,
+    "address": "Amboy Road, New York, New York, 10309",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 12507802138
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6266176,
+    "lon": -74.1576537,
+    "address": "2045 Forest Avenue, New York, New York, 10303",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 10759831060
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7272374,
+    "lon": -73.8929392,
+    "address": "69-80 Grand Avenue, New York, New York, 11378",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 9354070890
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7113496,
+    "lon": -73.8550959,
+    "address": "97-15 Metropolitan Avenue, New York, New York, 11375",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 9194868946
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7687711,
+    "lon": -73.9853107,
+    "address": "1 Columbus Place, New York, New Jersey, 07010",
+    "city": "New York",
+    "state": "New Jersey",
+    "osm_type": "node",
+    "osm_id": 1383932922
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7433879,
+    "lon": -73.9231074,
+    "address": "41-08 Queens Boulevard, New York, New York, 11104",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5552643865
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7506733,
+    "lon": -73.9748159,
+    "address": "150 East 42nd Street, New York, New York, 10174",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 9737988790
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7199694,
+    "lon": -73.9623729,
+    "address": "27 North 6th Street, New York, New York, 11211",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 4316479493
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6564028,
+    "lon": -73.9499884,
+    "address": "1261 Nostrand Avenue, New York, New York, 11235",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 6681855540
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.7022513,
+    "lon": -73.9864888,
+    "address": "79 Jay Street, New York, New York, 11201",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 10560845074
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.8744062,
+    "lon": -73.8795675,
+    "address": "3125 Bainbridge Avenue, New York, New York, 10467",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5564027537
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.5410378,
+    "lon": -74.1473988,
+    "address": "4055 Hylan Boulevard, New York, New York, 10308",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 13084675301
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.6812866,
+    "lon": -73.8418114,
+    "address": "97-01 Liberty Avenue, New York, New York, 11417",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 6402215633
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7536454,
+    "lon": -73.8220313,
+    "address": "44-15 Kissena Boulevard, New York, New York, 11355",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 284532063
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6685473,
+    "lon": -73.987271,
+    "address": "462 5th Avenue, New York, New York, 11215",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 248238776
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.8457823,
+    "lon": -73.8924427,
+    "address": "650 East Tremont Avenue, New York, New York, 10457",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 276042285
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6425318,
+    "lon": -73.9787846,
+    "address": "114 Beverley Road, New York, New York, 11218",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 248241780
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7627933,
+    "lon": -73.8758983,
+    "address": "26-02 94th Street, New York, New York, 11369",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 284728310
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6356476,
+    "lon": -73.9636642,
+    "address": "Newkirk Avenue, New York, New York, 11226",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 241850577
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.8820685,
+    "lon": -73.8814935,
+    "address": "3480 Jerome Avenue, New York, New York, 10467",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 276412329
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6755496,
+    "lon": -73.8189811,
+    "address": "119-02 Rockaway Boulevard, New York, New York, 11420",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 282395209
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7088404,
+    "lon": -73.7998868,
+    "address": "162-19 Hillside Avenue, New York, New York, 11432",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 248285802
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6899854,
+    "lon": -73.9925029,
+    "address": "120 Court Street, New York, New York, 11201",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 245112466
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6505667,
+    "lon": -73.9492948,
+    "address": "3000 Church Avenue, New York, New York, 11226",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "way",
+    "osm_id": 250141282
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.626479,
+    "lon": -74.1308818,
+    "address": "1227 Forest Avenue, New York, New York, 10310",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 11667208339
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6181243,
+    "lon": -73.9914578,
+    "address": "6628 18th Avenue, New York, New York, 11204",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 6592299144
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6181041,
+    "lon": -73.9914809,
+    "address": "6628 18th Avenue, New York, New York, 11204",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5589223620
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7404986,
+    "lon": -73.9864967,
+    "address": "33 East 23rd Street, New York, New York, 10010",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 584141414
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7448537,
+    "lon": -73.9191135,
+    "address": "45-02 43rd Avenue, New York, New York, 11104",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 2844976433
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6829509,
+    "lon": -73.977004,
+    "address": "604 Pacific Street, New York, New York, 11217",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 13347099674
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6780547,
+    "lon": -73.9734757,
+    "address": "296 Flatbush Avenue, New York, New York, 11217",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 2568849012
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7070289,
+    "lon": -73.9500398,
+    "address": "210 Union Avenue, New York, New York, 11206",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 3026945573
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6933304,
+    "lon": -73.9711358,
+    "address": "373 Myrtle Avenue, New York, New York, 11205",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 7124769202
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7438008,
+    "lon": -73.9998179,
+    "address": "8th Avenue, New York, New York, 10011",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 4149649616
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7266469,
+    "lon": -73.9522902,
+    "address": "748 Manhattan Avenue, New York, New York, 11222",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 2842829082
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6900547,
+    "lon": -73.992536,
+    "address": "120 Court Street, New York, New York, 11201",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 2307147603
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.6566543,
+    "lon": -73.9776842,
+    "address": "589 Prospect Avenue, New York, New York, 11215",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 3665021096
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.7882361,
+    "lon": -73.8149949,
+    "address": "14th Avenue, New York, New York, 11357",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 561039673
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 40.681533,
+    "lon": -73.8792586,
+    "address": "3138 Fulton Street, New York, New York, 11208",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5209293424
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 40.652595,
+    "lon": -73.7238515,
+    "address": "945 Rosedale Road, South Valley Stream, New York, 11581",
+    "city": "South Valley Stream",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 5303668451
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 40.7417149,
+    "lon": -73.9971089,
+    "address": "West 19th Street, New York, New York, 10011",
+    "city": "New York",
+    "state": "New York",
+    "osm_type": "node",
+    "osm_id": 6621617757
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.004618,
+    "lon": -118.4331114,
+    "address": "12315 Venice Boulevard, Los Angeles, California, 90066",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 316896862
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1579441,
+    "lon": -118.491822,
+    "address": "Ventura Boulevard, Los Angeles, California, 91436",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 301017852
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1279124,
+    "lon": -118.2593162,
+    "address": "West Los Feliz Boulevard, Glendale, California, 91204",
+    "city": "Glendale",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 339151482
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.2458701,
+    "lon": -118.2758,
+    "address": "Foothill Boulevard, Los Angeles, California, 91042",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 369272409
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9557758,
+    "lon": -118.3977415,
+    "address": "Sepulveda Westway, Los Angeles, California, 90045",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 1313141911
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.2005886,
+    "lon": -118.465336,
+    "address": "15232 Sherman Way, Los Angeles, California, 91405",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431662835
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.2559424,
+    "lon": -118.5014185,
+    "address": "10208 Balboa Boulevard, Los Angeles, California, 91344",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 430977055
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7372305,
+    "lon": -118.2915527,
+    "address": "700 South Gaffey Street, Los Angeles, California, 90731",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 407403510
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1791061,
+    "lon": -118.3841977,
+    "address": "Oxnard Street, Los Angeles, California, 91606",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 429880831
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0975976,
+    "lon": -118.3648719,
+    "address": "North Laurel Avenue, Los Angeles, California, 90046",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 12329333971
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0977198,
+    "lon": -118.3647153,
+    "address": "North Laurel Avenue, Los Angeles, California, 90046",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 12329333972
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7372208,
+    "lon": -118.2917139,
+    "address": "700 South Gaffey Street, Los Angeles, California, 90731",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 14241003502
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0463902,
+    "lon": -118.525663,
+    "address": "864 Swarthmore Avenue, Los Angeles, California, 90272",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 2380557122
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1919146,
+    "lon": -118.602599,
+    "address": "Owensmouth Avenue, Los Angeles, California, 91303",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 4518474004
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1581258,
+    "lon": -118.634825,
+    "address": "Mulholland Drive, Los Angeles, California, 91364",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 5092543668
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.062411,
+    "lon": -118.4458427,
+    "address": "Weyburn Avenue, Los Angeles, California, 90024",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 672875643
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0020144,
+    "lon": -118.4700442,
+    "address": "119 Lincoln Boulevard, Los Angeles, California, 90291",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 4280190227
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9558068,
+    "lon": -118.3978675,
+    "address": "8601 South Sepulveda Boulevard, Los Angeles, California, 90045",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 4020939074
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0018506,
+    "lon": -118.469937,
+    "address": "Machado Drive, Los Angeles, California, 90405",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 10958652689
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0748939,
+    "lon": -118.3753558,
+    "address": "Beverly Connection Way, Los Angeles, California, 90048",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 10969864707
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.0756151,
+    "lon": -118.3759738,
+    "address": "Beverly Boulevard, Los Angeles, California, 90048",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 11255964572
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1524673,
+    "lon": -118.453953,
+    "address": "14735 Ventura Boulevard, Los Angeles, California, 91403",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 11118253877
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.152698,
+    "lon": -118.4540522,
+    "address": "Ventura Boulevard, Los Angeles, California, 91403",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 6928761227
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.2348151,
+    "lon": -118.4410192,
+    "address": "Alley 90503, Los Angeles, California, 91402",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 1932946472
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 34.1017361,
+    "lon": -118.3430694,
+    "address": "Hollywood Boulevard, Los Angeles, California, 90028",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 3852390074
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2482244,
+    "lon": -118.4481274,
+    "address": "9750 Woodman Avenue, Los Angeles, California, 91331",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "relation",
+    "osm_id": 7249787
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2076508,
+    "lon": -118.6055223,
+    "address": "7560 Topanga Canyon Boulevard, Los Angeles, California, 91303",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431111662
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.9900764,
+    "lon": -118.447863,
+    "address": "Carter Avenue, Los Angeles, California, 90292",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 414206411
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2351547,
+    "lon": -118.4659177,
+    "address": "Nordhoff Street, Los Angeles, California, 91343",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431141005
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2585481,
+    "lon": -118.536643,
+    "address": "Hiawatha Street, Los Angeles, California, 91330",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 1136232860
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0475952,
+    "lon": -118.2089585,
+    "address": "North Breed Street, Los Angeles, California, 90033",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 429300814
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2003134,
+    "lon": -118.5343306,
+    "address": "Canby Avenue, Los Angeles, California, 91335",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431394553
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.1692445,
+    "lon": -118.5378581,
+    "address": "Alley \u200e90716, Los Angeles, California, 91356",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431347494
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.1402073,
+    "lon": -118.3705166,
+    "address": "Alley 87733, Los Angeles, California, 91602",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 431174151
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.165511,
+    "lon": -118.4134697,
+    "address": "5224 Coldwater Canyon Avenue, Los Angeles, California, 91607",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 336754596
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0479509,
+    "lon": -118.2573199,
+    "address": "West 7th Street, Los Angeles, California, 90017",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 1584088199
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0643439,
+    "lon": -118.291897,
+    "address": "3201 West 6th Street, Los Angeles, California, 90020",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 3643528174
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.095648,
+    "lon": -118.1512911,
+    "address": "2551 West Main Street, Alhambra, California, 91801",
+    "city": "Alhambra",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 13459305845
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0957034,
+    "lon": -118.1511389,
+    "address": "West Main Street, Alhambra, California, 91030",
+    "city": "Alhambra",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 8405657158
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.2642344,
+    "lon": -118.5028935,
+    "address": "Chatsworth Street, Los Angeles, California, 91344",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 6621339420
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0983775,
+    "lon": -118.309019,
+    "address": "North Western Avenue, Los Angeles, California, 90027",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 1036344016
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0778494,
+    "lon": -118.257442,
+    "address": "Montana Street, Los Angeles, California, 90026",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 11378679124
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0981831,
+    "lon": -118.3268991,
+    "address": "West Sunset Boulevard, Los Angeles, California, 90028",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 349339593
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.1383896,
+    "lon": -118.215266,
+    "address": "Merton Avenue, Los Angeles, California, 90041",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 1145239904
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0576636,
+    "lon": -118.4246692,
+    "address": "South Beverly Glen Boulevard, Los Angeles, California, 90067",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 9416649289
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0575217,
+    "lon": -118.424677,
+    "address": "Santa Monica Boulevard, Los Angeles, California, 90067",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 6280578473
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.9901941,
+    "lon": -118.4478951,
+    "address": "Washington Boulevard, Los Angeles, California, 90292",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 4474454189
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.1017814,
+    "lon": -118.3398749,
+    "address": "Hollywood Boulevard, Los Angeles, California, 90028",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 10276511908
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0544272,
+    "lon": -118.383439,
+    "address": "8770 West Pico Boulevard, Los Angeles, California, 90035",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 2707776869
+  },
+  {
+    "name": "Walgreens",
+    "lat": 34.0336433,
+    "lon": -118.4498507,
+    "address": "11795 West Olympic Boulevard, Los Angeles, California, 90064",
+    "city": "Los Angeles",
+    "state": "California",
+    "osm_type": "node",
+    "osm_id": 5258460921
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 34.1522404,
+    "lon": -118.2311903,
+    "address": "1530 East Chevy Chase Drive, Glendale, California, 91206",
+    "city": "Glendale",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 428156285
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 33.8852516,
+    "lon": -118.1597616,
+    "address": "Paramount Boulevard, Paramount, California, 90723",
+    "city": "Paramount",
+    "state": "California",
+    "osm_type": "way",
+    "osm_id": 397894529
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9762978,
+    "lon": -87.7885827,
+    "address": "6417 West Higgins Avenue, Chicago, Illinois, 60630",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 163226355
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8376517,
+    "lon": -87.6453732,
+    "address": "741 West 31st Street, Chicago, Illinois, 60608",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 210171508
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9681652,
+    "lon": -87.7670365,
+    "address": "4801 North Central Avenue, Chicago, Illinois, 60630",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 162714459
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9248487,
+    "lon": -87.7259265,
+    "address": "3940 West Fullerton Avenue, Chicago, Illinois, 60647",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 162436384
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8666571,
+    "lon": -87.6570264,
+    "address": "1211 West Roosevelt Road, Chicago, Illinois, 60608",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 203206118
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.993861,
+    "lon": -87.6607996,
+    "address": "6150 North Broadway, Chicago, Illinois, 60660",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 210395717
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.7783414,
+    "lon": -87.7223719,
+    "address": "6315 South Pulaski Road, Chicago, Illinois, 60629",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 406471186
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.7998673,
+    "lon": -87.5947156,
+    "address": "1228 East 53rd Street, Chicago, Illinois, 60615",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 144008984
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9465822,
+    "lon": -87.7664944,
+    "address": "3615 North Central Avenue, Chicago, Illinois, 60634",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 442713465
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8781513,
+    "lon": -87.6246204,
+    "address": "310 South Michigan Avenue, Chicago, Illinois, 60604",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 7874385742
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9629582,
+    "lon": -87.6562141,
+    "address": "4466 North Broadway, Chicago, Illinois, 60640",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 11173297321
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.885957,
+    "lon": -87.6203315,
+    "address": "205 North Columbus Drive, Chicago, Illinois, 60601",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 1648106605
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8955501,
+    "lon": -87.6878668,
+    "address": "2427 West Chicago Avenue, Chicago, Illinois, 60622",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 13021564693
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.7781678,
+    "lon": -87.7224692,
+    "address": "6315 South Pulaski Road, Chicago, Illinois, 60629",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 12700552000
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9126075,
+    "lon": -87.6534392,
+    "address": "1714 North Sheffield Avenue, Chicago, Illinois, 60642",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 12626228698
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8374999,
+    "lon": -87.6453298,
+    "address": "741 West 31st Street, Chicago, Illinois, 60608",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 13250348876
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9040756,
+    "lon": -87.628486,
+    "address": "1201 North State Street, Chicago, Illinois, 60610",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 6331266185
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8665025,
+    "lon": -87.6569657,
+    "address": "1211 West Roosevelt Road, Chicago, Illinois, 60608",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 9434660174
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.0005893,
+    "lon": -87.6609849,
+    "address": "6510 North Sheridan Road, Chicago, Illinois, 60626",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 4373086931
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9248501,
+    "lon": -87.725727,
+    "address": "3940 West Fullerton Avenue, Chicago, Illinois, 60647",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 12700551993
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9762109,
+    "lon": -87.9047103,
+    "address": "Baggage Road, Chicago, Illinois, 60666",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 10040013001
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.9806571,
+    "lon": -87.9063432,
+    "address": "10000 Baggage Road, Chicago, Illinois, 60666",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 11983707651
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.875424,
+    "lon": -87.6278611,
+    "address": "520 South State Street, Chicago, Illinois, 60605",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 4409415232
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.868375,
+    "lon": -87.6313044,
+    "address": "1154 South Clark Street, Chicago, Illinois, 60605",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 6920818832
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 41.8900854,
+    "lon": -87.637203,
+    "address": "344 West Hubbard Street, Chicago, Illinois, 60654",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 2652556177
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9749237,
+    "lon": -87.7675307,
+    "address": "5230 North Milwaukee Avenue, Chicago, Illinois, 60630",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 162805417
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8133031,
+    "lon": -87.7048694,
+    "address": "4385 South Archer Avenue, Chicago, Illinois, 60632",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 165155205
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.0165652,
+    "lon": -87.6758324,
+    "address": "7410 North Clark Street, Chicago, Illinois, 60626",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209958756
+  },
+  {
+    "name": "Former Walgreens",
+    "lat": 41.7380113,
+    "lon": -87.6055172,
+    "address": "8628 South Cottage Grove Avenue, Chicago, Illinois, 60619",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 210845098
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.7284801,
+    "lon": -87.5521188,
+    "address": "9148 South Commercial Avenue, Chicago, Illinois, 60617",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 211362313
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9179003,
+    "lon": -87.6883838,
+    "address": "2001 North Milwaukee Avenue, Chicago, Illinois, 60647",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209403722
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9811998,
+    "lon": -87.6687768,
+    "address": "5440 North Clark Street, Chicago, Illinois, 60640",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209946657
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8814195,
+    "lon": -87.6853315,
+    "address": "2340 West Madison Street, Chicago, Illinois, 60612",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209381333
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9901457,
+    "lon": -87.7051347,
+    "address": "3019 West Peterson Avenue, Chicago, Illinois, 60659",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 130598990
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.7640974,
+    "lon": -87.6827597,
+    "address": "7111 South Western Avenue, Chicago, Illinois, 60636",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209656687
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9254172,
+    "lon": -87.6665633,
+    "address": "1520 West Fullerton Avenue, Chicago, Illinois, 60614",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209880689
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9933651,
+    "lon": -87.6901194,
+    "address": "6140 North Western Avenue, Chicago, Illinois, 60659",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209571034
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.7941703,
+    "lon": -87.7032559,
+    "address": "5435 South Kedzie Avenue, Chicago, Illinois, 60632",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 165145725
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9428053,
+    "lon": -87.6898801,
+    "address": "3358 North Western Avenue, Chicago, Illinois, 60618",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 149599772
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8077101,
+    "lon": -87.7226891,
+    "address": "3943 West 47th Street, Chicago, Illinois, 60632",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 163668301
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9105734,
+    "lon": -87.6887825,
+    "address": "2440 West North Avenue, Chicago, Illinois, 60647",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209405662
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9378642,
+    "lon": -87.7965606,
+    "address": "6809 West Belmont Avenue, Chicago, Illinois, 60634",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 163280215
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9537978,
+    "lon": -87.6863903,
+    "address": "2301 West Irving Park Road, Chicago, Illinois, 60618",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 209464181
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8806247,
+    "lon": -87.7559892,
+    "address": "5222 West Madison Street, Chicago, Illinois, 60644",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 162516698
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9542237,
+    "lon": -87.6539746,
+    "address": "953 West Irving Park Road, Chicago, Illinois, 60613",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "way",
+    "osm_id": 258988122
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8830959,
+    "lon": -87.6247316,
+    "address": "30 North Michigan Avenue, Chicago, Illinois, 60602",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 357043874
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8912174,
+    "lon": -87.6184879,
+    "address": "342 East Illinois Street, Chicago, Illinois, 60611",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 3637621466
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.9999309,
+    "lon": -87.6714616,
+    "address": "6500 North Clark Street, Chicago, Illinois, 60626",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 6960834419
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.0178257,
+    "lon": -87.6908649,
+    "address": "7510 North Western Avenue, Chicago, Illinois, 60645",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 12108669568
+  },
+  {
+    "name": "Walgreens",
+    "lat": 41.8520497,
+    "lon": -87.6743384,
+    "address": "1931 West Cermak Road, Chicago, Illinois, 60608",
+    "city": "Chicago",
+    "state": "Illinois",
+    "osm_type": "node",
+    "osm_id": 12967366986
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.77877,
+    "lon": -95.6187834,
+    "address": "15010 Memorial Drive, Houston, Texas, 77079",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 609645262
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.8668668,
+    "lon": -95.4880828,
+    "address": "6504 West Little York Road, Houston, Texas, 77091",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 690504021
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.6926291,
+    "lon": -95.5108013,
+    "address": "7102 Beechnut Street, Houston, Texas, 77072",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 384404234
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7702726,
+    "lon": -95.4169075,
+    "address": "5401 Washington Avenue, Houston, Texas, 77007",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 261178958
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7379465,
+    "lon": -95.5255628,
+    "address": "9292 Westheimer Road, Houston, Texas, 77063",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 391434978
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7043497,
+    "lon": -95.5956491,
+    "address": "Cook Road, Houston, Texas, 77099",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1096666646
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7828889,
+    "lon": -95.485369,
+    "address": "8201 Katy Freeway, Houston, Texas, 77055",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 556095420
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7319879,
+    "lon": -95.4673699,
+    "address": "5204 Richmond Avenue, Houston, Texas, 77056",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 226937082
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7857944,
+    "lon": -95.543471,
+    "address": "1002 Gessner Road, Houston, Texas, 77043",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 371445453
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7543766,
+    "lon": -95.6055517,
+    "address": "1329 South Dairy Ashford Road, Houston, Texas, 77077",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 849445941
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.8091138,
+    "lon": -95.5239431,
+    "address": "9455 Hammerly Boulevard, Houston, Texas, 77043",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 975620918
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7294656,
+    "lon": -95.6451868,
+    "address": "14606 Richmond Avenue, Houston, Texas, 77082",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 50111550
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7166604,
+    "lon": -95.2953941,
+    "address": "806 South 75th Street, Houston, Texas, 77023",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 378711657
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7043783,
+    "lon": -95.4757572,
+    "address": "5430 Bissonnet Street, Houston, Texas, 77099",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 846945455
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7351418,
+    "lon": -95.5674202,
+    "address": "Walnut Bend Lane, Houston, Texas, 77042",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9847083779
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7670505,
+    "lon": -95.5505829,
+    "address": "Benignus Road, Houston, Texas, 77024",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 11024052690
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.8491007,
+    "lon": -95.5018893,
+    "address": "13250 Northwest Freeway, Houston, Texas, 77040",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 8049600583
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7349659,
+    "lon": -95.5180684,
+    "address": "8605 Westheimer Road, Houston, Texas, 77063",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9434507268
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7824101,
+    "lon": -95.5409454,
+    "address": "984 Gessner Road, Houston, Texas, 77024",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9795918826
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.704422,
+    "lon": -95.475731,
+    "address": "Chimney Rock Road, Houston, Texas, 77402",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 2916278501
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.8669654,
+    "lon": -95.4881573,
+    "address": "North Houston Rosslyn Road, Houston, Texas, 77040",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7897541878
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7027804,
+    "lon": -95.3603008,
+    "address": "Old Spanish Trail, Houston, Texas, 77054",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9748078240
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7381741,
+    "lon": -95.411472,
+    "address": "West Alabama Street, Houston, Texas, 77027",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9903514220
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.7830165,
+    "lon": -95.485324,
+    "address": "Chimney Rock Road, Houston, Texas, 77055",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7926368888
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 29.756967,
+    "lon": -95.3974451,
+    "address": "Peveto Street, Houston, Texas, 77019",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 6818164814
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.723127,
+    "lon": -95.3793715,
+    "address": "5202 Almeda Road, Houston, Texas, 77004",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 568368840
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.6933897,
+    "lon": -95.4128017,
+    "address": "7929 Kirby Drive, Houston, Texas, 77054",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 218802506
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7471973,
+    "lon": -95.3782202,
+    "address": "2612 Smith Street, Houston, Texas, 77006",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 484640509
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.5741337,
+    "lon": -95.1118926,
+    "address": "Falcon Pass, Houston, Texas, 77062",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 367291240
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.6124577,
+    "lon": -95.223952,
+    "address": "Fuqua Street, Houston, Texas, 77034",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1127590076
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.670858,
+    "lon": -95.5271946,
+    "address": "8535 South Braeswood Boulevard, Houston, Texas, 77071",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1057024115
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7428967,
+    "lon": -95.390448,
+    "address": "3317 Montrose Boulevard, Houston, Texas, 77006",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 428096994
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7566534,
+    "lon": -95.6258065,
+    "address": "1506 Eldridge Parkway, Houston, Texas, 77077",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 814039673
+  },
+  {
+    "name": "Walgreens",
+    "lat": 30.0679685,
+    "lon": -95.2120841,
+    "address": "Greenbelt Trails, Houston, Texas, 77339",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 387024897
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7019051,
+    "lon": -95.3588198,
+    "address": "3822 Old Spanish Trail, Houston, Texas, 77021",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 365923647
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.6792687,
+    "lon": -95.477836,
+    "address": "Caversham Drive, Houston, Texas, 77096",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 203403674
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.6719851,
+    "lon": -95.2763086,
+    "address": "Bellfort Street, Houston, Texas, 77061",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 848673362
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.8597681,
+    "lon": -95.3839377,
+    "address": "6600 Airline Drive, Houston, Texas, 77076",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 224706025
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7409656,
+    "lon": -95.4677155,
+    "address": "5200 Westheimer Road, Houston, Texas, 77056",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 621643568
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7040482,
+    "lon": -95.6141092,
+    "address": "Bellaire Boulevard;\u0110\u1ea1i L\u1ed9 S\u00e0ig\u00f2n, Houston, Texas, 77082",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1420308666
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.6920602,
+    "lon": -95.4393339,
+    "address": "8413 Stella Link Road, Houston, Texas, 77025",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 379356831
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7223675,
+    "lon": -95.4423604,
+    "address": "Academy Street, Houston, Texas, 77025",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 329054600
+  },
+  {
+    "name": "Walgreens",
+    "lat": 30.0679335,
+    "lon": -95.2120943,
+    "address": "Greenbelt Trails, Houston, Texas, 77339",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 3802417672
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7428005,
+    "lon": -95.3903416,
+    "address": "Roseland Street, Houston, Texas, 77006",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 9407539261
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7230514,
+    "lon": -95.379477,
+    "address": "5202 Almeda Road, Houston, Texas, 77004",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 8295164397
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7645889,
+    "lon": -95.4791475,
+    "address": "510 Chimney Rock Road, Houston, Texas, 77056",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7041138108
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7067456,
+    "lon": -95.4947573,
+    "address": "Dunlap Street, Houston, Texas, 77074",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7057574940
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7090645,
+    "lon": -95.4016289,
+    "address": "Fannin Street, Houston, Texas, 77030",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 1975476296
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7471554,
+    "lon": -95.3783682,
+    "address": "Dennis Street, Houston, Texas, 77006",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 11162856740
+  },
+  {
+    "name": "Walgreens",
+    "lat": 29.7068202,
+    "lon": -95.4946607,
+    "address": "Dunlap Street, Houston, Texas, 77074",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7057574941
+  },
+  {
+    "name": "Pharmacy",
+    "lat": 29.7605417,
+    "lon": -95.6262152,
+    "address": "Brimhurst Drive, Houston, Texas, 77077",
+    "city": "Houston",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 8168447721
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4958757,
+    "lon": -111.9785805,
+    "address": "4742 East Indian School Road, Phoenix, Arizona, 85018",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 286664012
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5096822,
+    "lon": -112.0470368,
+    "address": "1610 East Camelback Road, Phoenix, Arizona, 85016",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 65727596
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6795025,
+    "lon": -111.9758867,
+    "address": "21001 North Tatum Boulevard, Phoenix, Arizona, 85050",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 1189927746
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6399437,
+    "lon": -111.9874361,
+    "address": "4323 East Bell Road, Phoenix, Arizona, 85032",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 71277565
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6102302,
+    "lon": -112.0991488,
+    "address": "1855 West Thunderbird Road, Phoenix, Arizona, 85023",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 246677460
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4941481,
+    "lon": -112.0644986,
+    "address": "4045 North 7th Street, Phoenix, Arizona, 85014",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 384761268
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5824343,
+    "lon": -112.1359241,
+    "address": "3560 West Peoria Avenue, Phoenix, Arizona, 85029",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 480970523
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6114129,
+    "lon": -111.9965618,
+    "address": "3975 East Thunderbird Road, Phoenix, Arizona, 85032",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 284329661
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5391686,
+    "lon": -112.1333595,
+    "address": "3440 West Glendale Avenue, Phoenix, Arizona, 85017",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 222122905
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7130049,
+    "lon": -112.177853,
+    "address": "5430 West Happy Valley Road, Phoenix, Arizona, 85083",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 891396952
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5681183,
+    "lon": -112.0989394,
+    "address": "1850 West Dunlap Avenue, Phoenix, Arizona, 85021",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 315098517
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.3786575,
+    "lon": -112.099817,
+    "address": "7550 South 19th Avenue, Phoenix, Arizona, 85041",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 333378096
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6541009,
+    "lon": -112.066165,
+    "address": "18460 North 7th Street, Phoenix, Arizona, 85022",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 714351914
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4653662,
+    "lon": -112.0734026,
+    "address": "1525 North Central Avenue, Phoenix, Arizona, 85004",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 97516798
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5076505,
+    "lon": -112.2908623,
+    "address": "10707 West Camelback Road, Phoenix, Arizona, 85037",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 955564155
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6556271,
+    "lon": -112.0127939,
+    "address": "3210 East Union Hills Drive, Phoenix, Arizona, 85050",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 82162095
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4660111,
+    "lon": -112.0605014,
+    "address": "1002 East McDowell Road, Phoenix, Arizona, 85006",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 1091965431
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.3772932,
+    "lon": -112.0469937,
+    "address": "1615 East Baseline Road, Phoenix, Arizona, 85042",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9857021046
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.3787407,
+    "lon": -112.0999473,
+    "address": "7550 South 19th Avenue, Phoenix, Arizona, 85041",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 11835820988
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5093056,
+    "lon": -111.996218,
+    "address": "East Camelback Road, Phoenix, Arizona, 85018",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 12398979733
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4776864,
+    "lon": -111.984178,
+    "address": "4515 East Thomas Road, Phoenix, Arizona, 85018",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 4514290319
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4236677,
+    "lon": -112.2699007,
+    "address": "9830 West Lower Buckeye Road, Phoenix, Arizona, 85353",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 4518474005
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.5682316,
+    "lon": -112.098764,
+    "address": "1850 West Dunlap Avenue, Phoenix, Arizona, 85021",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9901196679
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6540135,
+    "lon": -112.0662935,
+    "address": "18460 North 7th Street, Phoenix, Arizona, 85022",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10008008205
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.4940664,
+    "lon": -112.064407,
+    "address": "4045 North 7th Street, Phoenix, Arizona, 85014",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10005460667
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5829412,
+    "lon": -112.0134786,
+    "address": "10602 North 32nd Street, Phoenix, Arizona, 85028",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 13653604806
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6544597,
+    "lon": -112.0301562,
+    "address": "2415 East Union Hills Drive, Phoenix, Arizona, 85050",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 82163144
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.4651411,
+    "lon": -112.0643435,
+    "address": "705 East McDowell Road, Phoenix, Arizona, 85006",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 1270461340
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5680718,
+    "lon": -112.1335691,
+    "address": "3450 West Dunlap Avenue, Phoenix, Arizona, 85051",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 561665889
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.4654524,
+    "lon": -112.1530594,
+    "address": "4315 West McDowell Road, Phoenix, Arizona, 85035",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 130102502
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.7977038,
+    "lon": -112.1188868,
+    "address": "2707 West Carefree Highway, Phoenix, Arizona, 85085",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 103863582
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6308917,
+    "lon": -112.0290772,
+    "address": "2435 East Greenway Parkway, Phoenix, Arizona, 85022",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 82697513
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.480655,
+    "lon": -112.0470184,
+    "address": "1616 East Thomas Road, Phoenix, Arizona, 85016",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 384942679
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6115576,
+    "lon": -112.1118309,
+    "address": "2610 West Thunderbird Road, Phoenix, Arizona, 85023",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 68295671
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5082694,
+    "lon": -112.238422,
+    "address": "8301 West Camelback Road, Phoenix, Arizona, 85037",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 183525160
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6540544,
+    "lon": -112.1332269,
+    "address": "3431 West Union Hills Drive, Phoenix, Arizona, 85053",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 889112792
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.3926427,
+    "lon": -112.1329003,
+    "address": "3434 West Southern Avenue, Phoenix, Arizona, 85041",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 231609396
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5539462,
+    "lon": -112.1003518,
+    "address": "8030 North 19th Avenue, Phoenix, Arizona, 85021",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 927934554
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6063602,
+    "lon": -112.0643726,
+    "address": "13227 North 7th Street, Phoenix, Arizona, 85028",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "way",
+    "osm_id": 33168245
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.464998,
+    "lon": -112.0641693,
+    "address": "705 East McDowell Road, Phoenix, Arizona, 85006",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9908123018
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5540543,
+    "lon": -112.1005004,
+    "address": "8030 North 19th Avenue, Phoenix, Arizona, 85021",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9903283899
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.4807778,
+    "lon": -112.0468326,
+    "address": "1602 East Thomas Road, Phoenix, Arizona, 85016",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9908123012
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6537214,
+    "lon": -112.168117,
+    "address": "5011 West Union Hills Drive, Phoenix, Arizona, 85308",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10221022279
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5388065,
+    "lon": -112.0480479,
+    "address": "North 16th Street, Phoenix, Arizona, 85036",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 2962246598
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5828123,
+    "lon": -112.0136948,
+    "address": "East Shea Boulevard, Phoenix, Arizona, 85028",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 13653634230
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.4653642,
+    "lon": -112.1533073,
+    "address": "4315 West McDowell Road, Phoenix, Arizona, 85035",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 9813559319
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.5663581,
+    "lon": -112.0641705,
+    "address": "East Townley Avenue, Phoenix, Arizona, 85020",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 8695363058
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6307231,
+    "lon": -112.0289821,
+    "address": "North 25th Street, Phoenix, Arizona, 85022",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10009873350
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6387128,
+    "lon": -112.1686752,
+    "address": "4965 West Bell Road, Phoenix, Arizona, 85308",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10008008066
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6062189,
+    "lon": -112.0642393,
+    "address": "13227 North 7th Street, Phoenix, Arizona, 85022",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 10003492389
+  },
+  {
+    "name": "Phoenix Pharmacy",
+    "lat": 33.4797957,
+    "lon": -112.0446369,
+    "address": "1701 East Thomas Road, Phoenix, Arizona, 85016",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 12255718006
+  },
+  {
+    "name": "Soleo Health Phoenix",
+    "lat": 33.4257496,
+    "lon": -111.9747986,
+    "address": "South Madison Drive, Tempe, Arizona, 85005",
+    "city": "Tempe",
+    "state": "Arizona",
+    "osm_type": "node",
+    "osm_id": 12174165496
+  },
+  {
+    "name": "The Phoenix Apothecary",
+    "lat": 35.9660144,
+    "lon": -83.9184827,
+    "address": "418 South Gay Street, Knoxville, Tennessee, 37902",
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "osm_type": "node",
+    "osm_id": 9581361319
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0345899,
+    "lon": -75.0634379,
+    "address": "6501 Harbison Avenue, Philadelphia, Pennsylvania, 19149",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 696275830
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9183809,
+    "lon": -75.1804008,
+    "address": "1901 Oregon Avenue, Philadelphia, Pennsylvania, 19145",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 443622782
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0410479,
+    "lon": -75.2237965,
+    "address": "6701 Ridge Avenue, Philadelphia, Pennsylvania, 19427",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 197414150
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0689309,
+    "lon": -75.0666994,
+    "address": "Rhawn Street, Philadelphia, Pennsylvania, 19111",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 527404350
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0693534,
+    "lon": -75.0058869,
+    "address": "Academy Road, Philadelphia, Pennsylvania, 19114",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 485878439
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0928923,
+    "lon": -75.0309162,
+    "address": "9875 Bustleton Avenue, Philadelphia, Pennsylvania, 19115",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 642139704
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.1123005,
+    "lon": -75.0228946,
+    "address": "10901 Bustleton Avenue, Philadelphia, Pennsylvania, 19116",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 681014442
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9534264,
+    "lon": -75.2096943,
+    "address": "4314 Locust Street, Philadelphia, Pennsylvania, 19104",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 191635615
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9763749,
+    "lon": -75.1203639,
+    "address": "2638 East Cumberland Street, Philadelphia, Pennsylvania, 19125",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 162799760
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0454098,
+    "lon": -75.1288723,
+    "address": "6150 North 5th Street, Philadelphia, Pennsylvania, 19138",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 871495849
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9515732,
+    "lon": -75.1717176,
+    "address": "1826 Chestnut Street, Philadelphia, Pennsylvania, 19101",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 333316079
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0539258,
+    "lon": -75.1407836,
+    "address": "6601 North Broad Street, Philadelphia, Pennsylvania, 19126",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 871497745
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0115438,
+    "lon": -75.111691,
+    "address": "4133 G Street, Philadelphia, Pennsylvania, 19124",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 1047478220
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9613814,
+    "lon": -75.1454667,
+    "address": "401 Spring Garden Street, Philadelphia, Pennsylvania, 19123",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 336161798
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9445987,
+    "lon": -75.1503103,
+    "address": "314 South 5th Street, Philadelphia, Pennsylvania, 19148",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 5939954785
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0115387,
+    "lon": -75.1116997,
+    "address": "4133 G Street, Philadelphia, Pennsylvania, 19124",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 833393970
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.102309,
+    "lon": -75.0108513,
+    "address": "11000 Roosevelt Boulevard, Philadelphia, Pennsylvania, 19116",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 13386409918
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0879904,
+    "lon": -74.9694752,
+    "address": "Knights Road, Philadelphia, Pennsylvania, 19154",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 11384006091
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0882782,
+    "lon": -74.9694784,
+    "address": "Knights Road, Philadelphia, Pennsylvania, 19154",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 11384006090
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9314386,
+    "lon": -75.1607623,
+    "address": "Wilder Street, Philadelphia, Pennsylvania, 19147",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 1204731174
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9693107,
+    "lon": -75.139782,
+    "address": "North 2nd Street, Philadelphia, Pennsylvania, 19123",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 14216375796
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9515179,
+    "lon": -75.1581823,
+    "address": "1046 Market Street, Philadelphia, Pennsylvania, 19107",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 3437833114
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.950312,
+    "lon": -75.1455249,
+    "address": "259 Market Street, Philadelphia, Pennsylvania, 19106",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 6698253874
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.05989,
+    "lon": -75.1665408,
+    "address": "Stenton Avenue, Philadelphia, Pennsylvania, 19150",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 6727277337
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.9596222,
+    "lon": -75.2185611,
+    "address": "Market Street, Philadelphia, Pennsylvania, 19139",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 6944055411
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.0501756,
+    "lon": -75.0666771,
+    "address": "7201 Castor Avenue, Philadelphia, Pennsylvania, 19149",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 652817191
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.006891,
+    "lon": -75.0930175,
+    "address": "Worrell Street, Philadelphia, Pennsylvania, 19124",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 694847622
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.0754689,
+    "lon": -75.159778,
+    "address": "2727 Cheltenham Avenue, Philadelphia, Pennsylvania, 19095",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 376479760
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.1033268,
+    "lon": -75.0291582,
+    "address": "10000 Bustleton Avenue, Philadelphia, Pennsylvania, 19116",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 577948221
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9183003,
+    "lon": -75.1867319,
+    "address": "2310 23rd Street, Philadelphia, Pennsylvania, 19145",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 441422767
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9248151,
+    "lon": -75.1701898,
+    "address": "2014 South Broad Street, Philadelphia, Pennsylvania, 19145",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 338550424
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9443124,
+    "lon": -75.1721784,
+    "address": "1800 South Street, Philadelphia, Pennsylvania, 19146",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "way",
+    "osm_id": 334264462
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9476809,
+    "lon": -75.1593527,
+    "address": "Locust Street, Philadelphia, Pennsylvania, 19103",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 5955006685
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.017322,
+    "lon": -75.1487841,
+    "address": "West Hunting Park Avenue, Philadelphia, Pennsylvania, 19140",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 5936289744
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9476532,
+    "lon": -75.1593231,
+    "address": "Locust Street, Philadelphia, Pennsylvania, 19103",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 3076013933
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.0506921,
+    "lon": -75.0112715,
+    "address": "8828 Frankford Avenue, Philadelphia, Pennsylvania, 19136",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 5534100018
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.0358435,
+    "lon": -75.1744757,
+    "address": "Germantown Avenue, Philadelphia, Pennsylvania, 19144",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 7221495973
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9541785,
+    "lon": -75.1680486,
+    "address": "1617 John F. Kennedy Boulevard, Philadelphia, Pennsylvania, 19103",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 7450280636
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9559618,
+    "lon": -75.193818,
+    "address": "3550 Market Street, Philadelphia, Pennsylvania, 19104",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 10006849491
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.9574052,
+    "lon": -75.1622816,
+    "address": "245 North Broad Street, Philadelphia, Pennsylvania, 19107",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 3437582167
+  },
+  {
+    "name": "Greater Philadelphia Pharmacy at Chinatown Medical Services",
+    "lat": 39.9592608,
+    "lon": -75.1487994,
+    "address": "North 6th Street, Philadelphia, Pennsylvania, 19123",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "osm_type": "node",
+    "osm_id": 7383483266
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8381211,
+    "lon": -96.6955745,
+    "address": "10014 Garland Road, Dallas, Texas, 75218",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468090817
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8115148,
+    "lon": -96.781384,
+    "address": "2350 North Fitzhugh Avenue, Dallas, Texas, 75204",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 463978021
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8118503,
+    "lon": -96.7024173,
+    "address": "8555 Ferguson Road, Dallas, Texas, 75228",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 466458582
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8068924,
+    "lon": -96.7980728,
+    "address": "3133 Lemmon Avenue East, Dallas, Texas, 75204",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 471595470
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.7484556,
+    "lon": -96.8576061,
+    "address": "2427 West Jefferson Boulevard, Dallas, Texas, 75211",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 466708686
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9082789,
+    "lon": -96.7361329,
+    "address": "9390 Forest Lane, Dallas, Texas, 75243",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468118468
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9264507,
+    "lon": -96.7697887,
+    "address": "13033 Coit Road, Dallas, Texas, 75240",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 220693632
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9547273,
+    "lon": -96.8051064,
+    "address": "15105 Preston Road, Dallas, Texas, 75248",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 448903464
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9977969,
+    "lon": -96.7986888,
+    "address": "Frankford Road, Dallas, Texas, 75252",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1015975676
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8353031,
+    "lon": -96.6720777,
+    "address": "10306 Ferguson Road, Dallas, Texas, 75228",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468031992
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9089598,
+    "lon": -96.8520341,
+    "address": "3798 Forest Lane, Dallas, Texas, 74234",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 369863852
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8811944,
+    "lon": -96.8568924,
+    "address": "10003 Marsh Lane, Dallas, Texas, 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 466986645
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8113881,
+    "lon": -96.7710088,
+    "address": "5429 Ross Avenue, Dallas, Texas, 75206",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 463908426
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9097511,
+    "lon": -96.8823793,
+    "address": "2899 Forest Lane, Dallas, Texas, 75234",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 631661351
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.7792292,
+    "lon": -96.8352026,
+    "address": "Topeka Avenue, Dallas, Texas, 75212",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 673186894
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.7198425,
+    "lon": -96.8223026,
+    "address": "East Illinois Avenue, Dallas, Texas, 75224",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 673221355
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8645954,
+    "lon": -96.8373642,
+    "address": "9215 Midway Road, Dallas, Texas, 75006",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468023114
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9970485,
+    "lon": -96.8278569,
+    "address": "4610 Frankford Road, Dallas, Texas, 75287",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 448875181
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9513145,
+    "lon": -96.7698169,
+    "address": "7979 Belt Line Road, Dallas, Texas, 75254",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 1000337987
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9264179,
+    "lon": -96.7699688,
+    "address": "13033 Coit Road, Dallas, Texas, 75240",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7882527176
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.881233,
+    "lon": -96.8570493,
+    "address": "10003 Marsh Lane, Dallas, Texas, 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 8263366794
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.8791907,
+    "lon": -96.7358878,
+    "address": "7203 Skillman Street, Dallas, Texas, 75238",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10224558425
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9088552,
+    "lon": -96.8521371,
+    "address": "3798 Forest Lane, Dallas, Texas, 74234",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10245712661
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9098867,
+    "lon": -96.8825349,
+    "address": "2899 Forest Lane, Dallas, Texas, 75234",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10594969533
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 32.9977899,
+    "lon": -96.798791,
+    "address": "Frankford Road, Dallas, Texas, 75252",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10686687958
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7750549,
+    "lon": -96.7631272,
+    "address": "1461 Robert B Cullum Boulevard, Dallas, Texas, 75210",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 464807726
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8384556,
+    "lon": -96.6973686,
+    "address": "9937 Garland Road, Dallas, Texas, 75218",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468090806
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8077153,
+    "lon": -96.7752174,
+    "address": "5001 Ross Avenue, Dallas, Texas, 75246",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 463900693
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8602957,
+    "lon": -96.8558196,
+    "address": "3714 West Northwest Highway, Dallas, Texas, 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 466984101
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.6855027,
+    "lon": -96.7902983,
+    "address": "5101 South Lancaster Road, Dallas, Texas, 75241",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 421678516
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.0012493,
+    "lon": -96.7956822,
+    "address": "18410 Preston Road, Dallas, Texas, 75252",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 668525168
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7483396,
+    "lon": -96.6819439,
+    "address": "2050 South Buckner Boulevard, Dallas, Texas, 75227",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 465658586
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.9976919,
+    "lon": -96.8445253,
+    "address": "18207 Midway Road, Dallas, Texas, 75287",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 423700980
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7339869,
+    "lon": -96.8734201,
+    "address": "1104 South Westmoreland Road, Dallas, Texas, 75211",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 466712633
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.691778,
+    "lon": -96.8576849,
+    "address": "2401 West Ledbetter Drive, Dallas, Texas, 75233",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 467264869
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8646911,
+    "lon": -96.6825387,
+    "address": "11403 East Northwest Highway, Dallas, Texas, 75218",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468043066
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8931585,
+    "lon": -96.7390207,
+    "address": "8310 Abrams Road, Dallas, Texas, 75243",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468423342
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7593363,
+    "lon": -96.8222548,
+    "address": "1306 North Beckley Avenue, Dallas, Texas, 75203",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 376864831
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.6617721,
+    "lon": -96.8392065,
+    "address": "1060 West Camp Wisdom Road, Dallas, Texas, 75237",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 468820037
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.9504616,
+    "lon": -96.7700394,
+    "address": "7930 Belt Line Road, Dallas, Texas, 75254",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 470788605
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.9073575,
+    "lon": -96.8036596,
+    "address": "11700 Preston Road, Dallas, Texas, 75230",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 711093017
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7335378,
+    "lon": -96.6493687,
+    "address": "10152 Lake June Road, Dallas, Texas, 75217",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10586923240
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.864879,
+    "lon": -96.682426,
+    "address": "11403 East Northwest Highway, Dallas, Texas, 75218",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10655742351
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8663278,
+    "lon": -96.7893471,
+    "address": "Turtle Creek Boulevard, Dallas, Texas, 75225",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10245712654
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.0012226,
+    "lon": -96.7957199,
+    "address": "Preston Road, Dallas, Texas, 75252",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 7390752785
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7752049,
+    "lon": -96.763131,
+    "address": "1461 Robert B Cullum Boulevard, Dallas, Texas, 75210",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10647279573
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.6853625,
+    "lon": -96.7903447,
+    "address": "5101 South Lancaster Road, Dallas, Texas, 75241",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10200167449
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.6616472,
+    "lon": -96.8390462,
+    "address": "1060 West Camp Wisdom Road, Dallas, Texas, 75237",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10255635669
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.7481853,
+    "lon": -96.6817954,
+    "address": "2050 South Buckner Boulevard, Dallas, Texas, 75227",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10585984125
+  },
+  {
+    "name": "Walgreens",
+    "lat": 32.8385093,
+    "lon": -96.6975332,
+    "address": "9937 Garland Road, Dallas, Texas, 75218",
+    "city": "Dallas",
+    "state": "Texas",
+    "osm_type": "node",
+    "osm_id": 10255722758
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7661557,
+    "lon": -80.2141263,
+    "address": "1177 Southwest 8th Street, Miami, Florida, 33130",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436107779
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7722931,
+    "lon": -80.2550021,
+    "address": "3695 West Flagler Street, Miami, Florida, 33135",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436034162
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7335916,
+    "lon": -80.2875928,
+    "address": "6748 Southwest 40th Street, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 790508627
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.8193975,
+    "lon": -80.188392,
+    "address": "4800 Biscayne Boulevard, Miami, Florida, 33137",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 311489513
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7690769,
+    "lon": -80.336917,
+    "address": "8720 West Flagler Street, Miami, Florida, 33174",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 279427527
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.8481921,
+    "lon": -80.1849604,
+    "address": "591 Northeast 79th Street, Miami, Florida, 33138",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 401434247
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.748662,
+    "lon": -80.3032686,
+    "address": "2393 Southwest 67th Avenue, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 435575931
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7774404,
+    "lon": -80.2888639,
+    "address": "690 Northwest 57th Avenue, Miami, Florida, 33126",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 435880941
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7666537,
+    "lon": -80.1978285,
+    "address": "227 Southwest 8th Street, Miami, Florida, 33130",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 255188196
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7608876,
+    "lon": -80.3531191,
+    "address": "9720 Southwest 8th Street, Miami, Florida, 33174",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 10279295789
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7639111,
+    "lon": -80.2875866,
+    "address": "5695 Southwest 8th Street, Miami, Florida, 33134",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 7523527707
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7654381,
+    "lon": -80.2392628,
+    "address": "Southwest 8th Street, Miami, Florida, 33135",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 4142826589
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7619442,
+    "lon": -80.1914768,
+    "address": "1201 Brickell Avenue, Miami, Florida, 33131",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 4235831895
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7318927,
+    "lon": -80.3045078,
+    "address": "6780 Southwest 40th Street, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 7402706173
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7820787,
+    "lon": -80.1897806,
+    "address": "888 Biscayne Boulevard, Miami, Florida, 33132",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 9170288263
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7800206,
+    "lon": -80.1984365,
+    "address": "249 Northwest 6th Street, Miami, Florida, 33136",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 13042935866
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7763999,
+    "lon": -80.1882724,
+    "address": "200 Northeast 2nd Street, Miami, Florida, 33132",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 2294769838
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.9276374,
+    "lon": -80.1888947,
+    "address": "16550 Northeast 6th Avenue, Miami, Florida, 33162",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 13600543571
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.750125,
+    "lon": -80.2365332,
+    "address": "2500 Southwest 22nd Street, Miami, Florida, 33145",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 6076599713
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7642802,
+    "lon": -80.2739997,
+    "address": "4801 Southwest 8th Street, Miami, Florida, 33134",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 4953853230
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7642746,
+    "lon": -80.2741581,
+    "address": "4801 Southwest 8th Street, Miami, Florida, 33134",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 7527893751
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7727726,
+    "lon": -80.1890987,
+    "address": "150 Southeast 3rd Avenue, Miami, Florida, 33131",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 1025636215
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.7637774,
+    "lon": -80.2875818,
+    "address": "5695 Southwest 8th Street, Miami, Florida, 33134",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 6014132279
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 40.0426227,
+    "lon": -84.2119221,
+    "address": "Sherman Avenue, Troy, Ohio, 45373",
+    "city": "Troy",
+    "state": "Ohio",
+    "osm_type": "way",
+    "osm_id": 226688279
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 25.5377166,
+    "lon": -80.3715176,
+    "address": "24799 South Allapattah Road, Princeton, Florida, 33032",
+    "city": "Princeton",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 165566600
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7336986,
+    "lon": -80.2532539,
+    "address": "South Dixie Highway, Miami, Florida, 33133",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 301301319
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7504457,
+    "lon": -80.2515901,
+    "address": "Southwest 22nd Street, Miami, Florida, 33234",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 301827440
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7776626,
+    "lon": -80.2875742,
+    "address": "655 Northwest 57th Avenue, Miami, Florida, 33126",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436034735
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7802715,
+    "lon": -80.2214327,
+    "address": "1699 Northwest 7th Street, Miami, Florida, 33125",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 413746238
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7639939,
+    "lon": -80.2639588,
+    "address": "4230 Southwest 8th Street, Coral Gables, Florida, 33134",
+    "city": "Coral Gables",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 435531106
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.8832427,
+    "lon": -80.2438541,
+    "address": "11920 Northwest 27th Avenue, Miami, Florida, 33167",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 435237970
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7471929,
+    "lon": -80.3322258,
+    "address": "8450 Southwest 24th Street, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 278664271
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.8068698,
+    "lon": -80.1888643,
+    "address": "3103 Biscayne Boulevard, Miami, Florida, 33137",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 290515382
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.8259747,
+    "lon": -80.1922019,
+    "address": "161 Northeast 54th Street, Miami, Florida, 33137",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 315830000
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7187342,
+    "lon": -80.302737,
+    "address": "6701 Southwest 56th Street, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436123150
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7718423,
+    "lon": -80.2394697,
+    "address": "2700 West Flagler Street, Miami, Florida, 33135",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 396424976
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.8613305,
+    "lon": -80.210242,
+    "address": "Northwest 95th Street, Miami, Florida, 33147",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 4757181960
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7721403,
+    "lon": -80.3316889,
+    "address": "8327 West Flagler Street, Miami, Florida, 33144",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 2836333794
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7813806,
+    "lon": -80.2571348,
+    "address": "Northwest 11th Street, Miami, Florida, 33125",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 6439805055
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7743003,
+    "lon": -80.1934807,
+    "address": "1 East Flagler Street, Miami, Florida, 33132",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 4761806133
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7611882,
+    "lon": -80.1975358,
+    "address": "Southwest 13th Street, Miami, Florida, 33131",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 6264223236
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7337494,
+    "lon": -80.253295,
+    "address": "South Dixie Highway, Miami, Florida, 33133",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 6833565213
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7952565,
+    "lon": -80.2227842,
+    "address": "1695 Northwest 20th Street, Miami, Florida, 33142",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 12534833175
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7349006,
+    "lon": -80.2870516,
+    "address": "5731 Southwest 40th Street, Miami, Florida, 33155",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 3407748391
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7741593,
+    "lon": -80.1888305,
+    "address": "East Flagler Street, Miami, Florida, 33131",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "node",
+    "osm_id": 1025635627
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.7680653,
+    "lon": -80.3694607,
+    "address": "10700 West Flagler Street, Miami, Florida, 33174",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436109454
+  },
+  {
+    "name": "Walgreens",
+    "lat": 36.8859212,
+    "lon": -94.8768201,
+    "address": "East BJ Tunnel Boulevard, Miami, Oklahoma, 74354",
+    "city": "Miami",
+    "state": "Oklahoma",
+    "osm_type": "way",
+    "osm_id": 676153134
+  },
+  {
+    "name": "Walgreens",
+    "lat": 40.0315045,
+    "lon": -84.2092948,
+    "address": "Peters Avenue, Troy, Ohio, 45373",
+    "city": "Troy",
+    "state": "Ohio",
+    "osm_type": "way",
+    "osm_id": 134497091
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.6468385,
+    "lon": -80.3337418,
+    "address": "8650 Southwest 132nd Street, Miami, Florida, 33156",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 436035047
+  },
+  {
+    "name": "Walgreens",
+    "lat": 25.671305,
+    "lon": -80.3846836,
+    "address": "11700 Southwest 104th Street, Miami, Florida, 33186",
+    "city": "Miami",
+    "state": "Florida",
+    "osm_type": "way",
+    "osm_id": 378061198
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7547822,
+    "lon": -84.3914529,
+    "address": "Wall Street Southeast, Atlanta, Georgia, 30303",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 270497378
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.807921,
+    "lon": -84.3933522,
+    "address": "1943 Peachtree Road Northeast, Atlanta, Georgia, 30309",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 269196169
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8203645,
+    "lon": -84.4518382,
+    "address": "2555 Bolton Road, Atlanta, Georgia, 30318",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 268641088
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7522365,
+    "lon": -84.4667421,
+    "address": "Martin Luther King Junior Drive Southwest, Atlanta, Georgia, 30311",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 270939042
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7384485,
+    "lon": -84.4174054,
+    "address": "Ralph David Abernathy Boulevard, Atlanta, Georgia, 30310",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 271023960
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7737391,
+    "lon": -84.3652251,
+    "address": "680 Ponce de Leon Avenue Northeast, Atlanta, Georgia, 30306",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 181548370
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.797278,
+    "lon": -84.370658,
+    "address": "Monroe Drive Northeast, Atlanta, Georgia, 30324",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 3337102793
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7775571,
+    "lon": -84.38462,
+    "address": "842 Peachtree Street Northeast, Atlanta, Georgia, 30308",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 530726524
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8421462,
+    "lon": -84.3729779,
+    "address": "Peachtree Road Northeast, Atlanta, Georgia, 30326",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 9300491217
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7406544,
+    "lon": -84.3676064,
+    "address": "520 Boulevard Southeast, Atlanta, Georgia, 30312",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 1748934613
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7783448,
+    "lon": -84.3522845,
+    "address": "North Highland Avenue Northeast, Atlanta, Georgia, 30306",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2184856631
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7604838,
+    "lon": -84.3874051,
+    "address": "235 Peachtree Street Northeast, Atlanta, Georgia, 30303",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2475185755
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8473475,
+    "lon": -84.4278621,
+    "address": "3393 Northside Parkway Northwest, Atlanta, Georgia, 30327",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 9176608915
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7611698,
+    "lon": -84.372296,
+    "address": "Highland Avenue Northeast, Atlanta, Georgia, 30312",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2284985334
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9560188,
+    "lon": -84.3640437,
+    "address": "7355 Roswell Road, Atlanta, Georgia, 30350",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 145877184
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9043481,
+    "lon": -84.4304239,
+    "address": "6370 Powers Ferry Road Northwest, Atlanta, Georgia, 30339",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 3352517012
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9043819,
+    "lon": -84.4304307,
+    "address": "6370 Powers Ferry Road Northwest, Atlanta, Georgia, 30339",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 8400618413
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.9561618,
+    "lon": -84.3639379,
+    "address": "7355 Roswell Road, Atlanta, Georgia, 30350",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 5224158738
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.1129096,
+    "lon": -94.1838194,
+    "address": "101 Loop 59, Atlanta, Texas, 75551",
+    "city": "Atlanta",
+    "state": "Texas",
+    "osm_type": "way",
+    "osm_id": 662536769
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.6663814,
+    "lon": -84.4653554,
+    "address": "3286 Washington Road, Atlanta, Georgia, 30349",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 276154815
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8012503,
+    "lon": -84.328864,
+    "address": "Avenue Place, Atlanta, Georgia, 30322",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2715875363
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.7880405,
+    "lon": -84.3270503,
+    "address": "1554 North Decatur Road, Atlanta, Georgia, 30307",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 461976990
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8012458,
+    "lon": -84.3288666,
+    "address": "1520 Avenue Place, Atlanta, Georgia, 30329",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2189996986
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8185059,
+    "lon": -84.3123179,
+    "address": "2830 North Druid Hills Road Northeast, Atlanta, Georgia, 30329",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 41338989
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 33.8190524,
+    "lon": -84.3520617,
+    "address": "2350 Cheshire Bridge Road, Atlanta, Georgia, 30324",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 268601188
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6563136,
+    "lon": -84.5132843,
+    "address": "Princeton Lakes Parkway, Atlanta, Georgia, 30272",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 288997176
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.7708563,
+    "lon": -84.3811273,
+    "address": "215 North Avenue Northeast, Atlanta, Georgia, 30308",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "relation",
+    "osm_id": 11918050
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.8338759,
+    "lon": -84.3824589,
+    "address": "Peachtree Road, Atlanta, Georgia, 30305",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 267773218
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.6805356,
+    "lon": -84.4081718,
+    "address": "Metropolitan Parkway Southwest, Atlanta, Georgia, 30315",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 993285364
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.8551576,
+    "lon": -84.383168,
+    "address": "Blackland Road Northwest, Atlanta, Georgia, 30342",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 267768809
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.8101574,
+    "lon": -84.414179,
+    "address": "2020 Howell Mill Road Northwest, Atlanta, Georgia, 30318",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 532355831
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.9605323,
+    "lon": -84.3662407,
+    "address": "7530 Roswell Road, Atlanta, Georgia, 30350",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 146142216
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.7231976,
+    "lon": -84.5105269,
+    "address": "3740 Cascade Road, Atlanta, Georgia, 30331",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 2342126463
+  },
+  {
+    "name": "Walgreens",
+    "lat": 33.8784821,
+    "lon": -84.37939,
+    "address": "Meadowbrook Drive Northeast, Sandy Springs, Georgia, 30342",
+    "city": "Sandy Springs",
+    "state": "Georgia",
+    "osm_type": "way",
+    "osm_id": 267990338
+  },
+  {
+    "name": "Walgreens Specialty Pharmacy",
+    "lat": 33.7699566,
+    "lon": -84.3849181,
+    "address": "565 Peachtree Street Northeast, Atlanta, Georgia, 30308",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "osm_type": "node",
+    "osm_id": 12136142571
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.5815778,
+    "lon": -122.3011735,
+    "address": "2345 Rainier Avenue South, Seattle, Washington, 98144",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 161079842
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.5556545,
+    "lon": -122.3875003,
+    "address": "5217 California Avenue Southwest, Seattle, Washington, 98136",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 231264472
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6615781,
+    "lon": -122.3333778,
+    "address": "2100 North 45th Street, Seattle, Washington, 98103",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 335074934
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6909805,
+    "lon": -122.3574054,
+    "address": "100 North 85th Street, Seattle, Washington, 98113",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 11105734095
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6909903,
+    "lon": -122.3573135,
+    "address": "100 North 85th Street, Seattle, Washington, 98113",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 1040913036
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.7092462,
+    "lon": -122.3255419,
+    "address": "302 Northeast Northgate Way, Seattle, Washington, 98125",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 12525067480
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6233464,
+    "lon": -122.3386927,
+    "address": "Republican Street, Seattle, Washington, 98121",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 6789536419
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6408414,
+    "lon": -122.3981635,
+    "address": "2438 32nd Avenue West, Seattle, Washington, 98199",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 2462353510
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6090681,
+    "lon": -122.3254802,
+    "address": "Madison Street, Seattle, Washington, 98138",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 6579694798
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.5820522,
+    "lon": -122.3855092,
+    "address": "2345 42nd Avenue Southwest, Seattle, Washington, 98116",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 1177562504
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.5606819,
+    "lon": -122.3848038,
+    "address": "4706 42nd Avenue Southwest, Seattle, Washington, 98116",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 440842906
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6616813,
+    "lon": -122.3332372,
+    "address": "2100 North 45th Street, Seattle, Washington, 98103",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 9030929077
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6244467,
+    "lon": -122.3569192,
+    "address": "531 Queen Anne Avenue North, Seattle, Washington, 98109",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 2400949029
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6368934,
+    "lon": -122.3571394,
+    "address": "1929 Queen Anne Avenue North, Seattle, Washington, 98109",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 9845736258
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 47.6085844,
+    "lon": -122.3388898,
+    "address": "1401 2nd Avenue, Seattle, Washington, 98101",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 9547938796
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.563594,
+    "lon": -122.2873447,
+    "address": "4412 Rainier Avenue South, Seattle, Washington, 98118",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 161001738
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.7335159,
+    "lon": -122.2919746,
+    "address": "14352 Lake City Way Northeast, Seattle, Washington, 98125",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "relation",
+    "osm_id": 15045199
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6908835,
+    "lon": -122.3763533,
+    "address": "8500 15th Avenue Northwest, Seattle, Washington, 98117",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 89804432
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6682122,
+    "lon": -122.3768802,
+    "address": "5409 15th Avenue Northwest, Seattle, Washington, 98107",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 157022610
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6236514,
+    "lon": -122.3122774,
+    "address": "500 15th Avenue East, Seattle, Washington, 98112",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 229846375
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6187787,
+    "lon": -122.3455087,
+    "address": "566 Denny Way, Seattle, Washington, 98109",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 231664573
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6612326,
+    "lon": -122.341894,
+    "address": "4468 Stone Way North, Seattle, Washington, 98103",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 1981697605
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6244147,
+    "lon": -122.3382203,
+    "address": "951 Mercer Street, Seattle, Washington, 98109",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 12621314340
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.563502,
+    "lon": -122.2873424,
+    "address": "36th Avenue South, Seattle, Washington, 98118",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 8347668705
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.5455189,
+    "lon": -122.376157,
+    "address": "35th Avenue Southwest, Seattle, Washington, 98126",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 4881646306
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6236171,
+    "lon": -122.3124265,
+    "address": "15th Avenue East, Seattle, Washington, 98112",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 6618467638
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.624414,
+    "lon": -122.3381051,
+    "address": "951 Mercer Street, Seattle, Washington, 98109",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 12621314341
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6133049,
+    "lon": -122.3183717,
+    "address": "1409 11th Avenue, Seattle, Washington, 98122",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 2158750356
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6150832,
+    "lon": -122.3210596,
+    "address": "1531 Broadway, Seattle, Washington, 98122",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 2077249384
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.7081711,
+    "lon": -122.3181043,
+    "address": "859 Northeast Northgate Way, Seattle, Washington, 98125",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 11762103461
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.7083424,
+    "lon": -122.3182901,
+    "address": "859 Northeast Northgate Way, Seattle, Washington, 98125",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 12588401812
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.6097823,
+    "lon": -122.3381513,
+    "address": "222 Pike Street, Seattle, Washington, 98101",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 2404247474
+  },
+  {
+    "name": "Walgreens",
+    "lat": 47.7348952,
+    "lon": -122.3445228,
+    "address": "14510 Aurora Avenue North, Shoreline, Washington, 98133",
+    "city": "Shoreline",
+    "state": "Washington",
+    "osm_type": "way",
+    "osm_id": 309142827
+  },
+  {
+    "name": "Forest Pharmacy",
+    "lat": 47.6627739,
+    "lon": -122.2836332,
+    "address": "4800 Sand Point Way Northeast, Seattle, Washington, 98105",
+    "city": "Seattle",
+    "state": "Washington",
+    "osm_type": "node",
+    "osm_id": 12673618668
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.6527687,
+    "lon": -104.8993049,
+    "address": "7950 East Hampden Avenue, Denver, Colorado, 80237",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 9813732627
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.7551246,
+    "lon": -105.0005983,
+    "address": "1900 18th Street, Denver, Colorado, 80202",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 5659740715
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.6525224,
+    "lon": -104.8992437,
+    "address": "7950 East Hampden Avenue, Denver, Colorado, 80237",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 9813732628
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.7302405,
+    "lon": -104.940337,
+    "address": "4005 East 8th Place, Denver, Colorado, 80220",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 10169435292
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.768987,
+    "lon": -105.0529322,
+    "address": "3770 Sheridan Boulevard, Denver, Colorado, 80212",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 7159522123
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 39.6111838,
+    "lon": -105.1013522,
+    "address": "West Cross Drive, Denver, Colorado, 80123",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 9150642240
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 35.558508,
+    "lon": -81.0626948,
+    "address": "6050 State Highway 16, Catawba County, North Carolina, 28037",
+    "city": "Catawba County",
+    "state": "North Carolina",
+    "osm_type": "way",
+    "osm_id": 1564178010
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.6795127,
+    "lon": -104.9726033,
+    "address": "1235 East Evans Avenue, Denver, Colorado, 80210",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 282625903
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7597734,
+    "lon": -104.9021017,
+    "address": "7421 East 29th Drive, Denver, Colorado, 80238",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 184313019
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7395634,
+    "lon": -104.9156078,
+    "address": "6200 East Colfax Avenue, Denver, Colorado, 80220",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 426927379
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7665545,
+    "lon": -104.9409203,
+    "address": "3555 North Colorado Boulevard, Denver, Colorado, 80205",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 327687962
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7832331,
+    "lon": -104.7706291,
+    "address": "18550 East 47th Drive, Denver, Colorado, 80249",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 220187417
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7108262,
+    "lon": -105.0245891,
+    "address": "West Alameda Avenue, Denver, Colorado, 80219",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 364268323
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7188602,
+    "lon": -104.9871015,
+    "address": "120 Broadway, Denver, Colorado, 80203",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 129773366
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7598834,
+    "lon": -104.9019594,
+    "address": "East 29th Drive, Denver, Colorado, 80238",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 8099213452
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7831061,
+    "lon": -104.770853,
+    "address": "18550 East 47th Drive, Denver, Colorado, 80249",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 8098086294
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7103419,
+    "lon": -104.9395383,
+    "address": "East Alameda Avenue, Denver, Colorado, 80246",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 1068538404
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.6643392,
+    "lon": -104.939893,
+    "address": "2870 South Colorado Boulevard, Denver, Colorado, 80222",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 1329248302
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.746978,
+    "lon": -104.9743463,
+    "address": "1960 Ogden Street, Denver, Colorado, 80218",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 3376354113
+  },
+  {
+    "name": "Walgreens Healthcare Clinic",
+    "lat": 39.7600104,
+    "lon": -105.025749,
+    "address": "2975 Federal Boulevard, Denver, Colorado, 80211",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 3901884426
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7601124,
+    "lon": -105.025752,
+    "address": "2975 Federal Boulevard, Denver, Colorado, 80211",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 3901884425
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7666087,
+    "lon": -104.941046,
+    "address": "3555 North Colorado Boulevard, Denver, Colorado, 80205",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 8099253460
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7461861,
+    "lon": -104.9930609,
+    "address": "801 16th Street, Denver, Colorado, 80202",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 883618359
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.7461041,
+    "lon": -104.9930647,
+    "address": "16th Street, Denver, Colorado, 80265",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 13663883854
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.6527436,
+    "lon": -104.905032,
+    "address": "7190 East Hampden Avenue, Denver, Colorado, 80224",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 2782452391
+  },
+  {
+    "name": "Walgreens",
+    "lat": 39.6959016,
+    "lon": -104.9410654,
+    "address": "1111 South Colorado Boulevard, Denver, Colorado, 80246",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "way",
+    "osm_id": 822437331
+  },
+  {
+    "name": "Denver Health Southeast Medical Center",
+    "lat": 39.6781367,
+    "lon": -104.913908,
+    "address": "6360 East Evans Avenue, Denver, Colorado, 80222",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 2427442481
+  },
+  {
+    "name": "Walgreens",
+    "lat": 35.5596339,
+    "lon": -81.0629675,
+    "address": "6028 State Highway 16, Catawba County, North Carolina, 28037",
+    "city": "Catawba County",
+    "state": "North Carolina",
+    "osm_type": "way",
+    "osm_id": 1564178007
+  },
+  {
+    "name": "Denver Drug and Liquor Company",
+    "lat": 39.7398953,
+    "lon": -104.9821673,
+    "address": "400 East Colfax Avenue, Denver, Colorado, 80203",
+    "city": "Denver",
+    "state": "Colorado",
+    "osm_type": "node",
+    "osm_id": 637823374
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3556805,
+    "lon": -71.1502352,
+    "address": "Market Street, Boston, Massachusetts, 02135",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29585690
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.384552,
+    "lon": -70.9992028,
+    "address": "1150 Saratoga Street, Boston, Massachusetts, 02128",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 818690777
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.2974438,
+    "lon": -71.0497733,
+    "address": "715 Victory Road, Boston, Massachusetts, 02122",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 1223134237
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3496637,
+    "lon": -71.1299931,
+    "address": "214 Harvard Avenue, Boston, Massachusetts, 02134",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29822428
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.2833079,
+    "lon": -71.047554,
+    "address": "703 Gallivan Boulevard, Boston, Massachusetts, 02124",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29608921
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3539633,
+    "lon": -71.1337062,
+    "address": "181 Brighton Avenue, Boston, Massachusetts, 02134",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29680656
+  },
+  {
+    "name": "CVS",
+    "lat": 42.3193086,
+    "lon": -71.1122721,
+    "address": "Centre Street, Boston, Massachusetts, 02130",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 220538912
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.295649,
+    "lon": -71.0724593,
+    "address": "451 Washington Street, Boston, Massachusetts, 02124",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29646775
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3087893,
+    "lon": -71.0818198,
+    "address": "468 Blue Hill Avenue, Boston, Massachusetts, 02121",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29616925
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.351225,
+    "lon": -71.0665704,
+    "address": "191 Stuart Street, Boston, Massachusetts, 02116",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 7983497223
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3115381,
+    "lon": -71.1142167,
+    "address": "704 Centre Street, Boston, Massachusetts, 02130",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4042927432
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3443214,
+    "lon": -71.0865915,
+    "address": "231 Massachusetts Avenue, Boston, Massachusetts, 02115",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 7748212152
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3444946,
+    "lon": -71.0870887,
+    "address": "Edgerly Road, Boston, Massachusetts, 02115",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 5197357023
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3504528,
+    "lon": -71.0769076,
+    "address": "587 Boylston Street, Boston, Massachusetts, 02116",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4454436301
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3495739,
+    "lon": -71.081891,
+    "address": "240 Newbury Street, Boston, Massachusetts, 02116",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 7501883772
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.284012,
+    "lon": -71.1573784,
+    "address": "1921 Centre Street, Boston, Massachusetts, 02132",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 12134879903
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.296395,
+    "lon": -71.1565963,
+    "address": "Maranville Street, Boston, Massachusetts, 02467",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 2086258925
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3193286,
+    "lon": -71.1119822,
+    "address": "467 Centre Street, Boston, Massachusetts, 02130",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 2295308900
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3359372,
+    "lon": -71.1488934,
+    "address": "1927 Beacon Street, Boston, Massachusetts, 02135",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 3306595272
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.2678767,
+    "lon": -71.1199727,
+    "address": "945A Hyde Park Avenue, Boston, Massachusetts, 02136",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 6433293285
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3759875,
+    "lon": -71.06565,
+    "address": "21 Austin Street, Boston, Massachusetts, 02129",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 3938341107
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3525084,
+    "lon": -71.0628131,
+    "address": "631 Washington Street, Boston, Massachusetts, 02111",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4074813869
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3445019,
+    "lon": -71.0999096,
+    "address": "1341 Boylston Street, Boston, Massachusetts, 02215",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 5284961913
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3542527,
+    "lon": -71.0593665,
+    "address": "Chauncy Street, Boston, Massachusetts, 02111",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4074813870
+  },
+  {
+    "name": "CVS Pharmacy",
+    "lat": 42.3753985,
+    "lon": -71.0404936,
+    "address": "Border Street, Boston, Massachusetts, 02128",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 5746080241
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3174022,
+    "lon": -71.0973729,
+    "address": "1890 Columbus Avenue, Boston, Massachusetts, 02119",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29622684
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3743925,
+    "lon": -71.03867,
+    "address": "Meridian Place, Boston, Massachusetts, 02128",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29614657
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.2815409,
+    "lon": -71.0877198,
+    "address": "585 Washington Street, Boston, Massachusetts, 02124",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29624659
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.2418682,
+    "lon": -71.1272601,
+    "address": "1035 Truman Parkway, Boston, Massachusetts, 02136",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 663624151
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3131388,
+    "lon": -71.0565288,
+    "address": "1100 Dorchester Avenue, Boston, Massachusetts, 02125",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "way",
+    "osm_id": 29943602
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3485586,
+    "lon": -71.0729594,
+    "address": "21-23 Stanhope Street, Boston, Massachusetts, 02116",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 7768655530
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3488862,
+    "lon": -71.0827823,
+    "address": "841 Boylston Street, Boston, Massachusetts, 02199",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4454436307
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3359737,
+    "lon": -71.0366042,
+    "address": "710 East Broadway, Boston, Massachusetts, 02127",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 3321751721
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.2738971,
+    "lon": -71.1158154,
+    "address": "American Legion Highway, Boston, Massachusetts, 02131",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 13507040599
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3573365,
+    "lon": -71.0589528,
+    "address": "24 School Street, Boston, Massachusetts, 02108",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 2381218454
+  },
+  {
+    "name": "Walgreens",
+    "lat": 42.3334882,
+    "lon": -71.1047504,
+    "address": "Calumet Street, Boston, Massachusetts, 02120",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "osm_type": "node",
+    "osm_id": 4983448185
+  }
+]
