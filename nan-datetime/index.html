@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today's Date, Hijri Date & World Clock Online</title>
+<meta name="description" content="Check today's date, the Hijri/Islamic date today, live world clock for Pakistan, Dubai, London, New York & more, plus countdown timer and stopwatch.">
+<link rel="canonical" href="https://nan-datetime.surge.sh/">
+<meta property="og:title" content="Today's Date, Hijri Date & World Clock Online">
+<meta property="og:description" content="Today's date, Hijri date today, live world clock, countdown timer and stopwatch — free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nan-datetime.surge.sh/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-d:#0d9488;--bg:#f4f7fa;--card:#ffffff;--txt:#1e293b;--mut:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+header{background:var(--navy);color:#fff;padding:14px 18px;position:sticky;top:0;z-index:50}
+.hd-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:.3px}
+.brand span{color:var(--teal)}
+#lang-toggle{background:var(--teal);border:0;color:#fff;font-weight:700;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.95rem}
+#lang-toggle:hover{background:var(--teal-d)}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:linear-gradient(135deg,var(--navy),#14304f);color:#fff;border-radius:18px;padding:38px 24px;text-align:center;margin-bottom:22px}
+.hero .lbl{color:var(--teal);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+.hero h1{font-size:clamp(1.7rem,5.5vw,2.9rem);font-weight:800;margin:10px 0 6px}
+.hero .sub{color:#cbd5e1;font-size:.95rem}
+.hero .meta{display:flex;justify-content:center;gap:26px;margin-top:18px;flex-wrap:wrap}
+.hero .meta div{background:rgba(255,255,255,.08);border:1px solid rgba(20,184,166,.35);border-radius:12px;padding:10px 22px}
+.hero .meta small{display:block;color:#94a3b8;font-size:.78rem}
+.hero .meta strong{font-size:1.25rem;color:#fff}
+.hijri{background:var(--card);border-radius:16px;padding:24px;text-align:center;margin-bottom:22px;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.hijri h2{color:var(--navy);font-size:1.35rem;margin-bottom:4px}
+.hijri .big{font-size:clamp(1.4rem,4.5vw,2rem);font-weight:800;color:var(--teal-d);margin:8px 0}
+.hijri small{color:var(--mut)}
+.grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:22px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.card h2{color:var(--navy);font-size:1.3rem;margin-bottom:4px}
+.card .tag{display:inline-block;background:#e6fffa;color:var(--teal-d);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase}
+.clocks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:520px){.clocks{grid-template-columns:repeat(3,1fr)}}
+.clock{background:var(--bg);border-radius:12px;padding:12px;text-align:center;border:1px solid #e2e8f0}
+.clock .city{font-weight:700;font-size:.9rem;color:var(--navy)}
+.clock .time{font-size:1.3rem;font-weight:800;color:var(--teal-d);font-variant-numeric:tabular-nums}
+.clock .cdate{font-size:.75rem;color:var(--mut)}
+.cd-input{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.cd-input input{flex:1;min-width:170px;padding:10px 12px;border:1.5px solid #cbd5e1;border-radius:10px;font-size:1rem;font-family:inherit}
+.btn{background:var(--teal);color:#fff;border:0;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--teal-d)}
+.btn.ghost{background:#e2e8f0;color:var(--navy)}
+.btn:disabled{opacity:.45;cursor:default}
+#countdown-display{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap;min-height:86px;align-items:center}
+.cd-cell{background:var(--navy);color:#fff;border-radius:12px;padding:12px 6px;min-width:74px;text-align:center}
+.cd-cell span{font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums}
+.cd-cell small{display:block;color:#94a3b8;font-size:.75rem}
+.cd-done{font-size:1.4rem;font-weight:800;color:var(--teal-d)}
+#stopwatch-display{font-size:clamp(2rem,7vw,3rem);font-weight:800;text-align:center;color:var(--navy);font-variant-numeric:tabular-nums;margin:10px 0 16px;letter-spacing:1px}
+.sw-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+#laps{list-style:none;margin-top:14px;max-height:180px;overflow:auto}
+#laps li{background:var(--bg);border:1px solid #e2e8f0;border-radius:8px;padding:8px 14px;margin-bottom:6px;font-size:.95rem}
+.ad-slot{display:flex;justify-content:center;margin:22px 0;min-height:250px;align-items:center}
+.cta{background:linear-gradient(135deg,var(--teal),#0d9488);color:#fff;border-radius:16px;padding:26px;text-align:center;margin-bottom:22px}
+.cta h2{margin-bottom:8px}
+.cta p{margin-bottom:14px;opacity:.92}
+.cta a{background:#fff;color:var(--teal-d);font-weight:800;padding:12px 26px;border-radius:10px;text-decoration:none;display:inline-block}
+footer{background:var(--navy);color:#94a3b8;padding:28px 18px;font-size:.85rem}
+.ft-in{max-width:1080px;margin:0 auto}
+.net-links{margin-bottom:16px}
+.net-links h3{color:#cbd5e1;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.net-links a{color:#7d8ea8;text-decoration:none;margin:0 10px 8px 0;display:inline-block;font-size:.82rem}
+.net-links a:hover{color:var(--teal)}
+.ft-note{text-align:center;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <div class="brand">NAN<span> · </span><span>DateTime</span></div>
+    <button id="lang-toggle" aria-label="Switch language">اردو</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="lbl" data-i18n="heroSub">Today's Date</div>
+    <h1 id="today-date">…</h1>
+    <p class="sub" data-i18n="tagline">Free date, time &amp; world clock tools — updated live.</p>
+    <div class="meta">
+      <div><small data-i18n="heroSub">Today's Date</small><strong id="day-of-week">…</strong></div>
+      <div><small data-i18n="week">Week</small><strong>#<span id="week-number">…</span></strong></div>
+    </div>
+  </section>
+
+  <section class="hijri">
+    <h2 data-i18n="hijriTitle">Hijri / Islamic Date</h2>
+    <div class="big" id="hijri-date">…</div>
+    <small data-i18n="hijriApprox">(approximate — tabular calculation)</small>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <span class="tag" data-i18n="liveLabel">live</span>
+      <h2 data-i18n="worldClock">World Clock</h2>
+      <div class="clocks">
+        <div class="clock"><div class="city" data-i18n="pk">Pakistan</div><div class="time" id="clock-pk">--:--:--</div><div class="cdate" id="clockdate-pk"></div></div>
+        <div class="clock"><div class="city" data-i18n="ae">Dubai</div><div class="time" id="clock-ae">--:--:--</div><div class="cdate" id="clockdate-ae"></div></div>
+        <div class="clock"><div class="city" data-i18n="uk">London</div><div class="time" id="clock-uk">--:--:--</div><div class="cdate" id="clockdate-uk"></div></div>
+        <div class="clock"><div class="city" data-i18n="ny">New York</div><div class="time" id="clock-ny">--:--:--</div><div class="cdate" id="clockdate-ny"></div></div>
+        <div class="clock"><div class="city" data-i18n="to">Toronto</div><div class="time" id="clock-to">--:--:--</div><div class="cdate" id="clockdate-to"></div></div>
+        <div class="clock"><div class="city" data-i18n="sy">Sydney</div><div class="time" id="clock-sy">--:--:--</div><div class="cdate" id="clockdate-sy"></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="countdownTitle">Countdown Timer</h2>
+      <p style="color:var(--mut);font-size:.92rem" data-i18n="countdownHint">Pick a date and time, then start the countdown.</p>
+      <div class="cd-input">
+        <input type="datetime-local" id="countdown-input" aria-label="Target date and time">
+        <button class="btn" id="countdown-btn" data-i18n="startCountdown">Start Countdown</button>
+      </div>
+      <div id="countdown-display" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <section class="card" style="margin-bottom:22px">
+    <h2 data-i18n="stopwatchTitle">Stopwatch</h2>
+    <div id="stopwatch-display">00:00:00.000</div>
+    <div class="sw-btns">
+      <button class="btn" id="sw-start" data-i18n="start">Start</button>
+      <button class="btn ghost" id="sw-stop" data-i18n="stop">Stop</button>
+      <button class="btn ghost" id="sw-lap" data-i18n="lap">Lap</button>
+      <button class="btn ghost" id="sw-reset" data-i18n="reset">Reset</button>
+    </div>
+    <ul id="laps"></ul>
+  </section>
+
+  <div class="ad-slot">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+  </div>
+
+  <section class="cta">
+    <h2 data-i18n="hijriTitle">Hijri / Islamic Date</h2>
+    <p>Hijri date today, Islamic calendar explained, world clock cities &amp; Pakistan time now — read the full guide.</p>
+    <a href="articles/hijri-date-today-world-clock-guide.html" data-i18n="articleCta">Read the guide</a>
+  </section>
+</main>
+
+<footer>
+  <div class="ft-in">
+    <!-- nan-network-links:start -->
+    <nav class="net-links" aria-label="Network tools">
+      <h3 data-i18n="networkTitle">More free tools from our network</h3>
+      <a href="https://nan-rozana-calculators.surge.sh/">Rozana Calculators</a>
+      <a href="https://nan-eobi-calculator.surge.sh/">EOBI Calculator</a>
+      <a href="https://nan-labour-calculators.surge.sh/">Labour Calculators</a>
+      <a href="https://nan-urage-calculator.surge.sh/">Age Calculator</a>
+      <a href="https://nan-pdftools.surge.sh/">PDF Tools</a>
+      <a href="https://nan-imagetools.surge.sh/">Image Tools</a>
+      <a href="https://nan-qrtools.surge.sh/">QR Tools</a>
+      <a href="https://nan-texttools.surge.sh/">Text Tools</a>
+      <a href="https://nan-urduportal.surge.sh/">Urdu Portal</a>
+    </nav>
+    <!-- nan-network-links:end -->
+    <div class="ft-note"><span data-i18n="footerNote">Free tools by NAN Marketing Agency</span> · 2026</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
