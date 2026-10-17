@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halal Grocery Near Me USA — Find Halal Markets & Stores Near You</title>
+<meta name="description" content="Find a halal grocery near me anywhere in the USA. Browse our interactive map of halal markets, halal grocery stores, halal butchers and zabiha meat shops across America. Search by city, use your location, get directions.">
+<link rel="canonical" href="https://nan-halal-grocery-nearme-usa.surge.sh/">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-d:#0E8A7D;--bg:#F4F7FA;--txt:#1F2937}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+header{background:var(--navy);color:#fff;padding:.9rem 1rem;position:sticky;top:0;z-index:1000}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.hrow{display:flex;align-items:center;gap:.7rem}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;color:var(--navy)}
+h1{font-size:1.05rem;font-weight:700}
+.sub{font-size:.8rem;color:#9FB3C8}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#12305a 100%);color:#fff;padding:2rem 1rem;text-align:center}
+.hero h2{font-size:1.6rem;margin-bottom:.4rem}
+.hero p{color:#BFD3E6;max-width:46rem;margin:0 auto .2rem;font-size:.95rem}
+.controls{max-width:46rem;margin:1rem auto 0;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.controls input{flex:1 1 220px;padding:.65rem .9rem;border:none;border-radius:8px;font-size:.95rem}
+.btn{background:var(--teal);color:var(--navy);border:none;border-radius:8px;padding:.65rem 1.1rem;font-weight:700;cursor:pointer;font-size:.95rem}
+.btn:hover{background:var(--teal-d)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.toggler{display:flex;justify-content:center;gap:.5rem;margin:1rem 0 .5rem}
+.toggler button{padding:.5rem 1.2rem;border:2px solid var(--teal);background:#fff;color:var(--teal-d);border-radius:999px;font-weight:700;cursor:pointer;font-size:.9rem}
+.toggler button.active{background:var(--teal);color:#fff}
+#map{height:62vh;min-height:380px;border-radius:12px;border:1px solid #D9E2EC;margin:0 auto;max-width:72rem}
+#listview{max-width:72rem;margin:0 auto;padding:0 1rem;display:none}
+.store{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:.9rem 1rem;margin-bottom:.7rem;display:flex;gap:.8rem;align-items:flex-start}
+.store .dist{flex:0 0 auto;background:#E6FFFA;color:var(--teal-d);font-weight:700;font-size:.8rem;padding:.25rem .6rem;border-radius:999px;white-space:nowrap}
+.store h3{font-size:1rem;margin-bottom:.15rem}
+.store p{font-size:.85rem;color:#5B6B7E}
+.store a{color:var(--teal-d);font-weight:600;font-size:.85rem;text-decoration:none}
+.adslot{display:flex;justify-content:center;margin:1.4rem auto}
+.leaflet-popup-content{font-size:.85rem}
+.leaflet-popup-content b{font-size:.95rem}
+.dirbtn{display:inline-block;margin-top:.4rem;background:var(--teal);color:#fff!important;padding:.35rem .8rem;border-radius:6px;font-size:.8rem;font-weight:700}
+.seo{max-width:46rem;margin:2rem auto;padding:0 1rem}
+.seo h2{font-size:1.25rem;margin-bottom:.6rem}
+.seo h3{font-size:1.05rem;margin:1.1rem 0 .4rem}
+.seo p{font-size:.95rem;color:#334155;margin-bottom:.7rem}
+footer{background:var(--navy);color:#9FB3C8;padding:1.6rem 1rem;font-size:.85rem;margin-top:2rem}
+footer a{color:#CBD5E1}
+.countpill{display:inline-block;background:rgba(20,184,166,.15);color:var(--teal);font-weight:700;border-radius:999px;padding:.1rem .7rem;font-size:.85rem}
+@media(max-width:640px){.hero h2{font-size:1.25rem}#map{height:55vh}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hrow">
+    <div class="logo">N</div>
+    <div><h1>NAN Halal Grocery Map USA</h1><div class="sub">Find halal markets &amp; grocery stores near you</div></div>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>🛒 Halal Grocery Near Me USA</h2>
+  <p>Explore <span class="countpill" id="poicount">…</span> real halal grocery stores, halal markets, halal butchers and zabiha meat shops across the United States — on an interactive map.</p>
+  <div class="controls">
+    <input id="searchbox" type="text" placeholder="Enter city, ST (e.g. Houston, TX)" aria-label="Search city">
+    <button class="btn" id="searchbtn">Search</button>
+    <button class="btn ghost" id="locbtn">📍 Use my location</button>
+  </div>
+</section>
+
+<div class="wrap" style="padding:0 1rem">
+  <div class="toggler">
+    <button id="maptab" class="active">🗺 Map view</button>
+    <button id="listtab">📋 List view</button>
+  </div>
+  <div id="map"></div>
+  <div id="listview"></div>
+</div>
+
+<div class="adslot">
+<!-- Adsterra Banner 300x250 - NAN key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="seo">
+  <h2>Find a Halal Market Near Me — USA Wide</h2>
+  <p>Looking for a <strong>halal grocery near me</strong>? Our free map lists halal markets and halal grocery stores across the USA — from Dearborn's Middle Eastern supermarkets to Houston's desi grocery stores, Chicago's halal butchers, and zabiha meat shops in New York, Dallas, Atlanta, Seattle and beyond.</p>
+  <h3>How to use the map</h3>
+  <p>Type your city and state into the search box, or tap <strong>"📍 Use my location"</strong> to sort every halal market by distance from you. Tap any marker to see the store's name and address, then hit <strong>Get Directions</strong> for turn-by-turn navigation.</p>
+  <h3>What counts as a halal market?</h3>
+  <p>A true halal grocery sells 100% halal-certified meat, and most also carry imported groceries — spices, basmati rice, dates, olives, frozen samosas, and fresh produce. Many stores also have an in-house halal butcher counter. New to halal shopping? Read our <a href="/articles/halal-grocery-shopping-guide-usa.html">Halal Grocery Shopping Guide (USA)</a> to learn the difference between zabiha and halal labels and the right questions to ask your butcher.</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin-bottom:.5rem"><strong style="color:#fff">NAN Halal Grocery Map USA</strong> — a free NAN network tool. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Store listings are compiled from OpenStreetMap; hours and certification may change — please confirm with the store.</p>
+    <!--nan-network-links:start-->
+<section style="max-width:72rem;margin:1.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #1E3A5F;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#9FB3C8;margin:0;"><a href="https://nan-pharmacy-24h-nearme-usa.surge.sh" style="color:#9FB3C8;text-decoration:none;">24h Pharmacy Near Me USA</a> <span style="color:#33475f;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#9FB3C8;text-decoration:none;">EOBI Calculator</a> <span style="color:#33475f;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#9FB3C8;text-decoration:none;">Rozana Calculators</a> <span style="color:#33475f;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#9FB3C8;text-decoration:none;">NAN AI Stock Photos</a> <span style="color:#33475f;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#9FB3C8;text-decoration:none;">NAN PNG Stock</a></p>
+</section>
+<!--nan-network-links:end-->
+    <p style="margin-top:1rem;color:#5B7288">© 2026 NAN Network. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const map = L.map('map').setView([39.8, -98.5], 4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+let POIS = [], userLat = null, userLon = null;
+
+function haversine(a, b, c, d){
+  const R = 6371, t = Math.PI/180;
+  const h = Math.sin((c-a)*t/2)**2 + Math.cos(a*t)*Math.cos(c*t)*Math.sin((d-b)*t/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+const fmtD = km => km < 1 ? Math.round(km*1000)+' m' : km.toFixed(1)+' km';
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+function popupHTML(p){
+  return '<b>'+esc(p.name)+'</b><br>'+esc(p.address)+
+    '<br><a class="dirbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination='+p.lat+','+p.lon+'">Get Directions</a>';
+}
+
+function renderMarkers(){
+  POIS.forEach(p => L.marker([p.lat, p.lon]).addTo(map).bindPopup(popupHTML(p)));
+}
+
+function renderList(){
+  const el = document.getElementById('listview');
+  let items = POIS.slice();
+  if (userLat !== null){
+    items.forEach(p => p._d = haversine(userLat, userLon, p.lat, p.lon));
+    items.sort((a,b)=>a._d-b._d);
+  }
+  el.innerHTML = items.slice(0,200).map(p =>
+    '<div class="store">'+(p._d!=null?'<span class="dist">'+fmtD(p._d)+'</span>':'')+
+    '<div><h3>'+esc(p.name)+'</h3><p>'+esc(p.address)+'</p>'+
+    '<a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination='+p.lat+','+p.lon+'">Get Directions →</a></div></div>'
+  ).join('');
+}
+
+fetch('locations.json').then(r=>r.json()).then(data=>{
+  POIS = data;
+  document.getElementById('poicount').textContent = POIS.length + ' verified stores';
+  renderMarkers(); renderList();
+}).catch(()=>{ document.getElementById('poicount').textContent='store'; });
+
+// tabs
+const maptab=document.getElementById('maptab'), listtab=document.getElementById('listtab');
+maptab.onclick=()=>{maptab.classList.add('active');listtab.classList.remove('active');
+  document.getElementById('map').style.display='block';
+  document.getElementById('listview').style.display='none';
+  setTimeout(()=>map.invalidateSize(),50);};
+listtab.onclick=()=>{listtab.classList.add('active');maptab.classList.remove('active');
+  document.getElementById('map').style.display='none';
+  document.getElementById('listview').style.display='block'; renderList();};
+
+// geocode search (Nominatim, debounced)
+let deb=null;
+function geocode(q){
+  fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q='+encodeURIComponent(q))
+    .then(r=>r.json()).then(res=>{
+      if(res.length){ map.setView([res[0].lat, res[0].lon], 11);
+        userLat=parseFloat(res[0].lat); userLon=parseFloat(res[0].lon); renderList(); }
+      else alert('Place not found — try "City, ST".');
+    });
+}
+const box=document.getElementById('searchbox');
+box.addEventListener('input',()=>{clearTimeout(deb);deb=setTimeout(()=>{if(box.value.trim().length>2)geocode(box.value.trim());},900);});
+document.getElementById('searchbtn').onclick=()=>{if(box.value.trim())geocode(box.value.trim());};
+
+document.getElementById('locbtn').onclick=()=>{
+  if(!navigator.geolocation){alert('Geolocation not supported on this device.');return;}
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userLat=pos.coords.latitude; userLon=pos.coords.longitude;
+    map.setView([userLat,userLon],11);
+    L.circleMarker([userLat,userLon],{radius:9,color:'#14B8A6',fillColor:'#14B8A6',fillOpacity:.9})
+      .addTo(map).bindPopup('You are here').openPopup();
+    renderList();
+  },()=>alert('Location access was denied. Try typing your city instead.'));
+};
+</script>
+</body>
+</html>
