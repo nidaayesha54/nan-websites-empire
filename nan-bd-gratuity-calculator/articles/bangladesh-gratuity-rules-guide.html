@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangladesh Gratuity Rules: Eligibility, Calculation & Payment (Labour Act 2006)</title>
+<meta name="description" content="Bangladesh gratuity rules under Labour Act 2006: the 30-day formula, the 45-day rule after 10 years, eligibility, and payment.">
+<link rel="canonical" href="https://nan-bd-gratuity-calculator.surge.sh/articles/bangladesh-gratuity-rules-guide.html">
+<style>
+:root{--navy:#0A1628;--navy2:#123052;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:linear-gradient(180deg,#0A1628,#0e2240);color:#fff;padding:.85rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(10,22,40,.3)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav{display:flex;align-items:center;flex-wrap:wrap}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1.1rem;font-size:.93rem;font-weight:600;padding:.45rem .1rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#143a63 60%,#0f766e 135%);border-radius:1.1rem;color:#fff;padding:2.4rem 2rem;margin:1.8rem 0;box-shadow:0 14px 34px rgba(10,22,40,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(20,184,166,.18)}
+.hero h1{color:#fff;font-size:2.05rem;margin:0 0 .55rem;line-height:1.25;letter-spacing:-.015em;border:0;padding:0}
+.hero .lede{color:#dbe4f0;font-size:1.07rem;max-width:46rem;margin:0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.15rem}
+.hero-badges span{background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.5);color:#a7f3d0;font-size:.84rem;font-weight:700;padding:.38rem .85rem;border-radius:999px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.panel h2{margin-top:0;border:0;padding:0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;min-height:48px;padding:.65rem .85rem;border:1.5px solid var(--line);border-radius:.55rem;font-size:16px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.18)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;min-height:52px;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;transition:background .15s,transform .1s;box-shadow:0 4px 12px rgba(20,184,166,.35)}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.3rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut);margin-top:.2rem}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line);border-radius:.6rem}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.95rem;background:#fff}
+th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);text-align:left}
+tr:first-child th{background:#f1f5f9;color:var(--navy);font-weight:700}
+tr:nth-child(even) td{background:#f9fafb}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2.4rem;font-size:1.4rem;letter-spacing:-.01em;padding-bottom:.4rem;border-bottom:2px solid #eef2f7}
+h3{color:var(--navy);font-size:1.1rem}
+.steps{margin:2.2rem 0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.4rem}
+.step h3{margin:.15rem 0 .35rem;font-size:1.02rem;border:0;padding:0}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.source-note{background:#f0fdfa;border:1px solid #99f6e4;border-left:4px solid var(--teal);border-radius:.6rem;padding:.9rem 1.1rem;font-size:.9rem;margin:1.6rem 0}
+.guides{margin:2.4rem 0}
+.guide-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:.7rem;padding:1.2rem 1.35rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card a{color:var(--navy);font-weight:700;font-size:1.06rem;text-decoration:none}
+.guide-card a:hover{color:var(--teal-d);text-decoration:underline}
+.guide-card p{margin:.35rem 0 0;font-size:.93rem;color:var(--mut)}
+.faq{margin:1rem 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.15rem;margin:.6rem 0}
+.faq details[open]{box-shadow:0 5px 16px rgba(10,22,40,.08);border-color:#99f6e4}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--teal);font-weight:800;font-size:1.25rem;line-height:1}
+.faq details[open] summary::before{content:"3"}
+.faq details p{color:#4b5563;font-size:.94rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:linear-gradient(180deg,#0A1628,#081120);color:#94a3b8;margin-top:2.5rem;padding:2.2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#fff}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+@media(max-width:720px){
+.calc-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.fcols{grid-template-columns:1fr}
+.hero{padding:1.7rem 1.3rem;margin:1.2rem 0;border-radius:.9rem}
+.hero h1{font-size:1.55rem}
+.hero .lede{font-size:.99rem}
+.btn{width:100%}
+h2{font-size:1.22rem}
+.panel{padding:1.15rem}
+.wrap{padding:0 1rem}
+table{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Gratuity Calculator BD</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/bangladesh-gratuity-rules-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Bangladesh Gratuity Rules: Eligibility, Calculation & Payment (Labour Act 2006)</h1>
+<p class="lede">Who qualifies for gratuity in Bangladesh, how the 30-days-per-year formula works, and when your employer must pay it.</p>
+<div class="hero-badges"><span>In-depth 2026 guide</span><span>~6 min read</span><span>Free</span></div></section>
+
+<p>Gratuity is one of the most valuable — and most misunderstood — terminal benefits in Bangladesh. Unlike a bonus, it is anchored in statute: the Bangladesh Labour Act, 2006 defines exactly how it is calculated, and the formula is refreshingly simple. Yet many workers leave jobs without ever claiming it, and many employers calculate it on the wrong salary base.</p>
+<p>This guide explains the gratuity rules under the Bangladesh Labour Act 2006: who qualifies, the exact formula (including the 45-day rule most people miss), how partial years are counted, and when the money must be paid. Use it with our <a href="../index.html">Bangladesh Gratuity Calculator</a> to get your figure in seconds.</p>
+
+<h2>The legal basis: Section 2(10) of the Labour Act, 2006</h2>
+<p>Gratuity is defined in <strong>Section 2(10)</strong> of the Bangladesh Labour Act, 2006 as wages of <strong>at least 30 days for every completed year of service</strong>, calculated at the rate of the wages the worker last received. Where a worker has served for <strong>more than 10 years</strong>, the rate rises to <strong>45 days' wages per year</strong>.</p>
+<p>Two details in that definition do most of the work. First, "the wages the worker received last" — the calculation uses your <strong>final basic salary</strong>, not an average over your career. A late-career raise increases your entire gratuity, not just future accruals. Second, the Act deems <strong>more than 6 months of service as one full year</strong> — so 5 years and 7 months counts as 6 years for the calculation.</p>
+<p>Gratuity becomes payable on <strong>death, discharge, resignation, retrenchment, or termination</strong> of employment. It is payable in addition to other terminal benefits — provident fund balances, leave encashment, and retrenchment compensation are all separate.</p>
+
+<h2>The gratuity formula, step by step</h2>
+<p>For service of 10 years or less:</p>
+<p><strong>Gratuity = last monthly basic salary × number of completed years</strong></p>
+<p>(Because 30 days' wages ≈ one month's basic pay.)</p>
+<p>For service above 10 years, each year is worth 45 days' wages = 1.5 months' basic pay:</p>
+<p><strong>Gratuity = last monthly basic salary × 1.5 × number of completed years</strong></p>
+<p>Worked examples with a last basic salary of BDT 25,000:</p>
+<div class="table-scroll"><table>
+<tr><th>Years of service</th><th>Rate</th><th>Gratuity</th></tr>
+<tr><td>5 years</td><td>30 days/yr</td><td><strong>BDT 125,000</strong></td></tr>
+<tr><td>10 years</td><td>30 days/yr</td><td><strong>BDT 250,000</strong></td></tr>
+<tr><td>12 years</td><td>45 days/yr</td><td><strong>BDT 450,000</strong></td></tr>
+<tr><td>5 years 8 months</td><td>30 days/yr (counts as 6)</td><td><strong>BDT 150,000</strong></td></tr>
+</table></div>
+<p>Note the jump at the 10-year mark: the same worker with 12 years gets nearly double what the 30-day rate would give, because every year — not just the years beyond 10 — is valued at 45 days once the threshold is crossed.</p>
+
+<h2>Which salary figure is used?</h2>
+<p>The base is your <strong>last basic salary</strong> (plus dearness allowance, if any). It does <em>not</em> include house rent, medical allowance, conveyance, or bonuses. This is the single most common calculation dispute: some employers quietly run gratuity on a lower figure, or on an older basic. Your appointment letter and final pay slip establish the correct base — keep both.</p>
+<p>One nuance worth knowing: on <strong>discharge after at least one year of continuous service</strong>, Section 22 provides compensation of 30 days' wages per year of service <em>or</em> gratuity if payable, whichever is higher. In practice the figures often coincide, but the "whichever is higher" language matters where company gratuity schemes are more generous than the statute.</p>
+
+<h2>Eligibility: how long must you serve?</h2>
+<p>The statute's framing centers on completed years of service, with the 6-months-counts-as-a-year rule smoothing partial years. In practice, most employer policies — and the decided cases — treat <strong>one year of continuous service</strong> as the practical threshold for a gratuity claim on resignation or termination, while the death-of-worker provisions extend protection to shorter service. Because the Act's own provisions on when payment is "mandatory" have been debated in the courts (a well-known Financial Express legal analysis called the area "baffling"), the practical advice is simple: if you have completed a year or more, claim it; if the employer resists, the Labour Court is the forum.</p>
+<p>Continuous service is measured under Section 14's framework — generally 240 working days in the preceding 12 months counts as a year. Periods of authorized leave, lay-off, and maternity leave typically do not break continuity.</p>
+
+<h2>When and how it must be paid</h2>
+<p>Gratuity is a terminal benefit: it falls due when the employment relationship ends. There is no statutory instalment plan — the expectation is payment with your final settlement, alongside notice pay (where applicable), leave encashment for unused earned leave (Section 117), and any retrenchment compensation (Section 20: 30 days' wages per completed year, separate from gratuity).</p>
+<p>Before you sign a full-and-final settlement, check four lines independently:</p>
+<ul>
+<li><strong>Gratuity</strong> — basic × years (× 1.5 above 10 years), 6+ months rounding up</li>
+<li><strong>Provident fund</strong> — your contributions plus the employer's, with interest</li>
+<li><strong>Leave encashment</strong> — unused earned leave at the basic wage rate</li>
+<li><strong>Notice/retrenchment pay</strong> — per Sections 20 and 26 where applicable</li>
+</ul>
+<p>Do not let a lump-sum "final payment" figure go unexamined. Ask for the breakup in writing; employers who have calculated correctly will provide it without hesitation.</p>
+
+<h2>Common gratuity mistakes</h2>
+<p><strong>1. Using gross salary instead of basic.</strong> Allowances inflate the figure — but the law specifies basic (plus DA). Using gross overstates your claim and weakens your negotiating position; using an old basic understates it.</p>
+<p><strong>2. Ignoring the 6-month rule.</strong> Five years and seven months is six years for gratuity purposes. Employers sometimes round down; the Act rounds up.</p>
+<p><strong>3. Missing the 45-day jump.</strong> Workers crossing 10 years should verify the higher rate was applied to <em>all</em> years, not just the years after 10.</p>
+<p><strong>4. Not claiming after resignation.</strong> Gratuity is payable on resignation too, not only on retirement or retrenchment. Resigning does not forfeit it.</p>
+<p><strong>5. Confusing gratuity with provident fund.</strong> They are entirely separate. A generous PF does not cancel gratuity, and vice versa.</p>
+
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is gratuity taxable in Bangladesh?</summary><p>Gratuity received on retirement or termination is generally treated under the Income Tax Act's provisions for terminal benefits; the exact treatment depends on whether it comes from an approved gratuity fund and the amount. Consult a tax adviser for your situation.</p></details>
+<details><summary>What if my employer has no gratuity fund?</summary><p>The statutory definition in Section 2(10) does not depend on the employer maintaining a funded scheme. The liability exists regardless; a fund is just the employer's way of financing it.</p></details>
+<details><summary>Can a company policy pay more than the statute?</summary><p>Yes. Many large employers and collective agreements provide more generous gratuity (for example, 45 days from an earlier threshold). The statute is the floor, not the ceiling.</p></details>
+<details><summary>What happens to gratuity if a worker dies?</summary><p>The Act provides death benefits to the worker's dependents — 30 days' wages per completed year (or six months thereof), or gratuity, whichever is higher — in addition to other dues. This is separate from the employer's group insurance if any.</p></details>
+<details><summary>Where do I complain if gratuity is not paid?</summary><p>Disputes go to the Labour Court under the Labour Act's adjudication framework. The Department of Inspection for Factories and Establishments (DIFE) also inspects gratuity compliance.</p></details>
+</div>
+
+<p class="hint"><strong>Disclaimer:</strong> This guide summarizes the Bangladesh Labour Act, 2006 (including the 2013 amendments) for general information only — not legal advice. Gratuity case law has nuances; for a disputed claim, consult a labour lawyer.</p>
+
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<section class="guides">
+<h2>Try the Calculator</h2>
+<div class="guide-card">
+<div><a href="../index.html">Back to the calculator</a>
+<p>Run your own numbers with the free interactive calculator.</p></div>
+</div>
+</section>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Gratuity Calculator BD</h4><p>Free Bangladesh gratuity calculator — estimate your end-of-service benefit under the Bangladesh Labour Act 2006 with the official formula, rules and FAQs.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Gratuity Calculator</a></p> &middot; <a href="articles/bangladesh-gratuity-rules-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-bd-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">BD Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
