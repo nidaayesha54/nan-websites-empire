@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EOBI Pension Calculator Pakistan 2026 — Calculate Your Monthly Pension</title>
+<meta name="description" content="Free EOBI pension calculator for Pakistan: enter your average wage and years of service to estimate your monthly pension. Updated 2026 formula, Rs 11,500 minimum, eligibility & FAQs in English and Urdu.">
+<link rel="canonical" href="https://nan-eobi-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu','Jameel Noori',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+[dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
+[dir="rtl"] td:last-child{text-align:left}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>EOBI Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>EOBI Pension Calculator Pakistan (2026)</h1>
+<p class="lede">Find out your estimated monthly EOBI pension in seconds — using the official formula, the Rs 11,500 minimum, and the new 14.5-year rule.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your EOBI Pension</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="wage">Average monthly wage — last 12 months (Rs)</label>
+<input type="number" id="wage" value="40000" min="0" step="500">
+<span class="hint">The wage your EOBI contributions were based on.</span></div>
+<div class="field"><label for="years">Years of insured service</label>
+<input type="number" id="years" value="20" min="0" max="50" step="0.5">
+<span class="hint">Total years your employer paid EOBI contributions.</span></div>
+<button class="btn" onclick="calcEOBI()">Calculate Pension</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-PK');}
+function calcEOBI(){
+  const wage=parseFloat(document.getElementById('wage').value)||0;
+  const yrs=parseFloat(document.getElementById('years').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  const MIN=11500;
+  if(wage<=0||yrs<=0){r.innerHTML='<p>Please enter your wage and years of service.</p>';return;}
+  if(yrs<14.5){
+    const grant=wage*yrs;
+    r.innerHTML='<div class="big">'+fmt(grant)+'<small>estimated one-time OLD-AGE GRANT (not monthly pension)</small></div>'
+    +'<table><tr><td>Your service</td><td>'+yrs+' years</td></tr>'
+    +'<tr><td>Monthly pension eligibility</td><td>Not yet — needs 14.5+ years</td></tr></table>'
+    +'<p class="hint">Workers with 2 to under 15 years of contributions get a one-time grant of one month\u2019s average wage per year of service.</p>';
+    return;
+  }
+  let p=wage*yrs/50; const atMin=p<MIN; if(atMin)p=MIN;
+  r.innerHTML='<div class="big">'+fmt(p)+'<small>estimated MONTHLY pension'+(atMin?' (minimum pension applies)':'')+'</small></div>'
+  +'<table><tr><td>Formula result</td><td>'+fmt(wage*yrs/50)+'</td></tr>'
+  +'<tr><td>Minimum pension (2026)</td><td>'+fmt(MIN)+'</td></tr>'
+  +'<tr><td>Each year of service adds</td><td>2% of your wage</td></tr></table>'
+  +'<p class="hint">Formula: (average monthly wage × years of service) ÷ 50. If the result is below Rs 11,500, you receive the minimum.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What is EOBI?</h2>
+<p>The <strong>Employees' Old-Age Benefits Institution (EOBI)</strong> is Pakistan's federal pension scheme for private-sector workers. Employers contribute <strong>5% of the minimum wage</strong> and employees contribute <strong>1%</strong> every month. After retirement, the worker receives a monthly pension for life.</p>
+<h2>EOBI Pension Formula (2026)</h2>
+<div class="note"><strong>Monthly Pension = (Average Monthly Wage × Years of Service) ÷ 50</strong><br>
+In simple words: every year of insured service adds <strong>2%</strong> of your average monthly wage (last 12 months) to your pension. If the formula gives less than <strong>Rs 11,500</strong>, you get the minimum of Rs 11,500.</div>
+<h3>Example</h3>
+<p>Average wage Rs 40,000 × 25 years ÷ 50 = <strong>Rs 20,000/month</strong>. A worker with Rs 30,000 wage and 15 years gets (30,000 × 15) ÷ 50 = Rs 9,000 → raised to the <strong>Rs 11,500 minimum</strong>.</p>
+<h2>2026 Updates</h2>
+<ul>
+<li><strong>Minimum pension Rs 11,500/month</strong> (raised from Rs 10,000).</li>
+<li>Formula-based pensions increased by <strong>15%</strong>.</li>
+<li><strong>14.5-year rule:</strong> workers with 14 years and 6 months of service are now treated as completing 15 years — previously rejected applicants can re-apply.</li>
+</ul>
+<h2>Eligibility</h2>
+<ul>
+<li>Age <strong>60</strong> (men) or <strong>55</strong> (women); mine workers at 55 with 10 years mining service.</li>
+<li>At least <strong>15 years</strong> of insured contributions (14.5 accepted under the 2026 ruling).</li>
+<li>Employer must have actually paid the monthly contributions.</li>
+<li>Invalidity pension: available after <strong>5 years</strong> with medical board approval.</li>
+<li>Survivors' pension: spouse (even after remarriage), then minor children, then parents.</li>
+</ul>
+<h2>How to Check Your EOBI Record</h2>
+<ol>
+<li>Visit the official EOBI website (eobi.gov.pk).</li>
+<li>Open "Insured Person Tracking" / "Individual Information".</li>
+<li>Enter your 13-digit CNIC number (without dashes).</li>
+<li>Review your contribution history and fix missing years <em>before</em> retirement.</li>
+</ol>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>What if I have less than 15 years of service?</summary><p>You get a one-time <strong>old-age grant</strong>: one month's average wage for each year of contributions (needs 2+ years).</p></details>
+<details><summary>Is the pension paid for life?</summary><p>Yes, the old-age pension is paid monthly for the pensioner's lifetime, and the spouse continues to receive the survivors' pension afterwards.</p></details>
+<details><summary>When is the pension paid each month?</summary><p>Between the 1st and 5th of every month, usually via partner banks after biometric verification.</p></details>
+<details><summary>What is the 14.5-year rule?</summary><p>A 2026 court ruling: 14 years and 6 months of insured service now counts as 15 years, making thousands of previously rejected workers eligible.</p></details>
+<details><summary>Does the employer have to be registered?</summary><p>Yes — only insured employment (where the employer paid EOBI contributions) counts toward your pension.</p></details>
+</div>
+<h2>اردو میں خلاصہ</h2>
+<div class="panel">
+<p><strong>EOBI</strong> پاکستان میں نجی شعبے کے ملازمین کے لیے وفاقی پنشن اسکیم ہے۔ آجر ہر ماہ کم از کم اجرت کا <strong>5 فیصد</strong> اور ملازم <strong>1 فیصد</strong> جمع کراتا ہے۔</p>
+<p><strong>فارمولا:</strong> ماہانہ پنشن = (آخری 12 ماہ کی اوسط ماہانہ اجرت × ملازمت کے سال) ÷ 50۔ اگر جواب <strong>11,500 روپے</strong> سے کم آئے تو کم از کم 11,500 روپے ملیں گے۔</p>
+<p><strong>اہلیت:</strong> مرد 60 سال، خواتین 55 سال، کم از کم 15 سال (ساڑھے 14 سال بھی قابل قبول) کی کنٹریبیوشن۔</p>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on the published EOBI formula and 2026 minimum. Your actual pension depends on EOBI's verified contribution record. Confirm with EOBI's helpline or eobi.gov.pk.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN EOBI Calculator</h4><p>Free EOBI pension calculator and guides for Pakistani workers — estimate your retirement pension, check eligibility, and understand the 2026 updates.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
