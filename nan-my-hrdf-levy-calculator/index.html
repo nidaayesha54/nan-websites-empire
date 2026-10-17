@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRD Corp Levy Calculator Malaysia 2026 — Free HRDF Levy Estimator</title>
+<meta name="description" content="Free HRD Corp (HRDF) levy calculator Malaysia: estimate your employer's monthly and annual 1% (or 0.5%) training levy on basic salary plus fixed allowances — mandatory for 10+ Malaysian employees, due by the 15th.">
+<link rel="canonical" href="https://nan-my-hrdf-levy-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+td:last-child{text-align:right}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>HRDF Levy Calculator MY</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>HRD Corp Levy Calculator Malaysia (2026)</h1>
+<p class="lede">Estimate your company's HRD Corp (HRDF) levy in seconds — the employer-paid training levy of <strong>1% of monthly wages</strong> for employers with 10 or more Malaysian employees (0.5% for voluntary 5–9-employee registrants).</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Monthly Levy</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="staff">Number of Malaysian employees</label><input type="number" id="staff" min="0" step="1" value="12"><p class="hint">Foreign workers are excluded — levy applies to Malaysian staff only.</p></div>
+<div class="field"><label for="basic">Total basic salaries of Malaysian staff (RM/month)</label><input type="number" id="basic" min="0" step="100" value="45000"></div>
+<div class="field"><label for="allow">Total fixed allowances of Malaysian staff (RM/month)</label><input type="number" id="allow" min="0" step="100" value="5000"><p class="hint">Only fixed, contractually agreed allowances (e.g. fixed transport, housing, shift). Excludes overtime, bonuses and commissions.</p></div>
+</div>
+<div>
+<div class="field"><label for="cat">Employer category</label><select id="cat">
+<option value="1">10+ Malaysian employees — mandatory (1%)</option>
+<option value="0.5">5–9 Malaysian employees — voluntary (0.5%)</option>
+<option value="0">Under 5 employees — not required (0%)</option>
+</select><p class="hint">Rate is set by the PSMB Act 2001. Registration is done through HRD Corp's e-TRiS.</p></div>
+<button class="btn" onclick="calc()">Calculate Levy</button>
+</div>
+</div>
+<div id="res"></div>
+</div>
+<script>
+function fmt(n){return 'RM '+n.toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){
+  const staff=parseInt(document.getElementById('staff').value,10)||0;
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const allow=parseFloat(document.getElementById('allow').value)||0;
+  const rate=parseFloat(document.getElementById('cat').value)||0;
+  const r=document.getElementById('res');
+  if(rate===0){r.innerHTML='<p class="hint">Employers with fewer than 5 Malaysian employees are not required to register with HRD Corp — no levy payable.</p>';return;}
+  if(basic+allow<=0){r.innerHTML='<p class="hint">Please enter total basic salaries (and fixed allowances if any).</p>';return;}
+  const base=basic+allow;
+  const monthly=base*rate/100;
+  const annual=monthly*12;
+  const catName=rate===1?'Mandatory 1% (10+ Malaysian employees)':'Voluntary 0.5% (5–9 Malaysian employees)';
+  r.innerHTML='<div class="result"><div class="big">'+fmt(monthly)+'<small>estimated monthly HRD Corp levy</small></div>'
+  +'<table><tr><td>Levy base (basic + fixed allowances)</td><td>'+fmt(base)+'</td></tr>'
+  +'<tr><td>Rate applied</td><td>'+catName+'</td></tr>'
+  +'<tr><td>Annual levy (× 12 months)</td><td>'+fmt(annual)+'</td></tr>'
+  +'<tr><td>Payment deadline</td><td>15th of the following month</td></tr></table>'
+  +'<p class="hint">Formula: (basic salary + fixed allowances) × '+rate+'%. Paid monthly to HRD Corp — it is an employer cost, never deducted from staff pay.</p></div>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Is the HRD Corp Levy?</h2>
+<p>The <strong>HRD Corp levy</strong> (still commonly called <strong>HRDF</strong>) is a mandatory training levy collected from registered employers under the <strong>PSMB Act 2001</strong> to fund workforce upskilling. Employers with <strong>10 or more Malaysian employees</strong> must register and contribute <strong>1% of monthly wages</strong>; employers with <strong>5–9 Malaysian employees</strong> may register voluntarily at <strong>0.5%</strong>.</p>
+<h2>The Formula</h2>
+<div class="note"><strong>Monthly levy = (Total basic salary + Fixed allowances) × 1%</strong><br>
+For voluntary registrants (5–9 staff), multiply by <strong>0.5%</strong> instead.<br>
+Only <strong>Malaysian employees</strong> count. Overtime, bonuses, commissions and reimbursements are excluded; fixed allowances (fixed transport, housing, meal, shift) are included.</div>
+<h3>Worked Example</h3>
+<p>15 Malaysian staff: total basic RM 45,000 + fixed allowances RM 5,000 = base RM 50,000; levy = RM 50,000 × 1% = <strong>RM 500/month</strong> — <strong>RM 6,000/year</strong>, claimable for approved training (SBL, SBL-Khas, SLB, OJT schemes).</p>
+<h2>Key Rules</h2>
+<ul>
+<li>The levy is an <strong>employer-only cost</strong> — it must never be deducted from employees' salaries.</li>
+<li>Payable to HRD Corp by the <strong>15th of the following month</strong>.</li>
+<li>Registered employers can <strong>claim back</strong> levy paid for approved training grants — use it or risk losing unused balances (a 15% deduction policy on unused balances applies).</li>
+<li>Covers specified industries under the PSMB Act 2001 (manufacturing, services, mining, construction and gazetted sectors).</li>
+</ul>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is the HRDF levy deducted from my salary?</summary><p>No. The levy is paid entirely by the employer. Deducting it from staff wages is not permitted.</p></details>
+<details><summary>Do foreign workers count toward the levy?</summary><p>No. Only <strong>Malaysian employees</strong> are subject to the HRD Corp levy; foreign workers are excluded from both the headcount and the wage base.</p></details>
+<details><summary>Does overtime or bonus count in the levy base?</summary><p>No. The base covers <strong>basic salary plus fixed allowances only</strong>. Overtime pay, performance bonuses, commissions and reimbursements are excluded.</p></details>
+<details><summary>What can my company claim with the levy?</summary><p>Registered employers claim training costs through HRD Corp schemes such as SBL, SBL-Khas, SLB and OJT — covering course fees, trainer fees, materials and travel for approved programmes.</p></details>
+<details><summary>What happens if we miss the payment deadline?</summary><p>Levy is due by the 15th of the following month. Late payment can attract penalties and interest under the PSMB Act — keep a monthly payment routine.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate of the HRD Corp levy based on the PSMB Act 2001 (1% mandatory / 0.5% voluntary). Your actual liability depends on HRD Corp registration status, industry coverage and certified payroll records. Confirm with HRD Corp or your payroll provider.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN HRDF Levy Calculator MY</h4><p>Free Malaysian employer tools by NAN. Estimate HRD Corp levies, employment-law payouts and statutory benefits — indicative figures, not legal advice.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">HRD Corp Levy Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-my-retrenchment-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">MY Termination Benefits Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-id-severance-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Indonesia Severance Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">BD Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">BD Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
