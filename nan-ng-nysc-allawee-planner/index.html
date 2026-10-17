@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSC Allawee Budget & Savings Planner 2026 — ₦77,000 Monthly Allowance Calculator</title>
+<meta name="description" content="Free NYSC planner: add the ₦77,000 federal allawee plus your state top-up, split it into food, transport, data and savings, and set a service-year savings goal.">
+<link rel="canonical" href="https://nan-ng-nysc-allawee-planner.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+.bar{height:.7rem;border-radius:.4rem;background:var(--teal);margin:.25rem 0}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>NYSC Allawee Planner</span></a>
+<nav class="nav"><a href="index.html">Planner</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>NYSC Allawee Budget &amp; Savings Planner 2026</h1>
+<p class="lede">The federal NYSC allowance is <strong>₦77,000 a month</strong> in 2026 — and many states pay a top-up on top. Add your deployment details, split the allawee into a realistic monthly budget, and set a savings goal for your 12-month service year.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Plan Your Monthly Allawee</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="federal">Federal stipend (₦/month)</label>
+<input type="number" id="federal" value="77000" min="0" step="any">
+<p class="hint">2026 official rate: ₦77,000, usually paid between the 25th and 30th.</p></div>
+<div class="field"><label for="stateTop">State of deployment / state top-up</label>
+<select id="stateTop" onchange="setStateTop()">
+<option value="0">Outside top-paying states / none</option>
+<option value="20000">Lagos — ₦15,000–₦25,000 (depends on PPA)</option>
+<option value="15000">Rivers — ₦15,000</option>
+<option value="10000">Akwa Ibom — ₦10,000</option>
+<option value="10000">Delta — ₦10,000</option>
+<option value="3800">Enugu — ₦3,800</option>
+<option value="8000">Oyo — varies (approx.)</option>
+</select>
+<p class="hint">State allowances are announced by governors and do not always get paid — treat them as a bonus, not your foundation.</p></div>
+<div class="field"><label for="ppa">PPA meal/transport allowance (₦/month)</label>
+<input type="number" id="ppa" value="0" min="0" step="any"></div>
+<div class="field"><label for="other">Other monthly income (₦) — optional</label>
+<input type="number" id="other" value="0" min="0" step="any"></div>
+</div>
+<div>
+<div class="field"><label for="food">Food &amp; groceries (₦)</label><input type="number" id="food" value="27500" min="0" step="any"></div>
+<div class="field"><label for="transport">Transport (₦)</label><input type="number" id="transport" value="10000" min="0" step="any"></div>
+<div class="field"><label for="data">Data &amp; airtime (₦)</label><input type="number" id="data" value="5000" min="0" step="any"></div>
+<div class="field"><label for="rent">Rent &amp; utilities (₦)</label><input type="number" id="rent" value="12500" min="0" step="any"></div>
+<div class="field"><label for="misc">Miscellaneous / emergencies (₦)</label><input type="number" id="misc" value="6500" min="0" step="any"></div>
+<div class="field"><label for="goal">Service-year savings goal (₦)</label><input type="number" id="goal" value="120000" min="0" step="any">
+<p class="hint">A common corps-member goal: ₦100,000–₦150,000 saved across the 12 months.</p></div>
+</div>
+</div>
+<button class="btn" onclick="calc()">Plan My Allawee</button>
+<div class="result" id="r" style="display:none"></div>
+</div>
+<script>
+function setStateTop(){/* value already read in calc() */}
+function fmt(n){return '₦'+Number(n).toLocaleString('en-NG',{minimumFractionDigits:0,maximumFractionDigits:0});}
+function calc(){
+ var income=(parseFloat(document.getElementById('federal').value)||0)
+  +(parseFloat(document.getElementById('stateTop').value)||0)
+  +(parseFloat(document.getElementById('ppa').value)||0)
+  +(parseFloat(document.getElementById('other').value)||0);
+ var food=parseFloat(document.getElementById('food').value)||0,
+     transport=parseFloat(document.getElementById('transport').value)||0,
+     data=parseFloat(document.getElementById('data').value)||0,
+     rent=parseFloat(document.getElementById('rent').value)||0,
+     misc=parseFloat(document.getElementById('misc').value)||0;
+ var spent=food+transport+data+rent+misc;
+ var savings=income-spent;
+ var goal=parseFloat(document.getElementById('goal').value)||0;
+ var months=12, need=goal/months;
+ var r=document.getElementById('r');r.style.display='block';
+ var cats=[['Food & groceries',food],['Transport',transport],['Data & airtime',data],['Rent & utilities',rent],['Miscellaneous',misc]];
+ var rows=cats.map(function(c){
+  var pct=income>0?(c[1]/income*100):0;
+  return '<tr><td>'+c[0]+'</td><td>'+fmt(c[1])+' <div class="bar" style="width:'+Math.min(pct,100).toFixed(1)+'%"></div></td></tr>';}).join('');
+ var verdict='';
+ if(savings>=need&&goal>0){verdict='<p class="hint" style="color:#047857;font-weight:700">On track: your plan saves '+fmt(savings)+'/month — enough to reach your '+fmt(goal)+' goal in 12 months ('+fmt(need)+'/month needed).</p>';}
+ else if(goal>0){verdict='<p class="hint" style="color:#b45309;font-weight:700">Shortfall: you need '+fmt(need)+'/month for your goal but this plan saves '+fmt(savings)+'/month. Trim a category or add a side income.</p>';}
+ if(savings<0){verdict='<p class="hint" style="color:#b91c1c;font-weight:700">Over budget by '+fmt(-savings)+'/month — your spending exceeds income. Cut the biggest category first.</p>';}
+ r.innerHTML='<div class="big">'+fmt(income)+' <small>total monthly income</small></div>'
+ +'<table>'+rows
+ +'<tr><td><strong>Total spending</strong></td><td>'+fmt(spent)+'</td></tr>'
+ +'<tr><td><strong>Left to save</strong></td><td>'+fmt(savings)+'</td></tr>'
+ +'<tr><td>12-month savings at this rate</td><td>'+fmt(Math.max(savings,0)*months)+'</td></tr></table>'
+ +verdict
+ +'<p class="hint">Tip: move savings to a separate locked account (PiggyVest SafeLock, Cowrywise, OPay/PalmPay lock) on the day the allawee lands — corps members who lock savings first report saving ₦8,000–₦15,000 extra each month.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Corps Members Earn in 2026</h2>
+<p>The Federal Government pays every corps member <strong>₦77,000 per month</strong>, typically between the 25th and 30th, with the first payment arriving at the end of orientation camp. Some states add their own allowance — Lagos (₦15,000–₦25,000 depending on your PPA), Rivers (₦15,000), Akwa Ibom (₦10,000), Delta (₦10,000) and Enugu (₦3,800) are the best-known payers — and many places of primary assignment (PPAs) add meal or transport money.</p>
+<h2>A Sample ₦77,000 Monthly Budget</h2>
+<table>
+<tr><td>Food &amp; groceries</td><td>₦25,000–₦30,000</td></tr>
+<tr><td>Transport (bus, keke, bike)</td><td>₦8,000–₦12,000</td></tr>
+<tr><td>Data &amp; airtime</td><td>₦4,000–₦6,000</td></tr>
+<tr><td>Rent &amp; utilities (if not covered)</td><td>₦10,000–₦15,000</td></tr>
+<tr><td><strong>Savings &amp; emergency fund</strong></td><td><strong>₦10,000–₦15,000</strong></td></tr>
+<tr><td>Miscellaneous</td><td>₦5,000–₦8,000</td></tr>
+</table>
+<h2>Worked Example</h2>
+<p>Federal ₦77,000 + Lagos top-up ₦20,000 = <strong>₦97,000/month</strong>. With food ₦27,500, transport ₦10,000, data ₦5,000, rent ₦12,500 and misc ₦6,500, spending totals ₦61,500 — leaving <strong>₦35,500 to save</strong>, or ₦426,000 across the service year.</p>
+<div class="note">A cheaper deployment state can beat a high top-up: a corper in a northern state on ₦77,000 alone can save more than one in Lagos on ₦97,000, because rent and food cost far less. Compare cost of living, not just allawee.</div>
+<div class="faq">
+<h2>Frequently Asked Questions</h2>
+<details><summary>Is the ₦77,000 NYSC allowance paid every month on time?</summary><p>Generally yes, between the 25th and 30th. The first payment usually arrives at the end of orientation camp. Delays of 1–2 weeks happen occasionally — do not budget assuming exact dates.</p></details>
+<details><summary>Do corps members pay income tax on the allawee?</summary><p>Effectively no. ₦77,000 a month is ₦924,000 a year; after pension and NHF deductions, chargeable income falls below the ₦800,000 tax-free threshold under the Nigeria Tax Act 2025. NYSC stipends are effectively tax-free.</p></details>
+<details><summary>Do state allowances actually get paid?</summary><p>Mixed. Lagos, Rivers, Oyo and Enugu pay reliably; some states announce increases that never materialise. Always treat state allowance as a bonus, not your foundation.</p></details>
+<details><summary>How much can I realistically save during NYSC?</summary><p>Corps members who track spending report saving an extra ₦8,000–₦15,000 a month. A realistic 12-month goal is ₦100,000–₦150,000, locked away in a separate savings account the day the allawee arrives.</p></details>
+<details><summary>Can I work a side job during NYSC?</summary><p>Officially no, but in practice many corps members do remote freelance work, run small businesses, or tutor — as long as it does not clash with PPA attendance and CDS. Enforcement is minimal.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This planner gives an indicative estimate based on published summaries of the 2026 ₦77,000 federal allowance and reported state top-ups. State allowances are announced and sometimes unpaid; actual figures vary by deployment, PPA and policy changes. It is not financial advice.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN NYSC Allawee Planner</h4><p>Free NYSC planner — budget the ₦77,000 monthly allawee plus state top-ups and set a service-year savings goal, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Planner</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ng-electricity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Nigeria Electricity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not financial advice.</p></div>
+</footer>
+</body>
+</html>
