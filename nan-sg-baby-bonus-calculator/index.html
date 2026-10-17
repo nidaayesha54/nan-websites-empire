@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Baby Bonus & Child Support Calculator 2026 — How Much You Get</title>
+<meta name="description" content="Free Singapore Baby Bonus calculator: see the full government support stack for your child — cash gift, CDA grants and co-matching, MediSave grant, and the new SG Child Support Package from April 2027.">
+<link rel="canonical" href="https://nan-sg-baby-bonus-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+.scheme-tag{display:inline-block;background:var(--navy);color:#fff;font-size:.78rem;font-weight:700;padding:.25rem .7rem;border-radius:999px;margin-bottom:.4rem}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+th{background:#f1f5f9;font-size:.85rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>SG Baby Bonus Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Singapore Baby Bonus &amp; Child Support Calculator (2026)</h1>
+<p class="lede">How much government support does your child get? Enter the birth order and birth date to see the full stack — Baby Gift cash, CDA grants and co-matching, MediSave grant — plus how the new <strong>SG Child Support Package</strong> changes it for births from 1 April 2027.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Child's Support Package</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="order">Birth order of the child</label>
+<select id="order">
+<option value="1">1st child</option>
+<option value="2">2nd child</option>
+<option value="34">3rd / 4th child</option>
+<option value="5">5th child and above</option>
+</select></div>
+<div class="field"><label for="bdate">Child's birth date</label>
+<input type="date" id="bdate" value="2026-10-17" min="2020-01-01" max="2030-12-31">
+<span class="hint">Children born on or after 1 April 2027 fall under the new SG Child Support Package.</span></div>
+<button class="btn" onclick="calcBaby()">Calculate Support</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+const CUTOFF='2027-04-01',LFS='2025-02-18';
+function fmt(n){return 'S$'+n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+function oldScheme(order,bdate){
+ const lfs=bdate>=LFS&&(order==='34'||order==='5');
+ const cash=order==='1'||order==='2'?11000:13000;
+ const firstStep=(order==='34'||order==='5')?(lfs?10000:5000):5000;
+ const caps={'1':4000,'2':7000,'34':9000,'5':15000};
+ const ptr={'1':5000,'2':10000,'34':20000,'5':20000};
+ return[
+  {k:'Baby Bonus cash gift',v:cash,note:'Paid to your Child Savings Account in tranches over 6.5 years'},
+  {k:'CDA First Step Grant',v:firstStep,note:lfs?'Large Families Scheme (3rd+ child born from 18 Feb 2025)':'Automatic — no deposit needed'},
+  {k:'CDA government co-matching cap',v:caps[order],note:'Dollar-for-dollar match on what you save into the CDA'},
+  {k:'MediSave Grant for Newborns',v:5000,note:'Into the child\'s MediSave account'},
+  {k:'Parenthood Tax Rebate (tax offset)',v:ptr[order],note:'Not cash — offsets your income tax payable'}
+ ];}
+function newScheme(){
+ return[
+  {k:'Baby Gift (two tranches within 12 months)',v:10000,note:'Cash to your Child Savings Account'},
+  {k:'Child Credits — S$2,000/year, ages 1–16',v:32000,note:'Annual cash credit'},
+  {k:'CDA First Step Grant',v:5000,note:'Automatic — no deposit needed'},
+  {k:'CDA government co-matching cap',v:5000,note:'Dollar-for-dollar match on what you save into the CDA'},
+  {k:'PSEA top-up at age 17',v:10000,note:'For post-secondary education'},
+  {k:'MediSave Grant for Newborns',v:5000,note:'Into the child\'s MediSave account'},
+  {k:'Edusave contributions (primary + secondary)',v:2500,note:'Approximate, at current rates'}
+ ];}
+function calcBaby(){
+ const order=document.getElementById('order').value;
+ const bdate=document.getElementById('bdate').value;
+ const res=document.getElementById('result');res.style.display='block';
+ if(!bdate){res.innerHTML='<p>Please enter the birth date.</p>';return;}
+ const isNew=bdate>=CUTOFF;
+ const orderLabel=document.getElementById('order').selectedOptions[0].text;
+ const items=isNew?newScheme():oldScheme(order,bdate);
+ let total=0,tax=0,rows='';
+ items.forEach(it=>{const isTax=it.k.indexOf('Tax Rebate')>-1;
+  if(isTax){tax=it.v;}else{total+=it.v;}
+  rows+='<tr><td>'+it.k+'<br><span class="hint">'+it.note+'</span></td><td>'+fmt(it.v)+'</td></tr>';});
+ res.innerHTML='<span class="scheme-tag">'+(isNew?'SG Child Support Package (new)':'Baby Bonus Scheme (current)')+'</span>'
+ +'<div class="big">'+fmt(total)+'<small>maximum total support — '+orderLabel.toLowerCase()+', born '+bdate+'</small></div>'
+ +'<table>'+rows+'</table>'
+ +(tax?'<p class="hint">Plus a '+fmt(tax)+' Parenthood Tax Rebate — this offsets income tax payable, it is not cash.</p>':'')
+ +'<p class="hint">Co-matching only pays out if you save into the CDA yourself — the government matches you dollar-for-dollar up to the cap. Track exact payouts at go.gov.sg/bbfamilyview.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How Baby Support Works in Singapore</h2>
+<h3>The current Baby Bonus Scheme (children born before 1 April 2027)</h3>
+<p>The Baby Bonus cash gift is paid into your Child Savings Account in tranches: for a 1st or 2nd child, <strong>S$3,000 at birth, S$1,500 at 6 and 12 months, S$1,000 at 18 months, then S$400 every 6 months from age 2 to 6.5</strong> (total S$11,000). For a 3rd and subsequent child the gift totals <strong>S$13,000</strong>.</p>
+<p>The Child Development Account (CDA) is a co-savings account: the government gives a <strong>First Step Grant</strong> (S$5,000 for 1st/2nd children; S$10,000 for 3rd+ children born from 18 February 2025 under the Large Families Scheme) and then <strong>matches your own savings dollar-for-dollar</strong> up to the cap (S$4,000 / S$7,000 / S$9,000 / S$15,000 by birth order). CDA funds can be used at approved childcare, kindergartens and healthcare providers.</p>
+<h3>The new SG Child Support Package (children born from 1 April 2027)</h3>
+<p>Announced in 2026, the new package raises direct support to around <strong>S$70,000 per child</strong>:</p>
+<table>
+<tr><th>Component</th><th>Amount</th></tr>
+<tr><td>Baby Gift (two tranches within 12 months)</td><td style="text-align:right">S$10,000</td></tr>
+<tr><td>Child Credits — S$2,000/year, ages 1 to 16</td><td style="text-align:right">S$32,000</td></tr>
+<tr><td>CDA First Step Grant</td><td style="text-align:right">S$5,000</td></tr>
+<tr><td>CDA government co-matching cap</td><td style="text-align:right">S$5,000</td></tr>
+<tr><td>PSEA top-up at age 17</td><td style="text-align:right">S$10,000</td></tr>
+<tr><td>MediSave Grant for newborns</td><td style="text-align:right">S$5,000</td></tr>
+<tr><td>Edusave (primary + secondary, approx.)</td><td style="text-align:right">~S$2,500</td></tr>
+<tr><td><strong>Maximum total</strong></td><td style="text-align:right"><strong>~S$69,500</strong></td></tr>
+</table>
+<div class="info"><strong>Also coming:</strong> from the same announcement, parents of Singapore-citizen children aged 12 and below get <strong>8, 10 or 12 days of childcare leave a year</strong> depending on whether they have one, two or three such children — up from 6 days (or 2 days for ages 7–12) today.</div>
+<div class="note"><strong>Worked example:</strong> A first child born in November 2026 falls under the current scheme: S$11,000 cash gift + S$5,000 CDA First Step + up to S$4,000 co-matching + S$5,000 MediSave grant = <strong>S$25,000</strong> in support (plus a S$5,000 tax rebate). The same child born in May 2027 gets the new package worth about <strong>S$69,500</strong>.</div>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>When does the new SG Child Support Package start?</summary><p>For children born or adopted on or after <strong>1 April 2027</strong>. Children born before that date stay on the current Baby Bonus Scheme — transition rules apply to births near the cutover, so confirm your eligibility on LifeSG.</p></details>
+<details><summary>Who qualifies for Baby Bonus / the Child Support Package?</summary><p>The child must be a <strong>Singapore citizen</strong>. For the new package, the child must be born on or after 1 April 2027 and be a Singapore citizen.</p></details>
+<details><summary>How does the CDA co-matching work?</summary><p>You save money into your child's Child Development Account, and the government matches it dollar-for-dollar up to the cap for your child's birth order. If you don't save, you don't get the match — it is "use it or lose it" while the child is young.</p></details>
+<details><summary>What are Child Credits?</summary><p>Under the new package, the child receives <strong>S$2,000 a year in cash from age 1 to 16</strong> — S$32,000 in total — providing steady support through the school years instead of concentrating everything at birth.</p></details>
+<details><summary>What is the Large Families Scheme?</summary><p>For 3rd and subsequent Singapore-citizen children born from 18 February 2025, the CDA First Step Grant doubles to <strong>S$10,000</strong> (from S$5,000), and further support for large families is being developed.</p></details>
+<details><summary>Is this calculator official?</summary><p>No — it is an independent, indicative estimate based on government announcements. Your exact payout schedule is available at go.gov.sg/bbfamilyview and in the LifeSG app after birth registration.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published summaries of the Baby Bonus Scheme, the Large Families Scheme and the announced SG Child Support Package (details still being finalised for some components). It is not financial advice — confirm amounts and eligibility on LifeSG and with the National Population and Talent Division.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Singapore Baby Bonus Calculator</h4><p>Free Baby Bonus and SG Child Support Package calculator — see the full government support stack for your child, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-sg-foreign-worker-levy-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Singapore Foreign Worker Levy Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-au-baby-cost-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Australia Baby Cost Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-matleave-topup.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Maternity Leave Top-Up</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-au-divorce-cost-estimator.surge.sh" style="color:#4b5563;text-decoration:none;">Australia Divorce Cost Estimator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
