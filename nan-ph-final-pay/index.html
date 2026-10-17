@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Pay / Last Pay Calculator Philippines 2026 — Resignation & Separation</title>
+<meta name="description" content="Free Philippine final pay calculator: estimate your last pay on resignation — unpaid salary, pro-rated 13th month pay, unused leave conversion and separation pay. 30-day release rule, FAQs.">
+<link rel="canonical" href="https://nan-ph-final-pay.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>PH Final Pay</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Final Pay / Last Pay Calculator Philippines (2026)</h1>
+<p class="lede">Estimate what your employer owes you when you leave — unpaid salary, pro-rated 13th month pay, unused leave conversion and separation pay, under DOLE rules.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Final Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="salary">Monthly basic salary (₱)</label>
+<input type="number" id="salary" value="25000" min="0" step="500"></div>
+<div class="field"><label for="unpaid">Unpaid salary still owed (₱)</label>
+<input type="number" id="unpaid" value="10000" min="0" step="500">
+<span class="hint">Salary earned from the last payroll cut-off up to your last day.</span></div>
+<div class="field"><label for="months">Months worked this calendar year</label>
+<input type="number" id="months" value="8" min="0" max="12" step="0.5">
+<span class="hint">Used for pro-rated 13th month pay (basic salary earned ÷ 12).</span></div>
+<div class="field"><label for="leave">Unused convertible leave days</label>
+<input type="number" id="leave" value="5" min="0" max="60">
+<span class="hint">Service incentive leave + any company vacation/sick leave that converts to cash.</span></div>
+<div class="field"><label for="cause">Reason for separation</label>
+<select id="cause">
+<option value="resign">Resignation (no separation pay)</option>
+<option value="redundancy">Redundancy / labor-saving devices (1 month per year)</option>
+<option value="retrenchment">Retrenchment / closure without serious losses / disease (½ month per year)</option>
+</select></div>
+<div class="field"><label for="yos">Years of service (for separation pay)</label>
+<input type="number" id="yos" value="3" min="0" max="60" step="0.5">
+<span class="hint">A fraction of at least 6 months counts as a whole year.</span></div>
+<div class="field"><label for="deduct">Deductions (₱)</label>
+<input type="number" id="deduct" value="0" min="0" step="500">
+<span class="hint">Salary loans, unreturned advances — only lawful, documented deductions.</span></div>
+<button class="btn" onclick="calcFinal()">Calculate Final Pay</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return '\u20B1'+Math.round(n).toLocaleString('en-PH');}
+function calcFinal(){
+  const salary=parseFloat(document.getElementById('salary').value)||0;
+  const unpaid=parseFloat(document.getElementById('unpaid').value)||0;
+  const months=parseFloat(document.getElementById('months').value)||0;
+  const leave=parseFloat(document.getElementById('leave').value)||0;
+  const cause=document.getElementById('cause').value;
+  const yos=parseFloat(document.getElementById('yos').value)||0;
+  const deduct=parseFloat(document.getElementById('deduct').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(salary<=0){r.innerHTML='<p>Please enter your monthly basic salary.</p>';return;}
+  const thirteenth=salary*months/12;
+  const daily=salary/26;
+  const leavePay=daily*leave;
+  let sep=0,sepLabel='None (resignation — not legally required)';
+  const cy=Math.floor(yos)+(yos%1>=0.5?1:0);
+  if(cause==='redundancy'){sep=Math.max(salary,salary*cy);sepLabel=fmt(salary)+' \u00D7 '+cy+' yr(s), min 1 month';}
+  if(cause==='retrenchment'){sep=Math.max(salary,salary*0.5*cy);sepLabel=fmt(salary)+' \u00D7 \u00BD \u00D7 '+cy+' yr(s), min 1 month';}
+  const gross=unpaid+thirteenth+leavePay+sep;
+  const net=Math.max(0,gross-deduct);
+  r.innerHTML='<div class="big">'+fmt(net)+'<small>estimated NET final pay</small></div>'
+  +'<table><tr><td>Unpaid salary</td><td>'+fmt(unpaid)+'</td></tr>'
+  +'<tr><td>Pro-rated 13th month ('+months+'/12)</td><td>'+fmt(thirteenth)+'</td></tr>'
+  +'<tr><td>Unused leave ('+leave+' days \u00D7 '+fmt(daily)+')</td><td>'+fmt(leavePay)+'</td></tr>'
+  +'<tr><td>Separation pay</td><td>'+fmt(sep)+'</td></tr>'
+  +'<tr><td>Less: deductions</td><td>\u2212 '+fmt(deduct)+'</td></tr></table>'
+  +'<p class="hint">Separation pay: '+sepLabel+'. Actual final pay also adjusts for tax and government contributions — confirm the statement with HR.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Is Included in Final Pay</h2>
+<ul>
+<li><strong>Unpaid salary and wages</strong> — earned from the last cut-off to your last day, plus any earned overtime, premiums and incentives.</li>
+<li><strong>Pro-rated 13th month pay</strong> = total basic salary earned in the calendar year ÷ 12 (Presidential Decree 851). You keep it even if you resign in November.</li>
+<li><strong>Leave conversion</strong> — unused service incentive leave (5 days/year) plus any company vacation or sick leave that your policy allows to convert, multiplied by your daily rate.</li>
+<li><strong>Separation pay</strong> — only for authorized causes: at least <strong>1 month or 1 month's pay per year of service</strong> (whichever is higher) for redundancy or installation of labor-saving devices; <strong>1 month or ½ month's pay per year</strong> for retrenchment, closure without serious losses, or disease. No separation pay for resignation or just-cause dismissal unless policy provides it.</li>
+<li><strong>Returnables</strong> — cash bonds/deposits and any tax refund (over-withheld tax via BIR Form 2316).</li>
+<li>Minus only <strong>lawful deductions</strong>: tax, statutory contributions, and documented loans/advances.</li>
+</ul>
+<h2>The 30-Day Release Rule</h2>
+<p><strong>DOLE Labor Advisory No. 06-2020</strong> requires employers to release final pay within <strong>30 calendar days</strong> from separation. "Back pay" strictly means wages already earned but not yet released — it is not a bonus. If release is delayed, you may file a Request for Assistance (SEnA) at the nearest DOLE regional office; money claims prescribe within 3 years.</p>
+<h3>Worked example</h3>
+<p>₱20,000 salary, resigned after 10 months, ₱20,000 unpaid salary, 5 unused leave days: pro-rated 13th = (20,000 × 10) ÷ 12 = <strong>₱16,667</strong>; leave conversion = (20,000 ÷ 26) × 5 = <strong>₱3,846</strong>; gross final pay = 20,000 + 16,667 + 3,846 = <strong>₱40,513</strong> before deductions.</p>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Do I lose my 13th month pay if I resign before December?</summary><p>No. You are entitled to pro-rated 13th month pay for the basic salary you earned during the year, payable as part of final pay — usually within 30 days of separation, not year-end.</p></details>
+<details><summary>Is separation pay automatic when I resign?</summary><p>No. Resignation does not legally require separation pay. It is owed only for authorized causes (redundancy, retrenchment, closure, disease) or if your company policy or CBA grants it.</p></details>
+<details><summary>What is "back pay" exactly?</summary><p>DOLE distinguishes the terms: <strong>final pay</strong> is the full package of entitlements on separation; <strong>back pay</strong> strictly refers to unpaid wages or overtime already earned but not yet released.</p></details>
+<details><summary>Can my employer deduct cash advances and loans?</summary><p>Yes, if they are documented and authorized in writing (loans, advances, accountabilities). Unauthorized fees or arbitrary penalties are prohibited by Article 113 of the Labor Code.</p></details>
+<details><summary>What should I do if my final pay is delayed past 30 days?</summary><p>Follow up in writing, then file a Request for Assistance through DOLE's SEnA portal or the nearest regional office. Keep your payslips, contract, resignation/termination letter and computation sheet as evidence.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published DOLE/Labor Code rules. Tax treatment, government contributions, company policies and CBAs change the exact figures — your employer's final pay statement and DOLE guidance are the final word.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN PH Final Pay Calculator</h4><p>Free Philippine final pay calculator and guides — estimate your last pay on resignation, 13th month proration, leave conversion and separation pay.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ph-retirement-pay.surge.sh" style="color:#4b5563;text-decoration:none;">PH Retirement Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
