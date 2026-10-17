@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Retail — Sales Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{ --navy:#0A1628; --navy2:#0F1E38; --teal:#14B8A6; --teal-d:#0E9A8E; --ink:#EAF2F5; --mut:#93A7B8; --card:#12233F; --line:#1E3355; }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+  body{background:linear-gradient(160deg,var(--navy) 0%,#0C1B33 100%);color:var(--ink);min-height:100vh;padding:24px}
+  .wrap{max-width:1200px;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),#0E7C72);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#04121A}
+  h1{font-size:22px} h1 small{display:block;font-size:12px;color:var(--mut);font-weight:400}
+  .live{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
+  .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px #22C55E;animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.5}}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:20px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .kpi .lbl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+  .kpi .val{font-size:30px;font-weight:800;margin:6px 0 2px}
+  .kpi .delta{font-size:13px} .up{color:#22C55E} .down{color:#F87171}
+  .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:15px;margin-bottom:4px} .card p{font-size:12px;color:var(--mut);margin-bottom:14px}
+  .chartbox{position:relative;height:300px}
+  .chartbox.sm{height:260px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  th{text-align:left;color:var(--mut);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  td{padding:10px 6px;border-bottom:1px solid #182B4A}
+  .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+  .p-hot{background:rgba(20,184,166,.15);color:var(--teal)} .p-warm{background:rgba(251,191,36,.12);color:#FBBF24} .p-cool{background:rgba(147,167,184,.12);color:var(--mut)}
+  footer{margin-top:24px;text-align:center;color:var(--mut);font-size:12px}
+  footer a{color:var(--teal);text-decoration:none}
+  @media(max-width:900px){.grid,.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo">N</div>
+      <h1>Nova Retail <small>Business Sales Dashboard — live demo</small></h1>
+    </div>
+    <div class="live"><span class="dot"></span> Live &nbsp;·&nbsp; Updated just now</div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">Total Revenue</div><div class="val">$284,590</div><div class="delta up">▲ 18.2% vs last quarter</div></div>
+    <div class="kpi"><div class="lbl">Orders</div><div class="val">12,483</div><div class="delta up">▲ 9.4% vs last quarter</div></div>
+    <div class="kpi"><div class="lbl">Active Customers</div><div class="val">8,214</div><div class="delta up">▲ 12.7% vs last quarter</div></div>
+    <div class="kpi"><div class="lbl">Avg. Order Value</div><div class="val">$22.80</div><div class="delta down">▼ 2.1% vs last quarter</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Revenue by Month</h3><p>Last 12 months · all channels</p>
+      <div class="chartbox"><canvas id="revChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Sales by Region</h3><p>Share of total revenue</p>
+      <div class="chartbox sm"><canvas id="regionChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Top Products</h3><p>Units sold this quarter</p>
+      <div class="chartbox sm"><canvas id="prodChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Recent High-Value Orders</h3><p>Flagged by the system</p>
+      <table>
+        <tr><th>Order</th><th>Customer</th><th>Value</th><th>Status</th></tr>
+        <tr><td>#90412</td><td>Amelia R.</td><td>$1,240</td><td><span class="pill p-hot">Shipped</span></td></tr>
+        <tr><td>#90408</td><td>Daniel K.</td><td>$980</td><td><span class="pill p-warm">Processing</span></td></tr>
+        <tr><td>#90397</td><td>Sofia M.</td><td>$860</td><td><span class="pill p-hot">Shipped</span></td></tr>
+        <tr><td>#90391</td><td>Liam T.</td><td>$745</td><td><span class="pill p-cool">Delivered</span></td></tr>
+        <tr><td>#90385</td><td>Olivia P.</td><td>$690</td><td><span class="pill p-cool">Delivered</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>Demo dashboard built by <a href="https://nidaayesha.com">NAN Marketing Agency</a> — need one for your business? <a href="https://nidaayesha.com">Order yours</a>.</footer>
+</div>
+
+<script>
+Chart.defaults.color = '#93A7B8';
+Chart.defaults.borderColor = '#1E3355';
+Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
+
+const teal = '#14B8A6', tealSoft = 'rgba(20,184,166,.25)';
+
+new Chart(document.getElementById('revChart'), {
+  type: 'line',
+  data: { labels:['Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'],
+    datasets:[
+      {label:'Revenue ($k)', data:[18.2,21.5,19.8,22.4,24.1,23.6,26.9,28.4,27.2,30.1,32.8,34.6],
+       borderColor:teal, backgroundColor:tealSoft, fill:true, tension:.4, pointRadius:3, pointBackgroundColor:teal},
+      {label:'Target ($k)', data:[20,20,21,21,22,22,24,24,26,26,28,28],
+       borderColor:'#5B6B82', borderDash:[6,6], fill:false, tension:.3, pointRadius:0}
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{boxWidth:12}}},
+    scales:{y:{ticks:{callback:v=>'$'+v+'k'}}}}
+});
+
+new Chart(document.getElementById('regionChart'), {
+  type:'doughnut',
+  data:{labels:['North America','Europe','Middle East','Asia Pacific','Latin America'],
+    datasets:[{data:[38,24,14,16,8],
+      backgroundColor:['#14B8A6','#0E9A8E','#FBBF24','#5B8DEF','#F87171'],borderWidth:0}]},
+  options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
+    plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:14}}}}
+});
+
+new Chart(document.getElementById('prodChart'), {
+  type:'bar',
+  data:{labels:['Aurora Lamp','Terra Mug Set','Nimbus Chair','Drift Backpack','Halo Speaker'],
+    datasets:[{label:'Units sold',data:[4820,3950,3110,2740,1980],
+      backgroundColor:['#14B8A6','#0FB5A3','#0E9A8E','#0C8579','#0A6E64'],borderRadius:6}]},
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{ticks:{callback:v=>v.toLocaleString()}}}}
+});
+</script>
+</body>
+</html>
