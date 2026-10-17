@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COIDA Calculator South Africa 2026 — Return of Earnings Assessment Estimator</title>
+<meta name="description" content="Free COIDA calculator for South African employers: estimate your Compensation Fund Return of Earnings assessment — industry tariff, R668,000 earnings ceiling and minimum assessment applied.">
+<link rel="canonical" href="https://nan-za-coida-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>COIDA Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>COIDA Assessment Calculator South Africa 2026</h1>
+<p class="lede">Estimate your Compensation Fund assessment for the annual Return of Earnings (ROE) — industry tariff, per-employee earnings ceiling and the statutory minimum all applied.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Estimate Your COIDA Assessment</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="year">Assessment year</label>
+<select id="year">
+<option value="2026">2026/2027 — ceiling R668,000 per employee (from 1 March 2026)</option>
+<option value="2025">2025/2026 — ceiling R633,168 per employee (1 Mar 2025 – 28 Feb 2026)</option>
+</select>
+<span class="hint">The return covers actual earnings for the past year plus provisional earnings for the year ahead.</span></div>
+<div class="field"><label for="type">Employer type</label>
+<select id="type">
+<option value="commercial">Commercial employer (minimum assessment R1,621)</option>
+<option value="domestic">Household / domestic employer (minimum assessment R560)</option>
+</select></div>
+<div class="field"><label for="payroll">Total annual remuneration paid to employees (R)</label>
+<input type="number" id="payroll" value="800000" min="0" step="1000">
+<span class="hint">All salaries, wages, overtime, bonuses and commissions for the assessment year.</span></div>
+<div class="field"><label for="staff">Number of employees</label>
+<input type="number" id="staff" value="5" min="1" max="10000">
+<span class="hint">Used to apply the per-employee earnings ceiling.</span></div>
+<div class="field"><label for="tariff">Industry tariff class</label>
+<select id="tariff">
+<option value="0.18">Office / professional services — 0.18%</option>
+<option value="0.81">Retail &amp; hospitality — 0.81%</option>
+<option value="2.65">Construction / transport / security — 2.65%</option>
+<option value="2.71">Underground mining — 2.71%</option>
+<option value="custom">Custom — enter my tariff from my last assessment</option>
+</select>
+<span class="hint">Representative rates from the Compensation Fund's Schedule A. Higher-risk industries pay more.</span></div>
+<div class="field" id="customWrap" style="display:none"><label for="customRate">Your tariff (%)</label>
+<input type="number" id="customRate" value="1.0" min="0" max="10" step="0.01"></div>
+<button class="btn" onclick="calcCOIDA()">Calculate Assessment</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'R'+Math.round(n).toLocaleString('en-US');}
+document.getElementById('tariff').addEventListener('change',function(){
+  document.getElementById('customWrap').style.display = this.value==='custom' ? 'block' : 'none';
+});
+function calcCOIDA(){
+  const year=document.getElementById('year').value;
+  const type=document.getElementById('type').value;
+  const payroll=parseFloat(document.getElementById('payroll').value)||0;
+  const staff=Math.max(1,parseInt(document.getElementById('staff').value)||1);
+  const tsel=document.getElementById('tariff').value;
+  const tariff = tsel==='custom' ? (parseFloat(document.getElementById('customRate').value)||0) : parseFloat(tsel);
+  const ceiling = year==='2026' ? 668000 : 633168;
+  const minimum = type==='commercial' ? 1621 : 560;
+  const r=document.getElementById('result');r.style.display='block';
+  if(payroll<=0){r.innerHTML='<p>Please enter your total annual remuneration.</p>';return;}
+  const avgPerEmp=payroll/staff;
+  const cappedPerEmp=Math.min(avgPerEmp,ceiling);
+  const cappedTotal=cappedPerEmp*staff;
+  const raw=(cappedTotal/100)*tariff;
+  const payable=Math.max(raw,minimum);
+  const minApplied = raw<minimum;
+  r.innerHTML='<div class="big">'+fmt(payable)+'<small>estimated annual COIDA assessment</small></div>'
+  +'<table>'
+  +'<tr><td>Assessment year</td><td>'+(year==='2026'?'2026/2027':'2025/2026')+'</td></tr>'
+  +'<tr><td>Earnings ceiling per employee</td><td>'+fmt(ceiling)+'</td></tr>'
+  +'<tr><td>Declared payroll</td><td>'+fmt(payroll)+'</td></tr>'
+  +'<tr><td>Payroll after ceiling</td><td>'+fmt(cappedTotal)+'</td></tr>'
+  +'<tr><td>Industry tariff</td><td>'+tariff+'%</td></tr>'
+  +'<tr><td>Calculated fee (payroll ÷ 100 × tariff)</td><td>'+fmt(raw)+'</td></tr>'
+  +'<tr><td>Statutory minimum</td><td>'+fmt(minimum)+(minApplied?' — applied':'')+'</td></tr>'
+  +'</table>'
+  +'<p class="hint">Assessment = (capped remuneration ÷ 100) × tariff. The fee is never below the statutory minimum. Payable within 30 days of assessment (COIDA s86) — a paid, up-to-date return earns your Letter of Good Standing.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How the COIDA Assessment Works</h2>
+<p>Every COIDA-registered employer pays an <strong>annual assessment</strong> to the Compensation Fund, calculated from the Return of Earnings (ROE) declaration:</p>
+<div class="note"><strong>Assessment fee = (total remuneration ÷ 100) × industry tariff.</strong><br>
+The Fund places each employer in an industry class by risk: office and professional services carry the lowest tariffs (around 0.18%), retail and hospitality more (around 0.81%), and construction, transport, security and underground mining the highest (around 2.65%–2.71%).<br>
+<strong>Earnings ceiling:</strong> only the first R633,168 of each employee's annual earnings counts for the 2025/2026 year (1 March 2025 – 28 February 2026); from 1 March 2026 the ceiling rose to <strong>R668,000</strong>.<br>
+<strong>Minimum assessment:</strong> R1,621 for commercial employers and R560 for household/domestic employers — you pay the minimum even if the formula gives less.</div>
+<h3>Worked Example</h3>
+<p>A small construction company with 5 employees on combined annual remuneration of <strong>R800,000</strong> (R160,000 each — under the ceiling) at a <strong>1.9%</strong> tariff: (R800,000 ÷ 100) × 1.9 = <strong>R15,200</strong> for the year. A professional-services firm with 3 employees on R450,000 combined at 0.2% would calculate R900 — but the minimum applies, so it pays <strong>R1,621</strong>.</p>
+<h2>Who Must Register?</h2>
+<p>Every employer with employees must register with the Compensation Fund — sole proprietors with no staff do not. Since the 2020 Constitutional Court ruling, <strong>domestic workers are covered too</strong>, so households employing domestic staff must register and file ROE like any commercial employer. Registration is free; the assessment is the annual cost.</p>
+<h2>The Letter of Good Standing</h2>
+<p>Once your assessment is paid and your ROE is up to date, the Compensation Commissioner issues a <strong>Letter of Good Standing</strong> — proof of compliance frequently required for tenders, site work and contractor onboarding. Missing the ROE deadline can mean penalties, interest and loss of good standing.</p>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>When is the ROE due?</summary><p>The Return of Earnings covers 1 March to the end of February each year and is typically submitted early in the new assessment year — file it as soon as the window opens so the assessment and Letter of Good Standing arrive in time for tender season.</p></details>
+<details><summary>What counts as remuneration for COIDA?</summary><p>Salaries, wages, overtime payments, bonuses, commissions and other cash earnings — subject to the per-employee ceiling. Earnings above the ceiling (R633,168 for 2025/26, R668,000 from 1 March 2026) are excluded from the calculation.</p></details>
+<details><summary>Where do I find my tariff?</summary><p>Your industry class and tariff are on your assessment notice from the Compensation Fund. The calculator above uses representative Schedule A rates — always confirm your own class before filing.</p></details>
+<details><summary>Do domestic employers really pay COIDA?</summary><p>Yes. Since 2020, COIDA covers domestic workers, so households must register, submit a Return of Earnings and pay the annual assessment (minimum R560).</p></details>
+<details><summary>What if I don't register or file?</summary><p>Non-registration is an offence, the Fund can assess you on estimated earnings, and you lose the Letter of Good Standing — while remaining fully exposed if an employee is injured on duty.</p></details>
+<details><summary>Is the assessment the same as UIF or SDL?</summary><p>No. UIF (1% + 1% to R17,712/month) and SDL (1% above R500,000 payroll) go to SARS via the EMP201; the COIDA assessment is a separate annual levy paid to the Compensation Fund via the ROE.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published summaries of COIDA assessment rules (earnings ceilings per Government Gazette 54577 and representative Schedule A tariffs). Your actual assessment depends on your registered industry class, exact tariff and declared earnings. It is not legal or tax advice — confirm with your assessment notice or a compliance practitioner.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN COIDA Calculator</h4><p>Free COIDA Return of Earnings assessment estimator for South African employers — industry tariff, earnings ceiling and minimum assessment, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-za-coida-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">COIDA Assessment Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-za-eti-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">ETI Calculator South Africa</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
