@@ -44,6 +44,35 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 .fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
 @media(max-width:720px){.fcols{grid-template-columns:1fr}}
 .copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
 </style>
 </head>
 <body>
@@ -52,8 +81,12 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 <nav class="nav"><a href="index.html">Calculator</a></nav>
 </div></header>
 <main><div class="wrap">
+<section class="hero">
+<span class="hero-badge">Article 51 · Federal Decree-Law No. 33 of 2021</span>
 <h1>UAE Gratuity Calculator (2026)</h1>
 <p class="lede">Estimate your end-of-service gratuity in seconds using the official Article 51 formula — 21 days of basic salary per year for the first 5 years, 30 days per year after that, with pro-rata for part-years and the 2-year salary cap.</p>
+<div class="hero-chips"><span>21 / 30-day tiers</span><span>Basic-salary basis</span><span>Free</span></div>
+</section>
 
 <div class="panel">
 <h2 style="margin-top:0">Calculate Your Gratuity</h2>
@@ -141,6 +174,15 @@ Next 2 years: 8,000 ÷ 30 × 30 × 2 = AED 16,000<br>
 <li><strong>Rounding years before the split</strong> — the 21/30-day boundary applies exactly at the 5-year mark, including fractions of years.</li>
 <li><strong>Missing the claim deadline</strong> — since a 2024 amendment, employment claims must be filed within <strong>2 years</strong> of the employment ending.</li>
 </ul>
+<h2>How it works</h2>
+<div class="how">
+<div class="how-step"><span class="n">1</span><h3>Enter basic salary</h3><p>Gratuity is calculated on basic salary only — not allowances.</p></div><div class="how-step"><span class="n">2</span><h3>Add your service period</h3><p>From joining date to last working day.</p></div><div class="how-step"><span class="n">3</span><h3>Get your gratuity</h3><p>21 days per year for the first 5 years, 30 days per year after.</p></div>
+</div>
+<div class="srcnote"><strong>Accuracy note:</strong> Per Article 51 of Federal Decree-Law No. 33 of 2021: 21 days' basic wage per year for the first 5 years, 30 days per year beyond that, capped at 2 years' wage. Allowances are excluded by law.</div>
+<section class="guides"><h2>Guides</h2>
+<ul>
+<li><a href="articles/uae-gratuity-calculation-guide-2026.html">UAE Gratuity 2026: Complete Calculation Guide</a> — Article 51 formula, worked examples & claiming unpaid gratuity.</li>
+</ul></section>
 <div class="faq">
 <h2>FAQs</h2>
 <details><summary>Is gratuity paid on basic salary or gross salary?</summary><p>Basic salary only — the wage stated in your MOHRE employment contract, excluding housing, transport and other allowances. Daily wage is the monthly basic salary divided by 30.</p></details>
