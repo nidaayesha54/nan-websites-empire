@@ -3,128 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova Retail — Sales Dashboard</title>
+<title>Nova Retail · Sales Overview</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%2314B8A6' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
-  :root{ --navy:#0A1628; --navy2:#0F1E38; --teal:#14B8A6; --teal-d:#0E9A8E; --ink:#EAF2F5; --mut:#93A7B8; --card:#12233F; --line:#1E3355; }
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
-  body{background:linear-gradient(160deg,var(--navy) 0%,#0C1B33 100%);color:var(--ink);min-height:100vh;padding:24px}
-  .wrap{max-width:1200px;margin:0 auto}
-  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),#0E7C72);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#04121A}
-  h1{font-size:22px} h1 small{display:block;font-size:12px;color:var(--mut);font-weight:400}
-  .live{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
-  .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px #22C55E;animation:pulse 2s infinite}
-  @keyframes pulse{50%{opacity:.5}}
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:20px}
-  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-  .kpi .lbl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
-  .kpi .val{font-size:30px;font-weight:800;margin:6px 0 2px}
-  .kpi .delta{font-size:13px} .up{color:#22C55E} .down{color:#F87171}
-  .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-  .card h3{font-size:15px;margin-bottom:4px} .card p{font-size:12px;color:var(--mut);margin-bottom:14px}
-  .chartbox{position:relative;height:300px}
-  .chartbox.sm{height:260px}
-  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
-  th{text-align:left;color:var(--mut);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-  td{padding:10px 6px;border-bottom:1px solid #182B4A}
-  .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
-  .p-hot{background:rgba(20,184,166,.15);color:var(--teal)} .p-warm{background:rgba(251,191,36,.12);color:#FBBF24} .p-cool{background:rgba(147,167,184,.12);color:var(--mut)}
-  footer{margin-top:24px;text-align:center;color:var(--mut);font-size:12px}
-  footer a{color:var(--teal);text-decoration:none}
-  @media(max-width:900px){.grid,.grid2{grid-template-columns:1fr}}
+  :root{
+    --bg:#080D18; --panel:#0C1322; --panel2:#101A2E; --border:#1B2740;
+    --teal:#14B8A6; --teal-dim:rgba(20,184,166,.12);
+    --ink:#E8EEF4; --mut:#8B98AD; --mut2:#5C6B84;
+    --green:#34D399; --amber:#FBBF24; --red:#F87171; --blue:#60A5FA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:14px;min-height:100vh}
+  .app{display:flex;min-height:100vh}
+
+  /* ---------- sidebar ---------- */
+  .side{width:232px;flex-shrink:0;background:var(--panel);border-right:1px solid var(--border);padding:20px 14px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+  .brand{display:flex;align-items:center;gap:10px;padding:2px 8px 18px}
+  .brand .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#14B8A6,#0B6E64);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#04141A}
+  .brand .nm{font-weight:700;font-size:15px;letter-spacing:-.2px}
+  .brand .nm small{display:block;font-weight:500;font-size:10.5px;color:var(--mut2)}
+  .nav-sec{font-size:10.5px;font-weight:600;letter-spacing:1.2px;color:var(--mut2);text-transform:uppercase;padding:14px 10px 6px}
+  .nav a{display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:8px;color:var(--mut);text-decoration:none;font-size:13.5px;font-weight:500;transition:all .15s}
+  .nav a svg{width:17px;height:17px;opacity:.75}
+  .nav a:hover{background:#141E33;color:var(--ink)}
+  .nav a.on{background:var(--teal-dim);color:var(--teal);font-weight:600}
+  .nav a.on svg{opacity:1}
+  .side .foot{margin-top:auto;padding:12px 10px;border-top:1px solid var(--border);display:flex;align-items:center;gap:10px}
+  .avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#14B8A6);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
+  .side .foot .who{font-size:12.5px;font-weight:600}
+  .side .foot .who small{display:block;color:var(--mut2);font-weight:400;font-size:11px}
+
+  /* ---------- main ---------- */
+  .main{flex:1;min-width:0;padding:0 28px 40px}
+  .topbar{display:flex;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--border);margin-bottom:24px;position:sticky;top:0;background:rgba(8,13,24,.88);backdrop-filter:blur(10px);z-index:5}
+  .topbar h1{font-size:19px;font-weight:700;letter-spacing:-.3px}
+  .topbar h1 span{color:var(--mut2);font-weight:400;font-size:13px;margin-left:8px}
+  .search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:8px 12px;color:var(--mut2);font-size:13px;min-width:220px;transition:border .15s}
+  .search:focus-within{border-color:var(--teal)}
+  .search input{background:none;border:none;outline:none;color:var(--ink);font-size:13px;width:100%;font-family:inherit}
+  .iconbtn{width:36px;height:36px;border-radius:9px;border:1px solid var(--border);background:var(--panel);color:var(--mut);cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;transition:all .15s}
+  .iconbtn:hover{color:var(--ink);border-color:#2A3A58}
+  .iconbtn .n{position:absolute;top:7px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+  .kpi{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;transition:transform .15s,border .15s}
+  .kpi:hover{transform:translateY(-2px);border-color:#26375A}
+  .kpi .t{font-size:12px;color:var(--mut);font-weight:500;display:flex;justify-content:space-between;align-items:center}
+  .kpi .v{font-size:27px;font-weight:800;letter-spacing:-.8px;margin:8px 0 4px;font-variant-numeric:tabular-nums}
+  .kpi .d{font-size:12px;font-weight:600}
+  .up{color:var(--green)} .down{color:var(--red)}
+  .kpi .d small{color:var(--mut2);font-weight:400;margin-left:4px}
+
+  .grid{display:grid;grid-template-columns:1.9fr 1fr;gap:14px;margin-bottom:14px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px}
+  .card .ch{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
+  .card h3{font-size:14.5px;font-weight:650;letter-spacing:-.2px}
+  .card .sub{font-size:12px;color:var(--mut2);margin-bottom:16px}
+  .seg{display:flex;background:#0A1120;border:1px solid var(--border);border-radius:8px;padding:3px;gap:2px}
+  .seg button{background:none;border:none;color:var(--mut);font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:6px;cursor:pointer;font-family:inherit;transition:all .15s}
+  .seg button.on{background:#1B2946;color:var(--ink)}
+  .chartbox{position:relative;height:290px}
+  .chartbox.sm{height:250px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;color:var(--mut2);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--border);font-size:10.5px;text-transform:uppercase;letter-spacing:.8px}
+  td{padding:11px 6px;border-bottom:1px solid #131D33;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  tbody tr{transition:background .12s}
+  tbody tr:hover{background:#0F1830}
+  .st{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px}
+  .st::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor}
+  .s-ship{background:rgba(20,184,166,.1);color:var(--teal)}
+  .s-proc{background:rgba(251,191,36,.1);color:var(--amber)}
+  .s-done{background:rgba(139,152,173,.1);color:var(--mut)}
+  .prod-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #131D33}
+  .prod-row:last-child{border:none}
+  .prod-ic{width:36px;height:36px;border-radius:9px;background:#141E33;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+  .prod-row .inf{flex:1;min-width:0}
+  .prod-row .pn{font-size:13px;font-weight:600}
+  .prod-row .pc{font-size:11.5px;color:var(--mut2)}
+  .prod-row .pv{text-align:right;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+  .prod-row .pv small{display:block;color:var(--mut2);font-weight:400;font-size:11px}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:var(--mut2);font-size:12px;flex-wrap:wrap;gap:8px}
+  footer a{color:var(--teal);text-decoration:none;font-weight:600}
+  @media(max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.grid,.grid2{grid-template-columns:1fr}}
+  @media(max-width:760px){.side{display:none}.main{padding:0 16px 32px}.search{display:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
+<div class="app">
+  <aside class="side">
     <div class="brand">
-      <div class="logo">N</div>
-      <h1>Nova Retail <small>Business Sales Dashboard — live demo</small></h1>
+      <div class="mark">N</div>
+      <div class="nm">Nova Retail<small>Business dashboard</small></div>
     </div>
-    <div class="live"><span class="dot"></span> Live &nbsp;·&nbsp; Updated just now</div>
-  </header>
+    <div class="nav-sec">Workspace</div>
+    <nav class="nav">
+      <a href="#" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Overview</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Analytics</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>Orders</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Products</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M21.5 20a6.5 6.5 0 00-4-6"/></svg>Customers</a>
+    </nav>
+    <div class="nav-sec">System</div>
+    <nav class="nav">
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.2a1.7 1.7 0 00-1-1.5 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.2a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3h0a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.2a1.7 1.7 0 001 1.5h0a1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9v0a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.2a1.7 1.7 0 00-1.5 1z"/></svg>Settings</a>
+    </nav>
+    <div class="foot">
+      <div class="avatar">SK</div>
+      <div class="who">Sarah Kim<small>Store manager</small></div>
+    </div>
+  </aside>
 
-  <div class="kpis">
-    <div class="kpi"><div class="lbl">Total Revenue</div><div class="val">$284,590</div><div class="delta up">▲ 18.2% vs last quarter</div></div>
-    <div class="kpi"><div class="lbl">Orders</div><div class="val">12,483</div><div class="delta up">▲ 9.4% vs last quarter</div></div>
-    <div class="kpi"><div class="lbl">Active Customers</div><div class="val">8,214</div><div class="delta up">▲ 12.7% vs last quarter</div></div>
-    <div class="kpi"><div class="lbl">Avg. Order Value</div><div class="val">$22.80</div><div class="delta down">▼ 2.1% vs last quarter</div></div>
+  <div class="main">
+    <div class="topbar">
+      <h1>Sales overview <span>Q4 2026 · All stores</span></h1>
+      <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search orders, products…"></div>
+      <button class="iconbtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg><span class="n"></span></button>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="t">Total revenue <span style="font-size:15px">◈</span></div><div class="v">$284,590</div><div class="d up">+18.2% <small>vs last quarter</small></div></div>
+      <div class="kpi"><div class="t">Orders <span style="font-size:15px">▤</span></div><div class="v">12,483</div><div class="d up">+9.4% <small>vs last quarter</small></div></div>
+      <div class="kpi"><div class="t">Active customers <span style="font-size:15px">◍</span></div><div class="v">8,214</div><div class="d up">+12.7% <small>vs last quarter</small></div></div>
+      <div class="kpi"><div class="t">Avg. order value <span style="font-size:15px">◎</span></div><div class="v">$22.80</div><div class="d down">−2.1% <small>vs last quarter</small></div></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ch">
+          <div><h3>Revenue trend</h3><div class="sub">Monthly revenue vs target · Oct 2025 – Sep 2026</div></div>
+          <div class="seg"><button class="on">12M</button><button>6M</button><button>30D</button></div>
+        </div>
+        <div class="chartbox"><canvas id="revChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>Revenue by region</h3><div class="sub">Share of trailing-12-month revenue</div>
+        <div class="chartbox sm"><canvas id="regionChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>Top products</h3><div class="sub">Units sold · current quarter</div>
+        <div class="prod-row"><div class="prod-ic">◐</div><div class="inf"><div class="pn">Aurora Table Lamp</div><div class="pc">Lighting · SKU-10482</div></div><div class="pv">4,820<small>units</small></div></div>
+        <div class="prod-row"><div class="prod-ic">◑</div><div class="inf"><div class="pn">Terra Stoneware Mug Set</div><div class="pc">Kitchen · SKU-20871</div></div><div class="pv">3,950<small>units</small></div></div>
+        <div class="prod-row"><div class="prod-ic">◒</div><div class="inf"><div class="pn">Nimbus Lounge Chair</div><div class="pc">Furniture · SKU-30917</div></div><div class="pv">3,110<small>units</small></div></div>
+        <div class="prod-row"><div class="prod-ic">◓</div><div class="inf"><div class="pn">Drift Canvas Backpack</div><div class="pc">Travel · SKU-41190</div></div><div class="pv">2,740<small>units</small></div></div>
+        <div class="prod-row"><div class="prod-ic">⬔</div><div class="inf"><div class="pn">Halo Smart Speaker</div><div class="pc">Electronics · SKU-50233</div></div><div class="pv">1,980<small>units</small></div></div>
+      </div>
+      <div class="card">
+        <h3>Recent orders</h3><div class="sub">Flagged for review · updated 4 min ago</div>
+        <table>
+          <tr><th>Order</th><th>Customer</th><th>Total</th><th>Status</th></tr>
+          <tr><td style="color:var(--mut)">#90412</td><td>Amelia Hart</td><td>$1,240.00</td><td><span class="st s-ship">Shipped</span></td></tr>
+          <tr><td style="color:var(--mut)">#90408</td><td>Daniel Okafor</td><td>$980.50</td><td><span class="st s-proc">Processing</span></td></tr>
+          <tr><td style="color:var(--mut)">#90397</td><td>Sofia Marchetti</td><td>$860.00</td><td><span class="st s-ship">Shipped</span></td></tr>
+          <tr><td style="color:var(--mut)">#90391</td><td>Liam Tran</td><td>$745.25</td><td><span class="st s-done">Delivered</span></td></tr>
+          <tr><td style="color:var(--mut)">#90385</td><td>Olivia Park</td><td>$690.00</td><td><span class="st s-done">Delivered</span></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <span>Nova Retail demo · Data refreshes hourly</span>
+      <span>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a> · Custom dashboards from $2,000</span>
+    </footer>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Revenue by Month</h3><p>Last 12 months · all channels</p>
-      <div class="chartbox"><canvas id="revChart"></canvas></div>
-    </div>
-    <div class="card">
-      <h3>Sales by Region</h3><p>Share of total revenue</p>
-      <div class="chartbox sm"><canvas id="regionChart"></canvas></div>
-    </div>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <h3>Top Products</h3><p>Units sold this quarter</p>
-      <div class="chartbox sm"><canvas id="prodChart"></canvas></div>
-    </div>
-    <div class="card">
-      <h3>Recent High-Value Orders</h3><p>Flagged by the system</p>
-      <table>
-        <tr><th>Order</th><th>Customer</th><th>Value</th><th>Status</th></tr>
-        <tr><td>#90412</td><td>Amelia R.</td><td>$1,240</td><td><span class="pill p-hot">Shipped</span></td></tr>
-        <tr><td>#90408</td><td>Daniel K.</td><td>$980</td><td><span class="pill p-warm">Processing</span></td></tr>
-        <tr><td>#90397</td><td>Sofia M.</td><td>$860</td><td><span class="pill p-hot">Shipped</span></td></tr>
-        <tr><td>#90391</td><td>Liam T.</td><td>$745</td><td><span class="pill p-cool">Delivered</span></td></tr>
-        <tr><td>#90385</td><td>Olivia P.</td><td>$690</td><td><span class="pill p-cool">Delivered</span></td></tr>
-      </table>
-    </div>
-  </div>
-
-  <footer>Demo dashboard built by <a href="https://nidaayesha.com">NAN Marketing Agency</a> — need one for your business? <a href="https://nidaayesha.com">Order yours</a>.</footer>
 </div>
 
 <script>
-Chart.defaults.color = '#93A7B8';
-Chart.defaults.borderColor = '#1E3355';
-Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
+Chart.defaults.color='#8B98AD';
+Chart.defaults.borderColor='#1B2740';
+Chart.defaults.font.family="'Inter',system-ui,sans-serif";
+Chart.defaults.font.size=11;
 
-const teal = '#14B8A6', tealSoft = 'rgba(20,184,166,.25)';
+const TEAL='#14B8A6';
+const grid={color:'rgba(27,39,64,.55)'};
 
-new Chart(document.getElementById('revChart'), {
-  type: 'line',
-  data: { labels:['Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'],
+new Chart(document.getElementById('revChart'),{
+  type:'line',
+  data:{labels:['Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'],
     datasets:[
-      {label:'Revenue ($k)', data:[18.2,21.5,19.8,22.4,24.1,23.6,26.9,28.4,27.2,30.1,32.8,34.6],
-       borderColor:teal, backgroundColor:tealSoft, fill:true, tension:.4, pointRadius:3, pointBackgroundColor:teal},
-      {label:'Target ($k)', data:[20,20,21,21,22,22,24,24,26,26,28,28],
-       borderColor:'#5B6B82', borderDash:[6,6], fill:false, tension:.3, pointRadius:0}
+      {label:'Revenue',data:[18.2,21.5,24.8,19.8,22.4,24.1,23.6,26.9,28.4,27.2,30.1,34.6],
+       borderColor:TEAL,borderWidth:2.5,fill:true,tension:.42,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:TEAL,
+       backgroundColor:(c)=>{const g=c.chart.ctx.createLinearGradient(0,0,0,290);g.addColorStop(0,'rgba(20,184,166,.28)');g.addColorStop(1,'rgba(20,184,166,0)');return g;}},
+      {label:'Target',data:[20,20,22,21,21,22,22,24,24,26,26,28],
+       borderColor:'#3E5170',borderWidth:1.5,borderDash:[5,5],fill:false,tension:.3,pointRadius:0}
     ]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{boxWidth:12}}},
-    scales:{y:{ticks:{callback:v=>'$'+v+'k'}}}}
+  options:{responsive:true,maintainAspectRatio:false,
+    interaction:{mode:'index',intersect:false},
+    plugins:{legend:{position:'top',align:'end',labels:{boxWidth:14,boxHeight:2,usePointStyle:true,pointStyle:'line',padding:18}},
+      tooltip:{backgroundColor:'#101A2E',borderColor:'#1B2740',borderWidth:1,padding:12,titleFont:{weight:'600'},
+        callbacks:{label:(c)=>' '+c.dataset.label+': $'+c.parsed.y.toFixed(1)+'k'}}},
+    scales:{x:{grid:{display:false}},y:{grid:grid,ticks:{callback:v=>'$'+v+'k'},border:{display:false}}}}
 });
 
-new Chart(document.getElementById('regionChart'), {
+new Chart(document.getElementById('regionChart'),{
   type:'doughnut',
-  data:{labels:['North America','Europe','Middle East','Asia Pacific','Latin America'],
-    datasets:[{data:[38,24,14,16,8],
-      backgroundColor:['#14B8A6','#0E9A8E','#FBBF24','#5B8DEF','#F87171'],borderWidth:0}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
-    plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:14}}}}
+  data:{labels:['North America','Europe','Asia Pacific','Middle East','Latin America'],
+    datasets:[{data:[38,24,16,14,8],borderWidth:3,borderColor:'#0C1322',
+      backgroundColor:['#14B8A6','#2DD4BF','#60A5FA','#FBBF24','#F87171'],hoverOffset:8}]},
+  options:{responsive:true,maintainAspectRatio:false,cutout:'64%',
+    plugins:{legend:{position:'bottom',labels:{boxWidth:9,boxHeight:9,usePointStyle:true,pointStyle:'circle',padding:13}},
+      tooltip:{backgroundColor:'#101A2E',borderColor:'#1B2740',borderWidth:1,padding:12,
+        callbacks:{label:(c)=>' '+c.label+': '+c.parsed+'%'}}}}
 });
 
-new Chart(document.getElementById('prodChart'), {
-  type:'bar',
-  data:{labels:['Aurora Lamp','Terra Mug Set','Nimbus Chair','Drift Backpack','Halo Speaker'],
-    datasets:[{label:'Units sold',data:[4820,3950,3110,2740,1980],
-      backgroundColor:['#14B8A6','#0FB5A3','#0E9A8E','#0C8579','#0A6E64'],borderRadius:6}]},
-  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
-    plugins:{legend:{display:false}},
-    scales:{x:{ticks:{callback:v=>v.toLocaleString()}}}}
-});
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+}));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('on'));
+  a.classList.add('on');
+}));
 </script>
 </body>
 </html>
