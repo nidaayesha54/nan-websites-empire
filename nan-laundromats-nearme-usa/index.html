@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laundromats Near Me USA — Find Coin Laundry Near You</title>
+<meta name="description" content="Find laundromats and coin laundry near you anywhere in the USA. Search by city, use your location, browse 60+ real laundromats on an interactive map with directions.">
+<meta name="keywords" content="laundromat near me, coin laundry near me, laundromats near me USA, wash and fold near me, self service laundry, 24 hour laundromat">
+<link rel="canonical" href="https://nan-laundromats-nearme-usa.surge.sh/">
+<meta property="og:title" content="Laundromats Near Me USA — Find Coin Laundry Near You">
+<meta property="og:description" content="Find real laundromats and coin laundry across the USA on an interactive map. Search by city or use your location — free forever.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nan-laundromats-nearme-usa.surge.sh/">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-dark:#0E9488;--bg:#F5F8FA;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:#1f2937}
+header{background:var(--navy);color:#fff;padding:.9rem 1rem;position:sticky;top:0;z-index:1000}
+.header-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;gap:.6rem}
+.logo{width:34px;height:34px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800}
+header h1{font-size:1.15rem;font-weight:700}
+header p{font-size:.72rem;color:#9fb3c8}
+.searchbar{max-width:72rem;margin:1rem auto 0;padding:0 1rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.searchbar input{flex:1;min-width:200px;padding:.75rem 1rem;border:2px solid #dbe3ea;border-radius:10px;font-size:1rem}
+.searchbar input:focus{outline:none;border-color:var(--teal)}
+.btn{background:var(--teal);color:#fff;border:none;border-radius:10px;padding:.75rem 1.1rem;font-size:1rem;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--teal-dark)}
+.btn-ghost{background:#fff;color:var(--navy);border:2px solid #dbe3ea}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal-dark)}
+.viewtoggle{max-width:72rem;margin:.6rem auto 0;padding:0 1rem;display:flex;gap:.5rem;align-items:center}
+.viewtoggle .seg{display:flex;background:#e5edf2;border-radius:10px;padding:3px}
+.viewtoggle .seg button{border:none;background:transparent;padding:.45rem 1rem;border-radius:8px;font-weight:700;cursor:pointer;color:#5b6b7c;font-size:.9rem}
+.viewtoggle .seg button.active{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+#status{font-size:.85rem;color:#5b6b7c;margin-left:auto}
+main{max-width:72rem;margin:0 auto;padding:1rem}
+#map{height:62vh;min-height:380px;border-radius:14px;box-shadow:0 2px 12px rgba(10,22,40,.12);z-index:1}
+#listview{display:none}
+.card{background:#fff;border-radius:12px;padding:1rem;margin-bottom:.7rem;box-shadow:0 1px 6px rgba(10,22,40,.08);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.card h3{font-size:1rem;color:var(--navy)}
+.card p{font-size:.85rem;color:#5b6b7c;margin-top:.25rem}
+.card .dist{font-size:.8rem;color:var(--teal-dark);font-weight:700;white-space:nowrap}
+.card .go{color:var(--teal-dark);font-weight:700;font-size:.85rem;text-decoration:none;white-space:nowrap}
+.card .go:hover{text-decoration:underline}
+.adwrap{text-align:center;margin:28px 0}
+.intro{background:#fff;border-radius:14px;padding:1.4rem;margin-top:1.2rem;box-shadow:0 1px 6px rgba(10,22,40,.06)}
+.intro h2{color:var(--navy);font-size:1.25rem;margin-bottom:.6rem}
+.intro p{line-height:1.65;font-size:.95rem;margin-bottom:.7rem;color:#374151}
+.intro a{color:var(--teal-dark);font-weight:700}
+footer{background:var(--navy);color:#9fb3c8;padding:2rem 1rem;margin-top:2rem;font-size:.85rem}
+footer .inner{max-width:72rem;margin:0 auto}
+footer a{color:#9fb3c8;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.leaflet-popup-content b{color:var(--navy)}
+.leaflet-popup-content a{color:var(--teal-dark);font-weight:700}
+@media(max-width:600px){.card{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="logo">N</div>
+<div><h1>Laundromats Near Me USA</h1><p>Find coin laundry &amp; wash-and-fold near you — free forever</p></div>
+</div>
+</header>
+
+<div class="searchbar">
+<input id="search" type="text" placeholder="Enter city, ST  (e.g. Chicago, IL)" autocomplete="off">
+<button class="btn" id="searchBtn">Search</button>
+<button class="btn btn-ghost" id="locBtn">📍 Use my location</button>
+</div>
+
+<div class="viewtoggle">
+<div class="seg">
+<button id="mapBtn" class="active">🗺 Map view</button>
+<button id="listBtn">☰ List view</button>
+</div>
+<span id="status">Loading laundromats…</span>
+</div>
+
+<main>
+<div id="map"></div>
+<div id="listview"></div>
+
+<div class="adwrap">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="intro">
+<h2>Find a Laundromat Near Me — Anywhere in the USA</h2>
+<p>Whether you need a <strong>laundromat near me</strong> for a quick wash, a <strong>coin laundry near me</strong> that's open late, or a <strong>wash-and-fold near me</strong> service so you never fold again — this free interactive map shows real, verified laundromat locations across the USA.</p>
+<p>Type a city into the search box or tap <strong>📍 Use my location</strong> to sort every laundromat by distance. Click any marker for the address and a one-tap <strong>Get Directions</strong> link. Prefer a list? Switch to List view to scan everything at once.</p>
+<p>New to self-service laundry? Read our guide: <a href="/articles/laundromat-guide-usa.html">The Complete Laundromat Guide USA — costs, wash-and-fold vs self-service, and what to bring</a>.</p>
+</section>
+</main>
+
+<footer>
+<div class="inner">
+<p>© 2026 NAN Marketing Agency — Free tools for everyday life. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Locations are real places sourced from OpenStreetMap; hours and prices may change — call ahead.</p>
+<!--nan-network-links:start-->
+<section style="margin:1.5rem 0 0;padding:1.25rem 0 0;border-top:1px solid #1e2f4a;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fb3c8;margin:0 0 .6rem;">More free NAN tools</p>
+<p style="font-size:.85rem;line-height:2;margin:0;"><a href="https://nan-aistock.surge.sh" style="color:#9fb3c8;">Free AI Stock Photos</a> <span style="color:#33475e;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#9fb3c8;">Free Transparent PNGs</a> <span style="color:#33475e;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#9fb3c8;">Free Daily Calculators</a> <span style="color:#33475e;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#9fb3c8;">EOBI Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+</div>
+</footer>
+
+<script>
+var map = L.map('map').setView([39.8, -98.5], 4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var allPois = [], userPos = null, markers = [];
+
+function haversine(a, b, c, d) {
+  var R = 3958.8, r1 = a * Math.PI/180, r2 = c * Math.PI/180;
+  var h = Math.sin((r2-r1)/2)**2 + Math.cos(r1)*Math.cos(r2)*Math.sin((d-b)*Math.PI/360)**2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function popupHtml(p) {
+  var dist = userPos ? ' (' + haversine(userPos[0], userPos[1], p.lat, p.lon).toFixed(1) + ' mi)' : '';
+  return '<b>' + escapeHtml(p.name) + '</b><br>' + escapeHtml(p.address) + '<br>' +
+    escapeHtml(p.city) + ', ' + escapeHtml(p.state) + dist + '<br>' +
+    '<a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=' + p.lat + ',' + p.lon + '">Get Directions →</a>';
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+
+function renderMarkers(list) {
+  markers.forEach(function(m){ map.removeLayer(m); });
+  markers = list.map(function(p){
+    return L.marker([p.lat, p.lon]).addTo(map).bindPopup(popupHtml(p));
+  });
+  document.getElementById('status').textContent = list.length + ' laundromats shown';
+}
+
+function renderList() {
+  var el = document.getElementById('listview');
+  var sorted = allPois.slice();
+  if (userPos) sorted.sort(function(a,b){
+    return haversine(userPos[0],userPos[1],a.lat,a.lon) - haversine(userPos[0],userPos[1],b.lat,b.lon);
+  });
+  el.innerHTML = sorted.map(function(p){
+    var d = userPos ? '<span class="dist">' + haversine(userPos[0],userPos[1],p.lat,p.lon).toFixed(1) + ' mi</span>' : '';
+    return '<div class="card"><div><h3>' + escapeHtml(p.name) + ' ' + d + '</h3><p>' +
+      escapeHtml(p.address) + ' — ' + escapeHtml(p.city) + ', ' + escapeHtml(p.state) + '</p></div>' +
+      '<a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=' + p.lat + ',' + p.lon + '">Directions →</a></div>';
+  }).join('');
+}
+
+fetch('locations.json').then(function(r){ return r.json(); }).then(function(data){
+  allPois = data;
+  renderMarkers(allPois);
+  renderList();
+});
+
+// Nominatim geocode (client-side, debounced)
+var timer = null;
+function geocode(q) {
+  if (!q.trim()) return;
+  document.getElementById('status').textContent = 'Searching "' + q + '"…';
+  fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=' + encodeURIComponent(q), {
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r){ return r.json(); }).then(function(res){
+    if (res && res.length) {
+      var lat = parseFloat(res[0].lat), lon = parseFloat(res[0].lon);
+      map.setView([lat, lon], 11);
+      if (userPos) {
+        // re-sort nearby-first
+        var near = allPois.slice().sort(function(a,b){
+          return haversine(lat,lon,a.lat,a.lon) - haversine(lat,lon,b.lat,b.lon);
+        });
+        renderMarkers(near.slice(0, 40));
+        document.getElementById('status').textContent = 'Nearest ' + Math.min(40, near.length) + ' laundromats to ' + res[0].display_name.split(',')[0];
+        renderList();
+      }
+    } else {
+      document.getElementById('status').textContent = 'City not found — try "Chicago, IL"';
+    }
+  }).catch(function(){ document.getElementById('status').textContent = 'Search failed — try again'; });
+}
+document.getElementById('search').addEventListener('input', function(e){
+  clearTimeout(timer); timer = setTimeout(function(){ geocode(e.target.value); }, 900);
+});
+document.getElementById('searchBtn').addEventListener('click', function(){
+  geocode(document.getElementById('search').value);
+});
+
+// Geolocation
+document.getElementById('locBtn').addEventListener('click', function(){
+  if (!navigator.geolocation) { document.getElementById('status').textContent = 'Geolocation not supported'; return; }
+  document.getElementById('status').textContent = 'Locating…';
+  navigator.geolocation.getCurrentPosition(function(pos){
+    userPos = [pos.coords.latitude, pos.coords.longitude];
+    map.setView(userPos, 11);
+    L.circleMarker(userPos, {radius: 8, color: '#14B8A6', fillColor: '#14B8A6', fillOpacity: 0.9}).addTo(map).bindPopup('You are here');
+    var near = allPois.slice().sort(function(a,b){
+      return haversine(userPos[0],userPos[1],a.lat,a.lon) - haversine(userPos[0],userPos[1],b.lat,b.lon);
+    });
+    renderMarkers(near.slice(0, 40));
+    document.getElementById('status').textContent = 'Nearest 40 laundromats to you';
+    renderList();
+  }, function(){ document.getElementById('status').textContent = 'Location blocked — search a city instead'; });
+});
+
+// View toggle
+document.getElementById('mapBtn').addEventListener('click', function(){
+  document.getElementById('map').style.display = 'block';
+  document.getElementById('listview').style.display = 'none';
+  this.classList.add('active'); document.getElementById('listBtn').classList.remove('active');
+  setTimeout(function(){ map.invalidateSize(); }, 50);
+});
+document.getElementById('listBtn').addEventListener('click', function(){
+  document.getElementById('map').style.display = 'none';
+  document.getElementById('listview').style.display = 'block';
+  this.classList.add('active'); document.getElementById('mapBtn').classList.remove('active');
+  renderList();
+});
+</script>
+</body>
+</html>
