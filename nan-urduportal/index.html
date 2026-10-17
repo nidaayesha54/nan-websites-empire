@@ -70,6 +70,13 @@ footer a{color:#1a56a8}footer a:hover{color:#13407e}
 .netlinks a{color:#1a56a8}
 .copy{border-top:1px solid #dddddd;padding-top:.8rem;text-align:center;font-size:.8rem;color:#777}
 @media(max-width:900px){main .wrap{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-main,.hero-side article{position:relative;background-size:cover;background-position:center}
+.hero-main .hero-txt,.hero-side .hero-txt{position:relative;z-index:1}
+.hero-main .hero-txt h2,.hero-main .hero-txt p,.hero-side .hero-txt h2{color:#ffffff;text-shadow:0 1px 5px rgba(0,0,0,.65)}
+.hero-side .cat{background:#cc0000}
+.pop-thumb{width:64px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;border:1px solid #dddddd}
 </style>
 </head>
 <body>
@@ -83,10 +90,10 @@ footer a{color:#1a56a8}footer a:hover{color:#13407e}
 <main><div class="wrap">
 <div>
 <div class="hero">
-<a class="hero-main" href="articles/art-ai-kya-hai.html"><div class="hero-txt"><span class="cat">ٹیکنالوجی</span><h2>آرٹیفیشل انٹیلیجنس کیا ہے؟ — عام فہم زبان میں مکمل تعارف</h2><p>اے آئی ہر جگہ ہے — جانیں یہ کیا ہے اور آپ کی زندگی پر کیا اثر ڈالے گی</p></div></a>
+<a class="hero-main" href="articles/art-ai-kya-hai.html" style="background-image:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.12) 65%),url('img/thumb-ai.jpg')"><div class="hero-txt"><span class="cat">ٹیکنالوجی</span><h2>آرٹیفیشل انٹیلیجنس کیا ہے؟ — عام فہم زبان میں مکمل تعارف</h2><p>اے آئی ہر جگہ ہے — جانیں یہ کیا ہے اور آپ کی زندگی پر کیا اثر ڈالے گی</p></div></a>
 <div class="hero-side">
-<a href="articles/art-freelancing-guide.html"><article><div class="hero-txt"><span class="cat">فری لانسنگ</span><h2>گھر بیٹھے آن لائن کمائی کی مکمل رہنمائی</h2></div></article></a>
-<a href="articles/art-subah-sham-duain.html"><article><div class="hero-txt"><span class="cat">اسلامی</span><h2>صبح و شام کی مسنون دعائیں ترجمے کے ساتھ</h2></div></article></a>
+<a href="articles/art-freelancing-guide.html"><article style="background-image:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.12) 65%),url('img/thumb-freelancing.jpg')"><div class="hero-txt"><span class="cat">فری لانسنگ</span><h2>گھر بیٹھے آن لائن کمائی کی مکمل رہنمائی</h2></div></article></a>
+<a href="articles/art-subah-sham-duain.html"><article style="background-image:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.12) 65%),url('img/thumb-duain.jpg')"><div class="hero-txt"><span class="cat">اسلامی</span><h2>صبح و شام کی مسنون دعائیں ترجمے کے ساتھ</h2></div></article></a>
 </div>
 </div>
 
@@ -97,23 +104,23 @@ footer a{color:#1a56a8}footer a:hover{color:#13407e}
 </div>
 
 <section class="block" id="tech"><div class="sec-head"><h2>ٹیکنالوجی</h2></div><div class="cards">
-<a class="card" href="articles/art-ai-kya-hai.html"><div class="thumb">🤖</div><div class="body"><h3>آرٹیفیشل انٹیلیجنس کیا ہے؟ مکمل تعارف</h3><p>اے آئی کی دنیا کو آسان اردو میں سمجھیں</p></div></a>
-<a class="card" href="articles/art-chatgpt-urdu.html"><div class="thumb">💬</div><div class="body"><h3>اردو میں چیٹ جی پی ٹی کا استعمال</h3><p>طلبہ اور کاروبار کے لیے عملی طریقے</p></div></a>
+<a class="card" href="articles/art-ai-kya-hai.html"><div class="thumb"><img src="img/thumb-ai.jpg" alt="آرٹیفیشل انٹیلیجنس" loading="lazy"></div><div class="body"><h3>آرٹیفیشل انٹیلیجنس کیا ہے؟ مکمل تعارف</h3><p>اے آئی کی دنیا کو آسان اردو میں سمجھیں</p></div></a>
+<a class="card" href="articles/art-chatgpt-urdu.html"><div class="thumb"><img src="img/thumb-chatgpt.jpg" alt="چیٹ جی پی ٹی" loading="lazy"></div><div class="body"><h3>اردو میں چیٹ جی پی ٹی کا استعمال</h3><p>طلبہ اور کاروبار کے لیے عملی طریقے</p></div></a>
 </div></section>
 
 <section class="block" id="freelance"><div class="sec-head"><h2>فری لانسنگ اور کمائی</h2></div><div class="cards">
-<a class="card" href="articles/art-freelancing-guide.html"><div class="thumb">💼</div><div class="body"><h3>فری لانسنگ شروع کرنے کی مکمل رہنمائی</h3><p>صفر سے پہلی کمائی تک کا سفر</p></div></a>
-<a class="card" href="articles/art-online-paise-transfer.html"><div class="thumb">💸</div><div class="body"><h3>آن لائن رقم بھیجنے کے محفوظ طریقے</h3><p>پاکستان سے پیسے بھیجنے کی مکمل معلومات</p></div></a>
+<a class="card" href="articles/art-freelancing-guide.html"><div class="thumb"><img src="img/thumb-freelancing.jpg" alt="فری لانسنگ" loading="lazy"></div><div class="body"><h3>فری لانسنگ شروع کرنے کی مکمل رہنمائی</h3><p>صفر سے پہلی کمائی تک کا سفر</p></div></a>
+<a class="card" href="articles/art-online-paise-transfer.html"><div class="thumb"><img src="img/thumb-transfer.jpg" alt="آن لائن رقم کی منتقلی" loading="lazy"></div><div class="body"><h3>آن لائن رقم بھیجنے کے محفوظ طریقے</h3><p>پاکستان سے پیسے بھیجنے کی مکمل معلومات</p></div></a>
 </div></section>
 
 <section class="block" id="islam"><div class="sec-head"><h2>اسلامی معلومات</h2></div><div class="cards">
-<a class="card" href="articles/art-subah-sham-duain.html"><div class="thumb">🤲</div><div class="body"><h3>صبح و شام کی مسنون دعائیں</h3><p>عربی متن، اردو ترجمہ اور فضیلت</p></div></a>
-<a class="card" href="articles/art-ramadan-tayyari.html"><div class="thumb">🌙</div><div class="body"><h3>رمضان کی تیاری کیسے کریں؟</h3><p>روحانی اور عملی رہنمائی</p></div></a>
+<a class="card" href="articles/art-subah-sham-duain.html"><div class="thumb"><img src="img/thumb-duain.jpg" alt="صبح و شام کی دعائیں" loading="lazy"></div><div class="body"><h3>صبح و شام کی مسنون دعائیں</h3><p>عربی متن، اردو ترجمہ اور فضیلت</p></div></a>
+<a class="card" href="articles/art-ramadan-tayyari.html"><div class="thumb"><img src="img/thumb-ramadan.jpg" alt="رمضان کی تیاری" loading="lazy"></div><div class="body"><h3>رمضان کی تیاری کیسے کریں؟</h3><p>روحانی اور عملی رہنمائی</p></div></a>
 </div></section>
 
 <section class="block" id="guides"><div class="sec-head"><h2>عملی رہنمائی</h2></div><div class="cards">
-<a class="card" href="articles/art-bisp-ehsaas.html"><div class="thumb">🏛️</div><div class="body"><h3>بینظیر انکم سپورٹ پروگرام کی مکمل معلومات</h3><p>اہلیت، رجسٹریشن اور رقم وصولی کا طریقہ</p></div></a>
-<a class="card" href="articles/art-bijli-bachat.html"><div class="thumb">💡</div><div class="body"><h3>بجلی کا بل کم کرنے کے آزمودہ طریقے</h3><p>15 عملی تدابیر سے بچت کریں</p></div></a>
+<a class="card" href="articles/art-bisp-ehsaas.html"><div class="thumb"><img src="img/thumb-bisp.jpg" alt="بینظیر انکم سپورٹ" loading="lazy"></div><div class="body"><h3>بینظیر انکم سپورٹ پروگرام کی مکمل معلومات</h3><p>اہلیت، رجسٹریشن اور رقم وصولی کا طریقہ</p></div></a>
+<a class="card" href="articles/art-bijli-bachat.html"><div class="thumb"><img src="img/thumb-bijli.jpg" alt="بجلی کی بچت" loading="lazy"></div><div class="body"><h3>بجلی کا بل کم کرنے کے آزمودہ طریقے</h3><p>15 عملی تدابیر سے بچت کریں</p></div></a>
 </div></section>
 
 <div class="ad">
@@ -124,11 +131,11 @@ footer a{color:#1a56a8}footer a:hover{color:#13407e}
 
 <aside>
 <div class="box"><h3>مقبول ترین</h3><div class="boxbody"><ol class="pop">
-<li><a href="articles/art-ai-kya-hai.html">آرٹیفیشل انٹیلیجنس کیا ہے؟</a></li>
-<li><a href="articles/art-freelancing-guide.html">فری لانسنگ کی مکمل رہنمائی</a></li>
-<li><a href="articles/art-subah-sham-duain.html">صبح و شام کی دعائیں</a></li>
-<li><a href="articles/art-bisp-ehsaas.html">بینظیر انکم سپورٹ پروگرام</a></li>
-<li><a href="articles/art-bijli-bachat.html">بجلی کا بل کم کریں</a></li>
+<li><img class="pop-thumb" src="img/thumb-ai.jpg" alt="" loading="lazy"><a href="articles/art-ai-kya-hai.html">آرٹیفیشل انٹیلیجنس کیا ہے؟</a></li>
+<li><img class="pop-thumb" src="img/thumb-freelancing.jpg" alt="" loading="lazy"><a href="articles/art-freelancing-guide.html">فری لانسنگ کی مکمل رہنمائی</a></li>
+<li><img class="pop-thumb" src="img/thumb-duain.jpg" alt="" loading="lazy"><a href="articles/art-subah-sham-duain.html">صبح و شام کی دعائیں</a></li>
+<li><img class="pop-thumb" src="img/thumb-bisp.jpg" alt="" loading="lazy"><a href="articles/art-bisp-ehsaas.html">بینظیر انکم سپورٹ پروگرام</a></li>
+<li><img class="pop-thumb" src="img/thumb-bijli.jpg" alt="" loading="lazy"><a href="articles/art-bijli-bachat.html">بجلی کا بل کم کریں</a></li>
 </ol></div></div>
 <div class="box" id="tools"><h3>مفت ٹولز</h3><div class="boxbody"><ul class="tool-list">
 <li><a href="https://nan-eobi-calculator.surge.sh">ای او بی آئی پنشن کیلکولیٹر</a></li>
