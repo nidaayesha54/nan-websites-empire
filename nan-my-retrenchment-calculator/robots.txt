@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-my-retrenchment-calculator.surge.sh/sitemap.xml
