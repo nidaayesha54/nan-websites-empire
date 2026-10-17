@@ -3,164 +3,275 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MachineGuard — Equipment Fault Detector</title>
+<title>MachineGuard · Predictive Maintenance</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Cpath d='M16 7v10l7 4' stroke='%2314B8A6' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='17' r='10' stroke='%2314B8A6' stroke-width='2' fill='none' opacity='.45'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root{ --navy:#0A1628; --teal:#14B8A6; --ink:#EAF2F5; --mut:#93A7B8; --card:#12233F; --line:#1E3355; }
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
-  body{background:linear-gradient(160deg,var(--navy),#0C1B33);color:var(--ink);min-height:100vh;padding:24px}
-  .wrap{max-width:960px;margin:0 auto}
-  header{text-align:center;margin-bottom:26px}
-  .badge{display:inline-block;background:rgba(20,184,166,.14);color:var(--teal);font-size:11px;font-weight:700;letter-spacing:.6px;padding:5px 12px;border-radius:20px;margin-bottom:10px;text-transform:uppercase}
-  h1{font-size:26px} h1 span{color:var(--teal)}
-  header p{color:var(--mut);font-size:14px;margin-top:8px;max-width:620px;margin-left:auto;margin-right:auto}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-  .card h3{font-size:15px;margin-bottom:4px}
-  .card .sub{font-size:12px;color:var(--mut);margin-bottom:18px}
-  .field{margin-bottom:18px}
-  .field label{display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px;color:var(--ink)}
-  .field label output{font-weight:700;color:var(--teal)}
-  input[type=range]{width:100%;accent-color:var(--teal);height:28px;cursor:pointer}
-  .scale{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:2px}
-  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-  .presets button{background:transparent;border:1px solid #2A4468;color:var(--mut);border-radius:20px;padding:7px 14px;font-size:12px;cursor:pointer}
-  .presets button:hover{border-color:var(--teal);color:var(--teal)}
-  .gauge-wrap{display:flex;flex-direction:column;align-items:center}
-  .gauge{width:230px;height:130px;position:relative;margin:6px 0 4px}
+  :root{
+    --bg:#080D18; --panel:#0C1322; --panel2:#101A2E; --border:#1B2740;
+    --teal:#14B8A6; --ink:#E8EEF4; --mut:#8B98AD; --mut2:#5C6B84;
+    --green:#34D399; --amber:#FBBF24; --red:#F87171;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:radial-gradient(1000px 480px at 50% -8%,rgba(20,184,166,.06),transparent 60%),var(--bg);
+    color:var(--ink);font-family:'Inter',system-ui,sans-serif;min-height:100vh;padding:0}
+  .top{border-bottom:1px solid var(--border);background:rgba(12,19,34,.7);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
+  .top-in{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:12px}
+  .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#14B8A6,#0B6E64);display:flex;align-items:center;justify-content:center}
+  .mark svg{width:18px;height:18px}
+  .top .nm{font-weight:750;font-size:15px;letter-spacing:-.2px}
+  .top .nm small{display:block;font-weight:500;font-size:11px;color:var(--mut2)}
+  .status{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--green)}
+  .status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  .status span{color:var(--mut2);font-weight:500}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:36px 24px 48px}
+  .hero{max-width:680px;margin-bottom:28px;animation:rise .55s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}}
+  .kick{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+  .hero h1{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-1px;line-height:1.14}
+  .hero p{color:var(--mut);font-size:14.5px;line-height:1.65;margin-top:12px}
+  .meta{display:flex;gap:22px;margin-top:16px;flex-wrap:wrap}
+  .meta div{font-size:12px;color:var(--mut2)}
+  .meta b{display:block;color:var(--ink);font-size:13.5px;font-weight:700;font-family:var(--mono)}
+
+  .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:16px;align-items:start}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:24px;animation:rise .55s .1s ease both}
+  .card h3{font-size:14.5px;font-weight:700;letter-spacing:-.2px}
+  .card .sub{font-size:12px;color:var(--mut2);margin:4px 0 20px}
+  .asset{display:flex;align-items:center;gap:12px;background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:20px}
+  .asset .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+  .asset .an{font-size:13px;font-weight:650}
+  .asset .an small{display:block;color:var(--mut2);font-weight:400;font-size:11px;font-family:var(--mono)}
+  .asset .tag{margin-left:auto;font-size:10.5px;font-weight:700;letter-spacing:.8px;color:var(--mut);border:1px solid var(--border);padding:5px 10px;border-radius:6px}
+
+  .field{margin-bottom:22px}
+  .field .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  .field label{font-size:13px;font-weight:600}
+  .field label small{display:block;font-weight:400;color:var(--mut2);font-size:11px;margin-top:2px}
+  .field output{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums}
+  input[type=range]{-webkit-appearance:none;width:100%;height:26px;background:transparent;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:4px;
+    background:linear-gradient(90deg,var(--teal) 0%,var(--teal) var(--fill,30%),#1B2740 var(--fill,30%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#E8EEF4;
+    border:3px solid var(--teal);margin-top:-6px;box-shadow:0 2px 10px rgba(0,0,0,.5);transition:transform .12s}
+  input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15)}
+  input[type=range]::-moz-range-track{height:6px;border-radius:4px;background:#1B2740}
+  input[type=range]::-moz-range-progress{height:6px;border-radius:4px;background:var(--teal)}
+  input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#E8EEF4;border:3px solid var(--teal)}
+  .band{display:flex;justify-content:space-between;font-size:10.5px;color:var(--mut2);margin-top:4px;font-family:var(--mono)}
+  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+  .presets button{background:var(--panel2);border:1px solid var(--border);color:var(--mut);border-radius:8px;padding:9px 14px;
+    font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s}
+  .presets button:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-1px)}
+
+  .gauge-card{text-align:center}
+  .gauge{width:240px;height:140px;margin:2px auto 0;position:relative}
   .gauge svg{width:100%;height:100%}
-  .score{font-size:44px;font-weight:800;margin-top:-34px}
-  .verdict{font-size:15px;font-weight:700;margin-top:6px;padding:8px 18px;border-radius:24px}
-  .v-ok{background:rgba(34,197,94,.14);color:#22C55E}
-  .v-warn{background:rgba(251,191,36,.14);color:#FBBF24}
-  .v-crit{background:rgba(248,113,113,.14);color:#F87171}
-  .rec{margin-top:18px;background:#0B1A30;border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13.5px;line-height:1.6}
-  .rec b{color:var(--teal)}
-  .bars{margin-top:16px}
-  .bar-row{display:flex;align-items:center;gap:10px;font-size:12px;margin-bottom:8px}
-  .bar-row .nm{width:110px;color:var(--mut)}
-  .bar{flex:1;height:8px;background:#0B1A30;border-radius:6px;overflow:hidden}
-  .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),#FBBF24,#F87171);transition:width .5s}
-  .bar-row .pc{width:40px;text-align:right;font-weight:700}
-  footer{margin-top:26px;text-align:center;color:var(--mut);font-size:12px}
+  .gscore{font-family:var(--mono);font-size:46px;font-weight:700;margin-top:-38px;font-variant-numeric:tabular-nums;letter-spacing:-1px;transition:color .3s}
+  .gcap{font-size:10.5px;letter-spacing:2px;color:var(--mut2);font-weight:600;margin-top:2px}
+  .verdict{display:inline-block;font-size:13px;font-weight:700;margin-top:12px;padding:9px 20px;border-radius:100px;transition:all .3s}
+  .v-ok{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.3)}
+  .v-warn{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.3)}
+  .v-crit{background:rgba(248,113,113,.1);color:var(--red);border:1px solid rgba(248,113,113,.35);animation:blink 1.6s infinite}
+  @keyframes blink{50%{box-shadow:0 0 18px rgba(248,113,113,.35)}}
+  .contrib{margin-top:20px;text-align:left}
+  .crow{display:grid;grid-template-columns:150px 1fr 46px;align-items:center;gap:10px;font-size:12px;margin-bottom:10px}
+  .crow .cn{color:var(--mut);font-weight:500}
+  .crow .cn small{display:block;color:var(--mut2);font-size:10px;font-family:var(--mono)}
+  .cbar{height:7px;background:#0A1120;border-radius:5px;overflow:hidden}
+  .cbar i{display:block;height:100%;border-radius:5px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+  .crow .cp{font-family:var(--mono);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .rec{margin-top:18px;background:#0A1120;border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:13px;line-height:1.65;text-align:left}
+  .rec .rh{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
+  .rec ul{margin:6px 0 0 16px;color:var(--mut)}
+  .rec li{margin-bottom:4px}
+  .rec b{color:var(--ink)}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+  .mini{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;animation:rise .55s .2s ease both;transition:transform .18s,border .18s}
+  .mini:hover{transform:translateY(-3px);border-color:#2A3D63}
+  .mini h4{font-size:13.5px;font-weight:700;margin-bottom:6px}
+  .mini p{font-size:12.5px;color:var(--mut);line-height:1.6}
+  .mini .ic{width:34px;height:34px;border-radius:9px;background:rgba(20,184,166,.1);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .mini .ic svg{width:17px;height:17px;stroke:var(--teal)}
+  .cta-band{margin-top:16px;background:linear-gradient(140deg,#0D2A27,#0C1322 65%);border:1px solid rgba(20,184,166,.28);
+    border-radius:14px;padding:30px;text-align:center;animation:rise .55s .28s ease both}
+  .cta-band h3{font-size:19px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+  .cta-band p{color:var(--mut);font-size:13.5px;max-width:560px;margin:0 auto 18px;line-height:1.6}
+  .cta-band a{display:inline-block;background:var(--teal);color:#04211D;font-weight:700;font-size:14px;text-decoration:none;
+    padding:13px 30px;border-radius:10px;transition:transform .15s,box-shadow .15s}
+  .cta-band a:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(20,184,166,.35)}
+  footer{max-width:1120px;margin:26px auto 0;padding:18px 24px 40px;border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;color:var(--mut2);font-size:12px;flex-wrap:wrap;gap:8px}
   footer a{color:var(--teal);text-decoration:none;font-weight:600}
-  @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}.strip{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
+<div class="top">
+  <div class="top-in">
+    <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v9l6 3.5"/><circle cx="12" cy="14" r="8.5"/></svg></div>
+    <div class="nm">MachineGuard<small>Predictive maintenance · v2.4</small></div>
+    <div class="status"><i></i>SYSTEM NOMINAL <span>· 14 assets monitored</span></div>
+  </div>
+</div>
+
 <div class="wrap">
-  <header>
-    <div class="badge">Predictive maintenance demo</div>
-    <h1>Machine<span>Guard</span> — Equipment Fault Detector</h1>
-    <p>Enter live sensor readings from any industrial machine. The analyzer scores failure risk and tells your team exactly what to do — before a breakdown stops production.</p>
-  </header>
+  <div class="hero">
+    <div class="kick">Interactive demo · No signup required</div>
+    <h1>Know a bearing will fail<br>before it stops your line.</h1>
+    <p>MachineGuard scores live sensor data and tells your maintenance team exactly what to do — turning $50,000 emergency breakdowns into $800 scheduled repairs. Try it on the demo asset below.</p>
+    <div class="meta">
+      <div><b>HVAC-UNIT-07</b>Demo asset</div>
+      <div><b>24 / 7</b>Monitoring</div>
+      <div><b>&lt; 72 h</b>Failure warning window</div>
+    </div>
+  </div>
 
   <div class="grid">
     <div class="card">
-      <h3>Sensor Readings</h3>
-      <div class="sub">Drag the sliders — or try a preset scenario</div>
+      <h3>Live sensor input</h3>
+      <div class="sub">Drag sliders to simulate telemetry · or load a scenario</div>
+      <div class="asset">
+        <span class="dot" id="assetDot"></span>
+        <div class="an">HVAC-UNIT-07<small>ROOFTOP · BUILDING C · INSTALLED MAR 2023</small></div>
+        <span class="tag">MODBUS/TCP</span>
+      </div>
 
       <div class="field">
-        <label>🌡️ Bearing Temperature <output id="oT">62 °C</output></label>
+        <div class="row"><label>Bearing temperature<small>PT-100 RTD · ±0.5 °C accuracy</small></label><output id="oT">62 °C</output></div>
         <input type="range" id="inT" min="20" max="120" value="62">
-        <div class="scale"><span>20°C</span><span>normal &lt; 75°C</span><span>120°C</span></div>
+        <div class="band"><span>20 °C</span><span>NOMINAL &lt; 75 °C</span><span>120 °C</span></div>
       </div>
       <div class="field">
-        <label>📳 Vibration Level <output id="oV">3.1 mm/s</output></label>
+        <div class="row"><label>Vibration velocity<small>Piezo accelerometer · RMS mm/s</small></label><output id="oV">3.1 mm/s</output></div>
         <input type="range" id="inV" min="0" max="15" step="0.1" value="3.1">
-        <div class="scale"><span>0</span><span>normal &lt; 4.5 mm/s</span><span>15 mm/s</span></div>
+        <div class="band"><span>0</span><span>NOMINAL &lt; 4.5 mm/s</span><span>15 mm/s</span></div>
       </div>
       <div class="field">
-        <label>🔧 Hydraulic Pressure <output id="oP">182 bar</output></label>
+        <div class="row"><label>Hydraulic pressure<small>4–20 mA transmitter</small></label><output id="oP">182 bar</output></div>
         <input type="range" id="inP" min="80" max="280" value="182">
-        <div class="scale"><span>80 bar</span><span>normal 150–210 bar</span><span>280 bar</span></div>
+        <div class="band"><span>80 bar</span><span>NOMINAL 150–210 bar</span><span>280 bar</span></div>
       </div>
 
       <div class="presets">
-        <button data-p="62,3.1,182">✅ Healthy machine</button>
-        <button data-p="84,5.8,196">⚠️ Worn bearing</button>
-        <button data-p="104,11.2,248">🚨 Critical failure risk</button>
+        <button data-p="62,3.1,182">Healthy baseline</button>
+        <button data-p="84,5.8,196">Worn bearing</button>
+        <button data-p="104,11.2,248">Critical failure risk</button>
       </div>
     </div>
 
-    <div class="card">
-      <h3>Failure Risk Analysis</h3>
-      <div class="sub">Updated live as readings change</div>
-      <div class="gauge-wrap">
-        <div class="gauge">
-          <svg viewBox="0 0 200 110">
-            <path d="M 15 100 A 85 85 0 0 1 185 100" fill="none" stroke="#1E3355" stroke-width="16" stroke-linecap="round"/>
-            <path id="arc" d="M 15 100 A 85 85 0 0 1 185 100" fill="none" stroke="#14B8A6" stroke-width="16" stroke-linecap="round" stroke-dasharray="267" stroke-dashoffset="267"/>
-          </svg>
-        </div>
-        <div class="score" id="score">12</div>
-        <div style="font-size:11px;color:var(--mut);letter-spacing:1px">RISK SCORE / 100</div>
-        <div class="verdict v-ok" id="verdict">HEALTHY — keep running</div>
+    <div class="card gauge-card">
+      <h3 style="text-align:left">Failure risk assessment</h3>
+      <div class="sub" style="text-align:left">Recalculated on every reading · model v2.4</div>
+      <div class="gauge">
+        <svg viewBox="0 0 200 112">
+          <path d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="#1B2740" stroke-width="15" stroke-linecap="round"/>
+          <path id="arc" d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="#14B8A6" stroke-width="15"
+            stroke-linecap="round" stroke-dasharray="270" stroke-dashoffset="270" style="transition:stroke-dashoffset .5s cubic-bezier(.2,.8,.2,1),stroke .3s"/>
+        </svg>
       </div>
-      <div class="bars">
-        <div class="bar-row"><span class="nm">Temperature</span><div class="bar"><i id="bT"></i></div><span class="pc" id="pT"></span></div>
-        <div class="bar-row"><span class="nm">Vibration</span><div class="bar"><i id="bV"></i></div><span class="pc" id="pV"></span></div>
-        <div class="bar-row"><span class="nm">Pressure</span><div class="bar"><i id="bP"></i></div><span class="pc" id="pP"></span></div>
+      <div class="gscore" id="score">12</div>
+      <div class="gcap">COMPOSITE RISK / 100</div>
+      <div><span class="verdict v-ok" id="verdict">HEALTHY — CONTINUE OPERATION</span></div>
+
+      <div class="contrib">
+        <div class="crow"><span class="cn">Temperature<small>weight 30%</small></span><div class="cbar"><i id="bT"></i></div><span class="cp" id="pT">–</span></div>
+        <div class="crow"><span class="cn">Vibration<small>weight 45%</small></span><div class="cbar"><i id="bV"></i></div><span class="cp" id="pV">–</span></div>
+        <div class="crow"><span class="cn">Pressure<small>weight 25%</small></span><div class="cbar"><i id="bP"></i></div><span class="cp" id="pP">–</span></div>
       </div>
+
       <div class="rec" id="rec"></div>
     </div>
   </div>
 
-  <footer>Demo predictive-maintenance app by <a href="https://nidaayesha.com">NAN Marketing Agency</a> —
-  custom ML dashboards, fault detectors &amp; business apps from <a href="https://nidaayesha.com">$2,000 →</a></footer>
+  <div class="strip">
+    <div class="mini">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+      <h4>72-hour warning window</h4><p>The model flags degradation patterns 2–3 days before functional failure — enough time to order parts and schedule a crew.</p>
+    </div>
+    <div class="mini">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+      <h4>Explains every score</h4><p>No black box. Each assessment breaks down exactly which sensor drove the risk, so technicians trust the call.</p>
+    </div>
+    <div class="mini">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 11.1V12a10 10 0 11-5.9-9.1"/><path d="M22 4L12 14l-3-3"/></svg></div>
+      <h4>Built for your floor</h4><p>Connects to existing PLCs and SCADA via Modbus, OPC-UA or MQTT. No rip-and-replace — it reads what you already measure.</p>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h3>Put this on your factory floor.</h3>
+    <p>Custom fault detectors, ML dashboards and IoT integrations — scoped to your equipment, your sensors, your thresholds. Typical pilot live in 4–6 weeks.</p>
+    <a href="https://nidaayesha.com">Discuss your project — from $2,000</a>
+  </div>
 </div>
 
+<footer>
+  <span>MachineGuard demo · Simulated telemetry — no real equipment harmed</span>
+  <span>Built by <a href="https://nidaayesha.com">NAN Marketing Agency</a></span>
+</footer>
+
 <script>
-const $ = id => document.getElementById(id);
-const inT=$('inT'), inV=$('inV'), inP=$('inP');
+const $=id=>document.getElementById(id);
+const inT=$('inT'),inV=$('inV'),inP=$('inP');
 
-// Normalize each sensor to 0..100 risk contribution
-function normTemp(t){ if(t<=70) return (t-20)/50*25; if(t<=90) return 25+(t-70)/20*35; return 60+(t-90)/30*40; }
-function normVib(v){ if(v<=4.5) return v/4.5*30; if(v<=8) return 30+(v-4.5)/3.5*35; return 65+(v-8)/7*35; }
-function normPress(p){
-  const dev = p<150 ? (150-p)/70 : p>210 ? (p-210)/70 : 0; // deviation from healthy band
-  return Math.min(100, dev*90 + (p<120||p>240 ? 25 : 0));
+function paintSlider(el){
+  const pc=(el.value-el.min)/(el.max-el.min)*100;
+  el.style.setProperty('--fill',pc+'%');
 }
+function nT(t){if(t<=70)return(t-20)/50*25;if(t<=90)return 25+(t-70)/20*35;return 60+(t-90)/30*40;}
+function nV(v){if(v<=4.5)return v/4.5*30;if(v<=8)return 30+(v-4.5)/3.5*35;return 65+(v-8)/7*35;}
+function nP(p){const d=p<150?(150-p)/70:p>210?(p-210)/70:0;return Math.min(100,d*90+(p<120||p>240?25:0));}
+
 function analyze(){
-  const t=+inT.value, v=+inV.value, p=+inP.value;
-  $('oT').textContent = t+' °C';
-  $('oV').textContent = v.toFixed(1)+' mm/s';
-  $('oP').textContent = p+' bar';
+  const t=+inT.value,v=+inV.value,p=+inP.value;
+  [inT,inV,inP].forEach(paintSlider);
+  $('oT').textContent=t+' °C';
+  $('oV').textContent=v.toFixed(1)+' mm/s';
+  $('oP').textContent=p+' bar';
 
-  const rT=Math.min(100,Math.max(0,normTemp(t)));
-  const rV=Math.min(100,Math.max(0,normVib(v)));
-  const rP=Math.min(100,Math.max(0,normPress(p)));
-  // weighted risk score — vibration is the strongest failure signal
-  const score = Math.round(rT*0.3 + rV*0.45 + rP*0.25);
+  const rT=Math.min(100,Math.max(0,nT(t))),rV=Math.min(100,Math.max(0,nV(v))),rP=Math.min(100,Math.max(0,nP(p)));
+  const score=Math.round(rT*.3+rV*.45+rP*.25);
+  const col=score<35?'#14B8A6':score<65?'#FBBF24':'#F87171';
 
-  $('score').textContent = score;
-  $('arc').style.strokeDashoffset = 267 - (267*score/100);
-  $('arc').setAttribute('stroke', score<35 ? '#14B8A6' : score<65 ? '#FBBF24' : '#F87171');
-  $('score').style.color = score<35 ? '#14B8A6' : score<65 ? '#FBBF24' : '#F87171';
+  $('score').textContent=score;$('score').style.color=col;
+  const arc=$('arc');arc.style.strokeDashoffset=270-(270*score/100);arc.setAttribute('stroke',col);
 
   [['bT','pT',rT],['bV','pV',rV],['bP','pP',rP]].forEach(([b,pc,val])=>{
-    $(b).style.width = val+'%'; $(pc).textContent = Math.round(val)+'%';
+    const e=$(b);e.style.width=val+'%';
+    e.style.background=val<35?'#14B8A6':val<65?'#FBBF24':'#F87171';
+    $(pc).textContent=Math.round(val);$(pc).style.color=val<35?'#14B8A6':val<65?'#FBBF24':'#F87171';
   });
 
-  const verdict=$('verdict'), rec=$('rec');
+  const vd=$('verdict'),rec=$('rec'),dot=$('assetDot');
   if(score<35){
-    verdict.textContent='HEALTHY — keep running'; verdict.className='verdict v-ok';
-    rec.innerHTML='<b>✅ Recommendation:</b> All readings nominal. Continue normal operation. Next scheduled inspection in <b>30 days</b>. No action required.';
-  } else if(score<65){
-    verdict.textContent='WARNING — schedule maintenance'; verdict.className='verdict v-warn';
-    const causes=[];
-    if(rT>=40) causes.push('bearing temperature trending high — check lubrication');
-    if(rV>=40) causes.push('vibration above baseline — inspect for misalignment or wear');
-    if(rP>=40) causes.push('pressure outside healthy band — check seals and valves');
-    rec.innerHTML='<b>⚠️ Recommendation:</b> Schedule preventive maintenance within <b>7 days</b>.<br>• '+(causes.join('<br>• ')||'Monitor closely.');
-  } else {
-    verdict.textContent='CRITICAL — stop & inspect now'; verdict.className='verdict v-crit';
-    rec.innerHTML='<b>🚨 Recommendation:</b> <b>Shut down the machine</b> and dispatch a technician immediately. Continued operation risks catastrophic failure, unplanned downtime, and safety hazards. Estimated failure window: <b>&lt; 72 hours</b> at current readings.';
+    vd.textContent='HEALTHY — CONTINUE OPERATION';vd.className='verdict v-ok';
+    dot.style.background='#34D399';dot.style.boxShadow='0 0 8px #34D399';
+    rec.innerHTML='<div class="rh" style="color:#34D399">Maintenance recommendation</div>All channels nominal. Continue normal operation.<ul><li>Next scheduled inspection: <b>30 days</b></li><li>No parts ordering required</li></ul>';
+  }else if(score<65){
+    vd.textContent='WARNING — SCHEDULE MAINTENANCE';vd.className='verdict v-warn';
+    dot.style.background='#FBBF24';dot.style.boxShadow='0 0 8px #FBBF24';
+    const c=[];
+    if(rT>=40)c.push('Bearing temperature trending high — verify lubrication and cooling airflow');
+    if(rV>=40)c.push('Vibration above ISO 10816 baseline — inspect for misalignment, looseness or bearing wear');
+    if(rP>=40)c.push('Pressure outside 150–210 bar band — check seals, relief valves and filter condition');
+    rec.innerHTML='<div class="rh" style="color:#FBBF24">Maintenance recommendation</div>Schedule preventive maintenance within <b>7 days</b>.<ul><li>'+(c.join('</li><li>')||'Increase sampling rate and monitor trend.')+'</li></ul>';
+  }else{
+    vd.textContent='CRITICAL — STOP & INSPECT IMMEDIATELY';vd.className='verdict v-crit';
+    dot.style.background='#F87171';dot.style.boxShadow='0 0 10px #F87171';
+    rec.innerHTML='<div class="rh" style="color:#F87171">Maintenance recommendation</div><b>Shut down the asset</b> and dispatch a technician immediately.<ul><li>Estimated failure window at current readings: <b>&lt; 72 hours</b></li><li>Continued operation risks secondary damage and safety incident</li><li>Prepare replacement bearing kit before restart</li></ul>';
   }
 }
 [inT,inV,inP].forEach(i=>i.addEventListener('input',analyze));
-document.querySelectorAll('.presets button').forEach(b=>{
-  b.onclick=()=>{ const [t,v,p]=b.dataset.p.split(','); inT.value=t; inV.value=v; inP.value=p; analyze(); };
-});
+document.querySelectorAll('.presets button').forEach(b=>{b.onclick=()=>{const[t,v,p]=b.dataset.p.split(',');inT.value=t;inV.value=v;inP.value=p;analyze();};});
 analyze();
 </script>
 </body>
