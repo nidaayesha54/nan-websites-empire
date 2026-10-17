@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Poster Maker — Design Flyers Fast</title>
+<meta name="description" content="Free online poster maker: design sale posters, event flyers & quotes fast. Urdu + English text, templates, 1080×1080 PNG download. No signup.">
+<link rel="canonical" href="https://nan-postermaker.surge.sh/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.editor{display:grid;grid-template-columns:380px 1fr;gap:1.2rem;margin:1.6rem 0;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.panel h2{font-size:1.1rem;margin:0 0 1rem;color:var(--navy)}
+.field{margin:.9rem 0}.field label{display:block;font-weight:700;margin-bottom:.4rem;font-size:.95rem}
+.field input[type=text],.field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);border-radius:.55rem;font-size:1rem;font-family:inherit}
+.field textarea{resize:vertical;min-height:3.2rem}
+.field input[type=range]{width:100%;accent-color:var(--teal);height:2rem}
+.field input[type=color]{width:100%;height:2.6rem;border:1px solid var(--line);border-radius:.55rem;padding:.15rem;background:#fff;cursor:pointer}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.swatches{display:flex;flex-wrap:wrap;gap:.55rem}
+.sw{width:46px;height:46px;border-radius:.6rem;border:2px solid #e5e7eb;cursor:pointer;padding:0}
+.sw.active{border-color:var(--teal);box-shadow:0 0 0 2px rgba(20,184,166,.35)}
+.tpls{display:flex;gap:.55rem;flex-wrap:wrap}
+.tpl{background:#f1f5f9;border:1px solid var(--line);border-radius:.6rem;padding:.6rem 1rem;font-weight:700;cursor:pointer;font-size:.95rem;color:var(--navy)}
+.tpl:hover{border-color:var(--teal)}.tpl.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.switch{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.95rem;cursor:pointer}
+.switch input{width:1.3rem;height:1.3rem;accent-color:var(--teal)}
+.preview{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem;box-shadow:0 2px 10px rgba(10,22,40,.05);position:sticky;top:4.5rem}
+.preview h2{font-size:1.1rem;margin:0 0 1rem;color:var(--navy)}
+#poster{width:100%;height:auto;border-radius:.6rem;border:1px solid var(--line);display:block;background:#0A1628}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.9rem 1.6rem;font-size:1.05rem;font-weight:800;cursor:pointer;width:100%;margin-top:1rem}
+.btn:hover{filter:brightness(.94)}
+.adbox{display:flex;justify-content:center;margin:2rem 0;flex-wrap:wrap}
+h2.sec{color:var(--navy);margin-top:2.2rem;font-size:1.35rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem}
+.step .n{background:var(--navy);color:#fff;width:2rem;height:2rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:.5rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.guides a{color:var(--navy);font-weight:700}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a,[dir="rtl"] .langbtn{margin-left:0;margin-right:1rem}
+@media(max-width:920px){.editor{grid-template-columns:1fr}.preview{position:static}.fcols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Poster Maker</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/free-online-poster-maker-guide.html" data-i18n="nav_guide">Guide</a><button class="langbtn" id="langToggle" onclick="toggleLang()">اردو</button></nav>
+</div></header>
+<main><div class="wrap">
+<h1 data-i18n="h1">Free Online Poster Maker — Design Flyers Fast</h1>
+<p class="lede" data-i18n="lede">Create stunning sale posters, event flyers and quote graphics in seconds — right in your browser. Type in English or Urdu, pick a template and background, then download a crisp 1080×1080 PNG. 100% free, no signup, no watermark.</p>
+
+<div class="editor">
+  <div class="panel">
+    <h2 data-i18n="p_title">🎨 Design your poster</h2>
+    <div class="tpls" role="group" aria-label="Templates">
+      <button class="tpl active" data-tpl="sale" onclick="applyTemplate('sale',this)" data-i18n="t_sale">🔥 Sale</button>
+      <button class="tpl" data-tpl="event" onclick="applyTemplate('event',this)" data-i18n="t_event">🎉 Event</button>
+      <button class="tpl" data-tpl="quote" onclick="applyTemplate('quote',this)" data-i18n="t_quote">💬 Quote</button>
+    </div>
+    <div class="field"><label data-i18n="l_head">Headline</label><input type="text" id="inHead" data-i18n-ph="ph_head" placeholder="e.g. MEGA SALE — or اردو میں لکھیں" value="MEGA SALE" oninput="syncState()"></div>
+    <div class="field"><label data-i18n="l_sub">Sub text</label><textarea id="inSub" data-i18n-ph="ph_sub" placeholder="Supporting line…" oninput="syncState()">Up to 50% OFF — everything must go!</textarea></div>
+    <div class="field"><label data-i18n="l_foot">Bottom line (date / venue / CTA)</label><input type="text" id="inFoot" data-i18n-ph="ph_foot" placeholder="Sat 25 Oct · 5 PM · Main Street Hall" value="Shop now · Limited time only" oninput="syncState()"></div>
+    <div class="field"><label data-i18n="l_bg">Background</label><div class="swatches" id="swatches"></div></div>
+    <div class="field"><label data-i18n="l_custom">Custom background color</label><input type="color" id="inBgCustom" value="#0A1628" oninput="customBg(this.value)"></div>
+    <div class="field"><label><span data-i18n="l_size">Headline size</span>: <span id="sizeVal">150</span>px</label><input type="range" id="inSize" min="48" max="200" value="150" oninput="syncState()"></div>
+    <div class="row2">
+      <div class="field"><label data-i18n="l_tcolor">Text color</label><input type="color" id="inTColor" value="#ffffff" oninput="syncState()"></div>
+      <div class="field"><label>&nbsp;</label><label class="switch"><input type="checkbox" id="inShadow" checked onchange="syncState()"> <span data-i18n="l_shadow">Text shadow</span></label></div>
+    </div>
+  </div>
+  <div class="preview">
+    <h2 data-i18n="p_prev">👁 Live preview — 1080×1080</h2>
+    <canvas id="poster" width="1080" height="1080" aria-label="Poster preview"></canvas>
+    <button class="btn" onclick="downloadPNG()" data-i18n="dl">⬇ Download PNG</button>
+  </div>
+</div>
+
+<div class="adbox">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<h2 class="sec" data-i18n="how_h">How it works</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><p data-i18n="s1"><strong>Pick a template</strong> — Sale, Event or Quote sets the layout, colors and sizes instantly.</p></div>
+<div class="step"><span class="n">2</span><p data-i18n="s2"><strong>Type your text</strong> — English or Urdu. Urdu renders beautifully with Noto Nastaliq Urdu font.</p></div>
+<div class="step"><span class="n">3</span><p data-i18n="s3"><strong>Style it</strong> — choose a background, tune the headline size, text color and shadow.</p></div>
+<div class="step"><span class="n">4</span><p data-i18n="s4"><strong>Download</strong> — one tap gives you a sharp 1080×1080 PNG, ready for WhatsApp, Instagram or print.</p></div>
+</div>
+
+<div class="guides"><strong data-i18n="g_h">📖 New to poster design?</strong><br><span data-i18n="g_d">Read our step-by-step guide: tips, free flyer maker tools, and how to make a poster in Urdu.</span><br><br><a href="articles/free-online-poster-maker-guide.html" data-i18n="g_a">Read the Free Poster Maker Guide →</a></div>
+
+<h2 class="sec" data-i18n="faq">FAQs</h2>
+<div class="faq">
+<details><summary data-i18n="q1">Is this poster maker really free?</summary><p data-i18n="a1">Yes — 100% free with no signup and no watermark on your downloads. Everything runs in your browser.</p></details>
+<details><summary data-i18n="q2">Can I make posters in Urdu?</summary><p data-i18n="a2">Yes. Type Urdu directly into the text fields — the canvas renders it with the Noto Nastaliq Urdu font, right-to-left, exactly as you typed it.</p></details>
+<details><summary data-i18n="q3">What size is the downloaded poster?</summary><p data-i18n="a3">1080×1080 pixels — the perfect square format for Instagram posts, WhatsApp status, Facebook and printing small flyers.</p></details>
+<details><summary data-i18n="q4">Do my designs get uploaded anywhere?</summary><p data-i18n="a4">No. Your text never leaves your device — all rendering happens locally on the canvas in your browser.</p></details>
+</div>
+
+</div></main>
+<footer>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:0 auto 1.5rem;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free design tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-colortools.surge.sh" style="color:#94a3b8;text-decoration:none;">Color Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-imagetools.surge.sh" style="color:#94a3b8;text-decoration:none;">Image Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-qrtools.surge.sh" style="color:#94a3b8;text-decoration:none;">QR Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-texttools.surge.sh" style="color:#94a3b8;text-decoration:none;">Text Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">Urdu Portal</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><div class="fcols">
+<div><h4>NAN Poster Maker</h4><p data-i18n="foot">Free online poster &amp; flyer maker — sale posters, event flyers and quote graphics with Urdu + English support. Download sharp 1080×1080 PNGs, no signup.</p></div>
+<div><h4 data-i18n="tools_h">Tools</h4><p><a href="index.html" data-i18n="nav_tools">Tools</a><br><a href="articles/free-online-poster-maker-guide.html" data-i18n="nav_guide">Guide</a></p></div>
+</div><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
