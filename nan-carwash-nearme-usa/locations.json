@@ -1,0 +1,1010 @@
+[
+ {
+  "name": "Car Wash",
+  "lat": 29.5624974,
+  "lon": -95.1155574,
+  "address": "Car Wash, Bay Area Boulevard, Clear Lake, Houston",
+  "city": "Houston",
+  "state": "Texas"
+ },
+ {
+  "name": "Dream Clean Car Wash",
+  "lat": 41.799885,
+  "lon": -87.7238145,
+  "address": "Dream Clean Car Wash, 5114, South Pulaski Road, West Elsdon",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "R & S Car Wash",
+  "lat": 41.9103077,
+  "lon": -87.719711,
+  "address": "R & S Car Wash, 3706, West North Avenue, Pacific Junction",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Speedy Car Wash",
+  "lat": 41.9854735,
+  "lon": -87.699897,
+  "address": "Speedy Car Wash, 5724, North Lincoln Avenue, Peterson Park",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Express Car Wash",
+  "lat": 41.9246523,
+  "lon": -87.6804245,
+  "address": "Express Car Wash, 2111, West Fullerton Avenue, Chicago",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Buddy Bear Car Wash",
+  "lat": 41.766278,
+  "lon": -87.6065296,
+  "address": "Buddy Bear Car Wash, 7068, South South Chicago Avenue, Woodlawn",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Nappa Car Wash",
+  "lat": 41.9931105,
+  "lon": -87.7292184,
+  "address": "Nappa Car Wash, 6128, North Pulaski Road, Peterson Park (39th Ward)",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Quality Car Wash",
+  "lat": 41.7370332,
+  "lon": -87.6078151,
+  "address": "Quality Car Wash, 644, East 87th Street, Chatham",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Jet Brite Car Wash",
+  "lat": 41.9239397,
+  "lon": -87.799694,
+  "address": "Jet Brite Car Wash, 6948, West Grand Avenue, Beat 2512",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Hand Car Wash & Detail",
+  "lat": 41.8523946,
+  "lon": -87.678907,
+  "address": "Hand Car Wash & Detail, 2110, West Cermak Road, Lower West Side",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Jet Brite Car Wash",
+  "lat": 41.7943313,
+  "lon": -87.8011039,
+  "address": "Jet Brite Car Wash, 7150, West 54th Street, Garfield Ridge",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "$5 Classic Car Wash",
+  "lat": 41.9928259,
+  "lon": -87.6892262,
+  "address": "$5 Classic Car Wash, 6111, North Western Avenue, Arcadia Terrace",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Quick Suds Car Wash",
+  "lat": 41.6846247,
+  "lon": -87.7009858,
+  "address": "Quick Suds Car Wash, 3200, West 115th Street, Mount Greenwood",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Buddy Bear Car Wash",
+  "lat": 41.7228935,
+  "lon": -87.5859925,
+  "address": "Buddy Bear Car Wash, 1538, East 95th Street, South Deering",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Buddy Bear Car Wash",
+  "lat": 41.9100004,
+  "lon": -87.7504139,
+  "address": "Buddy Bear Car Wash, 4936, West North Avenue, Beat 2523",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Express Car Wash",
+  "lat": 41.9904136,
+  "lon": -87.6703055,
+  "address": "Express Car Wash, 5970, North Clark Street, Edgewater Glen",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Sudz Express Car Wash",
+  "lat": 41.9238503,
+  "lon": -87.742115,
+  "address": "Sudz Express Car Wash, 4607, West Fullerton Avenue, Beat 2522",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Buddy Bear Car Wash",
+  "lat": 41.8696787,
+  "lon": -87.7452632,
+  "address": "Buddy Bear Car Wash, 818, South Cicero Avenue, Mandell",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "National Car Wash",
+  "lat": 41.971755,
+  "lon": -87.6600292,
+  "address": "National Car Wash, 4900, North Broadway, Argyle Street",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Express Car Wash",
+  "lat": 41.9465208,
+  "lon": -87.7416462,
+  "address": "Express Car Wash, 4550, West Addison Street, Kilbourn Park",
+  "city": "Chicago",
+  "state": "Illinois"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 34.146384,
+  "lon": -118.4231493,
+  "address": "Car Wash, Alley 81368, Sherman Oaks Neighborhood Council District, Los Angeles",
+  "city": "Los Angeles",
+  "state": "California"
+ },
+ {
+  "name": "car wash",
+  "lat": 33.8183217,
+  "lon": -118.167019,
+  "address": "car wash, East Wardlow Road, California Heights, Long Beach",
+  "city": "Long Beach",
+  "state": "California"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 33.8039549,
+  "lon": -118.1437816,
+  "address": "Car Wash, East Willow Street, Los Altos, Long Beach",
+  "city": "Long Beach",
+  "state": "California"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 34.0216859,
+  "lon": -118.4011597,
+  "address": "Car Wash, 10150, Venice Boulevard, Palms",
+  "city": "Los Angeles",
+  "state": "California"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 34.0548599,
+  "lon": -118.0863869,
+  "address": "Car Wash, Klingerman Street, South San Gabriel, Rosemead",
+  "city": "Rosemead",
+  "state": "California"
+ },
+ {
+  "name": "Raceway Express Car Wash",
+  "lat": 33.4673085,
+  "lon": -112.2039881,
+  "address": "Raceway Express Car Wash, 1740, Maryvale, Phoenix",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "RaceWay Express Car Wash",
+  "lat": 33.4722299,
+  "lon": -112.23841,
+  "address": "RaceWay Express Car Wash, 8301, Maryvale, Phoenix",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Raceway Express Car Wash",
+  "lat": 33.5390904,
+  "lon": -112.1495403,
+  "address": "Raceway Express Car Wash, 4210, Alhambra, Phoenix",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Super Star Car Wash",
+  "lat": 33.4659464,
+  "lon": -112.2373759,
+  "address": "Super Star Car Wash, 1611, North 83rd Avenue, Maryvale",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Dash Car Wash",
+  "lat": 33.4943427,
+  "lon": -112.020236,
+  "address": "Dash Car Wash, 2835, East Indian School Road, Squaw Peak Terrace",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Francis & Sons Car Wash",
+  "lat": 33.5080102,
+  "lon": -112.1681402,
+  "address": "Francis & Sons Car Wash, 4925, North 51st Avenue, Maryvale",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Mr.Z's Car Wash & Quick Service",
+  "lat": 33.4663916,
+  "lon": -111.9887409,
+  "address": "Mr.Z's Car Wash & Quick Service, 4320, East McDowell Road, Camelback East",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Sonoran Express Car Wash",
+  "lat": 33.3922935,
+  "lon": -112.048395,
+  "address": "Sonoran Express Car Wash, 1523, East Southern Avenue, South Mountain",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Francis & Sons Car Wash",
+  "lat": 33.3787584,
+  "lon": -111.980516,
+  "address": "Francis & Sons Car Wash, 4720, East Baseline Road, South Mountain",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Super Star Car Wash",
+  "lat": 33.3784494,
+  "lon": -111.9973785,
+  "address": "Super Star Car Wash, 3930, East Baseline Road, South Mountain",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Clean Freak Car Wash",
+  "lat": 33.4671017,
+  "lon": -111.9877647,
+  "address": "Clean Freak Car Wash, 1702, North 44th Street, Camelback East",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Quick Quack Car Wash",
+  "lat": 33.4661141,
+  "lon": -112.035177,
+  "address": "Quick Quack Car Wash, 1615, North 21st Place, Camelback Trailer Ranch",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Magic Hand Car Wash",
+  "lat": 33.407222,
+  "lon": -112.0705322,
+  "address": "Magic Hand Car Wash, 216, East Broadway Road, South Phoenix",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Quick Quack Car Wash",
+  "lat": 33.6791979,
+  "lon": -112.0316547,
+  "address": "Quick Quack Car Wash, North Cave Creek Road, Paradise Valley, Phoenix",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Self Service Car Wash",
+  "lat": 33.3918899,
+  "lon": -112.0979016,
+  "address": "Self Service Car Wash, 1857, West Southern Avenue, South Mountain",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Monte Vista Car Wash",
+  "lat": 33.465923,
+  "lon": -112.0436214,
+  "address": "Monte Vista Car Wash, 1742, East McDowell Road, Palms Trailer Park",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Super Star Car Wash",
+  "lat": 33.3769651,
+  "lon": -112.1000357,
+  "address": "Super Star Car Wash, 1905, West Baseline Road, South Mountain",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Super Star Express Car Wash",
+  "lat": 33.4661147,
+  "lon": -111.9739161,
+  "address": "Super Star Express Car Wash, 5002, East McDowell Road, Camelback East",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Quick Quack Car Wash",
+  "lat": 33.4954703,
+  "lon": -112.1159975,
+  "address": "Quick Quack Car Wash, 2632, West Indian School Road, Alhambra",
+  "city": "Phoenix",
+  "state": "Arizona"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 33.120019,
+  "lon": -97.029681,
+  "address": "Car Wash, South Shady Shores Road, Lake Dallas, Denton County",
+  "city": "Lake Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "$4 Express Car Wash",
+  "lat": 32.6782203,
+  "lon": -96.985878,
+  "address": "$4 Express Car Wash, 3949, South Belt Line Road, Grand Prairie",
+  "city": "Grand Prairie",
+  "state": "Texas"
+ },
+ {
+  "name": "$5 Car Wash",
+  "lat": 32.8957281,
+  "lon": -96.8846125,
+  "address": "$5 Car Wash, 2757, Royal Lane, Asian Trade District",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Super Star Car Wash",
+  "lat": 32.8566492,
+  "lon": -96.7464732,
+  "address": "Super Star Car Wash, 6559, East Northwest Highway, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Soapy Jeff's Car Wash",
+  "lat": 32.9854769,
+  "lon": -96.8031164,
+  "address": "Soapy Jeff's Car Wash, 17230, Preston Road, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Carmel Car Wash",
+  "lat": 32.8293814,
+  "lon": -96.708391,
+  "address": "Carmel Car Wash, 9115, Garland Road, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Big Lou's Car Wash",
+  "lat": 32.9512589,
+  "lon": -96.7712399,
+  "address": "Big Lou's Car Wash, Spring Creek Road, Dallas, Dallas County",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Green Planet Car Wash",
+  "lat": 32.996738,
+  "lon": -96.7994061,
+  "address": "Green Planet Car Wash, 17931, Preston Road, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Zips Car Wash",
+  "lat": 32.8079997,
+  "lon": -96.7746902,
+  "address": "Zips Car Wash, 5021, Ross Avenue, Old East Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Auto Clinic and Full Service Car Wash",
+  "lat": 32.6330524,
+  "lon": -96.9447023,
+  "address": "Auto Clinic and Full Service Car Wash, 7539, Mountain Creek Parkway, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Carmel Car Wash",
+  "lat": 32.9089547,
+  "lon": -96.7726154,
+  "address": "Carmel Car Wash, 7770, Forest Lane, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Tommy's Express Car Wash",
+  "lat": 32.9976087,
+  "lon": -96.8616814,
+  "address": "Tommy's Express Car Wash, 3015, Frankford Road, Dallas",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "Lake Highlands Car Wash",
+  "lat": 32.8793574,
+  "lon": -96.718804,
+  "address": "Lake Highlands Car Wash, 9715, Walnut Hill Lane, Lake Highlands",
+  "city": "Dallas",
+  "state": "Texas"
+ },
+ {
+  "name": "The Bubble Zone  Car Wash & Lube Center",
+  "lat": 32.9599522,
+  "lon": -96.6464836,
+  "address": "The Bubble Zone  Car Wash & Lube Center, Naaman Forest Boulevard, Garland, Dallas County",
+  "city": "Garland",
+  "state": "Texas"
+ },
+ {
+  "name": "Miller Car Wash",
+  "lat": 32.893902,
+  "lon": -96.61059,
+  "address": "Miller Car Wash, East Miller Road, Garland, Dallas County",
+  "city": "Garland",
+  "state": "Texas"
+ },
+ {
+  "name": "Ultimate Car Wash",
+  "lat": 32.894099,
+  "lon": -96.6461505,
+  "address": "Ultimate Car Wash, West Miller Road, Garland, Dallas County",
+  "city": "Garland",
+  "state": "Texas"
+ },
+ {
+  "name": "Mi-T-Fine Car Wash",
+  "lat": 32.8503498,
+  "lon": -96.9934563,
+  "address": "Mi-T-Fine Car Wash, 3311, North Belt Line Road, Irving",
+  "city": "Irving",
+  "state": "Texas"
+ },
+ {
+  "name": "Spotless Car Wash",
+  "lat": 32.9558572,
+  "lon": -96.9574892,
+  "address": "Spotless Car Wash, 615, South MacArthur Boulevard, Coppell",
+  "city": "Coppell",
+  "state": "Texas"
+ },
+ {
+  "name": "Joan's Self Services Car Wash and Mr Wizard's Auto Wash",
+  "lat": 32.8380522,
+  "lon": -96.9516977,
+  "address": "Joan's Self Services Car Wash and Mr Wizard's Auto Wash, 2111, North O'Connor Road, Irving",
+  "city": "Irving",
+  "state": "Texas"
+ },
+ {
+  "name": "WhiteWater Express Car Wash",
+  "lat": 32.9219342,
+  "lon": -96.9932941,
+  "address": "WhiteWater Express Car Wash, 8440, North Belt Line Road, Irving",
+  "city": "Irving",
+  "state": "Texas"
+ },
+ {
+  "name": "El Car Wash - North Miami",
+  "lat": 25.8805342,
+  "lon": -80.166396,
+  "address": "El Car Wash - North Miami, 11375, Biscayne Boulevard, Courtly Manor",
+  "city": "North Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 25.7740501,
+  "lon": -80.2635038,
+  "address": "El Car Wash, 231, Northwest 42nd Avenue, Miami",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "The Car Wash",
+  "lat": 25.7354835,
+  "lon": -80.2490126,
+  "address": "The Car Wash, Bird Avenue, South Bay Estates, Miami",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Wynwood Car Wash",
+  "lat": 25.8040409,
+  "lon": -80.1907866,
+  "address": "Wynwood Car Wash, 2875, Northeast 2nd Avenue, Edgewater",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Karma Car Wash",
+  "lat": 25.8398983,
+  "lon": -80.1846386,
+  "address": "Karma Car Wash, 7010, Biscayne Boulevard, Little River",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Europa Car Wash & Cafe",
+  "lat": 25.8324686,
+  "lon": -80.183645,
+  "address": "Europa Car Wash & Cafe, 6075, Biscayne Boulevard, Bayshore",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 25.9280491,
+  "lon": -80.1911491,
+  "address": "El Car Wash, 472, Northeast 167th Street, Miami",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 25.7336694,
+  "lon": -80.3071396,
+  "address": "El Car Wash, 6901, Southwest 40th Street, Ludlam",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Havoline Oil Change and Car Wash",
+  "lat": 25.7720373,
+  "lon": -80.2312734,
+  "address": "Havoline Oil Change and Car Wash, 15, Beacom Boulevard, Little Havana",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 25.7734459,
+  "lon": -80.239549,
+  "address": "El Car Wash, 42, Northwest 27th Avenue, Miami",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Busy Bee Car Wash",
+  "lat": 25.6008084,
+  "lon": -80.3536771,
+  "address": "Busy Bee Car Wash, 18210, South Dixie Highway, West Perrine",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Village Car Wash of Osawatomie",
+  "lat": 38.4969699,
+  "lon": -94.9511397,
+  "address": "Village Car Wash of Osawatomie, 618, Pacific Avenue, Osawatomie",
+  "city": "Osawatomie",
+  "state": "Kansas"
+ },
+ {
+  "name": "Wishy Washy Car Wash",
+  "lat": 40.0389652,
+  "lon": -84.2281167,
+  "address": "Wishy Washy Car Wash, South Dorset Road, Troy, Concord Township",
+  "city": "Troy",
+  "state": "Ohio"
+ },
+ {
+  "name": "Xcel Car Wash",
+  "lat": 38.6229793,
+  "lon": -94.6939423,
+  "address": "Xcel Car Wash, 202, West Crestview Drive, Louisburg",
+  "city": "Louisburg",
+  "state": "Kansas"
+ },
+ {
+  "name": "Busy Bee Car Wash",
+  "lat": 25.6869806,
+  "lon": -80.3532695,
+  "address": "Busy Bee Car Wash, 9750, Southwest 88th Street, Miami",
+  "city": "Miami",
+  "state": "Florida"
+ },
+ {
+  "name": "Mister Hot Shine Car Wash",
+  "lat": 33.7731687,
+  "lon": -84.3681773,
+  "address": "Mister Hot Shine Car Wash, 575, Ponce de Leon Avenue Northeast, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Mister Car Wash",
+  "lat": 33.8362077,
+  "lon": -84.3686987,
+  "address": "Mister Car Wash, Piedmont Road Northeast, Buckhead, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Kirkwood Car Wash",
+  "lat": 33.7506188,
+  "lon": -84.3223833,
+  "address": "Kirkwood Car Wash, Oakview Road Southeast, Kirkwood, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Hand Car Wash",
+  "lat": 33.8493765,
+  "lon": -84.4305116,
+  "address": "Hand Car Wash, Horace E Tate Freeway, Atlanta, Fulton County",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Chevron Car Wash",
+  "lat": 33.8495674,
+  "lon": -84.4296468,
+  "address": "Chevron Car Wash, West Paces Ferry Road Northwest, Atlanta, Fulton County",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Whistle Express Car Wash",
+  "lat": 33.7531394,
+  "lon": -84.3490433,
+  "address": "Whistle Express Car Wash, Moreland Avenue Southeast, Reynoldstown, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Caliber Car Wash",
+  "lat": 33.8813192,
+  "lon": -84.2753285,
+  "address": "Caliber Car Wash, 2764, Chamblee Tucker Road, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Soap Hand Car Wash",
+  "lat": 33.8147223,
+  "lon": -84.3528847,
+  "address": "Soap Hand Car Wash, Woodland Avenue Northeast, Woodland Hills, Lindbergh",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Swifty Car Wash",
+  "lat": 33.7225412,
+  "lon": -84.349857,
+  "address": "Swifty Car Wash, 1159, Moreland Avenue Southeast, Atlanta",
+  "city": "Atlanta",
+  "state": "Georgia"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 40.6651693,
+  "lon": -73.73009,
+  "address": "Car Wash, 248-10, Sunrise Highway, Queens",
+  "city": "New York",
+  "state": "New York"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 42.4298676,
+  "lon": -76.5037159,
+  "address": "Car Wash, 209, Elmira Road, Titus Flats",
+  "city": "City of Ithaca",
+  "state": "New York"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 42.9584333,
+  "lon": -78.8634362,
+  "address": "Car Wash, 1228, Kenmore Avenue, Ellwood Park",
+  "city": "Village of Kenmore",
+  "state": "New York"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 43.4777675,
+  "lon": -75.3194526,
+  "address": "Car Wash, Erwin Parkway, Tops Plaza Commercial Area, Village of Boonville",
+  "city": "Village of Boonville",
+  "state": "New York"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 42.1568517,
+  "lon": -78.7477393,
+  "address": "Car Wash, Mill Street, City of Salamanca, Cattaraugus County",
+  "city": "City of Salamanca",
+  "state": "New York"
+ },
+ {
+  "name": "Red Carpet Car Wash",
+  "lat": 39.7035231,
+  "lon": -104.9136779,
+  "address": "Red Carpet Car Wash, Denver, Colorado, United States",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Cobblestone Car Wash",
+  "lat": 39.6787644,
+  "lon": -104.9116049,
+  "address": "Cobblestone Car Wash, 6565, East Evans Avenue, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Riverboat Car Wash",
+  "lat": 39.6539551,
+  "lon": -104.9041419,
+  "address": "Riverboat Car Wash, 3480, South Poplar Street, Morningside",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hi Performance Car Wash",
+  "lat": 39.7808003,
+  "lon": -104.8425879,
+  "address": "Hi Performance Car Wash, East Albrook Drive, Denver, Colorado",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Pete's Car Wash",
+  "lat": 39.7690796,
+  "lon": -104.9988417,
+  "address": "Pete's Car Wash, West 38th Avenue, Highland, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Autowash @ Northfield Car Wash",
+  "lat": 39.7890389,
+  "lon": -104.8820784,
+  "address": "Autowash @ Northfield Car Wash, 5050, North Central Park Boulevard, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Eco Express Car Wash",
+  "lat": 39.7735696,
+  "lon": -104.9412168,
+  "address": "Eco Express Car Wash, East 41st Avenue, Elyria Swansea, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hello Car Wash",
+  "lat": 39.7998401,
+  "lon": -104.8836839,
+  "address": "Hello Car Wash, East 57th Avenue, Denver, Colorado",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "HI Performance Car Wash",
+  "lat": 39.7114584,
+  "lon": -104.9903809,
+  "address": "HI Performance Car Wash, 101, West Alameda Avenue, Baker",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hampden & Yosemite Car Wash",
+  "lat": 39.6517894,
+  "lon": -104.886357,
+  "address": "Hampden & Yosemite Car Wash, 3545, South Yosemite Street, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Colorado Blue Sky Car Wash",
+  "lat": 39.6538027,
+  "lon": -104.9080573,
+  "address": "Colorado Blue Sky Car Wash, 6910, East Girard Avenue, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Rub-A -Dub Car Wash",
+  "lat": 39.6963338,
+  "lon": -105.0123868,
+  "address": "Rub-A -Dub Car Wash, 1980, West Mississippi Avenue, Athmar Park",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hi Performance Car Wash II",
+  "lat": 39.7650276,
+  "lon": -104.9402196,
+  "address": "Hi Performance Car Wash II, 3450, North Colorado Boulevard, Clayton",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "ProWash Car Wash",
+  "lat": 39.7407814,
+  "lon": -104.9410939,
+  "address": "ProWash Car Wash, 1501, North Colorado Boulevard, City Park",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Lowry Car Wash",
+  "lat": 39.7079506,
+  "lon": -104.8775063,
+  "address": "Lowry Car Wash, 9640, East Alameda Avenue, Denver",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hi Performance Car Wash II",
+  "lat": 39.7765137,
+  "lon": -105.0425788,
+  "address": "Hi Performance Car Wash II, 4280, West 44th Avenue, Berkeley",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Dino Car Wash",
+  "lat": 39.7263546,
+  "lon": -104.9983203,
+  "address": "Dino Car Wash, 620, Santa Fe Drive, Twin Lakes",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Mr. Car Wash and Detail Service",
+  "lat": 39.7697124,
+  "lon": -105.0341467,
+  "address": "Mr. Car Wash and Detail Service, 3549, West 38th Avenue, Berkeley",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Conoco Car Wash",
+  "lat": 39.7837457,
+  "lon": -105.025578,
+  "address": "Conoco Car Wash, 4785, Federal Boulevard, Berkeley",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Hi Performance Car Wash II",
+  "lat": 39.7865106,
+  "lon": -105.0255822,
+  "address": "Hi Performance Car Wash II, 4945, Federal Boulevard, Chaffee Park",
+  "city": "Denver",
+  "state": "Colorado"
+ },
+ {
+  "name": "Octopus Car Wash",
+  "lat": 28.5644587,
+  "lon": -81.364097,
+  "address": "Octopus Car Wash, Minnesota Street, Colonialtown, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 28.3580264,
+  "lon": -81.2426337,
+  "address": "El Car Wash, Orchid Island Drive, City of Orlando/GOAA, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Faultless  car wash",
+  "lat": 28.5235746,
+  "lon": -81.3300635,
+  "address": "Faultless  car wash, Curry Ford Road, Conway, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Compactor/Car Wash",
+  "lat": 28.456916,
+  "lon": -81.3133231,
+  "address": "Compactor/Car Wash, 7380, North Frontage Road, Airport North",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Nona Park Village Car Wash",
+  "lat": 28.4300045,
+  "lon": -81.2584445,
+  "address": "Nona Park Village Car Wash, Kensington Row Court, Morningside at NorthLake Park, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Caliber Car Wash",
+  "lat": 28.4650862,
+  "lon": -81.2761404,
+  "address": "Caliber Car Wash, Narcoossee Road, Airport North, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Mister Car Wash",
+  "lat": 28.4945531,
+  "lon": -81.4228026,
+  "address": "Mister Car Wash, Millenia Boulevard, Millenia, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 28.3902077,
+  "lon": -81.2437707,
+  "address": "El Car Wash, 12015, Narcoossee Road, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "El Car Wash",
+  "lat": 28.3635326,
+  "lon": -81.3103789,
+  "address": "El Car Wash, 13866, Boggy Creek Road, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Mister Car Wash",
+  "lat": 28.5679802,
+  "lon": -81.2790605,
+  "address": "Mister Car Wash, 7958, East Colonial Drive, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Mister Car Wash",
+  "lat": 28.5655438,
+  "lon": -81.2010134,
+  "address": "Mister Car Wash, 12180, East Colonial Drive, University Park",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Waters Car Wash",
+  "lat": 28.5415825,
+  "lon": -81.2067848,
+  "address": "Waters Car Wash, 340, Alafaya Trail, Orlando",
+  "city": "Orlando",
+  "state": "Florida"
+ },
+ {
+  "name": "Car Wash",
+  "lat": 35.3225396,
+  "lon": -80.7344065,
+  "address": "Car Wash, West Mallard Creek Church Road, University City, Charlotte",
+  "city": "Charlotte",
+  "state": "North Carolina"
+ }
+]
