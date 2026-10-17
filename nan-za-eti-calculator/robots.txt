@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-za-eti-calculator.surge.sh/sitemap.xml
