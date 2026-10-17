@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rozana Calculators</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">R</div>
+    <h1><span data-en="Rozana Calculators" data-ur="روزانہ کیلکولیٹرز">روزانہ کیلکولیٹرز</span><small data-en="Daily-use Pakistan calculators" data-ur="روزمرہ پاکستان کیلکولیٹرز">روزمرہ پاکستان کیلکولیٹرز</small></h1>
+  </div>
+  <button id="langBtn" aria-label="language">EN</button>
+</header>
+
+<main>
+  <!-- EOBI -->
+  <section class="tabpanel active" id="tab-eobi">
+    <div class="card">
+      <h2 data-en="EOBI Pension Calculator" data-ur="ای او بی آئی پنشن کیلکولیٹر">ای او بی آئی پنشن کیلکولیٹر</h2>
+      <p class="lede" data-en="Estimate your monthly EOBI pension (2026 rules)." data-ur="اپنی ماہانہ ای او بی آئی پنشن کا تخمینہ لگائیں (2026 قوانین)۔">اپنی ماہانہ ای او بی آئی پنشن کا تخمینہ لگائیں (2026 قوانین)۔</p>
+      <label data-en="Average monthly wage (Rs)" data-ur="اوسط ماہانہ اجرت (روپے)">اوسط ماہانہ اجرت (روپے)</label>
+      <input id="wage" type="number" inputmode="decimal" data-en-ph="e.g. 40000" data-ur-ph="مثلاً 40000" placeholder="مثلاً 40000">
+      <label data-en="Years of service" data-ur="ملازمت کے سال">ملازمت کے سال</label>
+      <input id="years" type="number" inputmode="decimal" data-en-ph="e.g. 20" data-ur-ph="مثلاً 20" placeholder="مثلاً 20">
+      <button class="btn" onclick="calcEOBI()" data-en="Calculate" data-ur="حساب کریں">حساب کریں</button>
+      <div class="result" id="eobiResult"></div>
+    </div>
+  </section>
+
+  <!-- OVERTIME -->
+  <section class="tabpanel" id="tab-ot">
+    <div class="card">
+      <h2 data-en="Overtime Calculator" data-ur="اوور ٹائم کیلکولیٹر">اوور ٹائم کیلکولیٹر</h2>
+      <p class="lede" data-en="Overtime pay at double the ordinary rate." data-ur="عام اجرت سے دوگنی شرح پر اوور ٹائم کی رقم۔">عام اجرت سے دوگنی شرح پر اوور ٹائم کی رقم۔</p>
+      <label data-en="Monthly salary (Rs)" data-ur="ماہانہ تنخواہ (روپے)">ماہانہ تنخواہ (روپے)</label>
+      <input id="salary" type="number" inputmode="decimal" data-en-ph="e.g. 50000" data-ur-ph="مثلاً 50000" placeholder="مثلاً 50000">
+      <label data-en="Weekly working hours" data-ur="ہفتہ وار کام کے گھنٹے">ہفتہ وار کام کے گھنٹے</label>
+      <input id="whrs" type="number" inputmode="decimal" value="48">
+      <label data-en="Overtime hours worked" data-ur="اوور ٹائم گھنٹے">اوور ٹائم گھنٹے</label>
+      <input id="oth" type="number" inputmode="decimal" data-en-ph="e.g. 10" data-ur-ph="مثلاً 10" placeholder="مثلاً 10">
+      <button class="btn" onclick="calcOT()" data-en="Calculate" data-ur="حساب کریں">حساب کریں</button>
+      <div class="result" id="otResult"></div>
+    </div>
+  </section>
+
+  <!-- GRATUITY -->
+  <section class="tabpanel" id="tab-grat">
+    <div class="card">
+      <h2 data-en="Gratuity Calculator" data-ur="گریجویٹی کیلکولیٹر">گریجویٹی کیلکولیٹر</h2>
+      <p class="lede" data-en="30 days' wages for each completed year of service." data-ur="ہر مکمل سال ملازمت پر 30 دن کی اجرت۔">ہر مکمل سال ملازمت پر 30 دن کی اجرت۔</p>
+      <label data-en="Last monthly wage (Rs)" data-ur="آخری ماہانہ اجرت (روپے)">آخری ماہانہ اجرت (روپے)</label>
+      <input id="gwage" type="number" inputmode="decimal" data-en-ph="e.g. 60000" data-ur-ph="مثلاً 60000" placeholder="مثلاً 60000">
+      <label data-en="Years of service" data-ur="ملازمت کے سال">ملازمت کے سال</label>
+      <input id="gyrs" type="number" inputmode="decimal" data-en-ph="e.g. 5" data-ur-ph="مثلاً 5" placeholder="مثلاً 5">
+      <button class="btn" onclick="calcGrat()" data-en="Calculate" data-ur="حساب کریں">حساب کریں</button>
+      <div class="result" id="grResult"></div>
+    </div>
+  </section>
+
+  <!-- AGE -->
+  <section class="tabpanel" id="tab-age">
+    <div class="card">
+      <h2 data-en="Age Calculator" data-ur="عمر کیلکولیٹر">عمر کیلکولیٹر</h2>
+      <p class="lede" data-en="Exact age in years, months and days." data-ur="سال، ماہ اور دن میں درست عمر۔">سال، ماہ اور دن میں درست عمر۔</p>
+      <label data-en="Date of birth" data-ur="تاریخ پیدائش">تاریخ پیدائش</label>
+      <input id="dob" type="date">
+      <button class="btn" onclick="calcAge()" data-en="Calculate" data-ur="حساب کریں">حساب کریں</button>
+      <div class="result" id="ageResult"></div>
+    </div>
+  </section>
+
+  <footer class="appfoot">
+    <span data-en="Estimates only — not legal advice. Works fully offline." data-ur="صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔">صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔</span><br>NAN
+  </footer>
+</main>
+
+<div id="adBanner"></div>
+
+<nav class="tabs">
+  <button class="active" data-tab="tab-eobi" onclick="switchTab('tab-eobi',this)"><span class="ic">🏦</span><span data-en="EOBI" data-ur="ای او بی آئی">ای او بی آئی</span></button>
+  <button data-tab="tab-ot" onclick="switchTab('tab-ot',this)"><span class="ic">⏰</span><span data-en="Overtime" data-ur="اوور ٹائم">اوور ٹائم</span></button>
+  <button data-tab="tab-grat" onclick="switchTab('tab-grat',this)"><span class="ic">💰</span><span data-en="Gratuity" data-ur="گریجویٹی">گریجویٹی</span></button>
+  <button data-tab="tab-age" onclick="switchTab('tab-age',this)"><span class="ic">🎂</span><span data-en="Age" data-ur="عمر">عمر</span></button>
+</nav>
+
+<script src="js/calcs.js"></script>
+<script src="js/admob.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
