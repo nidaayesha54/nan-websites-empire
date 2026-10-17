@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Color Picker, HEX to RGB Converter & Palette Tool | NAN</title>
+<meta name="description" content="Free online color tools: color picker with HEX/RGB/HSL copy, hex to rgb converter, harmonious color palette generator, and WCAG contrast checker. 100% free, no signup.">
+<link rel="canonical" href="https://nan-colortools.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.tab{background:var(--card);border:1px solid var(--line);border-radius:.7rem .7rem 0 0;padding:.8rem 1.3rem;font-weight:700;cursor:pointer;color:var(--mut);border-bottom:0;font-size:1rem}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:0 .9rem .9rem .9rem;padding:1.4rem;margin:0 0 1.4rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.panel h2{margin-top:0;font-size:1.3rem;color:var(--navy)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:.8rem}
+.btn:hover{filter:brightness(.94)}
+.btn.ghost{background:#e2e8f0;color:var(--navy)}
+.field{margin:.9rem 0}.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input[type=text],.field select{padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem;width:100%;max-width:26rem;background:#fff}
+.picker-row{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:flex-start}
+.picker-left{display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+input[type=color]{width:120px;height:120px;border:1px solid var(--line);border-radius:.8rem;padding:.3rem;background:#fff;cursor:pointer}
+.bigpreview{width:100%;max-width:26rem;height:5.2rem;border-radius:.8rem;border:1px solid var(--line)}
+.vrow{display:flex;align-items:center;gap:.6rem;margin:.5rem 0;background:#f8fafc;border:1px solid var(--line);border-radius:.6rem;padding:.55rem .8rem;max-width:26rem}
+.vrow .lbl{font-weight:700;width:3rem;color:var(--navy)}
+.vrow .val{flex:1;font-family:ui-monospace,Menlo,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cbtn{background:#e2e8f0;border:0;border-radius:.4rem;padding:.35rem .8rem;cursor:pointer;font-size:.88rem;font-weight:600}
+.cbtn:hover{background:#cbd5e1}
+.swatches{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.sw{width:2.4rem;height:2.4rem;border-radius:.5rem;border:1px solid rgba(0,0,0,.15);cursor:pointer}
+.err{display:none;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;border-radius:.6rem;padding:.7rem 1rem;margin:.8rem 0;max-width:26rem}
+.palstrip{display:flex;flex-wrap:wrap;gap:0;border-radius:.8rem;overflow:hidden;border:1px solid var(--line);margin:1rem 0}
+.pal{flex:1 1 6rem;min-height:6rem;display:flex;align-items:flex-end;justify-content:center;cursor:pointer;position:relative}
+.pal .hexcode{background:rgba(0,0,0,.45);color:#fff;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;padding:.25rem .55rem;border-radius:.4rem;margin-bottom:.6rem}
+.contrast-box{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:30rem;margin:1rem 0}
+.ccinput label{display:block;font-weight:600;margin-bottom:.3rem}
+.ccinput .row{display:flex;gap:.5rem;align-items:center}
+input[type=color].small{width:3.4rem;height:3.4rem;padding:.15rem}
+.ccinput input[type=text]{padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem;width:100%;font-family:ui-monospace,Menlo,Consolas,monospace}
+.sample{background:#f8fafc;border:1px solid var(--line);border-radius:.8rem;padding:1.4rem;margin:1rem 0;max-width:34rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.badge{background:#e2e8f0;border-radius:2rem;padding:.35rem .9rem;font-weight:700;font-size:.9rem}
+.badge.pass{background:#d1fae5;color:#065f46}.badge.fail{background:#fee2e2;color:#991b1b}
+.ratio{font-size:2rem;font-weight:800;color:var(--navy);margin:.4rem 0}
+.toast{position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:.7rem 1.4rem;border-radius:.6rem;font-weight:600;display:none;z-index:50}
+.privacy{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.8rem;padding:1rem 1.2rem;margin:1.6rem 0;font-size:.95rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+section.guides ul{line-height:2}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}@media(max-width:720px){.fcols{grid-template-columns:1fr}.contrast-box{grid-template-columns:1fr}}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Color Tools</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/color-tools-guide.html" data-i18n="nav_guide">Guide</a><button class="langbtn" id="langToggle" onclick="toggleLang()">اردو</button></nav>
+</div></header>
+<main><div class="wrap">
+<h1 data-i18n="h1">Free Online Color Tools</h1>
+<p class="lede" data-i18n="lede">Pick colors, convert HEX &#8646; RGB &#8646; HSL, generate harmonious palettes, and check WCAG contrast — right in your browser. <strong>100% free, no signup.</strong> Your colors never leave your device.</p>
+
+<div class="tabs">
+<button class="tab active" onclick="showTab('picker',this)" data-i18n="tab1">&#127912; Color Picker</button>
+<button class="tab" onclick="showTab('converter',this)" data-i18n="tab2">&#128260; Converter</button>
+<button class="tab" onclick="showTab('palette',this)" data-i18n="tab3">&#128396;&#65039; Palette Generator</button>
+<button class="tab" onclick="showTab('contrast',this)" data-i18n="tab4">&#127769; Contrast Checker</button>
+</div>
+
+<!-- ============ COLOR PICKER ============ -->
+<section class="panel" id="tool-picker">
+<h2 data-i18n="p_h">Color Picker — pick any color</h2>
+<p data-i18n="p_d">Use the visual picker or click a preset swatch. HEX, RGB and HSL values update instantly — click any value to copy it.</p>
+<div class="picker-row">
+<div class="picker-left">
+<input type="color" id="pickInput" value="#14B8A6" oninput="pickerSet(this.value)">
+<button class="btn ghost" id="randBtn" onclick="randomColor()" data-i18n="p_random">&#127922; Random color</button>
+<button class="btn ghost" id="eyeBtn" onclick="eyedrop()" style="display:none" data-i18n="p_eye">&#128065; Pick from screen</button>
+</div>
+<div style="flex:1;min-width:16rem">
+<div class="bigpreview" id="pickPreview" style="background:#14B8A6"></div>
+<div class="vrow"><span class="lbl">HEX</span><span class="val" id="pickHex">#14B8A6</span><button class="cbtn" onclick="copyVal('pickHex')" data-i18n="copy">Copy</button></div>
+<div class="vrow"><span class="lbl">RGB</span><span class="val" id="pickRgb">rgb(20, 184, 166)</span><button class="cbtn" onclick="copyVal('pickRgb')" data-i18n="copy">Copy</button></div>
+<div class="vrow"><span class="lbl">HSL</span><span class="val" id="pickHsl">hsl(173, 80%, 40%)</span><button class="cbtn" onclick="copyVal('pickHsl')" data-i18n="copy">Copy</button></div>
+</div>
+</div>
+<div class="field"><label data-i18n="p_presets">Preset colors</label><div class="swatches" id="presets"></div></div>
+</section>
+
+<!-- ============ CONVERTER ============ -->
+<section class="panel" id="tool-converter" style="display:none">
+<h2 data-i18n="c_h">HEX / RGB / HSL Converter</h2>
+<p data-i18n="c_d">Type a color in any format — HEX, rgb() or hsl() — and get all three instantly.</p>
+<div class="field"><label data-i18n="c_label">Enter a color</label>
+<input type="text" id="convInput" placeholder="#14B8A6 or rgb(20,184,166) or hsl(173,80%,40%)" value="#14B8A6" oninput="convertColor()">
+</div>
+<div class="err" id="convErr"></div>
+<div class="bigpreview" id="convPreview" style="background:#14B8A6"></div>
+<div class="vrow"><span class="lbl">HEX</span><span class="val" id="convHex">#14B8A6</span><button class="cbtn" onclick="copyVal('convHex')" data-i18n="copy">Copy</button></div>
+<div class="vrow"><span class="lbl">RGB</span><span class="val" id="convRgb">rgb(20, 184, 166)</span><button class="cbtn" onclick="copyVal('convRgb')" data-i18n="copy">Copy</button></div>
+<div class="vrow"><span class="lbl">HSL</span><span class="val" id="convHsl">hsl(173, 80%, 40%)</span><button class="cbtn" onclick="copyVal('convHsl')" data-i18n="copy">Copy</button></div>
+</section>
+<!-- ============ PALETTE GENERATOR ============ -->
+<section class="panel" id="tool-palette" style="display:none">
+<h2 data-i18n="pal_h">Palette Generator</h2>
+<p data-i18n="pal_d">Start from a base color and generate 5-color harmonious palettes. Click any color to copy its HEX code.</p>
+<div class="picker-row">
+<div class="field"><label data-i18n="pal_base">Base color</label>
+<input type="color" id="palInput" value="#14B8A6" oninput="genPalette()" style="width:5rem;height:3.4rem">
+</div>
+<div class="field"><label data-i18n="pal_mode">Mode</label>
+<select id="palMode" onchange="genPalette()">
+<option value="complementary" data-i18n="m_comp">Complementary</option>
+<option value="analogous" data-i18n="m_ana">Analogous</option>
+<option value="triadic" data-i18n="m_tri">Triadic</option>
+<option value="random" data-i18n="m_rand">Random</option>
+</select></div>
+</div>
+<div class="palstrip" id="palStrip"></div>
+<button class="btn" onclick="genPalette()" data-i18n="pal_gen">&#127922; Generate palette</button>
+<button class="btn ghost" onclick="copyAllPalette()" data-i18n="pal_copyall">&#128203; Copy all</button>
+</section>
+
+<!-- ============ CONTRAST CHECKER ============ -->
+<section class="panel" id="tool-contrast" style="display:none">
+<h2 data-i18n="cc_h">Contrast Checker</h2>
+<p data-i18n="cc_d">Check whether text is readable on a background — WCAG 2.1 contrast ratio with AA / AAA pass-fail badges.</p>
+<div class="contrast-box">
+<div class="ccinput"><label data-i18n="cc_fg">Text (foreground)</label>
+<div class="row"><input type="color" class="small" id="fgInput" value="#0A1628" oninput="checkContrast()"><input type="text" id="fgText" value="#0A1628" oninput="syncContrast('fg')"></div></div>
+<div class="ccinput"><label data-i18n="cc_bg">Background</label>
+<div class="row"><input type="color" class="small" id="bgInput" value="#FFFFFF" oninput="checkContrast()"><input type="text" id="bgText" value="#FFFFFF" oninput="syncContrast('bg')"></div></div>
+</div>
+<div data-i18n="cc_ratio">Contrast ratio</div>
+<div class="ratio" id="ccRatio">21.00 : 1</div>
+<div class="badges" id="ccBadges"></div>
+<div class="sample" id="ccSample" style="background:#FFFFFF;color:#0A1628">
+<strong data-i18n="cc_sample">Sample text</strong>
+<p id="ccSampleP">The quick brown fox jumps over the lazy dog.</p>
+</div>
+</section>
+
+<div class="privacy">&#128274; <strong data-i18n="priv_h">Private by design:</strong> <span data-i18n="priv_d">All color math runs inside your browser with vanilla JavaScript. Nothing is uploaded to any server — your colors stay on your device.</span></div>
+
+<div style="text-align:center;margin:28px 0;">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="guides"><h2 data-i18n="guides">Guides</h2>
+<ul><li><a href="articles/color-tools-guide.html" data-i18n="guide_title">Free Color Tools Online: Color Picker, HEX to RGB Converter &amp; Palette Generator — Complete Guide</a> — <span data-i18n="guides_d">How to pick, convert, combine and test colors like a designer.</span></li></ul></section>
+
+<div class="faq"><h2 data-i18n="faq">FAQs</h2>
+<details><summary data-i18n="q1">What is the difference between HEX, RGB and HSL?</summary><p data-i18n="a1">HEX is the compact #RRGGBB form of RGB (base-16 vs 0–255 channels) — the standard in CSS. RGB expresses red, green, blue as decimals 0–255, useful for code. HSL describes hue (0–360°), saturation and lightness — the most designer-friendly way to derive shades and palettes.</p></details>
+<details><summary data-i18n="q2">What is a good contrast ratio for text?</summary><p data-i18n="a2">WCAG 2.1 requires at least 4.5:1 for normal text (AA) and 7:1 for AAA. Large text (18pt+ / 14pt+ bold) needs 3:1 (AA) or 4.5:1 (AAA). Use the Contrast Checker above to test any pair.</p></details>
+<details><summary data-i18n="q3">Are my colors uploaded anywhere?</summary><p data-i18n="a3">No. Everything runs 100% in your browser — no accounts, no servers, no tracking of your color choices.</p></details>
+</div>
+
+</div></main>
+<footer>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">NAN Urdu Portal</a> <span style="color:#334155;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Rozana Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-imagetools.surge.sh" style="color:#94a3b8;text-decoration:none;">Image Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-qrtools.surge.sh" style="color:#94a3b8;text-decoration:none;">QR Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-texttools.surge.sh" style="color:#94a3b8;text-decoration:none;">Text Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-passwordtools.surge.sh" style="color:#94a3b8;text-decoration:none;">Password Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+/* ================= COLOR MATH ================= */
+function clamp(v,a,b){return Math.min(b,Math.max(a,v));}
+function hexToRgb(hex){var h=hex.replace('#','');if(h.length===3){h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];}
+return {r:parseInt(h.slice(0,2),16),g:parseInt(h.slice(2,4),16),b:parseInt(h.slice(4,6),16)};}
+function rgbToHex(r,g,b){function p(n){var s=clamp(Math.round(n),0,255).toString(16);return s.length===1?'0'+s:s;}return ('#'+p(r)+p(g)+p(b)).toUpperCase();}
+function rgbToHsl(r,g,b){r/=255;g/=255;b/=255;var max=Math.max(r,g,b),min=Math.min(r,g,b);var h=0,s=0,l=(max+min)/2;var d=max-min;
+if(d!==0){s=d/(1-Math.abs(2*l-1));
+if(max===r){h=((g-b)/d)%6;}else if(max===g){h=(b-r)/d+2;}else{h=(r-g)/d+4;}h*=60;if(h<0)h+=360;}
+return {h:Math.round(h),s:Math.round(s*100),l:Math.round(l*100)};}
+function hslToRgb(h,s,l){h=((h%360)+360)%360;s=clamp(s,0,100)/100;l=clamp(l,0,100)/100;
+var k=function(n){return (n+h/30)%12;};var a=s*Math.min(l,1-l);
+var f=function(n){return l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));};
+return {r:Math.round(f(0)*255),g:Math.round(f(8)*255),b:Math.round(f(4)*255)};}
+function fmtRgb(c){return 'rgb('+c.r+', '+c.g+', '+c.b+')';}
+function fmtHsl(c){var h=rgbToHsl(c.r,c.g,c.b);return 'hsl('+h.h+', '+h.s+'%, '+h.l+'%)';}
+function parseColor(str){var s=str.trim();
+var m=s.match(/^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/);
+if(m){var h=m[1];if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];return hexToRgb('#'+h);}
+m=s.match(/^rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*[\d.]+\s*)?\)$/i);
+if(m)return {r:clamp(+m[1],0,255),g:clamp(+m[2],0,255),b:clamp(+m[3],0,255)};
+m=s.match(/^hsla?\(\s*(\d{1,3})\s*,\s*(\d{1,3})%\s*,\s*(\d{1,3})%\s*(?:,\s*[\d.]+\s*)?\)$/i);
+if(m)return hslToRgb(+m[1],clamp(+m[2],0,100),clamp(+m[3],0,100));
+return null;}
+function relLum(c){var f=function(v){v=v/255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);};
+return 0.2126*f(c.r)+0.7152*f(c.g)+0.0722*f(c.b);}
+function contrastRatio(c1,c2){var L1=relLum(c1),L2=relLum(c2);if(L1<L2){var t=L1;L1=L2;L2=t;}return (L1+0.05)/(L2+0.05);}
+</script>
+<script>
+/* ================= UI LOGIC ================= */
+var PRESETS=['#14B8A6','#0A1628','#F59E0B','#EF4444','#3B82F6','#8B5CF6','#EC4899','#10B981','#F97316','#6366F1','#000000','#FFFFFF'];
+function showTab(id,btn){['picker','converter','palette','contrast'].forEach(function(t){document.getElementById('tool-'+t).style.display=(t===id?'block':'none');});
+var tabs=document.querySelectorAll('.tab');for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');btn.classList.add('active');}
+function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(function(){t.style.display='none';},1600);}
+function copyText(txt,okMsg){function done(){toast(okMsg||STR.en.copied);}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,done);}else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}}
+function copyVal(id){copyText(document.getElementById(id).textContent.trim());}
+function setVals(prefix,c){var hex=rgbToHex(c.r,c.g,c.b);document.getElementById(prefix+'Hex').textContent=hex;document.getElementById(prefix+'Rgb').textContent=fmtRgb(c);document.getElementById(prefix+'Hsl').textContent=fmtHsl(c);}
+/* --- picker --- */
+function pickerSet(hex){var c=hexToRgb(hex);document.getElementById('pickPreview').style.background=hex;setVals('pick',c);}
+function randomColor(){var r=Math.floor(Math.random()*256),g=Math.floor(Math.random()*256),b=Math.floor(Math.random()*256);var hex=rgbToHex(r,g,b);document.getElementById('pickInput').value=hex;pickerSet(hex);}
+function eyedrop(){if(!window.EyeDropper)return;new EyeDropper().open().then(function(res){document.getElementById('pickInput').value=res.sRGBHex;pickerSet(res.sRGBHex);}).catch(function(){});}
+function buildPresets(){var box=document.getElementById('presets');PRESETS.forEach(function(hex){var d=document.createElement('div');d.className='sw';d.style.background=hex;d.title=hex;d.onclick=function(){document.getElementById('pickInput').value=hex;pickerSet(hex);};box.appendChild(d);});}
+/* --- converter --- */
+function convertColor(){var s=document.getElementById('convInput').value;var c=parseColor(s);var err=document.getElementById('convErr');
+if(!c){err.style.display='block';err.textContent=STR[LANG].c_err;return;}
+err.style.display='none';document.getElementById('convPreview').style.background=rgbToHex(c.r,c.g,c.b);setVals('conv',c);}
+/* --- palette --- */
+function hueShift(c,deg){var h=rgbToHsl(c.r,c.g,c.b);h.h=(h.h+deg+360)%360;return hslToRgb(h.h,h.s,h.l);}
+function lightShift(c,pct){var h=rgbToHsl(c.r,c.g,c.b);h.l=clamp(h.l+pct,0,100);return hslToRgb(h.h,h.s,h.l);}
+function genPalette(){var base=hexToRgb(document.getElementById('palInput').value);var mode=document.getElementById('palMode').value;var cols=[];
+if(mode==='complementary'){cols=[base,hueShift(base,180),lightShift(base,25),lightShift(base,-25),lightShift(hueShift(base,180),25)];}
+else if(mode==='analogous'){cols=[hueShift(base,-30),hueShift(base,-15),base,hueShift(base,15),hueShift(base,30)];}
+else if(mode==='triadic'){cols=[base,hueShift(base,120),hueShift(base,240),lightShift(base,25),lightShift(base,-25)];}
+else{cols=[];for(var i=0;i<5;i++){var r=Math.floor(Math.random()*256),g=Math.floor(Math.random()*256),b=Math.floor(Math.random()*256);cols.push({r:r,g:g,b:b});}}
+var strip=document.getElementById('palStrip');strip.innerHTML='';
+cols.forEach(function(c){var hex=rgbToHex(c.r,c.g,c.b);var d=document.createElement('div');d.className='pal';d.style.background=hex;d.title=hex;
+var s=document.createElement('span');s.className='hexcode';s.textContent=hex;d.appendChild(s);
+d.onclick=function(){copyText(hex);};strip.appendChild(d);});}
+function copyAllPalette(){var hexes=[];var nodes=document.querySelectorAll('#palStrip .pal');
+for(var i=0;i<nodes.length;i++)hexes.push(nodes[i].title);
+copyText(hexes.join(', '),STR[LANG].pal_copied_all);}
+/* --- contrast --- */
+function checkContrast(){var fg=hexToRgb(document.getElementById('fgInput').value);var bg=hexToRgb(document.getElementById('bgInput').value);
+var ratio=contrastRatio(fg,bg);document.getElementById('ccRatio').textContent=ratio.toFixed(2)+' : 1';
+var S=STR[LANG];var res=[
+{label:S.pn('cc_normal')+' · '+S.pn('cc_aa'),pass:ratio>=4.5},
+{label:S.pn('cc_normal')+' · '+S.pn('cc_aaa'),pass:ratio>=7},
+{label:S.pn('cc_large')+' · '+S.pn('cc_aa'),pass:ratio>=3},
+{label:S.pn('cc_large')+' · '+S.pn('cc_aaa'),pass:ratio>=4.5}];
+var box=document.getElementById('ccBadges');box.innerHTML='';
+res.forEach(function(r){var b=document.createElement('span');b.className='badge '+(r[1]?'pass':'fail');b.textContent=(r[1]?'\u2713 ':'\u2717 ')+r[0];box.appendChild(b);});
+var sm=document.getElementById('ccSample');sm.style.background=document.getElementById('bgInput').value;sm.style.color=document.getElementById('fgInput').value;}
+function syncContrast(which){var t=document.getElementById(which==='fg'?'fgText':'bgText').value;
+if(parseColor(t)){document.getElementById(which==='fg'?'fgInput':'bgInput').value=rgbToHex(parseColor(t).r,parseColor(t).g,parseColor(t).b);checkContrast();}}
+/* ================= I18N ================= */
+var STR={
+en:{copied:'Copied!',nav_tools:'Tools',nav_guide:'Guide',h1:'Free Online Color Tools',
+lede:'Pick colors, convert HEX &#8646; RGB &#8646; HSL, generate harmonious palettes, and check WCAG contrast — right in your browser. <strong>100% free, no signup.</strong> Your colors never leave your device.',
+tab1:'&#127912; Color Picker',tab2:'&#128260; Converter',tab3:'&#128396;&#65039; Palette Generator',tab4:'&#127769; Contrast Checker',
+p_h:'Color Picker — pick any color',p_d:'Use the visual picker or click a preset swatch. HEX, RGB and HSL values update instantly — click any value to copy it.',
+p_random:'&#127922; Random color',p_eye:'&#128065; Pick from screen',p_presets:'Preset colors',copy:'Copy',
+c_h:'HEX / RGB / HSL Converter',c_d:'Type a color in any format — HEX, rgb() or hsl() — and get all three instantly.',
+c_label:'Enter a color',c_err:'Invalid color. Try #14B8A6, rgb(20,184,166) or hsl(173,80%,40%).',
+pal_h:'Palette Generator',pal_d:'Start from a base color and generate 5-color harmonious palettes. Click any color to copy its HEX code.',
+pal_base:'Base color',pal_mode:'Mode',m_comp:'Complementary',m_ana:'Analogous',m_tri:'Triadic',m_rand:'Random',
+pal_gen:'&#127922; Generate palette',pal_copyall:'&#128203; Copy all',pal_copied_all:'Palette copied!',
+cc_h:'Contrast Checker',cc_d:'Check whether text is readable on a background — WCAG 2.1 contrast ratio with AA / AAA pass-fail badges.',
+cc_fg:'Text (foreground)',cc_bg:'Background',cc_ratio:'Contrast ratio',cc_normal:'Normal text',cc_large:'Large text',cc_sample:'Sample text',
+priv_h:'Private by design:',priv_d:'All color math runs inside your browser with vanilla JavaScript. Nothing is uploaded to any server — your colors stay on your device.',
+guides:'Guides',guide_title:'Free Color Tools Online: Color Picker, HEX to RGB Converter &amp; Palette Generator — Complete Guide',
+guides_d:'How to pick, convert, combine and test colors like a designer.',faq:'FAQs',
+q1:'What is the difference between HEX, RGB and HSL?',a1:'HEX is the compact #RRGGBB form of RGB (base-16 vs 0–255 channels) — the standard in CSS. RGB expresses red, green, blue as decimals 0–255, useful for code. HSL describes hue (0–360°), saturation and lightness — the most designer-friendly way to derive shades and palettes.',
+q2:'What is a good contrast ratio for text?',a2:'WCAG 2.1 requires at least 4.5:1 for normal text (AA) and 7:1 for AAA. Large text (18pt+ / 14pt+ bold) needs 3:1 (AA) or 4.5:1 (AAA). Use the Contrast Checker above to test any pair.',
+q3:'Are my colors uploaded anywhere?',a3:'No. Everything runs 100% in your browser — no accounts, no servers, no tracking of your color choices.',
+pn:function(k){return STR.en[k];}},
+ur:{copied:'کاپی ہو گیا!',nav_tools:'ٹولز',nav_guide:'گائیڈ',h1:'مفت آن لائن کلر ٹولز',
+lede:'رنگ چنیں، HEX &#8646; RGB &#8646; HSL تبدیل کریں، ہم آہنگ پیلیٹس بنائیں، اور WCAG کنٹراسٹ چیک کریں — براہ راست آپ کے براؤزر میں۔ <strong>100% مفت، کوئی سائن اپ نہیں۔</strong> آپ کے رنگ آپ کے آلے سے کبھی نہیں نکلتے۔',
+tab1:'&#127912; کلر پکر',tab2:'&#128260; کنورٹر',tab3:'&#128396;&#65039; پیلیٹ جنریٹر',tab4:'&#127769; کنٹراسٹ چیکر',
+p_h:'کلر پکر — کوئی بھی رنگ چنیں',p_d:'بصری پکر استعمال کریں یا پہلے سے موجود رنگ پر کلک کریں۔ HEX، RGB اور HSL کی اقدار فوراً اپ ڈیٹ ہوں گی — کاپی کرنے کے لیے کسی بھی قیمت پر کلک کریں۔',
+p_random:'&#127922; بے ترتیب رنگ',p_eye:'&#128065; اسکرین سے چنیں',p_presets:'پہلے سے موجود رنگ',copy:'کاپی',
+c_h:'HEX / RGB / HSL کنورٹر',c_d:'کسی بھی فارمیٹ میں رنگ لکھیں — HEX، rgb() یا hsl() — اور تینوں فوراً حاصل کریں۔',
+c_label:'رنگ لکھیں',c_err:'غلط رنگ۔ #14B8A6، rgb(20,184,166) یا hsl(173,80%,40%) آزمائیں۔',
+pal_h:'پیلیٹ جنریٹر',pal_d:'ایک بنیادی رنگ سے شروع کریں اور 5 رنگوں کے ہم آہنگ پیلیٹس بنائیں۔ HEX کوڈ کاپی کرنے کے لیے کسی بھی رنگ پر کلک کریں۔',
+pal_base:'بنیادی رنگ',pal_mode:'موڈ',m_comp:'تکمیلی',m_ana:'مشابہ',m_tri:'ثلاثی',m_rand:'بے ترتیب',
+pal_gen:'&#127922; پیلیٹ بنائیں',pal_copyall:'&#128203; سب کاپی کریں',pal_copied_all:'پیلیٹ کاپی ہو گیا!',
+cc_h:'کنٹراسٹ چیکر',cc_d:'چیک کریں کہ متن پس منظر پر پڑھا جا سکتا ہے یا نہیں — WCAG 2.1 کنٹراسٹ تناسب کے ساتھ AA / AAA بیجز۔',
+cc_fg:'متن (سامنے)',cc_bg:'پس منظر',cc_ratio:'کنٹراسٹ تناسب',cc_normal:'عام متن',cc_large:'بڑا متن',cc_sample:'نمونہ متن',
+priv_h:'پرائیویسی بذات خود:',priv_d:'تمام رنگوں کا حساب آپ کے براؤزر میں vanilla JavaScript سے ہوتا ہے۔ کوئی سرور پر اپ لوڈ نہیں ہوتا — آپ کے رنگ آپ کے آلے پر رہتے ہیں۔',
+guides:'گائیڈز',guide_title:'مفت آن لائن کلر ٹولز: کلر پکر، HEX سے RGB کنورٹر اور پیلیٹ جنریٹر — مکمل گائیڈ',
+guides_d:'ڈیزائنر کی طرح رنگ چننے، تبدیل کرنے، ملانے اور جانچنے کا طریقہ۔',faq:'اکثر پوچھے گئے سوالات',
+q1:'HEX، RGB اور HSL میں کیا فرق ہے؟',a1:'HEX RGB کی کمپیکٹ #RRGGBB شکل ہے — CSS میں معیار۔ RGB سرخ، سبز، نیلے کو 0–255 اعشاریوں میں ظاہر کرتا ہے۔ HSL رنگ (0–360°)، اشباع اور روشنی کو بیان کرتا ہے — شیڈز بنانے کا سب سے آسان طریقہ۔',
+q2:'متن کے لیے اچھا کنٹراسٹ تناسب کیا ہے؟',a2:'WCAG 2.1 کے مطابق عام متن کے لیے کم از کم 4.5:1 (AA) اور 7:1 (AAA) ضروری ہے۔ بڑے متن کے لیے 3:1 (AA) یا 4.5:1 (AAA)۔ کسی بھی جوڑے کو جانچنے کے لیے اوپر کنٹراسٹ چیکر استعمال کریں۔',
+q3:'کیا میرے رنگ کہیں اپ لوڈ ہوتے ہیں؟',a3:'نہیں۔ سب کچھ 100% آپ کے براؤزر میں چلتا ہے — کوئی اکاؤنٹ، کوئی سرور، آپ کے رنگوں کی کوئی ٹریکنگ نہیں۔',
+pn:function(k){return STR.ur[k];}}
+};
+var LANG='en';
+function toggleLang(){LANG=(LANG==='en')?'ur':'en';applyLang();}
+function applyLang(){var S=STR[LANG];document.documentElement.lang=LANG;document.dir=(LANG==='ur')?'rtl':'ltr';
+var els=document.querySelectorAll('[data-i18n]');for(var i=0;i<els.length;i++){var k=els[i].getAttribute('data-i18n');if(S[k]!==undefined)els[i].innerHTML=S[k];}
+document.getElementById('langToggle').textContent=(LANG==='en')?'اردو':'English';
+checkContrast();}
+function init(){buildPresets();pickerSet('#14B8A6');genPalette();convertColor();checkContrast();if(window.EyeDropper)document.getElementById('eyeBtn').style.display='inline-block';}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+</script>
+</body>
+</html>
