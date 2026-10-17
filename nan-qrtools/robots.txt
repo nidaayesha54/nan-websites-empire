@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-qrtools.surge.sh/sitemap.xml
