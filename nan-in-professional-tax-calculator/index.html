@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Tax Calculator India 2026 — State-Wise PT Slabs</title>
+<meta name="description" content="Free professional tax calculator for India: select your state (Maharashtra, Karnataka, West Bengal, Gujarat, Andhra Pradesh, Telangana, Tamil Nadu) and see your monthly and annual PT deduction with 2026 slabs.">
+<link rel="canonical" href="https://nan-in-professional-tax-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>PT Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Professional Tax Calculator India (2026)</h1>
+<p class="lede">Find your monthly and annual professional tax deduction in seconds — state-wise PT slabs for Maharashtra, Karnataka, West Bengal, Gujarat, Andhra Pradesh, Telangana and Tamil Nadu, updated for 2026.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Professional Tax</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="state">Work state</label>
+<select id="state">
+<option value="MH">Maharashtra</option>
+<option value="KA">Karnataka</option>
+<option value="WB">West Bengal</option>
+<option value="GJ">Gujarat</option>
+<option value="AP">Andhra Pradesh</option>
+<option value="TG">Telangana</option>
+<option value="TN">Tamil Nadu</option>
+</select>
+<span class="hint">Delhi, UP, Haryana, Punjab, Rajasthan and several other states levy NO professional tax.</span></div>
+<div class="field"><label for="salary">Monthly gross salary (Rs)</label>
+<input type="number" id="salary" value="30000" min="0" step="1000">
+<span class="hint">Your gross monthly salary before deductions.</span></div>
+<div class="field"><label for="gender">Gender (Maharashtra only)</label>
+<select id="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+<span class="hint">Maharashtra exempts women earning up to Rs 25,000/month from PT.</span></div>
+<button class="btn" onclick="calcPT()">Calculate PT</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-IN');}
+function calcPT(){
+  const st=document.getElementById('state').value;
+  const s=parseFloat(document.getElementById('salary').value)||0;
+  const g=document.getElementById('gender').value;
+  const out=document.getElementById('result');out.style.display='block';
+  if(s<=0){out.innerHTML='<p>Please enter your monthly salary.</p>';return;}
+  let monthly=0,annual=0,slab='',note='';
+  if(st==='MH'){
+    if(g==='female'&&s<=25000){slab='Women earning up to Rs 25,000 — exempt';}
+    else if(s<=7500){slab='Up to Rs 7,500 — Nil';}
+    else if(s<=10000){monthly=175;annual=2100;slab='Rs 7,501–10,000 — Rs 175/month';}
+    else{monthly=200;annual=2500;slab='Above Rs 10,000 — Rs 200/month (Rs 300 in February)';
+      note='Employers deduct Rs 200 for 11 months and Rs 300 in February so the annual total equals exactly Rs 2,500 (the constitutional maximum).';}
+  }else if(st==='KA'){
+    if(s<=25000){slab='Up to Rs 25,000 — Nil (threshold raised by the Karnataka PT Amendment Act, 2025)';}
+    else{monthly=200;annual=2500;slab='Above Rs 25,000 — Rs 200/month (Rs 300 in February)';
+      note='Karnataka deducts Rs 200 for 11 months and Rs 300 in February, totalling Rs 2,500/year.';}
+  }else if(st==='WB'){
+    if(s<=10000){slab='Up to Rs 10,000 — Nil';}
+    else if(s<=15000){monthly=110;annual=1320;slab='Rs 10,001–15,000 — Rs 110/month';}
+    else if(s<=25000){monthly=130;annual=1560;slab='Rs 15,001–25,000 — Rs 130/month';}
+    else if(s<=40000){monthly=150;annual=1800;slab='Rs 25,001–40,000 — Rs 150/month';}
+    else{monthly=200;annual=2400;slab='Above Rs 40,000 — Rs 200/month';}
+  }else if(st==='GJ'){
+    if(s<=12000){slab='Up to Rs 12,000 — Nil';}
+    else{monthly=200;annual=2400;slab='Above Rs 12,000 — Rs 200/month';}
+  }else if(st==='AP'||st==='TG'){
+    if(s<=15000){slab='Up to Rs 15,000 — Nil';}
+    else if(s<=20000){monthly=150;annual=1800;slab='Rs 15,001–20,000 — Rs 150/month';}
+    else{monthly=200;annual=2400;slab='Above Rs 20,000 — Rs 200/month';}
+  }else if(st==='TN'){
+    const hy=s*6; let hyPT=0;
+    if(hy<=21000){slab='Half-yearly salary up to Rs 21,000 — Nil';}
+    else if(hy<=30000){hyPT=135;slab='Half-yearly Rs 21,001–30,000 — Rs 135/half-year';}
+    else if(hy<=45000){hyPT=315;slab='Half-yearly Rs 30,001–45,000 — Rs 315/half-year';}
+    else if(hy<=60000){hyPT=690;slab='Half-yearly Rs 45,001–60,000 — Rs 690/half-year';}
+    else if(hy<=75000){hyPT=1025;slab='Half-yearly Rs 60,001–75,000 — Rs 1,025/half-year';}
+    else{hyPT=1250;slab='Half-yearly above Rs 75,000 — Rs 1,250/half-year';}
+    monthly=hyPT/6; annual=hyPT*2;
+    note='Tamil Nadu levies PT half-yearly (not monthly). Monthly figure shown is the half-yearly amount divided by 6.';
+  }
+  if(monthly===0&&annual===0){
+    out.innerHTML='<div class="big">'+fmt(0)+'<small>monthly professional tax — NO PT payable</small></div>'
+    +'<table><tr><td>Slab</td><td>'+slab+'</td></tr></table>';
+  }else{
+    out.innerHTML='<div class="big">'+fmt(monthly)+'<small>monthly professional tax</small></div>'
+    +'<table><tr><td>Annual PT</td><td>'+fmt(annual)+'</td></tr>'
+    +'<tr><td>Slab</td><td>'+slab+'</td></tr></table>'
+    +(note?'<p class="hint">'+note+'</p>':'');
+  }
+  out.innerHTML+='<p class="hint">Professional tax paid is deductible from your salary income under Section 16(iii) of the Income Tax Act.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Is Professional Tax?</h2>
+<p><strong>Professional tax (PT)</strong> is a state-level tax levied on income earned from a profession, trade, calling or employment — despite the name, it is not limited to "professionals". Your <strong>employer deducts it from your salary</strong> and remits it to the state government. The maximum anyone can be charged is <strong>Rs 2,500 per year</strong>, fixed by Article 276 of the Constitution. Professional tax paid is <strong>deductible under Section 16(iii)</strong> of the Income Tax Act, reducing your taxable salary income.</p>
+<h2>State-Wise PT Slabs (2026)</h2>
+<table>
+<tr><th>State</th><th>Slab</th></tr>
+<tr><td><strong>Maharashtra</strong></td><td>Men: up to Rs 7,500 — Nil; Rs 7,501–10,000 — Rs 175; above Rs 10,000 — Rs 200 (Rs 300 in Feb). Women: up to Rs 25,000 — exempt.</td></tr>
+<tr><td><strong>Karnataka</strong></td><td>Up to Rs 25,000 — Nil (threshold raised from Rs 15,000 by the Karnataka PT Amendment Act, 2025); above Rs 25,000 — Rs 200/month (Rs 300 in Feb).</td></tr>
+<tr><td><strong>West Bengal</strong></td><td>Up to Rs 10,000 — Nil; Rs 110 / Rs 130 / Rs 150 / Rs 200 across the five slabs above.</td></tr>
+<tr><td><strong>Gujarat</strong></td><td>Up to Rs 12,000 — Nil; above — Rs 200/month flat.</td></tr>
+<tr><td><strong>Andhra Pradesh / Telangana</strong></td><td>Up to Rs 15,000 — Nil; Rs 15,001–20,000 — Rs 150; above Rs 20,000 — Rs 200.</td></tr>
+<tr><td><strong>Tamil Nadu</strong></td><td>Levied half-yearly: Rs 135 / 315 / 690 / 1,025 / 1,250 per half-year across salary bands.</td></tr>
+</table>
+<h2>States With No Professional Tax</h2>
+<p>Delhi, Uttar Pradesh, Haryana, Punjab, Rajasthan, Himachal Pradesh, Jammu &amp; Kashmir, Uttarakhand, Bihar, Goa and most Union Territories do <strong>not</strong> levy professional tax. If you work in one of these, your PT is zero.</p>
+<h2>Who Else Pays PT?</h2>
+<p>Self-employed professionals (doctors, CAs, lawyers, consultants, freelancers), traders, HUFs and businesses must enrol (PTEC) and pay PT directly — usually a flat amount up to Rs 2,500/year depending on the state.</p>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is professional tax the same as income tax?</summary><p>No. Professional tax is a <strong>state government</strong> levy deducted from salary; income tax is a <strong>central</strong> tax. PT paid reduces your taxable salary under Section 16(iii).</p></details>
+<details><summary>Why is February's PT Rs 300 in Maharashtra and Karnataka?</summary><p>It's a "balancing figure": Rs 200 × 11 months + Rs 300 in February = Rs 2,500, the constitutional annual maximum.</p></details>
+<details><summary>Do I pay PT in two states if I relocate?</summary><p>PT applies based on your state of employment. If you relocate mid-year, each state's slab applies for the months worked there; confirm with payroll so the annual cap isn't exceeded.</p></details>
+<details><summary>Does the employer need to register?</summary><p>Yes — employers must obtain a PT registration/enrolment certificate (PTRC/PTEC) in states that levy it, and remit deducted PT monthly/quarterly.</p></details>
+<details><summary>What if my state isn't listed?</summary><p>The calculator covers the states with the largest salaried workforces. Slabs for other PT states (Kerala, MP, Odisha, Assam etc.) follow the same Rs 2,500/year cap — check your state's commercial tax notification.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published 2026 PT slabs. Slabs can be revised by state amendments — confirm the current schedule with your employer or the state commercial tax department. This is not professional tax or legal advice.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Professional Tax Calculator</h4><p>Free professional tax calculator for India — state-wise PT slabs, monthly and annual deduction, 2026 updates.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
