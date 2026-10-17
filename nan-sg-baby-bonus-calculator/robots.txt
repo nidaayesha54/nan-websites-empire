@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-sg-baby-bonus-calculator.surge.sh/sitemap.xml
