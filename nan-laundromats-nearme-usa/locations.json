@@ -1,0 +1,874 @@
+[
+ {
+  "name": "J&M Laundromat",
+  "lat": 41.9170685,
+  "lon": -87.7060308,
+  "address": "3115-3117 West Armitage Avenue, Logan Square, 60647",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Yo Yo Coin Laundromat",
+  "lat": 41.8957657,
+  "lon": -87.6653879,
+  "address": "1515 West Chicago Avenue, West Town, 60642",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "The Blue Kanagaroo Laundromat",
+  "lat": 41.809874,
+  "lon": -87.7239933,
+  "address": "4550 South Pulaski Road, Archer Heights, 60632",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "The Blue Kangaroo Laundromat",
+  "lat": 41.93073,
+  "lon": -87.7805365,
+  "address": "6151 West Diversey Avenue, Belmont Cragin, 60639",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Blue Kangaroo Laundromat",
+  "lat": 41.9314247,
+  "lon": -87.7394789,
+  "address": "4501 West Diversey Avenue, Hermosa, 60639",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "H.T. Laundromat",
+  "lat": 41.9170898,
+  "lon": -87.7162828,
+  "address": "3571-3573 West Armitage Avenue, Chicago, 60647",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "J&M Coin Laundromat",
+  "lat": 41.9395626,
+  "lon": -87.7167579,
+  "address": "3542 West Belmont Avenue, Avondale, 60618",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Rainbow Brite Laundromat",
+  "lat": 41.7806428,
+  "lon": -87.6034817,
+  "address": "860 East 63rd Street, Woodlawn, 60637",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "The Friendly Wash Laundromat",
+  "lat": 41.966061,
+  "lon": -87.7597802,
+  "address": "4716 North Milwaukee Avenue, Portage Park, 60630",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Clothes Pin Laundromat and Dry Cleaning",
+  "lat": 41.9610345,
+  "lon": -87.7103029,
+  "address": "West Montrose Avenue, Albany Park, 60625",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Fluffy Laundromat",
+  "lat": 41.9981042,
+  "lon": -87.6854612,
+  "address": "2200 West Devon Avenue, West Ridge, 60659",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Mr. Bubbles Laundromat",
+  "lat": 41.7356067,
+  "lon": -87.6494603,
+  "address": "1015 West 87th Street, Auburn Gresham, 60620",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "BrightSpin Laundromat",
+  "lat": 41.9943144,
+  "lon": -87.6902688,
+  "address": "6200 North Western Avenue, West Ridge, 60659",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "J & B Laundromat & Dry Cleaners",
+  "lat": 41.9459873,
+  "lon": -87.7464515,
+  "address": "3543-3545 North Cicero Avenue, Portage Park, 60641",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Express Laundromat",
+  "lat": 41.7711765,
+  "lon": -87.5866945,
+  "address": "6808 South Stony Island Avenue, South Shore, 60649",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Your Neighborhood Laundromat",
+  "lat": 41.8103656,
+  "lon": -87.5925441,
+  "address": "1400 East 47th Street, Kenwood, 60653",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Gladstone Park Laundromat",
+  "lat": 41.9782705,
+  "lon": -87.7705081,
+  "address": "5368 North Milwaukee Avenue, Jefferson Park, 60630",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Tide Laundromat",
+  "lat": 42.0186777,
+  "lon": -87.6916955,
+  "address": "7558 North Western Avenue, West Ridge, 60645",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Bridgeport Express Laundromat",
+  "lat": 41.8378394,
+  "lon": -87.6538528,
+  "address": "1103 West 31st Street, Bridgeport, 60608",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "A & G Laundromat",
+  "lat": 41.7116574,
+  "lon": -87.5354691,
+  "address": "10106 South Ewing Avenue, East Side, 60617",
+  "city": "Chicago",
+  "state": "IL"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7418246,
+  "lon": -73.9259779,
+  "address": "39-14 47th Avenue, Queens, 11104",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7403132,
+  "lon": -73.9235917,
+  "address": "41-19 Greenpoint Avenue, Queens, 11104",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6353932,
+  "lon": -73.9955378,
+  "address": "5022 12th Avenue, Brooklyn, 11219",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7436271,
+  "lon": -73.8863017,
+  "address": "78-20 Woodside Avenue, Queens, 11372",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7822475,
+  "lon": -73.9149213,
+  "address": "21-02 21st Street, Queens, 11106",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7743811,
+  "lon": -73.9545187,
+  "address": "2nd Avenue, Manhattan, 10028",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7470294,
+  "lon": -73.9025939,
+  "address": "39-03 61st Street, Queens, 11377",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6423447,
+  "lon": -73.979566,
+  "address": "480 McDonald Avenue, Brooklyn, 11218",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.696345,
+  "lon": -73.7912674,
+  "address": "108-04 Guy R. Brewer Boulevard, Queens, 11433",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6813637,
+  "lon": -73.8791875,
+  "address": "186 Norwood Avenue, Brooklyn, 11208",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.681638,
+  "lon": -73.8788279,
+  "address": "3144 Fulton Street, Brooklyn, 11208",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6828716,
+  "lon": -73.9998701,
+  "address": "551 Henry Street, Brooklyn, 11231",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6173701,
+  "lon": -73.9851792,
+  "address": "6322 20th Avenue, Brooklyn, 11204",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7092746,
+  "lon": -73.9071904,
+  "address": "516 Grandview Avenue, Queens, 11237",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7423215,
+  "lon": -74.0004026,
+  "address": "164 8th Avenue, Manhattan, 10011",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.5793293,
+  "lon": -73.9832746,
+  "address": "1501 Neptune Avenue, Brooklyn, 11224",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7951631,
+  "lon": -73.9357996,
+  "address": "2236 1st Avenue, Manhattan, 10035",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.7431552,
+  "lon": -73.8546326,
+  "address": "108-09 Corona Avenue, Queens, 11368",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.636427,
+  "lon": -74.0225552,
+  "address": "6717 4th Avenue, Brooklyn, 11220",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 40.6844919,
+  "lon": -73.8323518,
+  "address": "Liberty Avenue, Queens, 11419",
+  "city": "New York",
+  "state": "NY"
+ },
+ {
+  "name": "Spin Wash Laundromat",
+  "lat": 29.8628955,
+  "lon": -95.4269588,
+  "address": "West Montgomery Road, Acres Homes, 77091",
+  "city": "Houston",
+  "state": "TX"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 33.7830832,
+  "lon": -118.1516069,
+  "address": "Newport Avenue, Belmont Shore, 90814",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "laundromat",
+  "lat": 33.8339455,
+  "lon": -118.126885,
+  "address": "Village Road, Long Beach, 90808",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 34.0838341,
+  "lon": -118.1349362,
+  "address": "Front Street, Alhambra, 91803",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 34.1046749,
+  "lon": -118.1345162,
+  "address": "1117 North Garfield Avenue, Alhambra, 91801",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Valley Village Laundromat",
+  "lat": 34.1681613,
+  "lon": -118.3970443,
+  "address": "Chandler Boulevard, Los Angeles, 91607",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Half Price Laundromat",
+  "lat": 34.2218312,
+  "lon": -118.4605541,
+  "address": "15033 Roscoe Boulevard, Panorama City, 91402",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Van Nuys Laundromat",
+  "lat": 34.1931676,
+  "lon": -118.4653762,
+  "address": "Vanowen Street, Van Nuys Neighborhood Council District, 91411",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Laundromat on Alma",
+  "lat": 33.7232695,
+  "lon": -118.2993514,
+  "address": "2300 South Alma Street, San Pedro, 90731",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Four Season Laundromat",
+  "lat": 34.0911545,
+  "lon": -118.302172,
+  "address": "North Kingsley Drive, Los Angeles, 90029",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "310 Laundromat",
+  "lat": 34.0009987,
+  "lon": -118.4276054,
+  "address": "Washington Place, Mar Vista, 90066",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Livia Laundromat",
+  "lat": 34.0840312,
+  "lon": -118.3262757,
+  "address": "722 Vine Street, Hollywood, 90038",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Big Waves Laundromat",
+  "lat": 34.0037827,
+  "lon": -118.430573,
+  "address": "Pacific Avenue, Mar Vista, 90066",
+  "city": "Los Angeles",
+  "state": "CA"
+ },
+ {
+  "name": "Coin Less Laundry",
+  "lat": 33.4665314,
+  "lon": -112.0052693,
+  "address": "1620 North 36th Street, Camelback East, 85008",
+  "city": "Phoenix",
+  "state": "AZ"
+ },
+ {
+  "name": "Coin Less Laundry",
+  "lat": 33.3771975,
+  "lon": -112.0744271,
+  "address": "29 West Baseline Road, South Mountain, 85041",
+  "city": "Phoenix",
+  "state": "AZ"
+ },
+ {
+  "name": "Coin Less Laundry",
+  "lat": 33.46672,
+  "lon": -112.1684061,
+  "address": "5030 West McDowell Road, Maryvale, 85035",
+  "city": "Phoenix",
+  "state": "AZ"
+ },
+ {
+  "name": "Coin Landry",
+  "lat": 33.5301128,
+  "lon": -112.056665,
+  "address": "North 12th Street, Camelback East, 85036",
+  "city": "Phoenix",
+  "state": "AZ"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 39.9348546,
+  "lon": -75.1585619,
+  "address": "1153 South 9th Street, South Philadelphia, 19148",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Laundromat America",
+  "lat": 39.9739058,
+  "lon": -75.2186247,
+  "address": "4839 Lancaster Avenue, West Philadelphia, 08065",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "King Laundromat",
+  "lat": 40.0437559,
+  "lon": -75.0737744,
+  "address": "6712 Castor Avenue, Northeast Philadelphia, 19152",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Lehi Laundromat",
+  "lat": 39.9918077,
+  "lon": -75.133441,
+  "address": "161 West Lehigh Avenue, North Philadelphia, 19133",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "J-Laundromat",
+  "lat": 40.0405755,
+  "lon": -75.0312307,
+  "address": "7800 Frankford Avenue, Northeast Philadelphia, 19136",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Laundromat of Pine Street",
+  "lat": 39.9526329,
+  "lon": -75.2177014,
+  "address": "309 South 48th Street, West Philadelphia, 19103",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Tommy's Laundromat",
+  "lat": 40.0545272,
+  "lon": -75.0705141,
+  "address": "Teesdale Street, Northeast Philadelphia, 19111",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Ultra Clean Laundromat",
+  "lat": 39.9485563,
+  "lon": -75.2161421,
+  "address": "4620 Baltimore Avenue, West Philadelphia, 19104",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Kin's Laundromat",
+  "lat": 39.9306362,
+  "lon": -75.1679777,
+  "address": "1537 South Broad Street, South Philadelphia, 19147",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "L Laundromat",
+  "lat": 39.9314995,
+  "lon": -75.2252294,
+  "address": "5810 Woodland Avenue, Southwest Philadelphia, 19142",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Mifflin's Laundromat",
+  "lat": 39.9273505,
+  "lon": -75.1739139,
+  "address": "1636 Mifflin Street, South Philadelphia, 19145",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Oregon Laundromat",
+  "lat": 39.9140026,
+  "lon": -75.152023,
+  "address": "Oregon Avenue, South Philadelphia, 19148",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Conrad Laundromat and Dry Cleaning",
+  "lat": 40.0119128,
+  "lon": -75.1890646,
+  "address": "Conrad Street, Northwest Philadelphia, 19129",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "U-Do or We-Do Laundromat",
+  "lat": 39.9543056,
+  "lon": -75.2117643,
+  "address": "South 45th Street, West Philadelphia, 19139",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Ridge Gas & Minimart Laundromat",
+  "lat": 39.9809649,
+  "lon": -75.1733228,
+  "address": "Ridge Avenue, North Philadelphia, 19121",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "McB's Laundromat",
+  "lat": 39.9697572,
+  "lon": -75.1758009,
+  "address": "Brown Street, North Philadelphia, 19130",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "U-Do We-Do Locust Laundromat",
+  "lat": 39.953912,
+  "lon": -75.2095355,
+  "address": "Locust Street, West Philadelphia, 19139",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "JP Laundromat & Dry-Cleaner",
+  "lat": 39.9444726,
+  "lon": -75.2166931,
+  "address": "South 49th Street, West Philadelphia, 19143",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "IVJ Laundromat",
+  "lat": 40.102996,
+  "lon": -75.0105122,
+  "address": "11000 Roosevelt Boulevard, Far Northeast Philadelphia, 19116",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Greenway Laundromat",
+  "lat": 39.919209,
+  "lon": -75.2464389,
+  "address": "2099 Cobbs Creek Parkway, Southwest Philadelphia, 19153",
+  "city": "Philadelphia",
+  "state": "PA"
+ },
+ {
+  "name": "Laundromat Lavanderia Fox",
+  "lat": 32.8598485,
+  "lon": -96.8799817,
+  "address": "10120 Harry Hines Boulevard, Dallas, 75220",
+  "city": "Dallas",
+  "state": "TX"
+ },
+ {
+  "name": "Tidy Whites Laundromat",
+  "lat": 32.7953696,
+  "lon": -96.6525524,
+  "address": "2117 Tradewind Drive, Mesquite, 75150",
+  "city": "Dallas",
+  "state": "TX"
+ },
+ {
+  "name": "Laundromat",
+  "lat": 39.9612907,
+  "lon": -84.1783198,
+  "address": "West Main Street, Tipp City, 45371",
+  "city": "Miami",
+  "state": "FL"
+ },
+ {
+  "name": "Laundromat Road",
+  "lat": 45.0101935,
+  "lon": -84.1507478,
+  "address": "Laundromat Road, Briley Township, 49709",
+  "city": "Atlanta",
+  "state": "GA"
+ },
+ {
+  "name": "Dexter Rainier Laundromat",
+  "lat": 47.575194,
+  "lon": -122.2961114,
+  "address": "3121 Rainier Avenue South, Mount Baker, 98144",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Fremont Ave Laundromat",
+  "lat": 47.658817,
+  "lon": -122.3504437,
+  "address": "4237 Fremont Avenue North, Fremont, 98103",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Clean Express Laundromat",
+  "lat": 47.6489071,
+  "lon": -122.343295,
+  "address": "3409 Stone Way North, Fremont, 98013",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "A & B Laundromat",
+  "lat": 47.5161224,
+  "lon": -122.3524659,
+  "address": "9644 14th Avenue Southwest, Seattle, 98146",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Empire Speed Wash Laundromat",
+  "lat": 47.5378644,
+  "lon": -122.2809773,
+  "address": "7136 Martin Luther King Junior Way South, Rainier Valley, 98118",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Wallingford Laundromat",
+  "lat": 47.6648823,
+  "lon": -122.3284029,
+  "address": "4675 1st Avenue Northeast, Wallingford, 98105",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Transformation-Surprise Laundromat",
+  "lat": 47.6689515,
+  "lon": -122.3663901,
+  "address": "5505 8th Avenue Northwest, Ballard, 98107",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Madrona Laundromat",
+  "lat": 47.6132218,
+  "lon": -122.2891,
+  "address": "34th Avenue, Madrona, 98122",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Wedgewood Laundromat",
+  "lat": 47.6915159,
+  "lon": -122.2908772,
+  "address": "8621 35th Avenue Northeast, Wedgwood, 98115",
+  "city": "Seattle",
+  "state": "WA"
+ },
+ {
+  "name": "Positive Spin Laundromat",
+  "lat": 39.7508433,
+  "lon": -104.9076334,
+  "address": "6920 East 23rd Avenue, South Park Hill, 80207",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Fairways Laundromat",
+  "lat": 39.6597782,
+  "lon": -104.860097,
+  "address": "10890 East Dartmouth Avenue, Denver, 80014",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Clean & Green Laundromat",
+  "lat": 39.7397965,
+  "lon": -104.903274,
+  "address": "7300 East Colfax Avenue, South Park Hill, 80220",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Q Laundromat",
+  "lat": 39.7406462,
+  "lon": -105.0337846,
+  "address": "3519 West Colfax Avenue, West Colfax, 80204",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Smiley's Laundromat",
+  "lat": 39.7510927,
+  "lon": -105.0257954,
+  "address": "3014 West 23rd Avenue, Sloan Lake, 80211",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "32nd Ave Laundromat & Cleaners",
+  "lat": 39.7623808,
+  "lon": -105.0341991,
+  "address": "3481 West 32nd Avenue, West Highland, 80211",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Jessica's Laundromat",
+  "lat": 39.7479322,
+  "lon": -104.9772234,
+  "address": "757 East 20th Avenue, Five Points, 80205",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Colorado Boulevard Laundromat",
+  "lat": 39.7576434,
+  "lon": -104.940257,
+  "address": "2860 North Colorado Boulevard, City Park, 80207",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Washway Laundromat",
+  "lat": 39.6681182,
+  "lon": -104.865544,
+  "address": "2670 South Havana Street, Aurora, 80014",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Superior Laundries",
+  "lat": 39.6909596,
+  "lon": -104.8899075,
+  "address": "1412 South Parker Road, Denver, 80231",
+  "city": "Denver",
+  "state": "CO"
+ },
+ {
+  "name": "Express Laundromat",
+  "lat": 42.3531587,
+  "lon": -71.1359275,
+  "address": "236 Brighton Avenue, Allston, 02134",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Green Laundromat",
+  "lat": 42.2922688,
+  "lon": -71.1175432,
+  "address": "266 Hyde Park Avenue, Jamaica Plain, 02130",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Afroditi's Laundromat",
+  "lat": 42.3800132,
+  "lon": -71.0275256,
+  "address": "470,472 Saratoga Street, East Boston, 02128",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "All-Brite Laundromat",
+  "lat": 42.3477327,
+  "lon": -71.1366168,
+  "address": "Scottfield Road, Allston, 02134",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Allston St. Laundromat",
+  "lat": 42.347866,
+  "lon": -71.1381812,
+  "address": "Allston Street, Allston, 02134",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Maytag Self-Serve Laundromat",
+  "lat": 42.3578933,
+  "lon": -71.1329235,
+  "address": "61 Franklin Street, Allston, 02134",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Tiny Bubbles Laundromat",
+  "lat": 42.3776599,
+  "lon": -71.0317469,
+  "address": "200 Bennington Street, East Boston, 02128",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "King Laundromat",
+  "lat": 42.3808543,
+  "lon": -71.0389458,
+  "address": "417 Marion Street, East Boston, 02128",
+  "city": "Boston",
+  "state": "MA"
+ },
+ {
+  "name": "Washing Wishes",
+  "lat": 41.1927618,
+  "lon": -73.154845,
+  "address": "2135 Boston Avenue, Bridgeport, 06610",
+  "city": "Boston",
+  "state": "MA"
+ }
+]
