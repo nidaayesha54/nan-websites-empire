@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-au-baby-cost-calculator.surge.sh/sitemap.xml
