@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statutory Guarantee Pay Calculator UK 2026 — Lay-Off & Short-Time Pay</title>
+<meta name="description" content="Free UK statutory guarantee pay calculator 2026: work out what you're owed when laid off or put on short-time working. £41/day, 5 days per 3 months, part-time rules, eligibility & FAQs.">
+<link rel="canonical" href="https://nan-uk-guarantee-pay.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Guarantee Pay</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Statutory Guarantee Pay Calculator UK (2026)</h1>
+<p class="lede">Laid off or put on short-time working? Work out the statutory guarantee pay your employer legally owes you — using the official 2026 daily rate and the 5-day-per-3-months rule.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Guarantee Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="daily">Your normal gross daily pay (£)</label>
+<input type="number" id="daily" value="95" min="0" step="1">
+<span class="hint">What you would normally earn for one full working day, before tax.</span></div>
+<div class="field"><label for="daysweek">Days you normally work per week</label>
+<select id="daysweek">
+<option value="1">1 day</option><option value="2">2 days</option><option value="3">3 days</option>
+<option value="4">4 days</option><option value="5" selected>5 days</option>
+<option value="6">6 days</option><option value="7">7 days</option>
+</select>
+<span class="hint">Part-timers get a pro-rata share of the 5-day maximum.</span></div>
+<div class="field"><label for="workless">Complete workless days in this 3-month period</label>
+<input type="number" id="workless" value="5" min="0" max="60" step="1">
+<span class="hint">Only full days with no work at all count — part-worked days don't.</span></div>
+<button class="btn" onclick="calcGP()">Calculate Guarantee Pay</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function gbp(n){return '£'+n.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calcGP(){
+  const daily=parseFloat(document.getElementById('daily').value)||0;
+  const dw=parseInt(document.getElementById('daysweek').value,10)||0;
+  const wl=parseInt(document.getElementById('workless').value,10)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  const CAP=41, MAXDAYS=5, MAXTOTAL=CAP*MAXDAYS;
+  if(daily<=0||dw<=0){r.innerHTML='<p>Please enter your daily pay and working pattern.</p>';return;}
+  if(wl<=0){r.innerHTML='<p>With no workless days in the period, no guarantee pay is due.</p>';return;}
+  const rate=Math.min(daily,CAP);
+  const maxDays=Math.min(MAXDAYS,dw);
+  const paidDays=Math.min(wl,maxDays);
+  const total=Math.min(paidDays*rate,MAXTOTAL);
+  let rows='<table>'
+    +'<tr><td>Daily guarantee rate applied</td><td>'+gbp(rate)+'</td></tr>'
+    +'<tr><td>Statutory daily cap (2026)</td><td>'+gbp(CAP)+'</td></tr>'
+    +'<tr><td>Maximum claimable days (your pattern)</td><td>'+maxDays+' of '+MAXDAYS+'</td></tr>'
+    +'<tr><td>Workless days you entered</td><td>'+wl+'</td></tr>'
+    +'<tr><td>Days paid in this calculation</td><td>'+paidDays+'</td></tr></table>';
+  let notes='';
+  if(daily<CAP)notes+='<p class="hint">You earn under the £41 cap, so you get your usual daily rate of '+gbp(daily)+'.</p>';
+  if(daily>CAP)notes+='<p class="hint">Your pay exceeds the cap, so the statutory £41/day rate applies.</p>';
+  if(dw<5)notes+='<p class="hint">Part-time pro-rata: working '+dw+' days/week, you can claim at most '+maxDays+' guarantee days per 3-month period.</p>';
+  if(wl>maxDays)notes+='<p class="hint">Only '+maxDays+' of your '+wl+' workless days are payable — the 5-day-per-3-months limit applies.</p>';
+  r.innerHTML='<div class="big">'+gbp(total)+'<small>estimated statutory guarantee pay for this 3-month period</small></div>'+rows+notes
+    +'<p class="hint">Formula: min(your daily pay, £41) × min(workless days, 5, your weekly working days). Overall maximum £205 per 3-month period.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What Is Statutory Guarantee Pay?</h2>
+<p>When your employer <strong>lays you off</strong> (sends you home with no work) or puts you on <strong>short-time working</strong> (cuts your hours), the law says you are still entitled to some pay for days you would normally have worked. This legal minimum is called <strong>statutory guarantee pay</strong>. Your contract may promise more — but it can never give you less than the statutory amount.</p>
+<h2>The Guarantee Pay Formula (2026)</h2>
+<div class="note"><strong>Guarantee pay = your normal daily pay (capped at £41) × claimable workless days</strong><br>
+Maximum <strong>5 days in any 3-month period</strong> — so the most anyone can receive is <strong>£205 per 3 months</strong>. If you normally earn less than £41 a day, you get your usual daily rate instead of the cap.</div>
+<h3>Example</h3>
+<p>You normally earn £95 a day and work 5 days a week. You are laid off for 5 full working days in a 3-month period: 5 × £41 = <strong>£205</strong>. A colleague earning £30 a day gets 5 × £30 = <strong>£150</strong>.</p>
+<h2>Part-Time Workers</h2>
+<p>Your entitlement is worked out <strong>in proportion to your hours</strong>. Someone who works 2 days a week can claim for a maximum of 2 days in any 3-month period (not 5). This keeps part-timers on the same footing as full-timers, pro-rata.</p>
+<h2>Eligibility Checklist</h2>
+<ul>
+<li>You are an <strong>employee</strong> (not self-employed or a casual worker with no contract).</li>
+<li>You have worked for the employer for at least <strong>1 month continuously</strong>.</li>
+<li>You were <strong>available for work</strong> on the day (not on holiday or off sick).</li>
+<li>You did not <strong>refuse reasonable alternative work</strong> offered by your employer.</li>
+<li>The lay-off was <strong>not caused by a strike or lockout</strong>.</li>
+</ul>
+<h2>Only Complete Workless Days Count</h2>
+<p>Guarantee pay is payable only for <strong>whole days with no work at all</strong>. If you worked even part of the day, that day doesn't count. Days when you were on holiday or off sick don't count either — though you may be able to claim Jobseeker's Allowance for days beyond your guarantee-pay entitlement.</p>
+<h2>Laid Off for Weeks? You May Be Able to Claim Redundancy Pay</h2>
+<p>If you are laid off (or on short-time working) for <strong>4 consecutive weeks</strong>, or for <strong>6 weeks in total within a 13-week period</strong> (with no more than 3 consecutive), you can give your employer <strong>written notice that you intend to claim a redundancy payment</strong> — provided you have the 2 years' continuous service that statutory redundancy pay requires.</p>
+<h2>If Your Employer Doesn't Pay</h2>
+<p>You can take a claim to an <strong>employment tribunal within 3 months</strong> of the day the payment was due. You can't be dismissed or selected for redundancy for challenging a refusal to pay guarantee pay.</p>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Can my employer lay me off without a contract clause?</summary><p>No. Your employer can only lay you off or cut your hours if your contract allows it, or if you agree to it. Without a contractual right, cutting your pay is a breach of contract — you could claim for lost wages or resign and claim constructive dismissal.</p></details>
+<details><summary>Does guarantee pay apply to zero-hours workers?</summary><p>Only employees qualify, and the day must be one you would normally have been required to work. If your pattern is genuinely irregular with no normal working days, guarantee pay is unlikely to apply — get advice from Acas.</p></details>
+<details><summary>Is guarantee pay taxed?</summary><p>Yes — it's paid through payroll like normal wages, so income tax and National Insurance apply as usual.</p></details>
+<details><summary>What happens after the 5 days run out?</summary><p>Statutory guarantee pay stops. If the lay-off continues, you may be able to claim Jobseeker's Allowance for the remaining workless days, and the redundancy-pay trigger above may apply.</p></details>
+<details><summary>Does the £41 rate change?</summary><p>The daily limit is reviewed by the government each April. The £41 rate applies from April 2026 — check Acas or GOV.UK for the current figure.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on the published statutory guarantee pay rules (Acas, 2026 rate). Your actual entitlement depends on your contract and circumstances. For free, confidential advice contact Acas. Figures are estimates, not legal advice.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Guarantee Pay Calculator</h4><p>Free UK statutory guarantee pay calculator and guides — work out what you're owed when laid off or on short-time working, check eligibility, and know your rights.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
