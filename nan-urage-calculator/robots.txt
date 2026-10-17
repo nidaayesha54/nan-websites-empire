@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-urage-calculator.surge.sh/sitemap.xml
