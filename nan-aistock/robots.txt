@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-aistock.surge.sh/sitemap.xml
