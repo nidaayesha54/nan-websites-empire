@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mosques Near Me USA — Find Masjid & Islamic Centers Near You</title>
-<meta name="description" content="Find mosques near me and masjids near me across the USA. Search our interactive map for mosques, masjids and Islamic centers near you — addresses, directions and prayer-friendly locations in every state.">
+<title>Mosques Near Me USA — Find Masjids & Islamic Centers</title>
+<meta name="description" content="Find mosques near me across the USA. Interactive map of masjids & Islamic centers with addresses, directions and prayer-friendly locations.">
 <meta name="keywords" content="mosque near me, masjid near me, islamic center near me, mosques in usa, masjid finder, find mosque near me">
 <link rel="canonical" href="https://nan-mosques-nearme-usa.surge.sh/">
-<meta property="og:title" content="Mosques Near Me USA — Find Masjid & Islamic Centers Near You">
+<meta property="og:title" content="Mosques Near Me USA — Find Masjids & Islamic Centers">
 <meta property="og:description" content="Interactive map of mosques, masjids and Islamic centers across the USA. Search by city or use your location.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
@@ -51,6 +51,10 @@ main{max-width:72rem;margin:0 auto;padding:1rem 1rem 2rem}
 .intro h2{margin-top:0;font-size:1.05rem;color:var(--navy)}
 .intro p{font-size:.9rem;line-height:1.65;color:#374151}
 footer{background:var(--navy);color:#9fb3c8;margin-top:2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a4a 60%,#0d9488 140%);color:#fff;padding:2rem 1rem;text-align:center;border-radius:0 0 1rem 1rem;margin:0 0 1.25rem}
+.hero h2{margin:0 0 .45rem;font-size:1.5rem;letter-spacing:-.01em}
+.hero p{margin:0 auto;color:#cbd5e1;font-size:.95rem;max-width:38rem;line-height:1.55}
+@media(max-width:560px){.hero{padding:1.4rem .9rem}.hero h2{font-size:1.2rem}}
 @media(max-width:560px){#map{height:56vh}.controls .btn{flex:1 1 auto}}
 </style>
 </head>
@@ -61,6 +65,10 @@ footer{background:var(--navy);color:#9fb3c8;margin-top:2rem}
     <div><h1>Mosques Near Me USA</h1><p>Find masjids &amp; Islamic centers across America</p></div>
   </div>
 </header>
+<section class="hero">
+  <h2>Find Mosques Near You in the USA</h2>
+  <p>Search any US city or tap your location — 66 real mosques & Islamic centers mapped with addresses and directions.</p>
+</section>
 <main>
   <div class="controls">
     <div class="search-wrap">
