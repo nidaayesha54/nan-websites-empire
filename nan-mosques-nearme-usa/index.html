@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mosques Near Me USA — Find Masjid & Islamic Centers Near You</title>
+<meta name="description" content="Find mosques near me and masjids near me across the USA. Search our interactive map for mosques, masjids and Islamic centers near you — addresses, directions and prayer-friendly locations in every state.">
+<meta name="keywords" content="mosque near me, masjid near me, islamic center near me, mosques in usa, masjid finder, find mosque near me">
+<link rel="canonical" href="https://nan-mosques-nearme-usa.surge.sh/">
+<meta property="og:title" content="Mosques Near Me USA — Find Masjid & Islamic Centers Near You">
+<meta property="og:description" content="Interactive map of mosques, masjids and Islamic centers across the USA. Search by city or use your location.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-dark:#0d9488;--bg:#f6faf9;--ink:#1f2937;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-text-size-adjust:100%}
+header{background:var(--navy);color:#fff;padding:.9rem 1rem;position:sticky;top:0;z-index:1000}
+.head-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;gap:.6rem}
+.logo{width:2.1rem;height:2.1rem;border-radius:.6rem;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff}
+.head-inner h1{font-size:1.05rem;margin:0;font-weight:700}
+.head-inner p{margin:0;font-size:.72rem;color:#9fb3c8}
+main{max-width:72rem;margin:0 auto;padding:1rem 1rem 2rem}
+.controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.search-wrap{flex:1 1 220px;position:relative}
+#citySearch{width:100%;padding:.65rem .8rem;border:2px solid #d7e3e0;border-radius:.6rem;font-size:.95rem}
+#citySearch:focus{outline:none;border-color:var(--teal)}
+#suggest{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:1200;display:none;max-height:14rem;overflow:auto}
+#suggest button{display:block;width:100%;text-align:left;padding:.6rem .8rem;border:0;background:#fff;font-size:.88rem;cursor:pointer}
+#suggest button:hover{background:#f0fdfa}
+.btn{padding:.65rem .95rem;border-radius:.6rem;border:0;font-size:.9rem;font-weight:600;cursor:pointer;background:var(--teal);color:#fff}
+.btn:hover{background:var(--teal-dark)}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid #d7e3e0}
+.btn.ghost.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.view-toggle{display:flex;gap:.4rem}
+#statusRow{font-size:.82rem;color:var(--muted);margin:.4rem 0 .6rem;min-height:1.1rem}
+#map{height:62vh;min-height:380px;border-radius:.8rem;overflow:hidden;box-shadow:0 4px 18px rgba(10,22,40,.12);border:1px solid #e5e7eb}
+#listView{display:none}
+.mosque-card{background:#fff;border:1px solid #e5e7eb;border-radius:.7rem;padding:.85rem 1rem;margin-bottom:.6rem;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+.mosque-card h3{margin:0 0 .25rem;font-size:.98rem}
+.mosque-card .addr{font-size:.83rem;color:var(--muted);margin:0 0 .2rem}
+.mosque-card .dist{font-size:.78rem;color:var(--teal-dark);font-weight:700}
+.dir-link{white-space:nowrap;font-size:.83rem;font-weight:700;color:var(--teal-dark);text-decoration:none;border:2px solid var(--teal);border-radius:.5rem;padding:.45rem .7rem}
+.dir-link:hover{background:var(--teal);color:#fff}
+.leaflet-popup-content b{font-size:.92rem}
+.leaflet-popup-content .paddr{font-size:.8rem;color:#555;margin:.25rem 0 .4rem}
+.leaflet-popup-content .pdir{display:inline-block;margin-top:.25rem;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:.82rem;padding:.4rem .7rem;border-radius:.4rem}
+.ad-slot{display:flex;justify-content:center;margin:1.25rem 0;min-height:90px}
+.intro{background:#fff;border:1px solid #e5e7eb;border-radius:.8rem;padding:1rem 1.1rem;margin-top:1.25rem}
+.intro h2{margin-top:0;font-size:1.05rem;color:var(--navy)}
+.intro p{font-size:.9rem;line-height:1.65;color:#374151}
+footer{background:var(--navy);color:#9fb3c8;margin-top:2rem}
+@media(max-width:560px){#map{height:56vh}.controls .btn{flex:1 1 auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <div class="logo">N</div>
+    <div><h1>Mosques Near Me USA</h1><p>Find masjids &amp; Islamic centers across America</p></div>
+  </div>
+</header>
+<main>
+  <div class="controls">
+    <div class="search-wrap">
+      <input id="citySearch" type="text" placeholder="Enter city, ST — e.g. Houston, TX" autocomplete="off" aria-label="Search a city">
+      <div id="suggest"></div>
+    </div>
+    <button class="btn" id="locateBtn" type="button">📍 Use my location</button>
+    <div class="view-toggle">
+      <button class="btn ghost active" id="mapBtn" type="button">Map view</button>
+      <button class="btn ghost" id="listBtn" type="button">List view</button>
+    </div>
+  </div>
+  <div id="statusRow" role="status"></div>
+  <div id="map" aria-label="Map of mosques"></div>
+  <div id="listView"></div>
+
+  <div class="ad-slot">
+    <!-- Adsterra Banner 300x250 -->
+    <div style="max-width:300px;max-height:250px;overflow:hidden">
+      <script>
+        atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+      </script>
+      <script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    </div>
+  </div>
+
+  <section class="intro">
+    <h2>Looking for a mosque near me? Start here.</h2>
+    <p>Whether you searched for a <strong>mosque near me</strong>, a <strong>masjid near me</strong>, or an <strong>Islamic center near me</strong>, this interactive map helps you find prayer spaces across the United States. Type any US city or state into the search box above, or tap <strong>📍 Use my location</strong> to instantly see the mosques closest to you — the list view sorts them by distance automatically.</p>
+    <p>Click any marker to see the mosque's name and address, then tap <strong>Get Directions</strong> for turn-by-turn navigation. Our directory is built from open map data and covers major metros from New York to Los Angeles. <a href="/articles/finding-mosques-in-usa-guide.html" style="color:#0d9488;font-weight:700">Read our guide: How to Find a Mosque Anywhere in the USA →</a></p>
+  </section>
+</main>
+<footer>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid rgba(255,255,255,.08);" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fb3c8;margin:0 0 .6rem;">More from the NAN network</p>
+<p style="font-size:.85rem;line-height:2;color:#9fb3c8;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#cbd5e1;text-decoration:none;">Labour Law Calculators</a> <span style="color:#cbd5e1;text-decoration:none;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#cbd5e1;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#cbd5e1;text-decoration:none;">ROI Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Salary Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Budget Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Loan Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#cbd5e1;text-decoration:none;">Loan Hub</a> <span style="color:#334155;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Investment Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#cbd5e1;text-decoration:none;">Tax Hub</a> <span style="color:#334155;">·</span> <a href="https://lifecalc.surge.sh" style="color:#cbd5e1;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div style="max-width:72rem;margin:0 auto;padding:1.25rem 1rem;"><p style="font-size:.8rem;margin:0;">© 2026 NAN — Free tools for everyone. Map data © OpenStreetMap contributors. Listings are indicative; confirm prayer times with the mosque directly.</p></div>
+</footer>
+<script>
+(function(){
+"use strict";
+var map = L.map('map').setView([39.8, -98.5], 4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+var pois = [], markers = [], userPos = null;
+var statusRow = document.getElementById('statusRow');
+var listView = document.getElementById('listView');
+var mapEl = document.getElementById('map');
+var mapBtn = document.getElementById('mapBtn');
+var listBtn = document.getElementById('listBtn');
+
+function haversine(a, b, c, d){
+  function r(x){return x*Math.PI/180;}
+  var R=3958.8, dLat=r(c-a), dLon=r(d-b);
+  var h=Math.sin(dLat/2)**2 + Math.cos(r(a))*Math.cos(r(c))*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+function fmtDist(mi){ return mi < 0.1 ? Math.round(mi*5280)+' ft' : mi.toFixed(1)+' mi'; }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function dirUrl(lat, lon){ return 'https://www.google.com/maps/dir/?api=1&destination='+lat+','+lon; }
+
+function addMarker(p){
+  var m = L.marker([p.lat, p.lon]).addTo(map);
+  m.bindPopup('<b>'+esc(p.name)+'</b><div class="paddr">'+esc(p.address)+'</div><a class="pdir" target="_blank" rel="noopener" href="'+dirUrl(p.lat,p.lon)+'">Get Directions →</a>');
+  markers.push(m);
+}
+
+function renderList(){
+  var rows = pois.slice();
+  if (userPos){
+    rows.forEach(function(p){ p._d = haversine(userPos.lat, userPos.lon, p.lat, p.lon); });
+    rows.sort(function(a,b){ return a._d - b._d; });
+  }
+  var html = '';
+  rows.forEach(function(p){
+    html += '<div class="mosque-card"><div><h3>'+esc(p.name)+'</h3><p class="addr">'+esc(p.address)+'</p>'+
+      (userPos ? '<p class="dist">📍 '+fmtDist(p._d)+' away</p>' : '')+
+      '</div><a class="dir-link" target="_blank" rel="noopener" href="'+dirUrl(p.lat,p.lon)+'">Directions</a></div>';
+  });
+  listView.innerHTML = html || '<p>No mosques found.</p>';
+}
+
+function showView(which){
+  var isMap = which === 'map';
+  mapEl.style.display = isMap ? 'block' : 'none';
+  listView.style.display = isMap ? 'none' : 'block';
+  mapBtn.classList.toggle('active', isMap);
+  listBtn.classList.toggle('active', !isMap);
+  if (isMap){ setTimeout(function(){ map.invalidateSize(); }, 50); }
+  else { renderList(); }
+}
+mapBtn.addEventListener('click', function(){ showView('map'); });
+listBtn.addEventListener('click', function(){ showView('list'); });
+
+function setUser(lat, lon, label){
+  userPos = {lat: lat, lon: lon};
+  if (userPos.marker){ map.removeLayer(userPos.marker); }
+  userPos.marker = L.circleMarker([lat, lon], {radius:9, color:'#14B8A6', fillColor:'#14B8A6', fillOpacity:0.9, weight:3}).addTo(map);
+  userPos.marker.bindPopup('<b>'+esc(label||'Your location')+'</b>').openPopup();
+  map.setView([lat, lon], 11);
+  statusRow.textContent = 'Showing mosques near ' + (label || 'your location') + ' — list view sorts by distance.';
+  renderList();
+}
+
+document.getElementById('locateBtn').addEventListener('click', function(){
+  if (!navigator.geolocation){ statusRow.textContent = 'Geolocation is not supported by this browser.'; return; }
+  statusRow.textContent = 'Locating…';
+  navigator.geolocation.getCurrentPosition(function(pos){
+    setUser(pos.coords.latitude, pos.coords.longitude);
+  }, function(err){
+    statusRow.textContent = 'Could not get your location. Try typing a city instead.';
+  }, {timeout: 12000});
+});
+
+// City search with debounced Nominatim geocoding
+var input = document.getElementById('citySearch');
+var suggest = document.getElementById('suggest');
+var debounce = null;
+input.addEventListener('input', function(){
+  clearTimeout(debounce);
+  var q = input.value.trim();
+  if (q.length < 3){ suggest.style.display = 'none'; return; }
+  debounce = setTimeout(function(){
+    var url = 'https://nominatim.openstreetmap.org/search?format=json&limit=6&countrycodes=us&q=' + encodeURIComponent(q);
+    fetch(url, {headers: {'Accept': 'application/json'}})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (!data.length){ suggest.style.display = 'none'; return; }
+        suggest.innerHTML = '';
+        data.forEach(function(d){
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = d.display_name.split(',').slice(0,3).join(',');
+          b.addEventListener('click', function(){
+            input.value = d.display_name.split(',').slice(0,2).join(',');
+            suggest.style.display = 'none';
+            setUser(parseFloat(d.lat), parseFloat(d.lon), d.display_name.split(',').slice(0,2).join(','));
+          });
+          suggest.appendChild(b);
+        });
+        suggest.style.display = 'block';
+      })
+      .catch(function(){ suggest.style.display = 'none'; });
+  }, 450);
+});
+document.addEventListener('click', function(e){
+  if (!document.querySelector('.search-wrap').contains(e.target)) suggest.style.display = 'none';
+});
+
+fetch('locations.json')
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    pois = data;
+    pois.forEach(addMarker);
+    statusRow.textContent = pois.length + ' mosques & Islamic centers mapped across the USA. Use your location or search a city.';
+  })
+  .catch(function(){
+    statusRow.textContent = 'Could not load mosque data. Please refresh.';
+  });
+})();
+</script>
+</body>
+</html>
