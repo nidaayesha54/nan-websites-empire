@@ -9,62 +9,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1a2433;--muted:#5b6b7f;--line:#e6ecf2;--bg:#f6f9fb;--card:#ffffff}
 *{box-sizing:border-box}
-body{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif;background:var(--bg);color:var(--ink);margin:0;line-height:2.2}
+body{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif;background:#ffffff;color:#444444;margin:0;line-height:2.2}
 a{color:inherit;text-decoration:none}
-.topbar{background:var(--navy);color:#cfe3e3;font-size:.82rem;padding:.35rem 0}
+.topbar{background:#1a56a8;color:#fff;font-size:.82rem;padding:.35rem 0}
 .wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center}
-header{background:var(--navy);color:#fff;padding:1rem 0 .8rem;border-top:1px solid #1d3350}
+header{background:#fff;border-bottom:3px solid #1a56a8;padding:.8rem 0 .7rem}
 .brand{display:flex;align-items:center;gap:.8rem}
-.logo{width:52px;height:52px;border-radius:12px;background:var(--teal);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.6rem}
-.brand h1{margin:0;font-size:1.7rem}
-.brand p{margin:0;color:#9fb3c8;font-size:.85rem}
-nav{background:var(--teal)}
-nav .wrap{display:flex;gap:1.4rem;overflow-x:auto;padding:.55rem 1rem}
-nav a{color:#04282a;font-weight:600;font-size:1rem;white-space:nowrap}
-nav a:hover{color:#fff}
-.ticker{background:#fff;border-bottom:1px solid var(--line);padding:.5rem 0;overflow:hidden}
+.logo{width:46px;height:46px;border-radius:10px;background:#1a56a8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.4rem}
+.brand h1{margin:0;font-size:1.6rem;color:#222222}
+.brand p{margin:0;color:#666666;font-size:.85rem}
+nav{background:#fff;border-bottom:1px solid #dddddd}
+nav .wrap{display:flex;gap:1.4rem;overflow-x:auto;padding:.6rem 1rem}
+nav a{color:#1a56a8;font-weight:600;font-size:1rem;white-space:nowrap}
+nav a:hover{color:#13407e}
+.ticker{background:#cc0000;color:#fff;padding:.5rem 0;overflow:hidden}
 .ticker .wrap{display:flex;gap:.8rem;align-items:center}
-.tag{background:#d61f2c;color:#fff;font-size:.8rem;font-weight:700;border-radius:6px;padding:.1rem .6rem;white-space:nowrap}
-.tick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.92rem;color:var(--ink)}
+.tag{background:#fff;color:#cc0000;font-size:.8rem;font-weight:700;border-radius:6px;padding:.1rem .6rem;white-space:nowrap}
+.tick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.92rem;color:#fff}
 main .wrap{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;padding:1.5rem 1rem}
 .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;margin-bottom:1.8rem}
-.hero-main,.hero-side article{border-radius:14px;overflow:hidden;position:relative;min-height:220px;display:flex;align-items:flex-end;color:#fff}
-.hero-main{min-height:340px;background:linear-gradient(135deg,#0A1628 0%,#123a5e 60%,#0e6e64 100%)}
+.hero a{display:block}
+.hero-main,.hero-side article{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 5px rgba(0,0,0,.07);overflow:hidden;min-height:220px;display:flex;align-items:flex-end}
+.hero-main{min-height:340px}
 .hero-side{display:grid;gap:1rem}
-.hero-side article{background:linear-gradient(135deg,#123a5e,#0e6e64)}
-.hero-txt{padding:1.1rem;background:linear-gradient(transparent,rgba(4,10,20,.85));width:100%}
-.hero-txt h2{margin:0 0 .3rem;font-size:1.35rem;line-height:2}
+.hero-txt{padding:1.1rem;width:100%}
+.hero-txt h2{margin:0 0 .3rem;font-size:1.35rem;line-height:2;color:#222222}
 .hero-main .hero-txt h2{font-size:1.7rem}
-.hero-txt p{margin:0;font-size:.9rem;color:#d7e6e6}
-.cat{display:inline-block;background:var(--teal);color:#04282a;font-size:.75rem;font-weight:700;border-radius:20px;padding:.05rem .7rem;margin-bottom:.4rem}
+.hero-txt p{margin:0;font-size:.9rem;color:#666666}
+.cat{display:inline-block;background:#1a56a8;color:#fff;font-size:.75rem;font-weight:700;border-radius:4px;padding:.05rem .7rem;margin-bottom:.4rem}
 section.block{margin-bottom:2rem}
-.sec-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;border-bottom:2px solid var(--teal);padding-bottom:.4rem}
-.sec-head h2{margin:0;font-size:1.4rem}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .15s}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(10,22,40,.08)}
-.card .thumb{height:120px;background:linear-gradient(135deg,#0A1628,#0e6e64);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem}
-.card .body{padding:.8rem 1rem}
-.card h3{margin:0 0 .3rem;font-size:1.02rem;line-height:1.9}
-.card p{margin:0;color:var(--muted);font-size:.85rem;line-height:1.9}
-aside .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1.2rem}
-aside h3{margin:0 0 .7rem;font-size:1.15rem;border-bottom:2px solid var(--teal);padding-bottom:.3rem;display:inline-block}
-ol.pop{margin:0;padding:0 1.1rem 0 0}
-ol.pop li{margin-bottom:.55rem;font-size:.92rem;line-height:1.9}
-ol.pop li a:hover{color:var(--teal)}
+section.block:nth-of-type(even){background:#f5f5f5;margin-left:-1rem;margin-right:-1rem;padding:1.2rem 1rem;border-top:1px solid #dddddd;border-bottom:1px solid #dddddd}
+.sec-head{background:#1a56a8;color:#fff;padding:.35rem .9rem;border-radius:4px;margin-bottom:1rem}
+.sec-head h2{margin:0;font-size:1.3rem;color:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;align-items:stretch}
+.card{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column;height:100%}
+.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.card .thumb{height:120px;background:#f5f5f5;color:#1a56a8;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;border-bottom:1px solid #dddddd}
+.card .body{padding:.8rem 1rem;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 .3rem;font-size:1.02rem;line-height:1.9;color:#222222}
+.card p{margin:0;color:#666666;font-size:.85rem;line-height:1.9}
+aside .box{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:0;margin-bottom:1.2rem;overflow:hidden}
+aside .box h3{margin:0;font-size:1.1rem;background:#1a56a8;color:#fff;padding:.4rem .9rem}
+aside .box .boxbody{padding:.8rem 1.1rem}
+ol.pop{margin:0;padding:.2rem 1.1rem .2rem 0;list-style:none;counter-reset:pop}
+ol.pop li{counter-increment:pop;margin-bottom:.55rem;font-size:.92rem;line-height:1.9;display:flex;gap:.6rem;align-items:flex-start}
+ol.pop li::before{content:counter(pop);background:#1a56a8;color:#fff;font-size:.75rem;font-weight:700;min-width:1.5rem;height:1.5rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-top:.45rem;flex-shrink:0}
+ol.pop li a:hover{color:#1a56a8}
 .tool-list{list-style:none;margin:0;padding:0}
 .tool-list li{margin-bottom:.5rem}
-.tool-list a{display:block;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.45rem .8rem;font-size:.92rem}
-.tool-list a:hover{border-color:var(--teal);color:#0b6e63}
-.ad{text-align:center;margin:1.4rem 0}
-footer{background:var(--navy);color:#9fb3c8;margin-top:2rem;padding:2rem 0 1rem;font-size:.88rem}
+.tool-list a{display:block;background:#f5f5f5;border:1px solid #dddddd;border-radius:6px;padding:.45rem .8rem;font-size:.92rem;color:#222222}
+.tool-list a:hover{border-color:#1a56a8;color:#1a56a8}
+.ad{text-align:center;margin:1.4rem 0;background:#fff;border:1px solid #dddddd;padding:.8rem}
+footer{background:#f5f5f5;color:#555;margin-top:2rem;padding:2rem 0 1rem;font-size:.88rem;border-top:2px solid #dddddd}
 footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-bottom:1.2rem}
-footer h4{color:#fff;margin:0 0 .6rem;font-size:1rem}
-footer a:hover{color:var(--teal)}
-.copy{border-top:1px solid #1d3350;padding-top:.8rem;text-align:center;font-size:.8rem}
+footer h4{color:#222222;margin:0 0 .6rem;font-size:1rem}
+footer a{color:#1a56a8}footer a:hover{color:#13407e}
+.netlinks{font-size:.8rem;color:#777;border-top:1px solid #dddddd;padding-top:.8rem;margin-bottom:.8rem}
+.netlinks a{color:#1a56a8}
+.copy{border-top:1px solid #dddddd;padding-top:.8rem;text-align:center;font-size:.8rem;color:#777}
 @media(max-width:900px){main .wrap{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
 </style>
 </head>
@@ -119,21 +123,21 @@ footer a:hover{color:var(--teal)}
 </div>
 
 <aside>
-<div class="box"><h3>مقبول ترین</h3><ol class="pop">
+<div class="box"><h3>مقبول ترین</h3><div class="boxbody"><ol class="pop">
 <li><a href="articles/art-ai-kya-hai.html">آرٹیفیشل انٹیلیجنس کیا ہے؟</a></li>
 <li><a href="articles/art-freelancing-guide.html">فری لانسنگ کی مکمل رہنمائی</a></li>
 <li><a href="articles/art-subah-sham-duain.html">صبح و شام کی دعائیں</a></li>
 <li><a href="articles/art-bisp-ehsaas.html">بینظیر انکم سپورٹ پروگرام</a></li>
 <li><a href="articles/art-bijli-bachat.html">بجلی کا بل کم کریں</a></li>
-</ol></div>
-<div class="box" id="tools"><h3>مفت ٹولز</h3><ul class="tool-list">
+</ol></div></div>
+<div class="box" id="tools"><h3>مفت ٹولز</h3><div class="boxbody"><ul class="tool-list">
 <li><a href="https://nan-eobi-calculator.surge.sh">ای او بی آئی پنشن کیلکولیٹر</a></li>
 <li><a href="https://nan-labour-calculators.surge.sh">اوور ٹائم اور گریجویٹی کیلکولیٹر</a></li>
 <li><a href="https://nan-urage-calculator.surge.sh">اردو عمر کیلکولیٹر</a></li>
 <li><a href="https://nan-aistock.surge.sh">مفت AI تصاویر</a></li>
 <li><a href="https://nan-pngstock.surge.sh">مفت PNG تصاویر</a></li>
-</ul></div>
-<div class="box"><h3>ہمارے بارے میں</h3><p style="font-size:.88rem;color:#5b6b7f;margin:0">NAN اردو پورٹل اردو زبان میں معیاری اور مفید مواد فراہم کرتا ہے — ٹیکنالوجی، فری لانسنگ، اسلامی معلومات اور روزمرہ رہنمائی۔</p></div>
+</ul></div></div>
+<div class="box"><h3>ہمارے بارے میں</h3><div class="boxbody"><p style="font-size:.88rem;color:#5b6b7f;margin:0">NAN اردو پورٹل اردو زبان میں معیاری اور مفید مواد فراہم کرتا ہے — ٹیکنالوجی، فری لانسنگ، اسلامی معلومات اور روزمرہ رہنمائی۔</p></div></div>
 </aside>
 </div></main>
 
@@ -144,7 +148,7 @@ footer a:hover{color:var(--teal)}
 <div><h4>مفت ٹولز</h4><p><a href="https://nan-eobi-calculator.surge.sh">EOBI کیلکولیٹر</a><br><a href="https://nan-labour-calculators.surge.sh">لیبر کیلکولیٹرز</a><br><a href="https://nan-urage-calculator.surge.sh">عمر کیلکولیٹر</a></p></div>
 </div>
 <!--nan-network-links:start-->
-<p style="font-size:.8rem;color:#5b7a8a">مزید مفت ٹولز: <a href="https://nan-eobi-calculator.surge.sh">EOBI پنشن</a> · <a href="https://nan-labour-calculators.surge.sh">اوور ٹائم</a> · <a href="https://nan-urage-calculator.surge.sh">عمر</a> · <a href="https://nan-aistock.surge.sh">AI تصاویر</a> · <a href="https://nan-pngstock.surge.sh">PNG تصاویر</a> · <a href="https://nan-rozana-calculators.surge.sh">روزانہ کیلکولیٹرز</a></p>
+<p class="netlinks">مزید مفت ٹولز: <a href="https://nan-eobi-calculator.surge.sh">EOBI پنشن</a> · <a href="https://nan-labour-calculators.surge.sh">اوور ٹائم</a> · <a href="https://nan-urage-calculator.surge.sh">عمر</a> · <a href="https://nan-aistock.surge.sh">AI تصاویر</a> · <a href="https://nan-pngstock.surge.sh">PNG تصاویر</a> · <a href="https://nan-rozana-calculators.surge.sh">روزانہ کیلکولیٹرز</a></p>
 <!--nan-network-links:end-->
 <div class="copy">© 2026 NAN اردو پورٹل — جملہ حقوق محفوظ ہیں</div>
 </div></footer>
