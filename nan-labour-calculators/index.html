@@ -46,6 +46,35 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 .copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
 [dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
 [dir="rtl"] td:last-child{text-align:left}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
 </style>
 </head>
 <body>
@@ -54,8 +83,12 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 <nav class="nav"><a href="index.html#overtime">Overtime</a><a href="index.html#gratuity">Gratuity</a></nav>
 </div></header>
 <main><div class="wrap">
+<section class="hero">
+<span class="hero-badge">Factories Act 1934 · Standing Orders Ordinance rates</span>
 <h1>Pakistan Labour Law Calculators</h1>
 <p class="lede">Overtime pay and gratuity, calculated the legal way — in English and Urdu, free forever.</p>
+<div class="hero-chips"><span>Double-rate overtime (200%)</span><span>30-day gratuity rule</span><span>EN + اردو</span></div>
+</section>
 
 <div class="panel" id="overtime">
 <h2 style="margin-top:0">Overtime Calculator — اوور ٹائم کیلکولیٹر</h2>
@@ -139,6 +172,15 @@ atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height'
 <li>Payable on resignation, termination (except proven misconduct), retirement, or death.</li>
 <li>No gratuity is due where the employer already contributes to an approved pension/provident fund instead.</li>
 </ul>
+<h2>How it works</h2>
+<div class="how">
+<div class="how-step"><span class="n">1</span><h3>Enter your salary</h3><p>Type your gross monthly salary — overtime is calculated on the legal hourly rate.</p></div><div class="how-step"><span class="n">2</span><h3>Add hours or service years</h3><p>Overtime hours worked, or completed years of service for gratuity.</p></div><div class="how-step"><span class="n">3</span><h3>Get your legal amount</h3><p>See your overtime pay at double rate and your gratuity of 30 days' wages per year.</p></div>
+</div>
+<div class="srcnote"><strong>Accuracy note:</strong> Overtime at twice the ordinary rate (Factories Act, 1934, s.47); gratuity of 30 days' wages per completed year of service (Standing Orders Ordinance, 1968). Provincial rules may vary — this is guidance, not legal advice.</div>
+<section class="guides"><h2>Guides</h2>
+<ul>
+<li><a href="articles/pakistan-overtime-gratuity-labour-law-guide-2026.html">Overtime & Gratuity in Pakistan 2026: Labour-Law Guide</a> — Legal formulas, worked examples & how to claim what you're owed.</li>
+</ul></section>
 <div class="faq">
 <h2>FAQs</h2>
 <details><summary>Who counts as a "workman"?</summary><p>Anyone doing skilled or unskilled, manual or clerical work — courts look at the nature of duties, not the job title.</p></details>
@@ -156,7 +198,7 @@ atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height'
 <!--nan-network-links:start-->
 <section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
 <p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
-<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
 </section>
 <!--nan-network-links:end-->
 <div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
