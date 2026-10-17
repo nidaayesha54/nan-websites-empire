@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BizLens — Upload Your Data, Get a Business Dashboard</title>
+<meta name="description" content="BizLens by NAN Marketing Agency: upload one Excel or CSV file and get your entire business dashboard in 10 seconds. KPIs, product analytics, client insights, weakness radar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A1628'/%3E%3Crect x='14' y='36' width='9' height='14' rx='2' fill='%2314B8A6'/%3E%3Crect x='28' y='27' width='9' height='23' rx='2' fill='%2314B8A6'/%3E%3Crect x='42' y='16' width='9' height='34' rx='2' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --navy:#0A1628; --navy2:#0F1F38; --teal:#14B8A6; --teal-dark:#0D9488;
+  --bg:#F4F6FA; --card:#FFFFFF; --ink:#1A2332; --muted:#64748B; --line:#E6EAF1;
+  --red:#EF4444; --amber:#F59E0B; --green:#10B981;
+  --shadow:0 1px 3px rgba(10,22,40,.08),0 6px 18px rgba(10,22,40,.06);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+.hidden{display:none!important}
+
+/* ============ LANDING ============ */
+#landing{background:var(--navy);color:#fff;min-height:100vh;display:flex;flex-direction:column}
+.lnav{max-width:1180px;width:100%;margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:21px;letter-spacing:-.3px}
+.brand svg{width:32px;height:32px}
+.brand small{display:block;font-size:10.5px;font-weight:600;color:#94A3B8;letter-spacing:1.4px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:10px;padding:13px 24px;font-weight:700;font-size:15px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-teal{background:var(--teal);color:#04201c}
+.btn-teal:hover{background:#17cdb9;box-shadow:0 8px 24px rgba(20,184,166,.35);transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.15)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn .arrow{font-weight:800}
+
+.hero{max-width:1180px;width:100%;margin:0 auto;padding:56px 28px 30px;text-align:center}
+.hero .eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--teal);background:rgba(20,184,166,.12);border:1px solid rgba(20,184,166,.35);padding:8px 18px;border-radius:999px;margin-bottom:26px}
+.hero h1{font-size:clamp(34px,5.4vw,62px);font-weight:800;line-height:1.08;letter-spacing:-1.6px;max-width:900px;margin:0 auto 22px}
+.hero h1 .hl{color:var(--teal)}
+.hero p.sub{font-size:clamp(16px,2.2vw,20px);color:#B6C2D6;max-width:700px;margin:0 auto 38px;line-height:1.65}
+.hero p.sub strong{color:#fff}
+
+/* upload dropzone */
+.dropwrap{max-width:640px;margin:0 auto 20px}
+#dropzone{border:2px dashed rgba(255,255,255,.28);border-radius:var(--radius);background:rgba(255,255,255,.04);padding:42px 30px;transition:border-color .2s,background .2s,transform .2s;cursor:pointer}
+#dropzone:hover{border-color:var(--teal);background:rgba(20,184,166,.07)}
+#dropzone.drag{border-color:var(--teal);background:rgba(20,184,166,.14);transform:scale(1.015)}
+#dropzone .dz-icon{width:54px;height:54px;margin:0 auto 16px;display:block}
+#dropzone h3{font-size:19px;font-weight:700;margin-bottom:8px}
+#dropzone p{color:#94A3B8;font-size:14px}
+#dropzone .filetypes{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--teal);background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.4);padding:5px 14px;border-radius:999px}
+.sample-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0 8px}
+.sample-note{color:#7C8AA0;font-size:13px;margin-top:10px}
+.pain{max-width:1180px;width:100%;margin:56px auto 0;padding:0 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.pain-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px}
+.pain-card .n{font-size:12px;font-weight:800;color:var(--teal);letter-spacing:1.6px;margin-bottom:10px}
+.pain-card h4{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.pain-card p{color:#9AA7BE;font-size:14px;line-height:1.6}
+.scale{max-width:1180px;width:100%;margin:56px auto;padding:44px 28px;text-align:center}
+.scale h2{font-size:clamp(24px,3.6vw,36px);font-weight:800;letter-spacing:-.8px;margin-bottom:14px}
+.scale p{color:#9AA7BE;font-size:16.5px;max-width:640px;margin:0 auto 30px;line-height:1.65}
+.scale .big{color:var(--teal);font-weight:800}
+.cta-band{max-width:1180px;width:100%;margin:0 auto 10px;padding:0 28px}
+.cta-inner{background:var(--teal);border-radius:18px;padding:46px 40px;text-align:center;color:#04201c}
+.cta-inner h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.8px;margin-bottom:12px}
+.cta-inner p{font-size:16px;font-weight:500;margin-bottom:26px;opacity:.85}
+.cta-inner .btn{background:#04201c;color:#fff;padding:15px 34px;font-size:16px}
+.cta-inner .btn:hover{background:#0A1628;transform:translateY(-1px)}
+.lfoot{margin-top:auto;padding:34px 28px 26px;text-align:center;color:#5B6B84;font-size:13px}
+.lfoot a{color:var(--teal);font-weight:600}
+
+/* ============ APP SHELL ============ */
+#app{display:flex;min-height:100vh}
+.sidebar{width:248px;flex-shrink:0;background:var(--navy);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;padding:22px 16px}
+.sidebar .brand{padding:2px 10px 20px;font-size:19px}
+.sidebar nav{display:flex;flex-direction:column;gap:5px;margin-top:4px}
+.navbtn{display:flex;align-items:center;gap:12px;background:transparent;border:0;color:#9AA7BE;font-size:14.5px;font-weight:600;padding:12px 14px;border-radius:10px;text-align:left;transition:background .15s,color .15s,width .2s;position:relative}
+.navbtn svg{width:19px;height:19px;flex-shrink:0}
+.navbtn:hover{background:rgba(255,255,255,.07);color:#fff}
+.navbtn.active{background:rgba(20,184,166,.16);color:#fff}
+.navbtn.active::before{content:"";position:absolute;left:-16px;top:8px;bottom:8px;width:4px;border-radius:4px;background:var(--teal)}
+.navbtn .badge{margin-left:auto;background:var(--red);color:#fff;font-size:11px;font-weight:700;min-width:21px;height:21px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 6px}
+.side-cta{margin-top:auto;background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.35);border-radius:12px;padding:18px;text-align:center}
+.side-cta h5{font-size:14px;font-weight:700;margin-bottom:8px}
+.side-cta p{font-size:12px;color:#9AA7BE;margin-bottom:14px;line-height:1.55}
+.side-cta .btn{width:100%;justify-content:center;padding:11px 14px;font-size:13.5px}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{background:var(--card);border-bottom:1px solid var(--line);padding:16px 30px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:20}
+.topbar .file-chip{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 15px;font-size:13.5px;font-weight:600}
+.topbar .file-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--teal)}
+.topbar .file-chip small{color:var(--muted);font-weight:500}
+.topbar .spacer{flex:1}
+.content{padding:30px;max-width:1240px;width:100%;margin:0 auto}
+.sec-head{margin-bottom:22px;animation:fadeUp .35s ease}
+.sec-head h2{font-size:24px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.sec-head p{color:var(--muted);font-size:14.5px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.tabpane{animation:fadeIn .3s ease}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;margin-bottom:22px}
+.kpi{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;position:relative;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease;animation:fadeUp .4s ease}
+.kpi:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(10,22,40,.1),0 12px 28px rgba(10,22,40,.1)}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+.kpi.red::before{background:var(--red)}.kpi.amber::before{background:var(--amber)}.kpi.navy::before{background:var(--navy)}
+.kpi .label{font-size:12px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.kpi .val{font-size:30px;font-weight:800;letter-spacing:-.8px}
+.kpi .sub{font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.5}
+.kpi .sub .up{color:var(--green);font-weight:700}.kpi .sub .down{color:var(--red);font-weight:700}
+.grid2{display:grid;grid-template-columns:1.65fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:980px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:16px;animation:fadeUp .4s ease}
+.card h3{font-size:16px;font-weight:700;margin-bottom:4px;letter-spacing:-.2px}
+.card .ch-sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+.chartbox{position:relative;height:300px}
+.chartbox.sm{height:250px}
+table.dtable{width:100%;border-collapse:collapse;font-size:13.5px}
+table.dtable th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:11px 12px;border-bottom:2px solid var(--line)}
+table.dtable td{padding:12px;border-bottom:1px solid var(--line)}
+table.dtable tr:last-child td{border-bottom:0}
+table.dtable tbody tr{transition:background .12s}
+table.dtable tbody tr:hover{background:#F7FAF9}
+table.dtable td.num,table.dtable th.num{text-align:right;font-variant-numeric:tabular-nums}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;background:var(--bg);font-weight:700;font-size:12px;color:var(--muted)}
+.rank.r1{background:var(--navy);color:#fff}.rank.r2{background:#2B3A55;color:#fff}.rank.r3{background:#45536E;color:#fff}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;min-width:110px}
+.bar i{display:block;height:100%;background:var(--teal);border-radius:99px;transition:width .6s ease}
+.alert{border:1px solid var(--line);border-left:5px solid var(--red);border-radius:12px;padding:18px 20px;margin-bottom:14px;background:#fff;animation:fadeUp .4s ease;transition:box-shadow .15s}
+.alert:hover{box-shadow:var(--shadow)}
+.alert.amber{border-left-color:var(--amber)}
+.alert .a-head{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.alert .tag{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:5px 11px;border-radius:999px;color:#fff;background:var(--red)}
+.alert.amber .tag{background:var(--amber)}
+.alert .a-head h4{font-size:15.5px;font-weight:700}
+.alert p{font-size:13.8px;color:var(--muted);line-height:1.65;margin-bottom:10px}
+.alert .action{display:flex;gap:9px;font-size:13.5px;background:#F0FDFB;border:1px solid #CCFBF1;border-radius:9px;padding:11px 14px;color:#0B3B36}
+.alert .action strong{flex-shrink:0}
+.good-banner{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:20px 22px;margin-bottom:18px;font-size:14px;color:#065F46;line-height:1.6;animation:fadeUp .4s ease}
+.good-banner strong{display:block;font-size:15px;margin-bottom:4px}
+.file-row{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin-bottom:12px;background:#fff;transition:box-shadow .15s,border-color .15s;animation:fadeUp .35s ease}
+.file-row:hover{box-shadow:var(--shadow)}
+.file-row.current{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.file-row .fic{width:44px;height:44px;border-radius:11px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.file-row .fic svg{width:22px;height:22px}
+.file-row .fmeta{flex:1;min-width:0}
+.file-row .fmeta .fname{font-weight:700;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-row .fmeta .fdet{font-size:12.5px;color:var(--muted);margin-top:3px}
+.file-row .fbtns{display:flex;gap:8px;flex-shrink:0}
+.sbtn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 15px;font-size:13px;font-weight:600;color:var(--ink);transition:background .13s,border-color .13s}
+.sbtn:hover{background:var(--bg);border-color:#CBD5E1}
+.sbtn.primary{background:var(--teal);border-color:var(--teal);color:#04201c;font-weight:700}
+.sbtn.primary:hover{background:var(--teal-dark)}
+.sbtn.danger:hover{border-color:var(--red);color:var(--red);background:#FEF2F2}
+.dash-cta{background:var(--navy);color:#fff;border-radius:var(--radius);padding:34px 32px;margin-top:8px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;animation:fadeUp .4s ease}
+.dash-cta .dc-t{flex:1;min-width:240px}
+.dash-cta h3{font-size:20px;font-weight:800;letter-spacing:-.4px;margin-bottom:8px}
+.dash-cta h3 span{color:var(--teal)}
+.dash-cta p{color:#9AA7BE;font-size:14px;line-height:1.6}
+.empty{text-align:center;padding:70px 20px;color:var(--muted)}
+.empty h3{font-size:18px;color:var(--ink);margin-bottom:10px}
+#loader{position:fixed;inset:0;background:rgba(10,22,40,.82);display:flex;align-items:center;justify-content:center;z-index:100;backdrop-filter:blur(3px)}
+#loader .box{background:#fff;border-radius:16px;padding:40px 52px;text-align:center;max-width:340px}
+.spinner{width:46px;height:46px;border:4px solid var(--line);border-top-color:var(--teal);border-radius:50%;margin:0 auto 18px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:14px 24px;border-radius:11px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:120;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:90vw}
+#toast.show{opacity:1;transform:translateX(-50%)}
+input[type=file]{display:none}
+.footbar{background:var(--card);border-top:1px solid var(--line);padding:20px 30px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.footbar a{color:var(--teal-dark);font-weight:700}
+.footbar .btn{padding:11px 22px;font-size:13.5px}
+@media(max-width:860px){
+  #app{flex-direction:column}
+  .sidebar{width:100%;height:auto;position:static;padding:14px}
+  .sidebar nav{flex-direction:row;overflow-x:auto;padding-bottom:4px}
+  .navbtn{white-space:nowrap}
+  .navbtn.active::before{display:none}
+  .side-cta{display:none}
+  .content{padding:20px 16px}
+  .dash-cta{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= LANDING ================= -->
+<div id="landing">
+  <div class="lnav">
+    <div class="brand">
+      <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0A1628"/><rect x="14" y="36" width="9" height="14" rx="2" fill="#14B8A6"/><rect x="28" y="27" width="9" height="23" rx="2" fill="#14B8A6"/><rect x="42" y="16" width="9" height="34" rx="2" fill="#FFFFFF"/></svg>
+      <div>BizLens<small>NAN Marketing Agency</small></div>
+    </div>
+    <a class="btn btn-teal" href="https://wa.me/923177415702" target="_blank" rel="noopener">Get BizLens — $2,000 <span class="arrow">&rarr;</span></a>
+  </div>
+
+  <div class="hero">
+    <span class="eyebrow">Mini Power BI for every business</span>
+    <h1>Drowning in Excel sheets?<br><span class="hl">Upload one file &rarr; get your entire business dashboard in 10 seconds.</span></h1>
+    <p class="sub">BizLens reads your sales data and instantly shows <strong>revenue trends, top products, best clients</strong> — and the <strong>hidden weaknesses</strong> quietly costing you money.</p>
+
+    <div class="dropwrap">
+      <div id="dropzone" role="button" tabindex="0" aria-label="Upload CSV or Excel file">
+        <svg class="dz-icon" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="1.8"><path d="M12 16V4m0 0l-4 4m4-4l4 4"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
+        <h3>Drag &amp; drop your sales file here</h3>
+        <p>or click to browse your computer</p>
+        <span class="filetypes">CSV &nbsp;&middot;&nbsp; XLSX</span>
+        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+      </div>
+      <div class="sample-row">
+        <button class="btn btn-ghost" id="samplePk">Try Sample Sales Data</button>
+        <button class="btn btn-ghost" id="sampleUs">Try Sample Client Data</button>
+      </div>
+      <p class="sample-note">No signup. No upload to any server. Your file never leaves your browser.</p>
+    </div>
+  </div>
+
+  <div class="pain">
+    <div class="pain-card"><div class="n">THE PAIN</div><h4>Sales data scattered across 40 Excel tabs</h4><p>You know the money is there, but you can't see it. Every report takes a week of manual formulas.</p></div>
+    <div class="pain-card"><div class="n">THE PAIN</div><h4>Dead products eat shelf space for months</h4><p>Items that stopped selling sit unnoticed while cash stays locked in stock.</p></div>
+    <div class="pain-card"><div class="n">THE PAIN</div><h4>Good clients silently walk away</h4><p>A buyer who ordered for years stops — and nobody notices until the revenue hole is obvious.</p></div>
+    <div class="pain-card"><div class="n">THE SOLUTION</div><h4>BizLens finds it all in 10 seconds</h4><p>One upload. KPIs, charts, product rankings, client loyalty — and a Weakness Radar that flags exactly what's leaking money and what to do about it.</p></div>
+  </div>
+
+  <div class="scale">
+    <h2>From <span class="big">1 shop</span> to <span class="big">500 branches</span> — BizLens scales with you.</h2>
+    <p>Whether you're a single store in Lahore or a multi-branch distributor, BizLens reads your data the same way: fast, clear, and honest about where the money is leaking.</p>
+    <a class="btn btn-teal" href="https://wa.me/923177415702" target="_blank" rel="noopener">Get BizLens for YOUR company — $2,000 <span class="arrow">&rarr;</span></a>
+  </div>
+
+  <div class="cta-band">
+    <div class="cta-inner">
+      <h2>Your business data is a goldmine. Start mining it today.</h2>
+      <p>Custom-built BizLens for your company — branded, wired to your data, ready in days.</p>
+      <a class="btn" href="https://wa.me/923177415702" target="_blank" rel="noopener">Order on WhatsApp <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+  <div class="lfoot">
+    Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> &middot; Order your own for <strong>$2,000</strong> at <a href="https://wa.me/923177415702" target="_blank" rel="noopener">wa.me/923177415702</a>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app" class="hidden">
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" style="width:30px;height:30px"><rect width="64" height="64" rx="12" fill="#14B8A6"/><rect x="14" y="36" width="9" height="14" rx="2" fill="#0A1628"/><rect x="28" y="27" width="9" height="23" rx="2" fill="#0A1628"/><rect x="42" y="16" width="9" height="34" rx="2" fill="#FFFFFF"/></svg>
+      <div>BizLens<small>NAN Marketing Agency</small></div>
+    </div>
+    <nav id="nav">
+      <button class="navbtn active" data-tab="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Overview</button>
+      <button class="navbtn" data-tab="products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Products</button>
+      <button class="navbtn" data-tab="clients"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18.5 14.7c2 .7 3.2 2.5 3.7 5.3"/></svg>Clients</button>
+      <button class="navbtn" data-tab="weaknesses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v5M12 18.5v.5"/></svg>Weaknesses<span class="badge hidden" id="weakBadge">0</span></button>
+      <button class="navbtn" data-tab="files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6"/></svg>Files</button>
+    </nav>
+    <div class="side-cta">
+      <h5>Want this for YOUR company?</h5>
+      <p>Branded BizLens, wired to your data. One-time $2,000.</p>
+      <a class="btn btn-teal" href="https://wa.me/923177415702" target="_blank" rel="noopener">Get BizLens &rarr;</a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="file-chip"><span class="dot"></span><span id="chipName">—</span><small id="chipMeta"></small></div>
+      <div class="spacer"></div>
+      <a class="btn btn-dark" href="https://wa.me/923177415702" target="_blank" rel="noopener" style="padding:11px 20px;font-size:13.5px">Get BizLens — $2,000 <span class="arrow">&rarr;</span></a>
+    </div>
+    <div class="content">
+      <div id="pane-overview" class="tabpane"></div>
+      <div id="pane-products" class="tabpane hidden"></div>
+      <div id="pane-clients" class="tabpane hidden"></div>
+      <div id="pane-weaknesses" class="tabpane hidden"></div>
+      <div id="pane-files" class="tabpane hidden"></div>
+      <div class="dash-cta">
+        <div class="dc-t">
+          <h3>This could be <span>YOUR company's</span> dashboard.</h3>
+          <p>Custom BizLens, branded for your business and wired to your own data — from 1 shop to 500 branches. One-time setup: $2,000.</p>
+        </div>
+        <a class="btn btn-teal" href="https://wa.me/923177415702" target="_blank" rel="noopener">Get BizLens for YOUR company — $2,000 <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> &middot; Your file never leaves this browser.</span>
+      <a class="btn btn-teal" href="https://wa.me/923177415702" target="_blank" rel="noopener">Order yours — $2,000 &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div id="loader" class="hidden"><div class="box"><div class="spinner"></div><h3 style="font-size:16px;margin-bottom:6px">Analyzing your data…</h3><p style="font-size:13px;color:var(--muted)">Detecting columns, crunching numbers.</p></div></div>
+<div id="toast"></div>
+
+<script>
+/* ================= BIZLENS ENGINE ================= */
+"use strict";
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const WA = "https://wa.me/923177415702";
+let charts = {};
+let currentFile = null;   // {id,name,rows,uploadedAt,isSample,currency,symbol}
+let analysis = null;
+
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),2600); }
+function destroyCharts(){ Object.values(charts).forEach(c=>{try{c.destroy()}catch(e){}}); charts={}; }
+function fmtMoney(n, sym){ n=Math.round(n||0); return sym+" "+n.toLocaleString("en-US"); }
+function parseNum(v){
+  if(v==null||v==="") return NaN;
+  if(typeof v==="number") return v;
+  let s=String(v).replace(/[^0-9.\-]/g,"");
+  if(!s||s==="-"||s==="." ) return NaN;
+  return parseFloat(s);
+}
+function parseDate(v){
+  if(v==null||v==="") return null;
+  if(v instanceof Date && !isNaN(v)) return v;
+  let s=String(v).trim();
+  let d=new Date(s);
+  if(!isNaN(d)) return d;
+  // dd/mm/yyyy or dd-mm-yyyy
+  let m=s.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/);
+  if(m){ let y=+m[3]; if(y<100)y+=2000; d=new Date(y,+m[2]-1,+m[1]); if(!isNaN(d))return d; }
+  // yyyy-mm
+  m=s.match(/^(\d{4})[\/\-.](\d{1,2})$/);
+  if(m){ d=new Date(+m[1],+m[2]-1,1); if(!isNaN(d))return d; }
+  // "Jan 2025", "January 2025"
+  m=s.match(/^([A-Za-z]{3,9})\s+(\d{4})$/);
+  if(m){ d=new Date(m[1]+" 1, "+m[2]); if(!isNaN(d))return d; }
+  return null;
+}
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function monthKey(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"); }
+function monthLabel(k){ const [y,m]=k.split("-").map(Number); return MONTHS[m-1]+" "+y; }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ---------- Smart column detection ---------- */
+const PATTERNS={
+  date:[/^date$/i,/invoice.?date/i,/order.?date/i,/sale.?date/i,/transaction.?date/i,/\bdate\b/i,/\bday\b/i,/\bmonth\b/i,/\byear\b/i,/period/i,/created/i,/timestamp/i],
+  amount:[/^amount$/i,/total/i,/revenue/i,/\bsales?\b/i,/\bprice\b/i,/\bvalue\b/i,/\bnet\b/i,/\bgross\b/i,/line.?total/i,/\bamt\b/i,/income/i,/turnover/i],
+  product:[/product/i,/\bitem\b/i,/\bsku\b/i,/service/i,/goods/i,/\bmerch/i],
+  client:[/client/i,/customer/i,/\bbuyer\b/i,/company/i,/account/i,/dealer/i,/distributor/i,/retailer/i,/shop\b/i],
+  qty:[/quantity/i,/\bqty\b/i,/\bunits?\b/i,/\bcount\b/i,/pieces/i]
+};
+function detectColumn(headers, kind){
+  const pats=PATTERNS[kind];
+  for(let i=0;i<headers.length;i++){ const h=String(headers[i]||"");
+    for(const p of pats){ if(p.test(h)) return i; } }
+  return -1;
+}
+/* fallback: numeric column with money-ish values */
+function detectAmountFallback(rows, used){
+  const heads=rows[0]?Object.keys(rows[0]):[];
+  let best=-1,bestScore=-1;
+  heads.forEach((h,i)=>{ if(used.includes(i))return;
+    let nums=0,pos=0;
+    for(let r=0;r<Math.min(rows.length,200);r++){ const v=parseNum(rows[r][h]); if(!isNaN(v)){nums++; if(v>0)pos++;} }
+    if(nums>rows.length*0.3 && pos>0){ const s=nums; if(s>bestScore){bestScore=s;best=i;} }
+  });
+  return best;
+}
+function detectDateFallback(rows, used){
+  const heads=rows[0]?Object.keys(rows[0]):[];
+  let best=-1,bestScore=-1;
+  heads.forEach((h,i)=>{ if(used.includes(i))return;
+    let ok=0;
+    for(let r=0;r<Math.min(rows.length,200);r++){ if(parseDate(rows[r][h])) ok++; }
+    if(ok>rows.length*0.4 && ok>bestScore){bestScore=ok;best=i;}
+  });
+  return best;
+}
+function normalizeRows(rawRows){
+  // rawRows: array of objects from Papa/XLSX. Returns {rows:[{d,amt,prod,client,qty}], cols:{...}}
+  if(!rawRows||!rawRows.length) return null;
+  const headers=Object.keys(rawRows[0]);
+  const clean=headers.map(h=>String(h||"").trim()).filter(Boolean);
+  if(!clean.length) return null;
+  const rows=rawRows.filter(r=>Object.values(r).some(v=>v!==null&&v!==""&&v!==undefined));
+  if(!rows.length) return null;
+  const H=Object.keys(rows[0]);
+  let dI=detectColumn(H,"date"), aI=detectColumn(H,"amount"),
+      pI=detectColumn(H,"product"), cI=detectColumn(H,"client"), qI=detectColumn(H,"qty");
+  if(dI<0) dI=detectDateFallback(rows,[aI,pI,cI,qI].filter(i=>i>=0));
+  if(aI<0) aI=detectAmountFallback(rows,[dI,pI,cI,qI].filter(i=>i>=0));
+  if(aI<0) return null; // amount is essential
+  const norm=[];
+  rows.forEach(r=>{
+    const amt=parseNum(r[H[aI]]);
+    if(isNaN(amt)||amt<=0) return;
+    let d=dI>=0?parseDate(r[H[dI]]):null;
+    if(!d) d=new Date(); // rows without dates still count in totals
+    norm.push({ d, amt,
+      prod: pI>=0?String(r[H[pI]]??"").trim():"",
+      client: cI>=0?String(r[H[cI]]??"").trim():"",
+      qty: qI>=0?(()=>{const q=parseNum(r[H[qI]]);return isNaN(q)?1:q;})():1 });
+  });
+  if(!norm.length) return null;
+  return {rows:norm, hasDate:dI>=0, hasProduct:pI>=0, hasClient:cI>=0,
+          colNames:{date:H[dI],amount:H[aI],product:H[pI],client:H[cI]}};
+}
+
+/* ---------- Analysis ---------- */
+function analyze(norm, currency, symbol){
+  const rows=norm.rows.slice().sort((a,b)=>a.d-b.d);
+  const totalRev=rows.reduce((s,r)=>s+r.amt,0);
+  const totalOrders=rows.length;
+  const aov=totalRev/Math.max(totalOrders,1);
+  // monthly
+  const byMonth={};
+  rows.forEach(r=>{ const k=monthKey(r.d); byMonth[k]=(byMonth[k]||0)+r.amt; });
+  const mKeys=Object.keys(byMonth).sort();
+  let topMonth=null,topMonthRev=0;
+  mKeys.forEach(k=>{ if(byMonth[k]>topMonthRev){topMonthRev=byMonth[k];topMonth=k;} });
+  const lastM=mKeys[mKeys.length-1], prevM=mKeys[mKeys.length-2];
+  const momChange=(lastM&&prevM&&byMonth[prevM]>0)?((byMonth[lastM]-byMonth[prevM])/byMonth[prevM]*100):null;
+  // products
+  const prodAgg={};
+  rows.forEach(r=>{ const p=r.prod||"(Unnamed item)"; if(!prodAgg[p])prodAgg[p]={rev:0,units:0,orders:0};
+    prodAgg[p].rev+=r.amt; prodAgg[p].units+=r.qty; prodAgg[p].orders++; });
+  const products=Object.entries(prodAgg).map(([name,v])=>({name,...v})).sort((a,b)=>b.rev-a.rev);
+  // clients
+  const cliAgg={};
+  rows.forEach(r=>{ const c=r.client||"(Unnamed client)"; if(!cliAgg[c])cliAgg[c]={rev:0,orders:0,first:r.d,last:r.d};
+    cliAgg[c].rev+=r.amt; cliAgg[c].orders++;
+    if(r.d<cliAgg[c].first)cliAgg[c].first=r.d; if(r.d>cliAgg[c].last)cliAgg[c].last=r.d; });
+  const clients=Object.entries(cliAgg).map(([name,v])=>({name,...v})).sort((a,b)=>b.rev-a.rev);
+  const topClient=clients[0]||null;
+  // new vs returning
+  let newC=0,retC=0;
+  clients.forEach(c=>{ if(c.orders>1)retC++; else newC++; });
+  // ---- weakness radar ----
+  const alerts=[];
+  // declining months
+  for(let i=1;i<mKeys.length;i++){
+    const prev=byMonth[mKeys[i-1]], cur=byMonth[mKeys[i]];
+    if(prev>0&&(cur-prev)/prev<=-0.12){
+      const drop=Math.round((prev-cur)/prev*100);
+      alerts.push({sev:"red",title:"Sales dropped "+drop+"% in "+monthLabel(mKeys[i]),
+        why:monthLabel(mKeys[i])+" brought in "+fmtMoney(cur,symbol)+" vs "+fmtMoney(prev,symbol)+" in "+monthLabel(mKeys[i-1])+". A double-digit monthly drop usually means demand fell or a competitor took share.",
+        action:"Call your top 5 clients from "+monthLabel(mKeys[i-1])+" this week and ask what changed."});
+    }
+  }
+  // weak products
+  const weakProds=products.filter(p=>p.orders<=1||p.rev<totalRev*0.005);
+  weakProds.slice(0,3).forEach(p=>{
+    alerts.push({sev:"amber",title:"Low traction: \""+p.name+"\"",
+      why:"Only "+p.orders+" order"+(p.orders===1?"":"s")+" ("+fmtMoney(p.rev,symbol)+") — cash tied up in stock that barely moves.",
+      action:"Bundle it with a bestseller or discount it to clear shelf space."});
+  });
+  // churned clients
+  const cutoff=new Date(rows[rows.length-1].d); cutoff.setDate(cutoff.getDate()-60);
+  const churned=clients.filter(c=>c.last<cutoff&&c.orders>=2).slice(0,4);
+  churned.forEach(c=>{
+    const days=Math.round((rows[rows.length-1].d-c.last)/(1000*60*60*24));
+    alerts.push({sev:"red",title:"Client going cold: "+c.name,
+      why:"Ordered "+c.orders+" times ("+fmtMoney(c.rev,symbol)+" lifetime) but nothing in the last "+days+" days. Repeat buyers rarely leave without a reason.",
+      action:"Send a personal win-back message with a loyalty offer within 48 hours."});
+  });
+  // concentration risk
+  if(topClient&&topClient.rev>totalRev*0.35){
+    const pct=Math.round(topClient.rev/totalRev*100);
+    alerts.push({sev:"amber",title:"Revenue concentration: "+topClient.name+" = "+pct+"%",
+      why:"Over a third of revenue depends on one client. If they pause, the business feels it immediately.",
+      action:"Use this client's testimonial to win 3 similar clients this quarter."});
+  }
+  return {rows,totalRev,totalOrders,aov,mKeys,byMonth,topMonth,topMonthRev,momChange,
+    products,clients,topClient,newC,retC,alerts,
+    reds:alerts.filter(a=>a.sev==="red").length, currency, symbol,
+    hasDate:norm.hasDate,hasProduct:norm.hasProduct,hasClient:norm.hasClient};
+}
+
+/* ---------- Sample data generators ---------- */
+function seededRand(seed){ let s=seed; return ()=>{ s=(s*1103515245+12345)&0x7fffffff; return s/0x7fffffff; }; }
+function pick(r,arr){ return arr[Math.floor(r()*arr.length)]; }
+
+function genSamplePK(){
+  const r=seededRand(20261018);
+  const products=[
+    {n:"Basmati Rice 5kg",p:[1450,1650]},{n:"Basmati Rice 10kg",p:[2850,3100]},
+    {n:"Cooking Oil 3L",p:[1650,1850]},{n:"Cooking Oil 5L",p:[2650,2950]},
+    {n:"Sugar 5kg",p:[640,720]},{n:"Wheat Flour 20kg",p:[2350,2600]},
+    {n:"Tea 950g",p:[1850,2100]},{n:"Lentils Mix 2kg",p:[780,900]},
+    {n:"Detergent 2kg",p:[1150,1300]},{n:"Soap Pack of 6",p:[540,660]},
+    {n:"Milk Powder 2.5kg",p:[3950,4300]},{n:"Dates 1kg Box",p:[1250,1450]}
+  ];
+  const clients=["Karim General Store","City Mart DHA","Al-Falah Traders","Green Valley Mart","Madina Superstore","Rashid & Sons","Lahore Cash & Carry","New Punjab Store","Bilal Provision House","Shadman Mart","Gulberg Grocers","Anarkali Wholesale"];
+  const rows=[]; let oid=1001;
+  for(let mi=0;mi<12;mi++){
+    const d=new Date(2025,mi,1);
+    const base=28+Math.round(r()*10)+(mi>=9?6:0)-(mi===5?8:0); // Dec/Jan peak, Jun dip
+    for(let o=0;o<base;o++){
+      const pr=pick(r,products);
+      const qty=1+Math.floor(r()*12);
+      const unit=pr.p[0]+r()*(pr.p[1]-pr.p[0]);
+      const day=1+Math.floor(r()*28);
+      rows.push({
+        "Order ID":"ANT-"+(oid++),
+        "Order Date":d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(day).padStart(2,"0"),
+        "Client Name":pick(r,clients),
+        "Product":pr.n,
+        "Quantity":qty,
+        "Line Total (PKR)":Math.round(qty*unit)
+      });
+    }
+  }
+  return {rows, name:"al-noor-traders-sample.csv", company:"Al-Noor Traders · Lahore", currency:"PKR", symbol:"Rs"};
+}
+function genSampleUS(){
+  const r=seededRand(77031);
+  const products=[
+    {n:"Ergonomic Office Chair",p:[189,249]},{n:"Standing Desk 48in",p:[329,429]},
+    {n:"LED Desk Lamp",p:[39,59]},{n:"Monitor Arm Single",p:[79,109]},
+    {n:"Wireless Keyboard",p:[69,99]},{n:"Laptop Docking Station",p:[149,199]},
+    {n:"Filing Cabinet 4-Drawer",p:[219,289]},{n:"Conference Table 8ft",p:[799,999]},
+    {n:"Desk Organizer Set",p:[29,45]},{n:"Noise-Cancel Headset",p:[129,179]}
+  ];
+  const clients=["Harborview Dental","Cedar & Co. Realty","Northgate Logistics","Bluefin Marketing","Summit Legal Group","Prairie Health Clinic","Liberty Tax Advisors","Maplewood Schools","Ironclad Fitness","Willow Creek Vet"];
+  const rows=[]; let oid=5001;
+  for(let mi=0;mi<12;mi++){
+    const d=new Date(2025,mi,1);
+    const base=20+Math.round(r()*8)+(mi>=8?5:0)-(mi===6?5:0);
+    for(let o=0;o<base;o++){
+      const pr=pick(r,products);
+      const qty=1+Math.floor(r()*6);
+      const unit=pr.p[0]+r()*(pr.p[1]-pr.p[0]);
+      const day=1+Math.floor(r()*28);
+      rows.push({
+        "Order ID":"BLS-"+(oid++),
+        "Order Date":d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(day).padStart(2,"0"),
+        "Client Name":pick(r,clients),
+        "Product":pr.n,
+        "Quantity":qty,
+        "Line Total (USD)":Math.round(qty*unit)
+      });
+    }
+  }
+  return {rows, name:"brightline-supplies-sample.csv", company:"Brightline Supplies · Austin TX", currency:"USD", symbol:"$"};
+}
+
+/* ---------- Rendering ---------- */
+const CHART_DEFAULTS={
+  color:"#64748B", font:{family:"Inter",size:11.5,weight:"600"},
+  grid:{color:"#EDEFF4"}, ticks:{color:"#64748B",font:{family:"Inter",size:11}}
+};
+function setChartDefaults(){
+  if(!window.Chart) return;
+  Chart.defaults.font.family="Inter";
+  Chart.defaults.color="#64748B";
+  Chart.defaults.plugins.tooltip.backgroundColor="#0A1628";
+  Chart.defaults.plugins.tooltip.titleFont={family:"Inter",size:12.5,weight:"700"};
+  Chart.defaults.plugins.tooltip.bodyFont={family:"Inter",size:12};
+  Chart.defaults.plugins.tooltip.padding=12;
+  Chart.defaults.plugins.tooltip.cornerRadius=9;
+  Chart.defaults.plugins.tooltip.displayColors=false;
+  Chart.defaults.animation.duration=900;
+  Chart.defaults.animation.easing="easeOutQuart";
+}
+
+function renderAll(){
+  destroyCharts();
+  if(!analysis) return;
+  const a=analysis, sym=a.symbol;
+  $("#chipName").textContent=currentFile.company||currentFile.name;
+  $("#chipMeta").textContent=a.totalOrders+" rows · "+currentFile.currency;
+  const badge=$("#weakBadge");
+  if(a.reds>0){badge.textContent=a.reds;badge.classList.remove("hidden");}else badge.classList.add("hidden");
+  renderOverview(); renderProducts(); renderClients(); renderWeaknesses(); renderFiles();
+}
+
+/* ----- Overview ----- */
+function renderOverview(){
+  const a=analysis, sym=a.symbol;
+  const momTxt=a.momChange==null?"—":(a.momChange>=0?'<span class="up">▲ '+a.momChange.toFixed(1)+'%</span>':'<span class="down">▼ '+Math.abs(a.momChange).toFixed(1)+'%</span>')+" vs prev month";
+  $("#pane-overview").innerHTML=`
+    <div class="sec-head"><h2>Business Overview</h2><p>${esc(currentFile.company||currentFile.name)} — the full picture, auto-generated from your file.</p></div>
+    <div class="kpis">
+      <div class="kpi"><div class="label">Total Revenue</div><div class="val">${fmtMoney(a.totalRev,sym)}</div><div class="sub">${a.totalOrders} orders analyzed</div></div>
+      <div class="kpi navy"><div class="label">Total Orders</div><div class="val">${a.totalOrders.toLocaleString()}</div><div class="sub">${a.clients.length} unique clients</div></div>
+      <div class="kpi"><div class="label">Avg Order Value</div><div class="val">${fmtMoney(a.aov,sym)}</div><div class="sub">${momTxt}</div></div>
+      <div class="kpi ${a.momChange!=null&&a.momChange<0?"red":""}"><div class="label">Top Month</div><div class="val" style="font-size:23px">${a.topMonth?monthLabel(a.topMonth):"—"}</div><div class="sub">${a.topMonth?fmtMoney(a.topMonthRev,sym)+" revenue":""}</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Revenue by Month</h3><div class="ch-sub">Monthly trend — spot growth and dips at a glance</div><div class="chartbox"><canvas id="chRev"></canvas></div></div>
+      <div class="card"><h3>Client Loyalty</h3><div class="ch-sub">New vs returning clients</div><div class="chartbox sm"><canvas id="chLoyal"></canvas></div></div>
+    </div>`;
+  if(!window.Chart) return;
+  charts.rev=new Chart($("#chRev"),{type:"line",
+    data:{labels:a.mKeys.map(monthLabel),
+      datasets:[{data:a.mKeys.map(k=>a.byMonth[k]),borderColor:"#14B8A6",borderWidth:2.5,tension:.38,
+        fill:true,backgroundColor:"rgba(20,184,166,.10)",pointRadius:4,pointBackgroundColor:"#14B8A6",pointBorderColor:"#fff",pointBorderWidth:2,pointHoverRadius:6}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>" "+fmtMoney(c.parsed.y,sym)}}},
+      scales:{y:{...CHART_DEFAULTS,beginAtZero:true,ticks:{...CHART_DEFAULTS.ticks,callback:v=>sym+" "+(v>=1000?(v/1000)+"k":v)}},x:{grid:{display:false},ticks:CHART_DEFAULTS.ticks}}}});
+  charts.loyal=new Chart($("#chLoyal"),{type:"doughnut",
+    data:{labels:["Returning clients","New clients"],datasets:[{data:[a.retC,a.newC],backgroundColor:["#0A1628","#14B8A6"],borderWidth:3,borderColor:"#fff",hoverOffset:8}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:"64%",
+      plugins:{legend:{position:"bottom",labels:{boxWidth:12,boxHeight:12,borderRadius:6,useBorderRadius:true,padding:16}},
+      tooltip:{callbacks:{label:c=>" "+c.label+": "+c.parsed+" clients"}}}}});
+}
+
+/* ----- Products ----- */
+function renderProducts(){
+  const a=analysis, sym=a.symbol, top=a.products.slice(0,8);
+  const maxRev=top.length?top[0].rev:1;
+  $("#pane-products").innerHTML=`
+    <div class="sec-head"><h2>Product Performance</h2><p>${a.products.length} products ranked by revenue.</p></div>
+    <div class="card"><h3>Top Products by Revenue</h3><div class="ch-sub">Where your money actually comes from</div><div class="chartbox"><canvas id="chProd"></canvas></div></div>
+    <div class="card"><h3>Full Product Table</h3><div class="ch-sub">Units sold and revenue per product</div>
+      <div style="overflow-x:auto"><table class="dtable"><thead><tr><th>#</th><th>Product</th><th class="num">Orders</th><th class="num">Units Sold</th><th class="num">Revenue</th><th style="min-width:150px">Share</th></tr></thead>
+      <tbody>${a.products.map((p,i)=>`<tr><td><span class="rank ${i<3?"r"+(i+1):""}">${i+1}</span></td><td style="font-weight:600">${esc(p.name)}</td><td class="num">${p.orders}</td><td class="num">${p.units.toLocaleString()}</td><td class="num" style="font-weight:700">${fmtMoney(p.rev,sym)}</td><td><div class="bar"><i style="width:${Math.max(2,Math.round(p.rev/maxRev*100))}%"></i></div></td></tr>`).join("")}</tbody></table></div></div>`;
+  if(!window.Chart) return;
+  charts.prod=new Chart($("#chProd"),{type:"bar",
+    data:{labels:top.map(p=>p.name.length>22?p.name.slice(0,22)+"…":p.name),
+      datasets:[{data:top.map(p=>p.rev),backgroundColor:"#14B8A6",hoverBackgroundColor:"#0D9488",borderRadius:7,barThickness:26}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>" "+fmtMoney(c.parsed.x,sym)}}},
+      scales:{x:{...CHART_DEFAULTS,beginAtZero:true,ticks:{...CHART_DEFAULTS.ticks,callback:v=>sym+" "+(v>=1000?Math.round(v/1000)+"k":v)}},y:{grid:{display:false},ticks:CHART_DEFAULTS.ticks}}}});
+}
+
+/* ----- Clients ----- */
+function renderClients(){
+  const a=analysis, sym=a.symbol, top=a.topClient;
+  const maxRev=top?top.rev:1;
+  $("#pane-clients").innerHTML=`
+    <div class="sec-head"><h2>Client Insights</h2><p>Who buys from you — and who buys the most.</p></div>
+    <div class="kpis">
+      <div class="kpi"><div class="label">Biggest Client</div><div class="val" style="font-size:21px">${top?esc(top.name):"—"}</div><div class="sub">${top?fmtMoney(top.rev,sym)+" lifetime · "+top.orders+" orders":""}</div></div>
+      <div class="kpi navy"><div class="label">Total Clients</div><div class="val">${a.clients.length}</div><div class="sub">${a.retC} returning · ${a.newC} one-time</div></div>
+      <div class="kpi"><div class="label">Repeat Rate</div><div class="val">${a.clients.length?Math.round(a.retC/a.clients.length*100):0}%</div><div class="sub">clients who ordered more than once</div></div>
+    </div>
+    <div class="card"><h3>Top Clients by Spend</h3><div class="ch-sub">Your most valuable relationships</div>
+      <div style="overflow-x:auto"><table class="dtable"><thead><tr><th>#</th><th>Client</th><th class="num">Orders</th><th class="num">Total Spend</th><th style="min-width:150px">Share</th><th>Last Order</th></tr></thead>
+      <tbody>${a.clients.slice(0,15).map((c,i)=>`<tr><td><span class="rank ${i<3?"r"+(i+1):""}">${i+1}</span></td><td style="font-weight:600">${esc(c.name)}</td><td class="num">${c.orders}</td><td class="num" style="font-weight:700">${fmtMoney(c.rev,sym)}</td><td><div class="bar"><i style="width:${Math.max(2,Math.round(c.rev/maxRev*100))}%"></i></div></td><td style="color:var(--muted)">${c.last.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</td></tr>`).join("")}</tbody></table></div></div>`;
+}
+
+/* ----- Weaknesses ----- */
+function renderWeaknesses(){
+  const a=analysis;
+  const body=a.alerts.length?
+    a.alerts.map(al=>`<div class="alert ${al.sev}"><div class="a-head"><span class="tag">${al.sev==="red"?"Critical":"Watch"}</span><h4>${esc(al.title)}</h4></div><p>${esc(al.why)}</p><div class="action"><strong>Action:</strong><span>${esc(al.action)}</span></div></div>`).join(""):
+    `<div class="good-banner"><strong>No critical weaknesses detected.</strong>Sales are steady, products are moving, and clients are sticking around. Keep doing what you're doing — and check back after your next data upload.</div>`;
+  $("#pane-weaknesses").innerHTML=`
+    <div class="sec-head"><h2>Weakness Radar</h2><p>Auto-detected gaps that may be costing you money — with one-line fixes.</p></div>${body}`;
+}
+
+/* ----- Files ----- */
+function fileIcon(){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6"/></svg>`;}
+function renderFiles(){
+  const files=getStoredFiles();
+  $("#pane-files").innerHTML=`
+    <div class="sec-head"><h2>File Manager</h2><p>Your uploads are saved in this browser — switch, re-export, or delete.</p></div>
+    ${files.length?files.map(f=>`<div class="file-row ${currentFile&&f.id===currentFile.id?"current":""}">
+      <div class="fic">${fileIcon()}</div>
+      <div class="fmeta"><div class="fname">${esc(f.company||f.name)}</div><div class="fdet">${esc(f.name)} · ${f.rows.length} rows · uploaded ${new Date(f.uploadedAt).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}</div></div>
+      <div class="fbtns">
+        ${currentFile&&f.id===currentFile.id?'<span class="sbtn" style="border:0;color:var(--teal-dark);font-weight:700">Active</span>':`<button class="sbtn primary" data-act="open" data-id="${f.id}">Open</button>`}
+        <button class="sbtn" data-act="dl" data-id="${f.id}">Download</button>
+        <button class="sbtn danger" data-act="del" data-id="${f.id}">Delete</button>
+      </div></div>`).join(""):
+      `<div class="empty"><h3>No saved files yet</h3><p>Upload a file or try a sample dataset to get started.</p></div>`}`;
+  $$("#pane-files [data-act]").forEach(b=>b.addEventListener("click",()=>{
+    const id=b.dataset.id, act=b.dataset.act, f=getStoredFiles().find(x=>x.id===id);
+    if(act==="del"){ deleteFile(id); toast("File deleted."); }
+    else if(act==="dl"&&f){ downloadCSV(f); toast("Download started."); }
+    else if(act==="open"&&f){ loadStoredFile(f); }
+  }));
+}
+function downloadCSV(f){
+  const rows=f.rawRows; if(!rows||!rows.length){toast("Nothing to export.");return;}
+  const csv=Papa.unparse(rows);
+  const blob=new Blob([csv],{type:"text/csv"});
+  const aEl=document.createElement("a"); aEl.href=URL.createObjectURL(blob); aEl.download=f.name; aEl.click();
+  setTimeout(()=>URL.revokeObjectURL(aEl.href),4000);
+}
+
+/* ---------- localStorage file manager ---------- */
+const LS_KEY="bizlens_files_v1", LS_MAX=3*1024*1024; // ~3MB total cap
+function getStoredFiles(){ try{return JSON.parse(localStorage.getItem(LS_KEY)||"[]");}catch(e){return[];} }
+function saveStoredFiles(files){
+  let arr=files;
+  // enforce size cap: drop oldest rawRows if needed
+  let json=JSON.stringify(arr);
+  while(json.length>LS_MAX&&arr.length>1){ arr=arr.slice(1); json=JSON.stringify(arr); }
+  try{ localStorage.setItem(LS_KEY,json); }catch(e){ toast("Storage full — older files were dropped."); }
+}
+function persistCurrentFile(){
+  if(!currentFile||!currentFile.rawRows) return;
+  let files=getStoredFiles().filter(f=>f.id!==currentFile.id);
+  files.unshift({id:currentFile.id,name:currentFile.name,company:currentFile.company,
+    currency:currentFile.currency,symbol:currentFile.symbol,uploadedAt:currentFile.uploadedAt,rawRows:currentFile.rawRows});
+  saveStoredFiles(files);
+}
+function deleteFile(id){
+  saveStoredFiles(getStoredFiles().filter(f=>f.id!==id));
+  if(currentFile&&currentFile.id===id){ /* keep dashboard visible */ }
+  renderFiles();
+}
+function loadStoredFile(f){
+  const norm=normalizeRows(f.rawRows);
+  if(!norm){toast("Could not read that file.");return;}
+  currentFile={id:f.id,name:f.name,company:f.company,currency:f.currency,symbol:f.symbol,uploadedAt:f.uploadedAt,rawRows:f.rawRows};
+  analysis=analyze(norm,currentFile.currency,currentFile.symbol);
+  showApp(); renderAll(); switchTab("overview");
+  toast("Dashboard loaded: "+(f.company||f.name));
+}
+function newId(){ return "f"+Date.now().toString(36)+Math.random().toString(36).slice(2,8); }
+
+/* ---------- Ingestion ---------- */
+function ingestRaw(rawRows, meta){
+  $("#loader").classList.remove("hidden");
+  setTimeout(()=>{
+    try{
+      const norm=normalizeRows(rawRows);
+      if(!norm){ $("#loader").classList.add("hidden"); toast("Could not find a sales-amount column in that file. Try a file with order totals."); return; }
+      currentFile={id:newId(),name:meta.name,company:meta.company||meta.name,
+        currency:meta.currency||"PKR",symbol:meta.symbol||"Rs",
+        uploadedAt:Date.now(),rawRows:rawRows.slice(0,20000)};
+      analysis=analyze(norm,currentFile.currency,currentFile.symbol);
+      persistCurrentFile();
+      $("#loader").classList.add("hidden");
+      showApp(); renderAll(); switchTab("overview");
+      toast("Dashboard ready — "+analysis.totalOrders+" rows analyzed.");
+    }catch(err){ $("#loader").classList.add("hidden"); toast("Something went wrong reading that file."); }
+  },450);
+}
+function handleFile(file){
+  const ext=file.name.split(".").pop().toLowerCase();
+  if(ext==="csv"){
+    Papa.parse(file,{header:true,skipEmptyLines:true,dynamicTyping:true,
+      complete:res=>ingestRaw(res.data,{name:file.name}),
+      error:()=>toast("Could not parse that CSV.")});
+  }else if(ext==="xlsx"||ext==="xls"){
+    const reader=new FileReader();
+    reader.onload=e=>{
+      try{
+        const wb=XLSX.read(e.target.result,{type:"array"});
+        const ws=wb.Sheets[wb.SheetNames[0]];
+        const data=XLSX.utils.sheet_to_json(ws,{defval:""});
+        ingestRaw(data,{name:file.name});
+      }catch(err){toast("Could not read that Excel file.");}
+    };
+    reader.readAsArrayBuffer(file);
+  }else{ toast("Please upload a CSV or Excel (.xlsx) file."); }
+}
+
+/* ---------- View switching ---------- */
+function showApp(){ $("#landing").classList.add("hidden"); $("#app").classList.remove("hidden"); window.scrollTo(0,0); }
+function switchTab(name){
+  $$(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.tab===name));
+  ["overview","products","clients","weaknesses","files"].forEach(t=>$("#pane-"+t).classList.toggle("hidden",t!==name));
+  if(name==="files") renderFiles();
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("DOMContentLoaded",()=>{
+  setChartDefaults();
+  const dz=$("#dropzone"), fi=$("#fileInput");
+  dz.addEventListener("click",()=>fi.click());
+  dz.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();fi.click();}});
+  fi.addEventListener("change",()=>{ if(fi.files[0]) handleFile(fi.files[0]); fi.value=""; });
+  ["dragenter","dragover"].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add("drag");}));
+  ["dragleave","drop"].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove("drag");}));
+  dz.addEventListener("drop",e=>{ const f=e.dataTransfer.files[0]; if(f) handleFile(f); });
+  $("#samplePk").addEventListener("click",e=>{e.stopPropagation();const s=genSamplePK();ingestRaw(s.rows,{name:s.name,company:s.company,currency:s.currency,symbol:s.symbol});});
+  $("#sampleUs").addEventListener("click",e=>{e.stopPropagation();const s=genSampleUS();ingestRaw(s.rows,{name:s.name,company:s.company,currency:s.currency,symbol:s.symbol});});
+  $$(".navbtn").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
+});
+</script>
+</body>
+</html>
