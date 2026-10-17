@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETI Calculator South Africa 2026 — Employment Tax Incentive Per Employee</title>
+<meta name="description" content="Free ETI calculator for South African employers: estimate your Employment Tax Incentive claim per qualifying young employee under SARS's April 2025 tables — first 12 months, second 12 months, and part-time pro-rata.">
+<link rel="canonical" href="https://nan-za-eti-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>ETI Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Employment Tax Incentive (ETI) Calculator South Africa 2026</h1>
+<p class="lede">Work out how much ETI your business can claim each month for every qualifying young employee — using the official SARS calculation tables in force since 1 April 2025.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Monthly ETI Claim</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="rem">Employee's monthly remuneration (R)</label>
+<input type="number" id="rem" value="6000" min="0" step="100">
+<span class="hint">Gross monthly pay. ETI phases out completely at R7,500.</span></div>
+<div class="field"><label for="period">Incentive period for this employee</label>
+<select id="period">
+<option value="first">First 12 qualifying months (higher rate)</option>
+<option value="second">Next 12 qualifying months (half rate)</option>
+</select>
+<span class="hint">ETI lasts a maximum of 24 qualifying months per employee.</span></div>
+<div class="field"><label for="hours">Hours employed &amp; paid this month</label>
+<input type="number" id="hours" value="160" min="0" max="400">
+<span class="hint">Below 160 hours the incentive is reduced pro-rata (hours ÷ 160).</span></div>
+<div class="field"><label for="staff">Number of qualifying employees</label>
+<input type="number" id="staff" value="1" min="1" max="1000">
+<span class="hint">Estimate the total claim across your qualifying youth hires.</span></div>
+<button class="btn" onclick="calcETI()">Calculate ETI</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'R'+Math.round(n).toLocaleString('en-US');}
+function baseETI(rem,period){
+  if(rem<=0) return 0;
+  if(rem>=7500) return 0;
+  let v=0;
+  if(rem<2500){ v = 0.60*rem; if(period==='second') v = 0.30*rem; }
+  else if(rem<5500){ v = 1500; if(period==='second') v = 750; }
+  else { v = 1500 - 0.75*(rem-5500); if(period==='second') v = 750 - 0.375*(rem-5500); }
+  return Math.max(0,v);
+}
+function calcETI(){
+  const rem=parseFloat(document.getElementById('rem').value)||0;
+  const period=document.getElementById('period').value;
+  const hours=parseFloat(document.getElementById('hours').value)||0;
+  const staff=Math.max(1,parseInt(document.getElementById('staff').value)||1);
+  const r=document.getElementById('result');r.style.display='block';
+  if(rem<=0){r.innerHTML='<p>Please enter the employee\'s monthly remuneration.</p>';return;}
+  const full=baseETI(rem,period);
+  const ratio = hours>=160 ? 1 : Math.max(0,hours/160);
+  const perEmp=full*ratio;
+  const total=perEmp*staff;
+  let msg='';
+  if(rem>=7500){msg='<div class="warn" style="margin:.8rem 0"><strong>No ETI:</strong> monthly remuneration of R7,500 or more falls outside the incentive brackets.</div>';}
+  else if(hours<160){msg='<p class="hint">Part-time adjustment applied: worked '+hours+' of 160 hours, so the incentive is reduced to '+Math.round(ratio*100)+'%.</p>';}
+  r.innerHTML='<div class="big">'+fmt(perEmp)+'<small>estimated ETI per employee per month</small></div>'
+  +'<table>'
+  +'<tr><td>Remuneration bracket</td><td>'+(rem<2500?'R0 – R2,499 (percentage bracket)':rem<5500?'R2,500 – R5,499 (fixed R1,500 / R750)':rem<7500?'R5,500 – R7,499 (taper formula)':'R7,500+ (no ETI)')+'</td></tr>'
+  +'<tr><td>Incentive period</td><td>'+(period==='first'?'First 12 qualifying months':'Second 12 qualifying months')+'</td></tr>'
+  +'<tr><td>Full-rate amount</td><td>'+fmt(full)+'</td></tr>'
+  +'<tr><td>After part-time adjustment</td><td>'+fmt(perEmp)+'</td></tr>'
+  +'<tr><td>Total for '+staff+' employee'+(staff>1?'s':'')+'</td><td>'+fmt(total)+' / month</td></tr>'
+  +'<tr><td>Estimated annual total</td><td>'+fmt(total*12)+' / year</td></tr>'
+  +'</table>'+msg
+  +'<p class="hint">Claimed monthly against your PAYE liability on the EMP201 return — any unused portion rolls over or can be reimbursed by SARS.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How the ETI Is Calculated (SARS Tables from 1 April 2025)</h2>
+<p>The incentive amount depends on the employee's <strong>monthly remuneration</strong> and whether they are in their <strong>first or second 12-month</strong> qualifying period:</p>
+<table>
+<tr><td>Monthly remuneration</td><td><strong>First 12 months</strong></td><td><strong>Next 12 months</strong></td></tr>
+<tr><td>R0 – R2,499</td><td>60% of remuneration</td><td>30% of remuneration</td></tr>
+<tr><td>R2,500 – R5,499</td><td>R1,500</td><td>R750</td></tr>
+<tr><td>R5,500 – R7,499</td><td>R1,500 − [0.75 × (rem − R5,500)]</td><td>R750 − [0.375 × (rem − R5,500)]</td></tr>
+<tr><td>R7,500 and above</td><td colspan="2">No ETI</td></tr>
+</table>
+<h3>Worked Example</h3>
+<p>An employee earns <strong>R6,000 a month</strong> in their first year: ETI = R1,500 − [0.75 × (6,000 − 5,500)] = R1,500 − R375 = <strong>R1,125 per month</strong>. In year two the same employee gives R750 − [0.375 × 500] = <strong>R562.50 per month</strong>.</p>
+<h2>Who Qualifies? The ETI Eligibility Checklist</h2>
+<div class="note"><strong>Employee must:</strong> be 18–29 years old (age rule falls away inside designated special economic zones), hold a valid South African ID, asylum seeker permit or refugee ID, <strong>not</strong> be a domestic worker, <strong>not</strong> be a person connected to the employer, and have been employed on or after 1 October 2013. The wage must meet the applicable minimum wage — if no minimum wage applies, the employee must earn at least R2,000 (for 160 hours worked) and less than R7,500 a month.<br><br><strong>Employer must:</strong> be registered for PAYE, be tax compliant, and not be a national/provincial/local government body or public entity. The incentive may not be used to displace existing employees.</div>
+<h2>Part-Time Workers (Under 160 Hours)</h2>
+<p>If the qualifying employee is employed and paid for fewer than 160 hours in a month, the ETI is reduced in the same ratio — hours worked ÷ 160. A worker paid for 120 hours attracts 75% of the full amount.</p>
+<h2>How the Claim Works</h2>
+<p>ETI is claimed on your monthly <strong>EMP201</strong> return to SARS and set off against the PAYE you owe for that month. If the ETI is bigger than your PAYE liability, the balance is carried forward to the next month (or can be reimbursed). The incentive runs for a <strong>maximum of 24 qualifying months</strong> per employee — only months in which the employee actually qualified count toward the two 12-month periods.</p>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>What is the Employment Tax Incentive?</summary><p>ETI is a SARS incentive that lets eligible employers reduce their monthly PAYE bill when they hire qualifying young employees (18–29). It was introduced in 2014 to encourage youth employment and the current calculation tables took effect on 1 April 2025.</p></details>
+<details><summary>What is the maximum ETI per employee?</summary><p><strong>R1,500 per month</strong> in the first 12 qualifying months (for pay of R2,500–R5,499), dropping to <strong>R750 per month</strong> in the second 12 months. Low earners get a percentage instead: 60% then 30% of their wage.</p></details>
+<details><summary>Can I claim ETI for a domestic worker?</summary><p>No. Domestic workers are expressly excluded from ETI, as are persons connected to the employer.</p></details>
+<details><summary>Do public-sector employers qualify?</summary><p>No. National, provincial and local government authorities and public entities cannot claim ETI.</p></details>
+<details><summary>What happens to unused ETI?</summary><p>If your ETI claim exceeds the PAYE payable in a month, the excess is carried forward to the following month, and SARS can reimburse the balance — the incentive is never wasted.</p></details>
+<details><summary>Is ETI still available in 2026?</summary><p>Yes. The incentive continues, with the April 2025 remuneration thresholds (R2,500 / R5,500 / R7,500) still in force. ETI is claimed via your normal monthly EMP201 return.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate using the published SARS ETI calculation tables (effective 1 April 2025). Eligibility depends on your full circumstances — ID validity, wage-regulating measures, minimum-wage tests, SEZ rules and tax-compliance status. It is not tax advice. Confirm your claim with SARS's official ETI guide or a tax practitioner.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN ETI Calculator</h4><p>Free Employment Tax Incentive calculator for South African employers — estimate your monthly ETI claim per qualifying young employee, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-za-coida-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">COIDA Assessment Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-za-eti-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">ETI Calculator South Africa</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
