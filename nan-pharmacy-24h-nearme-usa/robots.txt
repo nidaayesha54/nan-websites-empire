@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-pharmacy-24h-nearme-usa.surge.sh/sitemap.xml
