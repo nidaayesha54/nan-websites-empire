@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-ca-matleave-topup.surge.sh/sitemap.xml
