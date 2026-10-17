@@ -44,18 +44,56 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 .fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
 @media(max-width:720px){.fcols{grid-template-columns:1fr}}
 .copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
 </style>
 </head>
 <body>
 <header class="site-header"><div class="wrap">
 <a class="brand" href="index.html">NAN <span>THR Calculator Indonesia</span></a>
-<nav class="nav"><a href="index.html">Calculator</a></nav>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/thr-indonesia-complete-guide.html">Guide</a></nav>
 </div></header>
 <main><div class="wrap">
-<h1>Indonesia THR Calculator 2026 — Tunjangan Hari Raya Holiday Allowance</h1>
+<section class="hero"><h1>Indonesia THR Calculator 2026 — Tunjangan Hari Raya Holiday Allowance</h1>
 <p class="lede">Estimate your THR (Tunjangan Hari Raya) — the mandatory Indonesian religious holiday allowance. Employees with 12+ months of service get one month's wage; shorter service is paid proportionally.</p>
+<a class="btn hero-cta" href="#calculator">Use the free calculator ↓</a>
+</section>
 
-<div class="panel">
+<div class="panel" id="calculator">
 <h2 style="margin-top:0">Calculate Your THR</h2>
 <div class="calc-grid">
 <div>
@@ -78,6 +116,12 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 <div class="result" id="result" style="display:none"></div>
 </div>
 </div>
+<h2>How It Works</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Enter your wage</h3><p>Type your monthly wage — basic salary plus fixed allowances — and your months of continuous service before the holiday.</p></div><div class="step"><span class="n">2</span><h3>We apply the rule</h3><p>Twelve months or more earns a full month’s wage; shorter service is paid proportionally (months ÷ 12 × wage).</p></div><div class="step"><span class="n">3</span><h3>Get your estimate</h3><p>See your THR with the exact formula applied, ready to check against your payslip.</p></div>
+</div>
+<div class="trust"><span class="tick">✓</span><div><p><strong>Accuracy note.</strong> Based on published summaries of Minister of Manpower Regulation No. 6/2016 and Government Regulation No. 36/2021. Figures are indicative estimates, not legal or financial advice.</p></div></div>
+
 <script>
 function fmt(n){return 'IDR '+Math.round(n).toLocaleString('en-US');}
 document.getElementById('wtype').addEventListener('change',function(){
@@ -104,6 +148,11 @@ function calcTHR(){
   +'<p class="hint">Paid no later than 7 days before the religious holiday, in full, in Indonesian Rupiah.</p>';
 }
 </script>
+<section class="guides-h" id="guides">
+<h2>Guides</h2>
+<div class="guide-card"><div><h3>Indonesia THR 2026: The Complete Guide to the Tunjangan Hari Raya Holiday Allowance</h3><p>Everything about Indonesia's THR holiday allowance: who qualifies, the formula, what counts as one month's wage, payment deadlines, tax and penalties.</p></div>
+<a class="btn" href="articles/thr-indonesia-complete-guide.html">Read the guide</a></div>
+</section>
 <div style="text-align:center;margin:28px 0;">
 <!-- Adsterra Banner 300x250 - Nida's verified key -->
 <script>
