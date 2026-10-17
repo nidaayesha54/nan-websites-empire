@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-id-thr-calculator.surge.sh/sitemap.xml
