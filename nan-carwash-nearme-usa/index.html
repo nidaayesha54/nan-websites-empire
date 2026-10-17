@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Wash Near Me USA — Find Car Washes Near You</title>
+<meta name="description" content="Find a car wash near me in the USA. Search 126 real car wash locations across the USA on an interactive map — touchless, tunnel, self-service washes with directions. Free NAN tool.">
+<meta name="keywords" content="car wash near me, car wash near me USA, find car wash, touchless car wash, self service car wash near me, drive through car wash">
+<link rel="canonical" href="https://nan-carwash-nearme-usa.surge.sh/">
+<meta property="og:title" content="Car Wash Near Me USA — Find Car Washes Near You">
+<meta property="og:description" content="Free interactive map: find a car wash near you in the USA. Real locations, directions included.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-dark:#0d9488;--bg:#f6f9fb;--card:#ffffff;--text:#1e293b;--muted:#64748b}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,var(--navy),#10294d);color:#fff;padding:1rem 1rem .9rem}
+.header-inner{max-width:72rem;margin:0 auto}
+.brand{font-weight:800;font-size:1.25rem;letter-spacing:.02em}
+.brand .t{color:var(--teal)}
+header h1{font-size:1.35rem;margin:.5rem 0 .25rem}
+header p.sub{margin:0;color:#cbd5e1;font-size:.95rem}
+main{max-width:72rem;margin:0 auto;padding:1rem}
+.controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.controls input[type=text]{flex:1 1 220px;padding:.7rem .9rem;border:1px solid #cbd5e1;border-radius:.6rem;font-size:1rem;background:#fff}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.7rem 1.1rem;font-size:1rem;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--teal-dark)}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid #cbd5e1}
+.view-toggle{display:flex;gap:.5rem;margin-bottom:.75rem}
+.view-toggle .btn.active{background:var(--navy)}
+#map{height:70vh;min-height:420px;border-radius:.75rem;overflow:hidden;border:1px solid #e2e8f0;z-index:0}
+#listWrap{display:none}
+.list-item{background:var(--card);border:1px solid #e2e8f0;border-radius:.75rem;padding:.85rem 1rem;margin-bottom:.6rem}
+.list-item h3{margin:0 0 .25rem;font-size:1.02rem}
+.list-item p{margin:.15rem 0;color:var(--muted);font-size:.9rem}
+.list-item .dist{color:var(--teal-dark);font-weight:700;font-size:.85rem}
+.list-item a.dir{display:inline-block;margin-top:.35rem;color:#fff;background:var(--teal);text-decoration:none;padding:.45rem .9rem;border-radius:.5rem;font-size:.9rem;font-weight:600}
+.leaflet-popup-content a.dir{display:inline-block;margin-top:.4rem;background:var(--teal);color:#fff!important;text-decoration:none;padding:.4rem .85rem;border-radius:.45rem;font-weight:600}
+.ad-wrap{background:var(--card);border:1px solid #e2e8f0;border-radius:.75rem;padding:1rem;margin:1.25rem 0;text-align:center}
+.ad-wrap .lbl{font-size:.7rem;color:#94a3b8;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.content{background:var(--card);border:1px solid #e2e8f0;border-radius:.75rem;padding:1.25rem;margin-top:1.25rem}
+.content h2{margin-top:0}
+footer{margin-top:2rem;background:var(--navy);color:#cbd5e1;padding:1.5rem 1rem;font-size:.9rem}
+.footer-inner{max-width:72rem;margin:0 auto}
+footer a{color:#94e6dc}
+#searchResults{position:relative}
+.suggest{background:#fff;border:1px solid #cbd5e1;border-radius:.5rem;position:absolute;top:100%;left:0;right:0;z-index:1000;max-height:240px;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.suggest div{padding:.6rem .9rem;cursor:pointer;font-size:.95rem}
+.suggest div:hover{background:#f1f5f9}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="brand">NAN <span class="t">Maps</span></div>
+<h1>Car Wash Near Me USA</h1>
+<p class="sub">Find a car wash near you — <span id="poiCount">126</span> real locations across the USA. Free, no signup.</p>
+</div>
+</header>
+<main>
+<div class="controls" id="searchResults">
+<input type="text" id="searchBox" placeholder="Enter city, ST (e.g. Austin, TX)" autocomplete="off" aria-label="Search city">
+<div class="suggest" id="suggest" style="display:none"></div>
+<button class="btn" id="searchBtn">Search</button>
+<button class="btn ghost" id="geoBtn">📍 Use my location</button>
+</div>
+<div class="view-toggle">
+<button class="btn active" id="mapTab">🗺 Map view</button>
+<button class="btn" id="listTab">📋 List view</button>
+</div>
+<div id="map" role="application" aria-label="Map of car wash locations"></div>
+<div id="listWrap"></div>
+
+<div class="ad-wrap">
+<div class="lbl">Advertisement</div>
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="content">
+<h2>Find a Car Wash Near You</h2>
+<p>Looking for a <strong>car wash near me</strong>? This free interactive map lists <strong>126 real car wash locations</strong> across the USA — from express tunnel washes in Texas to touchless washes in Florida. Type your city or tap <strong>"Use my location"</strong>, then switch to list view to see car washes sorted by distance. Click any marker for the address and one-tap driving directions.</p>
+<p>Not sure which type to pick? Our <a href="articles/car-wash-guide-usa.html">complete car wash guide (USA)</a> breaks down touchless vs. tunnel vs. self-service washes, typical prices, and tips to protect your paint.</p>
+</section>
+
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#4b5563;text-decoration:none;">AI Stock Photos</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#4b5563;text-decoration:none;">PNG Stock</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Rozana Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+</main>
+<footer>
+<div class="footer-inner">
+<p><strong>NAN Maps</strong> — free interactive map tools. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. This is an independent directory site and is not affiliated with Google Maps.</p>
+<p>Location data sourced from OpenStreetMap/Nominatim. Directions open in Google Maps.</p>
+</div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const POIS=[]; let map, userLat=null, userLon=null;
+const $=id=>document.getElementById(id);
+
+function haversine(a,b,c,d){const R=3958.8,t=x=>x*Math.PI/180;
+const h=Math.sin(t(c-a)/2)**2+Math.cos(t(a))*Math.cos(t(c))*Math.sin(t(d-b)/2)**2;
+return 2*R*Math.asin(Math.sqrt(h));}
+
+function initMap(){
+map=L.map('map').setView([39.8,-98.5],4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+ maxZoom:19, attribution:'© OpenStreetMap contributors'}).addTo(map);
+POIS.forEach(p=>{
+ const m=L.marker([p.lat,p.lon]).addTo(map);
+ m.bindPopup(`<strong>${esc(p.name)}</strong><br>${esc(p.address)}<br>${esc(p.city)}, ${esc(p.state)}<br><a class="dir" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">Get Directions</a>`);
+ p._marker=m;});
+}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function renderList(){
+ const w=$('listWrap');
+ let items=[...POIS];
+ if(userLat!==null) items.forEach(p=>p._dist=haversine(userLat,userLon,p.lat,p.lon));
+ if(userLat!==null) items.sort((a,b)=>a._dist-b._dist);
+ w.innerHTML=items.map(p=>`<div class="list-item"><h3>${esc(p.name)}</h3>
+ <p>${esc(p.address)}</p><p>${esc(p.city)}, ${esc(p.state)}</p>
+ ${p._dist!==undefined?`<p class="dist">${p._dist.toFixed(1)} miles away</p>`:''}
+ <a class="dir" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}">Get Directions</a></div>`).join('');
+}
+
+function setUserLoc(lat,lon,label){
+ userLat=lat;userLon=lon;
+ L.circleMarker([lat,lon],{radius:8,color:'#14B8A6',fillColor:'#14B8A6',fillOpacity:.9})
+  .addTo(map).bindPopup(label||'Your location').openPopup();
+ map.setView([lat,lon],11);
+ renderList();
+}
+
+// debounced Nominatim geocoding for city search
+let debT=null;
+$('searchBox').addEventListener('input',()=>{
+ clearTimeout(debT);
+ const q=$('searchBox').value.trim();
+ const box=$('suggest');
+ if(q.length<3){box.style.display='none';return;}
+ debT=setTimeout(()=>{
+ fetch('https://nominatim.openstreetmap.org/search?format=json&limit=5&countrycodes=us&q='+encodeURIComponent(q),{headers:{'Accept':'application/json'}})
+ .then(r=>r.json()).then(res=>{
+  if(!res.length){box.style.display='none';return;}
+  box.innerHTML=res.map((r,i)=>`<div data-i="${i}">${esc(r.display_name)}</div>`).join('');
+  box.style.display='block';
+  box.querySelectorAll('div').forEach(el=>el.onclick=()=>{
+   const r=res[+el.dataset.i];
+   $('searchBox').value=r.display_name.split(',')[0];
+   box.style.display='none';
+   setUserLoc(parseFloat(r.lat),parseFloat(r.lon),esc(r.display_name.split(',').slice(0,2).join(',')));
+  });
+ }).catch(()=>{});
+ },450);
+});
+$('searchBtn').onclick=()=>{
+ const q=$('searchBox').value.trim(); if(!q)return;
+ fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q='+encodeURIComponent(q),{headers:{'Accept':'application/json'}})
+ .then(r=>r.json()).then(res=>{
+  if(res.length)setUserLoc(parseFloat(res[0].lat),parseFloat(res[0].lon),res[0].display_name.split(',').slice(0,2).join(','));
+ }).catch(()=>{});
+};
+$('geoBtn').onclick=()=>{
+ if(!navigator.geolocation){alert('Geolocation is not supported by your browser.');return;}
+ navigator.geolocation.getCurrentPosition(pos=>setUserLoc(pos.coords.latitude,pos.coords.longitude,'Your location'),
+ ()=>alert('Could not get your location. Please allow location access or use city search.'));
+};
+$('mapTab').onclick=()=>{$('map').style.display='block';$('listWrap').style.display='none';$('mapTab').classList.add('active');$('listTab').classList.remove('active');setTimeout(()=>map.invalidateSize(),50);};
+$('listTab').onclick=()=>{$('listWrap').style.display='block';$('map').style.display='none';$('listTab').classList.add('active');$('mapTab').classList.remove('active');renderList();};
+
+fetch('locations.json').then(r=>r.json()).then(data=>{
+ data.forEach(p=>POIS.push(p));
+ $('poiCount').textContent=POIS.length;
+ initMap();
+ renderList();
+});
+</script>
+</body>
+</html>
