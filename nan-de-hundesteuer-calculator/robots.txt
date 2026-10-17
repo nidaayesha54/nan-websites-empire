@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-de-hundesteuer-calculator.surge.sh/sitemap.xml
