@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-ke-leave-pay-calculator.surge.sh/sitemap.xml
