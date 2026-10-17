@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-eobi-calculator.surge.sh/sitemap.xml
