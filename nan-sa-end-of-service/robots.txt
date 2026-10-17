@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-sa-end-of-service.surge.sh/sitemap.xml
