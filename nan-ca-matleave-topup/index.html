@@ -46,6 +46,35 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 .fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
 @media(max-width:720px){.fcols{grid-template-columns:1fr}}
 .copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
 </style>
 </head>
 <body>
@@ -54,8 +83,12 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 <nav class="nav"><a href="index.html">Calculator</a></nav>
 </div></header>
 <main><div class="wrap">
+<section class="hero">
+<span class="hero-badge">EI 2026 rates · $68,900 max insurable</span>
 <h1>Canada Maternity Leave Top-Up Calculator (2026)</h1>
 <p class="lede">See exactly how much money you'll have on parental leave: your EI benefit, your employer top-up, your total income — and the gap to save for. No sign-up, free.</p>
+<div class="hero-chips"><span>55% / 33% benefit rates</span><span>Standard vs extended</span><span>Free</span></div>
+</section>
 
 <div class="panel">
 <h2 style="margin-top:0">Calculate Your Leave Income</h2>
@@ -145,6 +178,15 @@ atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height'
 <p>A properly structured top-up is <strong>not deducted from your EI benefits</strong> — but the combined EI + top-up cannot exceed <strong>100% of your normal weekly earnings</strong>. Ask your employer: (1) how the top-up is calculated, (2) how many weeks it runs, and (3) whether it's tied to the 55% standard rate (some plans pay less — or nothing — if you choose the extended 33% option). <strong>Get any top-up agreement in writing before your leave begins.</strong></p>
 <h2>Standard vs Extended: Which Pays More?</h2>
 <p>Over the full leave, both options pay a <strong>similar total amount</strong> — the extended option just spreads it over more weeks at a lower weekly rate. Example at a $60,000 salary (birth parent, full claim): standard pays about <strong>$31,115 total (~$2,593/month)</strong>, extended about <strong>$32,131 total (~$1,691/month)</strong> — figures are gross, before tax. Choose standard if you need higher monthly income or your top-up only covers 12 months; choose extended if you have savings to bridge the gap and want more time at home. <strong>Once a payment is made, you cannot switch options.</strong></p>
+<h2>How it works</h2>
+<div class="how">
+<div class="how-step"><span class="n">1</span><h3>Enter weekly earnings</h3><p>Your average insurable weekly earnings.</p></div><div class="how-step"><span class="n">2</span><h3>Pick standard or extended</h3><p>55% for ~12 months or 33% for ~18 months.</p></div><div class="how-step"><span class="n">3</span><h3>See EI + top-up income</h3><p>Your weekly benefit, employer top-up, and total income on leave.</p></div>
+</div>
+<div class="srcnote"><strong>Accuracy note:</strong> EI figures use 2026 parameters: maximum insurable earnings $68,900; maternity/standard parental 55% up to $729/week; extended parental 33% up to $437/week; 600 insurable hours required. Confirm on canada.ca.</div>
+<section class="guides"><h2>Guides</h2>
+<ul>
+<li><a href="articles/canada-maternity-parental-leave-guide-2026.html">Canada Maternity & Parental Leave 2026: Full Guide</a> — EI rates, standard vs extended, top-ups & planning checklist.</li>
+</ul></section>
 <div class="faq">
 <h2>FAQs</h2>
 <details><summary>Do employer top-ups reduce my EI payments?</summary><p>No — a properly registered SUB top-up is not deducted from your EI benefits, as long as EI + top-up together don't exceed 100% of your normal weekly earnings.</p></details>
