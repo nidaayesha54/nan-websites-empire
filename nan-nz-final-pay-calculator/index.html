@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Pay Calculator NZ 2026 — What You're Owed When You Leave a Job</title>
+<meta name="description" content="Free New Zealand final pay calculator: work out your unused annual holidays at the greater of ordinary weekly pay and average weekly earnings, plus the 8% holiday pay component under the Holidays Act 2003.">
+<link rel="canonical" href="https://nan-nz-final-pay-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+th,td{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#cbd5e1;padding:2rem 0;margin-top:2.5rem}
+footer .fcols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:720px){footer .fcols{grid-template-columns:1fr}}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+footer a{color:#cbd5e1}
+.copy{text-align:center;font-size:.85rem;color:#94a3b8;margin-top:1.5rem}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html">NAN <span>Final Pay NZ</span></a><nav class="nav"><a href="index.html">Calculator</a></nav></div></header>
+<main><div class="wrap">
+<h1>Final Pay Calculator NZ 2026</h1>
+<p class="lede">Leaving a job in New Zealand? Your final pay must include any wages owed, unused annual holidays (paid at the <strong>greater of</strong> your ordinary weekly pay and average weekly earnings), and an <strong>8% holiday pay</strong> component on gross earnings since your last leave anniversary — under the Holidays Act 2003. This free calculator works out the figure so you can check it against your final payslip.</p>
+
+<div class="panel">
+<div class="calc-grid">
+<div>
+<div class="field"><label for="service">Length of continuous employment</label>
+<select id="service"><option value="over12">Over 12 months</option><option value="under12">Under 12 months</option></select></div>
+<div class="field"><label for="wages">Wages / salary owed (hours worked since last pay)</label><input type="number" id="wages" value="0" min="0"></div>
+<div class="field"><label for="notice">Notice pay owed (if not worked out)</label><input type="number" id="notice" value="0" min="0"></div>
+<div class="field"><label for="owp">Ordinary weekly pay ($)</label><input type="number" id="owp" value="0" min="0"><p class="hint">Your normal weekly pay for an ordinary week under your employment agreement.</p></div>
+</div>
+<div>
+<div class="field"><label for="gross12">Gross earnings, last 12 months ($)</label><input type="number" id="gross12" value="0" min="0"><p class="hint">Everything earned in the 12 months before your last pay period. Used to work out average weekly earnings.</p></div>
+<div class="field"><label for="unusedWeeks">Unused entitled annual holiday weeks</label><input type="number" id="unusedWeeks" value="0" min="0" step="0.1"><p class="hint">Up to 4 weeks per completed year. Ignored if under 12 months' service.</p></div>
+<div class="field"><label for="grossAnn">Gross earnings since last leave anniversary ($)</label><input type="number" id="grossAnn" value="0" min="0"><p class="hint">For under-12-month employees, this is gross earnings since you started.</p></div>
+<div class="field"><label for="alreadyPaid">Holiday pay already paid in advance / pay-as-you-go ($)</label><input type="number" id="alreadyPaid" value="0" min="0"></div>
+</div>
+</div>
+<button class="btn" onclick="calcFinal()">Calculate my final pay</button>
+<div class="result" id="res" style="display:none"></div>
+</div>
+<script>
+function fmt(n){return '$'+n.toLocaleString('en-NZ',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function v(id){return Math.max(0,parseFloat(document.getElementById(id).value)||0);}
+function calcFinal(){
+  var over12=document.getElementById('service').value==='over12';
+  var wages=v('wages'), notice=v('notice'), owp=v('owp'), gross12=v('gross12');
+  var unusedWeeks=v('unusedWeeks'), grossAnn=v('grossAnn'), alreadyPaid=v('alreadyPaid');
+  var awe=gross12/52;
+  var rate=Math.max(owp,awe);
+  var leavePay=over12?unusedWeeks*rate:0;
+  var eight=Math.max(0,0.08*grossAnn-alreadyPaid);
+  var total=wages+notice+leavePay+eight;
+  var rows='<tr><td>Wages owed</td><td>'+fmt(wages)+'</td></tr>'
+    +'<tr><td>Notice pay</td><td>'+fmt(notice)+'</td></tr>'
+    +'<tr><td>Rate used for leave payout</td><td>'+fmt(rate)+' / week</td></tr>'
+    +'<tr><td>Unused annual holidays ('+unusedWeeks+' wk)</td><td>'+fmt(leavePay)+'</td></tr>'
+    +'<tr><td>8% holiday pay component</td><td>'+fmt(eight)+'</td></tr>';
+  var el=document.getElementById('res');
+  el.style.display='block';
+  el.innerHTML='<div class="big">'+fmt(total)+'<small>Total final pay before tax (gross)</small></div>'
+    +'<table>'+rows+'</table>'
+    +'<p class="hint">Leave rate = the greater of ordinary weekly pay ('+fmt(owp)+') and average weekly earnings ('+fmt(awe)+'). The 8% component = 8% of gross earnings since your last leave anniversary, less any holiday pay already paid in advance or on a pay-as-you-go basis. Everything here is gross — PAYE, ACC, KiwiSaver, student loan and agreed deductions come off this total.</p>';
+}
+</script>
+
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<h2>How final pay works in New Zealand (2026)</h2>
+<p>When your employment ends — resignation, redundancy, dismissal, fixed-term expiry, or retirement — your employer must include these in your final pay:</p>
+<h3>1. Unused entitled annual holidays</h3>
+<p>After 12 months of continuous employment you're entitled to 4 weeks of annual holidays a year. Any you haven't used must be paid as if you took them at the end of your employment, at the <strong>greater of</strong> your ordinary weekly pay and your average weekly earnings (gross earnings over the last 12 months ÷ 52).</p>
+<h3>2. The 8% component</h3>
+<p>On top of that you get <strong>8% of your gross earnings since your last leave anniversary</strong>, less any amount already paid for holidays taken in advance or on a pay-as-you-go basis. If you leave before 12 months you have no week-based entitlement at all — your holiday payment is simply 8% of gross earnings since you started.</p>
+<h3>3. Everything else owed</h3>
+<p>Wages for hours worked since your last pay, notice pay (if you were required to work it and didn't, or vice versa), owed public holidays and alternative holidays, and any lump sums or redundancy compensation in your employment agreement.</p>
+<p>Unused sick leave, bereavement leave and family violence leave are <strong>not</strong> paid out. There is no statutory redundancy payment in New Zealand — any redundancy compensation comes from your employment agreement.</p>
+
+<h2>Worked example</h2>
+<p>An employee with 2 years' service, ordinary weekly pay $1,400, gross earnings in the last 12 months $76,700 (average weekly earnings $1,475), 2 unused weeks of leave, and $24,000 gross earnings since their last anniversary:</p>
+<table><tr><td>Rate used (greater of $1,400 and $1,475)</td><td>$1,475 / week</td></tr><tr><td>Unused holidays: 2 weeks × $1,475</td><td>$2,950</td></tr><tr><td>8% component: 8% × $24,000</td><td>$1,920</td></tr><tr><td><strong>Holiday portion of final pay (gross)</strong></td><td><strong>$4,870</strong></td></tr></table>
+
+<h2 class="faq">Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the 8% everyone talks about?</summary><p>It's the annual holiday payment for the part of your current leave year you worked but haven't yet banked as an entitlement: 8% of gross earnings since your last leave anniversary (or since you started, if under 12 months). It's the component most people forget to check.</p></details>
+<details><summary>Is my final pay taxed?</summary><p>All figures here are gross. Your employer deducts PAYE, ACC, KiwiSaver and student loan as normal. Lump-sum payments like holiday payouts can be taxed at a special lump-sum rate depending on your tax code.</p></details>
+<details><summary>Do I get notice pay in my final pay?</summary><p>If your agreement requires notice and you were paid in lieu of working it (or your employer required you to work it), the amount lands in your final pay. Reasonable notice must be given even if your agreement is silent on length.</p></details>
+<details><summary>Is unused sick leave paid out?</summary><p>No. Unused sick leave, bereavement leave and family violence leave are not paid out when employment ends — only annual holidays (and alternative holidays / public holidays owed).</p></details>
+<details><summary>When must final pay be paid?</summary><p>You and your employer can agree a date (often your last day), but at the latest it must arrive by the next pay day after your employment ends.</p></details>
+<details><summary>Am I owed redundancy pay too?</summary><p>Only if your employment agreement provides it. New Zealand law has no minimum statutory redundancy payment — check your agreement and any negotiated terms.</p></details>
+</div>
+
+<div class="note"><strong>Sources & disclaimer:</strong> Formulas reflect the Holidays Act 2003 as described by Employment New Zealand's final pay guidance (unused holidays at the greater of ordinary weekly pay and average weekly earnings; 8% of gross earnings since the last anniversary, less advance/pay-as-you-go amounts). This calculator gives indicative estimates, not payroll or legal advice. Confirm your figure with your employer, payroll provider, or an employment adviser before relying on it.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Final Pay Calculator NZ</h4><p>Free New Zealand final pay calculator — check your unused annual holidays, the 8% holiday pay component, and your total final pay when leaving a job in 2026.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-nz-kiwisaver-govt-contribution.surge.sh" style="color:#4b5563;text-decoration:none;">NZ KiwiSaver Government Contribution Checker</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-matleave-topup.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Mat Leave Top-Up Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-au-baby-cost-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Australia Baby Cost Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-us-tipped-wage.surge.sh" style="color:#4b5563;text-decoration:none;">US Tipped Wage Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-steuerklasse-finder.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Steuerklasse Finder</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
