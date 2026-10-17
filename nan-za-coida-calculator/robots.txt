@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-za-coida-calculator.surge.sh/sitemap.xml
