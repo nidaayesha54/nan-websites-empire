@@ -41,6 +41,35 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 .fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
 @media(max-width:720px){.fcols{grid-template-columns:1fr}}
 .copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
 </style>
 </head>
 <body>
@@ -49,8 +78,12 @@ footer h4{color:#fff;margin:.2rem 0 .6rem}
 <nav class="nav"><a href="index.html">Finder</a></nav>
 </div></header>
 <main><div class="wrap">
+<section class="hero">
+<span class="hero-badge">§38b EStG · 2026 rules</span>
 <h1>German Tax Class Finder (Steuerklasse) 2026</h1>
 <p class="lede">New in Germany and confused about <strong>Steuerklasse I–VI</strong>? Answer a few quick questions in English and get your likely tax class, what it means for your payslip, and how to change it.</p>
+<div class="hero-chips"><span>All 6 classes</span><span>Plain English</span><span>Free</span></div>
+</section>
 
 <div class="panel" id="quiz"><h2 style="margin-top:0">Find Your Tax Class</h2><div id="qbox"></div></div>
 <div class="result" id="result" style="display:none"></div>
@@ -136,6 +169,15 @@ atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height'
 <li>Your class is visible on your payslip and your annual Lohnsteuer certificate — and stored electronically as <strong>ELStAM</strong>.</li>
 </ul>
 <h2 class="faq" id="faq">Frequently Asked Questions</h2>
+<h2>How it works</h2>
+<div class="how">
+<div class="how-step"><span class="n">1</span><h3>Answer a few questions</h3><p>Marital status, children, second job — that's all we ask.</p></div><div class="how-step"><span class="n">2</span><h3>See your likely class</h3><p>One of the six Steuerklassen, explained in plain English.</p></div><div class="how-step"><span class="n">3</span><h3>Understand the effect</h3><p>Your class changes monthly withholding — not your final annual tax.</p></div>
+</div>
+<div class="srcnote"><strong>Accuracy note:</strong> Class logic follows §38b of the German Income Tax Act (EStG). Your Steuerklasse only changes how much tax is withheld monthly — the annual tax return settles your final liability.</div>
+<section class="guides"><h2>Guides</h2>
+<ul>
+<li><a href="articles/germany-tax-classes-steuerklassen-guide-2026.html">German Tax Classes (Steuerklassen) 2026: Plain-English Guide</a> — All six classes, III/V vs IV/IV & how to change.</li>
+</ul></section>
 <div class="faq">
 <details><summary>Which tax class am I in as a single expat in Germany?</summary><p>Almost certainly tax class I — it is assigned automatically when you register your address and receive your tax ID.</p></details>
 <details><summary>We just got married — which class do we get?</summary><p>The tax office automatically assigns class IV to both partners. If one of you earns much more, consider switching to III/V once a year.</p></details>
