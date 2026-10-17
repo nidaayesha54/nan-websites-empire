@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-my-hrdf-levy-calculator.surge.sh/sitemap.xml
