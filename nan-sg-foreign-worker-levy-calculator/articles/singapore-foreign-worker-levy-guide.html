@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Foreign Worker Levy: Rates, Tiers and S Pass Rules Explained</title>
+<meta name="description" content="Singapore foreign worker levy rates by sector and tier: services, manufacturing, construction, S Pass flat rate, daily-rate formula and dependency ceilings.">
+<link rel="canonical" href="https://nan-sg-foreign-worker-levy-calculator.surge.sh/articles/singapore-foreign-worker-levy-guide.html">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+th{background:#f1f5f9;font-size:.85rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">NAN <span>SG Levy Calculator</span></a>
+<nav class="nav"><a href="../index.html">Calculator</a><a href="#">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> &rsaquo; Guides</p>
+<article class="guide">
+<h1>Singapore Foreign Worker Levy: Rates, Tiers and S Pass Rules Explained</h1>
+<p class="lede">Hiring foreign workers in Singapore means paying a monthly levy on top of salary — and the rate depends on sector, tier and skill level. This guide maps every rate.</p>
+<div class="kv"><strong>Key takeaways:</strong><ul style="margin:.4rem 0 0;padding-left:1.2rem"><li>Monthly levy per worker depends on sector, quota tier, and skill level.</li><li>S Pass levy is a flat S$650/month across all sectors since 1 September 2025.</li><li>The levy is the employer’s cost — deducting it from wages is prohibited.</li></ul></div>
+
+
+<p>Hiring a foreign worker in Singapore costs more than the salary on the offer letter. Every Work Permit and S Pass holder attracts a <strong>monthly foreign worker levy</strong> — paid by the employer, never deducted from the worker's wages — and the rate swings widely by <strong>sector, quota tier, and skill level</strong>. Get the tier wrong in your budgeting and a hire that's profitable on paper quietly isn't.</p>
+<p>This guide maps the levy system: how rates are set, every current rate table, the S Pass flat rate, the daily-rate formula for part months, and the dependency ceilings that cap how many foreign workers you can hire at all.</p>
+<h2>What the Levy Is For</h2>
+<p>The levy is a deliberate pricing mechanism in Singapore's labour policy. By attaching a monthly cost to each foreign hire, the Ministry of Manpower (MOM) creates a financial incentive to hire locally first and reserve foreign hiring for roles where local talent genuinely isn't available. It is <strong>not a tax on the worker</strong> — deducting it from wages is prohibited.</p>
+<h2>Three Factors Set Your Rate</h2>
+<div class="kv"><strong>1. Sector</strong> (services, manufacturing, construction, process, marine shipyard) · <strong>2. Quota tier</strong> — the more of your workforce on Work Permits, the higher the tier · <strong>3. Skill level</strong> — higher-skilled (R1) workers cost less than basic-skilled (R2) in the same tier.</div>
+<h2>Services Sector Rates</h2>
+<table>
+<tr><td><strong>Tier 1:</strong> up to 10% of workforce</td><td>R1: S$300/mo</td><td>R2: S$450/mo</td></tr>
+<tr><td><strong>Tier 2:</strong> 10–25% of workforce</td><td>R1: S$400/mo</td><td>R2: S$600/mo</td></tr>
+<tr><td><strong>Tier 3:</strong> 25–35% of workforce</td><td>R1: S$600/mo</td><td>R2: S$800/mo</td></tr>
+</table>
+<h2>Manufacturing Sector Rates</h2>
+<table>
+<tr><td><strong>Tier 1:</strong> up to 25% of workforce</td><td>R1: S$250/mo</td><td>R2: S$370/mo</td></tr>
+<tr><td><strong>Tier 2:</strong> 25–50% of workforce</td><td>R1: S$350/mo</td><td>R2: S$470/mo</td></tr>
+<tr><td><strong>Tier 3:</strong> 50–60% of workforce</td><td>R1: S$550/mo</td><td>R2: S$650/mo</td></tr>
+</table>
+<h2>Construction, Process and Marine Shipyard</h2>
+<p>These sectors price by <strong>worker source</strong> rather than workforce-percentage tiers:</p>
+<ul>
+<li><strong>Construction:</strong> Malaysia / North Asia / PRC — R1 S$300, R2 S$500; Non-Traditional Sources — R1 S$700, R2 S$900.</li>
+<li><strong>Process:</strong> Malaysia / NAS / PRC — R1 S$200, R2 S$450; NTS — R1 S$300, R2 S$650. (Basic-skilled process rates are scheduled to rise in 2028.)</li>
+<li><strong>Marine shipyard:</strong> R1 S$350, R2 S$500.</li>
+</ul>
+<div style="text-align:center;margin:28px 0;">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>S Pass: One Flat Rate</h2>
+<p>The simple case: since <strong>1 September 2025</strong>, the S Pass levy has been <strong>harmonised at S$650 a month across all sectors and tiers</strong> (previously S$550 at the basic tier). S Pass holders are sub-quota capped at <strong>10% of the workforce in services</strong> and <strong>15%</strong> in construction, manufacturing, marine shipyard and process — and they count toward the overall dependency ceiling. Employment Pass holders pay no levy at all.</p>
+<h2>Foreign Domestic Workers</h2>
+<p>FDWs have their own rates: <strong>S$300/month for the first helper</strong>, <strong>S$450/month for additional helpers</strong>, with a concessionary rate available for eligible households (e.g. families with young children or elderly members).</p>
+<h2>The Daily Rate: Part Months</h2>
+<p>When a worker doesn't complete a full calendar month, you pay a daily rate instead:</p>
+<div class="kv"><strong>Daily rate = (monthly levy × 12) ÷ 365, rounded up to the nearest cent</strong></div>
+<p>Example: a construction worker from Malaysia, higher-skilled (S$300/month) → daily rate S$9.87. Permit issued on the 20th of a 30-day month → 11 days × S$9.87 = <strong>S$108.57</strong>. An S Pass holder's daily rate is S$21.37.</p>
+<h2>Dependency Ratio Ceilings: The Hard Caps</h2>
+<p>Rates only matter within quota. The <strong>dependency ratio ceiling</strong> — the maximum share of your workforce that may be foreign — is <strong>35% in services</strong>, <strong>60% in manufacturing</strong>, <strong>83.3% in construction and process</strong>, and <strong>75% in marine shipyard</strong>. MOM computes quota from your local employees' CPF records as a three-month average, so late or inaccurate declarations shrink your headroom.</p>
+<h2>Worked Example: Budgeting a Team</h2>
+<p>A services company hires <strong>5 basic-skilled Work Permit holders at Tier 2</strong>:</p>
+<ul>
+<li>Levy: 5 × S$600 = <strong>S$3,000/month</strong> — S$36,000 a year on top of salaries.</li>
+<li>Upskilling two of them to higher-skilled (R1): 2 × S$400 + 3 × S$600 = <strong>S$2,600/month</strong> — a S$4,800 annual saving that illustrates why the skills ladder is priced in.</li>
+</ul>
+
+<h2>How Quota Is Actually Computed</h2>
+<p>Your quota isn't a number you declare — MOM computes it from your <strong>local workforce</strong>: citizens and PRs on a contract of service, counted from CPF contribution records as a <strong>three-month average</strong>. Locals earning at least the Local Qualifying Salary (S$1,800) count as full units; those earning S$900–S$1,800 count as half. Practical consequences: a recent local hire doesn't give immediate quota, late CPF declarations shrink your headroom, and EP holders don't count as locals. Check your live headroom in <strong>Work Permit Online</strong> before every application — estimates from calculators don't override the live figure.</p>
+<h2>The Employer's Budgeting Checklist</h2>
+<ul>
+<li><strong>Levy + salary + insurance:</strong> budget the full stack per worker — levy alone is S$3,600–S$9,600 a year at common tiers.</li>
+<li><strong>Tier creep:</strong> each hire raises your dependency ratio, so the <em>marginal</em> levy per worker rises as you approach the ceiling. Model the 5th hire at the tier you'll actually be in, not the tier you're in today.</li>
+<li><strong>Skill upgrades:</strong> moving a worker from basic-skilled to higher-skilled cuts the levy every month — training spend can pay for itself.</li>
+<li><strong>Pass mix:</strong> where the role genuinely needs mid-level skills, compare an S Pass (S$7,800/year levy, quota-capped) against an EP (no levy, no quota, higher salary floor).</li>
+</ul>
+<h2>Staying Audit-Ready</h2>
+<p>MOM audits focus on three things: <strong>correct tier classification</strong> (is your dependency ratio computed right?), <strong>skill-level claims</strong> (does the worker actually hold the certification for higher-skilled rates?), and <strong>wage deductions</strong> (is any levy cost being passed to the worker?). Keep tier calculations, skills certificates, and clean payslips filed monthly — the levy is straightforward to get right and expensive to get wrong.</p>
+
+<h2>Levy at a Glance</h2>
+<div class="kv"><strong>What:</strong> a monthly employer-paid levy on every Work Permit and S Pass holder — never deductible from wages. <strong>Rate drivers:</strong> sector, quota tier (your dependency ratio), and skill level (higher-skilled R1 is cheaper than basic-skilled R2). <strong>S Pass:</strong> flat S$650/month across all sectors since 1 September 2025. <strong>Part months:</strong> daily rate = monthly × 12 ÷ 365, rounded up. <strong>Caps:</strong> dependency ceilings of 35% (services), 60% (manufacturing), 83.3% (construction/process), 75% (marine). <strong>Check:</strong> live quota headroom in Work Permit Online before hiring.</div>
+
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+<details><summary>Can I deduct the levy from my worker's salary?</summary><p>No — the levy is the employer's cost by law. Deducting it from wages is prohibited.</p></details>
+<details><summary>We're at 30% foreign workforce in services. Which tier applies to a new hire?</summary><p>Tier 3 (25–35%) — the tier is set by your current dependency level, so each additional hire near the ceiling costs more per worker.</p></details>
+<details><summary>Does the levy apply to Employment Pass holders?</summary><p>No. EP holders are exempt from both levy and quota — one reason the EP suits higher-paid professional roles.</p></details>
+<details><summary>What happens if we exceed our quota temporarily?</summary><p>In services, employers that temporarily exceed the S Pass sub-quota through attrition are charged the higher Tier 2 levy on the excess — another reason to watch headcount monthly.</p></details>
+<details><summary>Are levy rates changing soon?</summary><p>Process-sector basic-skilled rates are scheduled to increase in 2028, and MOM has signalled services Tier 1 and Tier 2 will merge from 2028. Budget with the current tables and re-check annually.</p></details>
+</div>
+
+<div class="cta-box"><h2>Calculate Your Levy Cost</h2><p>Choose the pass type and sector to see the monthly and daily levy per worker.</p><a class="btn" href="../index.html">Open the free calculator</a></div>
+<div class="note"><strong>Sources &amp; accuracy:</strong> Ministry of Manpower foreign worker levy tables (S Pass harmonised at S$650/month from 1 Sep 2025). Figures and rules change; confirm against the official source before acting. This guide is general information, not legal, tax or financial advice.</div>
+</article>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Singapore Foreign Worker Levy Calculator</h4><p>Free foreign worker levy calculator for Singapore — estimate 2026 MOM levy costs for S Pass, Work Permit and FDW employers, in English.</p></div>
+<div><h4>Tools</h4><p><a href="../index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-sg-baby-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Singapore Baby Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-overtime-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi Overtime Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-professional-tax-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Professional Tax Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-hundesteuer-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Dog Tax Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
