@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Overtime Calculator 2026 — Overtime Pay as per Labour Law</title>
+<meta name="description" content="Free UAE overtime calculator: enter your basic salary plus normal, night and rest-day/holiday hours to estimate overtime pay under Federal Decree-Law No. 33 of 2021. 125% and 150% rates, Ramadan rules, FAQs.">
+<link rel="canonical" href="https://nan-ae-overtime-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>UAE Overtime Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>UAE Overtime Calculator (2026)</h1>
+<p class="lede">Work out exactly how much your employer owes you for extra hours — normal overtime at 125%, night and rest-day/holiday work at 150%, all based on your basic salary under Federal Decree-Law No. 33 of 2021.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Overtime Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="basic">Monthly basic salary (AED)</label>
+<input type="number" id="basic" value="6000" min="0" step="100">
+<span class="hint">Overtime is always based on basic salary — not allowances or bonuses.</span></div>
+<div class="field"><label for="normal">Normal overtime hours (weekday, after 8h)</label>
+<input type="number" id="normal" value="10" min="0" step="0.5">
+<span class="hint">Paid at 125% of your hourly rate.</span></div>
+<div class="field"><label for="night">Night overtime hours (10 PM – 4 AM)</label>
+<input type="number" id="night" value="0" min="0" step="0.5">
+<span class="hint">Paid at 150% of your hourly rate.</span></div>
+<div class="field"><label for="hol">Rest-day / public-holiday hours</label>
+<input type="number" id="hol" value="0" min="0" step="0.5">
+<span class="hint">Paid at 150% of your hourly rate (or a compensatory day off).</span></div>
+<button class="btn" onclick="calcOT()">Calculate Overtime</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'AED '+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+function calcOT(){
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const n=parseFloat(document.getElementById('normal').value)||0;
+  const ni=parseFloat(document.getElementById('night').value)||0;
+  const h=parseFloat(document.getElementById('hol').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(basic<=0||(n<0||ni<0||h<0)){r.innerHTML='<p>Please enter your basic salary and valid hours.</p>';return;}
+  if(n===0&&ni===0&&h===0){r.innerHTML='<p>Enter your overtime hours to see the estimate.</p>';return;}
+  const hourly=basic/30/8;
+  const pN=n*hourly*1.25, pNi=ni*hourly*1.5, pH=h*hourly*1.5;
+  const total=pN+pNi+pH;
+  r.innerHTML='<div class="big">'+fmt(total)+'<small>TOTAL ESTIMATED OVERTIME PAY</small></div>'
+  +'<table><tr><td>Hourly rate (basic ÷ 30 ÷ 8)</td><td>'+fmt(hourly)+'</td></tr>'
+  +'<tr><td>Normal overtime — '+n+'h × 125%</td><td>'+fmt(pN)+'</td></tr>'
+  +'<tr><td>Night overtime — '+ni+'h × 150%</td><td>'+fmt(pNi)+'</td></tr>'
+  +'<tr><td>Rest-day / holiday — '+h+'h × 150%</td><td>'+fmt(pH)+'</td></tr></table>'
+  +'<p class="hint">Rates: normal overtime 125% of the basic hourly rate; night (10 PM–4 AM) and rest-day/public-holiday work 150%. Indicative estimate only — check your payslip and contract.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>UAE Overtime Rules at a Glance</h2>
+<ul>
+<li><strong>Normal working hours:</strong> 8 hours per day / 48 hours per week (reduced to 6 hours daily during Ramadan for all employees).</li>
+<li><strong>Hourly rate:</strong> basic monthly salary ÷ 30 ÷ 8.</li>
+<li><strong>Normal overtime:</strong> basic hourly rate + 25% (125%) for each extra hour.</li>
+<li><strong>Night overtime (10 PM – 4 AM):</strong> basic hourly rate + 50% (150%).</li>
+<li><strong>Rest day / public holiday work:</strong> 150% of the basic rate, or a compensatory day off instead.</li>
+<li><strong>Daily limit:</strong> maximum 2 hours of overtime per day, except to prevent serious loss, damage or accidents.</li>
+<li><strong>3-week cap:</strong> total working hours including overtime must not exceed 144 hours over any 3-week period.</li>
+<li>Meal breaks, prayer breaks, rest periods and commuting time are <strong>not</strong> counted as working hours.</li>
+<li>Some senior managerial and supervisory roles may be exempt — check your contract.</li>
+</ul>
+<div class="note"><strong>Example:</strong> basic salary AED 6,000 → hourly rate = 6,000 ÷ 30 ÷ 8 = AED 25.<br>
+10 hours of normal overtime: 25 × 1.25 × 10 = <strong>AED 312.50</strong><br>
+8 hours of night overtime: 25 × 1.50 × 8 = <strong>AED 300.00</strong></div>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is overtime based on basic salary or total salary?</summary><p>Basic salary only. Your hourly overtime rate is your basic monthly salary divided by 30 days, divided by 8 hours.</p></details>
+<details><summary>How many overtime hours are allowed per day?</summary><p>A maximum of 2 hours per day, unless the extra work is needed to prevent serious loss, damage or an accident.</p></details>
+<details><summary>What are the overtime rates during Ramadan?</summary><p>The rates are the same (125% normal, 150% night/holiday), but the standard workday drops to 6 hours — so hours beyond 6 count as overtime during Ramadan.</p></details>
+<details><summary>Can I choose a day off instead of holiday pay?</summary><p>For work on a rest day or public holiday, the employer may give you a compensatory day off instead of the 150% payment.</p></details>
+<details><summary>Are night-shift workers paid differently?</summary><p>The night overtime rate (10 PM–4 AM at 150%) applies to overtime hours; employees on regular night shifts may have specific exemptions depending on contract and sector.</p></details>
+<details><summary>Can my employer refuse to pay overtime?</summary><p>No — overtime worked under the legal limits must be paid at the statutory rates unless your role is specifically exempt by contract or law.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on Federal Decree-Law No. 33 of 2021 and widely published payroll practice. Actual pay depends on your contract and company policy. For disputes, contact MOHRE. This is not legal advice.</div>
+<p class="hint">Sources: Federal Decree-Law No. 33 of 2021 (working hours & overtime provisions); UAE payroll compliance guides 2025–2026.</p>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN UAE Overtime Calculator</h4><p>Free UAE overtime pay calculator for workers — check your overtime hours, rates and entitlements under the UAE Labour Law.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
