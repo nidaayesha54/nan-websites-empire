@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Password Generator & Strength Checker | NAN</title>
+<meta name="description" content="Free strong password generator (crypto.getRandomValues), live password strength checker with entropy & crack-time, and passphrase maker. 100% private.">
+<link rel="canonical" href="https://nan-passwordtools.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.tab{background:var(--card);border:1px solid var(--line);border-radius:.7rem .7rem 0 0;padding:.8rem 1.3rem;font-weight:700;cursor:pointer;color:var(--mut);border-bottom:0;font-size:1rem}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:0 .9rem .9rem .9rem;padding:1.4rem;margin:0 0 1.4rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.field{margin:.9rem 0}.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field select,.field input[type=text]{padding:.6rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem;background:#fff;width:100%}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:.8rem}
+.btn:hover{filter:brightness(.94)}
+.btn.ghost{background:#e2e8f0;color:var(--navy)}
+.out{width:100%;padding:.9rem 1rem;border:1px solid var(--line);border-radius:.6rem;font-size:1.05rem;font-family:ui-monospace,Menlo,Consolas,monospace;background:#f8fafc;margin-top:.8rem;word-break:break-all}
+.toggles{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:.9rem 0}
+@media(max-width:560px){.toggles{grid-template-columns:1fr}}
+.toggle{display:flex;align-items:center;gap:.6rem;background:#f8fafc;border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;font-size:.95rem;cursor:pointer}
+.toggle input{width:1.1rem;height:1.1rem;accent-color:var(--teal)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.meter{height:.8rem;background:#e2e8f0;border-radius:1rem;overflow:hidden;margin:.8rem 0 .4rem}
+.meter>div{height:100%;width:0;transition:width .25s;background:#ef4444}
+.metaline{font-size:.92rem;color:var(--mut);margin-bottom:.4rem}
+.metaline strong{color:var(--navy)}
+.tips{list-style:none;padding:0;margin:.8rem 0}
+.tips li{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.55rem .9rem;margin:.4rem 0;font-size:.93rem}
+.privacy{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.8rem;padding:1rem 1.2rem;margin:1.6rem 0;font-size:.95rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+section.guides ul{line-height:2}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Password Tools</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/password-generator-strong-password-guide.html" data-i18n="nav_guide">Guide</a><button class="langbtn" id="langToggle" onclick="toggleLang()">اردو</button></nav>
+</div></header>
+<main><div class="wrap">
+<h1 data-i18n="h1">Free Strong Password Generator</h1>
+<p class="lede" data-i18n="lede">Generate unbreakable random passwords, check the strength of your current passwords, and create memorable passphrases — <strong>100% free, no signup.</strong> <strong>Passwords never leave your device:</strong> everything runs locally in your browser.</p>
+
+<div class="tabs">
+<button class="tab active" onclick="showTab('gen',this)" data-i18n="tab1">🔑 Password Generator</button>
+<button class="tab" onclick="showTab('check',this)" data-i18n="tab2">📊 Strength Checker</button>
+<button class="tab" onclick="showTab('pass',this)" data-i18n="tab3">🧩 Passphrase</button>
+</div>
+
+<!-- ============ PASSWORD GENERATOR ============ -->
+<section class="panel" id="tool-gen">
+<h2 style="margin-top:0" data-i18n="g_h">Password Generator</h2>
+<p data-i18n="g_d">Set your options and generate a cryptographically secure password. Every character is drawn with <code>crypto.getRandomValues()</code> — the browser's secure random number generator — <strong>never</strong> the predictable <code>Math.random()</code>.</p>
+<div class="field"><label><span data-i18n="g_len">Password length</span>: <strong id="lenVal">16</strong></label>
+<input type="range" id="pwLen" min="8" max="64" value="16" oninput="updLen()"></div>
+<div class="toggles">
+<label class="toggle"><input type="checkbox" id="cUpper" checked> <span data-i18n="g_upper">Uppercase (A–Z)</span></label>
+<label class="toggle"><input type="checkbox" id="cLower" checked> <span data-i18n="g_lower">Lowercase (a–z)</span></label>
+<label class="toggle"><input type="checkbox" id="cNum" checked> <span data-i18n="g_num">Numbers (0–9)</span></label>
+<label class="toggle"><input type="checkbox" id="cSym" checked> <span data-i18n="g_sym">Symbols (!@#…)</span></label>
+</div>
+<label class="toggle" style="max-width:26rem"><input type="checkbox" id="cAmb"> <span data-i18n="g_amb">Exclude ambiguous characters (I, l, 1, O, 0)</span></label>
+<button class="btn" onclick="genPassword()" data-i18n="g_gen">Generate Password ⚡</button>
+<input class="out" id="pwOut" type="text" readonly data-i18n-ph="g_ph" placeholder="Your password will appear here">
+<div class="metaline"><span data-i18n="g_bits">Entropy</span>: <strong id="genBits">—</strong></div>
+<button class="btn ghost" onclick="copyOut('pwOut',this)" data-i18n="g_copy">📋 Copy</button>
+<div class="note">🔐 <strong data-i18n="g_crypto">Why it matters:</strong> <span data-i18n="g_cryptod">We use crypto.getRandomValues(), the same secure randomness banks and operating systems use. Many other password generator sites use Math.random(), which is predictable and unsafe for real passwords.</span></div>
+</section>
+
+<!-- ============ STRENGTH CHECKER ============ -->
+<section class="panel" id="tool-check" style="display:none">
+<h2 style="margin-top:0" data-i18n="c_h">Password Strength Checker</h2>
+<p data-i18n="c_d">Type a password below — it is analyzed instantly <strong>on your device only</strong>. We estimate its entropy (bits), how long it would take to crack, and give you concrete tips to make it stronger.</p>
+<div class="field"><label data-i18n="c_label">Your password</label>
+<input type="text" id="chkIn" data-i18n-ph="c_ph" placeholder="Type your password to check its strength" oninput="checkPw()"></div>
+<div class="meter"><div id="chkBar"></div></div>
+<div class="metaline"><span data-i18n="c_strength">Strength</span>: <strong id="chkLabel">—</strong> · <span data-i18n="g_bits2">Entropy</span>: <strong id="chkBits">—</strong> · <span data-i18n="c_crack">Estimated crack time</span>: <strong id="chkCrack">—</strong></div>
+<ul class="tips" id="chkTips"></ul>
+</section>
+
+<!-- ============ PASSPHRASE ============ -->
+<section class="panel" id="tool-pass" style="display:none">
+<h2 style="margin-top:0" data-i18n="p_h">Memorable Passphrase Generator</h2>
+<p data-i18n="p_d">Easy to remember, hard to crack: a passphrase of 4–6 random common words has real strength. Picked with the same secure randomness from a built-in wordlist — nothing is sent anywhere.</p>
+<div class="field"><label data-i18n="p_words">Number of words</label>
+<select id="wordCount"><option value="4">4</option><option value="5" selected>5</option><option value="6">6</option></select></div>
+<div class="field"><label data-i18n="p_sep">Word separator</label>
+<select id="sepSel"><option value="-" data-i18n="sep_dash">Dash (-)</option><option value=" " data-i18n="sep_space">Space</option><option value="_" data-i18n="sep_under">Underscore (_)</option><option value="." data-i18n="sep_dot">Dot (.)</option><option value="none" data-i18n="sep_none">None (CapitalizedWords)</option></select></div>
+<button class="btn" onclick="genPassphrase()" data-i18n="p_gen">Generate Passphrase ⚡</button>
+<input class="out" id="ppOut" type="text" readonly data-i18n-ph="p_ph" placeholder="Your passphrase will appear here">
+<div class="metaline"><span data-i18n="g_bits">Entropy</span>: <strong id="ppMeta">—</strong></div>
+<button class="btn ghost" onclick="copyOut('ppOut',this)" data-i18n="g_copy">📋 Copy</button>
+</section>
+
+<div class="privacy">🔒 <strong data-i18n="priv_h">Private by design:</strong> <span data-i18n="priv_d">Passwords are generated and checked entirely on your device. Nothing is uploaded, logged, or stored — close the tab and every trace is gone. That's why you can safely check your real passwords here.</span></div>
+
+<div style="text-align:center;margin:28px 0;">
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="guides"><h2 data-i18n="guides">Guides</h2>
+<ul><li><a href="articles/password-generator-strong-password-guide.html">Strong Password Generator &amp; Strength Checker — Complete Guide</a> — <span data-i18n="guides_d">Entropy explained, settings guide, passphrases vs passwords, and FAQs.</span></li></ul></section>
+
+<div class="faq"><h2 data-i18n="faq">FAQs</h2>
+<details><summary data-i18n="q1">Are the generated passwords truly secure?</summary><p data-i18n="a1">Yes. Passwords are drawn character-by-character using crypto.getRandomValues(), the browser's cryptographically secure random number generator. This is the same entropy source operating systems and banks use — not the predictable Math.random() many sites rely on.</p></details>
+<details><summary data-i18n="q2">Do my passwords leave my device?</summary><p data-i18n="a2">No. All three tools run 100% in your browser. Nothing is uploaded, nothing is logged, nothing is stored. You can even disconnect from the internet after the page loads and the tools keep working.</p></details>
+<details><summary data-i18n="q3">How long should my password be?</summary><p data-i18n="a3">Aim for 16+ characters for important accounts (email, banking, social media) with all character types enabled. A 16-character password from the full set has about 105 bits of entropy — far beyond what brute force can crack. For Wi-Fi or legacy systems limited to shorter lengths, use the maximum allowed with all types on.</p></details>
+<details><summary data-i18n="q4">Is a passphrase better than a random password?</summary><p data-i18n="a4">For passwords you must memorize (like your password manager's master password), yes — a 5-word passphrase is easy to remember and still very strong (~65 bits). For accounts stored in a password manager, a long random password is ideal.</p></details>
+<details><summary data-i18n="q5">Should I change passwords regularly?</summary><p data-i18n="a5">Modern guidance (NIST SP 800-63) says: no, not on a schedule — forced rotation makes people pick weaker passwords. Instead: use a unique strong password per account, enable two-factor authentication (2FA), and change a password immediately if that service reports a breach.</p></details>
+</div>
+
+<h2>اردو میں خلاصہ</h2>
+<div class="note">
+<p><strong>NAN Password Tools</strong> مفت آن لائن ٹولز ہیں: محفوظ پاس ورڈ بنائیں، موجودہ پاس ورڈ کی مضبوطی چیک کریں، اور یاد رکھنے میں آسان پاس فریز بنائیں۔</p>
+<p>🔒 <strong>پرائیویسی:</strong> تمام کام آپ کے براؤزر میں ہوتا ہے — آپ کے پاس ورڈ کبھی کسی سرور پر نہیں بھیجے جاتے، اس لیے آپ بے خوف اپنے اصل پاس ورڈ بھی چیک کر سکتے ہیں۔</p>
+<p>📱 موبائل اور کمپیوٹر دونوں پر کام کرتا ہے — کوئی رجسٹریشن نہیں، کوئی حد نہیں۔</p>
+</div>
+<div class="note"><strong>Disclaimer:</strong> These tools estimate strength mathematically; no password protects against phishing or device malware. Always enable two-factor authentication (2FA) and use a password manager.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Password Tools</h4><p data-i18n="foot">Free online password tools — strong password generator, password strength checker and passphrase maker. Private, fast, no signup.</p></div>
+<div><h4 data-i18n="tools_h">Tools</h4><p><a href="index.html">Password Tools</a><br><a href="articles/password-generator-strong-password-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">NAN Urdu Portal</a> <span style="color:#334155;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Rozana Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-passwordtools.surge.sh" style="color:#94a3b8;text-decoration:none;">Password Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Labour Law Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">EOBI Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-mosques-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Mosques Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-laundromats-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Laundromats Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-carwash-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Car Wash Near Me USA</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+<script>
+/* ---------- tabs ---------- */
+function showTab(id,btn){['gen','check','pass'].forEach(t=>{document.getElementById('tool-'+t).style.display=(t===id?'block':'none')});document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+/* ---------- i18n ---------- */
+const STR={
+ur:{nav_tools:"ٹولز",nav_guide:"رہنمائی",h1:"مفت مضبوط پاس ورڈ جنریٹر",lede:"ناقابلِ شکست بے ترتیب پاس ورڈ بنائیں، اپنے موجودہ پاس ورڈ کی مضبوطی چیک کریں اور یاد رکھنے میں آسان پاس فریز بنائیں — 100% مفت، کوئی رجسٹریشن نہیں۔ پاس ورڈ کبھی آپ کے ڈیوائس سے باہر نہیں جاتے: سب کچھ آپ کے براؤزر میں چلتا ہے۔",tab1:"🔑 پاس ورڈ جنریٹر",tab2:"📊 مضبوطی چیک کریں",tab3:"🧩 پاس فریز",g_h:"پاس ورڈ جنریٹر",g_d:"اختیارات منتخب کریں اور کرپٹوگرافک طور پر محفوظ پاس ورڈ بنائیں۔ ہر حرف crypto.getRandomValues() سے لیا جاتا ہے — براؤزر کا محفوظ بے ترتیب نمبر جنریٹر — غیر متوقع Math.random() کبھی نہیں۔",g_len:"پاس ورڈ کی لمبائی",g_upper:"بڑے حروف (A–Z)",g_lower:"چھوٹے حروف (a–z)",g_num:"اعداد (0–9)",g_sym:"علامات (!@#…)",g_amb:"مشتبہ حروف خارج کریں (I، l، 1، O، 0)",g_gen:"پاس ورڈ بنائیں ⚡",g_ph:"آپ کا پاس ورڈ یہاں نظر آئے گا",g_bits:"اینٹراپی",g_copy:"📋 کاپی کریں",g_copied:"✅ کاپی ہو گیا!",g_crypto:"یہ کیوں اہم ہے:",g_cryptod:"ہم crypto.getRandomValues() استعمال کرتے ہیں — وہی محفوظ بے ترتیبی جو بینک اور آپریٹنگ سسٹم استعمال کرتے ہیں۔ بہت سی دیگر سائٹس Math.random() استعمال کرتی ہیں جو اندازہ لگایا جا سکتا ہے اور اصل پاس ورڈز کے لیے غیر محفوظ ہے۔",g_needset:"کم از کم ایک حرف کی قسم منتخب کریں",c_h:"پاس ورڈ مضبوطی چیکر",c_d:"نیچے پاس ورڈ لکھیں — اس کا تجزیہ فوراً صرف آپ کے ڈیوائس پر ہوتا ہے۔ ہم اس کی اینٹراپی (بٹس)، کریک ہونے کا تخمینہ وقت اور اسے مضبوط بنانے کے ٹپس دیتے ہیں۔",c_label:"آپ کا پاس ورڈ",c_ph:"مضبوطی چیک کرنے کے لیے پاس ورڈ لکھیں",c_strength:"مضبوطی",g_bits2:"اینٹراپی",c_crack:"کریک کا تخمینہ وقت",t_weak:"کمزور",t_fair:"درمیانہ",t_strong:"مضبوط",t_vstrong:"بہت مضبوط",crack_sec:"سیکنڈ سے بھی کم",crack_s:"سیکنڈ",crack_m:"منٹ",crack_h:"گھنٹے",crack_d:"دن",crack_y:"سال",crack_ancient:"کائنات کی عمر سے زیادہ",tip_common:"عام پاس ورڈ سے بچیں: 'password'، '123456'، 'qwerty' جیسے الفاظ سیکنڈوں میں کریک ہو جاتے ہیں۔",tip_repeat:"ایک ہی حرف بار بار (aaa، 111) نہ دہرائیں — یہ اینٹراپی ختم کر دیتا ہے۔",tip_seq:"ترتیب وار حروف (1234، abcd) سے بچیں — یہ اندازہ لگانا آسان ہیں۔",tip_longer:"لمبا کریں: ہر اضافی حرف کریک کا وقت کئی گنا بڑھا دیتا ہے۔ 16+ حروف کا ہدف رکھیں۔",tip_mix:"حروف کی اقسام ملائیں: بڑے + چھوٹے حروف، اعداد اور علامات۔",tip_unique:"ہر اکاؤنٹ کے لیے الگ پاس ورڈ استعمال کریں — ایک لیک سے سب خطرے میں نہ پڑیں۔",tip_2fa:"ٹو-فیکٹر تصدیق (2FA) آن کریں — مضبوط پاس ورڈ سے بھی اہم حفاظتی تہہ۔",p_h:"یاد رکھنے میں آسان پاس فریز جنریٹر",p_d:"یاد رکھنا آسان، کریک کرنا مشکل: 4–6 بے ترتیب عام الفاظ کی پاس فریز واقعی مضبوط ہوتی ہے۔ اسی محفوظ بے ترتیبی سے اندرونی فہرست سے چنی جاتی ہے — کچھ بھی کہیں نہیں بھیجا جاتا۔",p_words:"الفاظ کی تعداد",p_sep:"الفاظ کے درمیان",sep_dash:"ڈیش (-)",sep_space:"خالی جگہ",sep_under:"انڈر اسکور (_)",sep_dot:"نقطہ (.)",sep_none:"کوئی نہیں (بڑے حروف والے الفاظ)",p_gen:"پاس فریز بنائیں ⚡",p_ph:"آپ کی پاس فریز یہاں نظر آئے گی",priv_h:"پرائیویسی:",priv_d:"پاس ورڈ مکمل طور پر آپ کے ڈیوائس پر بنائے اور چیک کیے جاتے ہیں۔ کچھ بھی اپ لوڈ، لاگ یا محفوظ نہیں ہوتا — ٹیب بند کریں اور ہر نشان مٹ جاتا ہے۔ اسی لیے آپ یہاں بے خوف اپنے اصل پاس ورڈ چیک کر سکتے ہیں۔",guides:"رہنمائی",guides_d:"اینٹراپی کی وضاحت، سیٹنگ گائیڈ، پاس فریز بمقابلہ پاس ورڈ، اور سوالات۔",faq:"سوالات",q1:"کیا بنائے گئے پاس ورڈ واقعی محفوظ ہیں؟",a1:"جی ہاں۔ پاس ورڈ حرف بہ حرف crypto.getRandomValues() سے بنتے ہیں — براؤزر کا کرپٹوگرافک محفوظ بے ترتیب نمبر جنریٹر۔ یہ وہی اینٹراپی کا ذریعہ ہے جو آپریٹنگ سسٹم اور بینک استعمال کرتے ہیں — غیر متوقع Math.random() نہیں جس پر بہت سی سائٹس انحصار کرتی ہیں۔",q2:"کیا میرے پاس ورڈ میرے ڈیوائس سے باہر جاتے ہیں؟",a2:"نہیں۔ تینوں ٹولز 100% آپ کے براؤزر میں چلتے ہیں۔ کچھ بھی اپ لوڈ، لاگ یا محفوظ نہیں ہوتا۔ صفحہ لوڈ ہونے کے بعد آپ انٹرنیٹ بھی بند کر دیں تو ٹولز کام کرتے رہیں گے۔",q3:"میرا پاس ورڈ کتنا لمبا ہونا چاہیے؟",a3:"اہم اکاؤنٹس (ای میل، بینکنگ، سوشل میڈیا) کے لیے 16+ حروف کا ہدف رکھیں اور تمام اقسام آن کریں۔ مکمل سیٹ سے 16 حروف کا پاس ورڈ تقریباً 105 بٹس اینٹراپی رکھتا ہے — بروٹ فورس سے کہیں آگے۔",q4:"کیا پاس فریز بے ترتیب پاس ورڈ سے بہتر ہے؟",a4:"ان پاس ورڈز کے لیے جو یاد رکھنے ضروری ہیں (جیسے پاس ورڈ مینیجر کا ماسٹر پاس ورڈ)، جی ہاں — 5 الفاظ کی پاس فریز یاد رکھنا آسان اور پھر بھی بہت مضبوط (~65 بٹس) ہے۔",q5:"کیا مجھے باقاعدگی سے پاس ورڈ بدلنے چاہئیں؟",a5:"جدید رہنمائی (NIST SP 800-63) کہتی ہے: نہیں، شیڈول پر نہیں — زبردستی تبدیلی سے لوگ کمزور پاس ورڈ چنتے ہیں۔ اس کے بجائے: ہر اکاؤنٹ کے لیے منفرد مضبوط پاس ورڈ، 2FA آن، اور لیک کی صورت میں فوری تبدیلی۔",foot:"مفت آن لائن پاس ورڈ ٹولز — مضبوط پاس ورڈ جنریٹر، پاس ورڈ مضبوطی چیکر اور پاس فریز بنانے والا۔ پرائیویٹ، تیز، کوئی رجسٹریشن نہیں۔",tools_h:"ٹولز"},
+en:{nav_tools:"Tools",nav_guide:"Guide",h1:"Free Strong Password Generator",lede:"Generate unbreakable random passwords, check the strength of your current passwords, and create memorable passphrases — 100% free, no signup. Passwords never leave your device: everything runs locally in your browser.",tab1:"🔑 Password Generator",tab2:"📊 Strength Checker",tab3:"🧩 Passphrase",g_h:"Password Generator",g_d:"Set your options and generate a cryptographically secure password. Every character is drawn with crypto.getRandomValues() — the browser's secure random number generator — never the predictable Math.random().",g_len:"Password length",g_upper:"Uppercase (A–Z)",g_lower:"Lowercase (a–z)",g_num:"Numbers (0–9)",g_sym:"Symbols (!@#…)",g_amb:"Exclude ambiguous characters (I, l, 1, O, 0)",g_gen:"Generate Password ⚡",g_ph:"Your password will appear here",g_bits:"Entropy",g_copy:"📋 Copy",g_copied:"✅ Copied!",g_crypto:"Why it matters:",g_cryptod:"We use crypto.getRandomValues(), the same secure randomness banks and operating systems use. Many other password generator sites use Math.random(), which is predictable and unsafe for real passwords.",g_needset:"Please select at least one character type",c_h:"Password Strength Checker",c_d:"Type a password below — it is analyzed instantly on your device only. We estimate its entropy (bits), how long it would take to crack, and give you concrete tips to make it stronger.",c_label:"Your password",c_ph:"Type your password to check its strength",c_strength:"Strength",g_bits2:"Entropy",c_crack:"Estimated crack time",t_weak:"Weak",t_fair:"Fair",t_strong:"Strong",t_vstrong:"Very strong",crack_sec:"less than a second",crack_s:"seconds",crack_m:"minutes",crack_h:"hours",crack_d:"days",crack_y:"years",crack_ancient:"longer than the age of the universe",tip_common:"Avoid common passwords: words like 'password', '123456' and 'qwerty' crack in seconds.",tip_repeat:"Don't repeat characters (aaa, 111) — it destroys entropy.",tip_seq:"Avoid sequences (1234, abcd) — they are trivially guessable.",tip_longer:"Make it longer: every extra character multiplies crack time. Aim for 16+ characters.",tip_mix:"Mix character types: upper + lower case, numbers and symbols.",tip_unique:"Use a unique password for every account — one breach shouldn't endanger all.",tip_2fa:"Turn on two-factor authentication (2FA) — an even more important security layer than a strong password.",p_h:"Memorable Passphrase Generator",p_d:"Easy to remember, hard to crack: a passphrase of 4–6 random common words has real strength. Picked with the same secure randomness from a built-in wordlist — nothing is sent anywhere.",p_words:"Number of words",p_sep:"Word separator",sep_dash:"Dash (-)",sep_space:"Space",sep_under:"Underscore (_)",sep_dot:"Dot (.)",sep_none:"None (CapitalizedWords)",p_gen:"Generate Passphrase ⚡",p_ph:"Your passphrase will appear here",priv_h:"Private by design:",priv_d:"Passwords are generated and checked entirely on your device. Nothing is uploaded, logged, or stored — close the tab and every trace is gone. That's why you can safely check your real passwords here.",guides:"Guides",guides_d:"Entropy explained, settings guide, passphrases vs passwords, and FAQs.",faq:"FAQs",q1:"Are the generated passwords truly secure?",a1:"Yes. Passwords are drawn character-by-character using crypto.getRandomValues(), the browser's cryptographically secure random number generator. This is the same entropy source operating systems and banks use — not the predictable Math.random() many sites rely on.",q2:"Do my passwords leave my device?",a2:"No. All three tools run 100% in your browser. Nothing is uploaded, nothing is logged, nothing is stored. You can even disconnect from the internet after the page loads and the tools keep working.",q3:"How long should my password be?",a3:"Aim for 16+ characters for important accounts (email, banking, social media) with all character types enabled. A 16-character password from the full set has about 105 bits of entropy — far beyond what brute force can crack.",q4:"Is a passphrase better than a random password?",a4:"For passwords you must memorize (like your password manager's master password), yes — a 5-word passphrase is easy to remember and still very strong (~65 bits).",q5:"Should I change passwords regularly?",a5:"Modern guidance (NIST SP 800-63) says: no, not on a schedule — forced rotation makes people pick weaker passwords. Instead: use a unique strong password per account, enable two-factor authentication (2FA), and change a password immediately if that service reports a breach.",foot:"Free online password tools — strong password generator, password strength checker and passphrase maker. Private, fast, no signup.",tools_h:"Tools"}
+};
+let lang='en';
+function t(k){return (STR[lang]&&STR[lang][k])||STR.en[k]||k;}
+function toggleLang(){lang=(lang==='en'?'ur':'en');document.documentElement.lang=lang;document.documentElement.dir=(lang==='ur'?'rtl':'ltr');document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(STR[lang][k])el.innerHTML=STR[lang][k];});document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(STR[lang][k])el.placeholder=STR[lang][k];});document.getElementById('langToggle').textContent=(lang==='en'?'اردو':'English');checkPw();updateGenMeter();}
+/* ---------- secure randomness (rejection sampling, no modulo bias) ---------- */
+function secureInt(max){const a=new Uint32Array(1);const limit=Math.floor(4294967296/max)*max;let x;do{window.crypto.getRandomValues(a);x=a[0];}while(x>=limit);return x%max;}
+/* ---------- password generator ---------- */
+const SETS={upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',lower:'abcdefghijklmnopqrstuvwxyz',num:'0123456789',sym:'!@#$%^&*()-_=+[]{};:,.<>?/~'};
+const AMBIG='Il1O0';
+function updLen(){document.getElementById('lenVal').textContent=document.getElementById('pwLen').value;}
+function buildPool(){
+  const noAmb=document.getElementById('cAmb').checked;
+  const clean=s=>noAmb?s.split('').filter(c=>AMBIG.indexOf(c)<0).join(''):s;
+  const req=[];
+  if(document.getElementById('cUpper').checked){const s=clean(SETS.upper);if(s)req.push(s);}
+  if(document.getElementById('cLower').checked){const s=clean(SETS.lower);if(s)req.push(s);}
+  if(document.getElementById('cNum').checked){const s=clean(SETS.num);if(s)req.push(s);}
+  if(document.getElementById('cSym').checked){const s=clean(SETS.sym);if(s)req.push(s);}
+  return req;
+}
+function genPassword(){
+  const len=parseInt(document.getElementById('pwLen').value,10);
+  const req=buildPool();
+  if(!req.length){alert(t('g_needset'));return;}
+  const pool=req.join('');
+  const chars=[];
+  req.forEach(s=>chars.push(s[secureInt(s.length)])); /* guarantee each selected type appears */
+  for(let i=chars.length;i<len;i++)chars.push(pool[secureInt(pool.length)]);
+  for(let i=chars.length-1;i>0;i--){const j=secureInt(i+1);const tmp=chars[i];chars[i]=chars[j];chars[j]=tmp;}
+  document.getElementById('pwOut').value=chars.join('');
+  updateGenMeter();
+}
+function poolBits(pw){const p=charsetSize(pw);return pw.length*(p>0?Math.log2(p):1);}
+function updateGenMeter(){
+  const pw=document.getElementById('pwOut').value;
+  document.getElementById('genBits').textContent=pw?('~'+Math.round(poolBits(pw))+' bits'):'—';
+}
+/* ---------- strength checker ---------- */
+function charsetSize(pw){
+  let n=0;
+  if(/[a-z]/.test(pw))n+=26;
+  if(/[A-Z]/.test(pw))n+=26;
+  if(/[0-9]/.test(pw))n+=10;
+  if(/[^a-zA-Z0-9]/.test(pw))n+=32;
+  return n;
+}
+const COMMON=['password','123456','123456789','qwerty','letmein','welcome','admin','monkey','dragon','master','login','abc123','111111','iloveyou','princess','football','123123','654321','sunshine','shadow','123abc'];
+function analyze(pw){
+  const tips=[];let bits=0;const pool=charsetSize(pw);
+  if(pw.length>0)bits=pw.length*Math.log2(pool>0?pool:2);
+  const low=pw.toLowerCase();
+  if(COMMON.some(w=>low.indexOf(w)>=0)){bits=Math.min(bits,25);tips.push('tip_common');}
+  if(/(.)\1{2,}/.test(pw)){bits=Math.min(bits,30);tips.push('tip_repeat');}
+  if(/(0123|1234|2345|3456|4567|5678|6789|7890|abcd|bcde|cdef)/.test(low)){bits=Math.min(bits,28);tips.push('tip_seq');}
+  if(pw.length>0&&pw.length<12)tips.push('tip_longer');
+  if(pw.length>0&&(!/[a-z]/.test(pw)||!/[A-Z]/.test(pw)||!/[0-9]/.test(pw)||!/[^a-zA-Z0-9]/.test(pw)))tips.push('tip_mix');
+  if(pw.length>0)tips.push('tip_unique','tip_2fa');
+  const rating=bits<40?'t_weak':bits<60?'t_fair':bits<80?'t_strong':'t_vstrong';
+  const pct=Math.min(100,Math.round(bits/90*100));
+  return{bits:Math.round(bits),rating,pct,tips,crack:crackTime(bits)};
+}
+function crackTime(bits){
+  const guesses=Math.pow(2,Math.max(0,bits))/2; /* average guesses at 10B/sec */
+  const sec=guesses/1e10;
+  if(sec<1)return t('crack_sec');
+  if(sec<60)return Math.round(sec)+' '+t('crack_s');
+  const min=sec/60;
+  if(min<60)return Math.round(min)+' '+t('crack_m');
+  const h=min/60;
+  if(h<48)return Math.round(h)+' '+t('crack_h');
+  const d=h/24;
+  if(d<730)return Math.round(d)+' '+t('crack_d');
+  const y=d/365;
+  if(y<1e10)return fmtNum(y)+' '+t('crack_y');
+  return t('crack_ancient');
+}
+function fmtNum(n){if(n<1000)return Math.round(n).toString();if(n<1e6)return (n/1e3).toFixed(1)+' thousand';if(n<1e9)return (n/1e6).toFixed(1)+' million';return (n/1e9).toFixed(1)+' billion';}
+function checkPw(){
+  const pw=document.getElementById('chkIn').value;
+  const lbl=document.getElementById('chkLabel'),bt=document.getElementById('chkBits'),cr=document.getElementById('chkCrack'),bar=document.getElementById('chkBar'),tl=document.getElementById('chkTips');
+  if(!pw){lbl.textContent='—';bt.textContent='—';cr.textContent='—';bar.style.width='0';tl.innerHTML='';return;}
+  const r=analyze(pw);
+  lbl.textContent=t(r.rating);
+  bt.textContent='~'+r.bits+' bits';
+  cr.textContent=r.crack;
+  bar.style.width=r.pct+'%';
+  bar.style.background=r.rating==='t_weak'?'#ef4444':r.rating==='t_fair'?'#f59e0b':r.rating==='t_strong'?'#22c55e':'#14B8A6';
+  tl.innerHTML='';
+  r.tips.forEach(k=>{const li=document.createElement('li');li.textContent=t(k);tl.appendChild(li);});
+}
+/* ---------- passphrase ---------- */
+const WORDS=['apple','river','mountain','cloud','tiger','eagle','piano','guitar','rocket','planet','star','moon','ocean','forest','desert','island','dragon','wolf','bear','fox','rabbit','horse','zebra','whale','dolphin','beach','storm','thunder','snow','rain','wind','fire','stone','gold','silver','pearl','coral','shell','garden','flower','rose','lily','tree','leaf','branch','root','seed','harvest','farmer','baker','chef','doctor','nurse','teacher','pilot','knight','wizard','pirate','robot','castle','tower','bridge','train','plane','ship','cabin','tent','market','shop','coin','jewel','crown','sword','shield','lantern','candle','mirror','clock','book','pen','paper','map','compass','anchor','bell','key','door','window','chair','table','lamp','pillow','blanket','coffee','tea','honey','bread','cheese','mango','lemon','grape','peach','cherry','melon','kiwi','coconut','banana','orange','shark','drum','snake','spider','bronze','tulip','sailor','tunnel','bike','car','house'];
+function genPassphrase(){
+  const n=parseInt(document.getElementById('wordCount').value,10);
+  const sep=document.getElementById('sepSel').value;
+  const words=[];
+  for(let i=0;i<n;i++)words.push(WORDS[secureInt(WORDS.length)]);
+  const out=sep==='none'?words.map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(''):words.join(sep);
+  document.getElementById('ppOut').value=out;
+  document.getElementById('ppMeta').textContent='~'+Math.round(n*Math.log2(WORDS.length))+' bits';
+}
+/* ---------- copy ---------- */
+function copyOut(id,btn){
+  const el=document.getElementById(id);const v=el.value;if(!v)return;
+  const done=()=>{btn.textContent=t('g_copied');setTimeout(()=>{btn.textContent=t('g_copy');},1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done).catch(()=>{el.select();document.execCommand('copy');done();});}
+  else{el.select();document.execCommand('copy');done();}
+}
+</script>
+</body>
+</html>
