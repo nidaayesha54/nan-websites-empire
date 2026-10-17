@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-ie-learn-to-drive-cost.surge.sh/sitemap.xml
