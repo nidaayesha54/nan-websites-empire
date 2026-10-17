@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendWise — Expense Tracking for Solopreneurs</title>
+<meta name="description" content="SpendWise tracks every rupee, flags budget overruns and preps your tax summary. Demo built by NAN Marketing Agency.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314B8A6'/%3E%3Cpath d='M50 20c-14 0-24 9-24 20 0 14 16 16 24 22 8-6 24-8 24-22 0-11-10-20-24-20z' fill='white' opacity='.95'/%3E%3Ccircle cx='50' cy='72' r='9' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#FAFAF8;--surface:#fff;--ink:#14181D;--muted:#5C6570;--line:#E8E8E2;--teal:#14B8A6;--teal-d:#0C7C70;--teal-soft:#E6F7F4;--navy:#0A1628;--amber:#D97706;--amber-soft:#FEF3E2;--red:#DC2626;--red-soft:#FDECEC;--green:#16A34A;--green-soft:#EAF9EF}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .mark{width:34px;height:34px;border-radius:10px;background:var(--teal);display:grid;place-items:center;color:#fff;font-size:17px}
+nav.links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--muted)}
+nav.links a{color:inherit;text-decoration:none}nav.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-weight:700;font-size:15px;padding:12px 22px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 6px 18px rgba(20,184,166,.28)}
+.btn:hover{background:var(--teal-d);transform:translateY(-1px)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal-d)}
+.hero{padding:84px 0 36px;text-align:center}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-soft);border:1px solid #BCE9E2;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;letter-spacing:-.035em;line-height:1.06;max-width:760px;margin:0 auto 18px}
+.hero h1 .hl{color:var(--teal-d)}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 30px;line-height:1.6}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:54px 0 10px}
+@media(max-width:760px){.duel{grid-template-columns:1fr}}
+.duel .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+.tag{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:block}
+.before .tag{color:var(--red)}.after .tag{color:var(--teal-d)}
+.duel h3{font-size:21px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
+.duel p{font-size:15px;color:var(--muted);line-height:1.65}
+.duel .big{font-size:40px;font-weight:800;letter-spacing:-.03em;margin:14px 0 4px}
+.before .big{color:var(--red)}.after .big{color:var(--teal-d)}
+.demo{margin:70px 0 0}.demo-head{text-align:center;margin-bottom:34px}
+.demo-head h2{font-size:32px;font-weight:800;letter-spacing:-.03em;margin-bottom:10px}
+.demo-head p{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(10,22,40,.07)}
+.panel-top{padding:24px 30px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.panel-top .avatar{width:52px;height:52px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px}
+.panel-top h3{font-size:19px;font-weight:700}.panel-top p{font-size:13px;color:var(--muted)}
+.live-dot{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--teal-d)}
+.live-dot i{width:9px;height:9px;border-radius:50%;background:var(--teal);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.grid2{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.pane{padding:30px}.pane+.pane{border-left:1px solid var(--line)}
+@media(max-width:900px){.pane+.pane{border-left:0;border-top:1px solid var(--line)}}
+.pane h4{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.total{font-size:15px;color:var(--muted);margin-bottom:6px}
+.total b{font-size:38px;color:var(--ink);letter-spacing:-.03em;display:block}
+.chart-wrap{position:relative;height:260px;margin:10px 0 18px}
+.budgets{display:flex;flex-direction:column;gap:12px}
+.budget{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.budget .t{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;margin-bottom:8px}
+.budget .t .over{color:var(--red);font-weight:700}
+.budget .bar{height:8px;border-radius:99px;background:#ECECE6;overflow:hidden}
+.budget .bar i{display:block;height:100%;border-radius:99px;background:var(--teal);transition:width .8s}
+.budget.warn .bar i{background:var(--red)}
+.budget .note{font-size:12px;color:var(--muted);margin-top:7px}
+.budget.warn .note{color:var(--red);font-weight:600}
+form.add{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+form.add .full{grid-column:1/-1}
+.field label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--muted)}
+.field input,.field select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;font:500 14.5px 'Inter';background:#fff}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.15)}
+.xlist{max-height:300px;overflow:auto}
+.x{display:flex;align-items:center;gap:13px;padding:12px 4px;border-bottom:1px dashed var(--line);animation:slideIn .35s}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1}}
+.x .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0;background:var(--teal-soft)}
+.x .nm{font-weight:600;font-size:14px}.x .ct{font-size:12px;color:var(--muted)}
+.x .amt{margin-left:auto;font-weight:700;font-size:15px}
+.x .del{border:0;background:none;color:#B9B9B2;cursor:pointer;font-size:16px;padding:4px}
+.x .del:hover{color:var(--red)}
+.tax{margin-top:22px;background:var(--navy);color:#fff;border-radius:16px;padding:24px}
+.tax h5{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#7EE8DC;margin-bottom:12px}
+.tax ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14.5px}
+.tax li{display:flex;gap:10px;align-items:baseline}
+.tax li b{color:#7EE8DC}
+.tax .sum{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:15px}
+.tax .sum b{font-size:20px;color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:64px 0}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:14px;font-size:17px}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}.step p{font-size:14.5px;color:var(--muted);line-height:1.65}
+.scale{background:var(--navy);color:#fff;border-radius:20px;padding:38px 40px;display:flex;align-items:center;gap:24px;margin:20px 0 70px;flex-wrap:wrap}
+.scale h3{font-size:22px;font-weight:700}.scale p{color:#9AA6B8;font-size:15px;margin-top:6px}.scale .btn{margin-left:auto}
+.cta{background:var(--teal-soft);border:1px solid #BCE9E2;border-radius:24px;padding:64px 40px;text-align:center;margin-bottom:70px}
+.cta h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.03em;margin-bottom:12px}
+.cta p{color:#3F5A56;font-size:17px;max-width:560px;margin:0 auto 28px;line-height:1.6}
+.cta .fine{font-size:13px;color:#5F7A75;margin-top:16px}
+footer{background:var(--navy);color:#9AA6B8;padding:52px 0 34px;font-size:14px}
+.ft{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:30px}
+.ft .brand{color:#fff}.ft h5{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.ft p{line-height:1.7;max-width:340px}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,80px);background:var(--navy);color:#fff;padding:15px 24px;border-radius:14px;font-size:14.5px;font-weight:600;opacity:0;transition:all .35s;z-index:100;display:flex;gap:10px;align-items:center;max-width:90vw}
+#toast.show{transform:translate(-50%,0);opacity:1}
+#toast .tick{width:24px;height:24px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-size:14px;flex-shrink:0}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+<div class="brand"><span class="mark">◍</span> SpendWise</div>
+<nav class="links"><a href="#demo">Live demo</a><a href="#how">How it works</a></nav>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20SpendWise-style%20expense%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Get yours — $2,000</a>
+</div></header>
+
+<div class="wrap">
+<section class="hero">
+<span class="eyebrow">Live demo · Built for solopreneurs & drivers</span>
+<h1>Every rupee tracked. <span class="hl">Tax season becomes a 2-minute job.</span></h1>
+<p class="sub">SpendWise logs expenses in seconds, shows exactly where the money goes, warns you before budgets break — and hands you a clean deductible summary when tax time comes.</p>
+<div class="cta-row">
+<a class="btn" href="#demo">Try the live demo ↓</a>
+<a class="btn ghost" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20SpendWise-style%20expense%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Is this YOUR business? Get yours for $2,000 →</a>
+</div>
+<div class="duel">
+<div class="card before rv"><span class="tag">Before · The painful manual way</span><h3>Bilal Rides — the glovebox method</h3><p>Fuel slips in the glovebox, oil-change receipts in his pocket, "I'll remember the rest." At tax time: a shoebox of faded paper and Rs 60,000+ of deductions he couldn't prove.</p><div class="big">Rs 0 <span style="font-size:18px;color:var(--muted)">claimed</span></div><p style="font-size:13px">deductions lost last year — no records</p></div>
+<div class="card after rv"><span class="tag">After · With SpendWise</span><h3>Same driver — every rupee logged</h3><p>10 seconds per expense, photo of the receipt attached. Monthly budgets warn him before fuel spending runs hot. Tax summary exports in one tap.</p><div class="big">Rs 61,400 <span style="font-size:18px;color:var(--muted)">deductible</span></div><p style="font-size:13px">documented this year — receipts attached</p></div>
+</div>
+</section>
+
+<section class="demo" id="demo">
+<div class="demo-head rv"><h2>Try it — Bilal's actual October</h2><p><b>Bilal Raza, ride-hailing driver, Lahore</b> — add an expense below and watch the chart, budgets and tax summary update live.</p></div>
+<div class="panel rv">
+<div class="panel-top"><div class="avatar">BR</div><div><h3>Bilal Raza · Bilal Rides</h3><p>Ride-hailing driver, Lahore · October 2026 · Rs</p></div><div class="live-dot"><i></i> LIVE DEMO DATA</div></div>
+<div class="grid2">
+<div class="pane">
+<h4>October spending by category</h4>
+<div class="total">Total spent<b id="totalSpent">Rs 0</b></div>
+<div class="chart-wrap"><canvas id="doughnut"></canvas></div>
+<h4 style="margin-top:22px">Budget alerts</h4>
+<div class="budgets" id="budgets"></div>
+</div>
+<div class="pane">
+<h4>Add expense — takes 10 seconds</h4>
+<form class="add" id="expForm">
+<div class="field"><label>Amount (Rs)</label><input id="fAmt" type="number" min="1" placeholder="850" required></div>
+<div class="field"><label>Category</label><select id="fCat"><option>Fuel</option><option>Maintenance</option><option>Food</option><option>Mobile/Data</option><option>Tolls & Parking</option><option>Other</option></select></div>
+<div class="field full"><label>Note</label><input id="fNote" placeholder="e.g. PSO refill, Ferozepur Road"></div>
+<div class="full"><button class="btn" type="submit" style="width:100%;justify-content:center">+ Add expense</button></div>
+</form>
+<h4>Recent expenses</h4>
+<div class="xlist" id="xlist"></div>
+<div class="tax"><h5>Tax-time summary · FY 2025–26</h5><ul id="taxList"></ul><div class="sum">Documented work deductions: <b id="taxTotal"></b><br><span style="font-size:13px;color:#9AA6B8">One-tap export for your accountant. Receipts attached to every entry.</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how"><div class="steps">
+<div class="step rv"><div class="n">1</div><h3>Log it in 10 seconds</h3><p>Amount, category, optional receipt photo. Works offline at the petrol pump — syncs later.</p></div>
+<div class="step rv"><div class="n">2</div><h3>Get warned, not surprised</h3><p>Set a monthly budget per category. SpendWise pings you the moment fuel or food spending runs hot.</p></div>
+<div class="step rv"><div class="n">3</div><h3>Export at tax time</h3><p>A clean deductible summary with every receipt attached — your accountant will actually smile.</p></div>
+</div></section>
+
+<div class="scale rv"><div><h3>Works for 1 driver or 50 staff.</h3><p>Team mode rolls every member's spending into one company dashboard with approval flows.</p></div>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20SpendWise-style%20expense%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener">Get yours for $2,000 →</a></div>
+
+<section class="cta rv"><h2>Is this YOUR business?</h2><p>If your expenses live in pockets, gloveboxes and fading receipts, you're bleeding money you can't even see. We'll build you a SpendWise-style app — your categories, your currency, your tax rules.</p>
+<a class="btn" href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20SpendWise-style%20expense%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener" style="font-size:17px;padding:15px 32px">Get yours for $2,000 →</a>
+<p class="fine">One-time build · Your branding · Rs / $ / multi-currency · Receipt capture included</p></section>
+</div>
+
+<footer><div class="wrap"><div class="ft">
+<div><div class="brand" style="margin-bottom:12px"><span class="mark">◍</span> SpendWise</div><p>A demo by <b style="color:#fff">NAN Marketing Agency</b> — we build custom apps that sell for local businesses worldwide.</p></div>
+<div><h5>Order yours</h5><p>Custom expense-tracker app for your business.<br><a href="https://wa.me/923177415702" target="_blank" rel="noopener" style="color:#7EE8DC;font-weight:700">WhatsApp: +92 317 7415702</a><br>nidaayesha.com</p></div>
+</div><div class="copy"><span>© 2026 NAN Marketing Agency. Demo data is fictional.</span><span><a href="https://wa.me/923177415702?text=Hi!%20I%20want%20a%20SpendWise-style%20expense%20app%20for%20my%20business%20($2,000)." target="_blank" rel="noopener" style="color:#7EE8DC;font-weight:700">Get yours for $2,000 →</a></span></div></div></footer>
+<div id="toast"><span class="tick">✓</span><span id="toastMsg"></span></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+function toast(m){$('#toastMsg').textContent=m;$('#toast').classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
+const fmt=n=>'Rs '+n.toLocaleString('en-PK');
+const CATS={Fuel:{c:'#14B8A6',i:'⛽',b:30000,tax:true},Maintenance:{c:'#0A1628',i:'🔧',b:8000,tax:true},Food:{c:'#F59E0B',i:'🍽',b:12000,tax:false},'Mobile/Data':{c:'#8B5CF6',i:'📱',b:3000,tax:true},'Tolls & Parking':{c:'#0EA5E9',i:'🅿',b:5000,tax:true},Other:{c:'#94A3B8',i:'🧾',b:6000,tax:false}};
+let EXP=[
+ {a:1200,c:'Fuel',n:'PSO refill · Ferozepur Road'},{a:950,c:'Fuel',n:'Total Parco · DHA'},{a:3200,c:'Fuel',n:'Weekly refill'},{a:4800,c:'Maintenance',n:'Oil change + filter'},{a:1500,c:'Maintenance',n:'Brake pads'},{a:650,c:'Food',n:'Lunch · Lakshmi Chowk'},{a:420,c:'Food',n:'Chai + bun kebab'},{a:2800,c:'Mobile/Data',n:'Jazz monthly bundle'},{a:300,c:'Tolls & Parking',n:'Motorway toll'},{a:180,c:'Tolls & Parking',n:'Parking · Fortress'},
+ {a:1100,c:'Fuel',n:'Attock pump · Johar Town'},{a:900,c:'Food',n:'Dinner between rides'},{a:250,c:'Other',n:'Car wash'},
+];
+function totals(){const t={};EXP.forEach(e=>t[e.c]=(t[e.c]||0)+e.a);return t;}
+let chart;
+function render(){
+ const t=totals(),labels=Object.keys(t);
+ const data=labels.map(l=>t[l]);
+ if(chart)chart.destroy();
+ chart=new Chart($('#doughnut'),{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:labels.map(l=>CATS[l].c),borderWidth:3,borderColor:'#fff',hoverOffset:8}]},options:{cutout:'62%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,boxHeight:12,padding:14,font:{family:'Inter',size:12.5}}},tooltip:{callbacks:{label:c=>' '+c.label+': '+fmt(c.raw)}}}}});
+ const sum=data.reduce((a,b)=>a+b,0);$('#totalSpent').textContent=fmt(sum);
+ // budgets
+ $('#budgets').innerHTML=Object.keys(CATS).map(k=>{const s=t[k]||0,b=CATS[k].b,p=Math.min(100,Math.round(s/b*100)),over=s>b;
+  return `<div class="budget ${over?'warn':''}"><div class="t"><span>${CATS[k].i} ${k}</span><span class="${over?'over':''}">${fmt(s)} / ${fmt(b)}${over?' — OVER':''}</span></div><div class="bar"><i style="width:${p}%"></i></div><div class="note">${over?'Budget exceeded by '+fmt(s-b)+'. Next refill can wait a day.':fmt(b-s)+' left this month.'}</div></div>`;}).join('');
+ // list
+ $('#xlist').innerHTML=[...EXP].reverse().slice(0,14).map((e,i)=>`<div class="x"><span class="ic">${CATS[e.c].i}</span><div><div class="nm">${e.n}</div><div class="ct">${e.c} · Oct ${18-(i%12)}, 2026</div></div><span class="amt">${fmt(e.a)}</span><button class="del" data-i="${EXP.length-1-i}" title="Remove">×</button></div>`).join('');
+ $$('#xlist .del').forEach(b=>b.onclick=()=>{EXP.splice(+b.dataset.i,1);render();});
+ // tax
+ const taxCats=Object.keys(CATS).filter(k=>CATS[k].tax);
+ const taxSum=taxCats.reduce((a,k)=>a+(t[k]||0),0);
+ $('#taxList').innerHTML=taxCats.map(k=>`<li>▸ You spent <b>${fmt(t[k]||0)}</b> on ${k.toLowerCase()} — deductible.</li>`).join('');
+ $('#taxTotal').textContent=fmt(taxSum);
+}
+$('#expForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const a=+$('#fAmt').value;if(!a||a<=0)return;
+ EXP.push({a,c:$('#fCat').value,n:$('#fNote').value||'Quick entry'});
+ $('#fAmt').value='';$('#fNote').value='';
+ render();toast('Expense added: '+fmt(a));
+ const t=totals(),k=$('#fCat').value;
+ if(t[k]>CATS[k].b)setTimeout(()=>toast('Budget alert: '+k+' is now '+fmt(t[k]-CATS[k].b)+' over budget'),600);
+});
+render();
+</script>
+</body>
+</html>
