@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Foreign Worker Levy Calculator 2026 — S Pass & Work Permit</title>
+<meta name="description" content="Free Singapore foreign worker levy calculator 2026: estimate monthly and annual MOM levy costs for S Pass and Work Permit holders by sector, skill level and quota tier.">
+<link rel="canonical" href="https://nan-sg-foreign-worker-levy-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+th{background:#f1f5f9;font-size:.85rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>SG Levy Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Singapore Foreign Worker Levy Calculator (2026)</h1>
+<p class="lede">Estimate your monthly and annual foreign worker levy for S Pass holders, Work Permit holders (all five sectors) and Foreign Domestic Workers — using MOM's 2026 rates by sector, skill level and quota tier.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Levy Cost</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="passtype">Work pass type</label>
+<select id="passtype" onchange="updateFields()">
+<option value="spass" selected>S Pass</option>
+<option value="wp">Work Permit</option>
+<option value="fdw">Foreign Domestic Worker (FDW)</option>
+</select></div>
+<div class="field" id="sectorRow" style="display:none"><label for="sector">Sector</label>
+<select id="sector" onchange="updateFields()">
+<option value="services">Services</option>
+<option value="manufacturing">Manufacturing</option>
+<option value="construction">Construction</option>
+<option value="process">Process</option>
+<option value="marine">Marine Shipyard</option>
+</select></div>
+<div class="field" id="tierRow" style="display:none"><label for="tier">Quota utilisation tier (share of workforce on Work Permits)</label>
+<select id="tier">
+<option value="0">Tier 1 — lowest tier</option>
+<option value="1">Tier 2 — middle tier</option>
+<option value="2">Tier 3 — highest tier</option>
+</select>
+<span class="hint" id="tierHint">Services: T1 ≤10% · T2 10–25% · T3 25–35% of total workforce.</span></div>
+<div class="field" id="sourceRow" style="display:none"><label for="source">Source country / region</label>
+<select id="source">
+<option value="0">Malaysia, North Asia (NAS), PRC</option>
+<option value="1">Non-Traditional Sources (NTS)</option>
+</select></div>
+<div class="field" id="skillRow" style="display:none"><label for="skill">Worker skill classification</label>
+<select id="skill">
+<option value="0">Higher-skilled (R1)</option>
+<option value="1">Basic-skilled (R2)</option>
+</select>
+<span class="hint">R1 = recognised qualifications / experience; R2 = basic-skilled.</span></div>
+<div class="field" id="fdwRow" style="display:none"><label for="fdwrate">FDW levy rate</label>
+<select id="fdwrate">
+<option value="300">Standard — first helper (S$300)</option>
+<option value="450">Additional helper (S$450)</option>
+<option value="60">Concessionary — child &lt;16 / elderly 67+ / disability (S$60)</option>
+</select></div>
+<div class="field"><label for="workers">Number of workers</label>
+<input type="number" id="workers" value="1" min="1" max="1000" step="1"></div>
+<div class="field"><label for="months">Months (for annual estimate)</label>
+<input type="number" id="months" value="12" min="1" max="60" step="1"></div>
+<button class="btn" onclick="calcLevy()">Calculate Levy</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+const RATES={
+ services:{r1:[300,400,600],r2:[450,600,800],tiers:['≤10% of workforce','10–25% of workforce','25–35% of workforce']},
+ manufacturing:{r1:[250,350,550],r2:[370,470,650],tiers:['≤25% of workforce','25–50% of workforce','50–60% of workforce']},
+ construction:{r1:[300,500],r2:[700,900]},
+ process:{r1:[200,300],r2:[450,650]},
+ marine:{r1:[350],r2:[500]}
+};
+const SOURCE_LABELS=['Malaysia / North Asia / PRC','Non-Traditional Sources (NTS)'];
+function fmt(n){return 'S$'+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+function daily(m){return Math.ceil(m*12/365*100)/100;}
+function updateFields(){
+ const p=document.getElementById('passtype').value;
+ const s=document.getElementById('sector').value;
+ const isWP=p==='wp',isFDW=p==='fdw';
+ document.getElementById('sectorRow').style.display=isWP?'block':'none';
+ document.getElementById('fdwRow').style.display=isFDW?'block':'none';
+ document.getElementById('skillRow').style.display=isWP?'block':'none';
+ const tiered=isWP&&(s==='services'||s==='manufacturing');
+ const sourced=isWP&&(s==='construction'||s==='process');
+ document.getElementById('tierRow').style.display=tiered?'block':'none';
+ document.getElementById('sourceRow').style.display=sourced?'block':'none';
+ if(tiered){document.getElementById('tierHint').textContent=
+   s==='services'?'Services: T1 ≤10% · T2 10–25% · T3 25–35% of total workforce.'
+                  :'Manufacturing: T1 ≤25% · T2 25–50% · T3 50–60% of total workforce.';}
+}
+function rateInfo(){
+ const p=document.getElementById('passtype').value;
+ if(p==='spass')return{m:650,label:'S Pass — flat rate (all sectors, all tiers since 1 Sep 2025)'};
+ if(p==='fdw'){const v=parseFloat(document.getElementById('fdwrate').value);
+   const lbl=v===300?'first helper':(v===450?'additional helper':'concessionary rate');
+   return{m:v,label:'Foreign Domestic Worker — '+lbl};}
+ const s=document.getElementById('sector').value,sk=document.getElementById('skill').value==='0'?'r1':'r2';
+ const sec=RATES[s];let m,label;
+ if(s==='services'||s==='manufacturing'){const t=parseInt(document.getElementById('tier').value);
+   m=sec[sk][t];label='Work Permit — '+s[0].toUpperCase()+s.slice(1)+', '+(sk==='r1'?'higher-skilled (R1)':'basic-skilled (R2)')+', Tier '+(t+1)+' ('+sec.tiers[t]+')';}
+ else if(s==='construction'||s==='process'){const src=parseInt(document.getElementById('source').value);
+   m=sec[sk][src];label='Work Permit — '+s[0].toUpperCase()+s.slice(1)+', '+(sk==='r1'?'higher-skilled (R1)':'basic-skilled (R2)')+', '+SOURCE_LABELS[src];}
+ else{m=sec[sk][0];label='Work Permit — Marine Shipyard, '+(sk==='r1'?'higher-skilled (R1)':'basic-skilled (R2)');}
+ return{m,label};
+}
+function calcLevy(){
+ updateFields();
+ const n=Math.max(1,parseInt(document.getElementById('workers').value)||1);
+ const mo=Math.max(1,parseInt(document.getElementById('months').value)||12);
+ const r=rateInfo();const d=daily(r.m);
+ const monthly=r.m*n,total=monthly*mo;
+ const res=document.getElementById('result');res.style.display='block';
+ res.innerHTML='<div class="big">'+fmt(monthly)+'<small>levy per month — '+n+' worker'+(n>1?'s':'')+'</small></div>'
+ +'<table><tr><td>Rate applied</td><td>'+r.label+'</td></tr>'
+ +'<tr><td>Levy per worker / month</td><td>'+fmt(r.m)+'</td></tr>'
+ +'<tr><td>Daily rate (part months: monthly × 12 ÷ 365)</td><td>'+fmt(d)+'</td></tr>'
+ +'<tr><td>Estimated levy for '+mo+' months</td><td>'+fmt(total)+'</td></tr></table>'
+ +'<p class="hint">The levy is the employer\'s cost — it cannot be deducted from the worker\'s salary. Liability starts the day the pass is issued and ends when it is cancelled or expires. Paid via GIRO.</p>';
+}
+updateFields();
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How the Foreign Worker Levy Works</h2>
+<p>The foreign worker levy (FWL) is a monthly pricing mechanism that regulates the number of foreign workers in Singapore. As an employer you must pay it for <strong>every S Pass and Work Permit holder</strong> you employ — it begins on the day the pass is issued and ends only when the pass is cancelled or expires.</p>
+<h3>S Pass — the simple case</h3>
+<p>Since <strong>1 September 2025</strong>, the S Pass levy is a single flat rate of <strong>S$650 a month</strong> across every sector and every tier (daily rate S$21.37 for part-months).</p>
+<h3>Work Permit — by sector</h3>
+<table>
+<tr><th>Sector</th><th>Higher-skilled (R1) / month</th><th>Basic-skilled (R2) / month</th></tr>
+<tr><td>Services (Tiers 1/2/3)</td><td>S$300 / 400 / 600</td><td>S$450 / 600 / 800</td></tr>
+<tr><td>Manufacturing (Tiers 1/2/3)</td><td>S$250 / 350 / 550</td><td>S$370 / 470 / 650</td></tr>
+<tr><td>Construction (MAS/NAS/PRC)</td><td>S$300</td><td>S$700</td></tr>
+<tr><td>Construction (NTS)</td><td>S$500</td><td>S$900</td></tr>
+<tr><td>Process (MAS/NAS/PRC)</td><td>S$200</td><td>S$450</td></tr>
+<tr><td>Process (NTS)</td><td>S$300</td><td>S$650</td></tr>
+<tr><td>Marine Shipyard</td><td>S$350</td><td>S$500</td></tr>
+<tr><td>Foreign Domestic Worker</td><td colspan="2">S$300 (1st helper) · S$450 (additional helpers) · S$60 (concessionary: child &lt;16 / elderly 67+ / disability)</td></tr>
+</table>
+<div class="info"><strong>Announced for 2028 (Budget 2026):</strong> basic-skilled (R2) rates rise by S$100 in marine shipyard (to S$600) and S$150 in process. In manufacturing and services, Tiers 1 and 2 will merge — services merged tier: S$400 (R1) / S$600 (R2); manufacturing merged tier: S$300 (R1) / S$470 (R2). This calculator uses the current 2026 rates.</div>
+<h3>How quota tiers are determined</h3>
+<p>For services and manufacturing, the tier depends on your firm's Dependency Ratio Ceiling (DRC) utilisation — the share of your total workforce on Work Permits. The heavier your reliance on foreign labour, the higher the tier and the rate. MOM computes your live quota from CPF payroll data; check Work Permit Online for your real-time headroom before hiring.</p>
+<div class="note"><strong>Worked example:</strong> A services company employing 5 basic-skilled (R2) Work Permit holders at Tier 2 pays 5 × S$600 = <strong>S$3,000/month</strong>, or <strong>S$36,000/year</strong>. Upgrading those workers to higher-skilled (R1) status drops the bill to 5 × S$400 = S$2,000/month.</div>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>Who pays the foreign worker levy — the employer or the worker?</summary><p>The employer, entirely. The levy cannot be deducted from the worker's salary. Late payment triggers a penalty of S$20 or 2% per month of the outstanding levy, whichever is higher, capped at 30% — and MOM may suspend or cancel your work passes.</p></details>
+<details><summary>Do Employment Pass holders attract the levy?</summary><p>No. Employment Pass holders sit outside the levy and quota system entirely — no levy is payable for them.</p></details>
+<details><summary>How is the daily rate calculated for part-months?</summary><p>MOM's formula: (monthly levy rate × 12) ÷ 365, rounded up to the nearest cent. For S Pass: (650 × 12) ÷ 365 = S$21.37.</p></details>
+<details><summary>What is the difference between R1 and R2?</summary><p>R1 (higher-skilled) workers hold recognised academic qualifications, skills certificates or sufficient relevant work experience in Singapore; everyone else is R2 (basic-skilled). R1 rates are always lower — upgrading skills is the cheapest way to cut the levy.</p></details>
+<details><summary>Is there a quota on how many foreign workers I can hire?</summary><p>Yes — the Dependency Ratio Ceiling (DRC): services 35%, manufacturing 60%, marine shipyard 75%, construction and process 83.3%. S Pass has sub-quotas of 10% (services) and 15% (other sectors). Use MOM's official quota calculator for your exact headroom.</p></details>
+<details><summary>Does the FDW concessionary rate apply to businesses?</summary><p>No — the S$60 concessionary FDW levy is for households with a Singapore-citizen child under 16, an elderly person aged 67+, or a certified person with disabilities. It applies to one helper per eligible person, capped at two per household.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on MOM's published 2026 levy rate tables and Budget 2026 announcements. Rates are reviewed regularly and your actual tier is determined by your live DRC utilisation. It is not legal or financial advice — confirm with MOM's official levy pages and your Work Permit Online account.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Singapore Foreign Worker Levy Calculator</h4><p>Free foreign worker levy calculator for Singapore — estimate 2026 MOM levy costs for S Pass, Work Permit and FDW employers, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-sg-baby-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Singapore Baby Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-overtime-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi Overtime Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-professional-tax-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Professional Tax Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-hundesteuer-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Dog Tax Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
