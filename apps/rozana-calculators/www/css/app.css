@@ -1,0 +1,39 @@
+/* Rozana Calculators — NAN theme: navy #0A1628 + teal #14B8A6 */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A1628;--card:#10233d;--teal:#14B8A6;--teal-d:#0e8f83;--txt:#eaf4f4;--mut:#9fb3b3;--line:#1d3a5f}
+html,body{height:100%}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;background:var(--navy);color:var(--txt);padding-bottom:86px;-webkit-tap-highlight-color:transparent}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#0A1628,#0d2240);border-bottom:1px solid var(--line);padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:38px;height:38px;border-radius:12px;background:var(--teal);color:#0A1628;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.brand h1{font-size:17px;line-height:1.25}
+.brand h1 small{display:block;font-size:12px;color:var(--mut);font-weight:400}
+#langBtn{background:transparent;border:1px solid var(--teal);color:var(--teal);border-radius:20px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+main{padding:14px 14px 8px;max-width:560px;margin:0 auto}
+.tabpanel{display:none}
+.tabpanel.active{display:block;animation:fade .2s}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+.card h2{font-size:16px;margin-bottom:4px;color:#fff}
+.card .lede{font-size:13px;color:var(--mut);margin-bottom:12px}
+label{display:block;font-size:13px;color:var(--mut);margin:10px 0 5px}
+input,select{width:100%;background:#0b1a30;border:1px solid var(--line);border-radius:10px;color:#fff;font-size:16px;padding:12px}
+input:focus,select:focus{outline:none;border-color:var(--teal)}
+.btn{width:100%;background:var(--teal);color:#04241f;border:none;border-radius:12px;font-size:16px;font-weight:800;padding:14px;margin-top:14px;cursor:pointer}
+.btn:active{background:var(--teal-d)}
+.result{display:none;background:#0c1f38;border:1px solid var(--teal);border-radius:14px;padding:16px;margin-top:12px}
+.result.show{display:block}
+.big{font-size:26px;font-weight:800;color:var(--teal)}
+.big small{display:block;font-size:12px;color:var(--mut);font-weight:400;margin-top:4px}
+table{width:100%;margin-top:10px;border-collapse:collapse;font-size:13px}
+td{padding:7px 4px;border-top:1px solid var(--line)}
+td:last-child{text-align:right;color:#fff;font-weight:600}
+.hint{font-size:12px;color:var(--mut);margin-top:10px;line-height:1.6}
+nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#0b1c33;border-top:1px solid var(--line);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+nav.tabs button{flex:1;background:none;border:none;color:var(--mut);font-size:11px;padding:8px 2px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
+nav.tabs button .ic{font-size:20px}
+nav.tabs button.active{color:var(--teal);font-weight:700}
+.ur{direction:rtl;text-align:right}
+.ur td:last-child{text-align:left}
+footer.appfoot{text-align:center;color:var(--mut);font-size:11px;padding:14px;max-width:560px;margin:0 auto}
+#adBanner{position:fixed;bottom:78px;left:0;right:0;display:flex;justify-content:center;pointer-events:none;z-index:5}
