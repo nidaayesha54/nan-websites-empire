@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Gratuity Calculator 2026 — End-of-Service Benefits (Article 51)</title>
+<meta name="description" content="Free UAE gratuity calculator: enter your basic salary, start and end dates to estimate your end-of-service gratuity under Article 51 of Federal Decree-Law No. 33 of 2021. 21/30-day formula, pro-rata, 2-year cap, FAQs.">
+<link rel="canonical" href="https://nan-ae-gratuity-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>UAE Gratuity Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>UAE Gratuity Calculator (2026)</h1>
+<p class="lede">Estimate your end-of-service gratuity in seconds using the official Article 51 formula — 21 days of basic salary per year for the first 5 years, 30 days per year after that, with pro-rata for part-years and the 2-year salary cap.</p>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Gratuity</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="basic">Last monthly basic salary (AED)</label>
+<input type="number" id="basic" value="8000" min="0" step="100">
+<span class="hint">Basic salary from your MOHRE contract — no allowances, no bonuses.</span></div>
+<div class="field"><label for="start">Employment start date</label>
+<input type="date" id="start" value="2021-03-01"></div>
+<div class="field"><label for="end">Last working day</label>
+<input type="date" id="end" value="2026-03-01"></div>
+<div class="field"><label for="unpaid">Unpaid leave days (optional)</label>
+<input type="number" id="unpaid" value="0" min="0" step="1">
+<span class="hint">Unpaid absence days are excluded from service length.</span></div>
+<button class="btn" onclick="calcGratuity()">Calculate Gratuity</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'AED '+Math.round(n).toLocaleString('en-US');}
+function calcGratuity(){
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const s=new Date(document.getElementById('start').value);
+  const e=new Date(document.getElementById('end').value);
+  const unpaid=parseFloat(document.getElementById('unpaid').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(basic<=0||isNaN(s)||isNaN(e)||e<=s){r.innerHTML='<p>Please enter a valid basic salary and date range.</p>';return;}
+  let years=(e-s)/86400000/365.25-unpaid/365.25;
+  if(years<1){
+    r.innerHTML='<div class="big">AED 0<small>NO STATUTORY GRATUITY</small></div>'
+    +'<table><tr><td>Your service</td><td>'+years.toFixed(2)+' years</td></tr>'
+    +'<tr><td>Minimum service</td><td>1 full year of continuous service</td></tr></table>'
+    +'<p class="hint">Under Article 51, employees with less than one year of continuous service are not entitled to gratuity.</p>';
+    return;
+  }
+  const daily=basic/30;
+  const firstTier=Math.min(years,5)*21*daily;
+  const secondTier=Math.max(years-5,0)*30*daily;
+  const raw=firstTier+secondTier;
+  const cap=basic*24;
+  const g=Math.min(raw,cap);
+  r.innerHTML='<div class="big">'+fmt(g)+'<small>ESTIMATED END-OF-SERVICE GRATUITY'+(raw>cap?' (2-year cap applied)':'')+'</small></div>'
+  +'<table><tr><td>Service length</td><td>'+years.toFixed(2)+' years</td></tr>'
+  +'<tr><td>Daily wage (basic ÷ 30)</td><td>'+fmt(daily)+'</td></tr>'
+  +'<tr><td>First 5 years (21 days/yr)</td><td>'+fmt(firstTier)+'</td></tr>'
+  +'<tr><td>Years beyond 5 (30 days/yr)</td><td>'+fmt(secondTier)+'</td></tr>'
+  +'<tr><td>2-year salary cap</td><td>'+fmt(cap)+'</td></tr></table>'
+  +'<p class="hint">Formula: (basic ÷ 30 × 21 × years up to 5) + (basic ÷ 30 × 30 × years beyond 5). Total cannot exceed two years\u2019 basic salary. Indicative estimate only.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How UAE Gratuity Is Calculated</h2>
+<p>End-of-service gratuity for private-sector expatriate employees is set by <strong>Article 51 of Federal Decree-Law No. 33 of 2021</strong>. The rules are the same whether your contract ended by termination or resignation:</p>
+<ul>
+<li><strong>Less than 1 year of continuous service:</strong> no gratuity.</li>
+<li><strong>1 to 5 years:</strong> 21 days of basic wage for each year of service (pro-rata for part-years).</li>
+<li><strong>More than 5 years:</strong> 21 days for the first five years plus 30 days of basic wage for every year after the fifth.</li>
+<li><strong>Cap:</strong> total gratuity can never exceed two years of basic salary.</li>
+<li><strong>Base:</strong> gratuity is calculated on your <strong>last basic wage</strong> — housing, transport and other allowances are excluded.</li>
+<li>Unpaid leave days are excluded from the service count.</li>
+</ul>
+<div class="note"><strong>Example:</strong> basic salary AED 8,000, 7 years of service.<br>
+First 5 years: 8,000 ÷ 30 × 21 × 5 = AED 28,000<br>
+Next 2 years: 8,000 ÷ 30 × 30 × 2 = AED 16,000<br>
+<strong>Total gratuity = AED 44,000</strong> (well under the AED 192,000 cap).</div>
+<h2>Who Is Eligible?</h2>
+<ul>
+<li>Expatriate employees in the private sector (mainland and most non-financial free zones).</li>
+<li>At least <strong>1 year of continuous service</strong> with the same employer.</li>
+<li>Full-time and part-time workers (part-time is calculated pro-rata).</li>
+<li>Special regimes apply separately: DIFC uses DEWS, ADGM has its own 2024 employment regulations, UAE nationals are covered by pension funds, and domestic workers fall under a separate law.</li>
+</ul>
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+<li><strong>Using gross salary</strong> — the law uses basic wage only; adding allowances inflates the estimate.</li>
+<li><strong>Ignoring the cap</strong> — the 2-year limit binds once service passes roughly 25 years.</li>
+<li><strong>Rounding years before the split</strong> — the 21/30-day boundary applies exactly at the 5-year mark, including fractions of years.</li>
+<li><strong>Missing the claim deadline</strong> — since a 2024 amendment, employment claims must be filed within <strong>2 years</strong> of the employment ending.</li>
+</ul>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is gratuity paid on basic salary or gross salary?</summary><p>Basic salary only — the wage stated in your MOHRE employment contract, excluding housing, transport and other allowances. Daily wage is the monthly basic salary divided by 30.</p></details>
+<details><summary>Do I get gratuity if I resign?</summary><p>Yes. Since the 2022 labour law, the gratuity rules are the same whether you resign or are terminated, provided you completed at least one year of continuous service.</p></details>
+<details><summary>What if I worked less than a year?</summary><p>No statutory gratuity is payable for service under one year of continuous employment.</p></details>
+<details><summary>Is there a maximum gratuity amount?</summary><p>Yes — the total can never exceed two years of your basic salary (basic salary × 24).</p></details>
+<details><summary>Are part-time workers entitled?</summary><p>Yes, on a pro-rata basis according to contracted hours.</p></details>
+<details><summary>How do I check my basic salary?</summary><p>Open your MOHRE app (sign in with UAE Pass → Dashboard → View contract) or the UAE Pass app under Documents → Professional → Labour contract to see the salary breakdown.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on Article 51 of Federal Decree-Law No. 33 of 2021 and widely published payroll practice. Actual entitlements depend on your contract and employer records. For disputes, contact MOHRE. This is not legal advice.</div>
+<p class="hint">Sources: Article 51 of Federal Decree-Law No. 33 of 2021; UAE Government portal guidance; Gulf News gratuity explainer (Sep 2025); Bayzat UAE Gratuity Calculation guide.</p>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN UAE Gratuity Calculator</h4><p>Free UAE end-of-service gratuity calculator and guides for expat workers — estimate your payout, check eligibility, and understand Article 51 of the UAE Labour Law.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
