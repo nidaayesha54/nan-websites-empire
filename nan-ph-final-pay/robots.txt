@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-ph-final-pay.surge.sh/sitemap.xml
