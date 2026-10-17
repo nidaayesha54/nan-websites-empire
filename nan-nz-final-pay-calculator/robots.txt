@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-nz-final-pay-calculator.surge.sh/sitemap.xml
