@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-gh-overtime-calculator.surge.sh/sitemap.xml
