@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nigeria Electricity Tariff Bands Explained (2026) | NAN</title>
+<meta name="description" content="How NERC's service-based tariff bands A–E set your prepaid meter rate in Nigeria, why Band A costs 3x more, and how to check your band.">
+<link rel="canonical" href="https://nan-ng-electricity-calculator.surge.sh/articles/nigeria-electricity-tariff-bands-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nigeria Electricity Tariff Bands Explained (2026) | NAN">
+<meta property="og:description" content="How NERC's service-based tariff bands A–E set your prepaid meter rate in Nigeria, why Band A costs 3x more, and how to check your band.">
+<meta name="theme-color" content="#0A1628">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(10,22,40,.25)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2.5rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#123 60%,#0A1628 100%);color:#fff;padding:3rem 0 2.6rem}
+.hero h1{color:#fff;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:.7rem 0 .8rem;letter-spacing:-.02em}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;margin:0 0 1.4rem}
+.eyebrow{display:inline-block;background:rgba(20,184,166,.16);color:#5eead4;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(20,184,166,.4)}
+.hero-cta{display:inline-block;background:var(--teal);color:#fff;font-weight:700;text-decoration:none;padding:.85rem 1.6rem;border-radius:.7rem;box-shadow:0 4px 14px rgba(20,184,166,.35)}
+.hero-cta:hover{background:var(--teal-d)}
+.hero+.wrap{padding-top:2.2rem}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy);letter-spacing:-.01em}
+h2{color:var(--navy);margin:2.4rem 0 .9rem;font-size:1.4rem;letter-spacing:-.01em;padding-left:.7rem;border-left:4px solid var(--teal)}
+h3{color:var(--navy);font-size:1.1rem;margin:1.1rem 0 .5rem}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 4px 18px rgba(10,22,40,.07)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;padding:.75rem .85rem;border:1px solid var(--line);border-radius:.55rem;font-size:1rem;min-height:48px;background:#fff}
+.field input:focus,.field select:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.65rem;padding:.9rem 1.6rem;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;box-shadow:0 3px 10px rgba(20,184,166,.3)}
+.btn:hover{filter:brightness(.94)}
+@media(max-width:720px){.btn{width:100%}}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:1rem;padding:1.4rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.55rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+.steps-wrap{margin:2.2rem 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.2rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.6rem}
+.step h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.guides-wrap{margin:2.4rem 0 0}
+.guides{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(20,184,166,.15)}
+.guide-card h3{margin:.2rem 0 .4rem}
+.guide-card p{margin:0;font-size:.9rem;color:var(--mut)}
+.guide-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-d)}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:.6rem 0;box-shadow:0 1px 6px rgba(10,22,40,.04)}
+.faq summary{font-weight:600;cursor:pointer;list-style:none}
+.faq summary::before{content:'+ ';color:var(--teal);font-weight:800}
+.faq details[open] summary::before{content:'− '}
+.faq summary::-webkit-details-marker{display:none}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.7rem;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.94rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:.6rem;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:#fff;border-radius:.6rem;padding:.6rem 1.1rem;font-weight:600;cursor:pointer;color:var(--mut);min-height:44px}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.last-reviewed{font-size:.82rem;color:var(--mut);margin:2rem 0 0;padding-top:1rem;border-top:1px dashed var(--line)}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+.art-lede{font-size:1.12rem;color:#334155;max-width:46rem}
+.crumbs{font-size:.85rem;color:var(--mut);margin:1.2rem 0 0}
+.crumbs a{color:var(--teal-d);text-decoration:none}
+.article{font-size:1.02rem}
+.article ul,.article ol{padding-left:1.4rem}
+.article li{margin:.4rem 0}
+.cta-panel{text-align:center}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">NAN <span>Electricity Units Calculator</span></a>
+<nav class="nav"><a href="../index.html">Calculator</a><a href="../index.html#guides">Guides</a></nav>
+</div></header>
+<main><section class="hero"><div class="wrap">
+<p class="eyebrow">Guide · Nigeria · Updated Oct 2026</p>
+<h1>Nigeria's Electricity Tariff Bands Explained</h1>
+<p class="lede">How NERC's service-based tariff bands A–E set your prepaid meter rate in Nigeria, why Band A costs 3x more, and how to check your band.</p>
+</div></section><div class="wrap">
+<p class="crumbs"><a href="../index.html">Home</a> &nbsp;/&nbsp; Guides</p>
+<article class="article">
+<p class="art-lede">Your prepaid meter doesn't charge you by how much electricity you use — it charges you by the <strong>service band</strong> of the feeder that supplies your home. Nigeria's service-based tariff system means two neighbours in different bands can pay wildly different amounts for the same recharge. This guide explains how the bands work, what the 2026 rates look like, and how to make sure you're not overpaying.</p>
+
+<h2>The five NERC tariff bands</h2>
+<p>The Nigerian Electricity Regulatory Commission (NERC) prices electricity by <strong>service bands</strong>, based on the average daily hours of supply on your feeder:</p>
+<table>
+<tr><td><strong>Band A</strong> — 20 to 24 hours of supply daily</td><td>≈ ₦209.50/kWh</td></tr>
+<tr><td><strong>Band B</strong> — 16 to 19 hours of supply daily</td><td>≈ ₦62.50/kWh</td></tr>
+<tr><td><strong>Band C</strong> — 12 to 15 hours of supply daily</td><td>≈ ₦53.00/kWh</td></tr>
+<tr><td><strong>Band D</strong> — 8 to 11 hours of supply daily</td><td>≈ ₦45.00/kWh</td></tr>
+<tr><td><strong>Band E</strong> — 4 to 7 hours of supply daily</td><td>≈ ₦35.00/kWh</td></tr>
+</table>
+<p>These are indicative 2026 single-phase residential figures. Each of the eleven distribution companies — Ikeja Electric, Eko Electric, Abuja Electric, Port Harcourt Electric, Enugu, Ibadan, Kano, Kaduna, Jos, Benin and Yola — publishes its own NERC-approved schedule, so the exact rate can differ by a few naira per kWh between DisCos. The figure printed on your last token is the most accurate rate for your meter.</p>
+
+<h2>Why Band A costs so much more</h2>
+<p>In April 2024, the Federal Government removed most of the electricity subsidy for Band A customers. The Band A rate jumped from about <strong>₦66 to about ₦209.50 per kWh</strong> almost overnight. Customers on Bands B to E remained partly subsidised, which is why Band B pays roughly ₦62.50 while Band A pays more than three times that for the same unit of electricity.</p>
+<p>This created an unusual incentive: a Band A feeder gives you the most reliable supply, but at 3–4× the cost per unit. For a household using 7.5 kWh a day, a ₦5,000 recharge buys roughly 74 units on Band B — about ten days of power — but only about 22 units on Band A, barely three days. If your actual supply doesn't match your band's promised hours, you may be paying premium rates for substandard service — and that's worth complaining about (more on that below).</p>
+
+<h2>VAT and the other deductions that shrink your units</h2>
+<p>Most DisCos quote the NERC-approved band rate and then add <strong>7.5% VAT</strong> on top when issuing the token. That's why ₦5,000 rarely buys exactly ₦5,000 ÷ rate in units. Beyond VAT, several deductions can reduce the units you receive:</p>
+<ul>
+<li><strong>Fixed monthly service charges</strong>, where your DisCo applies them, are deducted before units are issued.</li>
+<li><strong>Debt or arrears deductions</strong> — if the meter carries an outstanding balance, a portion of each recharge clears it first.</li>
+<li><strong>Lifeline and consumption thresholds</strong> — NERC's framework can shift the effective rate as your monthly usage crosses certain thresholds.</li>
+</ul>
+<p>The practical rule: divide what you paid by the units you received. That single number is your effective rate, and it's the only figure that matters when comparing recharges.</p>
+
+<h2>How to find your band</h2>
+<p>Three reliable ways:</p>
+<ol>
+<li><strong>Your DisCo's feeder verification page</strong> — enter your meter or account number (Ikeja Electric, for example, has a customer feeder-verification tool).</li>
+<li><strong>Your last token</strong> — the rate is usually printed on the receipt.</li>
+<li><strong>The division test</strong> — divide your last recharge amount by the units received, then compare the result against the band table above. The band whose rate makes the numbers match is almost certainly yours.</li>
+</ol>
+
+<h2>A worked example</h2>
+<p>Band B, rate ₦62.50/kWh, VAT added on top: a <strong>₦5,000</strong> recharge buys 5,000 ÷ (62.50 × 1.075) ≈ <strong>74.4 units</strong>. A typical Nigerian household uses roughly 5–10 kWh a day, so those units cover about <strong>8–15 days</strong> of normal use. The same ₦5,000 on Band A buys only about 22 units — roughly 3 days. This is why knowing your band matters more than almost any energy-saving tip.</p>
+
+<h2>Five ways to stretch your units</h2>
+<ol>
+<li><strong>Run heavy appliances in one window.</strong> Irons, water heaters and washing machines draw the most power. Batch their use instead of running them scattered through the day.</li>
+<li><strong>Switch to LED bulbs.</strong> Lighting can fall by ~80% compared to incandescent bulbs.</li>
+<li><strong>Kill standby loads.</strong> Decoders, chargers and TVs on standby add up — switch them off at the socket.</li>
+<li><strong>Track your actual supply hours.</strong> If you're on Band A but getting Band C hours, log it. You have the right to complain to your DisCo, and to escalate to NERC if the DisCo doesn't resolve it.</li>
+<li><strong>Buy in one recharge, not many.</strong> While the rate structure is mostly linear, fewer transactions mean fewer chances of fixed charges eating into each top-up.</li>
+</ol>
+
+<h2>Common questions</h2>
+<div class="faq">
+<details><summary>How many units will ₦1,000 buy in Nigeria?</summary><p>It depends on your band. On Band B (~₦62.50/kWh plus VAT), ₦1,000 buys roughly 15 units. On Band A (~₦209.50/kWh plus VAT), it buys roughly 4.4 units. Use the calculator with your exact rate for the precise figure.</p></details>
+<details><summary>Can my band change?</summary><p>Yes. NERC periodically reclassifies feeders based on actual supply performance. If your area's supply improves or deteriorates, your feeder — and your band — can be moved. Your DisCo should notify you, but it's worth re-checking your effective rate every few months.</p></details>
+<details><summary>Why did the same recharge buy fewer units this month?</summary><p>Tariff adjustments, VAT handling, fixed charges, arrears deductions and crossing monthly consumption thresholds can all shift the effective rate. Compare the per-unit rate on consecutive tokens rather than the totals.</p></details>
+<details><summary>Is the calculator on this site official?</summary><p>No — it's an independent estimate built from published summaries of NERC's service-based bands. Always confirm the final figures on your token or with your distribution company.</p></details>
+</div>
+
+<h2>Band A vs Band B: the real maths of a feeder change</h2>
+<p>When NERC reclassifies feeders, some neighbourhoods move between bands — and the financial impact is enormous. Consider a household using 225 kWh a month (7.5 kWh/day):</p>
+<table>
+<tr><td>Band B (≅ ₦62.50/kWh + VAT)</td><td>≈ ₦15,100/month</td></tr>
+<tr><td>Band A (≅ ₦209.50/kWh + VAT)</td><td>≈ ₦50,700/month</td></tr>
+</table>
+<p>That's a <strong>₦35,000+ monthly difference</strong> for identical consumption. If your feeder was upgraded to Band A, the rational response is to cut consumption hard: every kWh you save is worth ₦225. An old deep freezer running 24/7 can cost ₦8,000–₦12,000 a month alone on Band A rates. Audit your big loads first — freezer, water heater, iron, air conditioner — because on Band A, one wasteful appliance costs more than an entire Band E household's monthly bill.</p>
+<p>Conversely, if your area was <em>downgraded</em> from Band A to a lower band, your per-unit cost falls sharply — but so do your guaranteed supply hours. Track both sides of the trade for a month before celebrating.</p>
+
+<h2>How to complain when supply doesn't match your band</h2>
+<p>Your band is a promise: Band A feeders should deliver 20–24 hours of supply daily. If yours doesn't, you're overpaying for a service you're not receiving. The complaint ladder:</p>
+<ol>
+<li><strong>Log the outages yourself.</strong> Note dates and durations for two weeks. A simple notebook beats "the light is always off" when you complain.</li>
+<li><strong>Complain to your DisCo first</strong> — through their app, website, or customer care line. Get a complaint reference number and keep it.</li>
+<li><strong>Escalate to NERC</strong> if the DisCo doesn't resolve it. NERC's complaint channels exist precisely for service-band disputes, and DisCos take NERC-escalated complaints seriously.</li>
+<li><strong>Ask for reclassification.</strong> If your feeder's actual supply consistently falls below your band's threshold, the correct remedy is a band downgrade — which cuts your rate to match the service you actually get.</li>
+</ol>
+<p>Communities that complain with logged data get results far more often than those that complain with anecdotes. Two weeks of notes is all it takes.</p>
+
+<p><em>Figures in this guide are indicative 2026 summaries. NERC reviews tariffs periodically and each DisCo's approved schedule differs slightly — treat the rate on your own token as the authority.</em></p>
+
+</article>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<div class="panel cta-panel" id="calculator">
+<h2 style="border:0;padding:0;margin-top:0">Try the free calculator</h2>
+<p>Put the numbers from this guide into the interactive tool — it takes under a minute.</p>
+<a class="btn" href="../index.html" style="text-decoration:none;display:inline-block">Open the calculator →</a>
+</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Nigeria Electricity Units Calculator</h4><p>Free Nigeria electricity calculator — estimate prepaid meter units (kWh) by NERC tariff band A–E, in English.</p></div>
+<div><h4>Tools</h4><p><a href="../index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ng-nysc-allawee-planner.surge.sh" style="color:#4b5563;text-decoration:none;">NYSC Allawee Planner</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not financial advice.</p></div>
+</footer>
+</body>
+</html>
