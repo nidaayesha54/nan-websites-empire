@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vacation Pay Calculator Canada 2026 — By Province & Years of Service</title>
+<meta name="description" content="Free Canada vacation pay calculator: pick your province and years of service to find your vacation pay rate (4%, 6%, 8%), dollar amount, and paid weeks off for 2026.">
+<link rel="canonical" href="https://nan-ca-vacation-pay.surge.sh/">
+<style>
+:root{--navy:#0A1628;--navy2:#123052;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:linear-gradient(180deg,#0A1628,#0e2240);color:#fff;padding:.85rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(10,22,40,.3)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav{display:flex;align-items:center;flex-wrap:wrap}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1.1rem;font-size:.93rem;font-weight:600;padding:.45rem .1rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#143a63 60%,#0f766e 135%);border-radius:1.1rem;color:#fff;padding:2.4rem 2rem;margin:1.8rem 0;box-shadow:0 14px 34px rgba(10,22,40,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(20,184,166,.18)}
+.hero h1{color:#fff;font-size:2.05rem;margin:0 0 .55rem;line-height:1.25;letter-spacing:-.015em;border:0;padding:0}
+.hero .lede{color:#dbe4f0;font-size:1.07rem;max-width:46rem;margin:0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.15rem}
+.hero-badges span{background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.5);color:#a7f3d0;font-size:.84rem;font-weight:700;padding:.38rem .85rem;border-radius:999px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.panel h2{margin-top:0;border:0;padding:0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;min-height:48px;padding:.65rem .85rem;border:1.5px solid var(--line);border-radius:.55rem;font-size:16px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.18)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;min-height:52px;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;transition:background .15s,transform .1s;box-shadow:0 4px 12px rgba(20,184,166,.35)}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.3rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut);margin-top:.2rem}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line);border-radius:.6rem}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.95rem;background:#fff}
+th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);text-align:left}
+tr:first-child th{background:#f1f5f9;color:var(--navy);font-weight:700}
+tr:nth-child(even) td{background:#f9fafb}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2.4rem;font-size:1.4rem;letter-spacing:-.01em;padding-bottom:.4rem;border-bottom:2px solid #eef2f7}
+h3{color:var(--navy);font-size:1.1rem}
+.steps{margin:2.2rem 0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.4rem}
+.step h3{margin:.15rem 0 .35rem;font-size:1.02rem;border:0;padding:0}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.source-note{background:#f0fdfa;border:1px solid #99f6e4;border-left:4px solid var(--teal);border-radius:.6rem;padding:.9rem 1.1rem;font-size:.9rem;margin:1.6rem 0}
+.guides{margin:2.4rem 0}
+.guide-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:.7rem;padding:1.2rem 1.35rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card a{color:var(--navy);font-weight:700;font-size:1.06rem;text-decoration:none}
+.guide-card a:hover{color:var(--teal-d);text-decoration:underline}
+.guide-card p{margin:.35rem 0 0;font-size:.93rem;color:var(--mut)}
+.faq{margin:1rem 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.15rem;margin:.6rem 0}
+.faq details[open]{box-shadow:0 5px 16px rgba(10,22,40,.08);border-color:#99f6e4}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--teal);font-weight:800;font-size:1.25rem;line-height:1}
+.faq details[open] summary::before{content:"3"}
+.faq details p{color:#4b5563;font-size:.94rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:linear-gradient(180deg,#0A1628,#081120);color:#94a3b8;margin-top:2.5rem;padding:2.2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#fff}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+@media(max-width:720px){
+.calc-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.fcols{grid-template-columns:1fr}
+.hero{padding:1.7rem 1.3rem;margin:1.2rem 0;border-radius:.9rem}
+.hero h1{font-size:1.55rem}
+.hero .lede{font-size:.99rem}
+.btn{width:100%}
+h2{font-size:1.22rem}
+.panel{padding:1.15rem}
+.wrap{padding:0 1rem}
+table{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Vacation Pay Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/canada-vacation-pay-guide-2026.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Canada Vacation Pay Calculator (2026)</h1>
+<p class="lede">Vacation pay rules are different in every province and territory — and the rate goes up with your years of service. Pick your jurisdiction and find out exactly what you're owed.</p>
+<div class="hero-badges"><span>All 13 provinces & territories</span><span>Statutory 2026 rates</span><span>Free — no sign-up</span></div></section>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Vacation Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="jur">Where do you work?</label>
+<select id="jur">
+<option value="on">Ontario</option>
+<option value="bc">British Columbia</option>
+<option value="ab">Alberta</option>
+<option value="sk">Saskatchewan</option>
+<option value="mb">Manitoba</option>
+<option value="qc">Quebec</option>
+<option value="nb">New Brunswick</option>
+<option value="ns">Nova Scotia</option>
+<option value="pe">Prince Edward Island</option>
+<option value="nl">Newfoundland &amp; Labrador</option>
+<option value="yt">Yukon</option>
+<option value="nt">Northwest Territories</option>
+<option value="nu">Nunavut</option>
+<option value="federal">Federally regulated (banks, airlines, telecom)</option>
+</select></div>
+<div class="field"><label for="wages">Annual gross wages (CAD $)</label>
+<input type="number" id="wages" value="60000" min="0" step="1000">
+<span class="hint">Your total wages for the year, before deductions.</span></div>
+<div class="field"><label for="years">Years of service with this employer</label>
+<input type="number" id="years" value="3" min="0" max="50" step="0.5"></div>
+<button class="btn" onclick="calcVac()">Calculate Vacation Pay</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-CA');}
+// [years of service threshold, rate %, vacation weeks] per jurisdiction — tier applied by years of service
+const RULES={
+ on:[[5,4,2],[99,6,3]], bc:[[5,4,2],[99,6,3]], ab:[[5,4,2],[99,6,3]], mb:[[5,4,2],[99,6,3]],
+ sk:[[10,5.77,3],[99,7.69,4]], qc:[[3,4,2],[99,6,3]],
+ nb:[[8,4,2],[99,6,3]], ns:[[8,4,2],[99,6,3]], pe:[[5,4,2],[99,6,3]],
+ nl:[[15,4,2],[99,6,3]], yt:[[99,4,2]], nt:[[6,4,2],[99,6,3]], nu:[[6,4,2],[99,6,3]],
+ federal:[[5,4,2],[10,6,3],[99,8,4]]
+};
+const NAMES={on:'Ontario',bc:'British Columbia',ab:'Alberta',sk:'Saskatchewan',mb:'Manitoba',qc:'Quebec',nb:'New Brunswick',ns:'Nova Scotia',pe:'Prince Edward Island',nl:'Newfoundland & Labrador',yt:'Yukon',nt:'Northwest Territories',nu:'Nunavut',federal:'Federally regulated'};
+function calcVac(){
+  const j=document.getElementById('jur').value;
+  const wages=parseFloat(document.getElementById('wages').value)||0;
+  const yrs=parseFloat(document.getElementById('years').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(wages<=0){r.innerHTML='<p>Please enter your annual wages.</p>';return;}
+  const tiers=RULES[j];let t=tiers[0];
+  for(const tier of tiers){if(yrs<tier[0]){t=tier;break;}t=tier;}
+  const rate=t[1],weeks=t[2];
+  const pay=wages*rate/100;
+  const perPay=pay/26; // biweekly
+  r.innerHTML='<div class="big">'+fmt(pay)+'<small>estimated ANNUAL vacation pay · '+NAMES[j]+'</small></div>'
+  +'<div class="table-scroll"><table>'
+  +'<tr><td>Your vacation pay rate</td><td>'+rate+'% of wages</td></tr>'
+  +'<tr><td>Paid vacation time</td><td>'+weeks+' weeks</td></tr>'
+  +'<tr><td>Vacation pay per biweekly paycheque</td><td>'+fmt(perPay)+'</td></tr>'
+  +'<tr><td>Vacation pay per month</td><td>'+fmt(pay/12)+'</td></tr>'
+  +'</table></div>'
+  +'<p class="hint">Rate for '+yrs+' year'+(yrs===1?'':'s')+' of service in '+NAMES[j]+'. Saskatchewan uses a week-based formula (3/52 \u2248 5.77%, 4/52 \u2248 7.69%). Rates shown are statutory minimums \u2014 your contract or collective agreement may be higher.</p>';
+}
+</script>
+<section class="steps">
+<h2>How It Works</h2>
+<div class="steps-grid">
+<div class="step"><span class="n">1</span><h3>Pick your province</h3><p>Select where you work — rates differ across all 13 provinces and territories.</p></div><div class="step"><span class="n">2</span><h3>Enter wages & service</h3><p>Add your annual gross wages and years with your employer.</p></div><div class="step"><span class="n">3</span><h3>Get your rate & payout</h3><p>See your vacation pay percentage, dollar amount, and paid weeks off.</p></div>
+</div>
+<p class="source-note"><strong>Accuracy note:</strong> Rates follow the published statutory minimums of each Canadian province and territory and the Canada Labour Code for 2026.</p>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>Vacation Pay Rates by Province (2026)</h2>
+<p>Every jurisdiction sets its own minimum vacation pay as a <strong>percentage of your wages</strong>, and the rate rises after a set number of years of service:</p>
+<div class="table-scroll"><table>
+<tr><th>Jurisdiction</th><th>Rate by years of service</th></tr>
+<tr><td>British Columbia, Alberta, Manitoba, Ontario</td><td>4% under 5 yrs → <strong>6%</strong> at 5+ yrs</td></tr>
+<tr><td>Saskatchewan</td><td><strong>5.77%</strong> under 10 yrs → <strong>7.69%</strong> at 10+ yrs</td></tr>
+<tr><td>Quebec</td><td>4% under 3 yrs → <strong>6%</strong> at 3+ yrs</td></tr>
+<tr><td>New Brunswick, Nova Scotia</td><td>4% under 8 yrs → <strong>6%</strong> at 8+ yrs</td></tr>
+<tr><td>Prince Edward Island</td><td>4% under 5 yrs → <strong>6%</strong> at 5+ yrs*</td></tr>
+<tr><td>Newfoundland &amp; Labrador</td><td>4% under 15 yrs → <strong>6%</strong> at 15+ yrs</td></tr>
+<tr><td>Yukon</td><td><strong>4%</strong> (no statutory step-up)</td></tr>
+<tr><td>Northwest Territories, Nunavut</td><td>4% under 6 yrs → <strong>6%</strong> at 6+ yrs</td></tr>
+<tr><td>Federally regulated</td><td>4% under 5 yrs → 6% at 5–9 yrs → <strong>8%</strong> at 10+ yrs</td></tr>
+</table></div>
+<p class="hint">* PEI amended its Employment Standards Act to reduce the higher-tier threshold — verify the current threshold against the legislation. All other figures per provincial/territorial employment standards and the Canada Labour Code.</p>
+<div class="note"><strong>Example:</strong> a worker in Ontario earning $60,000 with 6 years of service accrues <strong>6% = $3,600</strong> in vacation pay (3 weeks off). The same worker in their 3rd year accrues 4% = $2,400. In Saskatchewan, a $60,000 earner with 3 years of service accrues 5.77% = <strong>$3,462</strong>.</div>
+<h2>How Vacation Pay Is Calculated</h2>
+<ul>
+<li><strong>Vacation time vs vacation pay</strong> are two separate rights: the weeks off, and the percentage of wages that funds them.</li>
+<li>Vacation pay is usually calculated on your <strong>gross wages</strong> (salary plus most overtime, commissions, and bonuses). The vacation pay itself is generally not re-counted.</li>
+<li>It must be paid <strong>before your vacation starts</strong> in most provinces — though several allow it on each paycheque if you agree in writing.</li>
+<li><strong>Unused vacation pay must be paid out</strong> when your employment ends, in every jurisdiction.</li>
+<li>Quebec uses a <strong>May 1 – April 30 reference year</strong> for calculating vacation entitlements.</li>
+<li>Your employer can schedule vacations with reasonable notice, and <strong>cannot pay you less than the statutory rate</strong> — but your contract may pay more.</li>
+</ul>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Is vacation pay paid on overtime and bonuses?</summary><p>In most provinces, vacation pay is calculated on your total wages, which includes overtime, commissions, and non-discretionary bonuses. Exact inclusions vary by jurisdiction — check your province's employment standards guide.</p></details>
+<details><summary>When should I receive my vacation pay?</summary><p>Usually at least one day before your vacation begins. Some provinces allow vacation pay to be added to each regular paycheque if you and your employer agree in writing.</p></details>
+<details><summary>What happens to unused vacation pay if I quit or am fired?</summary><p>Every Canadian jurisdiction requires accrued but unused vacation pay to be paid out on termination, usually with your final pay.</p></details>
+<details><summary>Why is Saskatchewan's rate 5.77% instead of 4%?</summary><p>Saskatchewan doesn't use the 4%/6% model. It grants 3 weeks of vacation (3/52 of annual wages ≈ 5.77%) after 1 year, and 4 weeks (4/52 ≈ 7.69%) after 10 years.</p></details>
+<details><summary>Can my employer refuse my vacation request?</summary><p>Employers can generally schedule vacations to suit business needs with reasonable notice, but they cannot deny your statutory minimum vacation time or pay.</p></details>
+<details><summary>I'm federally regulated — which rules apply?</summary><p>If you work for a bank, airline, telecom, or interprovincial transport company, the <strong>Canada Labour Code</strong> applies (4%/6%/8%), not your province's rules.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives indicative estimates based on published statutory minimums. Your actual entitlement depends on your province's legislation, your contract, and how your employer defines vacationable earnings. Confirm with your provincial employment standards office. Not legal advice.</div>
+
+<section class="guides">
+<h2>Guides</h2>
+<div class="guide-card">
+<div><a href="articles/canada-vacation-pay-guide-2026.html">Canada Vacation Pay Guide 2026: Rates by Province & How It's Paid</a>
+<p>The complete guide to Canadian vacation pay: province-by-province rates, years-of-service rules, payout timing, and common mistakes to avoid.</p></div>
+</div>
+</section>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Vacation Pay Calculator</h4><p>Free Canada vacation pay calculator — rates, dollar amounts, and paid weeks off by province and years of service for 2026.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p> &middot; <a href="articles/canada-vacation-pay-guide-2026.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-matleave-topup.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Mat Leave Top-Up Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
