@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAN Marketing Agency — AI Growth Partner</title>
+<meta name="description" content="NAN Marketing Agency: AI video ads, social media management, custom mobile apps and WhatsApp chatbots. Demo page for the NAN website chat widget.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#0A1628;background:#fff;line-height:1.6}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#123055 100%);color:#fff;padding:90px 24px 70px;text-align:center}
+.hero h1{font-size:42px;margin-bottom:14px}
+.hero h1 span{color:#14B8A6}
+.hero p{font-size:18px;opacity:.85;max-width:600px;margin:0 auto 30px}
+.btn{display:inline-block;background:#14B8A6;color:#fff;padding:14px 34px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px}
+.btn:hover{background:#0d9488}
+.note{margin-top:22px;font-size:14px;opacity:.7}
+.services{padding:70px 24px;max-width:1100px;margin:0 auto}
+.services h2{text-align:center;font-size:32px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{border:1px solid #e2e8f0;border-radius:16px;padding:28px 22px;text-align:center;transition:transform .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.card .ico{font-size:44px;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14px;color:#475569}
+.card .price{display:inline-block;margin-top:12px;background:#f0fdfa;color:#0f766e;font-weight:700;font-size:13px;padding:6px 14px;border-radius:20px}
+.howto{max-width:800px;margin:0 auto;padding:0 24px 70px}
+.howto h2{font-size:26px;margin-bottom:18px;text-align:center}
+.howto ol{background:#f8fafc;border-radius:14px;padding:28px 28px 28px 52px;font-size:15px}
+.howto li{margin-bottom:12px}
+.howto code{background:#0A1628;color:#7ef0dd;padding:2px 8px;border-radius:6px;font-size:13px}
+footer{background:#0A1628;color:#94a3b8;text-align:center;padding:28px;font-size:14px}
+@media(max-width:600px){.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>NAN <span>Marketing Agency</span></h1>
+  <p>AI video ads, social media management, custom apps &amp; WhatsApp chatbots — we help businesses grow.</p>
+  <a class="btn" href="https://wa.me/923177415702">Chat on WhatsApp</a>
+  <p class="note">👀 Wait 6 seconds — our chat assistant will pop up and say salaam!<br>Try the quick-reply chips or type "price kya hai".</p>
+</div>
+
+<div class="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card"><div class="ico">🎬</div><h3>AI Video Ads</h3><p>Scroll-stopping video ads for your business.</p><span class="price">Custom quote</span></div>
+    <div class="card"><div class="ico">📱</div><h3>Social Media</h3><p>Posts, reels &amp; full page management.</p><span class="price">Custom quote</span></div>
+    <div class="card"><div class="ico">💻</div><h3>Mobile Apps</h3><p>Professional business apps, offline + online.</p><span class="price">$2,000</span></div>
+    <div class="card"><div class="ico">🤖</div><h3>WhatsApp Bots</h3><p>24/7 auto-replies for your clients.</p><span class="price">$500–$2,000</span></div>
+  </div>
+</div>
+
+<div class="howto">
+  <h2>Try the chat widget — then put it on your own site</h2>
+  <ol>
+    <li>Wait for the welcome popup (or tap the 💬 bubble).</li>
+    <li>Tap a quick-reply chip — e.g. <b>💻 Mobile App</b>.</li>
+    <li>Type your name + number when asked — it's saved as a lead.</li>
+    <li>Embed on any site with one tag:<br><code>&lt;script src="https://nan-chat-widget-demo.surge.sh/nan-chat-widget.js"&gt;&lt;/script&gt;</code></li>
+  </ol>
+</div>
+
+<footer>NAN Marketing Agency — demo page for the website chat widget.</footer>
+
+<!-- NAN Chat Widget: ONE tag is all it takes -->
+<script>
+window.NANChatConfig = {
+  businessName: 'NAN Marketing Agency',
+  whatsappNumber: '923177415702',
+  accent: '#14B8A6'
+};
+</script>
+<script src="nan-chat-widget.js"></script>
+</body>
+</html>
