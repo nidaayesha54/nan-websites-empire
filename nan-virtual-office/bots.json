@@ -1,1407 +1,1543 @@
 {
- "meta": {
-  "generated": "2026-10-19",
-  "name": "NAN Virtual Office",
-  "owner": "Nida Ayesha — NAN Marketing Agency",
-  "tagline": "100+ AI bots working for you, 24/7",
-  "total_bots": 107,
-  "active_bots": 41
- },
- "departments": [
-  {
-   "icon": "🔍",
-   "id": "hunters",
-   "name": "Client Hunters"
-  },
-  {
-   "icon": "🌐",
-   "id": "webempire",
-   "name": "Website Empire"
-  },
-  {
-   "icon": "🎬",
-   "id": "youtube",
-   "name": "YouTube"
-  },
-  {
-   "icon": "📘",
-   "id": "facebook",
-   "name": "Facebook"
-  },
-  {
-   "icon": "📸",
-   "id": "social",
-   "name": "Instagram / TikTok"
-  },
-  {
-   "icon": "📧",
-   "id": "email",
-   "name": "Email"
-  },
-  {
-   "icon": "🎨",
-   "id": "content",
-   "name": "Content Factory"
-  },
-  {
-   "icon": "💰",
-   "id": "money",
-   "name": "Money & Admin"
-  },
-  {
-   "icon": "🤖",
-   "id": "ailab",
-   "name": "AI Lab"
-  }
- ],
- "bots": [
-  {
-   "cron": "client-hunter-bot",
-   "dept": "hunters",
-   "id": "ch-01",
-   "name": "Hunter Prime",
-   "powers": [
-    "Reddit lead scouting",
-    "web lead mining",
-    "daily pitch drafting"
-   ],
-   "role": "Daily rotating client hunt — hunt, mail, deal, receive",
-   "schedule": "Daily 09:00 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "client-hunter-continuous",
-   "dept": "hunters",
-   "id": "ch-02",
-   "name": "Scout-6H",
-   "powers": [
-    "Social listening",
-    "continuous prospecting"
-   ],
-   "role": "Continuous social + web scouting for fresh prospects",
-   "schedule": "Every 6 hours",
-   "status": "active"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-03",
-   "name": "AppHunter",
-   "powers": [
-    "Demo matching",
-    "industry targeting",
-    "personalized pitches"
-   ],
-   "role": "App-demo client hunter — 50-lead waves per demo app",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-04",
-   "name": "UGCHunter",
-   "powers": [
-    "Brand discovery",
-    "gifting program tracking"
-   ],
-   "role": "UGC & brand-deal hunter for paid collaborations",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-05",
-   "name": "ReelHunter",
-   "powers": [
-    "Ad creative analysis",
-    "video pitch cuts"
-   ],
-   "role": "Video-ads client hunter — brands needing AI video ads",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-06",
-   "name": "PropHunter",
-   "powers": [
-    "Listing analysis",
-    "golden-visa niche targeting"
-   ],
-   "role": "Real-estate client hunter (agencies + golden-visa niche)",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-07",
-   "name": "FoodHunter",
-   "powers": [
-    "Menu research",
-    "no-online-ordering detection"
-   ],
-   "role": "Restaurant & cafe client hunter",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-08",
-   "name": "GlamHunter",
-   "powers": [
-    "Salon audit",
-    "booking-gap detection"
-   ],
-   "role": "Salon, spa & beauty clinic hunter",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-09",
-   "name": "Qualifier",
-   "powers": [
-    "Fit scoring",
-    "budget signals",
-    "red-flag filter"
-   ],
-   "role": "Lead qualifier — scores every lead before outreach",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-10",
-   "name": "PitchWriter",
-   "powers": [
-    "Personalized pitches",
-    "demo linking",
-    "$2,000 CTA framing"
-   ],
-   "role": "Personalized pitch writer for every lead",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "cron": "follow-up-sequencer-daily",
-   "dept": "hunters",
-   "id": "ch-11",
-   "name": "FollowUp",
-   "powers": [
-    "Nudge sequencing",
-    "reply detection",
-    "warm re-engagement"
-   ],
-   "role": "Follow-up sequencer — nudges pitched leads that went quiet",
-   "schedule": "Daily 15:00 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "client-inbox-watch",
-   "dept": "hunters",
-   "id": "ch-12",
-   "name": "InboxEye",
-   "powers": [
-    "Cross-inbox monitoring",
-    "priority flagging"
-   ],
-   "role": "Client inbox watcher — catches every reply everywhere",
-   "schedule": "Every 4 hours",
-   "status": "active"
-  },
-  {
-   "cron": "client-reply-watch",
-   "dept": "hunters",
-   "id": "ch-13",
-   "name": "ReplyRadar",
-   "powers": [
-    "Reply detection",
-    "instant alerts"
-   ],
-   "role": "Reply detector — instant alert the moment a client replies",
-   "schedule": "Every 2 hours",
-   "status": "active"
-  },
-  {
-   "dept": "hunters",
-   "id": "ch-14",
-   "name": "DealCloser",
-   "powers": [
-    "Proposal design",
-    "objection handling",
-    "price negotiation"
-   ],
-   "role": "Proposal designer + price negotiator",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "cron": "client-fulfillment-bot",
-   "dept": "hunters",
-   "id": "ch-15",
-   "name": "FulfillBot",
-   "powers": [
-    "Task assignment",
-    "delivery tracking",
-    "client updates"
-   ],
-   "role": "Client fulfillment — from signed deal to delivered work",
-   "schedule": "Daily 10:00 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "bluesky-daily-post",
-   "dept": "hunters",
-   "id": "ch-16",
-   "name": "BlueScout",
-   "powers": [
-    "Bluesky posting",
-    "client acquisition copy"
-   ],
-   "role": "Bluesky daily posts for client acquisition",
-   "schedule": "Daily 14:13 PKT",
-   "status": "active"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-01",
-   "name": "SiteForge",
-   "powers": [
-    "NAN templates",
-    "SEO scaffolding",
-    "Surge deploy"
-   ],
-   "role": "New website builder — from idea to live site",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "cron": "surge-network-articles-daily",
-   "dept": "webempire",
-   "id": "wb-02",
-   "name": "ArticleMill",
-   "powers": [
-    "Trend topics",
-    "1500-word articles",
-    "auto-publish"
-   ],
-   "role": "Surge network SEO articles — 2 trend-based articles/day",
-   "schedule": "Daily 11:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "muse-daily-seo-articles",
-   "dept": "webempire",
-   "id": "wb-03",
-   "name": "MuseWriter",
-   "powers": [
-    "10 articles/day",
-    "Hostinger affiliate",
-    "NAN CTA"
-   ],
-   "role": "nidaayesha.com SEO articles — 10/day across 5 sites",
-   "schedule": "Daily 06:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "govtjobs-daily-articles",
-   "dept": "webempire",
-   "id": "wb-04",
-   "name": "GovtWriter",
-   "powers": [
-    "25-site rotation",
-    "job niche SEO"
-   ],
-   "role": "Govt-jobs network articles across 25 sites",
-   "schedule": "Daily 06:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "urduportal-daily",
-   "dept": "webempire",
-   "id": "wb-05",
-   "name": "UrduScribe",
-   "powers": [
-    "Fluent Urdu",
-    "news-based topics",
-    "thumbnails"
-   ],
-   "role": "Urdu portal — 1 fresh Urdu article/day",
-   "schedule": "Daily 07:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "detector-site-articles",
-   "dept": "webempire",
-   "id": "wb-06",
-   "name": "DetectorScribe",
-   "powers": [
-    "AI-detection niche",
-    "review content"
-   ],
-   "role": "AI detector site articles",
-   "schedule": "Daily 07:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "surge-network-backlinks-daily",
-   "dept": "webempire",
-   "id": "wb-07",
-   "name": "LinkSmith",
-   "powers": [
-    "White-hat outreach",
-    "owned-property links"
-   ],
-   "role": "Backlink builder — 3 editorial backlinks/day",
-   "schedule": "Daily 10:13 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "backlink-sprint",
-   "dept": "webempire",
-   "id": "wb-08",
-   "name": "LinkSprint",
-   "powers": [
-    "DA/PA targeting",
-    "sprint campaigns"
-   ],
-   "role": "Backlink sprint — DA/PA growth pushes",
-   "schedule": "Every 72 hours",
-   "status": "active"
-  },
-  {
-   "cron": "gsc-rank-monitor-daily",
-   "dept": "webempire",
-   "id": "wb-09",
-   "name": "RankGuard",
-   "powers": [
-    "GSC data pulls",
-    "keyword position tracking",
-    "mover alerts"
-   ],
-   "role": "GSC rank monitor — tracks keyword positions daily",
-   "schedule": "Daily 08:00 PKT",
-   "status": "active"
-  },
-  {
-   "cron": "adsterra-guard-daily",
-   "dept": "webempire",
-   "id": "wb-10",
-   "name": "AdGuardian",
-   "powers": [
-    "Ad-code audits",
-    "policy compliance"
-   ],
-   "role": "Adsterra ad-code guard — keeps every site compliant",
-   "schedule": "Daily 09:13 PKT",
-   "status": "active"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-11",
-   "name": "SpeedDoc",
-   "powers": [
-    "TTFB tuning",
-    "image compression",
-    "lazy-load"
-   ],
-   "role": "Speed optimizer — makes sites load fast",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "cron": "content-refresher-weekly",
-   "dept": "webempire",
-   "id": "wb-12",
-   "name": "FreshCoat",
-   "powers": [
-    "Article audits",
-    "fact updates",
-    "re-publish"
-   ],
-   "role": "Content refresher — updates stale articles weekly",
-   "schedule": "Weekly Monday",
-   "status": "active"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-13",
-   "name": "KeyMiner",
-   "powers": [
-    "Keyword research",
-    "long-tail mining",
-    "competition check"
-   ],
-   "role": "Keyword researcher for new articles & sites",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "cron": "competitor-tracker-weekly",
-   "dept": "webempire",
-   "id": "wb-14",
-   "name": "SpyGlass",
-   "powers": [
-    "Competitor monitoring",
-    "gap analysis",
-    "SERP tracking"
-   ],
-   "role": "Competitor tracker — watches rival sites weekly",
-   "schedule": "Weekly Monday",
-   "status": "active"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-15",
-   "name": "MapKeeper",
-   "powers": [
-    "Sitemap validation",
-    "indexation checks"
-   ],
-   "role": "Sitemap guardian — keeps sitemaps healthy",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-16",
-   "name": "WebWeaver",
-   "powers": [
-    "Contextual interlinking",
-    "anchor optimization"
-   ],
-   "role": "Interlinker — weaves the network together",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-17",
-   "name": "PixelDiet",
-   "powers": [
-    "Compression",
-    "WebP conversion",
-    "alt text"
-   ],
-   "role": "Image optimizer — lighter images, faster sites",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-18",
-   "name": "SchemaPro",
-   "powers": [
-    "JSON-LD",
-    "rich snippets",
-    "FAQ schema"
-   ],
-   "role": "Schema markup adder for rich results",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-19",
-   "name": "LinkDoc",
-   "powers": [
-    "Broken-link scans",
-    "redirect fixes"
-   ],
-   "role": "Broken-link fixer",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "dept": "webempire",
-   "id": "wb-20",
-   "name": "NicheScout",
-   "powers": [
-    "Demand research",
-    "competition analysis"
-   ],
-   "role": "New-niche scout — finds the next site idea",
-   "schedule": "On demand",
-   "status": "on-demand"
-  },
-  {
-   "id": "yt-01",
-   "name": "BatchBoss",
-   "dept": "youtube",
-   "role": "Weekly batch builder — 140 videos across 4 channels",
-   "schedule": "Daily 01:13 PKT",
-   "status": "active",
-   "cron": "youtube-weekly-batch-builder",
-   "powers": [
-    "Batch planning",
-    "channel rotation",
-    "upload queueing"
-   ]
-  },
-  {
-   "id": "yt-02",
-   "name": "ShortStack",
-   "dept": "youtube",
-   "role": "Daily finance shorts for Money Mysteries USA",
-   "schedule": "Daily 10:13 PKT",
-   "status": "active",
-   "cron": "daily-finance-shorts",
-   "powers": [
-    "Shorts scripting",
-    "finance topics",
-    "voiceover"
-   ]
-  },
-  {
-   "id": "yt-03",
-   "name": "TaleTalk",
-   "dept": "youtube",
-   "role": "Paws & Tales daily community posts",
-   "schedule": "Daily 16:13 PKT",
-   "status": "active",
-   "cron": "paws-tales-community-post",
-   "powers": [
-    "Community posts",
-    "audience engagement"
-   ]
-  },
-  {
-   "id": "yt-04",
-   "name": "StatSheet",
-   "dept": "youtube",
-   "role": "YouTube analytics reporter — views, retention, winners",
-   "schedule": "Weekly Monday",
-   "status": "active",
-   "cron": "youtube-analytics-weekly",
-   "powers": [
-    "Analytics pulls",
-    "winner detection",
-    "retention analysis"
-   ]
-  },
-  {
-   "id": "yt-05",
-   "name": "TitleTune",
-   "dept": "youtube",
-   "role": "Title optimizer for clicks",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "CTR copywriting",
-    "keyword titles"
-   ]
-  },
-  {
-   "id": "yt-06",
-   "name": "DescDraft",
-   "dept": "youtube",
-   "role": "Description writer with SEO",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "SEO descriptions",
-    "timestamps",
-    "links"
-   ]
-  },
-  {
-   "id": "yt-07",
-   "name": "ThumbForge",
-   "dept": "youtube",
-   "role": "Thumbnail designer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Bold thumbnails",
-    "text overlays"
-   ]
-  },
-  {
-   "id": "yt-08",
-   "name": "CommentCrew",
-   "dept": "youtube",
-   "role": "Comment replier",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Reply drafting",
-    "community warmth"
-   ]
-  },
-  {
-   "id": "yt-09",
-   "name": "TrendEye",
-   "dept": "youtube",
-   "role": "Trend spotter — daily trends worth riding",
-   "schedule": "Daily 12:00 PKT",
-   "status": "active",
-   "cron": "trend-spotter-daily",
-   "powers": [
-    "Google Trends",
-    "viral formats",
-    "niche alerts"
-   ]
-  },
-  {
-   "id": "yt-10",
-   "name": "ClipCut",
-   "dept": "youtube",
-   "role": "Shorts cutter from long videos",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Hook extraction",
-    "vertical cuts"
-   ]
-  },
-  {
-   "id": "yt-11",
-   "name": "CopyGuard",
-   "dept": "youtube",
-   "role": "Copyright guardian — keeps uploads violation-free",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Policy checks",
-    "risk flags"
-   ]
-  },
-  {
-   "id": "yt-12",
-   "name": "PlayOrg",
-   "dept": "youtube",
-   "role": "Playlist organizer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Playlist curation",
-    "series ordering"
-   ]
-  },
-  {
-   "id": "fb-01",
-   "name": "PagePilot",
-   "dept": "facebook",
-   "role": "Daily content operation across FB pages",
-   "schedule": "Daily 02:13 PKT",
-   "status": "active",
-   "cron": "daily-content-operation",
-   "powers": [
-    "Daily posts",
-    "page rotation",
-    "scheduling"
-   ]
-  },
-  {
-   "id": "fb-02",
-   "name": "ReelRoute",
-   "dept": "facebook",
-   "role": "Reel scheduler",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Reel queueing",
-    "prime-time slots"
-   ]
-  },
-  {
-   "id": "fb-03",
-   "name": "ChatChamp",
-   "dept": "facebook",
-   "role": "Comment engager",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Reply drafting",
-    "engagement loops"
-   ]
-  },
-  {
-   "id": "fb-04",
-   "name": "GroupGuide",
-   "dept": "facebook",
-   "role": "Group manager",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Group posts",
-    "member engagement"
-   ]
-  },
-  {
-   "id": "fb-05",
-   "name": "AdLab",
-   "dept": "facebook",
-   "role": "Ad creative tester",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Creative variants",
-    "A/B ideas"
-   ]
-  },
-  {
-   "id": "fb-06",
-   "name": "PagePulse",
-   "dept": "facebook",
-   "role": "Page analytics reporter",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Insights pulls",
-    "growth reports"
-   ]
-  },
-  {
-   "id": "fb-07",
-   "name": "FanFare",
-   "dept": "facebook",
-   "role": "Follower welcomer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Welcome posts",
-    "new-fan replies"
-   ]
-  },
-  {
-   "id": "fb-08",
-   "name": "CrossPost",
-   "dept": "facebook",
-   "role": "Cross-poster across pages",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Multi-page distribution"
-   ]
-  },
-  {
-   "id": "fb-09",
-   "name": "EventBuzz",
-   "dept": "facebook",
-   "role": "Event promoter",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Event posts",
-    "RSVP pushes"
-   ]
-  },
-  {
-   "id": "fb-10",
-   "name": "ReviewReply",
-   "dept": "facebook",
-   "role": "Review responder",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Review replies",
-    "reputation care"
-   ]
-  },
-  {
-   "id": "fb-11",
-   "name": "PromoPilot",
-   "dept": "facebook",
-   "role": "Daily service promo posts on business accounts",
-   "schedule": "Daily 17:13 PKT",
-   "status": "active",
-   "cron": "business-promo-daily",
-   "powers": [
-    "Service promos",
-    "offer copy"
-   ]
-  },
-  {
-   "id": "ig-01",
-   "name": "ShowCase",
-   "dept": "social",
-   "role": "NAN Agency IG daily showcase posts",
-   "schedule": "Daily 18:13 PKT",
-   "status": "active",
-   "cron": "nan-agency-ig-daily-showcase",
-   "powers": [
-    "Showcase creatives",
-    "dual-account posting"
-   ]
-  },
-  {
-   "id": "ig-02",
-   "name": "ReelRun",
-   "dept": "social",
-   "role": "Reel scheduler (IG + TikTok)",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Reel queueing",
-    "trend audio"
-   ]
-  },
-  {
-   "id": "ig-03",
-   "name": "TagTrek",
-   "dept": "social",
-   "role": "Hashtag researcher",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Hashtag sets",
-    "reach tags"
-   ]
-  },
-  {
-   "id": "ig-04",
-   "name": "DMDeft",
-   "dept": "social",
-   "role": "DM auto-replier",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "DM templates",
-    "lead capture"
-   ]
-  },
-  {
-   "id": "ig-05",
-   "name": "CommentJet",
-   "dept": "social",
-   "role": "Comment engager",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Witty replies",
-    "engagement"
-   ]
-  },
-  {
-   "id": "ig-06",
-   "name": "StorySpin",
-   "dept": "social",
-   "role": "Story creator",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Story frames",
-    "polls & stickers"
-   ]
-  },
-  {
-   "id": "ig-07",
-   "name": "TrendTwist",
-   "dept": "social",
-   "role": "Trend adapter for her niches",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Trend remixing",
-    "niche fitting"
-   ]
-  },
-  {
-   "id": "ig-08",
-   "name": "StatSnap",
-   "dept": "social",
-   "role": "Analytics reporter",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Insights pulls",
-    "growth notes"
-   ]
-  },
-  {
-   "id": "ig-09",
-   "name": "CollabCatch",
-   "dept": "social",
-   "role": "Collab finder",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Creator discovery",
-    "outreach drafts"
-   ]
-  },
-  {
-   "id": "ig-10",
-   "name": "LinkLoop",
-   "dept": "social",
-   "role": "Bio-link rotator",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Link rotation",
-    "campaign links"
-   ]
-  },
-  {
-   "id": "em-01",
-   "name": "InboxTriage",
-   "dept": "email",
-   "role": "Gmail triage — sorts, labels, drafts replies (both accounts)",
-   "schedule": "Daily 08:30 PKT",
-   "status": "active",
-   "cron": "inbox-triage-daily",
-   "powers": [
-    "Inbox scanning",
-    "priority labels",
-    "reply drafts"
-   ]
-  },
-  {
-   "id": "em-02",
-   "name": "DraftDash",
-   "dept": "email",
-   "role": "Draft writer for any outreach",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Email copywriting",
-    "personalization"
-   ]
-  },
-  {
-   "id": "em-03",
-   "name": "FollowFlow",
-   "dept": "email",
-   "role": "General follow-up sequencer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Nudge sequences",
-    "timing logic"
-   ]
-  },
-  {
-   "id": "em-04",
-   "name": "NewsPen",
-   "dept": "email",
-   "role": "Newsletter writer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Newsletter copy",
-    "subject lines"
-   ]
-  },
-  {
-   "id": "em-05",
-   "name": "ColdCraft",
-   "dept": "email",
-   "role": "Cold-mail personalizer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Research merge",
-    "personalized openers"
-   ]
-  },
-  {
-   "id": "em-06",
-   "name": "ReplyEye",
-   "dept": "email",
-   "role": "Reply detector for campaigns",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Reply classification",
-    "hot-lead flags"
-   ]
-  },
-  {
-   "id": "em-07",
-   "name": "UnsubSweep",
-   "dept": "email",
-   "role": "Unsubscribe cleaner",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "List hygiene",
-    "bounce handling"
-   ]
-  },
-  {
-   "id": "em-08",
-   "name": "SigSet",
-   "dept": "email",
-   "role": "Signature updater",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Signature templates"
-   ]
-  },
-  {
-   "id": "cf-01",
-   "name": "StockGen",
-   "dept": "content",
-   "role": "AI stock images — 10 new photos/day",
-   "schedule": "Daily 06:13 PKT",
-   "status": "active",
-   "cron": "ai-stock-daily",
-   "powers": [
-    "Photorealistic gen",
-    "niche rotation",
-    "Adobe packs"
-   ]
-  },
-  {
-   "id": "cf-02",
-   "name": "PNGPro",
-   "dept": "content",
-   "role": "Transparent PNGs — 8 new/day",
-   "schedule": "Daily 06:13 PKT",
-   "status": "active",
-   "cron": "png-stock-daily",
-   "powers": [
-    "rembg cutouts",
-    "true transparency"
-   ]
-  },
-  {
-   "id": "cf-03",
-   "name": "ScriptSage",
-   "dept": "content",
-   "role": "Script writer for videos",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Hooks",
-    "retention scripts"
-   ]
-  },
-  {
-   "id": "cf-04",
-   "name": "VoiceVault",
-   "dept": "content",
-   "role": "Voiceover artist",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "TTS voiceovers",
-    "multi-voice"
-   ]
-  },
-  {
-   "id": "cf-05",
-   "name": "CutMaster",
-   "dept": "content",
-   "role": "Video editor",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Cuts",
-    "captions",
-    "clean exports"
-   ]
-  },
-  {
-   "id": "cf-06",
-   "name": "MemeMint",
-   "dept": "content",
-   "role": "Meme maker",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Meme formats",
-    "caption wit"
-   ]
-  },
-  {
-   "id": "cf-07",
-   "name": "InfoInk",
-   "dept": "content",
-   "role": "Infographic designer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Data visuals",
-    "layouts"
-   ]
-  },
-  {
-   "id": "cf-08",
-   "name": "CarouselCue",
-   "dept": "content",
-   "role": "Carousel maker",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Slide design",
-    "swipe hooks"
-   ]
-  },
-  {
-   "id": "cf-09",
-   "name": "QuoteCard",
-   "dept": "content",
-   "role": "Quote card designer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Typography cards"
-   ]
-  },
-  {
-   "id": "cf-10",
-   "name": "PodPress",
-   "dept": "content",
-   "role": "Podcast producer",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Episode scripts",
-    "audio assembly"
-   ]
-  },
-  {
-   "id": "cf-11",
-   "name": "PinPress",
-   "dept": "content",
-   "role": "Pinterest pins — 2-3 per board daily",
-   "schedule": "Daily 15:00 PKT",
-   "status": "active",
-   "cron": "pinterest-daily-pins",
-   "powers": [
-    "Pin design",
-    "board SEO"
-   ]
-  },
-  {
-   "id": "cf-12",
-   "name": "PackMan",
-   "dept": "content",
-   "role": "WhatsApp channel daily content pack",
-   "schedule": "Daily 19:13 PKT",
-   "status": "active",
-   "cron": "whatsapp-channel-pack",
-   "powers": [
-    "Daily packs",
-    "captions + links"
-   ]
-  },
-  {
-   "id": "cf-13",
-   "name": "QuoraQuill",
-   "dept": "content",
-   "role": "Quora daily activity — value-first answers",
-   "schedule": "Daily 10:13 PKT",
-   "status": "active",
-   "cron": "quora-daily-activity",
-   "powers": [
-    "Expert answers",
-    "authority building"
-   ]
-  },
-  {
-   "id": "cf-14",
-   "name": "RedditRanger",
-   "dept": "content",
-   "role": "Reddit daily activity — helpful comments",
-   "schedule": "Daily 16:13 PKT",
-   "status": "active",
-   "cron": "reddit-daily-activity",
-   "powers": [
-    "Helpful comments",
-    "zero-promo safety"
-   ]
-  },
-  {
-   "id": "ma-01",
-   "name": "MoneyMap",
-   "dept": "money",
-   "role": "Earnings tracker — weekly income snapshot",
-   "schedule": "Weekly Sunday",
-   "status": "active",
-   "cron": "earnings-tracker-weekly",
-   "powers": [
-    "Revenue logging",
-    "goal vs actual"
-   ]
-  },
-  {
-   "id": "ma-02",
-   "name": "BillBot",
-   "dept": "money",
-   "role": "Invoice generator",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Invoice PDFs",
-    "payment terms"
-   ]
-  },
-  {
-   "id": "ma-03",
-   "name": "PennyPinch",
-   "dept": "money",
-   "role": "Expense logger",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Expense tracking",
-    "categories"
-   ]
-  },
-  {
-   "id": "ma-04",
-   "name": "GoalGauge",
-   "dept": "money",
-   "role": "Goal tracker",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Progress logs",
-    "milestones"
-   ]
-  },
-  {
-   "id": "ma-05",
-   "name": "VaultGuard",
-   "dept": "money",
-   "role": "Backup guardian — weekly site backups",
-   "schedule": "Weekly Monday",
-   "status": "active",
-   "cron": "nidaayesha-weekly-backup",
-   "powers": [
-    "Full mirrors",
-    "offsite copies"
-   ]
-  },
-  {
-   "id": "ma-06",
-   "name": "EuresEye",
-   "dept": "money",
-   "role": "EURES Italy employers-day watch",
-   "schedule": "Every 72 hours",
-   "status": "active",
-   "cron": "eures-employers-day-watch",
-   "powers": [
-    "Registration alerts"
-   ]
-  },
-  {
-   "id": "ma-07",
-   "name": "FlussiFile",
-   "dept": "money",
-   "role": "Italy Flussi watch for Naeem Abbas",
-   "schedule": "Weekly Monday",
-   "status": "active",
-   "cron": "italy-brother-flussi-watch",
-   "powers": [
-    "Quota alerts",
-    "deadline tracking"
-   ]
-  },
-  {
-   "id": "ma-08",
-   "name": "TrafficTally",
-   "dept": "money",
-   "role": "Weekly traffic report across properties",
-   "schedule": "Weekly Monday",
-   "status": "active",
-   "cron": "weekly-traffic-report",
-   "powers": [
-    "Traffic pulls",
-    "winner reports"
-   ]
-  },
-  {
-   "id": "al-01",
-   "name": "PromptPro",
-   "dept": "ailab",
-   "role": "Prompt engineer for every AI task",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Prompt design",
-    "testing loops"
-   ]
-  },
-  {
-   "id": "al-02",
-   "name": "BotBuilder",
-   "dept": "ailab",
-   "role": "New-bot builder — builds bots on order!",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Bot scaffolding",
-    "cron wiring"
-   ]
-  },
-  {
-   "id": "al-03",
-   "name": "FlowFix",
-   "dept": "ailab",
-   "role": "Workflow automator",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Automation design",
-    "glue scripts"
-   ]
-  },
-  {
-   "id": "al-04",
-   "name": "ToolTest",
-   "dept": "ailab",
-   "role": "Tool tester for new platforms",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Smoke tests",
-    "verdicts"
-   ]
-  },
-  {
-   "id": "al-05",
-   "name": "ScoutIQ",
-   "dept": "ailab",
-   "role": "Research scout — demand + competition first",
-   "schedule": "On demand",
-   "status": "on-demand",
-   "powers": [
-    "Market research",
-    "honest verdicts"
-   ]
-  },
-  {
-   "id": "al-06",
-   "name": "JobRadar",
-   "dept": "ailab",
-   "role": "Job offer watch — accepts <=$5k/mo contracts",
-   "schedule": "Every 4 hours",
-   "status": "active",
-   "cron": "job-offer-watch",
-   "powers": [
-    "Offer scanning",
-    "contract filters"
-   ]
-  },
-  {
-   "id": "al-07",
-   "name": "BriefBot",
-   "dept": "ailab",
-   "role": "Morning job briefing + interview prep",
-   "schedule": "Daily 08:13 PKT",
-   "status": "active",
-   "cron": "morning-job-briefing",
-   "powers": [
-    "Job aggregation",
-    "prep notes"
-   ]
-  },
-  {
-   "id": "al-08",
-   "name": "NicheNova",
-   "dept": "ailab",
-   "role": "Weekly viral niche research",
-   "schedule": "Weekly Monday",
-   "status": "active",
-   "cron": "weekly-niche-research",
-   "powers": [
-    "Viral analysis",
-    "niche picks"
-   ]
-  }
- ]
+  "meta": {
+    "generated": "2026-10-19",
+    "name": "NAN Virtual Office",
+    "owner": "Nida Ayesha — NAN Marketing Agency",
+    "tagline": "100+ AI bots working for you, 24/7",
+    "total_bots": 112,
+    "active_bots": 46
+  },
+  "departments": [
+    {
+      "icon": "🔍",
+      "id": "hunters",
+      "name": "Client Hunters"
+    },
+    {
+      "icon": "🌐",
+      "id": "webempire",
+      "name": "Website Empire"
+    },
+    {
+      "icon": "🎬",
+      "id": "youtube",
+      "name": "YouTube"
+    },
+    {
+      "icon": "📘",
+      "id": "facebook",
+      "name": "Facebook"
+    },
+    {
+      "icon": "📸",
+      "id": "social",
+      "name": "Instagram / TikTok"
+    },
+    {
+      "icon": "📧",
+      "id": "email",
+      "name": "Email"
+    },
+    {
+      "icon": "🎨",
+      "id": "content",
+      "name": "Content Factory"
+    },
+    {
+      "icon": "💰",
+      "id": "money",
+      "name": "Money & Admin"
+    },
+    {
+      "icon": "🤖",
+      "id": "ailab",
+      "name": "AI Lab"
+    }
+  ],
+  "bots": [
+    {
+      "cron": "client-hunter-bot",
+      "dept": "hunters",
+      "id": "ch-01",
+      "name": "Hunter Prime",
+      "powers": [
+        "Reddit lead scouting",
+        "web lead mining",
+        "daily pitch drafting"
+      ],
+      "role": "Daily rotating client hunt — hunt, mail, deal, receive",
+      "schedule": "Daily 09:00 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "client-hunter-continuous",
+      "dept": "hunters",
+      "id": "ch-02",
+      "name": "Scout-6H",
+      "powers": [
+        "Social listening",
+        "continuous prospecting"
+      ],
+      "role": "Continuous social + web scouting for fresh prospects",
+      "schedule": "Every 6 hours",
+      "status": "active"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-03",
+      "name": "AppHunter",
+      "powers": [
+        "Demo matching",
+        "industry targeting",
+        "personalized pitches"
+      ],
+      "role": "App-demo client hunter — 50-lead waves per demo app",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-04",
+      "name": "UGCHunter",
+      "powers": [
+        "Brand discovery",
+        "gifting program tracking"
+      ],
+      "role": "UGC & brand-deal hunter for paid collaborations",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-05",
+      "name": "ReelHunter",
+      "powers": [
+        "Ad creative analysis",
+        "video pitch cuts"
+      ],
+      "role": "Video-ads client hunter — brands needing AI video ads",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-06",
+      "name": "PropHunter",
+      "powers": [
+        "Listing analysis",
+        "golden-visa niche targeting"
+      ],
+      "role": "Real-estate client hunter (agencies + golden-visa niche)",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-07",
+      "name": "FoodHunter",
+      "powers": [
+        "Menu research",
+        "no-online-ordering detection"
+      ],
+      "role": "Restaurant & cafe client hunter",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-08",
+      "name": "GlamHunter",
+      "powers": [
+        "Salon audit",
+        "booking-gap detection"
+      ],
+      "role": "Salon, spa & beauty clinic hunter",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-09",
+      "name": "Qualifier",
+      "powers": [
+        "Fit scoring",
+        "budget signals",
+        "red-flag filter"
+      ],
+      "role": "Lead qualifier — scores every lead before outreach",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-10",
+      "name": "PitchWriter",
+      "powers": [
+        "Personalized pitches",
+        "demo linking",
+        "$2,000 CTA framing"
+      ],
+      "role": "Personalized pitch writer for every lead",
+      "schedule": "Weekly Tue 14:00",
+      "status": "active",
+      "cron": "hunters-niche-weekly"
+    },
+    {
+      "cron": "follow-up-sequencer-daily",
+      "dept": "hunters",
+      "id": "ch-11",
+      "name": "FollowUp",
+      "powers": [
+        "Nudge sequencing",
+        "reply detection",
+        "warm re-engagement"
+      ],
+      "role": "Follow-up sequencer — nudges pitched leads that went quiet",
+      "schedule": "Daily 15:00 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "client-inbox-watch",
+      "dept": "hunters",
+      "id": "ch-12",
+      "name": "InboxEye",
+      "powers": [
+        "Cross-inbox monitoring",
+        "priority flagging"
+      ],
+      "role": "Client inbox watcher — catches every reply everywhere",
+      "schedule": "Every 4 hours",
+      "status": "active"
+    },
+    {
+      "cron": "client-reply-watch",
+      "dept": "hunters",
+      "id": "ch-13",
+      "name": "ReplyRadar",
+      "powers": [
+        "Reply detection",
+        "instant alerts"
+      ],
+      "role": "Reply detector — instant alert the moment a client replies",
+      "schedule": "Every 2 hours",
+      "status": "active"
+    },
+    {
+      "dept": "hunters",
+      "id": "ch-14",
+      "name": "DealCloser",
+      "powers": [
+        "Proposal design",
+        "objection handling",
+        "price negotiation"
+      ],
+      "role": "Proposal designer + price negotiator",
+      "schedule": "Weekly Wed 16:00",
+      "status": "active",
+      "cron": "hunters-dealcloser-weekly"
+    },
+    {
+      "cron": "client-fulfillment-bot",
+      "dept": "hunters",
+      "id": "ch-15",
+      "name": "FulfillBot",
+      "powers": [
+        "Task assignment",
+        "delivery tracking",
+        "client updates"
+      ],
+      "role": "Client fulfillment — from signed deal to delivered work",
+      "schedule": "Daily 10:00 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "bluesky-daily-post",
+      "dept": "hunters",
+      "id": "ch-16",
+      "name": "BlueScout",
+      "powers": [
+        "Bluesky posting",
+        "client acquisition copy"
+      ],
+      "role": "Bluesky daily posts for client acquisition",
+      "schedule": "Daily 14:13 PKT",
+      "status": "active"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-01",
+      "name": "SiteForge",
+      "powers": [
+        "NAN templates",
+        "SEO scaffolding",
+        "Surge deploy"
+      ],
+      "role": "New website builder — from idea to live site",
+      "schedule": "Monthly 1st 10:00",
+      "status": "active",
+      "cron": "webempire-niche-monthly"
+    },
+    {
+      "cron": "surge-network-articles-daily",
+      "dept": "webempire",
+      "id": "wb-02",
+      "name": "ArticleMill",
+      "powers": [
+        "Trend topics",
+        "1500-word articles",
+        "auto-publish"
+      ],
+      "role": "Surge network SEO articles — 2 trend-based articles/day",
+      "schedule": "Daily 11:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "muse-daily-seo-articles",
+      "dept": "webempire",
+      "id": "wb-03",
+      "name": "MuseWriter",
+      "powers": [
+        "10 articles/day",
+        "Hostinger affiliate",
+        "NAN CTA"
+      ],
+      "role": "nidaayesha.com SEO articles — 10/day across 5 sites",
+      "schedule": "Daily 06:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "govtjobs-daily-articles",
+      "dept": "webempire",
+      "id": "wb-04",
+      "name": "GovtWriter",
+      "powers": [
+        "25-site rotation",
+        "job niche SEO"
+      ],
+      "role": "Govt-jobs network articles across 25 sites",
+      "schedule": "Daily 06:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "urduportal-daily",
+      "dept": "webempire",
+      "id": "wb-05",
+      "name": "UrduScribe",
+      "powers": [
+        "Fluent Urdu",
+        "news-based topics",
+        "thumbnails"
+      ],
+      "role": "Urdu portal — 1 fresh Urdu article/day",
+      "schedule": "Daily 07:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "detector-site-articles",
+      "dept": "webempire",
+      "id": "wb-06",
+      "name": "DetectorScribe",
+      "powers": [
+        "AI-detection niche",
+        "review content"
+      ],
+      "role": "AI detector site articles",
+      "schedule": "Daily 07:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "surge-network-backlinks-daily",
+      "dept": "webempire",
+      "id": "wb-07",
+      "name": "LinkSmith",
+      "powers": [
+        "White-hat outreach",
+        "owned-property links"
+      ],
+      "role": "Backlink builder — 3 editorial backlinks/day",
+      "schedule": "Daily 10:13 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "backlink-sprint",
+      "dept": "webempire",
+      "id": "wb-08",
+      "name": "LinkSprint",
+      "powers": [
+        "DA/PA targeting",
+        "sprint campaigns"
+      ],
+      "role": "Backlink sprint — DA/PA growth pushes",
+      "schedule": "Every 72 hours",
+      "status": "active"
+    },
+    {
+      "cron": "gsc-rank-monitor-daily",
+      "dept": "webempire",
+      "id": "wb-09",
+      "name": "RankGuard",
+      "powers": [
+        "GSC data pulls",
+        "keyword position tracking",
+        "mover alerts"
+      ],
+      "role": "GSC rank monitor — tracks keyword positions daily",
+      "schedule": "Daily 08:00 PKT",
+      "status": "active"
+    },
+    {
+      "cron": "adsterra-guard-daily",
+      "dept": "webempire",
+      "id": "wb-10",
+      "name": "AdGuardian",
+      "powers": [
+        "Ad-code audits",
+        "policy compliance"
+      ],
+      "role": "Adsterra ad-code guard — keeps every site compliant",
+      "schedule": "Daily 09:13 PKT",
+      "status": "active"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-11",
+      "name": "SpeedDoc",
+      "powers": [
+        "TTFB tuning",
+        "image compression",
+        "lazy-load"
+      ],
+      "role": "Speed optimizer — makes sites load fast",
+      "schedule": "Weekly Sat 09:00",
+      "status": "active",
+      "cron": "webempire-health-weekly"
+    },
+    {
+      "cron": "content-refresher-weekly",
+      "dept": "webempire",
+      "id": "wb-12",
+      "name": "FreshCoat",
+      "powers": [
+        "Article audits",
+        "fact updates",
+        "re-publish"
+      ],
+      "role": "Content refresher — updates stale articles weekly",
+      "schedule": "Weekly Monday",
+      "status": "active"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-13",
+      "name": "KeyMiner",
+      "powers": [
+        "Keyword research",
+        "long-tail mining",
+        "competition check"
+      ],
+      "role": "Keyword researcher for new articles & sites",
+      "schedule": "Weekly Sat 11:00",
+      "status": "active",
+      "cron": "webempire-seo-weekly"
+    },
+    {
+      "cron": "competitor-tracker-weekly",
+      "dept": "webempire",
+      "id": "wb-14",
+      "name": "SpyGlass",
+      "powers": [
+        "Competitor monitoring",
+        "gap analysis",
+        "SERP tracking"
+      ],
+      "role": "Competitor tracker — watches rival sites weekly",
+      "schedule": "Weekly Monday",
+      "status": "active"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-15",
+      "name": "MapKeeper",
+      "powers": [
+        "Sitemap validation",
+        "indexation checks"
+      ],
+      "role": "Sitemap guardian — keeps sitemaps healthy",
+      "schedule": "Weekly Sat 09:00",
+      "status": "active",
+      "cron": "webempire-health-weekly"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-16",
+      "name": "WebWeaver",
+      "powers": [
+        "Contextual interlinking",
+        "anchor optimization"
+      ],
+      "role": "Interlinker — weaves the network together",
+      "schedule": "Weekly Sat 09:00",
+      "status": "active",
+      "cron": "webempire-health-weekly"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-17",
+      "name": "PixelDiet",
+      "powers": [
+        "Compression",
+        "WebP conversion",
+        "alt text"
+      ],
+      "role": "Image optimizer — lighter images, faster sites",
+      "schedule": "Weekly Sat 11:00",
+      "status": "active",
+      "cron": "webempire-seo-weekly"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-18",
+      "name": "SchemaPro",
+      "powers": [
+        "JSON-LD",
+        "rich snippets",
+        "FAQ schema"
+      ],
+      "role": "Schema markup adder for rich results",
+      "schedule": "Weekly Sat 11:00",
+      "status": "active",
+      "cron": "webempire-seo-weekly"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-19",
+      "name": "LinkDoc",
+      "powers": [
+        "Broken-link scans",
+        "redirect fixes"
+      ],
+      "role": "Broken-link fixer",
+      "schedule": "Weekly Sat 09:00",
+      "status": "active",
+      "cron": "webempire-health-weekly"
+    },
+    {
+      "dept": "webempire",
+      "id": "wb-20",
+      "name": "NicheScout",
+      "powers": [
+        "Demand research",
+        "competition analysis"
+      ],
+      "role": "New-niche scout — finds the next site idea",
+      "schedule": "Monthly 1st 10:00",
+      "status": "active",
+      "cron": "webempire-niche-monthly"
+    },
+    {
+      "id": "yt-01",
+      "name": "BatchBoss",
+      "dept": "youtube",
+      "role": "Weekly batch builder — 140 videos across 4 channels",
+      "schedule": "Daily 01:13 PKT",
+      "status": "active",
+      "cron": "youtube-weekly-batch-builder",
+      "powers": [
+        "Batch planning",
+        "channel rotation",
+        "upload queueing"
+      ]
+    },
+    {
+      "id": "yt-02",
+      "name": "ShortStack",
+      "dept": "youtube",
+      "role": "Daily finance shorts for Money Mysteries USA",
+      "schedule": "Daily 10:13 PKT",
+      "status": "active",
+      "cron": "daily-finance-shorts",
+      "powers": [
+        "Shorts scripting",
+        "finance topics",
+        "voiceover"
+      ]
+    },
+    {
+      "id": "yt-03",
+      "name": "TaleTalk",
+      "dept": "youtube",
+      "role": "Paws & Tales daily community posts",
+      "schedule": "Daily 16:13 PKT",
+      "status": "active",
+      "cron": "paws-tales-community-post",
+      "powers": [
+        "Community posts",
+        "audience engagement"
+      ]
+    },
+    {
+      "id": "yt-04",
+      "name": "StatSheet",
+      "dept": "youtube",
+      "role": "YouTube analytics reporter — views, retention, winners",
+      "schedule": "Weekly Monday",
+      "status": "active",
+      "cron": "youtube-analytics-weekly",
+      "powers": [
+        "Analytics pulls",
+        "winner detection",
+        "retention analysis"
+      ]
+    },
+    {
+      "id": "yt-05",
+      "name": "TitleTune",
+      "dept": "youtube",
+      "role": "Title optimizer for clicks",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "CTR copywriting",
+        "keyword titles"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-06",
+      "name": "DescDraft",
+      "dept": "youtube",
+      "role": "Description writer with SEO",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "SEO descriptions",
+        "timestamps",
+        "links"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-07",
+      "name": "ThumbForge",
+      "dept": "youtube",
+      "role": "Thumbnail designer",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "Bold thumbnails",
+        "text overlays"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-08",
+      "name": "CommentCrew",
+      "dept": "youtube",
+      "role": "Comment replier",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "Reply drafting",
+        "community warmth"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-09",
+      "name": "TrendEye",
+      "dept": "youtube",
+      "role": "Trend spotter — daily trends worth riding",
+      "schedule": "Daily 12:00 PKT",
+      "status": "active",
+      "cron": "trend-spotter-daily",
+      "powers": [
+        "Google Trends",
+        "viral formats",
+        "niche alerts"
+      ]
+    },
+    {
+      "id": "yt-10",
+      "name": "ClipCut",
+      "dept": "youtube",
+      "role": "Shorts cutter from long videos",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "Hook extraction",
+        "vertical cuts"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-11",
+      "name": "CopyGuard",
+      "dept": "youtube",
+      "role": "Copyright guardian — keeps uploads violation-free",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "Policy checks",
+        "risk flags"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "yt-12",
+      "name": "PlayOrg",
+      "dept": "youtube",
+      "role": "Playlist organizer",
+      "schedule": "Weekly Sun 14:00",
+      "status": "active",
+      "powers": [
+        "Playlist curation",
+        "series ordering"
+      ],
+      "cron": "youtube-weekly"
+    },
+    {
+      "id": "fb-01",
+      "name": "PagePilot",
+      "dept": "facebook",
+      "role": "Daily content operation across FB pages",
+      "schedule": "Daily 02:13 PKT",
+      "status": "active",
+      "cron": "daily-content-operation",
+      "powers": [
+        "Daily posts",
+        "page rotation",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "fb-02",
+      "name": "ReelRoute",
+      "dept": "facebook",
+      "role": "Reel scheduler",
+      "schedule": "Daily 16:30 PKT",
+      "status": "active",
+      "powers": [
+        "Reel queueing",
+        "prime-time slots"
+      ],
+      "cron": "facebook-engage-daily"
+    },
+    {
+      "id": "fb-03",
+      "name": "ChatChamp",
+      "dept": "facebook",
+      "role": "Comment engager",
+      "schedule": "Daily 16:30 PKT",
+      "status": "active",
+      "powers": [
+        "Reply drafting",
+        "engagement loops"
+      ],
+      "cron": "facebook-engage-daily"
+    },
+    {
+      "id": "fb-04",
+      "name": "GroupGuide",
+      "dept": "facebook",
+      "role": "Group manager",
+      "schedule": "Weekly Fri 15:00",
+      "status": "active",
+      "powers": [
+        "Group posts",
+        "member engagement"
+      ],
+      "cron": "facebook-weekly"
+    },
+    {
+      "id": "fb-05",
+      "name": "AdLab",
+      "dept": "facebook",
+      "role": "Ad creative tester",
+      "schedule": "Weekly Fri 15:00",
+      "status": "active",
+      "powers": [
+        "Creative variants",
+        "A/B ideas"
+      ],
+      "cron": "facebook-weekly"
+    },
+    {
+      "id": "fb-06",
+      "name": "PagePulse",
+      "dept": "facebook",
+      "role": "Page analytics reporter",
+      "schedule": "Weekly Fri 15:00",
+      "status": "active",
+      "powers": [
+        "Insights pulls",
+        "growth reports"
+      ],
+      "cron": "facebook-weekly"
+    },
+    {
+      "id": "fb-07",
+      "name": "FanFare",
+      "dept": "facebook",
+      "role": "Follower welcomer",
+      "schedule": "Weekly Fri 15:00",
+      "status": "active",
+      "powers": [
+        "Welcome posts",
+        "new-fan replies"
+      ],
+      "cron": "facebook-weekly"
+    },
+    {
+      "id": "fb-08",
+      "name": "CrossPost",
+      "dept": "facebook",
+      "role": "Cross-poster across pages",
+      "schedule": "Daily 16:30 PKT",
+      "status": "active",
+      "powers": [
+        "Multi-page distribution"
+      ],
+      "cron": "facebook-engage-daily"
+    },
+    {
+      "id": "fb-09",
+      "name": "EventBuzz",
+      "dept": "facebook",
+      "role": "Event promoter",
+      "schedule": "Daily 16:30 PKT",
+      "status": "active",
+      "powers": [
+        "Event posts",
+        "RSVP pushes"
+      ],
+      "cron": "facebook-engage-daily"
+    },
+    {
+      "id": "fb-10",
+      "name": "ReviewReply",
+      "dept": "facebook",
+      "role": "Review responder",
+      "schedule": "Weekly Fri 15:00",
+      "status": "active",
+      "powers": [
+        "Review replies",
+        "reputation care"
+      ],
+      "cron": "facebook-weekly"
+    },
+    {
+      "id": "fb-11",
+      "name": "PromoPilot",
+      "dept": "facebook",
+      "role": "Daily service promo posts on business accounts",
+      "schedule": "Daily 17:13 PKT",
+      "status": "active",
+      "cron": "business-promo-daily",
+      "powers": [
+        "Service promos",
+        "offer copy"
+      ]
+    },
+    {
+      "id": "ig-01",
+      "name": "ShowCase",
+      "dept": "social",
+      "role": "NAN Agency IG daily showcase posts",
+      "schedule": "Daily 18:13 PKT",
+      "status": "active",
+      "cron": "nan-agency-ig-daily-showcase",
+      "powers": [
+        "Showcase creatives",
+        "dual-account posting"
+      ]
+    },
+    {
+      "id": "ig-02",
+      "name": "ReelRun",
+      "dept": "social",
+      "role": "Reel scheduler (IG + TikTok)",
+      "schedule": "Daily 17:30 PKT",
+      "status": "active",
+      "powers": [
+        "Reel queueing",
+        "trend audio"
+      ],
+      "cron": "social-engage-daily"
+    },
+    {
+      "id": "ig-03",
+      "name": "TagTrek",
+      "dept": "social",
+      "role": "Hashtag researcher",
+      "schedule": "Daily 17:30 PKT",
+      "status": "active",
+      "powers": [
+        "Hashtag sets",
+        "reach tags"
+      ],
+      "cron": "social-engage-daily"
+    },
+    {
+      "id": "ig-04",
+      "name": "DMDeft",
+      "dept": "social",
+      "role": "DM auto-replier",
+      "schedule": "Weekly Fri 17:00",
+      "status": "active",
+      "powers": [
+        "DM templates",
+        "lead capture"
+      ],
+      "cron": "social-weekly"
+    },
+    {
+      "id": "ig-05",
+      "name": "CommentJet",
+      "dept": "social",
+      "role": "Comment engager",
+      "schedule": "Daily 17:30 PKT",
+      "status": "active",
+      "powers": [
+        "Witty replies",
+        "engagement"
+      ],
+      "cron": "social-engage-daily"
+    },
+    {
+      "id": "ig-06",
+      "name": "StorySpin",
+      "dept": "social",
+      "role": "Story creator",
+      "schedule": "Daily 17:30 PKT",
+      "status": "active",
+      "powers": [
+        "Story frames",
+        "polls & stickers"
+      ],
+      "cron": "social-engage-daily"
+    },
+    {
+      "id": "ig-07",
+      "name": "TrendTwist",
+      "dept": "social",
+      "role": "Trend adapter for her niches",
+      "schedule": "Daily 17:30 PKT",
+      "status": "active",
+      "powers": [
+        "Trend remixing",
+        "niche fitting"
+      ],
+      "cron": "social-engage-daily"
+    },
+    {
+      "id": "ig-08",
+      "name": "StatSnap",
+      "dept": "social",
+      "role": "Analytics reporter",
+      "schedule": "Weekly Fri 17:00",
+      "status": "active",
+      "powers": [
+        "Insights pulls",
+        "growth notes"
+      ],
+      "cron": "social-weekly"
+    },
+    {
+      "id": "ig-09",
+      "name": "CollabCatch",
+      "dept": "social",
+      "role": "Collab finder",
+      "schedule": "Weekly Fri 17:00",
+      "status": "active",
+      "powers": [
+        "Creator discovery",
+        "outreach drafts"
+      ],
+      "cron": "social-weekly"
+    },
+    {
+      "id": "ig-10",
+      "name": "LinkLoop",
+      "dept": "social",
+      "role": "Bio-link rotator",
+      "schedule": "Weekly Fri 17:00",
+      "status": "active",
+      "powers": [
+        "Link rotation",
+        "campaign links"
+      ],
+      "cron": "social-weekly"
+    },
+    {
+      "id": "em-01",
+      "name": "InboxTriage",
+      "dept": "email",
+      "role": "Gmail triage — sorts, labels, drafts replies (both accounts)",
+      "schedule": "Daily 08:30 PKT",
+      "status": "active",
+      "cron": "inbox-triage-daily",
+      "powers": [
+        "Inbox scanning",
+        "priority labels",
+        "reply drafts"
+      ]
+    },
+    {
+      "id": "em-02",
+      "name": "DraftDash",
+      "dept": "email",
+      "role": "Draft writer for any outreach",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "Email copywriting",
+        "personalization"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "em-03",
+      "name": "FollowFlow",
+      "dept": "email",
+      "role": "General follow-up sequencer",
+      "schedule": "Daily 15:00 (shared)",
+      "status": "active",
+      "powers": [
+        "Nudge sequences",
+        "timing logic"
+      ],
+      "cron": "follow-up-sequencer-daily"
+    },
+    {
+      "id": "em-04",
+      "name": "NewsPen",
+      "dept": "email",
+      "role": "Newsletter writer",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "Newsletter copy",
+        "subject lines"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "em-05",
+      "name": "ColdCraft",
+      "dept": "email",
+      "role": "Cold-mail personalizer",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "Research merge",
+        "personalized openers"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "em-06",
+      "name": "ReplyEye",
+      "dept": "email",
+      "role": "Reply detector for campaigns",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "Reply classification",
+        "hot-lead flags"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "em-07",
+      "name": "UnsubSweep",
+      "dept": "email",
+      "role": "Unsubscribe cleaner",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "List hygiene",
+        "bounce handling"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "em-08",
+      "name": "SigSet",
+      "dept": "email",
+      "role": "Signature updater",
+      "schedule": "Weekly Thu 10:00",
+      "status": "active",
+      "powers": [
+        "Signature templates"
+      ],
+      "cron": "email-weekly"
+    },
+    {
+      "id": "cf-01",
+      "name": "StockGen",
+      "dept": "content",
+      "role": "AI stock images — 10 new photos/day",
+      "schedule": "Daily 06:13 PKT",
+      "status": "active",
+      "cron": "ai-stock-daily",
+      "powers": [
+        "Photorealistic gen",
+        "niche rotation",
+        "Adobe packs"
+      ]
+    },
+    {
+      "id": "cf-02",
+      "name": "PNGPro",
+      "dept": "content",
+      "role": "Transparent PNGs — 8 new/day",
+      "schedule": "Daily 06:13 PKT",
+      "status": "active",
+      "cron": "png-stock-daily",
+      "powers": [
+        "rembg cutouts",
+        "true transparency"
+      ]
+    },
+    {
+      "id": "cf-03",
+      "name": "ScriptSage",
+      "dept": "content",
+      "role": "Script writer for videos",
+      "schedule": "Weekly Sat 16:00",
+      "status": "active",
+      "powers": [
+        "Hooks",
+        "retention scripts"
+      ],
+      "cron": "content-scripts-weekly"
+    },
+    {
+      "id": "cf-04",
+      "name": "VoiceVault",
+      "dept": "content",
+      "role": "Voiceover artist",
+      "schedule": "Weekly Sat 16:00",
+      "status": "active",
+      "powers": [
+        "TTS voiceovers",
+        "multi-voice"
+      ],
+      "cron": "content-scripts-weekly"
+    },
+    {
+      "id": "cf-05",
+      "name": "CutMaster",
+      "dept": "content",
+      "role": "Video editor",
+      "schedule": "Weekly Sat 16:00",
+      "status": "active",
+      "powers": [
+        "Cuts",
+        "captions",
+        "clean exports"
+      ],
+      "cron": "content-scripts-weekly"
+    },
+    {
+      "id": "cf-06",
+      "name": "MemeMint",
+      "dept": "content",
+      "role": "Meme maker",
+      "schedule": "Weekly Sat 14:00",
+      "status": "active",
+      "powers": [
+        "Meme formats",
+        "caption wit"
+      ],
+      "cron": "content-weekly"
+    },
+    {
+      "id": "cf-07",
+      "name": "InfoInk",
+      "dept": "content",
+      "role": "Infographic designer",
+      "schedule": "Weekly Sat 14:00",
+      "status": "active",
+      "powers": [
+        "Data visuals",
+        "layouts"
+      ],
+      "cron": "content-weekly"
+    },
+    {
+      "id": "cf-08",
+      "name": "CarouselCue",
+      "dept": "content",
+      "role": "Carousel maker",
+      "schedule": "Weekly Sat 14:00",
+      "status": "active",
+      "powers": [
+        "Slide design",
+        "swipe hooks"
+      ],
+      "cron": "content-weekly"
+    },
+    {
+      "id": "cf-09",
+      "name": "QuoteCard",
+      "dept": "content",
+      "role": "Quote card designer",
+      "schedule": "Weekly Sat 14:00",
+      "status": "active",
+      "powers": [
+        "Typography cards"
+      ],
+      "cron": "content-weekly"
+    },
+    {
+      "id": "cf-10",
+      "name": "PodPress",
+      "dept": "content",
+      "role": "Podcast producer",
+      "schedule": "Weekly Sat 14:00",
+      "status": "active",
+      "powers": [
+        "Episode scripts",
+        "audio assembly"
+      ],
+      "cron": "content-weekly"
+    },
+    {
+      "id": "cf-11",
+      "name": "PinPress",
+      "dept": "content",
+      "role": "Pinterest pins — 2-3 per board daily",
+      "schedule": "Daily 15:00 PKT",
+      "status": "active",
+      "cron": "pinterest-daily-pins",
+      "powers": [
+        "Pin design",
+        "board SEO"
+      ]
+    },
+    {
+      "id": "cf-12",
+      "name": "PackMan",
+      "dept": "content",
+      "role": "WhatsApp channel daily content pack",
+      "schedule": "Daily 19:13 PKT",
+      "status": "active",
+      "cron": "whatsapp-channel-pack",
+      "powers": [
+        "Daily packs",
+        "captions + links"
+      ]
+    },
+    {
+      "id": "cf-13",
+      "name": "QuoraQuill",
+      "dept": "content",
+      "role": "Quora daily activity — value-first answers",
+      "schedule": "Daily 10:13 PKT",
+      "status": "active",
+      "cron": "quora-daily-activity",
+      "powers": [
+        "Expert answers",
+        "authority building"
+      ]
+    },
+    {
+      "id": "cf-14",
+      "name": "RedditRanger",
+      "dept": "content",
+      "role": "Reddit daily activity — helpful comments",
+      "schedule": "Daily 16:13 PKT",
+      "status": "active",
+      "cron": "reddit-daily-activity",
+      "powers": [
+        "Helpful comments",
+        "zero-promo safety"
+      ]
+    },
+    {
+      "id": "ma-01",
+      "name": "MoneyMap",
+      "dept": "money",
+      "role": "Earnings tracker — weekly income snapshot",
+      "schedule": "Weekly Sunday",
+      "status": "active",
+      "cron": "earnings-tracker-weekly",
+      "powers": [
+        "Revenue logging",
+        "goal vs actual"
+      ]
+    },
+    {
+      "id": "ma-02",
+      "name": "BillBot",
+      "dept": "money",
+      "role": "Invoice generator",
+      "schedule": "Weekly Sun 20:00",
+      "status": "active",
+      "powers": [
+        "Invoice PDFs",
+        "payment terms"
+      ],
+      "cron": "money-weekly"
+    },
+    {
+      "id": "ma-03",
+      "name": "PennyPinch",
+      "dept": "money",
+      "role": "Expense logger",
+      "schedule": "Weekly Sun 20:00",
+      "status": "active",
+      "powers": [
+        "Expense tracking",
+        "categories"
+      ],
+      "cron": "money-weekly"
+    },
+    {
+      "id": "ma-04",
+      "name": "GoalGauge",
+      "dept": "money",
+      "role": "Goal tracker",
+      "schedule": "Weekly Sun 20:00",
+      "status": "active",
+      "powers": [
+        "Progress logs",
+        "milestones"
+      ],
+      "cron": "money-weekly"
+    },
+    {
+      "id": "ma-05",
+      "name": "VaultGuard",
+      "dept": "money",
+      "role": "Backup guardian — weekly site backups",
+      "schedule": "Weekly Monday",
+      "status": "active",
+      "cron": "nidaayesha-weekly-backup",
+      "powers": [
+        "Full mirrors",
+        "offsite copies"
+      ]
+    },
+    {
+      "id": "ma-06",
+      "name": "EuresEye",
+      "dept": "money",
+      "role": "EURES Italy employers-day watch",
+      "schedule": "Every 72 hours",
+      "status": "active",
+      "cron": "eures-employers-day-watch",
+      "powers": [
+        "Registration alerts"
+      ]
+    },
+    {
+      "id": "ma-07",
+      "name": "FlussiFile",
+      "dept": "money",
+      "role": "Italy Flussi watch for Naeem Abbas",
+      "schedule": "Weekly Monday",
+      "status": "active",
+      "cron": "italy-brother-flussi-watch",
+      "powers": [
+        "Quota alerts",
+        "deadline tracking"
+      ]
+    },
+    {
+      "id": "ma-08",
+      "name": "TrafficTally",
+      "dept": "money",
+      "role": "Weekly traffic report across properties",
+      "schedule": "Weekly Monday",
+      "status": "active",
+      "cron": "weekly-traffic-report",
+      "powers": [
+        "Traffic pulls",
+        "winner reports"
+      ]
+    },
+    {
+      "id": "al-01",
+      "name": "PromptPro",
+      "dept": "ailab",
+      "role": "Prompt engineer for every AI task",
+      "schedule": "Weekly Mon 14:00",
+      "status": "active",
+      "powers": [
+        "Prompt design",
+        "testing loops"
+      ],
+      "cron": "ailab-weekly"
+    },
+    {
+      "id": "al-02",
+      "name": "BotBuilder",
+      "dept": "ailab",
+      "role": "New-bot builder — builds bots on order!",
+      "schedule": "Monthly 1st 15:00",
+      "status": "active",
+      "powers": [
+        "Bot scaffolding",
+        "cron wiring"
+      ],
+      "cron": "ailab-bot-audit-monthly"
+    },
+    {
+      "id": "al-03",
+      "name": "FlowFix",
+      "dept": "ailab",
+      "role": "Workflow automator",
+      "schedule": "Weekly Mon 14:00",
+      "status": "active",
+      "powers": [
+        "Automation design",
+        "glue scripts"
+      ],
+      "cron": "ailab-weekly"
+    },
+    {
+      "id": "al-04",
+      "name": "ToolTest",
+      "dept": "ailab",
+      "role": "Tool tester for new platforms",
+      "schedule": "Weekly Mon 14:00",
+      "status": "active",
+      "powers": [
+        "Smoke tests",
+        "verdicts"
+      ],
+      "cron": "ailab-weekly"
+    },
+    {
+      "id": "al-05",
+      "name": "ScoutIQ",
+      "dept": "ailab",
+      "role": "Research scout — demand + competition first",
+      "schedule": "Weekly Mon 14:00",
+      "status": "active",
+      "powers": [
+        "Market research",
+        "honest verdicts"
+      ],
+      "cron": "ailab-weekly"
+    },
+    {
+      "id": "al-06",
+      "name": "JobRadar",
+      "dept": "ailab",
+      "role": "Job offer watch — accepts <=$5k/mo contracts",
+      "schedule": "Every 4 hours",
+      "status": "active",
+      "cron": "job-offer-watch",
+      "powers": [
+        "Offer scanning",
+        "contract filters"
+      ]
+    },
+    {
+      "id": "al-07",
+      "name": "BriefBot",
+      "dept": "ailab",
+      "role": "Morning job briefing + interview prep",
+      "schedule": "Daily 08:13 PKT",
+      "status": "active",
+      "cron": "morning-job-briefing",
+      "powers": [
+        "Job aggregation",
+        "prep notes"
+      ]
+    },
+    {
+      "id": "al-08",
+      "name": "NicheNova",
+      "dept": "ailab",
+      "role": "Weekly viral niche research",
+      "schedule": "Weekly Monday",
+      "status": "active",
+      "cron": "weekly-niche-research",
+      "powers": [
+        "Viral analysis",
+        "niche picks"
+      ]
+    },
+    {
+      "id": "cf-15",
+      "cron": "ugc-ads-bot",
+      "dept": "content",
+      "name": "ScriptSmith",
+      "role": "Daily UGC ad scripts — 2 scripts/day (hook + script + caption + CTA) from live trends",
+      "schedule": "Daily 09:00 PKT",
+      "status": "active",
+      "powers": [
+        "UGC trend research",
+        "ad script writing",
+        "hook crafting"
+      ]
+    },
+    {
+      "id": "cf-16",
+      "cron": "ai-reels-bot",
+      "dept": "content",
+      "name": "ReelForge",
+      "role": "Daily reel packs — 2 shoot-ready packs/day (concept + shot-list + caption + hashtags) + AI cover images",
+      "schedule": "Daily 10:00 PKT",
+      "status": "active",
+      "powers": [
+        "viral pattern research",
+        "reel pack production",
+        "cover image generation"
+      ]
+    },
+    {
+      "id": "cf-17",
+      "cron": "creator-ads-bot",
+      "dept": "content",
+      "name": "ClientMagnet",
+      "role": "Daily agency ad creative — 1 bold ad image + copy/day, staged as FB draft for one-tap publish (never auto-publishes)",
+      "schedule": "Daily 11:00 PKT",
+      "status": "active",
+      "powers": [
+        "ad creative design",
+        "ad copywriting",
+        "draft staging"
+      ]
+    },
+    {
+      "id": "cf-18",
+      "cron": "product-ads-bot",
+      "dept": "content",
+      "name": "TrendJack",
+      "role": "Daily product ad concept — 1 trending-category reel script + product image/day (portfolio + trend-jacking)",
+      "schedule": "Daily 12:00 PKT",
+      "status": "active",
+      "powers": [
+        "product trend research",
+        "ad script writing",
+        "product imagery"
+      ]
+    },
+    {
+      "id": "cf-19",
+      "cron": "social-manager-bot",
+      "dept": "content",
+      "name": "Conductor",
+      "role": "Daily conductor — schedules image posts, preps video upload slots (held for Nida's OK), sends her ONE daily summary",
+      "schedule": "Daily 13:00 PKT",
+      "status": "active",
+      "powers": [
+        "cross-bot coordination",
+        "post scheduling",
+        "daily reporting"
+      ]
+    }
+  ]
 }
