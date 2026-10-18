@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact Us | Rozana Calculators</title>
+<meta name="description" content="Contact Rozana Calculators — questions and feedback.">
+<link rel="canonical" href="https://nan-rozana-calculators.surge.sh/contact.html">
+<link rel="stylesheet" href="css/app.css">
+<style>
+.page{max-width:560px;margin:0 auto;padding:16px 14px 90px}
+.page .card p,.page .card li{font-size:14px;margin:.55rem 0}
+.page h2{margin-top:1.1rem}
+form.contact-form label{display:block;margin:12px 0 4px}
+form.contact-form input,form.contact-form textarea{width:100%;background:#0b1a30;border:1px solid var(--line);border-radius:10px;color:#fff;font-size:16px;padding:12px}
+form.contact-form .err{color:#fb7185;font-size:12px;margin-top:4px;display:none}
+form.contact-form .err.show{display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">R</div>
+    <h1><span data-en="Rozana Calculators" data-ur="روزانہ کیلکولیٹرز">روزانہ کیلکولیٹرز</span><small data-en="Daily-use Pakistan calculators" data-ur="روزمرہ پاکستان کیلکولیٹرز">روزمرہ پاکستان کیلکولیٹرز</small></h1>
+  </div>
+  <button id="langBtn" aria-label="language">EN</button>
+</header>
+<div class="page">
+<div class="card">
+<h2><span data-en="Contact Us" data-ur="رابطہ کریں">رابطہ کریں</span></h2>
+<!-- ADSENSE_CONTACT_EMAIL_CONFIG: Aireelsegency@gmail.com -->
+<p><span data-en="Questions, feedback, or a correction request? Send us a message below — it opens in your email app addressed to us." data-ur="کوئی سوال، رائے یا تصحیح کی درخواست؟ نیچے پیغام بھیجیں — یہ آپ کے ای میل ایپ میں ہمارے پتے پر کھلے گا۔">کوئی سوال، رائے یا تصحیح کی درخواست؟ نیچے پیغام بھیجیں — یہ آپ کے ای میل ایپ میں ہمارے پتے پر کھلے گا۔</span></p>
+<form class="contact-form" id="contactForm" novalidate>
+<label><span data-en="Your name" data-ur="آپ کا نام">آپ کا نام</span></label><input id="cf-name" type="text" autocomplete="name"><div class="err" id="err-name"><span data-en="Please enter your name." data-ur="براہ کرم اپنا نام لکھیں۔">براہ کرم اپنا نام لکھیں۔</span></div>
+<label><span data-en="Email address" data-ur="ای میل ایڈریس">ای میل ایڈریس</span></label><input id="cf-email" type="email" autocomplete="email"><div class="err" id="err-email"><span data-en="Please enter a valid email address." data-ur="براہ کرم درست ای میل ایڈریس لکھیں۔">براہ کرم درست ای میل ایڈریس لکھیں۔</span></div>
+<label><span data-en="Message" data-ur="پیغام">پیغام</span></label><textarea id="cf-msg" rows="5"></textarea><div class="err" id="err-msg"><span data-en="Please write at least 10 characters." data-ur="براہ کرم کم از کم 10 حروف لکھیں۔">براہ کرم کم از کم 10 حروف لکھیں۔</span></div>
+<button class="btn" type="submit"><span data-en="Send message" data-ur="پیغام بھیجیں">پیغام بھیجیں</span></button>
+</form>
+<script>
+const CONTACT_EMAIL = "Aireelsegency@gmail.com"; /* ADSENSE_CONTACT_EMAIL_CONFIG */
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();
+var ok=true;var name=document.getElementById('cf-name').value.trim();
+var email=document.getElementById('cf-email').value.trim();var msg=document.getElementById('cf-msg').value.trim();
+document.getElementById('err-name').classList.toggle('show',!name);if(!name)ok=false;
+var eok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);document.getElementById('err-email').classList.toggle('show',!eok);if(!eok)ok=false;
+document.getElementById('err-msg').classList.toggle('show',msg.length<10);if(msg.length<10)ok=false;
+if(!ok)return;
+window.location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Rozana Calculators contact from '+name)+'&body='+encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);});
+</script>
+</div>
+</div>
+<footer class="appfoot">
+    <span data-en="Estimates only — not legal advice. Works fully offline." data-ur="صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔">صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔</span><br>NAN
+  <nav style="margin-top:.6rem;font-size:12px"><a href="about.html" data-en="About" data-ur="ہمارے بارے میں">ہمارے بارے میں</a> · <a href="contact.html" data-en="Contact" data-ur="رابطہ کریں">رابطہ کریں</a> · <a href="privacy-policy.html" data-en="Privacy" data-ur="پرائیویسی پالیسی">پرائیویسی پالیسی</a> · <a href="terms.html" data-en="Terms" data-ur="شرائطِ استعمال">شرائطِ استعمال</a> · <a href="disclaimer.html" data-en="Disclaimer" data-ur="اعلانِ لاتعلقی">اعلانِ لاتعلقی</a></nav>
+</footer>
+<script>
+/* standalone bilingual toggle (mirrors www/js/app.js) */
+(function(){
+function setLang(l){
+try{localStorage.setItem('rz_lang',l);}catch(e){}
+document.documentElement.lang=l;
+document.querySelectorAll('[data-en]').forEach(function(el){el.textContent=el.getAttribute(l==='ur'?'data-ur':'data-en');});
+var b=document.getElementById('langBtn');if(b)b.textContent=(l==='ur'?'EN':'اردو');
+document.querySelectorAll('.page .card,footer.appfoot').forEach(function(el){el.classList.toggle('ur',l==='ur');});
+}
+var b=document.getElementById('langBtn');
+if(b)b.addEventListener('click',function(){var cur=document.documentElement.lang==='en'?'en':'ur';setLang(cur==='ur'?'en':'ur');});
+var saved='ur';try{saved=localStorage.getItem('rz_lang')||'ur';}catch(e){}
+setLang(saved);
+})();
+</script>
+</body>
+</html>
