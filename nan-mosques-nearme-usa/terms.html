@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Mosques Near Me USA</title>
+<meta name="description" content="Terms of Service for using Mosques Near Me USA.">
+<link rel="canonical" href="https://nan-mosques-nearme-usa.surge.sh/terms.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Terms of Service — Mosques Near Me USA">
+<meta property="og:url" content="https://nan-mosques-nearme-usa.surge.sh/terms.html">
+<meta property="og:type" content="website">
+<style>
+
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-dark:#0d9488;--bg:#f6faf9;--ink:#1f2937;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-text-size-adjust:100%}
+header{background:var(--navy);color:#fff;padding:.9rem 1rem;position:sticky;top:0;z-index:1000}
+.head-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;gap:.6rem}
+.logo{width:2.1rem;height:2.1rem;border-radius:.6rem;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff}
+.head-inner h1{font-size:1.05rem;margin:0;font-weight:700}
+.head-inner p{margin:0;font-size:.72rem;color:#9fb3c8}
+main{max-width:72rem;margin:0 auto;padding:1rem 1rem 2rem}
+.controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.search-wrap{flex:1 1 220px;position:relative}
+#citySearch{width:100%;padding:.65rem .8rem;border:2px solid #d7e3e0;border-radius:.6rem;font-size:.95rem}
+#citySearch:focus{outline:none;border-color:var(--teal)}
+#suggest{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:1200;display:none;max-height:14rem;overflow:auto}
+#suggest button{display:block;width:100%;text-align:left;padding:.6rem .8rem;border:0;background:#fff;font-size:.88rem;cursor:pointer}
+#suggest button:hover{background:#f0fdfa}
+.btn{padding:.65rem .95rem;border-radius:.6rem;border:0;font-size:.9rem;font-weight:600;cursor:pointer;background:var(--teal);color:#fff}
+.btn:hover{background:var(--teal-dark)}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid #d7e3e0}
+.btn.ghost.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.view-toggle{display:flex;gap:.4rem}
+#statusRow{font-size:.82rem;color:var(--muted);margin:.4rem 0 .6rem;min-height:1.1rem}
+#map{height:62vh;min-height:380px;border-radius:.8rem;overflow:hidden;box-shadow:0 4px 18px rgba(10,22,40,.12);border:1px solid #e5e7eb}
+#listView{display:none}
+.mosque-card{background:#fff;border:1px solid #e5e7eb;border-radius:.7rem;padding:.85rem 1rem;margin-bottom:.6rem;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+.mosque-card h3{margin:0 0 .25rem;font-size:.98rem}
+.mosque-card .addr{font-size:.83rem;color:var(--muted);margin:0 0 .2rem}
+.mosque-card .dist{font-size:.78rem;color:var(--teal-dark);font-weight:700}
+.dir-link{white-space:nowrap;font-size:.83rem;font-weight:700;color:var(--teal-dark);text-decoration:none;border:2px solid var(--teal);border-radius:.5rem;padding:.45rem .7rem}
+.dir-link:hover{background:var(--teal);color:#fff}
+.leaflet-popup-content b{font-size:.92rem}
+.leaflet-popup-content .paddr{font-size:.8rem;color:#555;margin:.25rem 0 .4rem}
+.leaflet-popup-content .pdir{display:inline-block;margin-top:.25rem;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:.82rem;padding:.4rem .7rem;border-radius:.4rem}
+.ad-slot{display:flex;justify-content:center;margin:1.25rem 0;min-height:90px}
+.intro{background:#fff;border:1px solid #e5e7eb;border-radius:.8rem;padding:1rem 1.1rem;margin-top:1.25rem}
+.intro h2{margin-top:0;font-size:1.05rem;color:var(--navy)}
+.intro p{font-size:.9rem;line-height:1.65;color:#374151}
+footer{background:var(--navy);color:#9fb3c8;margin-top:2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a4a 60%,#0d9488 140%);color:#fff;padding:2rem 1rem;text-align:center;border-radius:0 0 1rem 1rem;margin:0 0 1.25rem}
+.hero h2{margin:0 0 .45rem;font-size:1.5rem;letter-spacing:-.01em}
+.hero p{margin:0 auto;color:#cbd5e1;font-size:.95rem;max-width:38rem;line-height:1.55}
+@media(max-width:560px){.hero{padding:1.4rem .9rem}.hero h2{font-size:1.2rem}}
+@media(max-width:560px){#map{height:56vh}.controls .btn{flex:1 1 auto}}
+
+
+.polnav{max-width:72rem;margin:0 auto;padding:1.1rem 1rem .4rem;text-align:center}
+.polnav a{color:#7DD3FC;font-size:.85rem;margin:0 .55rem;text-decoration:none}
+.polnav a:hover{text-decoration:underline}
+.pol h1{font-size:1.45rem;color:var(--navy);margin:0 0 .9rem}
+.pol h2{font-size:1.12rem;color:var(--navy);margin:1.15rem 0 .4rem}
+.pol p,.pol li{font-size:.95rem;color:#334155;margin:.45rem 0}
+.pol ul,.pol ol{padding-inline-start:1.35rem}
+.frow{margin:.65rem 0}
+.frow label{display:block;font-weight:700;font-size:.9rem;margin-bottom:.25rem;color:var(--navy)}
+.frow input,.frow textarea{width:100%;padding:.6rem .7rem;border:1px solid #cbd5e1;border-radius:.5rem;font:inherit;background:#fff}
+.frow textarea{min-height:7.5rem;resize:vertical}
+.ferr{color:#DC2626;font-size:.85rem;min-height:1.2em;margin:.15rem 0 0}
+.fbtn{display:inline-block;background:var(--teal);color:#fff;border:none;border-radius:.55rem;padding:.7rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.4rem}
+.fbtn:hover{filter:brightness(.94)}
+.fok{background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;border-radius:.55rem;padding:.7rem 1rem;margin-top:.8rem;display:none}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <div class="logo">N</div>
+    <div><h1>Mosques Near Me USA</h1><p>Find masjids &amp; Islamic centers across America</p></div>
+  </div>
+</header>
+<main>
+<section class="intro pol">
+<h1>Terms of Service</h1>
+<p>By using <strong>Mosques Near Me USA</strong> (operated by NAN Marketing Agency), you agree to these terms.</p><h2>Acceptable use</h2><ul><li>Use listings for personal, non-commercial lookup; do not scrape, bulk-copy, or republish the directory or map data.</li><li>Do not attempt to disrupt the site, bypass its features, or misuse it in any unlawful way.</li></ul><h2>No warranties</h2><p>The site and its tools are provided <strong>"as is"</strong>, without warranties of any kind. We do not guarantee uninterrupted availability, error-free operation, or the completeness or accuracy of any listing, map, or generated output.</p><h2>Limitation of liability</h2><p>To the fullest extent permitted by law, NAN Marketing Agency is not liable for any loss or damage arising from your use of, or inability to use, this site.</p><h2>Changes</h2><p>We may change these terms; continued use of the site after changes means you accept them.</p><h2>Contact</h2><p>Questions about these terms: <strong>Aireelsegency@gmail.com</strong>.</p>
+</section>
+</main>
+<footer>
+<nav class="polnav" aria-label="Site policies"><a href="about.html">About</a>·<a href="contact.html">Contact</a>·<a href="privacy-policy.html">Privacy Policy</a>·<a href="terms.html">Terms</a>·<a href="disclaimer.html">Disclaimer</a></nav>
+
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid rgba(255,255,255,.08);" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fb3c8;margin:0 0 .6rem;">More from the NAN network</p>
+<p style="font-size:.85rem;line-height:2;color:#9fb3c8;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#cbd5e1;text-decoration:none;">Labour Law Calculators</a> <span style="color:#cbd5e1;text-decoration:none;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#cbd5e1;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#cbd5e1;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#cbd5e1;text-decoration:none;">ROI Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Salary Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Budget Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Loan Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#cbd5e1;text-decoration:none;">Loan Hub</a> <span style="color:#334155;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#cbd5e1;text-decoration:none;">Investment Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#cbd5e1;text-decoration:none;">Tax Hub</a> <span style="color:#334155;">·</span> <a href="https://lifecalc.surge.sh" style="color:#cbd5e1;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div style="max-width:72rem;margin:0 auto;padding:1.25rem 1rem;"><p style="font-size:.8rem;margin:0;">© 2026 NAN — Free tools for everyone. Map data © OpenStreetMap contributors. Listings are indicative; confirm prayer times with the mosque directly.</p></div>
+</footer>
+</body>
+</html>
