@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indonesia Severance Pay Calculator 2026 — UP, UPMK & Termination Compensation</title>
+<meta name="description" content="Free Indonesia severance calculator: estimate your termination package under the Job Creation Law (UU Cipta Kerja) & GR 35/2021 — severance pay (UP), long-service pay (UPMK) and compensation of rights, by termination reason.">
+<link rel="canonical" href="https://nan-id-severance-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Indonesia Severance Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/indonesia-severance-pay-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Indonesia Severance Pay Calculator 2026 (Uang Pesangon)</h1>
+<p class="lede">Estimate your termination package under Indonesia's Job Creation Law (UU Cipta Kerja) and Government Regulation No. 35/2021 — severance pay (UP), long-service pay (UPMK) and compensation of rights (UPH), adjusted for the reason your employment ended.</p>
+<a class="btn hero-cta" href="#calculator">Use the free calculator ↓</a>
+</section>
+
+<div class="panel" id="calculator">
+<h2 style="margin-top:0">Calculate Your Termination Package</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="wage">Monthly wage (IDR) — basic salary + fixed allowances</label>
+<input type="number" id="wage" value="12000000" min="0" step="50000">
+<span class="hint">The "wage" is your basic salary plus fixed allowances. Variable bonuses are excluded.</span></div>
+<div class="field"><label for="years">Years of continuous service</label>
+<input type="number" id="years" value="7.5" min="0" max="50" step="0.5">
+<span class="hint">Long-service pay starts after 3 years. Fractions count (e.g. 7.5).</span></div>
+<div class="field"><label for="reason">Reason the employment ended</label>
+<select id="reason">
+<option value="nocause" data-mult="2">Terminated by employer without cause — 2× UP</option>
+<option value="merger" data-mult="1">Company merger / acquisition — 1× UP</option>
+<option value="efficiency" data-mult="1">Efficiency / downsizing — 1× UP</option>
+<option value="closure-fm" data-mult="0.5">Closure: force majeure or losses for 2+ years — 0.5× UP</option>
+<option value="closure-nl" data-mult="1">Closure: no losses — 1× UP</option>
+<option value="misconduct" data-mult="0.5">Dismissed for employee misconduct — 0.5× UP</option>
+<option value="resign" data-mult="0">Voluntary resignation — no UP (UPMK if 3+ years)</option>
+<option value="death" data-mult="2">Employee death — 2× UP to heirs</option>
+<option value="retire" data-mult="1.75">Retirement — 1.75× UP</option>
+<option value="illness" data-mult="2">Prolonged illness / disability — 2× UP</option>
+</select></div>
+<div class="field"><label for="leave">Unused annual leave days</label>
+<input type="number" id="leave" value="5" min="0" max="60" step="1">
+<span class="hint">Unused annual leave is cashed out at your daily wage (monthly wage ÷ 30).</span></div>
+<button class="btn" onclick="calcSev()">Calculate Package</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<h2>How It Works</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Enter the basics</h3><p>Type your monthly wage and years of service, then choose why the employment ended.</p></div><div class="step"><span class="n">2</span><h3>Multiplier applied</h3><p>The reason for termination sets your severance (UP) multiplier; long-service pay always stays at 1×.</p></div><div class="step"><span class="n">3</span><h3>Full package shown</h3><p>UP, long-service pay, unused leave, the housing/medical allowance and final PPh 21 tax — net and gross.</p></div>
+</div>
+<div class="trust"><span class="tick">✓</span><div><p><strong>Accuracy note.</strong> Based on published summaries of Article 156 of the Manpower Law (as amended by the Job Creation Law) and Government Regulation No. 35/2021. Figures are indicative estimates, not legal or financial advice.</p></div></div>
+
+<script>
+function fmt(n){return 'IDR '+Math.round(n).toLocaleString('en-US');}
+function upMonths(y){
+  if(y<1)return 1; if(y<2)return 2; if(y<3)return 3; if(y<4)return 4;
+  if(y<5)return 5; if(y<6)return 6; if(y<7)return 7; if(y<8)return 8; return 9;
+}
+function upmkMonths(y){
+  if(y<3)return 0;
+  if(y<6)return 2; if(y<9)return 3; if(y<12)return 4;
+  if(y<15)return 5; if(y<18)return 6; if(y<21)return 7; if(y<24)return 8; return 10;
+}
+function finalTax(t){
+  const b1=Math.min(t,50000000), b2=Math.min(Math.max(t-50000000,0),50000000), b3=Math.max(t-100000000,0);
+  return b1*0+b2*0.05+b3*0.15;
+}
+function calcSev(){
+  const w=parseFloat(document.getElementById('wage').value)||0;
+  const y=parseFloat(document.getElementById('years').value)||0;
+  const sel=document.getElementById('reason');
+  const mult=parseFloat(sel.options[sel.selectedIndex].dataset.mult);
+  const leave=parseFloat(document.getElementById('leave').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(w<=0||y<=0){r.innerHTML='<p>Please enter your wage and years of service.</p>';return;}
+  const upM=upMonths(y), upmkM=upmkMonths(y);
+  const up=w*upM*mult, upmk=w*upmkM;
+  const leavePay=leave*(w/30);
+  const housing=0.15*(up+upmk);
+  const uph=leavePay+housing;
+  const gross=up+upmk+uph;
+  const tax=finalTax(gross), net=gross-tax;
+  r.innerHTML='<div class="big">'+fmt(net)+'<small>estimated net package (after final PPh 21 tax)</small></div>'
+  +'<table>'
+  +'<tr><td>Severance pay (UP): '+upM+' mo × '+mult+'×</td><td>'+fmt(up)+'</td></tr>'
+  +'<tr><td>Long-service pay (UPMK): '+upmkM+' mo × 1×</td><td>'+fmt(upmk)+'</td></tr>'
+  +'<tr><td>Unused leave ('+leave+' days × daily wage)</td><td>'+fmt(leavePay)+'</td></tr>'
+  +'<tr><td>Housing & medical allowance (15% of UP+UPMK)</td><td>'+fmt(housing)+'</td></tr>'
+  +'<tr><td><strong>Gross package</strong></td><td><strong>'+fmt(gross)+'</strong></td></tr>'
+  +'<tr><td>Final income tax (PPh 21)</td><td>−'+fmt(tax)+'</td></tr>'
+  +'</table><p class="hint">Multipliers follow GR 35/2021. Tax: 0% on first IDR 50M, 5% on next IDR 50M, 15% above (final PPh 21 on severance).</p>';
+}
+</script>
+<section class="guides-h" id="guides">
+<h2>Guides</h2>
+<div class="guide-card"><div><h3>Indonesia Severance Pay 2026: The Complete Guide to UP, UPMK and Compensation of Rights</h3><p>Indonesia severance pay explained: UP and UPMK tables, termination reason multipliers under GR 35/2021, final PPh 21 tax and worked examples.</p></div>
+<a class="btn" href="articles/indonesia-severance-pay-guide.html">Read the guide</a></div>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How Severance Is Calculated in Indonesia</h2>
+<p>Article 156 of the Manpower Law (as amended by the Job Creation Law, UU Cipta Kerja) plus Government Regulation No. 35 of 2021 sets a three-part termination package:</p>
+<h3>1. Severance Pay (Uang Pesangon — UP)</h3>
+<p>Based on length of service, capped at <strong>9 months of wage</strong>:</p>
+<table>
+<tr><td>Less than 1 year</td><td>1 month's wage</td></tr>
+<tr><td>1 to under 2 years</td><td>2 months</td></tr>
+<tr><td>2 to under 3 years</td><td>3 months</td></tr>
+<tr><td>3 to under 4 years</td><td>4 months</td></tr>
+<tr><td>4 to under 5 years</td><td>5 months</td></tr>
+<tr><td>5 to under 6 years</td><td>6 months</td></tr>
+<tr><td>6 to under 7 years</td><td>7 months</td></tr>
+<tr><td>7 to under 8 years</td><td>8 months</td></tr>
+<tr><td>8 years or more</td><td>9 months</td></tr>
+</table>
+<h3>2. Long-Service Pay (Uang Penghargaan Masa Kerja — UPMK)</h3>
+<p>Paid from <strong>3 years of service</strong> upward, always at 1×, up to <strong>10 months</strong>:</p>
+<table>
+<tr><td>3 to under 6 years</td><td>2 months</td></tr>
+<tr><td>6 to under 9 years</td><td>3 months</td></tr>
+<tr><td>9 to under 12 years</td><td>4 months</td></tr>
+<tr><td>12 to under 15 years</td><td>5 months</td></tr>
+<tr><td>15 to under 18 years</td><td>6 months</td></tr>
+<tr><td>18 to under 21 years</td><td>7 months</td></tr>
+<tr><td>21 to under 24 years</td><td>8 months</td></tr>
+<tr><td>24 years or more</td><td>10 months</td></tr>
+</table>
+<h3>3. Compensation of Rights (Uang Penggantian Hak — UPH)</h3>
+<p>Covers what the worker already earned but has not used:</p>
+<div class="note"><strong>Unused annual leave</strong> cashed at the daily wage (monthly wage ÷ 30) + <strong>housing and medical allowance of 15%</strong> of the total severance and long-service pay + relocation costs where the worker moved cities for the job.</div>
+<h3>Worked Example</h3>
+<p>Monthly wage <strong>IDR 15,000,000</strong>, 10 years of service, terminated by the employer without cause: UP = 9 × 2 = 18 months → IDR 270,000,000; UPMK = 4 months → IDR 60,000,000; housing & medical = 15% × 330,000,000 = IDR 49,500,000. Package before tax ≈ <strong>IDR 379.5M</strong> — about 25.3 months of salary.</p>
+<h2>Why the Reason for Termination Matters</h2>
+<p>GR 35/2021 applies a multiplier to the severance pay (not to long-service pay) depending on why employment ended:</p>
+<table>
+<tr><td>Employer termination without cause</td><td>2× UP</td></tr>
+<tr><td>Merger / acquisition</td><td>1× UP</td></tr>
+<tr><td>Efficiency / downsizing</td><td>1× (some cases 0.5×)</td></tr>
+<tr><td>Closure: force majeure or losses for 2+ years</td><td>0.5× UP</td></tr>
+<tr><td>Closure: no losses</td><td>1× UP</td></tr>
+<tr><td>Employee misconduct</td><td>0.5× UP</td></tr>
+<tr><td>Voluntary resignation</td><td>No UP — UPMK (1×) if 3+ years, plus UPH</td></tr>
+<tr><td>Employee death</td><td>2× UP to heirs</td></tr>
+<tr><td>Retirement</td><td>1.75× UP</td></tr>
+<tr><td>Prolonged illness / disability</td><td>2× UP</td></tr>
+</table>
+<h2>Tax on Severance (PPh 21 Final)</h2>
+<p>Severance packages are subject to a special final income tax, calculated on the lump sum without deducting the standard non-taxable income (PTKP): <strong>0% on the first IDR 50 million, 5% on the next IDR 50 million, 15% on anything above IDR 100 million</strong>.</p>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>I resigned after 5 years with IDR 7M salary. What do I get?</summary><p>No severance pay (UP) on resignation, but you are entitled to long-service pay: 5 years → 2 months × IDR 7M = IDR 14M, plus unused leave and the 15% housing/medical allowance.</p></details>
+<details><summary>Does the employer also pay unemployment support?</summary><p>Under the Job Creation Law, workers also access the JKP unemployment insurance program (Jaminan Kehilangan Pekerjaan), which provides cash benefits and retraining — separate from the employer's severance package.</p></details>
+<details><summary>Do contract (PKWT) workers get severance?</summary><p>Fixed-term PKWT workers get a different compensation: 1 month's wage per 12 months of contract (pro-rata for shorter or longer contracts) when the contract ends — not the UP/UPMK tiers.</p></details>
+<details><summary>What counts as wage for severance?</summary><p>Basic salary plus fixed allowances — the same "one month's wage" concept used for THR. Variable bonuses and commissions are excluded.</p></details>
+<details><summary>Is there a deadline for payment?</summary><p>The full termination settlement should be paid at the end of the employment relationship. Delays can be raised with the local Manpower office (Disnaker) or the Industrial Relations Court (PHI).</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published summaries of Government Regulation No. 35/2021 and the Job Creation Law. Actual entitlement depends on contract terms, collective agreements, wage components, leave records and official interpretation. It is not legal advice — confirm with HR or a labor lawyer.</div>
+</div></main>
+<div class="fcols">
+<div><h4>NAN Indonesia Severance Calculator</h4><p>Free Indonesia severance pay calculator — estimate your UP, UPMK and compensation of rights under UU Cipta Kerja, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p><div><h4>Legal</h4><p><a href="about.html">About Us</a> · <a href="contact.html">Contact</a><br><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><br><a href="disclaimer.html">Disclaimer</a></p></div></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-id-thr-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Indonesia THR Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-us-wep-repeal.surge.sh" style="color:#4b5563;text-decoration:none;">US WEP Repeal Estimator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-steuerklasse-finder.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Tax Class Finder</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
