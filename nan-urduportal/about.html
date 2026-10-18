@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ہمارے بارے میں — NAN اردو پورٹل</title>
+<meta name="description" content="NAN اردو پورٹل کے بارے میں — ہم کون ہیں اور یہ سائٹ کیوں ہے۔">
+<link rel="canonical" href="https://nan-urduportal.surge.sh/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{box-sizing:border-box}
+body{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif;background:#ffffff;color:#444444;margin:0;line-height:2.2}
+a{color:inherit;text-decoration:none}
+.topbar{background:#1a56a8;color:#fff;font-size:.82rem;padding:.35rem 0}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center}
+header{background:#fff;border-bottom:3px solid #1a56a8;padding:.8rem 0 .7rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.logo{width:46px;height:46px;border-radius:10px;background:#1a56a8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.4rem}
+.brand h1{margin:0;font-size:1.6rem;color:#222222}
+.brand p{margin:0;color:#666666;font-size:.85rem}
+nav{background:#fff;border-bottom:1px solid #dddddd}
+nav .wrap{display:flex;gap:1.4rem;overflow-x:auto;padding:.6rem 1rem}
+nav a{color:#1a56a8;font-weight:600;font-size:1rem;white-space:nowrap}
+nav a:hover{color:#13407e}
+.ticker{background:#cc0000;color:#fff;padding:.5rem 0;overflow:hidden}
+.ticker .wrap{display:flex;gap:.8rem;align-items:center}
+.tag{background:#fff;color:#cc0000;font-size:.8rem;font-weight:700;border-radius:6px;padding:.1rem .6rem;white-space:nowrap}
+.tick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.92rem;color:#fff}
+main .wrap{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;padding:1.5rem 1rem}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;margin-bottom:1.8rem}
+.hero a{display:block}
+.hero-main,.hero-side article{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 5px rgba(0,0,0,.07);overflow:hidden;min-height:220px;display:flex;align-items:flex-end}
+.hero-main{min-height:340px}
+.hero-side{display:grid;gap:1rem}
+.hero-txt{padding:1.1rem;width:100%}
+.hero-txt h2{margin:0 0 .3rem;font-size:1.35rem;line-height:2;color:#222222}
+.hero-main .hero-txt h2{font-size:1.7rem}
+.hero-txt p{margin:0;font-size:.9rem;color:#666666}
+.cat{display:inline-block;background:#1a56a8;color:#fff;font-size:.75rem;font-weight:700;border-radius:4px;padding:.05rem .7rem;margin-bottom:.4rem}
+section.block{margin-bottom:2rem}
+section.block:nth-of-type(even){background:#f5f5f5;margin-left:-1rem;margin-right:-1rem;padding:1.2rem 1rem;border-top:1px solid #dddddd;border-bottom:1px solid #dddddd}
+.sec-head{background:#1a56a8;color:#fff;padding:.35rem .9rem;border-radius:4px;margin-bottom:1rem}
+.sec-head h2{margin:0;font-size:1.3rem;color:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;align-items:stretch}
+.card{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column;height:100%}
+.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.card .thumb{height:120px;background:#f5f5f5;color:#1a56a8;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;border-bottom:1px solid #dddddd}
+.card .body{padding:.8rem 1rem;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 .3rem;font-size:1.02rem;line-height:1.9;color:#222222}
+.card p{margin:0;color:#666666;font-size:.85rem;line-height:1.9}
+aside .box{background:#fff;border:1px solid #dddddd;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:0;margin-bottom:1.2rem;overflow:hidden}
+aside .box h3{margin:0;font-size:1.1rem;background:#1a56a8;color:#fff;padding:.4rem .9rem}
+aside .box .boxbody{padding:.8rem 1.1rem}
+ol.pop{margin:0;padding:.2rem 1.1rem .2rem 0;list-style:none;counter-reset:pop}
+ol.pop li{counter-increment:pop;margin-bottom:.55rem;font-size:.92rem;line-height:1.9;display:flex;gap:.6rem;align-items:flex-start}
+ol.pop li::before{content:counter(pop);background:#1a56a8;color:#fff;font-size:.75rem;font-weight:700;min-width:1.5rem;height:1.5rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-top:.45rem;flex-shrink:0}
+ol.pop li a:hover{color:#1a56a8}
+.tool-list{list-style:none;margin:0;padding:0}
+.tool-list li{margin-bottom:.5rem}
+.tool-list a{display:block;background:#f5f5f5;border:1px solid #dddddd;border-radius:6px;padding:.45rem .8rem;font-size:.92rem;color:#222222}
+.tool-list a:hover{border-color:#1a56a8;color:#1a56a8}
+.ad{text-align:center;margin:1.4rem 0;background:#fff;border:1px solid #dddddd;padding:.8rem}
+footer{background:#f5f5f5;color:#555;margin-top:2rem;padding:2rem 0 1rem;font-size:.88rem;border-top:2px solid #dddddd}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-bottom:1.2rem}
+footer h4{color:#222222;margin:0 0 .6rem;font-size:1rem}
+footer a{color:#1a56a8}footer a:hover{color:#13407e}
+.netlinks{font-size:.8rem;color:#777;border-top:1px solid #dddddd;padding-top:.8rem;margin-bottom:.8rem}
+.netlinks a{color:#1a56a8}
+.copy{border-top:1px solid #dddddd;padding-top:.8rem;text-align:center;font-size:.8rem;color:#777}
+@media(max-width:900px){main .wrap{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-main,.hero-side article{position:relative;background-size:cover;background-position:center}
+.hero-main .hero-txt,.hero-side .hero-txt{position:relative;z-index:1}
+.hero-main .hero-txt h2,.hero-main .hero-txt p,.hero-side .hero-txt h2{color:#ffffff;text-shadow:0 1px 5px rgba(0,0,0,.65)}
+.hero-side .cat{background:#cc0000}
+.pop-thumb{width:64px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;border:1px solid #dddddd}
+
+.page-wrap{max-width:46rem;padding:2.4rem 0 3rem}
+.page-wrap h1{font-size:2rem;margin:0 0 .5rem}
+.page-wrap h2{font-size:1.4rem;margin:1.8rem 0 .5rem}
+.page-wrap .lede{font-size:1.1rem;opacity:.85}
+.page-wrap li{margin:.5rem 0}
+.policy-nav a{text-decoration:none}
+form.contact-form{max-width:34rem}
+form.contact-form label{display:block;margin:1rem 0 .35rem;font-weight:700}
+form.contact-form input,form.contact-form textarea{width:100%;padding:.7rem .8rem;border:1px solid #cbd5e1;border-radius:.5rem;font:inherit}
+form.contact-form .err{color:#e11d48;font-size:.85rem;margin-top:.3rem;display:none}
+form.contact-form .err.show{display:block}
+.btn{background:#0A1628;color:#fff;border:0;border-radius:.6rem;padding:.75rem 1.8rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.fbanner{background:#fef3c7;border:1px solid #f59e0b;color:#92400e;border-radius:.6rem;padding:.8rem 1rem;margin:1rem 0;display:none}
+.fbanner.show{display:block}
+.policies-inline{margin-top:2rem;padding-top:1.2rem;border-top:1px solid #e5e7eb;font-size:.92rem}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand"><div class="logo">ن</div><div><h1>NAN اردو پورٹل</h1><p>اردو میں ٹیکنالوجی، رہنمائی اور معلومات</p></div></div></div></header>
+<main><div class="wrap page-wrap">
+<h1>ہمارے بارے میں</h1>
+<p><strong>NAN اردو پورٹل</strong> اردو میں ٹیکنالوجی، فری لانسنگ، اسلامی معلومات اور رہنمائی کا مفت پلیٹ فارم ہے، جسے <strong>NAN Studio</strong> (NAN Marketing Agency کا پروڈکٹ اسٹوڈیو) چلاتا ہے۔</p>
+<h2>ہمارا مشن</h2>
+<p>ہم اردو بولنے والوں کے لیے آسان، قابلِ اعتماد اور مکمل اصل مواد فراہم کرتے ہیں — بغیر کسی اکاؤنٹ یا سائن اپ کے، مکمل مفت۔ ہمارے تمام مضامین خود لکھے جاتے ہیں؛ ہم کسی کا مواد نقل نہیں کرتے۔</p>
+<h2>پرائیویسی پہلے</h2>
+<p>ہمارے مفت ٹولز آپ کے براؤزر میں ہی چلتے ہیں۔ ہم ذاتی ڈیٹا فروخت نہیں کرتے۔ تفصیل کے لیے ہماری <a href="privacy-policy.html">پرائیویسی پالیسی</a> دیکھیں۔</p>
+<p>کوئی سوال یا رائے؟ <a href="contact.html">رابطہ کریں</a> صفحے کے ذریعے ہم سے بات کریں۔</p>
+<p class="policies-inline"><a href="about.html">ہمارے بارے میں</a> · <a href="contact.html">رابطہ کریں</a> · <a href="privacy-policy.html">پرائیویسی پالیسی</a> · <a href="terms.html">شرائطِ استعمال</a> · <a href="disclaimer.html">اعلانِ لاتعلقی</a></p>
+</div></main>
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>NAN اردو پورٹل</h4><p>اردو میں ٹیکنالوجی، رہنمائی اور معلومات کا معتبر ذریعہ۔</p></div>
+<div><h4>سیکشنز</h4><p><a href="#tech">ٹیکنالوجی</a><br><a href="#freelance">فری لانسنگ</a><br><a href="#islam">اسلامی</a><br><a href="#guides">رہنمائی</a></p></div>
+<div><h4>مفت ٹولز</h4><p><a href="https://nan-eobi-calculator.surge.sh">EOBI کیلکولیٹر</a><br><a href="https://nan-labour-calculators.surge.sh">لیبر کیلکولیٹرز</a><br><a href="https://nan-urage-calculator.surge.sh">عمر کیلکولیٹر</a></p></div>
+</div>
+<!--nan-network-links:start-->
+<p class="netlinks">مزید مفت ٹولز: <a href="https://nan-eobi-calculator.surge.sh">EOBI پنشن</a> · <a href="https://nan-labour-calculators.surge.sh">اوور ٹائم</a> · <a href="https://nan-urage-calculator.surge.sh">عمر</a> · <a href="https://nan-aistock.surge.sh">AI تصاویر</a> · <a href="https://nan-pngstock.surge.sh">PNG تصاویر</a> · <a href="https://nan-rozana-calculators.surge.sh">روزانہ کیلکولیٹرز</a></p>
+<!--nan-network-links:end-->
+<div class="copy">© 2026 NAN اردو پورٹل — جملہ حقوق محفوظ ہیں</div>
+</div>
+<nav class="policy-nav" style="margin-top:1rem;font-size:.9rem"><a href="about.html">ہمارے بارے میں</a> · <a href="contact.html">رابطہ کریں</a> · <a href="privacy-policy.html">پرائیویسی پالیسی</a> · <a href="terms.html">شرائطِ استعمال</a> · <a href="disclaimer.html">اعلانِ لاتعلقی</a></nav>
+</footer>
+</body>
+</html>
