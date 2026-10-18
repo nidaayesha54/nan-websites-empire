@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-zakat-calculator.surge.sh/sitemap.xml
