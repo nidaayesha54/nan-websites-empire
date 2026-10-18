@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangladesh Overtime Calculator 2026 — OT Pay per Labour Act</title>
+<meta name="description" content="Free Bangladesh overtime pay calculator: enter your basic salary and overtime hours to compute OT pay at double the ordinary rate under the Bangladesh Labour Act 2006 (÷208 rule).">
+<link rel="canonical" href="https://nan-bd-overtime-calculator.surge.sh/">
+<style>
+:root{--navy:#0A1628;--navy2:#123052;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:linear-gradient(180deg,#0A1628,#0e2240);color:#fff;padding:.85rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(10,22,40,.3)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav{display:flex;align-items:center;flex-wrap:wrap}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1.1rem;font-size:.93rem;font-weight:600;padding:.45rem .1rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#143a63 60%,#0f766e 135%);border-radius:1.1rem;color:#fff;padding:2.4rem 2rem;margin:1.8rem 0;box-shadow:0 14px 34px rgba(10,22,40,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(20,184,166,.18)}
+.hero h1{color:#fff;font-size:2.05rem;margin:0 0 .55rem;line-height:1.25;letter-spacing:-.015em;border:0;padding:0}
+.hero .lede{color:#dbe4f0;font-size:1.07rem;max-width:46rem;margin:0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.15rem}
+.hero-badges span{background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.5);color:#a7f3d0;font-size:.84rem;font-weight:700;padding:.38rem .85rem;border-radius:999px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.panel h2{margin-top:0;border:0;padding:0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;min-height:48px;padding:.65rem .85rem;border:1.5px solid var(--line);border-radius:.55rem;font-size:16px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.18)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;min-height:52px;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;transition:background .15s,transform .1s;box-shadow:0 4px 12px rgba(20,184,166,.35)}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.3rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut);margin-top:.2rem}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line);border-radius:.6rem}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.95rem;background:#fff}
+th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);text-align:left}
+tr:first-child th{background:#f1f5f9;color:var(--navy);font-weight:700}
+tr:nth-child(even) td{background:#f9fafb}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2.4rem;font-size:1.4rem;letter-spacing:-.01em;padding-bottom:.4rem;border-bottom:2px solid #eef2f7}
+h3{color:var(--navy);font-size:1.1rem}
+.steps{margin:2.2rem 0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.4rem}
+.step h3{margin:.15rem 0 .35rem;font-size:1.02rem;border:0;padding:0}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.source-note{background:#f0fdfa;border:1px solid #99f6e4;border-left:4px solid var(--teal);border-radius:.6rem;padding:.9rem 1.1rem;font-size:.9rem;margin:1.6rem 0}
+.guides{margin:2.4rem 0}
+.guide-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:.7rem;padding:1.2rem 1.35rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card a{color:var(--navy);font-weight:700;font-size:1.06rem;text-decoration:none}
+.guide-card a:hover{color:var(--teal-d);text-decoration:underline}
+.guide-card p{margin:.35rem 0 0;font-size:.93rem;color:var(--mut)}
+.faq{margin:1rem 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.15rem;margin:.6rem 0}
+.faq details[open]{box-shadow:0 5px 16px rgba(10,22,40,.08);border-color:#99f6e4}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--teal);font-weight:800;font-size:1.25rem;line-height:1}
+.faq details[open] summary::before{content:"3"}
+.faq details p{color:#4b5563;font-size:.94rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:linear-gradient(180deg,#0A1628,#081120);color:#94a3b8;margin-top:2.5rem;padding:2.2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#fff}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+@media(max-width:720px){
+.calc-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.fcols{grid-template-columns:1fr}
+.hero{padding:1.7rem 1.3rem;margin:1.2rem 0;border-radius:.9rem}
+.hero h1{font-size:1.55rem}
+.hero .lede{font-size:.99rem}
+.btn{width:100%}
+h2{font-size:1.22rem}
+.panel{padding:1.15rem}
+.wrap{padding:0 1rem}
+table{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Overtime Calculator BD</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/bangladesh-overtime-rules-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Bangladesh Overtime Pay Calculator (2026)</h1>
+<p class="lede">Compute your overtime pay in seconds — at <strong>double the ordinary rate</strong> under the Bangladesh Labour Act 2006, using the standard ÷208 hourly conversion.</p>
+<div class="hero-badges"><span>Double the ordinary rate</span><span>Legal hour limits</span><span>Instant calculation</span></div></section>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Overtime Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="basic">Monthly basic salary (BDT)</label>
+<input type="number" id="basic" value="20000" min="0" step="500">
+<span class="hint">Your basic salary for the month (not gross — overtime is based on basic).</span></div>
+<div class="field"><label for="hours">Overtime hours worked (this month)</label>
+<input type="number" id="hours" value="20" min="0" max="500" step="0.5">
+<span class="hint">Total OT hours beyond the normal 8 hours/day or 48 hours/week.</span></div>
+<button class="btn" onclick="calcOT()">Calculate Overtime Pay</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'BDT '+Math.round(n).toLocaleString('en-IN');}
+function calcOT(){
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const hrs=parseFloat(document.getElementById('hours').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(basic<=0||hrs<=0){r.innerHTML='<p>Please enter your basic salary and overtime hours.</p>';return;}
+  const hourly=basic/208, rate=hourly*2, pay=rate*hrs;
+  r.innerHTML='<div class="big">'+fmt(pay)+'<small>overtime pay for '+hrs+' hours</small></div>'
+  +'<div class="table-scroll"><table><tr><td>Hourly wage ('+fmt(basic)+' ÷ 208)</td><td>'+fmt(hourly)+'/hr</td></tr>'
+  +'<tr><td>Overtime rate (double)</td><td>'+fmt(rate)+'/hr</td></tr>'
+  +'<tr><td>Regular month\u2019s basic pay</td><td>'+fmt(basic)+'</td></tr>'
+  +'<tr><td>Month total with overtime</td><td>'+fmt(basic+pay)+'</td></tr></table></div>'
+  +'<p class="hint">Formula: (basic salary ÷ 208) × 2 × overtime hours.</p>';
+}
+</script>
+<section class="steps">
+<h2>How It Works</h2>
+<div class="steps-grid">
+<div class="step"><span class="n">1</span><h3>Enter your monthly pay</h3><p>Your ordinary hourly rate is derived from basic pay.</p></div><div class="step"><span class="n">2</span><h3>Add overtime hours</h3><p>Hours worked beyond the normal 8-hour day.</p></div><div class="step"><span class="n">3</span><h3>See your overtime pay</h3><p>Calculated at double your ordinary hourly rate.</p></div>
+</div>
+<p class="source-note"><strong>Accuracy note:</strong> Overtime is payable at twice the ordinary rate under the Bangladesh Labour Act, 2006.</p>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>Overtime Rules in Bangladesh</h2>
+<p>The standard workweek in Bangladesh is <strong>48 hours</strong> — 8 hours a day over 6 days. Any work beyond that is overtime, payable at <strong>twice the ordinary rate of wages</strong> under the Bangladesh Labour Act, 2006. The accepted conversion is <strong>monthly basic salary ÷ 208</strong> (208 = 26 working days × 8 hours) to find the hourly wage.</p>
+<h2>Overtime Formula</h2>
+<div class="note"><strong>Overtime Pay = (Monthly Basic Salary ÷ 208) × 2 × Overtime Hours</strong><br>
+The hourly wage is your basic salary divided by 208; the overtime rate is double that, multiplied by every OT hour worked.</div>
+<h3>Example</h3>
+<p>Basic salary BDT 20,000, 20 overtime hours: (20,000 ÷ 208) = BDT 96.15/hr; overtime rate = BDT 192.31/hr; total OT pay = 192.31 × 20 = <strong>BDT 3,846</strong>.</p>
+<h2>Legal Limits</h2>
+<ul>
+<li>No worker may work more than <strong>10 hours in a day</strong> including overtime, or <strong>60 hours in a week</strong> including overtime (Section 102).</li>
+<li>Average weekly hours including overtime must not exceed <strong>56 hours</strong> over the year.</li>
+<li>Overtime is calculated on <strong>basic</strong> salary — not gross salary with allowances.</li>
+<li>Employers must keep a record of all overtime hours worked.</li>
+<li>Work beyond 8 hours/day or 48 hours/week automatically counts as overtime.</li>
+</ul>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>What is the overtime rate in Bangladesh?</summary><p><strong>Double (2×) the ordinary rate of wages</strong> under the Bangladesh Labour Act, 2006 — the same for workers in factories, shops and most establishments.</p></details>
+<details><summary>Why divide by 208?</summary><p>208 = 26 working days × 8 hours per month. It is the standard convention to convert a monthly basic salary into an hourly wage for OT computation.</p></details>
+<details><summary>Is overtime paid on gross salary or basic?</summary><p>On <strong>basic salary</strong> — house rent, conveyance, medical and other allowances are not part of the hourly wage base.</p></details>
+<details><summary>How much overtime can I work in a week?</summary><p>A maximum of <strong>60 hours per week</strong> including overtime (so up to 12 OT hours beyond the standard 48), and no more than 10 hours in a single day.</p></details>
+<details><summary>Do managers get overtime?</summary><p>Overtime provisions cover workers under the Labour Act; employees in higher managerial or decision-making positions are generally exempt.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on the Bangladesh Labour Act, 2006 (double-rate overtime, ÷208 conversion). Sector-specific rules (e.g., RMG, EPZ) and company policies may differ. Confirm with your payroll department.</div>
+<section class="guides">
+<h2>Guides</h2>
+<div class="guide-card">
+<div><a href="articles/bangladesh-overtime-rules-guide.html">Bangladesh Overtime Rules: Double Pay, Hour Limits & Your Rights</a>
+<p>Overtime in Bangladesh is paid at double the ordinary rate — learn the legal limits, the calculation formula, and what to do if you're underpaid.</p></div>
+</div>
+</section>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Overtime Calculator BD</h4><p>Free Bangladesh overtime pay calculator — compute double-rate OT pay under the Bangladesh Labour Act 2006 with the official ÷208 formula, limits and FAQs.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Overtime Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p> &middot; <a href="articles/bangladesh-overtime-rules-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">BD Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
