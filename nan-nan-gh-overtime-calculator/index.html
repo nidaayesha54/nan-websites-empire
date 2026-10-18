@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghana Overtime Pay Calculator 2026 — Labour Act (Act 651) Overtime Estimator</title>
+<meta name="description" content="Free Ghana overtime pay calculator: enter your basic salary and extra hours to estimate overtime pay under the Labour Act 2003 (Act 651). Weekday, rest-day and public-holiday multipliers, hourly-rate formula, tax note and FAQs.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ghana Overtime Pay Calculator 2026 — Labour Act (Act 651) Overtime Estimator">
+<meta property="og:description" content="Free Ghana overtime pay calculator: enter your basic salary and extra hours to estimate overtime pay under the Labour Act 2003 (Act 651). Weekday, rest-day and public-holiday multipliers, hourly-rate formula, tax note and FAQs.">
+<meta name="theme-color" content="#0A1628">
+<link rel="canonical" href="https://nan-gh-overtime-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(10,22,40,.25)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2.5rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#123 60%,#0A1628 100%);color:#fff;padding:3rem 0 2.6rem}
+.hero h1{color:#fff;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:.7rem 0 .8rem;letter-spacing:-.02em}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;margin:0 0 1.4rem}
+.eyebrow{display:inline-block;background:rgba(20,184,166,.16);color:#5eead4;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(20,184,166,.4)}
+.hero-cta{display:inline-block;background:var(--teal);color:#fff;font-weight:700;text-decoration:none;padding:.85rem 1.6rem;border-radius:.7rem;box-shadow:0 4px 14px rgba(20,184,166,.35)}
+.hero-cta:hover{background:var(--teal-d)}
+.hero+.wrap{padding-top:2.2rem}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy);letter-spacing:-.01em}
+h2{color:var(--navy);margin:2.4rem 0 .9rem;font-size:1.4rem;letter-spacing:-.01em;padding-left:.7rem;border-left:4px solid var(--teal)}
+h3{color:var(--navy);font-size:1.1rem;margin:1.1rem 0 .5rem}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 4px 18px rgba(10,22,40,.07)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;padding:.75rem .85rem;border:1px solid var(--line);border-radius:.55rem;font-size:1rem;min-height:48px;background:#fff}
+.field input:focus,.field select:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.65rem;padding:.9rem 1.6rem;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;box-shadow:0 3px 10px rgba(20,184,166,.3)}
+.btn:hover{filter:brightness(.94)}
+@media(max-width:720px){.btn{width:100%}}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:1rem;padding:1.4rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.55rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+.steps-wrap{margin:2.2rem 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.2rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.6rem}
+.step h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.guides-wrap{margin:2.4rem 0 0}
+.guides{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(20,184,166,.15)}
+.guide-card h3{margin:.2rem 0 .4rem}
+.guide-card p{margin:0;font-size:.9rem;color:var(--mut)}
+.guide-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-d)}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:.6rem 0;box-shadow:0 1px 6px rgba(10,22,40,.04)}
+.faq summary{font-weight:600;cursor:pointer;list-style:none}
+.faq summary::before{content:'+ ';color:var(--teal);font-weight:800}
+.faq details[open] summary::before{content:'− '}
+.faq summary::-webkit-details-marker{display:none}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.7rem;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.94rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:.6rem;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:#fff;border-radius:.6rem;padding:.6rem 1.1rem;font-weight:600;cursor:pointer;color:var(--mut);min-height:44px}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.last-reviewed{font-size:.82rem;color:var(--mut);margin:2rem 0 0;padding-top:1rem;border-top:1px dashed var(--line)}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Ghana Overtime Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><section class="hero"><div class="wrap"><p class="eyebrow">Ghana · Free calculator · Updated Oct 2026</p>
+<h1>Ghana Overtime Pay Calculator (2026)</h1>
+<p class="lede">Work out what your employer owes you for extra hours under Ghana's Labour Act 2003 (Act 651) — weekday, rest-day and public-holiday hours, all based on your basic salary. Rates are adjustable so they match your contract or collective agreement.</p>
+<a class="hero-cta" href="#calculator">Start calculating ↓</a></div></section><div class="wrap">
+
+<div class="panel" id="calculator">
+<h2 style="margin-top:0">Calculate Your Overtime Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="basic">Monthly basic salary (GH&cent;)</label>
+<input type="number" id="basic" value="3000" min="0" step="100">
+<span class="hint">Overtime is based on basic salary — not allowances or bonuses.</span></div>
+<div class="field"><label for="wd">Weekday overtime hours (after 8h/day)</label>
+<input type="number" id="wd" value="8" min="0" step="0.5"></div>
+<div class="field"><label for="wdRate">Weekday rate multiplier</label>
+<input type="number" id="wdRate" value="1.5" min="1" max="3" step="0.1">
+<span class="hint">Customary practice: 1.5&times; (150%). Adjust to your contract.</span></div>
+<div class="field"><label for="rd">Rest-day hours</label>
+<input type="number" id="rd" value="0" min="0" step="0.5"></div>
+<div class="field"><label for="rdRate">Rest-day rate multiplier</label>
+<input type="number" id="rdRate" value="1.5" min="1" max="3" step="0.1">
+<span class="hint">Common practice: 1.5&times;–2.0&times;. Adjust to your contract.</span></div>
+<div class="field"><label for="ph">Public-holiday hours</label>
+<input type="number" id="ph" value="0" min="0" step="0.5"></div>
+<div class="field"><label for="phRate">Public-holiday rate multiplier</label>
+<input type="number" id="phRate" value="2" min="1" max="3" step="0.1">
+<span class="hint">Common practice: 2.0&times; (200%). Adjust to your contract.</span></div>
+<button class="btn" onclick="calcOT()">Calculate Overtime</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return 'GH\u00A2 '+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+function calcOT(){
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const wd=parseFloat(document.getElementById('wd').value)||0;
+  const rd=parseFloat(document.getElementById('rd').value)||0;
+  const ph=parseFloat(document.getElementById('ph').value)||0;
+  const wdR=parseFloat(document.getElementById('wdRate').value)||1.5;
+  const rdR=parseFloat(document.getElementById('rdRate').value)||1.5;
+  const phR=parseFloat(document.getElementById('phRate').value)||2;
+  const r=document.getElementById('result');r.style.display='block';
+  if(basic<=0){r.innerHTML='<p>Please enter your basic salary.</p>';return;}
+  if(wd===0&&rd===0&&ph===0){r.innerHTML='<p>Enter your overtime hours to see the estimate.</p>';return;}
+  const hourly=basic/26/8;
+  const pW=wd*hourly*wdR, pR=rd*hourly*rdR, pH=ph*hourly*phR;
+  const total=pW+pR+pH;
+  r.innerHTML='<div class="big">'+fmt(total)+'<small>TOTAL ESTIMATED OVERTIME PAY</small></div>'
+  +'<table><tr><td>Hourly rate (basic &divide; 26 &divide; 8)</td><td>'+fmt(hourly)+'</td></tr>'
+  +'<tr><td>Weekday overtime — '+wd+'h &times; '+wdR+'&times;</td><td>'+fmt(pW)+'</td></tr>'
+  +'<tr><td>Rest-day overtime — '+rd+'h &times; '+rdR+'&times;</td><td>'+fmt(pR)+'</td></tr>'
+  +'<tr><td>Public-holiday overtime — '+ph+'h &times; '+phR+'&times;</td><td>'+fmt(pH)+'</td></tr></table>'
+  +'<p class="hint">Tax note: overtime pay up to 50% of your monthly basic salary is taxed at a flat 5% under GRA practice. Indicative estimate only — check your payslip and contract.</p>';
+}
+</script>
+<section class="steps-wrap"><h2>How it works</h2><div class="steps"><div class="step"><span class="step-num">1</span><h3>Enter your basic salary</h3><p>Your monthly basic pay in Ghana cedis.</p></div><div class="step"><span class="step-num">2</span><h3>Add overtime hours</h3><p>Weekday, rest-day and public-holiday overtime hours, with each rate multiplier.</p></div><div class="step"><span class="step-num">3</span><h3>See your overtime pay</h3><p>A full breakdown by category plus your total overtime for the period.</p></div></div></section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>Ghana Overtime Rules at a Glance</h2>
+<ul>
+<li><strong>Normal working hours:</strong> 8 hours per day and 40 hours per week (&sect;33–38, Labour Act 2003, Act 651). Anything beyond is overtime.</li>
+<li><strong>The Act does not fix a statutory rate.</strong> Your employer must fix the overtime rate and make it known to you <em>before</em> you work overtime — no one can compel you to work overtime where no rate has been fixed.</li>
+<li><strong>Customary practice:</strong> 150% (1.5&times;) of the normal hourly rate for weekday overtime; rest-day and public-holiday work is commonly paid at 150%–200%, with 200% standard for casual/temporary workers on public holidays (&sect;77).</li>
+<li><strong>Hourly rate:</strong> monthly basic salary &divide; 26 working days &divide; 8 hours — the common Ghana payroll convention.</li>
+<li><strong>Pregnant women</strong> and mothers of children under 8 months may not be asked to work overtime without their express consent.</li>
+<li><strong>Emergencies</strong> (accidents threatening lives or the survival of the business) are the only case where overtime may legally be required without extra pay.</li>
+<li><strong>Tax:</strong> overtime up to 50% of your monthly basic salary is taxed at a flat 5%; anything above that falls under normal progressive PAYE.</li>
+<li><strong>Unpaid overtime?</strong> File a complaint with the National Labour Commission (NLC), which can order your employer to pay.</li>
+</ul>
+<div class="note"><strong>Example:</strong> basic salary GH&cent;3,000 &rarr; hourly rate = 3,000 &divide; 26 &divide; 8 = <strong>GH&cent;14.42</strong>.<br>
+8 weekday overtime hours at 1.5&times;: 14.42 &times; 1.5 &times; 8 = <strong>GH&cent;173.08</strong><br>
+4 public-holiday hours at 2.0&times;: 14.42 &times; 2.0 &times; 4 = <strong>GH&cent;115.38</strong></div>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Does Ghana's Labour Act set the overtime rate?</summary><p>No. The Act (&#167;33–38) sets 8 hours/day and 40 hours/week as normal working hours, but leaves the overtime rate to be fixed by the employer — it must be set and communicated before the overtime is worked. 150% of the hourly rate is the widespread customary practice.</p></details>
+<details><summary>How is my hourly overtime rate calculated?</summary><p>The common Ghana payroll convention is: monthly basic salary &divide; 26 working days &divide; 8 hours. Your employer may use a slightly different divisor — check your payslip.</p></details>
+<details><summary>What is the rate for rest days and public holidays?</summary><p>There is no statutory rate for permanent workers — it is negotiated, with 150%–200% common. For casual and temporary workers, work on a public holiday is legally set at 200% of the normal rate (&#167;77).</p></details>
+<details><summary>Is overtime taxed in Ghana?</summary><p>Yes. Overtime pay up to 50% of your monthly basic salary is taxed at a flat 5%; amounts above that are taxed under the normal progressive PAYE bands.</p></details>
+<details><summary>Can my employer force me to work overtime?</summary><p>No — you cannot be compelled to work overtime except where the viability of the business requires it, or in emergencies threatening life or property. And if no overtime rate has been fixed and disclosed, overtime cannot be required at all.</p></details>
+<details><summary>What if my employer refuses to pay overtime?</summary><p>Report to the National Labour Commission (NLC). Labour inspectors can also visit workplaces to enforce hours-of-work and wage provisions under the Act.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate only. Ghana's Labour Act 2003 (Act 651) does not fix a statutory overtime rate — default multipliers reflect widely published payroll practice and Ghana Law Hub guidance. Actual pay depends on your contract, collective agreement and company policy. This is not legal advice.</div>
+<p class="hint">Sources: Labour Act 2003 (Act 651), &sect;33–38 and &sect;77; Ghana Law Hub overtime remuneration guide; mywage.org/ghana labour-law compensation page; WageIndicator Ghana.</p>
+</div></main>
+<section class="guides-wrap" id="guides"><h2>Guides</h2><div class="guides" id="guidesList"><a class="guide-card" href="articles/ghana-overtime-pay-rules-guide.html"><span class="guide-tag">Guide</span><h3>Ghana Overtime Pay Rules Explained</h3><p>What Labour Act 2003 (Act 651) says about overtime: rates, the hourly-rate formula and your rights.</p></a></div></section>
+<p class="last-reviewed">Last reviewed: 17 October 2026. Figures shown are indicative estimates — always confirm with the official source for your exact case.</p>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Ghana Overtime Calculator</h4><p>Free Ghana overtime pay calculator for workers — estimate your overtime under the Labour Act 2003 (Act 651), with weekday, rest-day and public-holiday rates.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-gh-ecg-prepaid-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Ghana ECG Prepaid Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">&copy; 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
