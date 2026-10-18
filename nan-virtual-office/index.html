@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAN Virtual Office — 107 AI Bots Working 24/7</title>
+<meta name="description" content="The NAN Marketing Agency virtual office: 107 AI bots across 9 departments working around the clock.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>🏢 NAN Virtual Office</h1>
+    <p class="subtitle">NAN Marketing Agency&rsquo;s AI team — working 24/7</p>
+    <div class="clock-line">
+      <span class="clock" id="pktClock">--:--:--</span>
+      <span class="tz">PKT &bull; Lahore</span>
+      <span class="live-dot" aria-hidden="true"></span><span class="live-text">LIVE</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" id="stats" aria-label="Office statistics"></section>
+
+  <section class="controls">
+    <div class="dept-filters" id="deptFilters" role="tablist" aria-label="Department filter"></div>
+    <input type="search" id="searchBox" class="search" placeholder="🔎 Search bots by name or role…" aria-label="Search bots">
+  </section>
+
+  <section id="departments" aria-live="polite"></section>
+  <p class="no-results" id="noResults" hidden>No bots match your search. Try a different keyword.</p>
+</main>
+
+<footer>
+  Built by NAN Marketing Agency &bull; <span id="footCount">100+</span> bots strong
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
