@@ -2,4 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/articles/24-hour-pharmacy-guide-usa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nan-pharmacy-24h-nearme-usa.surge.sh/disclaimer.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
