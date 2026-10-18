@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Disclaimer | Rozana Calculators</title>
+<meta name="description" content="Disclaimer for Rozana Calculators — estimates, not official figures.">
+<link rel="canonical" href="https://nan-rozana-calculators.surge.sh/disclaimer.html">
+<link rel="stylesheet" href="css/app.css">
+<style>
+.page{max-width:560px;margin:0 auto;padding:16px 14px 90px}
+.page .card p,.page .card li{font-size:14px;margin:.55rem 0}
+.page h2{margin-top:1.1rem}
+form.contact-form label{display:block;margin:12px 0 4px}
+form.contact-form input,form.contact-form textarea{width:100%;background:#0b1a30;border:1px solid var(--line);border-radius:10px;color:#fff;font-size:16px;padding:12px}
+form.contact-form .err{color:#fb7185;font-size:12px;margin-top:4px;display:none}
+form.contact-form .err.show{display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">R</div>
+    <h1><span data-en="Rozana Calculators" data-ur="روزانہ کیلکولیٹرز">روزانہ کیلکولیٹرز</span><small data-en="Daily-use Pakistan calculators" data-ur="روزمرہ پاکستان کیلکولیٹرز">روزمرہ پاکستان کیلکولیٹرز</small></h1>
+  </div>
+  <button id="langBtn" aria-label="language">EN</button>
+</header>
+<div class="page">
+<div class="card">
+<h2><span data-en="Disclaimer" data-ur="اعلانِ لاتعلقی">اعلانِ لاتعلقی</span></h2>
+<p><span data-en="Last updated: 2026-10-18" data-ur="آخری اپڈیٹ: 2026-10-18">آخری اپڈیٹ: 2026-10-18</span></p>
+<p><span data-en="Calculator outputs are approximate estimates, not official EOBI, tax, salary, or legal figures. Laws, rates, and rules change — always verify important numbers with an official source or a qualified professional." data-ur="کیلکولیٹرز کے نتائج صرف تخمینے ہیں، EOBI، ٹیکس، تنخواہ یا قانونی سرکاری اعداد و شمار نہیں۔ قوانین اور شرحیں بدلتی رہتی ہیں — اہم اعداد ہمیشہ سرکاری ذریعے یا ماہر سے تصدیق کریں۔">کیلکولیٹرز کے نتائج صرف تخمینے ہیں، EOBI، ٹیکس، تنخواہ یا قانونی سرکاری اعداد و شمار نہیں۔ قوانین اور شرحیں بدلتی رہتی ہیں — اہم اعداد ہمیشہ سرکاری ذریعے یا ماہر سے تصدیق کریں۔</span></p>
+<p><span data-en="Nothing here is legal, financial, or tax advice. Use your own judgment; see the Terms of Service." data-ur="یہاں کچھ بھی قانونی، مالی یا ٹیکس مشورہ نہیں۔ اپنی صوابدید استعمال کریں؛ شرائطِ استعمال دیکھیں۔">یہاں کچھ بھی قانونی، مالی یا ٹیکس مشورہ نہیں۔ اپنی صوابدید استعمال کریں؛ شرائطِ استعمال دیکھیں۔</span></p>
+</div>
+</div>
+<footer class="appfoot">
+    <span data-en="Estimates only — not legal advice. Works fully offline." data-ur="صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔">صرف تخمینہ — قانونی مشورہ نہیں۔ مکمل آف لائن کام کرتی ہے۔</span><br>NAN
+  <nav style="margin-top:.6rem;font-size:12px"><a href="about.html" data-en="About" data-ur="ہمارے بارے میں">ہمارے بارے میں</a> · <a href="contact.html" data-en="Contact" data-ur="رابطہ کریں">رابطہ کریں</a> · <a href="privacy-policy.html" data-en="Privacy" data-ur="پرائیویسی پالیسی">پرائیویسی پالیسی</a> · <a href="terms.html" data-en="Terms" data-ur="شرائطِ استعمال">شرائطِ استعمال</a> · <a href="disclaimer.html" data-en="Disclaimer" data-ur="اعلانِ لاتعلقی">اعلانِ لاتعلقی</a></nav>
+</footer>
+<script>
+/* standalone bilingual toggle (mirrors www/js/app.js) */
+(function(){
+function setLang(l){
+try{localStorage.setItem('rz_lang',l);}catch(e){}
+document.documentElement.lang=l;
+document.querySelectorAll('[data-en]').forEach(function(el){el.textContent=el.getAttribute(l==='ur'?'data-ur':'data-en');});
+var b=document.getElementById('langBtn');if(b)b.textContent=(l==='ur'?'EN':'اردو');
+document.querySelectorAll('.page .card,footer.appfoot').forEach(function(el){el.classList.toggle('ur',l==='ur');});
+}
+var b=document.getElementById('langBtn');
+if(b)b.addEventListener('click',function(){var cur=document.documentElement.lang==='en'?'en':'ur';setLang(cur==='ur'?'en':'ur');});
+var saved='ur';try{saved=localStorage.getItem('rz_lang')||'ur';}catch(e){}
+setLang(saved);
+})();
+</script>
+</body>
+</html>
