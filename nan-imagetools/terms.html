@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — NAN Image Tools</title>
+<meta name="description" content="Terms of Service for using NAN Image Tools.">
+<link rel="canonical" href="https://nan-imagetools.surge.sh/terms.html">
+
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.tab{background:var(--card);border:1px solid var(--line);border-radius:.7rem .7rem 0 0;padding:.8rem 1.3rem;font-weight:700;cursor:pointer;color:var(--mut);border-bottom:0;font-size:1rem}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:0 .9rem .9rem .9rem;padding:1.4rem;margin:0 0 1.4rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.drop{border:2px dashed #94a3b8;border-radius:.8rem;padding:2.2rem 1rem;text-align:center;color:var(--mut);cursor:pointer;transition:.15s;background:#f8fafc}
+.drop:hover,.drop.over{border-color:var(--teal);background:#ecfdf5;color:var(--ink)}
+.drop .big{font-size:2rem}
+.prev{display:none;align-items:center;gap:.8rem;margin:1rem 0;background:#f8fafc;border:1px solid var(--line);border-radius:.6rem;padding:.6rem}
+.prev img{width:72px;height:72px;object-fit:cover;border-radius:.4rem;border:1px solid var(--line)}
+.prev .nm{font-weight:700;font-size:.95rem}
+.mut{color:var(--mut);font-size:.88rem}
+.stats{display:none;gap:1.8rem;margin:1rem 0;flex-wrap:wrap}
+.stat b{display:block;font-size:1.4rem;color:var(--navy)}
+.stat span{font-size:.85rem;color:var(--mut)}
+.stat .save b{color:var(--teal)}
+.field{margin:.9rem 0}.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field select,.field input[type=number]{padding:.6rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem;background:#fff}
+.qrow{display:flex;align-items:center;gap:.8rem;margin:.9rem 0}
+.qrow label{font-weight:600;white-space:nowrap}
+.qrow input[type=range]{flex:1;accent-color:var(--teal)}
+.qrow .qv{font-weight:800;color:var(--navy);min-width:3rem;text-align:right}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:.8rem}
+.btn:hover{filter:brightness(.94)}.btn:disabled{opacity:.55;cursor:wait}
+.btn.ghost{background:#e2e8f0;color:var(--navy);padding:.5rem 1rem;font-size:.9rem;margin:.25rem .25rem 0 0}
+.progress{height:.7rem;background:#e2e8f0;border-radius:1rem;overflow:hidden;margin:1rem 0;display:none}
+.progress>div{height:100%;width:0;background:var(--teal);transition:width .2s}
+.dl{display:none;margin:1rem 0;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.8rem;padding:1rem 1.2rem}
+.dl a{font-weight:800;color:var(--navy);font-size:1.05rem}
+.resline{display:none;margin:.8rem 0;font-weight:700;color:var(--navy)}
+.privacy{background:#eff6ff;border:1px solid #bfdbfe;border-radius:.8rem;padding:1rem 1.2rem;margin:1.6rem 0;font-size:.95rem}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+section.guides ul{line-height:2}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a{margin-left:0;margin-right:1rem}
+[dir="rtl"] .qrow .qv{text-align:left}
+
+.page-wrap{max-width:44rem;padding:2rem 0 3rem}
+.page-wrap h1{font-size:1.9rem;margin:0 0 .4rem}
+.page-wrap h2{font-size:1.25rem;margin:1.6rem 0 .4rem}
+.page-wrap .lede{font-size:1.05rem;opacity:.85}
+.page-wrap li{margin:.4rem 0}
+.policies-inline{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--line,#e5e7eb);font-size:.9rem}
+.policies-inline a{text-decoration:none}
+form.contact-form{max-width:32rem}
+form.contact-form label{display:block;margin:1rem 0 .35rem;font-weight:600}
+form.contact-form input,form.contact-form textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line,#cbd5e1);border-radius:.5rem;font:inherit;background:var(--card,#fff);color:inherit}
+form.contact-form .err{color:#e11d48;font-size:.85rem;margin-top:.3rem;display:none}
+form.contact-form .err.show{display:block}
+.fbanner{background:#fef3c7;border:1px solid #f59e0b;color:#92400e;border-radius:.6rem;padding:.8rem 1rem;margin:1rem 0;display:none}
+.fbanner.show{display:block}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Image Tools</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/compress-image-online-resize-convert-guide.html" data-i18n="nav_guide">Guide</a><button class="langbtn" id="langToggle" onclick="toggleLang()">اردو</button></nav>
+</div></header>
+<main><div class="wrap page-wrap"><h1>Terms of Service</h1><p class="lede">Last updated: 2026-10-18. By using NAN Image Tools, you agree to these terms.</p><h2>Use of the service</h2><p>The tools and content on this site are provided free of charge for personal and lawful use. Where a license is stated (for example, image downloads), you must follow that license, including any attribution requirement.</p><h2>Acceptable use</h2><ul><li>Do not use this site for any unlawful purpose or in violation of any applicable law.</li><li>Do not attempt to disrupt the site, probe it for vulnerabilities, or scrape it at abusive rates.</li><li>Do not misrepresent AI-generated content as real photography of real people or events.</li></ul><h2>No warranties</h2><p>The site and its tools are provided <strong>"as is"</strong>, without warranties of any kind, express or implied. We do not guarantee that tools will be error-free, uninterrupted, or fit for any particular purpose.</p><h2>Limitation of liability</h2><p>To the maximum extent permitted by law, NAN Studio / NAN Marketing Agency is not liable for any loss or damage arising from your use of (or inability to use) this site.</p><h2>Changes</h2><p>We may update these terms from time to time; continued use of the site means you accept the updated terms. Questions? Use our <a href="contact.html">Contact page</a>.</p><p class="policies-inline"><a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="disclaimer.html">Disclaimer</a></p></div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Image Tools</h4><p data-i18n="foot">Free online image tools — compress, resize and convert images. Private, fast, no signup.</p></div>
+<div><h4 data-i18n="tools_h">Tools</h4><p><a href="index.html">Image Tools</a><br><a href="articles/compress-image-online-resize-convert-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">NAN Urdu Portal</a> <span style="color:#334155;">·</span> <a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-rozana-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Rozana Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#94a3b8;text-decoration:none;">Labour Law Calculators</a> <span style="color:#334155;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">EOBI Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#94a3b8;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#334155;">·</span> <a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">NAN PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-mosques-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Mosques Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-laundromats-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Laundromats Near Me USA</a> <span style="color:#334155;">·</span> <a href="https://nan-carwash-nearme-usa.surge.sh" style="color:#94a3b8;text-decoration:none;">Car Wash Near Me USA</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+
+<nav class="policy-nav" style="margin-top:1rem;font-size:.85rem;opacity:.85"><a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="disclaimer.html">Disclaimer</a></nav>
+</footer>
+</body>
+</html>
