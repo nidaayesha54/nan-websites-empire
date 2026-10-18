@@ -234,7 +234,7 @@
     }
     function onChip(label, key) {
       addMsg(label, 'user');
-      lang = detectLang(label);
+      // keep the greeting language (Roman Urdu default) — don't re-detect from English chip labels
       botSay(R[key][lang]);
       setTimeout(function () { botSay(R.ask_contact[lang]); awaitingContact = true; }, 2200);
     }
