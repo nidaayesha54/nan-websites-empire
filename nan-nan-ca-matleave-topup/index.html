@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maternity Leave Top-Up Calculator Canada 2026 — EI + Employer Top-Up Income Planner</title>
+<meta name="description" content="Free Canada maternity leave top-up calculator: estimate your EI benefits (2026 rates), add your employer top-up, and see your total income and pay gap on parental leave. Standard vs extended compared.">
+<link rel="canonical" href="https://nan-ca-matleave-topup.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.check{display:flex;align-items:center;gap:.6rem;margin:.9rem 0;font-weight:600}
+.check input{width:1.15rem;height:1.15rem}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Mat Leave Top-Up Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero">
+<span class="hero-badge">EI 2026 rates · $68,900 max insurable</span>
+<h1>Canada Maternity Leave Top-Up Calculator (2026)</h1>
+<p class="lede">See exactly how much money you'll have on parental leave: your EI benefit, your employer top-up, your total income — and the gap to save for. No sign-up, free.</p>
+<div class="hero-chips"><span>55% / 33% benefit rates</span><span>Standard vs extended</span><span>Free</span></div>
+</section>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your Leave Income</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="salary">Annual gross salary (CAD $)</label>
+<input type="number" id="salary" value="80000" min="0" step="1000">
+<span class="hint">Your normal yearly pay before deductions.</span></div>
+<div class="field"><label for="plan">EI benefit option</label>
+<select id="plan">
+<option value="standard">Standard — 55% for up to 12 months</option>
+<option value="extended">Extended — 33% for up to 18 months</option>
+</select></div>
+<div class="check"><input type="checkbox" id="birth" checked> <label for="birth">I am the birth parent (15 weeks maternity benefits)</label></div>
+<div class="field"><label for="topct">Employer top-up — % of salary</label>
+<input type="number" id="topct" value="93" min="0" max="100" step="1">
+<span class="hint">0 if your employer offers no top-up. Common: 80–100%.</span></div>
+<div class="field"><label for="towks">Top-up duration (weeks)</label>
+<input type="number" id="towks" value="17" min="0" max="76" step="1">
+<span class="hint">How many weeks the top-up lasts. Common: 17–26 weeks.</span></div>
+<button class="btn" onclick="calcMat()">Calculate My Leave Income</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-CA');}
+function calcMat(){
+  const salary=parseFloat(document.getElementById('salary').value)||0;
+  const plan=document.getElementById('plan').value;
+  const birth=document.getElementById('birth').checked;
+  const topct=Math.min(100,parseFloat(document.getElementById('topct').value)||0);
+  const towks=parseFloat(document.getElementById('towks').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(salary<=0){r.innerHTML='<p>Please enter your annual salary.</p>';return;}
+  const MIE=68900; // 2026 maximum insurable earnings
+  const weeklyNormal=salary/52;
+  const insurableWeekly=Math.min(weeklyNormal,MIE/52);
+  const rate=plan==='standard'?0.55:0.33;
+  const cap=plan==='standard'?729:437; // 2026 weekly maximums
+  const eiWeekly=Math.min(insurableWeekly*rate,cap);
+  const matWeeks=birth?15:0;
+  const parWeeks=plan==='standard'?35:61; // one parent's share (sharing adds +5 / +8 weeks)
+  const totalWeeks=matWeeks+parWeeks;
+  const totalEI=eiWeekly*totalWeeks;
+  const topUpWeeks=Math.min(towks,totalWeeks);
+  let topUpWeekly=Math.max(0,(topct/100)*weeklyNormal-eiWeekly);
+  // SUB rule: combined EI + top-up cannot exceed 100% of normal weekly earnings
+  topUpWeekly=Math.min(topUpWeekly,Math.max(0,weeklyNormal-eiWeekly));
+  const totalTopUp=topUpWeekly*topUpWeeks;
+  const grandTotal=totalEI+totalTopUp;
+  const fullPay=weeklyNormal*totalWeeks;
+  const gap=Math.max(0,fullPay-grandTotal);
+  const planName=plan==='standard'?'Standard (55%)':'Extended (33%)';
+  const leaveMonths=plan==='standard'?'12 months':'18 months';
+  r.innerHTML='<div class="big">'+fmt(grandTotal)+'<small>estimated TOTAL leave income ('+totalWeeks+' paid weeks, ~'+leaveMonths+')</small></div>'
+  +'<table>'
+  +'<tr><td>Weekly EI benefit ('+planName+')</td><td>'+fmt(eiWeekly)+'/week</td></tr>'
+  +'<tr><td>Maternity benefits</td><td>'+matWeeks+' weeks × '+fmt(eiWeekly)+'</td></tr>'
+  +'<tr><td>Parental benefits</td><td>'+parWeeks+' weeks × '+fmt(eiWeekly)+'</td></tr>'
+  +'<tr><td>Total EI benefits</td><td>'+fmt(totalEI)+'</td></tr>'
+  +'<tr><td>Employer top-up ('+topct+'% for '+topUpWeeks+' weeks)</td><td>'+fmt(totalTopUp)+'</td></tr>'
+  +'<tr><td>Your average weekly income on leave</td><td>'+fmt(grandTotal/totalWeeks)+'/week</td></tr>'
+  +'<tr><td>Income gap vs full pay</td><td>'+fmt(gap)+' to plan for</td></tr>'
+  +'</table>'
+  +'<p class="hint">Estimates use 2026 Service Canada figures: max insurable earnings $68,900, weekly caps $729 (standard) / $437 (extended). A 1-week waiting period delays the first payment but doesn\u2019t reduce your total weeks. Sharing parental benefits with a partner adds 5 extra standard or 8 extra extended weeks.</p>';
+}
+</script>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How EI Maternity &amp; Parental Benefits Work (2026)</h2>
+<p>Outside Quebec, parental benefits are paid through federal <strong>Employment Insurance (EI)</strong>. The basic rate is <strong>55% of your average insurable weekly earnings</strong>, capped at <strong>$729/week</strong> for claims starting in 2026. If you choose the extended option, the rate is <strong>33%</strong> capped at <strong>$437/week</strong> — spread over more weeks, for a similar total payout.</p>
+<div class="note"><strong>2026 key numbers:</strong> Maximum insurable earnings <strong>$68,900</strong> · Weekly max <strong>$729</strong> (standard) / <strong>$437</strong> (extended) · Maternity: up to <strong>15 weeks</strong> (birth parent only) · Standard parental: <strong>35 weeks</strong> per parent (<strong>40</strong> shared) · Extended parental: <strong>61 weeks</strong> per parent (<strong>69</strong> shared) · Eligibility: <strong>600 insurable hours</strong> in the last 52 weeks. Quebec residents use the QPIP system instead, with different rates and durations.</div>
+<h2>What Is an Employer Top-Up (SUB Plan)?</h2>
+<p>Many employers offer a <strong>Supplemental Unemployment Benefit (SUB) plan</strong> — a "top-up" that raises your weekly income to a percentage of your normal salary, typically <strong>80–100%</strong> for <strong>17–26 weeks</strong>. Common structures:</p>
+<ul>
+<li><strong>Federal government &amp; Ontario public sector:</strong> ~93% of salary, up to 52 weeks (federal) or 17–52 weeks (Ontario public).</li>
+<li><strong>Large banks:</strong> often 100% of salary for 17–26 weeks.</li>
+<li><strong>Tech companies:</strong> typically 80–100% for 12–26 weeks.</li>
+<li><strong>Small/medium businesses:</strong> varies widely; many offer no top-up.</li>
+</ul>
+<p>A properly structured top-up is <strong>not deducted from your EI benefits</strong> — but the combined EI + top-up cannot exceed <strong>100% of your normal weekly earnings</strong>. Ask your employer: (1) how the top-up is calculated, (2) how many weeks it runs, and (3) whether it's tied to the 55% standard rate (some plans pay less — or nothing — if you choose the extended 33% option). <strong>Get any top-up agreement in writing before your leave begins.</strong></p>
+<h2>Standard vs Extended: Which Pays More?</h2>
+<p>Over the full leave, both options pay a <strong>similar total amount</strong> — the extended option just spreads it over more weeks at a lower weekly rate. Example at a $60,000 salary (birth parent, full claim): standard pays about <strong>$31,115 total (~$2,593/month)</strong>, extended about <strong>$32,131 total (~$1,691/month)</strong> — figures are gross, before tax. Choose standard if you need higher monthly income or your top-up only covers 12 months; choose extended if you have savings to bridge the gap and want more time at home. <strong>Once a payment is made, you cannot switch options.</strong></p>
+<h2>How it works</h2>
+<div class="how">
+<div class="how-step"><span class="n">1</span><h3>Enter weekly earnings</h3><p>Your average insurable weekly earnings.</p></div><div class="how-step"><span class="n">2</span><h3>Pick standard or extended</h3><p>55% for ~12 months or 33% for ~18 months.</p></div><div class="how-step"><span class="n">3</span><h3>See EI + top-up income</h3><p>Your weekly benefit, employer top-up, and total income on leave.</p></div>
+</div>
+<div class="srcnote"><strong>Accuracy note:</strong> EI figures use 2026 parameters: maximum insurable earnings $68,900; maternity/standard parental 55% up to $729/week; extended parental 33% up to $437/week; 600 insurable hours required. Confirm on canada.ca.</div>
+<section class="guides"><h2>Guides</h2>
+<ul>
+<li><a href="articles/canada-maternity-parental-leave-guide-2026.html">Canada Maternity & Parental Leave 2026: Full Guide</a> — EI rates, standard vs extended, top-ups & planning checklist.</li>
+</ul></section>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Do employer top-ups reduce my EI payments?</summary><p>No — a properly registered SUB top-up is not deducted from your EI benefits, as long as EI + top-up together don't exceed 100% of your normal weekly earnings.</p></details>
+<details><summary>What is the EI waiting period?</summary><p>Normally a 1-week unpaid waiting period applies at the start of a claim — it delays your first payment but doesn't reduce your total benefit weeks. Temporary waivers have applied during 2025–2026; check the current Service Canada rules when you apply.</p></details>
+<details><summary>Who qualifies for EI maternity and parental benefits?</summary><p>Employees who accumulated at least <strong>600 insurable hours</strong> in the last 52 weeks (or since their last claim) and whose weekly earnings dropped by more than 40% for at least one week. Self-employed workers can qualify if they opted into EI at least 12 months before applying.</p></details>
+<details><summary>Does this apply in Quebec?</summary><p>No — Quebec parents are covered by the <strong>Quebec Parental Insurance Plan (QPIP)</strong>, which has its own rates, plans, and maximum insurable earnings ($103,000 for 2026). Use the official QPIP benefit simulator for Quebec estimates.</p></details>
+<details><summary>Are EI maternity and parental benefits taxable?</summary><p>Yes — EI benefits are taxable income, and tax is usually deducted at source. The figures in this calculator are gross (before tax).</p></details>
+<details><summary>Can both parents receive benefits?</summary><p>Yes. Parental benefits can be shared. Sharing unlocks <strong>5 extra weeks</strong> (standard) or <strong>8 extra weeks</strong> (extended) that are lost if only one parent claims. Maternity benefits (15 weeks) are for the birth parent only and cannot be shared.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives indicative estimates based on published 2026 Service Canada figures. Your actual benefit depends on your insurable earnings, best weeks, eligibility, and employer plan terms. Confirm details with Service Canada or a financial professional. Not legal or financial advice.</div>
+
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Mat Leave Top-Up Calculator</h4><p>Free Canada maternity and parental leave income planner — estimate your EI benefits, employer top-up, and total leave income for 2026.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-matleave-topup.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Mat Leave Top-Up Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
