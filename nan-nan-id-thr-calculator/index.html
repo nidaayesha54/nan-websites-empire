@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indonesia THR Calculator 2026 — Holiday Allowance (Tunjangan Hari Raya) Estimator</title>
+<meta name="description" content="Free Indonesia THR calculator: estimate your Tunjangan Hari Raya holiday allowance. 12+ months of service = 1 month's salary; less than a year paid proportionally. Based on Minister of Manpower Regulation No. 6/2016.">
+<link rel="canonical" href="https://nan-id-thr-calculator.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>THR Calculator Indonesia</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/thr-indonesia-complete-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Indonesia THR Calculator 2026 — Tunjangan Hari Raya Holiday Allowance</h1>
+<p class="lede">Estimate your THR (Tunjangan Hari Raya) — the mandatory Indonesian religious holiday allowance. Employees with 12+ months of service get one month's wage; shorter service is paid proportionally.</p>
+<a class="btn hero-cta" href="#calculator">Use the free calculator ↓</a>
+</section>
+
+<div class="panel" id="calculator">
+<h2 style="margin-top:0">Calculate Your THR</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="wage">Monthly wage (IDR) — basic salary + fixed allowances</label>
+<input type="number" id="wage" value="6000000" min="0" step="50000">
+<span class="hint">"One month's wage" = basic salary plus fixed allowances (e.g. child, housing, regional allowances). Variable bonuses are excluded.</span></div>
+<div class="field"><label for="months">Months of continuous service before the holiday</label>
+<input type="number" id="months" value="9" min="0" max="240" step="1">
+<span class="hint">At least 1 month of continuous work is required to qualify. 12 months or more = full THR.</span></div>
+<div class="field"><label for="wtype">Worker type</label>
+<select id="wtype">
+<option value="regular">Regular employee (monthly wage)</option>
+<option value="daily">Casual daily worker (harian lepas)</option>
+</select></div>
+<div class="field" id="dailyField" style="display:none"><label for="avgwage">Average monthly earnings over the last 12 months (IDR)</label>
+<input type="number" id="avgwage" value="0" min="0" step="50000">
+<span class="hint">For casual daily workers, the "one month's wage" is the average received over the last 12 months (or the actual shorter working period).</span></div>
+<button class="btn" onclick="calcTHR()">Calculate THR</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<h2>How It Works</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Enter your wage</h3><p>Type your monthly wage — basic salary plus fixed allowances — and your months of continuous service before the holiday.</p></div><div class="step"><span class="n">2</span><h3>We apply the rule</h3><p>Twelve months or more earns a full month’s wage; shorter service is paid proportionally (months ÷ 12 × wage).</p></div><div class="step"><span class="n">3</span><h3>Get your estimate</h3><p>See your THR with the exact formula applied, ready to check against your payslip.</p></div>
+</div>
+<div class="trust"><span class="tick">✓</span><div><p><strong>Accuracy note.</strong> Based on published summaries of Minister of Manpower Regulation No. 6/2016 and Government Regulation No. 36/2021. Figures are indicative estimates, not legal or financial advice.</p></div></div>
+
+<script>
+function fmt(n){return 'IDR '+Math.round(n).toLocaleString('en-US');}
+document.getElementById('wtype').addEventListener('change',function(){
+  document.getElementById('dailyField').style.display=this.value==='daily'?'block':'none';
+});
+function calcTHR(){
+  const m=Math.min(parseFloat(document.getElementById('months').value)||0,240);
+  const wtype=document.getElementById('wtype').value;
+  let wage=parseFloat(document.getElementById('wage').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  if(wtype==='daily'){
+    const avg=parseFloat(document.getElementById('avgwage').value)||0;
+    if(avg<=0){r.innerHTML='<p>Please enter your average monthly earnings.</p>';return;}
+    wage=avg;
+  }
+  if(wage<=0){r.innerHTML='<p>Please enter your monthly wage.</p>';return;}
+  if(m<1){r.innerHTML='<p>THR is not owed — the minimum qualifying period is 1 month of continuous service.</p>';return;}
+  const full=m>=12;
+  const thr=full?wage:(m/12)*wage;
+  r.innerHTML='<div class="big">'+fmt(thr)+'<small>estimated THR payable before the religious holiday</small></div>'
+  +'<table><tr><td>One month\u2019s wage (basis)</td><td>'+fmt(wage)+'</td></tr>'
+  +'<tr><td>Months of service</td><td>'+m+'</td></tr>'
+  +'<tr><td>Formula applied</td><td>'+(full?'1 \u00d7 full month\u2019s wage':'('+m+' \u00f7 12) \u00d7 one month\u2019s wage')+'</td></tr></table>'
+  +'<p class="hint">Paid no later than 7 days before the religious holiday, in full, in Indonesian Rupiah.</p>';
+}
+</script>
+<section class="guides-h" id="guides">
+<h2>Guides</h2>
+<div class="guide-card"><div><h3>Indonesia THR 2026: The Complete Guide to the Tunjangan Hari Raya Holiday Allowance</h3><p>Everything about Indonesia's THR holiday allowance: who qualifies, the formula, what counts as one month's wage, payment deadlines, tax and penalties.</p></div>
+<a class="btn" href="articles/thr-indonesia-complete-guide.html">Read the guide</a></div>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>How the THR Formula Works</h2>
+<p>The rules sit in the Minister of Manpower Regulation No. 6 of 2016 on Religious Holiday Allowances (THR), enforced under Government Regulation No. 36 of 2021:</p>
+<div class="note"><strong>12 months or more of continuous service:</strong> THR = 1 month's wage.<br>
+<strong>1 to under 12 months:</strong> THR = (months of service ÷ 12) × 1 month's wage.<br>
+<strong>Less than 1 month:</strong> no entitlement.</div>
+<h3>Worked Example</h3>
+<p>Monthly wage <strong>IDR 7,000,000</strong> with 9 months of service: (9 ÷ 12) × 7,000,000 = <strong>IDR 5,250,000</strong>. The same worker with 12+ months receives the full <strong>IDR 7,000,000</strong>.</p>
+<h2>What Counts as "One Month's Wage"?</h2>
+<p>It is the <strong>basic salary plus fixed allowances</strong> — payments the company makes regularly with a fixed nominal amount (child, housing, regional allowances). Non-fixed or irregular payments (transport based on attendance, performance bonuses, commissions) are generally excluded. If your contract uses an all-in (clean) wage with no separate allowances, that full figure is the basis.</p>
+<h3>Casual Daily Workers</h3>
+<p>For workers on daily agreements, the one month's wage is calculated as the <strong>average monthly earnings over the last 12 months</strong> — or the monthly average over the period actually worked if shorter. The same 12-month threshold applies.</p>
+<h2>When Must THR Be Paid?</h2>
+<p>THR must be paid <strong>no later than 7 days before the employee's religious holiday</strong> — most commonly Eid al-Fitr (Lebaran), but the rule also covers Christmas, Nyepi, Vesak and other recognized holidays. Payment must be in full (no installments) and in Indonesian Rupiah.</p>
+<h2>Penalties for Not Paying</h2>
+<p>Employers who fail to pay or delay THR face a <strong>5% fine on the unpaid amount</strong>, plus administrative sanctions up to and including written warnings and temporary or full business suspension. Workers can report non-payment to the local Manpower office (Disnaker).</p>
+<h2>FAQs</h2>
+<div class="faq">
+<details><summary>Does THR count if my company pays a higher bonus?</summary><p>If your employment agreement, company regulation or collective labor agreement sets a higher holiday payment, the company must pay the higher amount — the regulation is a floor, not a ceiling.</p></details>
+<details><summary>I started 3 weeks before Eid. Do I get anything?</summary><p>No. The minimum qualifying period is 1 month of continuous service before the holiday.</p></details>
+<details><summary>Is THR subject to income tax?</summary><p>Yes. THR is taxable income in Indonesia and is included in the PPh 21 withholding calculation — it is taxed as irregular income alongside your salary.</p></details>
+<details><summary>Do contract (PKWT) and part-time workers get THR?</summary><p>Contract workers who meet the 1-month minimum get THR under the same formula. Part-time employees are entitled to THR calculated proportionally to their working arrangement.</p></details>
+<details><summary>Can THR be paid in goods or parcels?</summary><p>No. The regulations require THR to be paid in money (Indonesian Rupiah). Parcels or goods do not count as THR payment.</p></details>
+<details><summary>Does THR affect my severance calculation?</summary><p>THR is a separate entitlement paid before religious holidays. However, the same "one month's wage" concept (basic + fixed allowances) is used in both THR and severance (UP/UPMK) calculations.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate based on published summaries of Minister of Manpower Regulation No. 6/2016 and Government Regulation No. 36/2021. Actual entitlement can vary with company agreements, collective labor agreements, wage components and official interpretation. It is not legal advice — confirm with HR or a labor advisor.</div>
+</div></main>
+<div class="fcols">
+<div><h4>NAN Indonesia THR Calculator</h4><p>Free Tunjangan Hari Raya holiday allowance calculator for Indonesia — estimate your THR before Eid and other religious holidays, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p><div><h4>Legal</h4><p><a href="about.html">About Us</a> · <a href="contact.html">Contact</a><br><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><br><a href="disclaimer.html">Disclaimer</a></p></div></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-id-severance-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Indonesia Severance Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-in-statutory-bonus-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">India Statutory Bonus Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sa-end-of-service.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi End of Service Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-bd-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Bangladesh Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ca-vacation-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Canada Vacation Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uk-guarantee-pay.surge.sh" style="color:#4b5563;text-decoration:none;">UK Guarantee Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-us-wep-repeal.surge.sh" style="color:#4b5563;text-decoration:none;">US WEP Repeal Estimator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-steuerklasse-finder.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Tax Class Finder</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
