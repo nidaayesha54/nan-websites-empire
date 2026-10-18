@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — NAN DateTime</title>
+<meta name="description" content="About NAN DateTime: a free online today's date, Hijri date, world clock, countdown and stopwatch tools by NAN Marketing Agency. Our mission: free, private, no-signup tools that run 100% in your browser.">
+<link rel="canonical" href="https://nan-datetime.surge.sh/about.html">
+<style>
+:root{--navy:#0A1628;--teal:#14B8A6;--teal-d:#0d9488;--bg:#f4f7fa;--card:#ffffff;--txt:#1e293b;--mut:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+header{background:var(--navy);color:#fff;padding:14px 18px;position:sticky;top:0;z-index:50}
+.hd-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:.3px}
+.brand span{color:var(--teal)}
+#lang-toggle{background:var(--teal);border:0;color:#fff;font-weight:700;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.95rem}
+#lang-toggle:hover{background:var(--teal-d)}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:linear-gradient(135deg,var(--navy),#14304f);color:#fff;border-radius:18px;padding:38px 24px;text-align:center;margin-bottom:22px}
+.hero .lbl{color:var(--teal);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+.hero h1{font-size:clamp(1.7rem,5.5vw,2.9rem);font-weight:800;margin:10px 0 6px}
+.hero .sub{color:#cbd5e1;font-size:.95rem}
+.hero .meta{display:flex;justify-content:center;gap:26px;margin-top:18px;flex-wrap:wrap}
+.hero .meta div{background:rgba(255,255,255,.08);border:1px solid rgba(20,184,166,.35);border-radius:12px;padding:10px 22px}
+.hero .meta small{display:block;color:#94a3b8;font-size:.78rem}
+.hero .meta strong{font-size:1.25rem;color:#fff}
+.hijri{background:var(--card);border-radius:16px;padding:24px;text-align:center;margin-bottom:22px;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.hijri h2{color:var(--navy);font-size:1.35rem;margin-bottom:4px}
+.hijri .big{font-size:clamp(1.4rem,4.5vw,2rem);font-weight:800;color:var(--teal-d);margin:8px 0}
+.hijri small{color:var(--mut)}
+.grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:22px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.card h2{color:var(--navy);font-size:1.3rem;margin-bottom:4px}
+.card .tag{display:inline-block;background:#e6fffa;color:var(--teal-d);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase}
+.clocks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:520px){.clocks{grid-template-columns:repeat(3,1fr)}}
+.clock{background:var(--bg);border-radius:12px;padding:12px;text-align:center;border:1px solid #e2e8f0}
+.clock .city{font-weight:700;font-size:.9rem;color:var(--navy)}
+.clock .time{font-size:1.3rem;font-weight:800;color:var(--teal-d);font-variant-numeric:tabular-nums}
+.clock .cdate{font-size:.75rem;color:var(--mut)}
+.cd-input{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.cd-input input{flex:1;min-width:170px;padding:10px 12px;border:1.5px solid #cbd5e1;border-radius:10px;font-size:1rem;font-family:inherit}
+.btn{background:var(--teal);color:#fff;border:0;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--teal-d)}
+.btn.ghost{background:#e2e8f0;color:var(--navy)}
+.btn:disabled{opacity:.45;cursor:default}
+#countdown-display{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap;min-height:86px;align-items:center}
+.cd-cell{background:var(--navy);color:#fff;border-radius:12px;padding:12px 6px;min-width:74px;text-align:center}
+.cd-cell span{font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums}
+.cd-cell small{display:block;color:#94a3b8;font-size:.75rem}
+.cd-done{font-size:1.4rem;font-weight:800;color:var(--teal-d)}
+#stopwatch-display{font-size:clamp(2rem,7vw,3rem);font-weight:800;text-align:center;color:var(--navy);font-variant-numeric:tabular-nums;margin:10px 0 16px;letter-spacing:1px}
+.sw-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+#laps{list-style:none;margin-top:14px;max-height:180px;overflow:auto}
+#laps li{background:var(--bg);border:1px solid #e2e8f0;border-radius:8px;padding:8px 14px;margin-bottom:6px;font-size:.95rem}
+.ad-slot{display:flex;justify-content:center;margin:22px 0;min-height:250px;align-items:center}
+.cta{background:linear-gradient(135deg,var(--teal),#0d9488);color:#fff;border-radius:16px;padding:26px;text-align:center;margin-bottom:22px}
+.cta h2{margin-bottom:8px}
+.cta p{margin-bottom:14px;opacity:.92}
+.cta a{background:#fff;color:var(--teal-d);font-weight:800;padding:12px 26px;border-radius:10px;text-decoration:none;display:inline-block}
+footer{background:var(--navy);color:#94a3b8;padding:28px 18px;font-size:.85rem}
+.ft-in{max-width:1080px;margin:0 auto}
+.net-links{margin-bottom:16px}
+.net-links h3{color:#cbd5e1;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.net-links a{color:#7d8ea8;text-decoration:none;margin:0 10px 8px 0;display:inline-block;font-size:.82rem}
+.net-links a:hover{color:var(--teal)}
+.ft-note{text-align:center;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <div class="brand">NAN<span> · </span><span>DateTime</span></div>
+    
+  </div>
+</header>
+<main>
+<section class="card">
+{'fname': 'about.html', 'body': '<h1>About Us</h1>\n<p class="lede"><strong>NAN DateTime</strong> is a free online today\'s date, Hijri date, world clock, countdown and stopwatch tools. Check today\'s date, the Hijri date, live world clocks and timers — all free, right in your browser. NAN DateTime is operated by NAN Marketing Agency (NAN Studio) — a digital studio focused on building simple, private, no-signup web utilities that anyone can use.</p>\n<h2>Our mission</h2>\n<p>We believe useful tools should be <strong>free, fast and private</strong>. That\'s why everything on NAN DateTime runs 100% in your browser: no accounts, no uploads, no tracking servers. What you type stays on your device.</p>\n<h2>What we offer</h2>\n<ul>\n<li><strong>Free forever</strong> — no subscriptions, no paywalls, no watermarks.</li>\n<li><strong>Privacy-first</strong> — tools run locally in your browser; your data is never sent to our servers.</li>\n<li><strong>No signup</strong> — open the page and start working instantly, on desktop or mobile.</li>\n</ul>\n<h2>Who we are</h2>\n<p>NAN DateTime is part of the NAN family of free web tools, run by <strong>NAN Marketing Agency (NAN Studio)</strong>. We maintain a growing network of free utilities — calculators, converters, stock resources and design tools — all built with the same promise: free, private, and easy to use.</p>\n<p><strong>Website:</strong> NAN DateTime · <strong>Operated by:</strong> NAN Marketing Agency (NAN Studio)<br><strong>Email:</strong> Aireelsegency@gmail.com</p>\n<p><em>Last updated: 2026-10-18</em></p>'}
+</section>
+</main>
+<footer>
+  <div class="ft-in">
+    <!-- nan-network-links:start -->
+    <nav class="net-links" aria-label="Network tools">
+      <h3 data-i18n="networkTitle">More free tools from our network</h3>
+      <a href="https://nan-rozana-calculators.surge.sh/">Rozana Calculators</a>
+      <a href="https://nan-eobi-calculator.surge.sh/">EOBI Calculator</a>
+      <a href="https://nan-labour-calculators.surge.sh/">Labour Calculators</a>
+      <a href="https://nan-urage-calculator.surge.sh/">Age Calculator</a>
+      <a href="https://nan-pdftools.surge.sh/">PDF Tools</a>
+      <a href="https://nan-imagetools.surge.sh/">Image Tools</a>
+      <a href="https://nan-qrtools.surge.sh/">QR Tools</a>
+      <a href="https://nan-texttools.surge.sh/">Text Tools</a>
+      <a href="https://nan-urduportal.surge.sh/">Urdu Portal</a>
+    </nav>
+    <!-- nan-network-links:end -->
+    <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(148,163,184,.25);font-size:.85rem"><strong style="color:#e2e8f0">Legal:</strong> <a href="about.html">About Us</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Disclaimer</a></div>
+<div class="ft-note"><span data-i18n="footerNote">Free tools by NAN Marketing Agency</span> · 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
