@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disclaimer — NAN Poster Maker</title>
+<meta name="description" content="Disclaimer for NAN Poster Maker: tool results are informational and approximate — not professional advice.">
+<link rel="canonical" href="https://nan-postermaker.surge.sh/disclaimer.html">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Nastaliq Urdu',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}.nav a:hover{color:#fff}
+.langbtn{background:transparent;border:1px solid #334155;color:#cbd5e1;border-radius:.5rem;padding:.35rem .8rem;cursor:pointer;font-size:.9rem;margin-left:1rem}
+.langbtn:hover{border-color:var(--teal);color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.editor{display:grid;grid-template-columns:380px 1fr;gap:1.2rem;margin:1.6rem 0;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.panel h2{font-size:1.1rem;margin:0 0 1rem;color:var(--navy)}
+.field{margin:.9rem 0}.field label{display:block;font-weight:700;margin-bottom:.4rem;font-size:.95rem}
+.field input[type=text],.field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);border-radius:.55rem;font-size:1rem;font-family:inherit}
+.field textarea{resize:vertical;min-height:3.2rem}
+.field input[type=range]{width:100%;accent-color:var(--teal);height:2rem}
+.field input[type=color]{width:100%;height:2.6rem;border:1px solid var(--line);border-radius:.55rem;padding:.15rem;background:#fff;cursor:pointer}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.swatches{display:flex;flex-wrap:wrap;gap:.55rem}
+.sw{width:46px;height:46px;border-radius:.6rem;border:2px solid #e5e7eb;cursor:pointer;padding:0}
+.sw.active{border-color:var(--teal);box-shadow:0 0 0 2px rgba(20,184,166,.35)}
+.tpls{display:flex;gap:.55rem;flex-wrap:wrap}
+.tpl{background:#f1f5f9;border:1px solid var(--line);border-radius:.6rem;padding:.6rem 1rem;font-weight:700;cursor:pointer;font-size:.95rem;color:var(--navy)}
+.tpl:hover{border-color:var(--teal)}.tpl.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.switch{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.95rem;cursor:pointer}
+.switch input{width:1.3rem;height:1.3rem;accent-color:var(--teal)}
+.preview{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem;box-shadow:0 2px 10px rgba(10,22,40,.05);position:sticky;top:4.5rem}
+.preview h2{font-size:1.1rem;margin:0 0 1rem;color:var(--navy)}
+#poster{width:100%;height:auto;border-radius:.6rem;border:1px solid var(--line);display:block;background:#0A1628}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.9rem 1.6rem;font-size:1.05rem;font-weight:800;cursor:pointer;width:100%;margin-top:1rem}
+.btn:hover{filter:brightness(.94)}
+.adbox{display:flex;justify-content:center;margin:2rem 0;flex-wrap:wrap}
+h2.sec{color:var(--navy);margin-top:2.2rem;font-size:1.35rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem}
+.step .n{background:var(--navy);color:#fff;width:2rem;height:2rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:.5rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.guides a{color:var(--navy);font-weight:700}
+footer{background:var(--navy);color:#cbd5e1;margin-top:3rem;padding:2rem 0 1rem}
+footer h4{color:#fff;margin:.2rem 0 .6rem}footer p{font-size:.9rem}footer a{color:#94a3b8;text-decoration:none}footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem}
+.copy{font-size:.8rem;color:#64748b;border-top:1px solid #1e293b;margin-top:1.5rem;padding-top:1rem}
+[dir="rtl"] .nav a,[dir="rtl"] .langbtn{margin-left:0;margin-right:1rem}
+@media(max-width:920px){.editor{grid-template-columns:1fr}.preview{position:static}.fcols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Poster Maker</span></a>
+<nav class="nav"><a href="index.html" data-i18n="nav_tools">Tools</a><a href="articles/free-online-poster-maker-guide.html" data-i18n="nav_guide">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="panel">
+{'fname': 'disclaimer.html', 'body': '<h1>Disclaimer</h1>\n<p><em>Last updated: 2026-10-18</em></p>\n<p class="lede">The tools and information on <strong>NAN Poster Maker</strong> are provided for <strong>general informational and convenience purposes only</strong>.</p>\n<h2>Results are approximate and informational</h2>\n<p>All outputs of our free online poster and flyer maker are generated automatically in your browser. While we strive for accuracy, results are <strong>approximate, may contain errors, and should be independently verified</strong> before you rely on them for anything important.</p>\n<h2>Not professional advice</h2>\n<p>Nothing on this site constitutes professional advice of any kind — including legal, financial, medical, technical or security advice. For decisions that matter (for example security practices, business documents, or designs you publish), please consult a qualified professional.</p>\n<h2>No responsibility for your use</h2>\n<p>You are solely responsible for how you use the outputs of these tools. NAN Marketing Agency (NAN Studio) is not responsible for any loss, damage or inconvenience arising from reliance on the site\'s tools or content.</p>\n<h2>External links</h2>\n<p>This site may link to third-party websites (for example guides, ad partners or our network of free tools). We do not control and are not responsible for the content, policies or practices of external sites.</p>\n<h2>Contact</h2>\n<p>If you spot an error or have a concern, please tell us at <strong>Aireelsegency@gmail.com</strong> — we appreciate the feedback and work to fix genuine issues quickly.</p>'}
+</section>
+</div></main>
+<footer>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:0 auto 1.5rem;padding:1.25rem 1rem 0;border-top:1px solid #1e293b;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin:0 0 .6rem;">More free design tools</p>
+<p style="font-size:.85rem;line-height:2;color:#94a3b8;margin:0;"><a href="https://nan-pngstock.surge.sh" style="color:#94a3b8;text-decoration:none;">PNG Stock</a> <span style="color:#334155;">·</span> <a href="https://nan-aistock.surge.sh" style="color:#94a3b8;text-decoration:none;">AI Stock Photos</a> <span style="color:#334155;">·</span> <a href="https://nan-colortools.surge.sh" style="color:#94a3b8;text-decoration:none;">Color Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-imagetools.surge.sh" style="color:#94a3b8;text-decoration:none;">Image Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-qrtools.surge.sh" style="color:#94a3b8;text-decoration:none;">QR Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-pdftools.surge.sh" style="color:#94a3b8;text-decoration:none;">PDF Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-texttools.surge.sh" style="color:#94a3b8;text-decoration:none;">Text Tools</a> <span style="color:#334155;">·</span> <a href="https://nan-urduportal.surge.sh" style="color:#94a3b8;text-decoration:none;">Urdu Portal</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><div class="fcols">
+<div><h4>NAN Poster Maker</h4><p data-i18n="foot">Free online poster &amp; flyer maker — sale posters, event flyers and quote graphics with Urdu + English support. Download sharp 1080×1080 PNGs, no signup.</p></div>
+<div><h4 data-i18n="tools_h">Tools</h4><p><a href="index.html" data-i18n="nav_tools">Tools</a><br><a href="articles/free-online-poster-maker-guide.html" data-i18n="nav_guide">Guide</a></p></div>
+</div><div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(148,163,184,.25);font-size:.85rem"><strong style="color:#e2e8f0">Legal:</strong> <a href="about.html">About Us</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Disclaimer</a></div>
+<p class="copy">© 2026 NAN — Free tools for everyone.</p></div>
+</footer>
+
+</body>
+</html>
