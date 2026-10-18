@@ -2,4 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nan-colortools.surge.sh/</loc><lastmod>2026-10-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://nan-colortools.surge.sh/articles/color-tools-guide.html</loc><lastmod>2026-10-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nan-colortools.surge.sh/about.html</loc><lastmod>2026-10-18</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://nan-colortools.surge.sh/contact.html</loc><lastmod>2026-10-18</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://nan-colortools.surge.sh/privacy-policy.html</loc><lastmod>2026-10-18</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://nan-colortools.surge.sh/terms.html</loc><lastmod>2026-10-18</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://nan-colortools.surge.sh/disclaimer.html</loc><lastmod>2026-10-18</lastmod><changefreq>yearly</changefreq></url>
 </urlset>
