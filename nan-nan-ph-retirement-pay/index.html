@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement Pay Calculator Philippines 2026 — RA 7641 (22.5 Days Rule)</title>
+<meta name="description" content="Free Philippine retirement pay calculator: enter your latest basic salary and years of service to estimate your minimum retirement benefit under RA 7641 (22.5 days per year). Eligibility, formula & FAQs.">
+<link rel="canonical" href="https://nan-ph-retirement-pay.surge.sh/">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>PH Retirement Pay</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/philippines-retirement-pay-ra-7641-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Retirement Pay Calculator Philippines (2026)</h1>
+<p class="lede">Estimate the minimum retirement pay your employer owes under <strong>Republic Act 7641</strong> — the 22.5-days-per-year-of-service rule — in seconds.</p>
+<a class="btn hero-cta" href="#calculator">Use the free calculator ↓</a>
+</section>
+
+<div class="panel" id="calculator">
+<h2 style="margin-top:0">Calculate Your Retirement Pay</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="salary">Latest monthly basic salary (₱)</label>
+<input type="number" id="salary" value="30000" min="0" step="500">
+<span class="hint">Your most recent basic pay — no overtime, allowances or premiums.</span></div>
+<div class="field"><label for="yr">Full years of service</label>
+<input type="number" id="yr" value="10" min="0" max="60">
+<span class="hint">Years with the same employer (including probationary period).</span></div>
+<div class="field"><label for="mo">Extra months beyond full years</label>
+<input type="number" id="mo" value="0" min="0" max="11">
+<span class="hint">A fraction of at least 6 months counts as one whole year.</span></div>
+<button class="btn" onclick="calcRet()">Calculate Retirement Pay</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<h2>How It Works</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Enter salary and service</h3><p>Type your latest monthly salary and years of service.</p></div><div class="step"><span class="n">2</span><h3>22.5-day formula applied</h3><p>Daily rate (salary ÷ 26) × 22.5 × creditable years — the RA 7641 minimum.</p></div><div class="step"><span class="n">3</span><h3>Know your floor</h3><p>Company retirement plans or CBAs that pay more must be used instead of the minimum.</p></div>
+</div>
+<div class="trust"><span class="tick">✓</span><div><p><strong>Accuracy note.</strong> Based on Article 302 of the Labor Code as amended by Republic Act No. 7641 — the 22.5-day statutory minimum. Figures are indicative estimates, not legal or financial advice.</p></div></div>
+
+<script>
+function fmt(n){return '\u20B1'+Math.round(n).toLocaleString('en-PH');}
+function calcRet(){
+  const salary=parseFloat(document.getElementById('salary').value)||0;
+  const yr=Math.floor(parseFloat(document.getElementById('yr').value)||0);
+  const mo=Math.floor(parseFloat(document.getElementById('mo').value)||0);
+  const r=document.getElementById('result');r.style.display='block';
+  if(salary<=0||(yr<=0&&mo<=0)){r.innerHTML='<p>Please enter your salary and length of service.</p>';return;}
+  const credit=yr+(mo>=6?1:0);
+  const daily=salary/26;
+  const perYear=daily*22.5;
+  const total=perYear*credit;
+  r.innerHTML='<div class="big">'+fmt(total)+'<small>estimated MINIMUM retirement pay (RA 7641)</small></div>'
+  +'<table><tr><td>Daily rate (salary \u00F7 26)</td><td>'+fmt(daily)+'</td></tr>'
+  +'<tr><td>Value of \u00BD month per year (22.5 days)</td><td>'+fmt(perYear)+'</td></tr>'
+  +'<tr><td>Creditable years ('+yr+'y '+mo+'m'+(mo>=6?' \u2192 rounded up':'')+')</td><td>'+credit+' years</td></tr></table>'
+  +'<p class="hint">Formula: daily rate \u00D7 22.5 \u00D7 creditable years of service. Company plans or CBAs paying more must be used instead.</p>'
+  +(yr+mo/12<5?'<div class="note" style="margin-top:1rem"><strong>Note:</strong> Statutory retirement pay requires at least <strong>5 years</strong> of service. Check your company plan for earlier-eligibility rules.</div>':'');
+}
+</script>
+<section class="guides-h" id="guides">
+<h2>Guides</h2>
+<div class="guide-card"><div><h3>Philippines Retirement Pay: The RA 7641 Formula Explained</h3><p>Philippines retirement pay under RA 7641: eligibility, the 22.5-day formula, daily-rate divisor, company plans vs the statutory minimum and worked examples.</p></div>
+<a class="btn" href="articles/philippines-retirement-pay-ra-7641-guide.html">Read the guide</a></div>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - Nida's verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>The RA 7641 Retirement Formula</h2>
+<div class="note"><strong>Retirement pay = Daily Rate × 22.5 days × Years of Service</strong><br>
+Republic Act 7641 (1992) guarantees at least <strong>one-half (1/2) month salary for every year of service</strong>. The law defines "1/2 month salary" as: <strong>15 days</strong> of salary + <strong>1/12 of your 13th month pay</strong> + the cash equivalent of <strong>5 days of service incentive leave</strong> — which practitioners express as <strong>22.5 days</strong> of daily pay per year of service.</div>
+<h3>Worked example</h3>
+<p>Monthly basic salary ₱30,000, 10 years of service: daily rate = 30,000 ÷ 26 = ₱1,153.85. Retirement pay = 1,153.85 × 22.5 × 10 = <strong>₱259,616</strong> (minimum). With 12 years and 7 months, the 6-month rule gives 13 creditable years → ₱1,153.85 × 22.5 × 13 = <strong>₱337,500</strong>.</p>
+<h2>Who Qualifies</h2>
+<ul>
+<li><strong>Age:</strong> at least <strong>60 years old</strong> (optional retirement) up to <strong>65</strong> (compulsory retirement).</li>
+<li><strong>Service:</strong> at least <strong>5 years</strong> with the establishment, including probationary employment.</li>
+<li><strong>Rounding rule:</strong> a fraction of at least <strong>6 months</strong> counts as one whole year.</li>
+<li>If a company retirement plan or CBA grants more than the RA 7641 minimum, the better benefit must be paid.</li>
+<li>Retirement pay is <strong>separate from</strong> (in addition to) pro-rated 13th month pay and unused leave conversion in your final pay.</li>
+</ul>
+<h2>Retirement Pay vs Separation Pay</h2>
+<p><strong>Retirement pay</strong> is a reward for long service when you retire at 60+ (RA 7641). <strong>Separation pay</strong> is paid when employment ends for authorized causes such as redundancy, retrenchment, or closure — it is <strong>not</strong> paid for resignation or just-cause dismissal unless company policy says otherwise.</p>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>Does the 22.5-day multiplier include my allowances?</summary><p>No. The statutory minimum is based on basic salary: 15 days + 1/12 of 13th month + up to 5 days of service incentive leave. Cost-of-living allowances and non-integrated benefits are generally excluded unless your company treats them as part of salary.</p></details>
+<details><summary>What divisor should I use for my daily rate?</summary><p>For monthly-paid employees the common convention is <strong>salary ÷ 26</strong> (six-day workweek basis) for this computation. Your company or CBA may use its own divisor — this calculator uses 26 as the standard.</p></details>
+<details><summary>I worked 10 years and 5 months. How many years count?</summary><p>Only 10 — the fraction must reach 6 months to round up to a whole year. At 10 years and 6 months, you get credit for 11 years.</p></details>
+<details><summary>Is retirement pay taxable?</summary><p>Retirement pay received under RA 7641 or an employer plan approved by the BIR is generally exempt from income tax, subject to BIR conditions. Confirm with HR or your accountant.</p></details>
+<details><summary>What if I retired before 2026 — does this still apply?</summary><p>RA 7641 has been in force since 1993, so the same 22.5-day minimum applies. Only current figures like your latest salary change over time.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives an indicative estimate of the RA 7641 statutory minimum. Your actual benefit depends on your verified daily rate, company plan or CBA (which may be better), and payroll practice. Confirm with HR or DOLE before making decisions.</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN PH Retirement Pay Calculator</h4><p>Free Philippine retirement pay calculator and guides — estimate your RA 7641 minimum benefit, check eligibility, and understand the 22.5-day rule.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ph-final-pay.surge.sh" style="color:#4b5563;text-decoration:none;">PH Final Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
