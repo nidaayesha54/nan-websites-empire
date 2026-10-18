@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — South Africa ETI Calculator</title>
+<meta name="description" content="About NAN Studio&#x27;s free South Africa ETI calculator: what it does, how it works, and who runs this free online tool.">
+<link rel="canonical" href="https://nan-za-eti-calculator.surge.sh/about.html">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:46rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td{padding:.5rem .4rem;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123052 60%,#0e4f46 100%);color:#fff;border-radius:1rem;padding:2.4rem 2rem;margin:0 0 1.8rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.4),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.15rem;margin:0 0 .7rem;letter-spacing:-.02em;line-height:1.25;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.08rem;max-width:46rem;position:relative;z-index:1}
+.hero-cta{display:inline-block;margin-top:1.2rem;background:var(--teal);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:.6rem;text-decoration:none;position:relative;z-index:1;box-shadow:0 4px 16px rgba(20,184,166,.4);transition:transform .12s ease}
+.hero-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+h2{font-size:1.45rem;letter-spacing:-.01em;padding-bottom:.45rem;border-bottom:2px solid #edf1f7;margin-top:2.4rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.3rem 0 0}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.15rem 1.25rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.55rem}
+.step h3{margin:.1rem 0 .35rem;font-size:1rem}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.trust{display:flex;gap:.8rem;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:.8rem;padding:1rem 1.25rem;margin:1.6rem 0;font-size:.93rem}
+.trust .tick{flex:0 0 auto;font-size:1.25rem;color:var(--teal);font-weight:800}
+.trust p{margin:0}
+.field input,.field select{min-height:2.9rem}
+html,body{overflow-x:hidden}
+.result{overflow-x:auto}
+.guides-h{margin-top:2.2rem}
+.guide-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.4rem;display:flex;gap:1.1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:1rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card h3{margin:0 0 .35rem}
+.guide-card p{margin:0;color:var(--mut);font-size:.93rem;max-width:40rem}
+.guide-card .btn{margin-top:0;white-space:nowrap;text-decoration:none}
+.crumb{font-size:.85rem;color:var(--mut);margin:0 0 .6rem}
+.crumb a{color:var(--teal);text-decoration:none}
+.cta-box{background:linear-gradient(135deg,var(--navy),#123052);border-radius:1rem;padding:1.8rem;color:#fff;margin:2rem 0;text-align:center}
+.cta-box h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta-box p{color:#cbd5e1;margin:0 0 1rem}
+.cta-box .btn{margin-top:0;text-decoration:none;display:inline-block}
+article.guide h2{margin-top:2.2rem}
+article.guide table td:first-child{width:62%}
+.kv{background:#f8fafc;border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.1rem;margin:1rem 0;font-size:.94rem}
+@media(max-width:560px){.hero{padding:1.7rem 1.25rem}.hero h1{font-size:1.62rem}.btn{min-height:2.9rem}main{padding:1.4rem 0}}
+</style>
+</head>
+<body>
+<!-- ADSENSE_CONTACT_EMAIL_CONFIG: Aireelsegency@gmail.com -->
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>ETI Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/south-africa-eti-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>About Us — South Africa ETI Calculator</h1>
+<p>This website offers a free, easy-to-use tool for South African Employment Tax Incentive (ETI) estimates per employee: our South Africa ETI calculator.</p>
+<div class="panel">
+<h2>What does the calculator do?</h2>
+<p>Our South Africa ETI calculator helps visitors plan their finances by estimating South African Employment Tax Incentive (ETI) estimates per employee. It uses publicly published 2026 figures and official formulas, explained in plain language alongside an FAQ section. Everything runs instantly, right in your web browser — no sign-up, no account, no download.</p>
+<h2>Who runs this site?</h2>
+<p>This site is run by <strong>NAN Studio</strong> (NAN Marketing Agency), a small independent studio that builds free online tools and calculators. We publish practical, privacy-friendly web tools that anyone can use for free.</p>
+<h2>Our commitment</h2>
+<ul>
+<li><strong>Free forever:</strong> every tool on this site is free to use, with no paywalls or forced registration.</li>
+<li><strong>Privacy-first:</strong> calculations happen 100% in your browser. We do not collect, store, or transmit any personal data entered into the calculators.</li>
+<li><strong>Accuracy:</strong> we base our formulas on published official sources and keep them updated. Results are always estimates — see our <a href="disclaimer.html">Disclaimer</a> for details.</li>
+</ul>
+<p>Questions or suggestions? Reach us on our <a href="contact.html">Contact page</a>.</p>
+</div>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN ETI Calculator</h4><p>Free Employment Tax Incentive calculator for South African employers — estimate your monthly ETI claim per qualifying young employee, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-za-coida-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">COIDA Assessment Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-za-eti-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">ETI Calculator South Africa</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
