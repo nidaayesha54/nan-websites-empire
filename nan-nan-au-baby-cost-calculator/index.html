@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby First-Year Cost Calculator Australia 2026 — What Does a Baby Cost?</title>
+<meta name="description" content="Free Australian baby cost calculator: estimate one-off gear, monthly essentials, childcare and income-drop costs for your baby's first year. Based on 2026 Australian data, with FAQs.">
+<link rel="canonical" href="https://nan-au-baby-cost-calculator.surge.sh/">
+<style>
+:root{--navy:#0A1628;--navy2:#123052;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:linear-gradient(180deg,#0A1628,#0e2240);color:#fff;padding:.85rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(10,22,40,.3)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav{display:flex;align-items:center;flex-wrap:wrap}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1.1rem;font-size:.93rem;font-weight:600;padding:.45rem .1rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#143a63 60%,#0f766e 135%);border-radius:1.1rem;color:#fff;padding:2.4rem 2rem;margin:1.8rem 0;box-shadow:0 14px 34px rgba(10,22,40,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(20,184,166,.18)}
+.hero h1{color:#fff;font-size:2.05rem;margin:0 0 .55rem;line-height:1.25;letter-spacing:-.015em;border:0;padding:0}
+.hero .lede{color:#dbe4f0;font-size:1.07rem;max-width:46rem;margin:0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.15rem}
+.hero-badges span{background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.5);color:#a7f3d0;font-size:.84rem;font-weight:700;padding:.38rem .85rem;border-radius:999px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.panel h2{margin-top:0;border:0;padding:0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;min-height:48px;padding:.65rem .85rem;border:1.5px solid var(--line);border-radius:.55rem;font-size:16px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.18)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;min-height:52px;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;transition:background .15s,transform .1s;box-shadow:0 4px 12px rgba(20,184,166,.35)}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.3rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut);margin-top:.2rem}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line);border-radius:.6rem}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.95rem;background:#fff}
+th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);text-align:left}
+tr:first-child th{background:#f1f5f9;color:var(--navy);font-weight:700}
+tr:nth-child(even) td{background:#f9fafb}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2.4rem;font-size:1.4rem;letter-spacing:-.01em;padding-bottom:.4rem;border-bottom:2px solid #eef2f7}
+h3{color:var(--navy);font-size:1.1rem}
+.steps{margin:2.2rem 0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.4rem}
+.step h3{margin:.15rem 0 .35rem;font-size:1.02rem;border:0;padding:0}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.source-note{background:#f0fdfa;border:1px solid #99f6e4;border-left:4px solid var(--teal);border-radius:.6rem;padding:.9rem 1.1rem;font-size:.9rem;margin:1.6rem 0}
+.guides{margin:2.4rem 0}
+.guide-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:.7rem;padding:1.2rem 1.35rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card a{color:var(--navy);font-weight:700;font-size:1.06rem;text-decoration:none}
+.guide-card a:hover{color:var(--teal-d);text-decoration:underline}
+.guide-card p{margin:.35rem 0 0;font-size:.93rem;color:var(--mut)}
+.faq{margin:1rem 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.15rem;margin:.6rem 0}
+.faq details[open]{box-shadow:0 5px 16px rgba(10,22,40,.08);border-color:#99f6e4}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--teal);font-weight:800;font-size:1.25rem;line-height:1}
+.faq details[open] summary::before{content:"3"}
+.faq details p{color:#4b5563;font-size:.94rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:linear-gradient(180deg,#0A1628,#081120);color:#94a3b8;margin-top:2.5rem;padding:2.2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#fff}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+@media(max-width:720px){
+.calc-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.fcols{grid-template-columns:1fr}
+.hero{padding:1.7rem 1.3rem;margin:1.2rem 0;border-radius:.9rem}
+.hero h1{font-size:1.55rem}
+.hero .lede{font-size:.99rem}
+.btn{width:100%}
+h2{font-size:1.22rem}
+.panel{padding:1.15rem}
+.wrap{padding:0 1rem}
+table{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>Baby Cost Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/cost-of-a-baby-australia-guide.html">Guide</a></nav>
+</div></header>
+<main><div class="wrap">
+<section class="hero"><h1>Baby First-Year Cost Calculator Australia (2026)</h1>
+<p class="lede">How much does a baby cost in Australia? Add up one-off gear, monthly essentials, childcare and the income you don't earn while on leave — and see your realistic first-year total.</p>
+<div class="hero-badges"><span>One-off + monthly costs</span><span>Childcare included</span><span>Govt support offset</span></div></section>
+
+<div class="panel">
+<h2 style="margin-top:0">Calculate Your First-Year Cost</h2>
+<div class="calc-grid">
+<div>
+<div class="field"><label for="care">Maternity care</label>
+<select id="care">
+<option value="public" selected>Public hospital (Medicare-covered)</option>
+<option value="private">Private hospital (out-of-pocket costs)</option>
+</select>
+<span class="hint">Private obstetrician + hospital excess typically adds thousands out of pocket.</span></div>
+<div class="field"><label for="gear">Gear budget</label>
+<select id="gear">
+<option value="1500">Budget — mostly secondhand/borrowed (~$1,500)</option>
+<option value="4000" selected>Mid-range — new essentials (~$4,000)</option>
+<option value="9000">Premium — top brands, full nursery (~$9,000)</option>
+</select>
+<span class="hint">Covers pram, cot, car seat, mattress, monitor, carrier and starter clothes.</span></div>
+<div class="field"><label for="feeding">Feeding</label>
+<select id="feeding">
+<option value="0" selected>Breastfeeding (mostly free)</option>
+<option value="150">Formula (~$150/month)</option>
+<option value="75">Mixed feeding (~$75/month)</option>
+</select></div>
+<div class="field"><label for="essentials">Monthly essentials — nappies, wipes, clothes (AUD)</label>
+<input type="number" id="essentials" value="280" min="50" max="800" step="10">
+<span class="hint">Most families spend $200–$400/month; newborns use 8–12 nappies a day.</span></div>
+<div class="field"><label for="leave">Months on reduced income</label>
+<input type="number" id="leave" value="6" min="0" max="18" step="1">
+<span class="hint">Paid Parental Leave is $1,004.70/week before tax (2026).</span></div>
+<div class="field"><label for="drop">Monthly household income drop while on leave (AUD)</label>
+<input type="number" id="drop" value="2500" min="0" step="100">
+<span class="hint">The gap between your normal pay and leave payments. Set 0 to skip.</span></div>
+<div class="field"><label for="ccmonths">Months of paid childcare in year 1</label>
+<input type="number" id="ccmonths" value="0" min="0" max="10" step="1">
+<span class="hint">Only count months within the baby's first year.</span></div>
+<div class="field"><label for="ccgap">Weekly childcare gap fee after Child Care Subsidy (AUD)</label>
+<input type="number" id="ccgap" value="150" min="0" step="10">
+<span class="hint">What you pay out of pocket per week once the subsidy is applied.</span></div>
+<button class="btn" onclick="calcBaby()">Calculate First-Year Cost</button>
+</div>
+<div class="result" id="result" style="display:none"></div>
+</div>
+</div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-AU');}
+function calcBaby(){
+  const care=document.getElementById('care').value;
+  const gear=parseFloat(document.getElementById('gear').value)||0;
+  const feed=parseFloat(document.getElementById('feeding').value)||0;
+  const ess=parseFloat(document.getElementById('essentials').value)||0;
+  const leave=parseFloat(document.getElementById('leave').value)||0;
+  const drop=parseFloat(document.getElementById('drop').value)||0;
+  const ccm=parseFloat(document.getElementById('ccmonths').value)||0;
+  const gap=parseFloat(document.getElementById('ccgap').value)||0;
+  const r=document.getElementById('result');r.style.display='block';
+  const careCost=care==='private'?7500:0;
+  const oneOff=gear+careCost;
+  const monthlyOngoing=ess+feed;
+  const ongoingYear=monthlyOngoing*12;
+  const childcare=ccm*4.33*gap;
+  const incomeGap=leave*drop;
+  const total=oneOff+ongoingYear+childcare+incomeGap;
+  const perMonth=total/12;
+  r.innerHTML='<div class="big">'+fmt(total)+'<small>estimated FIRST-YEAR total (indicative)</small></div>'
+  +'<div class="table-scroll"><table>'
+  +'<tr><td>One-off setup (gear'+(care==='private'?' + private care out-of-pocket':'')+')</td><td>'+fmt(oneOff)+'</td></tr>'
+  +'<tr><td>Monthly essentials × 12</td><td>'+fmt(ongoingYear)+'</td></tr>'
+  +'<tr><td>Childcare gap fees</td><td>'+fmt(childcare)+'</td></tr>'
+  +'<tr><td>Lost income during leave</td><td>'+fmt(incomeGap)+'</td></tr>'
+  +'<tr><td>Works out to per month</td><td>'+fmt(perMonth)+'</td></tr>'
+  +'</table></div>'
+  +'<p class="hint">The biggest cost is usually the income you don\u2019t earn — model that first. Gear is the most compressible part: secondhand prams, cots and clothes cut one-off costs sharply.</p>';
+}
+</script>
+<section class="steps">
+<h2>How It Works</h2>
+<div class="steps-grid">
+<div class="step"><span class="n">1</span><h3>Pick your gear level</h3><p>Choose a budget, mid-range, or premium one-off setup.</p></div><div class="step"><span class="n">2</span><h3>Add monthly costs</h3><p>Nappies, formula, food, and childcare.</p></div><div class="step"><span class="n">3</span><h3>Subtract support</h3><p>See the government payments that offset the total.</p></div>
+</div>
+<p class="source-note"><strong>Accuracy note:</strong> Cost ranges compiled from Australian retailer pricing, government payment rates (Paid Parental Leave, Child Care Subsidy), and published household studies.</p>
+</section>
+<div style="text-align:center;margin:28px 0;">
+<!-- Adsterra Banner 300x250 - verified key -->
+<script>
+atOptions = {'key':'99bbb8d1f41996e5ce9f8c14b86321a2','format':'iframe','height':250,'width':300,'params':{}};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+<h2>What does a baby cost in Australia? (2026 data)</h2>
+<p>Published estimates put baby-only costs for the first year at roughly <strong>$5,000–$15,000</strong> (MyBudget, 2026) or <strong>$4,310–$9,620</strong> (Canstar, 2024) — before childcare, private maternity care and any income lost during parental leave. Including pregnancy through the first year, the range is about <strong>$4,500–$12,000 on the Medicare public route</strong> and <strong>$18,000–$35,000 private</strong> (Dovelyne, 2026 estimates).</p>
+<h2>The three layers of first-year cost</h2>
+<ol>
+<li><strong>One-off setup</strong> — pram ($249–$2,500), cot ($249–$1,000), car seat ($349–$799, required by law), mattress, monitor ($49–$649), carrier, initial clothes. The most visible cost — and the most compressible via secondhand.</li>
+<li><strong>Ongoing essentials</strong> — nappies (8–12/day for a newborn), wipes, formula if used (~$150/month), clothes every few months, extra laundry and power. Relentless and easy to underestimate.</li>
+<li><strong>Lost income</strong> — usually the biggest number. The gap between your normal pay and leave payments dwarfs every pram and cot combined.</li>
+</ol>
+<div class="note"><strong>Government support (2026):</strong> Paid Parental Leave is <strong>$1,004.70/week before tax</strong> with an individual income limit of $186,487 and a family limit of $386,525. The Child Care Subsidy covers up to 90% of the hourly rate cap for families earning under $88,520, tapering 1% per $5,000 above. Check Services Australia for current figures before you plan.</div>
+<h2>Ways to keep the first year affordable</h2>
+<ul>
+<li>Buy big gear secondhand — prams, cots and carriers lose value fast but stay safe if you check recalls.</li>
+<li>Model the income gap <em>before</em> shopping: work out your actual household income during leave, including Paid Parental Leave and any employer top-up.</li>
+<li>Start a "baby fund" as early as possible — even small weekly savings compound into a buffer.</li>
+<li>Compare childcare gap fees after the subsidy, not headline daily rates.</li>
+</ul>
+<div class="faq">
+<h2>FAQs</h2>
+<details><summary>How much does a baby cost per month in Australia?</summary><p>For essentials alone, most families spend roughly $300–$600/month in the first year. Add childcare gap fees or lost income and the monthly figure can be several times higher.</p></details>
+<details><summary>Is private maternity care worth the cost?</summary><p>Private care adds thousands in out-of-pocket costs (obstetrician fees plus hospital excess) versus mostly Medicare-covered public care. The choice is about continuity of carer and comfort, not safety.</p></details>
+<details><summary>What government payments can I get?</summary><p>Eligible families can receive Paid Parental Leave, Family Tax Benefit, Child Care Subsidy and possibly Parenting Payment. Use the Services Australia Payment Finder for a personal estimate.</p></details>
+<details><summary>How much is Paid Parental Leave in 2026?</summary><p>$1,004.70 per week before tax. Individual income limit $186,487; family limit $386,525. Confirm current rates with Services Australia.</p></details>
+<details><summary>What is the biggest hidden cost?</summary><p>Lost income. A household dropping from two incomes to one (or one-and-a-half) for 6–12 months usually finds that gap is larger than every item of baby gear combined.</p></details>
+</div>
+<div class="note"><strong>Disclaimer:</strong> This calculator gives indicative estimates based on published 2026 Australian figures. Actual costs vary widely by location, providers and choices. Figures are estimates, not financial advice.</div>
+
+<section class="guides">
+<h2>Guides</h2>
+<div class="guide-card">
+<div><a href="articles/cost-of-a-baby-australia-guide.html">How Much Does a Baby Cost in Australia? First-Year Breakdown (2026)</a>
+<p>The real first-year cost of a baby in Australia: one-off gear, monthly essentials, childcare, and the government payments that offset it.</p></div>
+</div>
+</section>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Baby Cost Calculator</h4><p>Free Australian baby cost calculator — estimate your baby's first-year costs: gear, monthly essentials, childcare and income changes.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p> &middot; <a href="articles/cost-of-a-baby-australia-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-ae-gratuity-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Gratuity Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ae-overtime-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Overtime Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-au-divorce-cost-estimator.surge.sh" style="color:#4b5563;text-decoration:none;">Australia Divorce Cost Estimator</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
