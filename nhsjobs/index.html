@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Jobs UK | NAN Jobs Portal</title>
+<meta name="description" content="Explore NHS jobs UK — nursing, paramedic, allied health and support roles across NHS trusts with Agenda for Change pay bands and apply steps.">
+<link rel="canonical" href="https://nan-nhsjobs.surge.sh/">
+<meta property="og:title" content="NHS Jobs UK | NAN Jobs Portal">
+<meta property="og:description" content="NHS vacancies UK — nursing, paramedic, allied health and support roles with pay bands and application guidance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nan-nhsjobs.surge.sh/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NHS Jobs UK | NAN Jobs Portal">
+<meta name="twitter:description" content="NHS vacancies UK with pay bands, closing dates and application guidance.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;color:#1b2a4a;background:#f3f2f1}
+a{color:#1d70b8;text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:#0b0c0c;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.brand{font-size:1.5rem;font-weight:800;letter-spacing:.5px}
+.brand span{color:#ffdd00}
+nav.main{background:#0b0c0c;border-top:1px solid #505a5f;padding:10px 20px;display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:#fff;font-weight:600;font-size:.95rem}
+nav.main a:hover{color:#cfe0ff}
+.hero{background:#1d70b8;color:#fff;text-align:center;padding:54px 20px;position:relative}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:#0b0c0c}
+.badge{display:inline-block;background:#fff;color:#0b0c0c;font-weight:700;font-size:.85rem;padding:6px 16px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:2.4rem;margin-bottom:12px}
+.hero p{font-size:1.1rem;max-width:700px;margin:0 auto;opacity:.95}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 20px}
+.adslot{background:#fff;border:1px dashed #c3cede;border-radius:10px;padding:18px;text-align:center;margin:26px 0;overflow:hidden}
+.adslot small{display:block;color:#8a94a6;font-size:.75rem;margin-bottom:8px}
+section.card{background:#fff;border-radius:12px;padding:28px;margin:26px 0;box-shadow:0 2px 10px rgba(0,48,135,.06)}
+h2{color:#0b0c0c;font-size:1.6rem;margin-bottom:6px;border-bottom:3px solid #1d70b8;display:inline-block;padding-bottom:6px}
+.sub{color:#5b6b8c;margin-bottom:18px}
+.job{border:1px solid #dde4f0;border-radius:10px;padding:18px;margin:14px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.job:hover{border-color:#1d70b8;box-shadow:0 3px 12px rgba(29,112,184,.12)}
+.job h3{color:#0b0c0c;font-size:1.15rem}
+.job .dept{color:#1d70b8;font-weight:600;font-size:.95rem}
+.job .meta{font-size:.9rem;color:#5b6b8c;margin-top:6px}
+.job .salary{font-weight:700;color:#0b7a3e;margin-top:6px}
+.apply{align-self:center;background:#1d70b8;color:#fff;padding:10px 26px;border-radius:8px;font-weight:700;white-space:nowrap}
+.apply:hover{background:#003078;text-decoration:none}
+.band{display:inline-block;background:#e3f0fd;color:#0b0c0c;font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:6px;margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.cat{background:#eaf3fd;border:1px solid #c9def7;border-radius:10px;padding:18px;text-align:center;font-weight:700;color:#0b0c0c}
+.cat:hover{background:#d7e8fc}
+.cat small{display:block;font-weight:400;color:#5b6b8c;margin-top:6px}
+.steps{counter-reset:step;margin-top:14px}
+.step{counter-increment:step;display:flex;gap:16px;margin:14px 0}
+.step::before{content:counter(step);background:#1d70b8;color:#fff;font-weight:800;min-width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.faq{border-bottom:1px solid #e3e8f2;padding:14px 0}
+.faq h3{font-size:1.05rem;color:#0b0c0c;margin-bottom:6px}
+.faq p{color:#3a4763}
+footer{background:#0b0c0c;color:#cdd8ee;padding:36px 20px;margin-top:30px}
+footer .wrap{padding:0}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#fff;margin-bottom:10px}
+footer a{color:#9db8e8}
+footer p{font-size:.88rem;margin-top:14px;color:#8fa3c8}
+.copy{text-align:center;margin-top:24px;font-size:.85rem;color:#7c90b8}
+@media(max-width:640px){.hero h1{font-size:1.7rem}.apply{width:100%;text-align:center}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"NAN Jobs Portal","url":"https://nan-nhsjobs.surge.sh/","description":"NHS vacancies UK with pay bands, closing dates and application guidance."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I apply for NHS jobs?","acceptedAnswer":{"@type":"Answer","text":"Most NHS vacancies in England and Wales are advertised on jobs.nhs.uk (the NHS Jobs service), with many trusts also using the Trac recruitment system at trac.jobs. Create a profile, complete the application form and track your progress online."}},
+{"@type":"Question","name":"What are NHS pay bands?","acceptedAnswer":{"@type":"Answer","text":"NHS roles in England follow the Agenda for Change pay framework, from Band 2 (support roles) to Band 9 (senior leadership), with separate pay scales for doctors, dentists and very senior managers."}},
+{"@type":"Question","name":"Do NHS jobs require professional registration?","acceptedAnswer":{"@type":"Answer","text":"Clinical roles require registration with the relevant regulator — the NMC for nurses and midwives, the HCPC for allied health professionals, and the GMC for doctors — usually before your start date."}},
+{"@type":"Question","name":"What checks are done before starting an NHS job?","acceptedAnswer":{"@type":"Answer","text":"NHS appointments are subject to right-to-work checks, references, an occupational health clearance and a Disclosure and Barring Service (DBS) check, which is enhanced for patient-facing roles."}},
+{"@type":"Question","name":"Can international applicants apply for NHS jobs?","acceptedAnswer":{"@type":"Answer","text":"Yes — the NHS actively recruits internationally. You will need the relevant UK professional registration, a valid visa with right to work in the UK, and to meet English language requirements set by your regulator."}},
+{"@type":"Question","name":"What is the NHS pension like?","acceptedAnswer":{"@type":"Answer","text":"The NHS Pension Scheme is one of the most generous in the UK, with the employer contributing over 20% of pensionable pay. Membership is automatic for most NHS employees, with an opt-out option."}}
+]}
+</script>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Staff Nurse — Acute Medicine (Band 5)",
+  "description": "Apply for the Staff Nurse — Acute Medicine (Band 5) role at Manchester University NHS Foundation Trust in Manchester, UK. Applications close 2026-11-06.",
+  "datePosted": "2026-10-09",
+  "validThrough": "2026-11-06",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "Manchester University NHS Foundation Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Manchester",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 31049,
+    "maxValue": 37796,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Paramedic — Emergency Operations (Band 6)",
+  "description": "Apply for the Paramedic — Emergency Operations (Band 6) role at London Ambulance Service NHS Trust in London, UK. Applications close 2026-10-29.",
+  "datePosted": "2026-10-07",
+  "validThrough": "2026-10-29",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "London Ambulance Service NHS Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 38682,
+    "maxValue": 46580,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Senior Sister / Charge Nurse — Critical Care (Band 7)",
+  "description": "Apply for the Senior Sister / Charge Nurse — Critical Care (Band 7) role at Guy's and St Thomas' NHS Foundation Trust in London, UK. Applications close 2026-11-02.",
+  "datePosted": "2026-10-05",
+  "validThrough": "2026-11-02",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "Guy's and St Thomas' NHS Foundation Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 47810,
+    "maxValue": 54710,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Healthcare Assistant — Surgical Wards (Band 3)",
+  "description": "Apply for the Healthcare Assistant — Surgical Wards (Band 3) role at Leeds Teaching Hospitals NHS Trust in Leeds, UK. Applications close 2026-10-24.",
+  "datePosted": "2026-10-10",
+  "validThrough": "2026-10-24",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "Leeds Teaching Hospitals NHS Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leeds",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 25071,
+    "maxValue": 26674,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Diagnostic Radiographer (Band 6)",
+  "description": "Apply for the Diagnostic Radiographer (Band 6) role at University Hospitals Birmingham NHS Foundation Trust in Birmingham, UK. Applications close 2026-11-18.",
+  "datePosted": "2026-10-04",
+  "validThrough": "2026-11-18",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "University Hospitals Birmingham NHS Foundation Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Birmingham",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 38682,
+    "maxValue": 46580,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "GP Administrator / Receptionist (Band 3)",
+  "description": "Apply for the GP Administrator / Receptionist (Band 3) role at North East London Integrated Care Board in London, UK. Applications close 2026-10-31.",
+  "datePosted": "2026-10-08",
+  "validThrough": "2026-10-31",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "North East London Integrated Care Board"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 25071,
+    "maxValue": 26674,
+    "unitText": "YEAR"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Consultant in Emergency Medicine",
+  "description": "Apply for the Consultant in Emergency Medicine role at Sheffield Teaching Hospitals NHS Foundation Trust in Sheffield, UK. Applications close 2026-11-16.",
+  "datePosted": "2026-10-02",
+  "validThrough": "2026-11-16",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+   "@type": "Organization",
+   "name": "Sheffield Teaching Hospitals NHS Foundation Trust"
+  },
+  "jobLocation": {
+   "@type": "Place",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sheffield",
+    "addressCountry": "GB"
+   }
+  },
+  "baseSalary": {
+   "@type": "MonetaryAmount",
+   "currency": "GBP",
+   "value": {
+    "@type": "QuantitativeValue",
+    "minValue": 105504,
+    "maxValue": 139882,
+    "unitText": "YEAR"
+   }
+  }
+ }
+]
+</script>
+</head>
+<body>
+<header class="top">
+<div class="brand">NAN <span>Jobs</span></div>
+<div>UK's Public Sector Career Portal</div>
+</header>
+<nav class="main">
+<a href="#jobs">Latest Jobs</a>
+<a href="#categories">Categories</a>
+<a href="#howto">How to Apply</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="hero">
+<span class="badge">Updated October 2026</span>
+<h1>NHS Jobs UK</h1>
+<p>Explore nursing, paramedic, allied health and support vacancies across NHS trusts — with Agenda for Change pay bands, closing dates and application guidance.</p>
+</div>
+<main class="wrap">
+<div class="adslot">
+<small>Advertisement</small>
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+</div>
+
+<section class="card" id="jobs">
+<h2>Latest NHS Jobs</h2>
+<p class="sub">Current vacancies across NHS trusts in England — clinical, support and administrative roles.</p>
+
+<article class="job">
+<div><span class="band">Band 5</span><h3>Staff Nurse — Acute Medicine</h3><div class="dept">Manchester University NHS Foundation Trust</div>
+<div class="meta">📍 Manchester &nbsp;|&nbsp; Posted: 9 Oct 2026 &nbsp;|&nbsp; Closing: 6 Nov 2026</div>
+<div class="salary">£31,049 – £37,796 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Band 6</span><h3>Paramedic — Emergency Operations</h3><div class="dept">London Ambulance Service NHS Trust</div>
+<div class="meta">📍 London &nbsp;|&nbsp; Posted: 7 Oct 2026 &nbsp;|&nbsp; Closing: 29 Oct 2026</div>
+<div class="salary">£38,682 – £46,580 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Band 7</span><h3>Senior Sister / Charge Nurse — Critical Care</h3><div class="dept">Guy's and St Thomas' NHS Foundation Trust</div>
+<div class="meta">📍 London &nbsp;|&nbsp; Posted: 5 Oct 2026 &nbsp;|&nbsp; Closing: 2 Nov 2026</div>
+<div class="salary">£47,810 – £54,710 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Band 3</span><h3>Healthcare Assistant — Surgical Wards</h3><div class="dept">Leeds Teaching Hospitals NHS Trust</div>
+<div class="meta">📍 Leeds &nbsp;|&nbsp; Posted: 10 Oct 2026 &nbsp;|&nbsp; Closing: 24 Oct 2026</div>
+<div class="salary">£25,071 – £26,674 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Band 6</span><h3>Diagnostic Radiographer</h3><div class="dept">University Hospitals Birmingham NHS Foundation Trust</div>
+<div class="meta">📍 Birmingham &nbsp;|&nbsp; Posted: 4 Oct 2026 &nbsp;|&nbsp; Closing: 18 Nov 2026</div>
+<div class="salary">£38,682 – £46,580 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Band 3</span><h3>GP Administrator / Receptionist</h3><div class="dept">North East London Integrated Care Board</div>
+<div class="meta">📍 London &nbsp;|&nbsp; Posted: 8 Oct 2026 &nbsp;|&nbsp; Closing: 31 Oct 2026</div>
+<div class="salary">£25,071 – £26,674 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+
+<article class="job">
+<div><span class="band">Consultant</span><h3>Consultant in Emergency Medicine</h3><div class="dept">Sheffield Teaching Hospitals NHS Foundation Trust</div>
+<div class="meta">📍 Sheffield &nbsp;|&nbsp; Posted: 2 Oct 2026 &nbsp;|&nbsp; Closing: 16 Nov 2026</div>
+<div class="salary">£105,504 – £139,882 per year</div></div>
+<a class="apply" href="#">Apply</a>
+</article>
+</section>
+
+<div class="adslot">
+<small>Advertisement</small>
+<script async="async" data-cfasync="false" src="https://pl30652899.profitableratecpmnetwork.com/2bc9ce85e1f2badba2c6e8814c11f328/invoke.js"></script>
+<div id="container-2bc9ce85e1f2badba2c6e8814c11f328"></div>
+</div>
+
+<section class="card" id="categories">
+<h2>Browse by Category</h2>
+<p class="sub">NHS careers across clinical and non-clinical professions.</p>
+<div class="grid">
+<div class="cat">Nursing &amp; Midwifery<small>Band 5–8 nursing and midwife roles</small></div>
+<div class="cat">Medical &amp; Dental<small>Doctors, consultants and SAS roles</small></div>
+<div class="cat">Allied Health Professionals<small>Physio, radiography, pharmacy and more</small></div>
+<div class="cat">Ambulance Services<small>Paramedics and emergency care</small></div>
+<div class="cat">Healthcare Support<small>HCAs, porters and support workers</small></div>
+<div class="cat">Admin &amp; Clerical<small>Reception, records and management</small></div>
+</div>
+</section>
+
+<section class="card" id="howto">
+<h2>How to Apply</h2>
+<p class="sub">Five steps to securing an NHS role.</p>
+<div class="steps">
+<div class="step"><div><strong>Search jobs.nhs.uk</strong><br>The official <strong>jobs.nhs.uk</strong> portal lists most NHS vacancies in England and Wales, with many trusts also recruiting via <strong>trac.jobs</strong>. Create a profile and set up alerts for your profession.</div></div>
+<div class="step"><div><strong>Check professional registration</strong><br>Clinical roles require registration with the NMC, HCPC or GMC. International applicants should start registration and English language requirements early — they take months.</div></div>
+<div class="step"><div><strong>Tailor your application</strong><br>Address the person specification point by point, giving evidence from clinical placements or experience. Use clear, concise language and quantify achievements where possible.</div></div>
+<div class="step"><div><strong>Attend interview and assessment</strong><br>Expect values-based interviews aligned with the NHS Constitution, plus clinical scenarios or practical assessments for patient-facing roles.</div></div>
+<div class="step"><div><strong>Complete pre-employment checks</strong><br>Offers are conditional on <strong>right-to-work checks</strong>, references, occupational health clearance and an enhanced <strong>DBS check</strong> for patient-facing roles.</div></div>
+</div>
+</section>
+
+<section class="card" id="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq"><h3>How do I apply for NHS jobs?</h3><p>Most NHS vacancies in England and Wales are advertised on jobs.nhs.uk (the NHS Jobs service), with many trusts also using the Trac recruitment system at trac.jobs. Create a profile, complete the application form and track your progress online.</p></div>
+<div class="faq"><h3>What are NHS pay bands?</h3><p>NHS roles in England follow the Agenda for Change pay framework, from Band 2 (support roles) to Band 9 (senior leadership), with separate pay scales for doctors, dentists and very senior managers.</p></div>
+<div class="faq"><h3>Do NHS jobs require professional registration?</h3><p>Clinical roles require registration with the relevant regulator — the NMC for nurses and midwives, the HCPC for allied health professionals, and the GMC for doctors — usually before your start date.</p></div>
+<div class="faq"><h3>What checks are done before starting an NHS job?</h3><p>NHS appointments are subject to right-to-work checks, references, an occupational health clearance and a Disclosure and Barring Service (DBS) check, which is enhanced for patient-facing roles.</p></div>
+<div class="faq"><h3>Can international applicants apply for NHS jobs?</h3><p>Yes — the NHS actively recruits internationally. You will need the relevant UK professional registration, a valid visa with right to work in the UK, and to meet English language requirements set by your regulator.</p></div>
+<div class="faq"><h3>What is the NHS pension like?</h3><p>The NHS Pension Scheme is one of the most generous in the UK, with the employer contributing over 20% of pensionable pay. Membership is automatic for most NHS employees, with an opt-out option.</p></div>
+</section>
+</main>
+
+
+<section id="latest-articles">
+<h2>Latest Articles (Oct 24, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Band 5 Midwife (£32k+) — Apply by 28 Oct</h3>
+<div class="dates">Published: Oct 24, 2026</div>
+<a class="apply" href="articles/buckinghamshire-nhs-band-5-midwife-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>SWASFT Paramedic Apprenticeship — Closes 25 Oct</h3>
+<div class="dates">Published: Oct 24, 2026</div>
+<a class="apply" href="articles/swasft-paramedic-apprenticeship-bsc-october-2026.html">Read Article</a>
+</article>
+</div>
+<h2>Latest Articles (Oct 23, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Senior HR Manager (Visa Sponsorship) — Apply by 15 Nov</h3>
+<div class="dates">Published: Oct 23, 2026</div>
+<a class="apply" href="articles/nhs-senior-hr-manager-ridings-medical-group-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>NHS Innovation Manager Band 8a (£66k+) — Apply by 1 Nov</h3>
+<div class="dates">Published: Oct 23, 2026</div>
+<a class="apply" href="articles/imperial-college-health-partners-innovation-manager-october-2026.html">Read Article</a>
+</article>
+</div>
+<h2>Latest Articles (Oct 22, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Public Health ST1 Training 2027 — Apply by 19 November</h3>
+<div class="dates">Published: Oct 22, 2026</div>
+<a class="apply" href="articles/nhs-public-health-specialty-training-st1-2027-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Harrogate NHS Healthcare Assistant Jobs 2026 — Apply by 28 Oct</h3>
+<div class="dates">Published: Oct 22, 2026</div>
+<a class="apply" href="articles/harrogate-nhs-healthcare-assistant-jobs-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 21, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>King's Lynn Paediatric Nurse Jobs 2026 – Band 5 (Closing: 23 Oct)</h3>
+<div class="dates">Published: Oct 21, 2026</div>
+<a class="apply" href="articles/kings-lynn-paediatric-ed-nurse-jobs-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>NHS Nurse Visa Sponsorship Jobs 2026 – Peterborough (Closing: 22 Oct)</h3>
+<div class="dates">Published: Oct 21, 2026</div>
+<a class="apply" href="articles/nhs-nurse-visa-sponsorship-jobs-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 20, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>SECAmb Virtual Care Clinician Jobs 2026: Band 6 Nurses &amp; Paramedics — Assessment 22 October</h3>
+<div class="dates">Published: Oct 20, 2026</div>
+<a class="apply" href="articles/secamb-virtual-care-clinician-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Worcestershire NHS Trust Hiring Now: RGNs, RNAs and HCAs, Bands 3–8a — October 2026</h3>
+<div class="dates">Published: Oct 20, 2026</div>
+<a class="apply" href="articles/worcestershire-nhs-trust-nursing-recruitment-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 19, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Graduate Management Training Scheme 2027: Apply Before 28 October 2026</h3>
+<div class="dates">Published: Oct 19, 2026</div>
+<a class="apply" href="articles/nhs-graduate-management-training-scheme-2027-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Nottingham Hospitals Welcome 49 New Midwives: NUH Maternity Recruitment Wave October 2026</h3>
+<div class="dates">Published: Oct 19, 2026</div>
+<a class="apply" href="articles/nottingham-nuh-midwives-recruitment-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 18, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>Government Unlocks Thousands of NHS Jobs for Nurses and Midwives: Graduate Guarantee 2026</h3>
+<div class="dates">Published: Oct 18, 2026</div>
+<a class="apply" href="articles/government-unlocks-nhs-nursing-midwifery-jobs-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Epsom &amp; St Helier NHS Trust Healthcare Assistant Jobs: Band 3, £30,630–£32,346 — Apply by 22 October 2026</h3>
+<div class="dates">Published: Oct 18, 2026</div>
+<a class="apply" href="articles/epsom-st-helier-nhs-healthcare-assistant-jobs-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 17, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Scotland Mental Health Nurse Jobs 2026: Band 5 £34,544–£43,039 + £8,000 Relocation</h3>
+<div class="dates">Published: Oct 17, 2026</div>
+<a class="apply" href="articles/nhs-scotland-mental-health-nurse-jobs-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Shrewsbury &amp; Telford NHS Nursing Jobs October 2026: Staff Nurse £32,073–£39,043 — Closes 30 October 2026</h3>
+<div class="dates">Published: Oct 17, 2026</div>
+<a class="apply" href="articles/shrewsbury-telford-nhs-nursing-jobs-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 16, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Healthcare Assistant Jobs with Visa Sponsorship 2026: Band 3 from £25,760 — Health and Care Worker Visa Guide</h3>
+<div class="dates">Published: Oct 16, 2026</div>
+<a class="apply" href="articles/nhs-healthcare-assistant-jobs-visa-sponsorship-october-2026.html">Read Article</a>
+</article>
+<article class="job">
+<h3>NHS Apprenticeships 2026-27: Healthcare Support Worker Routes — Earn While You Train</h3>
+<div class="dates">Published: Oct 16, 2026</div>
+<a class="apply" href="articles/nhs-apprenticeships-2026-27-healthcare-support-worker-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section id="latest-articles">
+<h2>Latest Articles (Oct 15, 2026)</h2>
+<div class="jobs">
+<article class="job">
+<h3>NHS Winter Recruitment October 2026: Trust Vacancies &amp; £50k Package</h3>
+<div class="dates">Published: Oct 15, 2026</div>
+<a class="apply" href="articles/nhs-winter-recruitment-october-2026-trust-vacancies.html">Read Article</a>
+</article>
+<article class="job">
+<h3>Kent Community Health NHS Jobs October 2026: 100+ Vacancies</h3>
+<div class="dates">Published: Oct 15, 2026</div>
+<a class="apply" href="articles/kent-community-health-nhs-jobs-october-2026.html">Read Article</a>
+</article>
+</div>
+</section>
+<section class="card" id="latest-articles-oct14">
+<h2>Latest Articles (Oct 14, 2026)</h2>
+<p class="sub">Fresh guides from the NAN Jobs Portal editorial team.</p>
+<ul style="list-style:none;padding:0">
+<li style="margin:12px 0"><a href="/articles/nhs-pay-rise-2026-27-agenda-for-change-bands-confirmed.html" style="font-weight:700">NHS Pay Rise 2026/27 Confirmed: Agenda for Change Bands & Nurse Salaries</a><br><span style="color:#5b6b8c;font-size:.9rem">3.3% pay rise confirmed for England & Wales; full Agenda for Change band table; Scotland's 3.75% deal.</span></li>
+<li style="margin:12px 0"><a href="/articles/nhs-recruitment-october-2026-trust-vacancies-community-nursing.html" style="font-weight:700">NHS Recruitment October 2026: Community Nursing, Support & Trust Vacancies</a><br><span style="color:#5b6b8c;font-size:.9rem">Band 3 support roles from £25,760, Band 6 community nursing to £48,117 — trust vacancies and how to apply.</span></li>
+</ul>
+</section>
+
+<section class="card" id="latest-articles">
+<h2>Latest Articles (Oct 13, 2026)</h2>
+<p class="sub">Fresh guides from the NAN Jobs Portal editorial team.</p>
+<ul style="list-style:none;padding:0">
+<li style="margin:12px 0"><a href="/articles/how-to-apply-nhs-jobs-2026-portal-trac-guide.html" style="font-weight:700">How to Apply for NHS Jobs in 2026 — NHS Jobs Portal & TRAC Application Guide</a><br><span style="color:#5b6b8c;font-size:.9rem">The NHS Jobs portal and TRAC system explained step by step.</span></li>
+<li style="margin:12px 0"><a href="/articles/nhs-careers-2026-nursing-healthcare-assistant-admin-pay-bands.html" style="font-weight:700">NHS Careers 2026: Nursing, Healthcare Assistant & Admin Roles — Pay Bands Explained</a><br><span style="color:#5b6b8c;font-size:.9rem">Agenda for Change bands and entry routes for the biggest NHS staff groups.</span></li>
+</ul>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="fcols">
+<div><h4>NAN Jobs Portal</h4><p>Your guide to public sector careers across the United Kingdom — government, NHS, police and local councils.</p></div>
+<div><h4>Quick Links</h4><p><a href="#jobs">Latest Jobs</a><br><a href="#categories">Categories</a><br><a href="#howto">How to Apply</a><br><a href="#faq">FAQ</a></p></div>
+<div><h4>Official Portals</h4><p><a href="https://www.jobs.nhs.uk">NHS Jobs</a><br><a href="https://www.gov.uk">GOV.UK</a><br><a href="https://www.healthcareers.nhs.uk">Health Careers</a></p></div>
+</div>
+<p><strong>Disclaimer:</strong> Job listings on this page are illustrative samples for guidance only. Always verify details, salaries and closing dates on the official recruitment portals before applying.</p>
+<div class="copy">© 2026 NAN Jobs Portal. All rights reserved.</div>
+</div>
+</footer>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-federalcareers.surge.sh" style="color:#4b5563;text-decoration:none;">Federal Careers USA</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-australiagovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Australia Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-indiasarkari.surge.sh" style="color:#4b5563;text-decoration:none;">Sarkari Naukri 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-uaegovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">UAE Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-sindhgovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Sindh Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-federalgovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Federal Government Jobs Pakistan</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-saudigovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-punjabgovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Punjab Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-pakgovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Pakistan Government Jobs 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-usamilitaryjobs.surge.sh" style="color:#4b5563;text-decoration:none;">US Military Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-germanygovtjobs.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Government Jobs</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-civilserviceuk.surge.sh" style="color:#4b5563;text-decoration:none;">UK Civil Service Jobs</a></p>
+</section>
+<!--nan-network-links:end-->
+</body>
+</html>
