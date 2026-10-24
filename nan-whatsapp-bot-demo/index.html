@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAN WhatsApp Bot — Live Demo</title>
+<meta name="description" content="Try NAN Marketing Agency's WhatsApp chatbot live — AI assistant that replies to client messages in Roman Urdu and English.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:linear-gradient(135deg,#0A1628,#123);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px;color:#fff}
+h1{font-size:22px;margin:6px 0 2px}.sub{color:#9fb3c8;font-size:14px;margin-bottom:16px;text-align:center;max-width:420px}
+.phone{width:min(400px,94vw);height:640px;background:#0b141a;border-radius:32px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.5);border:8px solid #1f2c34}
+.wa-head{background:#075E54;color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.avatar{width:40px;height:40px;border-radius:50%;background:#14B8A6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#0A1628}
+.wa-head .nm{font-weight:600;font-size:15px}.wa-head .st{font-size:12px;color:#d1e7dd}
+.chat{flex:1;background:#0b141a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><circle cx="40" cy="40" r="2" fill="%23182229"/></svg>');padding:14px 10px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:80%;padding:8px 12px;border-radius:10px;font-size:14px;line-height:1.45;white-space:pre-line;animation:pop .18s ease-out}
+@keyframes pop{from{transform:scale(.96);opacity:.4}to{transform:scale(1);opacity:1}}
+.msg.bot{background:#1f2c34;color:#e9edef;align-self:flex-start;border-top-left-radius:2px}
+.msg.user{background:#005c4b;color:#fff;align-self:flex-end;border-top-right-radius:2px}
+.msg .tm{font-size:10px;color:#8696a0;text-align:right;margin-top:3px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px;background:#0b141a}
+.chip{background:transparent;border:1px solid #14B8A6;color:#14B8A6;border-radius:16px;padding:6px 12px;font-size:13px;cursor:pointer}
+.chip:hover{background:#14B8A6;color:#0A1628}
+.inputbar{display:flex;gap:8px;padding:10px;background:#1f2c34;align-items:center}
+.inputbar input{flex:1;border:none;outline:none;border-radius:20px;padding:10px 14px;font-size:14px;background:#2a3942;color:#fff}
+.inputbar button{border:none;background:#00a884;color:#fff;width:42px;height:42px;border-radius:50%;font-size:18px;cursor:pointer}
+.note{max-width:420px;font-size:12px;color:#9fb3c8;margin-top:14px;text-align:center;line-height:1.6}
+.note a{color:#14B8A6}
+.typing{color:#8696a0;font-size:12px;padding:2px 4px;font-style:italic}
+</style>
+</head>
+<body>
+<h1>🤖 NAN WhatsApp Bot — Live Demo</h1>
+<p class="sub">Yehi bot tumhare WhatsApp par clients ko jawab dega. Neeche message likh kar try karo! (Roman Urdu ya English)</p>
+<div class="phone">
+  <div class="wa-head"><div class="avatar">N</div><div><div class="nm">NAN Marketing Agency</div><div class="st" id="status">online</div></div></div>
+  <div class="chat" id="chat"></div>
+  <div class="chips" id="chips"></div>
+  <div class="inputbar"><input id="inp" placeholder="Message" autocomplete="off"><button id="send" aria-label="send">➤</button></div>
+</div>
+<p class="note">Demo me "human handoff" wale jawab local save hote hain (browser me hi).<br>Asli bot WhatsApp Cloud API se chalta hai — <a href="https://github.com/nidaayesha54/nan-websites-empire/tree/main/nan-whatsapp-bot">code yahan</a>.</p>
+<script>
+// ---- same simplified brain as bot.js (client-side port) ----
+var URDU_HINTS=['salam','assalam','kya','kia','hai','haan','han','nahi','ni','aap','ap','mujhe','mujhy','chahiye','chaeye','kaise','kese','kitna','kitne','kahan','kab','kyun','kaam','paisa','paisay','bata','batayen','batao','dekho','dikhao','shukriya','acha','theek','sahi','wala','wali','liye','aur','mein','par','ko','se','ka','ki','ke','ho','hain','kar','karo','karte','banwana'];
+function detectLang(t){t=' '+t.toLowerCase()+' ';if(/\b(salam|assalam|salaam|aoa)\b/.test(t))return 'ru';var h=0;for(var i=0;i<URDU_HINTS.length;i++){var w=URDU_HINTS[i];if(t.indexOf(' '+w+' ')>=0||t.indexOf(' '+w)>=0||t.indexOf(w+' ')>=0)h++;if(h>=2)return 'ru';}return 'en';}
+var R={
+greeting:{ru:"Assalam-o-Alaikum! 👋 NAN Marketing Agency me khush aamdeed! Me Ayesha ki assistant hun — batayen, me aapki kya madad kar sakti hun?",en:"Hello! 👋 Welcome to NAN Marketing Agency! I'm Ayesha's assistant — how can I help you today?"},
+services:{ru:"Hum AI video ads 🎬, social media management 📱, UGC content ✨ aur AI chatbots 🤖 banate hain. Aapko kis cheez me dilchaspi hai?",en:"We create AI video ads 🎬, social media management 📱, UGC content ✨ and AI chatbots 🤖. Which one are you interested in?"},
+price:{ru:"Price kaam par depend karta hai — custom apps $2,000 se shuru hote hain 💰 Apne kaam ki detail batayen, exact quote de dungi 🙂",en:"Pricing depends on the project — custom apps start at $2,000 💰 Tell me what you need and I'll share an exact quote 🙂"},
+portfolio:{ru:"Zaroor! Hamara kaam yahan dekhen 👀\n👉 nidaayesha.com\nKoi khas style pasand aaye to batayen!",en:"Sure! Check out our work here 👀\n👉 nidaayesha.com\nLet me know if any style catches your eye!"},
+timing:{ru:"Aam tor par 3–7 din me delivery ho jati hai ⏱️ (kaam ki noiyat par depend karta hai)",en:"Usually delivered in 3–7 days ⏱️ (depends on the project)"},
+location:{ru:"Hum Pakistan se kaam karte hain, aur duniya bhar ke clients ke sath 🌍",en:"We're based in Pakistan and work with clients worldwide 🌍"},
+human:{ru:"Bilkul! Ye Ayesha khud batayengi — aapka message un tak pahuncha diya hai 🙂",en:"Of course! Ayesha will personally reply — I've passed your message to her 🙂"},
+fallback:{ru:"Ye Ayesha khud batayengi, aapka message un tak pahuncha diya hai 🙂",en:"Ayesha will answer this herself — I've passed your message to her 🙂"}};
+var ROUTES=[['services',['service','services','kya karti','kya karte','what do you do','kaam kya','offer']],['price',['price','cost','paisa','paisay','kitna','kitne','rate','charge','fees','kimat','qimat','budget']],['portfolio',['portfolio','dikhao','dekho','samples','sample','work','example','kaam dekha']],['timing',['kitna time','how long','delivery','kab tak','time lagega','duration']],['location',['kahan se','where','location','based','country','rehti']],['human',['insaan','human','call','phone kro','baat karni','speak to','talk to','real person','ayesha se']]];
+function route(t){t=t.toLowerCase();for(var i=0;i<ROUTES.length;i++){for(var j=0;j<ROUTES[i][1].length;j++){if(t.indexOf(ROUTES[i][1][j])>=0)return ROUTES[i][0];}}return null;}
+var greeted=false, handoffs=[];
+function botReply(text){var lang=detectLang(text||'');var clean=(text||'').trim();
+if(!greeted){greeted=true;return {r:R.greeting[lang],tag:'greeting'};}
+if(/^(hi+|hello+|hey+|salam|assalam|salaam)[\s!.,]*$/i.test(clean))return {r:R.greeting[lang],tag:'greeting'};
+var k=route(clean);
+if(k==='human'){handoffs.push({type:'HOT',msg:clean,ts:new Date().toISOString()});try{localStorage.setItem('nan-bot-handoffs',JSON.stringify(handoffs));}catch(e){}return {r:R.human[lang],tag:'human'};}
+if(k&&R[k])return {r:R[k][lang],tag:k};
+handoffs.push({type:'NEEDS-HUMAN',msg:clean,ts:new Date().toISOString()});try{localStorage.setItem('nan-bot-handoffs',JSON.stringify(handoffs));}catch(e){}
+return {r:R.fallback[lang],tag:'needs-human'};}
+// ---- UI ----
+var chat=document.getElementById('chat'),inp=document.getElementById('inp');
+function now(){var d=new Date();return d.getHours()+':'+String(d.getMinutes()).padStart(2,'0');}
+function addMsg(who,text){var d=document.createElement('div');d.className='msg '+who;d.innerHTML=text.replace(/</g,'&lt;')+'<div class="tm">'+now()+'</div>';chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
+function botSay(text){var t=document.createElement('div');t.className='typing';t.id='typing';t.textContent='typing…';chat.appendChild(t);chat.scrollTop=chat.scrollHeight;
+setTimeout(function(){var e=document.getElementById('typing');if(e)e.remove();addMsg('bot',text);},700+Math.random()*600);}
+function sendUser(text){text=(text||'').trim();if(!text)return;addMsg('user',text);inp.value='';var out=botReply(text);botSay(out.r);}
+document.getElementById('send').onclick=function(){sendUser(inp.value);};
+inp.addEventListener('keydown',function(e){if(e.key==='Enter')sendUser(inp.value);});
+var chips=[["Services kya hain?","Services kya hain?"],["Price kya hai?","Price kya hai?"],["Portfolio dikhao","Portfolio dikhao"],["Mujhe app chahiye","Mujhe business ke liye app chahiye"]];
+var cw=document.getElementById('chips');
+chips.forEach(function(c){var b=document.createElement('button');b.className='chip';b.textContent=c[0];b.onclick=function(){sendUser(c[1]);};cw.appendChild(b);});
+// opening greeting (bot greets first, like WhatsApp Business greeting message)
+setTimeout(function(){greeted=true;addMsg('bot',R.greeting.en);},600);
+</script>
+</body>
+</html>
