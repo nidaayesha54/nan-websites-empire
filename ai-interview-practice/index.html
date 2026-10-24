@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Interview Practice — Prepare Like a Pro | NAN</title>
+<meta name="description" content="Practice for AI video interviews with realistic questions, webcam recording, and timed answers. Free interview prep for Video Editors, Content Creators, Social Media Managers and more.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo"><span class="logo-n">N</span> NAN <span class="logo-sub">Interview Practice</span></div>
+    <nav>
+      <button class="nav-btn" data-nav="landing">Home</button>
+      <button class="nav-btn" data-nav="setup">Practice</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ VIEW: LANDING ============ -->
+  <section id="view-landing" class="view active">
+    <div class="hero">
+      <p class="kicker">Free AI Interview Prep Tool</p>
+      <h1>AI Interview Practice<br><span class="grad">Prepare Like a Pro</span></h1>
+      <p class="hero-sub">More companies now screen candidates with AI video interviews. Practice answering real interview questions on camera — with a timer, webcam recording, and instant playback — before the real thing.</p>
+      <button class="btn btn-primary btn-lg" data-nav="setup">Start Practicing Free →</button>
+      <div class="hero-stats">
+        <div class="stat"><strong>5+</strong><span>Job roles</span></div>
+        <div class="stat"><strong>35+</strong><span>Real questions</span></div>
+        <div class="stat"><strong>2 min</strong><span>Per answer</span></div>
+        <div class="stat"><strong>100%</strong><span>Free, private</span></div>
+      </div>
+    </div>
+
+    <div class="how">
+      <h2>How It Works</h2>
+      <div class="how-grid">
+        <div class="how-card"><div class="how-num">1</div><h3>Pick your role</h3><p>Choose the job you're interviewing for — Video Editor, Content Creator, and more.</p></div>
+        <div class="how-card"><div class="how-num">2</div><h3>Answer on camera</h3><p>Your webcam turns on. Read each question and record your answer — 2 minutes per question.</p></div>
+        <div class="how-card"><div class="how-num">3</div><h3>Review & improve</h3><p>Watch your recordings, download them, and follow the pro tips to sharpen your answers.</p></div>
+      </div>
+    </div>
+
+    <div class="ad-slot">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    </div>
+
+    <div class="roles-preview">
+      <h2>Practice For These Roles</h2>
+      <div class="role-grid" id="landing-roles"></div>
+      <button class="btn btn-primary" data-nav="setup">Choose Your Role →</button>
+    </div>
+
+    <div class="privacy-note">
+      <h3>🔒 100% Private</h3>
+      <p>Everything runs in your browser. Your video recordings never leave your device — no uploads, no accounts, no tracking. Camera access stays on this page only.</p>
+    </div>
+  </section>
+
+  <!-- ============ VIEW: SETUP ============ -->
+  <section id="view-setup" class="view">
+    <h2 class="view-title">Choose Your Job Role</h2>
+    <p class="view-sub">Pick the role you're preparing for. You'll get realistic AI-interview questions with 2 minutes to answer each.</p>
+    <div class="role-grid" id="setup-roles"></div>
+
+    <div class="ad-slot">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    </div>
+  </section>
+
+  <!-- ============ VIEW: PRACTICE ============ -->
+  <section id="view-practice" class="view">
+    <div class="practice-top">
+      <div>
+        <p class="kicker" id="practice-role-label">Video Editor</p>
+        <h2 class="view-title">Question <span id="q-num">1</span> of <span id="q-total">7</span></h2>
+      </div>
+      <div class="timer-wrap">
+        <div class="timer" id="timer">2:00</div>
+        <div class="timer-label">remaining</div>
+      </div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+
+    <div class="practice-grid">
+      <div class="cam-col">
+        <div class="cam-frame">
+          <video id="webcam" autoplay muted playsinline></video>
+          <div class="rec-badge" id="rec-badge" hidden>● REC</div>
+        </div>
+        <div class="cam-controls">
+          <button class="btn btn-danger" id="btn-record">● Start Recording</button>
+          <button class="btn btn-ghost" id="btn-stop" disabled>■ Stop</button>
+        </div>
+        <p class="cam-hint">Allow camera access when asked. Your video stays on this device.</p>
+      </div>
+      <div class="q-col">
+        <div class="question-card">
+          <p class="q-label">Answer this question out loud:</p>
+          <h3 id="question-text">Loading…</h3>
+        </div>
+        <div class="q-nav">
+          <button class="btn btn-ghost" id="btn-skip">Skip Question</button>
+          <button class="btn btn-primary" id="btn-next" disabled>Next Question →</button>
+        </div>
+        <div class="q-tip" id="q-tip"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIEW: SUMMARY ============ -->
+  <section id="view-summary" class="view">
+    <p class="kicker">Practice Complete 🎉</p>
+    <h2 class="view-title">Great Work, <span id="sum-role">Video Editor</span>!</h2>
+    <p class="view-sub">You answered <strong id="sum-count">0</strong> questions. Review your recordings below and read the pro tips.</p>
+
+    <h3 class="sum-h">Your Recordings</h3>
+    <div id="recordings-list" class="recordings"></div>
+
+    <h3 class="sum-h">Pro Tips for Your Next Real Interview</h3>
+    <ul class="tips-list" id="tips-list"></ul>
+
+    <div class="sum-actions">
+      <button class="btn btn-primary" data-nav="setup">Practice Another Role →</button>
+      <button class="btn btn-ghost" data-nav="landing">Back to Home</button>
+    </div>
+
+    <div class="ad-slot">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><span class="logo-n">N</span> NAN Marketing Agency</div>
+    <p class="footer-note">Free interview practice tool. Your recordings never leave your device.</p>
+    <div class="footer-links">
+      <a href="https://nan-aivideotools.surge.sh/">AI Video Tools</a>
+      <a href="https://nan-ugctoolkit.surge.sh/">UGC Toolkit</a>
+      <a href="https://nan-besthosting.surge.sh/">Best Hosting Guide</a>
+      <a href="https://nidaayesha54.github.io/nan-portfolio/">Portfolio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-aiautomation.surge.sh" style="color:#4b5563;text-decoration:none;">AIAutomationHub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-chatbotbuilder.surge.sh" style="color:#4b5563;text-decoration:none;">Free Chatbot Builder</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-dataanalyst.surge.sh" style="color:#4b5563;text-decoration:none;">Free Data Analyst Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-mlplayground.surge.sh" style="color:#4b5563;text-decoration:none;">MLPlayground</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ailogo.surge.sh" style="color:#4b5563;text-decoration:none;">AI Logo Generator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-deeplearnviz.surge.sh" style="color:#4b5563;text-decoration:none;">DeepLearnViz</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aiavatar.surge.sh" style="color:#4b5563;text-decoration:none;">AIAvatarVideo</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aivideohindi.surge.sh" style="color:#4b5563;text-decoration:none;">AI Video Hindi</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-freevideotools.surge.sh" style="color:#4b5563;text-decoration:none;">Free AI Video Tools 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aireels.surge.sh" style="color:#4b5563;text-decoration:none;">AIReelsMaker</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-texttovideo.surge.sh" style="color:#4b5563;text-decoration:none;">TextToVideoHub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aivoiceover.surge.sh" style="color:#4b5563;text-decoration:none;">AIVoiceoverHub</a></p>
+</section>
+<!--nan-network-links:end-->
+</body>
+</html>
