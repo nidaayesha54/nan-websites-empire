@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-us-politics-news.surge.sh/sitemap.xml
