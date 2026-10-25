@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nan-us-tech-news.surge.sh/sitemap.xml
