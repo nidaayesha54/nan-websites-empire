@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0A1628"/>
+<polygon points="0,630 0,420 500,630" fill="#14B8A6" opacity="0.25"/>
+<polygon points="1200,0 1200,200 750,0" fill="#B8912F" opacity="0.25"/>
+<rect x="0" y="0" width="1200" height="10" fill="#B8912F"/>
+<text x="80" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6" fill="#B8912F">NAN NEWS NETWORK</text>
+<text x="80" y="155" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#14B8A6">US POLITICS NEWS</text>
+<text x="80" y="190" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">FEC Filing System Goes</text><text x="80" y="246" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Offline Days Before</text><text x="80" y="302" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Midterms After</text><text x="80" y="358" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Reported Breach</text>
+<g fill="none" stroke="#14B8A6" stroke-width="10"><path d="M880 300 L1010 300 L1010 480 L880 480 Z"/><path d="M900 300 L945 240 L990 300"/><line x1="905" y1="330" x2="905" y2="450"/><line x1="945" y1="330" x2="945" y2="450"/><line x1="985" y1="330" x2="985" y2="450"/></g>
+<rect x="80" y="560" width="180" height="6" fill="#B8912F"/>
+</svg>
