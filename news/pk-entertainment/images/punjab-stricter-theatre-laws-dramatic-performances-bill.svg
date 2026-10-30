@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0A1628"/>
+<polygon points="0,630 0,420 500,630" fill="#14B8A6" opacity="0.25"/>
+<polygon points="1200,0 1200,200 750,0" fill="#B8912F" opacity="0.25"/>
+<rect x="0" y="0" width="1200" height="10" fill="#B8912F"/>
+<text x="80" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6" fill="#B8912F">NAN NEWS NETWORK</text>
+<text x="80" y="155" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#14B8A6">PAKISTAN ENTERTAINMENT NEWS</text>
+<text x="80" y="190" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Punjab Plans Stricter</text><text x="80" y="246" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Laws for Theatre and</text><text x="80" y="302" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Stage Dramas,</text><text x="80" y="358" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Replacing 1876 Act</text>
+<g><circle cx="940" cy="340" r="70" fill="#14B8A6"/><circle cx="940" cy="340" r="18" fill="#0A1628"/><circle cx="910" cy="310" r="12" fill="#0A1628"/><circle cx="970" cy="310" r="12" fill="#0A1628"/><circle cx="910" cy="370" r="12" fill="#0A1628"/><circle cx="970" cy="370" r="12" fill="#0A1628"/><rect x="1020" y="300" width="90" height="150" rx="10" fill="#B8912F"/></g>
+<rect x="80" y="560" width="180" height="6" fill="#B8912F"/>
+</svg>
