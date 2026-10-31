@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0A1628"/>
+<polygon points="0,630 0,420 500,630" fill="#14B8A6" opacity="0.25"/>
+<polygon points="1200,0 1200,200 750,0" fill="#B8912F" opacity="0.25"/>
+<rect x="0" y="0" width="1200" height="10" fill="#B8912F"/>
+<text x="80" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6" fill="#B8912F">NAN NEWS NETWORK</text>
+<text x="80" y="155" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#14B8A6">US HEALTH NEWS</text>
+<text x="80" y="190" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">FDA Approves At-Home</text><text x="80" y="246" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Subcutaneous Induction</text><text x="80" y="302" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">for Skyrizi in Crohn&#x27;s</text><text x="80" y="358" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF">Disease</text>
+<g><circle cx="970" cy="380" r="110" fill="#14B8A6"/><rect x="940" y="300" width="60" height="160" fill="white"/><rect x="890" y="350" width="160" height="60" fill="white"/></g>
+<rect x="80" y="560" width="180" height="6" fill="#B8912F"/>
+</svg>
