@@ -4,10 +4,11 @@
 'use strict';
 
 window.AdMob = (function(){
-  // ── PLACEHOLDERS — replace with real IDs from your AdMob account ──
-  var BANNER_ID      = 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // banner ad unit
-  var INTERSTITIAL_ID= 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // interstitial ad unit
-  // App ID (ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXX) goes in package.json
+  // ── GOOGLE TEST IDs — show test ads only, earn nothing. Replace with real
+  // IDs from your AdMob account (see ADMOB_SETUP.md) to earn real money. ──
+  var BANNER_ID      = 'ca-app-pub-3940256099942544/6300978111'; // banner ad unit (test)
+  var INTERSTITIAL_ID= 'ca-app-pub-3940256099942544/1033173712'; // interstitial ad unit (test)
+  // App ID (ca-app-pub-3940256099942544~3347511713, test) is in package.json
   // cordova.plugins.admob-plus-cordova.APP_ID_ANDROID — see ADMOB_SETUP.md
 
   var INTERSTITIAL_MIN_GAP_MS = 2*60*1000; // max 1 interstitial per 2 minutes (policy-safe)
