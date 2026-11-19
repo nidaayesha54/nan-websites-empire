@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTA 6 Weather: Hurricanes, Storms and Local Rain</title>
+<meta name="description" content="GTA 6 has hurricanes, tropical storms and local rain — one street wet, the next sunny. Here is everything Rockstar confirmed, and what it has not said yet.">
+<link rel="canonical" href="https://nan-de-hundesteuer-calculator.surge.sh/articles/gta-6-weather-hurricanes-storms-local-rain.html">
+<style>:root{--navy:#0A1628;--teal:#14B8A6;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+.site-header{background:var(--navy);color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.brand span{color:var(--teal)}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1rem;font-size:.92rem}
+.nav a:hover{color:#fff}
+main{padding:2rem 0}
+h1{font-size:1.9rem;margin:.2rem 0 .6rem;color:var(--navy)}
+.lede{font-size:1.05rem;color:var(--mut);max-width:44rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:720px){.calc-grid{grid-template-columns:1fr}}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.3rem}
+.field input,.field select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;font-size:1rem}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.8rem 1.4rem;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.6rem}
+.btn:hover{filter:brightness(.94)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.2rem;margin:1.2rem 0}
+.result .big{font-size:1.7rem;font-weight:800;color:var(--navy)}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.95rem}
+td,th{padding:.5rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+td:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2rem;font-size:1.35rem}
+h3{color:var(--navy);font-size:1.1rem}
+.faq{margin:1rem 0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem;margin:.5rem 0}
+.faq summary{font-weight:600;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+.src{font-size:.8rem;color:var(--mut)}
+footer{background:var(--navy);color:#94a3b8;margin-top:2.5rem;padding:2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+@media(max-width:720px){.fcols{grid-template-columns:1fr}}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+
+/* --- NAN design polish 2026-10-17 --- */
+.hero{background:linear-gradient(135deg,#0A1628 0%,#0e2a33 65%,#0A1628 100%);color:#fff;border-radius:1.1rem;padding:2.2rem 1.8rem;margin:0 0 1.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%);pointer-events:none}
+.hero h1{color:#fff;font-size:2.05rem;line-height:1.28;margin:.6rem 0 .7rem;max-width:38rem;position:relative;z-index:1}
+.hero .lede{color:#cbd5e1;font-size:1.07rem;max-width:44rem;margin:0;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(20,184,166,.16);border:1px solid rgba(20,184,166,.55);color:#5eead4;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;position:relative;z-index:1}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem;position:relative;z-index:1}
+.hero-chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e2e8f0;font-size:.82rem;padding:.35rem .75rem;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media(max-width:720px){.how{grid-template-columns:1fr}}
+.how-step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem}
+.how-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.5rem}
+.how-step h3{margin:.3rem 0 .3rem;font-size:1.02rem}
+.how-step p{margin:0;font-size:.92rem;color:var(--mut)}
+.srcnote{background:#f0fdfa;border:1px solid #99f6e4;border-radius:.7rem;padding:.95rem 1.1rem;margin:1.4rem 0;font-size:.9rem;color:#115e59}
+.srcnote strong{color:#0f766e}
+.guides{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.3rem 1.4rem;margin:1.6rem 0}
+.guides h2{margin-top:0}
+.guides ul{margin:.6rem 0 0;padding-left:1.2rem}
+.guides li{margin:.45rem 0}
+.guides a{color:#0f766e;font-weight:600}
+input,select,textarea{font-size:16px}
+.btn{min-height:48px}
+html,body{overflow-x:hidden}
+.faq details[open]{border-color:var(--teal)}
+.faq summary::marker{color:var(--teal)}
+@media(max-width:720px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:1.6rem}.hero .lede{font-size:1rem}}
+
+
+.article{max-width:46rem}
+.article .toc{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.3rem;margin:1.4rem 0}
+.article .toc ul{margin:.5rem 0 0;padding-left:1.2rem}
+.article .toc li{margin:.3rem 0}
+.article .toc a{color:#0f766e}
+.crumbs{font-size:.85rem;color:var(--mut);margin-bottom:.4rem}
+.crumbs a{color:#0f766e}
+
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "GTA 6 Weather: Hurricanes, Storms and Local Rain", "description": "GTA 6 has hurricanes, tropical storms and local rain — one street wet, the next sunny. Here is everything Rockstar confirmed, and what it has not said yet.", "author": {"@type": "Organization", "name": "Germany Dog Tax Calculator"}, "publisher": {"@type": "Organization", "name": "Germany Dog Tax Calculator"}, "datePublished": "2026-11-20", "dateModified": "2026-11-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nan-de-hundesteuer-calculator.surge.sh/articles/gta-6-weather-hurricanes-storms-local-rain.html"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../index.html">NAN <span>Dog Tax Calculator</span></a>
+<nav class="nav"><a href="../index.html">Calculator</a></nav>
+</div></header>
+<main>
+<article class="article">
+<div class="breadcrumb"><a href="../index.html">Home</a> &rarr; Articles &rarr; Weather</div>
+<h1>GTA 6 Weather: Hurricanes, Storms and Local Rain</h1>
+<p class="meta">November 20, 2026 &middot; 6 min read</p>
+
+<p>Weather in GTA 6 is not a backdrop — it is a system, and Rockstar rebuilt it from scratch for Leonida. GTA 6 launched on November 19, 2026, on PlayStation 5 and Xbox Series X|S, and its weather is the most technically ambitious part of the game after the map itself: storms that rain on one street while the next stays sunny, hurricanes and tropical storms, wind that ripples water and bends swamp grass, and puddles that stay wet long after the rain stops. This guide covers everything Rockstar has actually confirmed about the weather — and the parts it has not said yet, so you know what is real and what is still a guess.</p>
+<p>It matters because Leonida is modelled on Florida, and Florida has one of the most unpredictable weather systems in the United States. Rockstar knew the weather had to feel like Florida, not like a generic game sky — and the studio says it had to completely reimagine its weather systems to get there.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>Hurricanes and Tropical Storms Are In</h2>
+<p>The headline is simple: tropical storms and hurricanes are in the game. Game Informer's cover story, published September 29, 2026, in issue 382, reports both — and it is the source every other report traces back to. Rockstar did not say how often they occur, how they affect gameplay, or whether they touch the story. What it did say, through Owen Shepherd, Rockstar's VP of art for lighting and rendering, is that the weather system was rebuilt so conditions are far more localized and persistent, with dynamic clouds — and that hurricanes bring heavy clouds, powerful wind, dense rain, and water spilling from rooftops and lampposts, with thunder rolling across the world and lightning illuminating the cloud mass.</p>
+<p>That is a visual confirmation, not yet a mechanical one. Rockstar has not said whether hurricanes arrive randomly, appear only during the story, recur in free roam, or change missions. It has not confirmed storm surge, flooded roads, damaged buildings, evacuation traffic or long-term cleanup. Flooding, waterspouts, storm-altered missions and changing NPC behaviour are all unconfirmed — and any guide that describes them as facts is guessing. The hurricane is real. The hurricane gameplay is not confirmed yet.</p>
+
+<h2>Local Weather: Sunshine Here, Rain There</h2>
+<p>The system's defining feature is that weather is local. You can stand in sunshine and see rain in the distance. Clouds move across the map as independent systems, storms are local — one part of Leonida can be pouring while another stays sunny — and the wet ground and puddles stay after the rain, lingering long after a shower passes. Rainbows appear in the right light. Rockstar's co-studio head Aaron Garbut told Edge the system is "much more granular" than games where "it's either rainy or sunny" — and Game Informer reports that the simulation accounts for offshore breezes after sunset, convectional updrafts, buildings blocking or redirecting air, ripples on the water and bending swamp grass.</p>
+<p>Wind is part of the same simulation. It ripples water, moves hair, pushes debris, and bends the grass in the Grassrivers swamp. The weather is not a skybox that changes for the whole map at once — it is a set of connected systems, with clouds, wind, water, vegetation, debris, hair and lighting all responding together. That is why the storms feel different from older games: the rain does not just fall, it arrives, it moves, and it leaves traces behind.</p>
+
+<h2>The Weather Channel Forecast</h2>
+<p>Three days before launch, on November 16, The Weather Channel posted six new official screenshots as an in-character "forecast" for Leonida, with a new statement from Rockstar's Owen Shepherd. The forecast covered the state place by place — from sea fog in Vice City to a tropical storm in the Keys — and Shepherd's statement said the studio had to completely reimagine its weather systems for Leonida, "to feel more localized, persistent, and above all dynamic". The screenshots showed the range: fog rolling off the sea, a storm over the Keys, lightning over the water, and the kind of light that only comes before a tropical downpour.</p>
+<p>The forecast was a marketing event, but it was also the most detailed public look at the weather system before launch — and it confirmed the shape of the thing: six regions, six different kinds of weather, all running at once. Vice City's sea fog is not the Keys' tropical storm, and the Grassrivers' rain is not Mount Kalaga's mountain weather. Leonida is one state with six climates, and the weather system is what makes them feel like six places instead of one.</p>
+
+<h2>What Weather Does to Gameplay</h2>
+<p>What the weather does to the way you play is the part Rockstar has said least about. We know the visuals: wet roads, persistent puddles, rainbows, wind-bent grass, lightning. We know the storms exist. What we do not know is whether rain makes roads slippery, whether hurricanes close missions, whether lightning can strike, or whether the wanted system changes when the weather turns. The night lighting that IGN's review singled out — headlights piercing the dark, city lights from above, beach storms rolling in — is partly a weather effect, and the driving at night in a storm is one of the game's most talked-about experiences.</p>
+<p>The practical advice is simple: watch the sky, and treat a storm as a real event. If the clouds are building over the Keys, the rain will arrive — and if you are driving a fast car on wet roads in the dark, the weather is part of the challenge. The system rewards players who read it: a storm is not just atmosphere, it is information about the world you are driving through.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Does GTA 6 have hurricanes?</h3>
+<p>Yes. Rockstar confirmed tropical storms and hurricanes to Game Informer in September 2026. It has not said how often they happen, whether they affect the story, or what they can damage.</p>
+<h3>Can it rain in one part of the map and not another?</h3>
+<p>Yes — that is the system's defining feature. Weather is localized: you can stand in sunshine while watching rain fall on a nearby district, and puddles linger after a shower passes.</p>
+<h3>Does weather affect gameplay?</h3>
+<p>Rockstar has not said. The visuals are confirmed — wet roads, wind, lightning, persistent puddles — but whether rain changes driving, missions or police behaviour is unconfirmed. Treat any guide that claims otherwise as a guess.</p>
+
+<h2>The Bottom Line</h2>
+<p>GTA 6 weather is real, local and dynamic: hurricanes and tropical storms confirmed, rain that falls on one street and not the next, wind that moves water and grass, and puddles that stay wet after the storm. What it does to gameplay is still unconfirmed — and the honest guide says so. Watch the sky, drive carefully in the rain, and let the storms be what they are: the most Florida thing about Leonida.</p>
+
+<div class="disclaimer"><strong>Disclaimer:</strong> Germany Dog Tax Calculator provides educational guides only, based on verified launch reporting as of November 20, 2026. Release plans can change; confirm details with Rockstar's own channels before making a purchase. Gameplay-style clips on our channels are AI-generated concepts, not real GTA 6 gameplay.</div>
+</article>
+</main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Dog Tax Calculator</h4><p>Free English tools for life in Germany. Figures are indicative estimates, not legal or tax advice — confirm rates with your municipality.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-de-steuerklasse-finder.surge.sh" style="color:#4b5563;text-decoration:none;">Germany Tax Class Finder</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or tax advice.</p></div>
+</footer>
+</body>
+</html>
