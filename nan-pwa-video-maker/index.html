@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NAN Video Maker — Photo to Video PWA</title>
+<meta name="description" content="Free mobile video maker: turn your photos into vertical reels with bold headline text and zoom motion. No upload, no account — everything stays on your phone.">
+<meta name="theme-color" content="#111827">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-512.png">
+<link rel="apple-touch-icon" href="icon-512.png">
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0f172a;color:#f1f5f9}
+header{padding:18px 16px 8px;text-align:center} header h1{margin:0;font-size:26px} header p{color:#cbd5e1;margin:6px 0 0;font-size:14px;line-height:1.5}
+main{max-width:520px;margin:0 auto;padding:12px 14px 40px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:14px;margin:12px 0}
+.card h2{margin:0 0 10px;font-size:17px}
+label{font-size:13px;color:#cbd5e1;display:block;margin:8px 0 4px}
+input[type=text],input[type=number],select{width:100%;padding:10px;border-radius:10px;border:1px solid #475569;background:#0f172a;color:#fff;font-size:15px}
+input[type=file]{width:100%;color:#cbd5e1}
+button{width:100%;padding:13px;border:0;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:10px}
+.btn-primary{background:#f59e0b;color:#111827} .btn-secondary{background:#334155;color:#fff} .btn-danger{background:#7f1d1d;color:#fff;width:auto;padding:7px 12px;font-size:13px;margin:0}
+button:disabled{opacity:.5;cursor:not-allowed}
+canvas{width:100%;max-width:360px;display:block;margin:10px auto;background:#000;border-radius:12px}
+.slide{display:flex;gap:10px;background:#0f172a;border:1px solid #334155;border-radius:12px;padding:10px;margin:10px 0}
+.slide img{width:72px;height:96px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.slide .fields{flex:1;min-width:0} .slide .row{display:flex;gap:8px} .slide .row>*{flex:1}
+.small{font-size:13px;color:#94a3b8;line-height:1.5} .status{font-size:14px;line-height:1.6;white-space:pre-wrap}
+a{color:#fbbf24}
+ol{padding-left:20px;line-height:1.7;font-size:14px;color:#e2e8f0}
+</style>
+</head>
+<body>
+<header>
+<h1>🎬 NAN Video Maker</h1>
+<p>Photos + bold headline + zoom motion = ready reel.<br><b>No upload, no account.</b> Your photos never leave your phone.</p>
+</header>
+<main>
+<div class="card">
+<h2>1. Photos chunein</h2>
+<input type="file" id="photoInput" accept="image/*" multiple>
+<p class="small">2 se 10 photos best hain. Har photo ek slide banegi. Pehle wali photo pehle aayegi.</p>
+<div id="slides"></div>
+</div>
+
+<div class="card">
+<h2>2. Video settings</h2>
+<label>Size (aspect ratio)</label>
+<select id="aspect">
+<option value="9:16">9:16 — Vertical (Reels / TikTok / Shorts)</option>
+<option value="16:9">16:9 — Horizontal (YouTube)</option>
+<option value="1:1">1:1 — Square (Instagram post)</option>
+</select>
+<label>Headline position</label>
+<select id="textPos">
+<option value="top">Top</option>
+<option value="center" selected>Center</option>
+<option value="bottom">Bottom</option>
+</select>
+<label>Headline colour</label>
+<select id="textColor"><option value="#ffffff">White</option><option value="#facc15">Yellow</option></select>
+<label>Headline size</label>
+<input type="number" id="textSize" value="64" min="36" max="110">
+<label>Har photo kitne second rahe? (default)</label>
+<input type="number" id="defaultDur" value="3" min="1" max="10" step="0.5">
+<label>Background music (optional — apni audio file)</label>
+<input type="file" id="audioInput" accept="audio/*">
+<p class="small">Music apni file se aayegi. Copyrighted gaana use na karein — apni awaz ya free music hi lagayein.</p>
+<p class="small" id="totalInfo">Total duration: 0s</p>
+</div>
+
+<div class="card">
+<h2>3. Preview aur Export</h2>
+<canvas id="canvas" width="720" height="1280"></canvas>
+<button class="btn-secondary" id="playBtn">▶ Preview chalao</button>
+<button class="btn-primary" id="exportBtn">⬇ Video export karo</button>
+<p class="status" id="status">Pehle photos chunein, phir preview dekhein.</p>
+<a id="downloadLink" style="display:none" href="#">Download video</a>
+</div>
+
+<div class="card">
+<h2>📱 Phone par install karein</h2>
+<ol>
+<li>Is page ko Android Chrome mein kholein.</li>
+<li>Chrome menu (⋮) &gt; <b>Add to Home Screen</b> ya <b>Install app</b> dabayein.</li>
+<li>Home screen par NAN Video Maker icon aa jayega — phir bina browser khole seedha app jaisa chalega.</li>
+</ol>
+<p class="small">Ye AI text-to-video generator nahi hai. Ye aapki photos ko motion + text ke saath video banata hai — free, offline, bina kisi server ke.</p>
+</div>
+</main>
+<script>
+const canvas=document.getElementById('canvas'), ctx=canvas.getContext('2d');
+const slidesEl=document.getElementById('slides'), statusEl=document.getElementById('status');
+let slides=[], playing=false, raf=null, startTime=0, audioFile=null;
+
+const ASPECTS={'9:16':[720,1280],'16:9':[1280,720],'1:1':[1080,1080]};
+function applyAspect(){const [w,h]=ASPECTS[document.getElementById('aspect').value];canvas.width=w;canvas.height=h;drawFrame(0);}
+document.getElementById('aspect').addEventListener('change',applyAspect);
+document.getElementById('audioInput').addEventListener('change',e=>{audioFile=e.target.files[0]||null;});
+document.getElementById('defaultDur').addEventListener('change',()=>{slides.forEach(s=>{if(!s.touched)s.duration=parseFloat(document.getElementById('defaultDur').value)||3;});renderSlides();});
+
+document.getElementById('photoInput').addEventListener('change',e=>{
+  const files=[...e.target.files];
+  files.forEach(f=>{
+    const url=URL.createObjectURL(f), img=new Image();
+    img.onload=()=>{slides.push({img,url,text:'',duration:parseFloat(document.getElementById('defaultDur').value)||3,zoom:'in',touched:false});renderSlides();drawFrame(0);};
+    img.src=url;
+  });
+  e.target.value='';
+});
+
+function renderSlides(){
+  slidesEl.innerHTML='';
+  let total=0; slides.forEach(s=>total+=s.duration);
+  document.getElementById('totalInfo').textContent='Total duration: '+total.toFixed(1)+'s  •  Slides: '+slides.length;
+  slides.forEach((s,i)=>{
+    const d=document.createElement('div'); d.className='slide';
+    d.innerHTML='<img src="'+s.url+'"><div class="fields"><label>Slide '+(i+1)+' headline</label><input type="text" placeholder="Bold headline likhein" value="'+s.text.replace(/"/g,'&quot;')+'"><div class="row"><div><label>Seconds</label><input type="number" min="1" max="10" step="0.5" value="'+s.duration+'"></div><div><label>Zoom</label><select><option value="in"'+(s.zoom==='in'?' selected':'')+'>Zoom in</option><option value="out"'+(s.zoom==='out'?' selected':'')+'>Zoom out</option><option value="none"'+(s.zoom==='none'?' selected':'')+'>No zoom</option></select></div></div><button class="btn-danger" style="margin-top:8px">Remove</button></div>';
+    d.querySelector('input[type=text]').addEventListener('input',ev=>{s.text=ev.target.value;drawFrame(0);});
+    const nums=d.querySelectorAll('input[type=number]'); nums[0].addEventListener('change',ev=>{s.duration=parseFloat(ev.target.value)||3;s.touched=true;renderSlides();});
+    d.querySelector('select').addEventListener('change',ev=>{s.zoom=ev.target.value;});
+    d.querySelector('.btn-danger').addEventListener('click',()=>{slides.splice(i,1);renderSlides();drawFrame(0);});
+    slidesEl.appendChild(d);
+  });
+  if(!slides.length) slidesEl.innerHTML='<p class="small">Abhi koi photo nahi hai.</p>';
+}
+
+function wrapText(text,maxW){
+  const words=text.split(/\s+/).filter(Boolean); const lines=[]; let line='';
+  words.forEach(w=>{const t=line?line+' '+w:w; if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w;}else line=t;});
+  if(line) lines.push(line); return lines;
+}
+
+function drawFrame(elapsedMs){
+  const W=canvas.width,H=canvas.height;
+  ctx.fillStyle='#000'; ctx.fillRect(0,0,W,H);
+  if(!slides.length){ctx.fillStyle='#fff';ctx.font='bold 32px system-ui';ctx.textAlign='center';ctx.fillText('Photo chunein',W/2,H/2);return;}
+  let t=elapsedMs/1000, acc=0, idx=0, local=0;
+  for(let i=0;i<slides.length;i++){if(t<acc+slides[i].duration){idx=i;local=t-acc;break;} acc+=slides[i].duration;}
+  if(idx>=slides.length){idx=slides.length-1;local=slides[idx].duration;}
+  const s=slides[idx], p=Math.min(local/s.duration,1);
+  let scale=1; if(s.zoom==='in') scale=1+0.18*p; else if(s.zoom==='out') scale=1.18-0.18*p;
+  const iw=s.img.naturalWidth||s.img.width, ih=s.img.naturalHeight||s.img.height;
+  const base=Math.max(W/iw,H/ih)*scale, dw=iw*base, dh=ih*base;
+  let alpha=1; const fade=0.4; if(local<fade) alpha=local/fade; if(s.duration-local<fade) alpha=Math.max((s.duration-local)/fade,0);
+  ctx.save(); ctx.globalAlpha=alpha; ctx.drawImage(s.img,(W-dw)/2,(H-dh)/2,dw,dh); ctx.restore();
+  if(s.text){
+    const size=parseInt(document.getElementById('textSize').value)||64;
+    ctx.font='900 '+size+'px system-ui, sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    const lines=wrapText(s.text.toUpperCase(),W*0.86), lh=size*1.15;
+    const pos=document.getElementById('textPos').value;
+    let y=pos==='top'?H*0.18:pos==='bottom'?H*0.82:H/2; y-=((lines.length-1)*lh)/2;
+    lines.forEach(line=>{ctx.lineWidth=Math.max(6,size/9);ctx.strokeStyle='#000';ctx.strokeText(line,W/2,y);ctx.fillStyle=document.getElementById('textColor').value;ctx.fillText(line,W/2,y);y+=lh;});
+  }
+}
+
+function totalDuration(){return slides.reduce((a,s)=>a+s.duration,0);}
+
+document.getElementById('playBtn').addEventListener('click',()=>{
+  if(!slides.length){statusEl.textContent='Pehle photos chunein.';return;}
+  if(playing){playing=false;cancelAnimationFrame(raf);document.getElementById('playBtn').textContent='▶ Preview chalao';return;}
+  playing=true; document.getElementById('playBtn').textContent='⏸ Preview roko'; startTime=performance.now();
+  const loop=()=>{if(!playing)return; const e=performance.now()-startTime; drawFrame(e); if(e/1000>=totalDuration()){playing=false;document.getElementById('playBtn').textContent='▶ Preview chalao';return;} raf=requestAnimationFrame(loop);};
+  raf=requestAnimationFrame(loop);
+});
+
+document.getElementById('exportBtn').addEventListener('click',async()=>{
+  if(!slides.length){statusEl.textContent='Pehle photos chunein.';return;}
+  const btn=document.getElementById('exportBtn'); btn.disabled=true;
+  statusEl.textContent='Export ho raha hai... poora video real-time mein record hoga, tab tak page band na karein.';
+  try{
+    const stream=canvas.captureStream(30); let tracks=[...stream.getVideoTracks()];
+    let audioEl=null, actx=null;
+    if(audioFile){
+      audioEl=new Audio(URL.createObjectURL(audioFile));
+      actx=new (window.AudioContext||window.webkitAudioContext)();
+      const src=actx.createMediaElementSource(audioEl), dest=actx.createMediaStreamDestination();
+      src.connect(dest); tracks.push(...dest.getAudioTracks());
+    }
+    const combined=new MediaStream(tracks);
+    const mimes=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm'];
+    const mime=mimes.find(m=>MediaRecorder.isTypeSupported(m))||'';
+    const rec=new MediaRecorder(combined,mime?{mimeType:mime,videoBitsPerSecond:5000000}:undefined);
+    const chunks=[]; rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
+    rec.onstop=()=>{
+      const blob=new Blob(chunks,{type:mime||'video/webm'});
+      const url=URL.createObjectURL(blob), a=document.getElementById('downloadLink');
+      a.href=url; a.download='nan-video.'+(mime.includes('mp4')?'mp4':'webm'); a.style.display='block';
+      a.textContent='⬇ Download video ('+(mime.includes('mp4')?'MP4':'WebM')+')';
+      statusEl.textContent='Export complete! Download button dabayein. Agar WebM aaya hai to CapCut / kisi converter se MP4 mein badal lein.';
+      btn.disabled=false; if(actx)actx.close();
+    };
+    rec.start(); if(audioEl){try{await audioEl.play();}catch(e){}}
+    startTime=performance.now();
+    const loop=()=>{const e=performance.now()-startTime; drawFrame(e); if(e/1000<totalDuration()) requestAnimationFrame(loop); else {rec.stop(); if(audioEl)audioEl.pause();}};
+    requestAnimationFrame(loop);
+  }catch(err){statusEl.textContent='Export fail ho gaya: '+err.message; btn.disabled=false;}
+});
+applyAspect(); renderSlides();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+</script>
+  <div class="ad-slot"><!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script></div>
+</body>
+</html>
