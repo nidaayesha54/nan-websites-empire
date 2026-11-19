@@ -24,11 +24,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: apps/rozana-calculators/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        # NOTE: no package-lock.json is committed, so `npm ci` would fail.
+        # Plain `npm install` works without a lockfile.
+        run: npm install
 
       - name: Add Android platform
         run: npx cap add android
