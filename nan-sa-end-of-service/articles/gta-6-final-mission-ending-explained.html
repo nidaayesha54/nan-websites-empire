@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTA 6 Final Mission: What Happens at the End</title>
+<meta name="description" content="GTA 6 asks before its finale, then rewinds time so you can keep playing. The chapter finales, the ending choices, and what carries over after the credits.">
+<link rel="canonical" href="https://nan-sa-end-of-service.surge.sh/articles/gta-6-final-mission-ending-explained.html">
+<style>
+:root{--navy:#0A1628;--navy2:#123052;--teal:#14B8A6;--teal-d:#0d9488;--ink:#1f2937;--mut:#6b7280;--bg:#f6f8fb;--card:#fff;--line:#e5e7eb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-header{background:linear-gradient(180deg,#0A1628,#0e2240);color:#fff;padding:.85rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(10,22,40,.3)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{color:var(--teal)}
+.nav{display:flex;align-items:center;flex-wrap:wrap}
+.nav a{color:#cbd5e1;text-decoration:none;margin-left:1.1rem;font-size:.93rem;font-weight:600;padding:.45rem .1rem}
+.nav a:hover{color:#fff}
+main{padding:0 0 2rem}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#143a63 60%,#0f766e 135%);border-radius:1.1rem;color:#fff;padding:2.4rem 2rem;margin:1.8rem 0;box-shadow:0 14px 34px rgba(10,22,40,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(20,184,166,.18)}
+.hero h1{color:#fff;font-size:2.05rem;margin:0 0 .55rem;line-height:1.25;letter-spacing:-.015em;border:0;padding:0}
+.hero .lede{color:#dbe4f0;font-size:1.07rem;max-width:46rem;margin:0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.15rem}
+.hero-badges span{background:rgba(20,184,166,.14);border:1px solid rgba(20,184,166,.5);color:#a7f3d0;font-size:.84rem;font-weight:700;padding:.38rem .85rem;border-radius:999px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.4rem 0;box-shadow:0 2px 12px rgba(10,22,40,.06)}
+.panel h2{margin-top:0;border:0;padding:0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin:.9rem 0}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.field input,.field select{width:100%;min-height:48px;padding:.65rem .85rem;border:1.5px solid var(--line);border-radius:.55rem;font-size:16px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(20,184,166,.18)}
+.hint{font-size:.82rem;color:var(--mut)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:.6rem;padding:.85rem 1.6rem;min-height:52px;font-size:1.02rem;font-weight:700;cursor:pointer;margin-top:.6rem;transition:background .15s,transform .1s;box-shadow:0 4px 12px rgba(20,184,166,.35)}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.result{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:.9rem;padding:1.3rem;margin:1.2rem 0}
+.result .big{font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.result .big small{display:block;font-size:.85rem;font-weight:400;color:var(--mut);margin-top:.2rem}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line);border-radius:.6rem}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.95rem;background:#fff}
+th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);text-align:left}
+tr:first-child th{background:#f1f5f9;color:var(--navy);font-weight:700}
+tr:nth-child(even) td{background:#f9fafb}
+td:last-child,th:last-child{text-align:right;font-weight:600}
+h2{color:var(--navy);margin-top:2.4rem;font-size:1.4rem;letter-spacing:-.01em;padding-bottom:.4rem;border-bottom:2px solid #eef2f7}
+h3{color:var(--navy);font-size:1.1rem}
+.steps{margin:2.2rem 0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;margin-bottom:.4rem}
+.step h3{margin:.15rem 0 .35rem;font-size:1.02rem;border:0;padding:0}
+.step p{margin:0;font-size:.93rem;color:var(--mut)}
+.source-note{background:#f0fdfa;border:1px solid #99f6e4;border-left:4px solid var(--teal);border-radius:.6rem;padding:.9rem 1.1rem;font-size:.9rem;margin:1.6rem 0}
+.guides{margin:2.4rem 0}
+.guide-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:.7rem;padding:1.2rem 1.35rem;box-shadow:0 2px 10px rgba(10,22,40,.05)}
+.guide-card a{color:var(--navy);font-weight:700;font-size:1.06rem;text-decoration:none}
+.guide-card a:hover{color:var(--teal-d);text-decoration:underline}
+.guide-card p{margin:.35rem 0 0;font-size:.93rem;color:var(--mut)}
+.faq{margin:1rem 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:.9rem 1.15rem;margin:.6rem 0}
+.faq details[open]{box-shadow:0 5px 16px rgba(10,22,40,.08);border-color:#99f6e4}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--teal);font-weight:800;font-size:1.25rem;line-height:1}
+.faq details[open] summary::before{content:"3"}
+.faq details p{color:#4b5563;font-size:.94rem}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.94rem}
+footer{background:linear-gradient(180deg,#0A1628,#081120);color:#94a3b8;margin-top:2.5rem;padding:2.2rem 0 1.2rem;font-size:.9rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#fff}
+footer h4{color:#fff;margin:.2rem 0 .6rem}
+.fcols{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
+.copy{text-align:center;margin-top:1.4rem;font-size:.8rem;color:#64748b}
+@media(max-width:720px){
+.calc-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.fcols{grid-template-columns:1fr}
+.hero{padding:1.7rem 1.3rem;margin:1.2rem 0;border-radius:.9rem}
+.hero h1{font-size:1.55rem}
+.hero .lede{font-size:.99rem}
+.btn{width:100%}
+h2{font-size:1.22rem}
+.panel{padding:1.15rem}
+.wrap{padding:0 1rem}
+table{font-size:.88rem}
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "GTA 6 Final Mission: What Happens at the End", "description": "GTA 6 asks before its finale, then rewinds time so you can keep playing. The chapter finales, the ending choices, and what carries over after the credits.", "author": {"@type": "Organization", "name": "NAN Saudi End of Service"}, "publisher": {"@type": "Organization", "name": "NAN Saudi End of Service"}, "datePublished": "2026-11-20", "dateModified": "2026-11-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nan-sa-end-of-service.surge.sh/articles/gta-6-final-mission-ending-explained.html"}}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">NAN <span>End of Service Calculator</span></a>
+<nav class="nav"><a href="index.html">Calculator</a><a href="articles/saudi-end-of-service-award-guide.html">Guide</a></nav>
+</div></header>
+<main>
+<article>
+<div class="breadcrumb"><a href="../index.html">Home</a> &rarr; Articles &rarr; Final Mission</div>
+<h1>GTA 6 Final Mission: What Happens at the End</h1>
+<p class="meta">November 20, 2026 &middot; 5 min read</p>
+
+<p>Grand Theft Auto 6 launched on November 19, 2026, on PlayStation 5 and Xbox Series X|S, and its story runs about 70 to 90 hours depending on how much of Leonida you explore along the way. That is a long road, and the game knows it: before the finale, it stops and asks whether you are ready to finish the story or not. This guide explains what happens at the end — the chapter finales that close each part of the story, the finale itself, and what the game lets you do after the credits roll.</p>
+<p><strong>Spoiler warning:</strong> this article describes the structure of the ending and the final missions of each chapter. It does not name the ending scenes in detail, but if you want to go in completely blind, bookmark this page and come back when you are near the end.</p>
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2>The chapter finales: four doors that close behind you</h2>
+<p>GTA 6 is built in chapters, and each chapter ends with a mission that closes a door. Chapter 1 ends with Discharge Time, a hospital escape in which Lucia wheels Jason out in a wheelchair while he shoots the attackers closing in, and the chapter closes with an ambulance chase that carries the story into Chapter 2. Chapter 2 ends with Checking Out, which needs at least $15,000 saved before it appears — a point of no return, because the motel stops being your home after it, and the chapter ends with the drive into Vice City.</p>
+<p>Chapter 3 ends with The Cartel Heist, the biggest job of the early story: Raul calls you to his planning room once the Chapter 3 missions are done, and you rob Sinfrontera National Bank with both Jason and Lucia. The reported payout is about $120,000, and finishing it unlocks the Break the Bank trophy. Chapter 4 opens in Ocean Beach. Each finale is a checkpoint the game will not let you replay — GTA 6 has no mission replay, so a manual save in a fresh slot before each finale is the only way to play it again.</p>
+<h2>The finale: the game asks first</h2>
+<p>When you reach the end of the story, the game makes a point of asking whether you want to go forward with the finale or not. That is unusual, and it is deliberate: the finale is a big, multi-mission sequence, and once you finish it and see one of the game's main endings, the game tosses you back in time to the moment when you were asked. This time, Jason and Lucia say no — they are not ready — and you head back out into Vice City to keep playing.</p>
+<p>The finale marker stays on the map, so you can finish the game again later and possibly reach a different ending. Reporting from launch week says the endgame branching opens once you reach about 70 percent completion, though that figure comes from secondhand accounts and should be treated as reported, not confirmed. The point is the same either way: the game does not force you to choose between finishing the story and finishing the map. You get both, in either order.</p>
+<h2>What carries over after the credits</h2>
+<p>After the finale, you keep everything you earned: your money, your garages, your vehicles, your weapons and your progress toward 100 percent. The pre-finale rewind is the trick that makes it work — the game returns you to a living Vice City with the story's weight lifted, and the finale marker waiting for whenever you want it. There is no New Game Plus, so a second run means starting fresh, but the rewind means you never have to choose between the ending and the side content.</p>
+<p>One thing the rewind cannot do is give you new story. Once the finale is done, no new major storylines appear, because anything new could clash with the narrative wrapping up. The world stays frozen in that post-finale moment: the map is yours, the side missions are yours, and the random encounters keep happening — but the story, once told, stays told.</p>
+<h2>How to prepare for the end</h2>
+<p>Before you accept the finale, do the things that close. Finish the chapter finales with a manual save in a fresh slot, because there is no replay. Spend down nothing you want to keep — your money and gear carry over, so there is no reason to burn cash before the end. And if you care about the Criminal Profile, the system that tracks what kind of criminal you are, know that the finale is where it matters most: consistent behaviour shapes how the world reacts, and the ending you reach reflects the player you have been.</p>
+<h2>FAQ</h2>
+<p><strong>Can you keep playing GTA 6 after the ending?</strong> Yes. After the finale, the game rewinds to the moment before it and lets you keep playing, with the finale marker still on the map if you want to finish it again.</p>
+<p><strong>How long is the GTA 6 story?</strong> Around 70 hours on average according to a sample of players, and about 90 hours to reach the finale in one reported playthrough that explored heavily along the way.</p>
+<p>The bottom line: GTA 6 does not make you choose between the ending and the open world. Save before each chapter finale, take the finale when you are ready, and let the rewind hand you back a Vice City that is still yours to finish.</p>
+
+<div class="disclaimer"><strong>Disclaimer:</strong> NAN Saudi End of Service provides educational guides only, based on verified launch reporting as of November 20, 2026. Release plans can change; confirm details with Rockstar's own channels before making a purchase. Gameplay-style clips on our channels are AI-generated concepts, not real GTA 6 gameplay.</div>
+</article>
+</main>
+<footer><div class="wrap"><div class="fcols">
+<div><h4>NAN Saudi End of Service Calculator</h4><p>Free end-of-service gratuity calculator for Saudi Arabia — estimate your EOSB under Saudi Labor Law Articles 84 & 85, in English.</p></div>
+<div><h4>Tools</h4><p><a href="index.html">Calculator</a></p> &middot; <a href="articles/saudi-end-of-service-award-guide.html">Guide</a></p></div>
+</div></div>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-sa-overtime-pay.surge.sh" style="color:#4b5563;text-decoration:none;">Saudi Overtime Pay Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-eobi-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">EOBI Pension Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-labour-calculators.surge.sh" style="color:#4b5563;text-decoration:none;">Labour Law Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-urage-calculator.surge.sh" style="color:#4b5563;text-decoration:none;">Urdu Age Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-debtpayoff.surge.sh" style="color:#4b5563;text-decoration:none;">Debt Payoff Calculator</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-roimega.surge.sh" style="color:#4b5563;text-decoration:none;">ROI Calculators</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-salarytools.surge.sh" style="color:#4b5563;text-decoration:none;">Salary Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-budgettools.surge.sh" style="color:#4b5563;text-decoration:none;">Budget Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loantools.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-loanhub.surge.sh" style="color:#4b5563;text-decoration:none;">Loan Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-investtools.surge.sh" style="color:#4b5563;text-decoration:none;">Investment Tools</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-taxhub.surge.sh" style="color:#4b5563;text-decoration:none;">Tax Hub</a> <span style="color:#d1d5db;">·</span> <a href="https://lifecalc.surge.sh" style="color:#4b5563;text-decoration:none;">LifeCalc</a></p>
+</section>
+<!--nan-network-links:end-->
+<div class="wrap"><p class="copy">© 2026 NAN — Free tools for everyone. Figures are indicative estimates, not legal or financial advice.</p></div>
+</footer>
+</body>
+</html>
