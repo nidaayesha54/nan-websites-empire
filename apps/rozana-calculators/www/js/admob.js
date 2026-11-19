@@ -1,6 +1,8 @@
-/* AdMob integration — PREPARED, NOT ACTIVATED.
-   Paste your real IDs where ADMOB_SETUP.md says, then rebuild.
-   Until real IDs are pasted, every call below is a safe no-op. */
+/* AdMob integration — TEST IDs ACTIVE (Google's official test IDs).
+   The app shows Google TEST ads only and earns nothing yet.
+   To earn real money: replace the 3 test IDs with your real AdMob IDs
+   (see ADMOB_SETUP.md) and rebuild. Never paste real IDs in here until
+   the AdMob account is reactivated. */
 'use strict';
 
 window.AdMob = (function(){
