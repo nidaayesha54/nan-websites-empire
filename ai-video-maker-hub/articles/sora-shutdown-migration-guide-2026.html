@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sora Is Gone: The October 2026 AI Video Generator Landscape and What to Use Instead | AIVideoMakerHub</title>
+<meta name="description" content="OpenAI shut the Sora API on September 24, 2026. The practical migration guide: what replaced Sora for each use case — Veo 3.1, Kling 3.0/4.0, Runway Gen-4.5, Seedance 2.5, Wan 3.0 — with pricing per second, free tiers and a migration checklist.">
+<link rel="canonical" href="https://nan-aivideomaker.surge.sh/articles/sora-shutdown-migration-guide-2026.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Sora Is Gone: The October 2026 AI Video Generator Landscape and What to Use Instead","description":"OpenAI shut the Sora API on September 24, 2026. Practical migration guide: Veo 3.1, Kling 3.0/4.0, Runway Gen-4.5, Seedance 2.5, Wan 3.0 and Gemini Omni Flash compared by use case, price and free tiers.","author":{"@type":"Organization","name":"AIVideoMakerHub"},"datePublished":"2026-10-22","dateModified":"2026-11-23","mainEntityOfPage":"https://nan-aivideomaker.surge.sh/articles/sora-shutdown-migration-guide-2026.html"}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="../index.html">🎬 AI<span>Video</span>MakerHub</a>
+<nav class="nav-links"><a href="../tools/tool-comparator.html">Compare Tools</a><a href="../tools/cost-calculator.html">Cost Calculator</a><a href="../tools/use-case-finder.html">Tool Quiz</a><a href="sora-shutdown-migration-guide-2026.html">Articles</a><a href="../blog/">Blog</a></nav>
+</div></header>
+<div class="wrap">
+<nav class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html">Articles</a> › Sora Shutdown Migration Guide</nav>
+<article class="article">
+<h1>Sora Is Gone: The October 2026 AI Video Generator Landscape and What to Use Instead</h1>
+<p class="meta">Refreshed November 23, 2026 · 11 min read · By AIVideoMakerHub</p>
+<p>If your production workflow was built on OpenAI's Sora, this is the month the last rope burned. OpenAI closed the consumer Sora app and website on <strong>April 26, 2026</strong>, and on <strong>September 24, 2026 it switched off the Sora Videos API</strong> — both <code>sora-2</code> and <code>sora-2-pro</code> aliases now return <strong>410 Gone</strong>, and OpenAI offered no one-to-one replacement API. That matters beyond pride: a 410 is not an outage, it is the server telling you the resource is gone for good. Retries, fallbacks and "maybe it's back tomorrow" are all burned credits and wasted weeks. This guide gives you the October 2026 replacement landscape: what to use instead of Sora for each job it did, real per-second pricing, free tiers that still exist, and a migration checklist you can run this week.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<div class="toc"><strong>On this page</strong><br>
+<a href="#timeline">1. The Sora shutdown timeline (what actually happened)</a><br>
+<a href="#mapping">2. What Sora did for you → what to use now</a><br>
+<a href="#leaders">3. The October 2026 leaderboard</a><br>
+<a href="#pricing">4. The pricing math (per-second costs + free tiers)</a><br>
+<a href="#checklist">5. Your migration checklist for this week</a><br>
+<a href="#kling4">6. Kling 4.0 is live</a><br>
+<a href="#novupdate">7. November 2026 update: the migration map, one month on</a><br>
+<a href="#faq">FAQ</a></div>
+
+<h2 id="timeline">1. The Sora shutdown timeline (what actually happened)</h2>
+<ul>
+  <li><strong>April 26, 2026:</strong> OpenAI discontinued the consumer Sora app and website.</li>
+  <li><strong>September 24, 2026:</strong> the Sora Videos API was removed. Calls to the old endpoints now return 410 Gone. Production code pointed at Sora must be migrated, not retried.</li>
+  <li><strong>October 2026:</strong> unconfirmed reports surfaced of possible negotiations around a new company or a revival of the Sora technology — but as of October 21, 2026 there is no official OpenAI successor, no acquisition, and nothing billable to switch to. Treat a revival as rumor, not roadmap. <strong>November update:</strong> on October 12, 2026 The Information reported OpenAI is in talks with a filmmaker-tools startup co-founded by DreamWorks co-founder Jeffrey Katzenberg, former Sora research lead Bill Peebles and ex-Dropbox CFO Sujay Jaswa, which would get access to Sora technology to build tools for filmmakers while OpenAI takes a stake. As of November 22, 2026 no deal has been confirmed and no product announced — and if a deal lands, Sora would return as a professional tool, not a consumer app. Still rumor, not roadmap.</li>
+</ul>
+<p>Practical upshot: any workflow, template or tool that still shows a "Sora" option should be tested with one live generation before you promise a client anything built on it. If it works at all, it is not really Sora anymore — find out what model it silently swapped in.</p>
+
+<h2 id="mapping">2. What Sora did for you → what to use now</h2>
+<p>Don't migrate by brand loyalty; migrate by job. Here's the October 2026 mapping for Sora's four real use cases:</p>
+<table class="spec">
+<tr><th>What Sora did for you</th><th>Use this now</th><th>Why</th></tr>
+<tr><td>Talking head / on-camera presenter clips</td><td><strong>Google Veo 3.1</strong></td><td>Native audio, natural dialogue in a single pass; 4–8 second clips built for speaking subjects. Available via Gemini API, Vertex AI and Flow.</td></tr>
+<tr><td>One long continuous take (face must hold)</td><td><strong>Seedance 2.5</strong></td><td>Up to 30 seconds at 720p in a single generation — the closest thing to Sora's long-take feel, from ~34 credits a clip.</td></tr>
+<tr><td>High-volume clips with sound, cheap</td><td><strong>Wan 3.0</strong></td><td>The value play: sub-$0.10/sec rates for 30-second generations. Ideal for volume testing and iteration.</td></tr>
+<tr><td>Editing footage you already have</td><td><strong>Runway Gen-4.5 (Aleph 2.0)</strong> or <strong>Gemini Omni Flash Edit</strong></td><td>Object add/remove, relighting, background swaps on real footage — from ~50 credits a generation on Omni Flash Edit; Runway's filmmaker toolset for heavier work.</td></tr>
+</table>
+<p>That covers nearly every Sora workload. The migration is not one replacement model — it is a small stack, with each tool doing the thing it is best at.</p>
+
+<h2 id="leaders">3. The November 2026 leaderboard</h2>
+<h3>Veo 3.1 — Best overall cinematic generator</h3>
+<p>Google's current flagship video model: leads independent image-to-video quality rankings, generates native dialogue and sound effects in one pass, and integrates natively with YouTube, Google Vids and Flow. No Veo 4 has been announced — Google's 2026 push instead went into <strong>Gemini Omni Flash</strong>, the multimodal model that replaced Veo's role inside the Gemini app. Best for: ad-quality clips, talking heads, multi-scene work needing character consistency across clips.</p>
+<h3>Kling 4.0 — Best value + longest clips at quality</h3>
+<p>Kling's flagship is now <strong>Kling 4.0</strong>, fully launched to all users on October 15–16, 2026: 30-second single-pass clips with multi-shot logic on by default, up to 10 keyframes and 15 multimodal reference assets, native audio in nine languages, and a developer API live since October 28, 2026. Early testers report roughly 15 credits per second at 1080p and 10 at 720p, so a 30-second 1080p clip runs about 450 credits; it is included in Pro plans and above (Pro is $32.56/month for 3,000 credits). The lighter Kling 4.0 Flash reaches 20 seconds at 720p. Still on the roadmap as of November 2026: 10-bit HDR at 1080p and 4K, and video extension up to two minutes. Kling 3.0 remains the budget tier underneath it. Best for: storytellers, action-heavy motion, budget-conscious creators who want premium output — and now, the longest single take in the category.</p>
+<h3>Runway Gen-4.5 — Best for filmmakers and editing</h3>
+<p>With Aleph 2.0, Runway wins the "change footage you already have" category: inpainting, motion brush, green screen and object-level VFX on a real editing timeline. Around $0.12/sec; the free plan is a one-time 125-credit grant (roughly 10 seconds). Best for: client work, post-production, VFX inserts.</p>
+<h3>Seedance 2.5 / Wan 3.0 — Best for long clips and volume</h3>
+<p>ByteDance's Seedance 2.5 (July 2026) does 30-second single-pass generations; Wan 3.0 matches the length at the lowest per-second price in the category. Best for: long takes, batch testing, high-volume pipelines. Compare your expected volume in our <a href="../tools/cost-calculator.html">cost calculator</a> before committing to a plan.</p>
+<h3>Gemini Omni Flash — Best conversational editing</h3>
+<p>The all-rounder for prompt-then-edit workflows: generate, then revise by describing the change in plain language. Free generation is available inside YouTube Shorts and the YouTube Create app (SynthID-watermarked). Best for: quick iterations, Shorts creators, anyone who wants to argue with their video until it's right.</p>
+<p>For a scored head-to-head, see our <a href="../guides/best-ai-video-generators-2026.html">Best AI Video Generators 2026 ranking</a> — and note that any ranking still listing Sora as purchasable is stale: correct that mentally to the mapping above.</p>
+
+<!-- Adsterra Banner 300x250 for nidaayesha.com - verified from Nida's own dashboard 2026-10-12 -->
+<script>
+atOptions = {
+  'key' : '99bbb8d1f41996e5ce9f8c14b86321a2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highrevenueformat.com/99bbb8d1f41996e5ce9f8c14b86321a2/invoke.js"></script>
+
+<h2 id="pricing">4. The pricing math (per-second costs + free tiers)</h2>
+<p>Reported November 2026 rates (vendors change these often — verify at checkout):</p>
+<table class="spec">
+<tr><th>Model</th><th>Approx. rate</th><th>Free tier</th></tr>
+<tr><td>Veo 3.1</td><td>$0.05–0.08/s (Lite) · $0.10–0.30/s (Fast) · $0.40–0.60/s (Standard 4K w/ audio)</td><td>Google AI Plus $4.99/mo (200 Flow credits); AI Pro $19.99/mo (1,000); Ultra $99.99–199.99/mo</td></tr>
+<tr><td>Kling 4.0</td><td>~15 credits/s at 1080p, ~10 at 720p (a 30s 1080p clip ≈ 450 credits)</td><td>Included in Pro plans and above (Pro $32.56/mo, 3,000 credits); free tier still on older models</td></tr>
+<tr><td>Kling 3.0</td><td>~$0.084–0.168/s</td><td>66 credits/day, 720p, watermarked, non-commercial</td></tr>
+<tr><td>Runway Gen-4.5</td><td>~$0.12/s</td><td>One-time 125 credits (~10s), watermarked</td></tr>
+<tr><td>Wan 3.0</td><td>Sub-$0.10/s</td><td>Platform-dependent trial credits</td></tr>
+<tr><td>Gemini Omni Flash</td><td>~$0.10/s</td><td>Free in YouTube Shorts / YouTube Create (watermarked)</td></tr>
+</table>
+<p>Budget rule of thumb: a 30-day calendar of one 15-second ad per day costs roughly $13–$45/month in raw generation on the value models — well inside a single client retainer. Run your own numbers with our <a href="../tools/cost-calculator.html">cost calculator</a>; credit burn rises fast when you iterate (plan for 3–5 generations per final clip).</p>
+
+<h2 id="checklist">5. Your migration checklist for this week</h2>
+<ol>
+  <li><strong>Audit every Sora reference.</strong> Search your codebase, presets, templates and client docs for "sora". Anything calling the Videos API must be re-pointed, not retried.</li>
+  <li><strong>Kill the retry queues.</strong> Jobs with retry logic pointed at the Sora endpoint are spending time on an answer that will never change. Delete the route — don't wrap it in a silent fallback that swaps models without telling anyone which brief ran on what.</li>
+  <li><strong>Export old Sora assets now.</strong> If you haven't already saved generated videos and their prompts, do it from whatever local copies exist. There is no official path back into the discontinued service.</li>
+  <li><strong>Re-brief by job, not by look.</strong> Sort old Sora briefs by what they needed (talking head, long take, volume, edit) and re-run them on the matching model from section 2. Character-reference features differ per model — re-upload reference images per tool.</li>
+  <li><strong>Test before you promise.</strong> Run one paid generation on each new model before putting it in a client proposal. Prompt behavior differs: what Sora understood literally, Veo or Kling may interpret differently.</li>
+  <li><strong>Update your cost model.</strong> Per-second pricing means cost scales with clip length, not with "a generation". Re-price your packages — our <a href="../tools/cost-calculator.html">cost calculator</a> is built for exactly this.</li>
+</ol>
+
+<h2 id="kling4">6. Kling 4.0 is live — what shipped, what's still coming</h2>
+<p>The watch is over: <strong>Kling 4.0 launched globally on October 15–16, 2026</strong> and is available to all users on kling.ai, with the developer API live since October 28, 2026 and 21:9 ultrawide now available. What shipped: 3–30 second single-pass generations, up to 10 keyframes, up to 15 multimodal references (up to 10 images, 5 videos, 7 elements), stereo audio, and prompts up to 8,000 tokens. Still on the roadmap as of November 2026: 10-bit HDR output at 1080p and 4K, and video extension up to two minutes in total. Budgeting note: Kling bills in credits, about 15 per second at 1080p — a full 30-second 1080p clip costs roughly 450 credits before retries, so plan 3–5 generations per final clip into your cost model. The rule from the October version of this guide still holds — pick what's live, billable and documented right now — and Kling 4.0 now clears that bar.</p>
+
+<h2 id="novupdate">7. November 2026 update: the migration map, one month on</h2>
+<p>One month after the shutdown, the replacement landscape has settled into a clearer shape — and the biggest change is the one this guide warned you not to build on in October. Kling 4.0 is no longer a watch item: it is the longest single take you can buy, at 30 seconds, with the keyframe control Sora never offered. If your Sora workflow was built on long continuous takes, Kling 4.0 (not Seedance 2.5) is now the closest match, and the migration mapping in section 2 should be read with that swap in mind. Seedance 2.5 still holds the 30-second-at-720p value slot, and Wan 3.0 still wins on per-second price for volume — but for a single shot that has to carry a scene, Kling 4.0 is the new default to test first.</p>
+<p>The second change is the Sora revival story maturing from rumor to reported negotiation: The Information's October 12 report of OpenAI talking to a Katzenberg/Peebles/Jaswa startup has not produced a confirmed deal as of November 22, 2026, and nothing billable exists. If it closes, Sora comes back as a professional filmmaking tool, not the consumer app you lost — so it changes nothing for your current pipeline, and you should not hold migration budget for it. The practical status is unchanged since October: Sora is gone, the 410 is permanent, and the tools in sections 2–4 are your stack. Re-run the checklist in section 5 if you haven't yet — especially step 3, exporting old Sora assets, and step 5, testing one paid generation per new model before promising a client anything on it. One month in, the creators who migrated cleanly are the ones who treated October as the deadline it was, not the grace period it felt like.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>Is Sora still available in November 2026?</h3>
+<p>No. The consumer app closed April 26, 2026 and the Videos API was shut down September 24, 2026 (410 Gone). Old endpoints will not come back, and there is no official successor from OpenAI.</p>
+<h3>Can I still download videos I generated with Sora?</h3>
+<p>Only from your own exports — save any local copies now. There is no current official path back into the discontinued service to retrieve a library.</p>
+<h3>What's the single best Sora replacement?</h3>
+<p>There isn't one — it depends on the job. Talking head: Veo 3.1. Long single take: Seedance 2.5. Cheap volume: Wan 3.0. Editing existing footage: Runway Gen-4.5 or Gemini Omni Flash Edit. Still unsure? Take our <a href="../tools/use-case-finder.html">tool quiz</a> — it asks three questions and gives you a pick.</p>
+<h3>Is Kling 4.0 out yet?</h3>
+<p>Yes. The full model launched globally on October 15–16, 2026 and is available to all users, with the developer API live since October 28, 2026. Only 10-bit HDR and video extension (up to 2 minutes) are still marked coming soon as of November 2026.</p>
+<h3>What about my unused Sora credits?</h3>
+<p>Per OpenAI's discontinuation notice, remaining credits on a ChatGPT plan can be spent on Codex — not on video generation on any OpenAI product.</p>
+
+<p><em>Keep going: <a href="../guides/best-ai-video-generators-2026.html">Best AI Video Generators 2026</a> · <a href="../guides/ai-video-maker-free-vs-paid.html">Free vs Paid</a> · <a href="../guides/how-to-make-ai-videos-for-business.html">AI Videos for Business</a></em></p>
+</article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><h4>🎬 AIVideoMakerHub</h4><p>Honest comparisons, free calculators and practical guides for AI video makers — updated October 2026.</p></div>
+      <div><h4>Tools</h4><ul><li><a href="../tools/tool-comparator.html">Tool Comparator</a></li><li><a href="../tools/cost-calculator.html">Cost Calculator</a></li><li><a href="../tools/use-case-finder.html">Use-Case Quiz</a></li></ul></div>
+      <div><h4>Articles</h4><ul><li><a href="../guides/best-ai-video-generators-2026.html">Best AI Video Generators 2026</a></li><li><a href="../guides/ai-video-maker-free-vs-paid.html">Free vs Paid</a></li><li><a href="sora-shutdown-migration-guide-2026.html">Sora Shutdown Migration Guide</a></li></ul></div>
+      <div><h4>Blog</h4><ul><li><a href="../blog/ai-video-prompts-that-work.html">AI Video Prompts That Work</a></li><li><a href="../blog/ai-video-mistakes-to-avoid.html">AI Video Mistakes to Avoid</a></li></ul></div>
+    </div>
+    <div class="fbottom">
+      <span>Built by <a href="https://nidaayesha.com" target="_blank" rel="noopener">NAN Marketing Agency</a> | <span>Our sites: <a href="https://aivideodetector.site" target="_blank" rel="noopener">AI Video Detector</a> · <a href="https://epstopikpakistan.blogspot.com" target="_blank" rel="noopener">EpsTopik Pakistan</a></span></span>
+      <span>© 2026 AIVideoMakerHub</span>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+<!--nan-network-links:start-->
+<section style="max-width:72rem;margin:2.5rem auto 0;padding:1.25rem 1rem 0;border-top:1px solid #e5e7eb;" aria-label="More free tools">
+<p style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:0 0 .6rem;">More free tools</p>
+<p style="font-size:.85rem;line-height:2;color:#4b5563;margin:0;"><a href="https://nan-texttovideo.surge.sh" style="color:#4b5563;text-decoration:none;">Free Text to Video 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aipodcastvoice.surge.sh" style="color:#4b5563;text-decoration:none;">AIPodcastVoice</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-freevideotools.surge.sh" style="color:#4b5563;text-decoration:none;">Free AI Video Tools 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aivideohindi.surge.sh" style="color:#4b5563;text-decoration:none;">AI Video Hindi</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-talkingphoto.surge.sh" style="color:#4b5563;text-decoration:none;">TalkingPhotoMaker</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-voicecloning.surge.sh" style="color:#4b5563;text-decoration:none;">VoiceCloningHub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-videoprompts.surge.sh" style="color:#4b5563;text-decoration:none;">AIVideoPromptsPro</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-ttshub.surge.sh" style="color:#4b5563;text-decoration:none;">TextToSpeechHub</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-imagetovideo.surge.sh" style="color:#4b5563;text-decoration:none;">Free Image to Video AI 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-videotutorials.surge.sh" style="color:#4b5563;text-decoration:none;">AI Video Tutorial 2026</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aivideoeditor.surge.sh" style="color:#4b5563;text-decoration:none;">Best AI Video Editor Tools (2026)</a> <span style="color:#d1d5db;">·</span> <a href="https://nan-aivoicegen.surge.sh" style="color:#4b5563;text-decoration:none;">AIVoiceGeneratorHub</a></p>
+</section>
+<!--nan-network-links:end-->
+</body>
+</html>
